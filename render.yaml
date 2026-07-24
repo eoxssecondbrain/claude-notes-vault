@@ -1,0 +1,34 @@
+# Render deployment for the Claude Notes Vault — a standalone scratchpad
+# service, fully isolated from OV2 (raj-wiki-vault).
+#
+# One service, one branch — there's no ingestion pipeline here, only two
+# agent-driven writes (save_chat_transcript, save_analysis), so there's no
+# webhook receiver, no cron, no persistent disk, and no main/data branch
+# split. All content lives on 'data'; 'main' would only ever hold this same
+# code, so keeping code and content on one branch is fine here (unlike OV2,
+# where a genuinely long multi-account pipeline run needed to avoid
+# retriggering its own mid-run redeploy).
+#
+# Each save is a single small file, so a self-triggered redeploy on every
+# push is an accepted tradeoff — same as OV2's mcp-server.
+
+services:
+  - type: web
+    name: claude-notes-mcp-server
+    runtime: python
+    repo: https://github.com/eoxssecondbrain/claude-notes-vault
+    branch: data
+    buildCommand: pip install -r requirements.txt
+    startCommand: python mcp_server.py
+    plan: starter
+    envVars:
+      - key: PORT
+        value: "8000"
+      - key: MCP_URL_SECRET
+        sync: false
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: GITHUB_REPO_URL
+        value: https://github.com/eoxssecondbrain/claude-notes-vault.git
+      - key: GIT_BRANCH
+        value: data
