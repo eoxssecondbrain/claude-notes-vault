@@ -19,3 +19,16 @@ Answered from memory with full recap of Krinox (renamed from Podar 2026-07-27):
 - Website: early agency-style intake, phased foundation-first approach wanted before copy, dual audience (prospects + investors), waitlist signups as conversion goal.
 
 Flagged to Raj: Krinox/Podar has no OV2 page and no Threads OV chat-summary yet — it only exists in Claude's memory layer and conversation history. Suggested this is a gap worth closing given client builds (Sabre, Monarch) are becoming real.
+
+---
+
+User (Raj): "what is the best use case for this product?" (Krinox)
+
+Claude: Applied sales-strategist skill, Query type B (standing sparring — direct answer, no capture-phase gating, non-sycophantic, ≤100-150 words).
+
+Answer given:
+- Flagged ambiguity in "best use case" (revenue speed vs. moat vs. pitch clarity) — picked fastest-provable-ROI as the frame.
+- Recommended: the Monarch AR/AP email agent pattern is the strongest current use case — narrow, measurable, dollar-denominated (hours saved, cash collected faster), easy for a CFO to verify.
+- Pushed back explicitly: don't lead sales conversations with "AI operating system" or the 8-layer architecture framing — that's internal vision, not a buyer's problem language. Buyers respond to "stop chasing AR manually," not "Company Brain → Digital Workforce."
+- Positioned Sabre's SA2/IRIS pilot and the 3GM CCO-dashboard angle as better suited to expansion motion (post-trust) than cold/early-stage deals.
+- Recommendation: repeat one narrow back-office dollar-denominated workflow (AR/AP, since there's already proof via Monarch) before diversifying into dashboards/advisory use cases, if the goal is proving Krinox as a category rather than just landing a second Monarch-style deal.
