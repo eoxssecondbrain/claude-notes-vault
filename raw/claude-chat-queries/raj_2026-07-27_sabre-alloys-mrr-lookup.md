@@ -16,3 +16,7 @@ Context flagged:
 - Billing has slipped to 30+ days in arrears — $10,970 is contracted MRR, not necessarily on-time collections.
 - Separate $1,000/month settlement liability (25 months, from Feb 2026 outage) is owed BY EOXS to Sabre, not revenue.
 - Proposed "IRIS Pro" AI add-on at $1,000/month floated 2026-07-02, pending Sabre approval — not yet included in the $10,970 figure.
+
+**User:** who is charles white and what is his role in this company?
+
+**Assistant:** Charles White is a management/executive-level contact at Sabre Alloys (client, not EOXS). Email cwhite@sabrealloys.com. Not the primary contact (that's Tye Webb, COO), but more operationally involved than title suggests — main Fireflies call contact for Sabre, directly involved in server migration and processing-speed escalations, and the recurring voice behind escalating packing-list-to-invoice quantity-mismatch complaints. 117 total interactions (109 email threads + 8 calls). Uses the Executive Dashboard module.
