@@ -21,13 +21,23 @@ This vault has three layers, in increasing order of compression:
 
 ## 0. Mandatory Auto-Save Rule — Read This First
 
-**Save after every assistant response, automatically, with no user request needed.** This is a hard rule, not a suggestion — do not wait to be asked "save this chat."
+**`save_chat_transcript` is not a "policy you're aware of" — it is the LAST ACTION of every single response, every single turn, with no exceptions.** Treat it exactly like closing a file handle: you do not consider a response finished, and you do not stop, until this tool call has been made for that turn. This is not a one-time setup step performed at the start of a conversation — it repeats, identically, after every response you send, for the entire life of the conversation.
 
-- At the start of a conversation, silently choose a short, stable `thread_name` (e.g. `sabre-alloys-payment-delay`) that describes the conversation's topic. Never change it mid-conversation — changing it creates a second file instead of updating the first.
-- After every assistant response from that point on, silently call `save_chat_transcript(thread_name, content=<the full transcript so far, not just the latest exchange>)`. Do not ask. Do not announce it. Do not skip it for short exchanges.
-- This **overwrites the same file** each time — one file per conversation, not one file per message. See the tool doc below for exactly how the filename is derived.
-- **Be honest about the limit of this rule**: it is best-effort, not a system-enforced guarantee. There is no mechanism outside this instruction that forces the save to happen — if you (the model) genuinely forget mid-conversation, nothing else catches it. Follow the rule as strictly as possible precisely because it's the ceiling of what's achievable here, not a formality.
-- The one exception: `save_analysis` (a different tool, for one-off finished write-ups) still requires the user to confirm first — that rule is unchanged. Only `save_chat_transcript`'s per-turn behavior is now automatic.
+**Turn-by-turn procedure — follow this exactly, every single turn:**
+
+1. On the FIRST turn of a new conversation only: silently choose a short, stable `thread_name` (e.g. `sabre-alloys-payment-delay`) describing the conversation's topic. Hold this value in mind for the rest of the conversation — never change it, never re-derive it, never pick a new one on a later turn even if the topic seems to shift. A changed `thread_name` creates a second file instead of updating the first, which is a bug, not a feature.
+2. Compose your actual response to the user as normal.
+3. **Before ending your turn — not after, not "when convenient," not "if it seems important" — call `save_chat_transcript(thread_name, content=<the FULL transcript of the conversation so far, including this response you just wrote>)`.** This is turn N+1's action even if turn N already saved — every turn, without exception, gets its own call.
+4. Do this silently. Do not ask permission. Do not announce "I'm saving this." Do not mention it unless the user asks whether it's being saved.
+5. There is no length or triviality exception. A one-line reply still gets a save call. A "just asking a quick question" turn still gets a save call.
+
+**Why this needs to be this explicit:** a documented, observed failure mode is a skill correctly saving on the FIRST turn of a conversation (because that's when the skill gets read and its instructions are freshest), then never saving again for the rest of that same conversation — as if the rule were a one-time setup step rather than a standing, per-turn obligation. If you notice yourself treating "I already saved once in this conversation" as satisfying this rule, that reasoning is wrong — re-read step 3 above. Every turn is independent.
+
+**This overwrites the same file each time** — one file per conversation, not one file per message. See the tool doc below for exactly how the filename is derived.
+
+**Be honest about the limit of this rule**: it is best-effort, not a system-enforced guarantee — there is no mechanism outside this instruction that forces the call to happen. That is precisely why the procedure above is written as an explicit per-turn checklist rather than a general policy statement: a checklist item ("did I call save_chat_transcript yet this turn?") is far less likely to be silently skipped than a background rule is.
+
+The one exception: `save_analysis` (a different tool, for one-off finished write-ups) still requires the user to confirm first — that rule is unchanged. Only `save_chat_transcript`'s per-turn behavior is automatic.
 
 ---
 
@@ -154,6 +164,7 @@ Once applied, the pointer line lives directly on the OV2 page under a `## Relate
 - **Never write bulk content into OV2.** The pointer line is 1-2 sentences, always. If a cross-reference needs more than that to make sense, the chat-summary page isn't finished yet — improve it there, not by padding the OV2 line.
 - **Never call `apply_ov2_xref` speculatively.** It pushes a real commit to OV2's shared repo. Staging (`propose_ov2_xref`) is free and reversible (it's a local file); applying is not something to do "to see what it looks like."
 - **`OV2_GITHUB_TOKEN` is a separate credential from this vault's own `GITHUB_TOKEN`.** If `search_ov2_wiki`/`apply_ov2_xref` report the token is missing, that's a deployment/config gap, not something to work around — tell the user, don't silently skip the cross-link step without saying so.
-- **`save_chat_transcript` is automatic — `save_analysis` is not.** Per Section 0, every assistant response triggers a silent `save_chat_transcript` call, no confirmation needed. `save_analysis` keeps the opposite rule: always ask first, never auto-save an analysis page. Don't conflate the two.
+- **`save_chat_transcript` is automatic — `save_analysis` is not.** Per Section 0, EVERY assistant response triggers a silent `save_chat_transcript` call as its last action, not just the first response of a conversation. `save_analysis` keeps the opposite rule: always ask first, never auto-save an analysis page. Don't conflate the two.
+- **If you are reading this Guardrails section and have not yet called `save_chat_transcript` for this turn, stop and do it now before finishing your response.** This is the same rule as Section 0, repeated here deliberately because "save once at the start of the conversation" is the single most common way this rule gets silently under-followed — treat every response, including this one, as requiring its own call.
 - **Never trust a `user` value the model itself supplies.** The `<user>` in every saved filename is resolved server-side from the connector URL (see CLAUDE.md), not from anything Claude says or infers about who it's talking to. If a search or list call needs a `user` filter, use the name as the person themselves would recognize it — but know that filtering is a convenience, not the source of truth for which file belongs to which person; the filename prefix already reflects that correctly regardless of what's passed to a search.
 - **Cite sources on every chat-summary page** — the `## Sources` section listing raw filenames is not optional, same "cite everything" rule OV2's CLAUDE.md enforces.
