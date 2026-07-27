@@ -253,7 +253,17 @@ def _git(args: list[str]) -> subprocess.CompletedProcess:
 
 def _git_commit_and_push(rel_path: Path, commit_message: str) -> str:
     """Commit rel_path and push to GIT_BRANCH. Each write is a single small file,
-    so a self-triggered redeploy on push is fine — same tradeoff OV2 accepted."""
+    so a self-triggered redeploy on push is fine — same tradeoff OV2 accepted.
+
+    This process's on-disk clone only ever moves forward via its OWN commits —
+    it never re-pulls on its own. Every time a change is pushed to this branch
+    from anywhere else (a manual push from a dev machine, another save from a
+    concurrent request), this process's local copy of `data` falls behind. A
+    bare `git push` then fails as non-fast-forward, forever, until the process
+    restarts against a fresh clone — silently stranding every future save as
+    "committed locally, never reached GitHub." Fixed by fetching + rebasing
+    onto the latest remote immediately before pushing, with one retry if the
+    push still loses a race to a concurrent writer."""
     if not GITHUB_TOKEN:
         return "WARNING: GITHUB_TOKEN not set on this server — file was saved locally but NOT pushed to GitHub."
 
@@ -270,10 +280,23 @@ def _git_commit_and_push(rel_path: Path, commit_message: str) -> str:
     if commit.returncode != 0:
         return f"git commit failed: {commit.stderr.strip()}"
 
-    push = _git(["push", "origin", f"HEAD:{GIT_BRANCH}"])
-    if push.returncode != 0:
-        return f"git commit succeeded locally but push failed: {push.stderr.strip()}"
-    return f"Committed and pushed to origin/{GIT_BRANCH}."
+    for attempt in range(2):
+        fetch = _git(["fetch", "origin", GIT_BRANCH])
+        if fetch.returncode != 0:
+            return f"git commit succeeded locally but fetch before push failed: {fetch.stderr.strip()}"
+        rebase = _git(["rebase", f"origin/{GIT_BRANCH}"])
+        if rebase.returncode != 0:
+            _git(["rebase", "--abort"])
+            return (
+                f"git commit succeeded locally but rebase onto origin/{GIT_BRANCH} failed "
+                f"(likely a real conflict, not just a race): {rebase.stderr.strip()}"
+            )
+        push = _git(["push", "origin", f"HEAD:{GIT_BRANCH}"])
+        if push.returncode == 0:
+            return f"Committed and pushed to origin/{GIT_BRANCH}."
+        if attempt == 0:
+            continue  # someone else pushed between our fetch and our push — retry once
+        return f"git commit succeeded locally but push failed after retry: {push.stderr.strip()}"
 
 
 # ── Save Chat Transcript ─────────────────────────────────────────────────────
