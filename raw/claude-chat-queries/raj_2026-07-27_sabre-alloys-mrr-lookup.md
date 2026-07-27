@@ -20,3 +20,11 @@ Context flagged:
 **User:** who is charles white and what is his role in this company?
 
 **Assistant:** Charles White is a management/executive-level contact at Sabre Alloys (client, not EOXS). Email cwhite@sabrealloys.com. Not the primary contact (that's Tye Webb, COO), but more operationally involved than title suggests — main Fireflies call contact for Sabre, directly involved in server migration and processing-speed escalations, and the recurring voice behind escalating packing-list-to-invoice quantity-mismatch complaints. 117 total interactions (109 email threads + 8 calls). Uses the Executive Dashboard module.
+
+**User:** whats ppc's open ticket's count right now?
+
+**Assistant:** Queried EOXS Teams Live (project_task table) live, filtered to PPC Metals' partner_id (502410). 411 active tasks total. Used Odoo's fold=true marker on project_task_type as the actual "closed" indicator (rather than guessing from stage names like "Paid"/"Approved"). Result: 360 closed (Paid: 207, Approved: 115, Communicated-folded: 38), 49 open.
+
+Open breakdown: Communicated (not closed) 16, Need Developer 8, Ready for Sandbox 7, Task Pool 7, Assigned 5, Waiting for Client's Reply 2, Raj questions 1, QA Passed 1, Resolved 1, QA Failed 1.
+
+Flagged caveat: "Resolved" and "QA Passed" (1 each) aren't marked fold=true in this instance despite being logically near-done, so they're counted as open here — may need reclassification depending on use case. This is EOXS's internal tracker for PPC, not PPC's own ticketing (PPC has no individual client MCP).
