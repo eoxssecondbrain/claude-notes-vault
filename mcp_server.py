@@ -364,6 +364,11 @@ def save_chat_transcript(thread_name: str, content: str) -> str:
     push_result = _git_commit_and_push(
         rel_path, f"chat: {action} {rel_path.name} ({timestamp})"
     )
+    # Explicit, greppable log line — a CallToolRequest in Render's default log
+    # doesn't say which tool ran or whether it succeeded, so confirming a save
+    # actually happened otherwise requires checking GitHub directly every time.
+    print(f"[save_chat_transcript] user={current_user()} thread={thread_name!r} "
+          f"path={rel_path} action={action} push_result={push_result!r}")
     return f"Saved ({action}): {rel_path}\n{push_result}"
 
 
@@ -459,6 +464,8 @@ def save_analysis(title: str, content: str) -> str:
     push_result = _git_commit_and_push(
         rel_path, f"analysis: save {rel_path.name} ({timestamp})"
     )
+    print(f"[save_analysis] user={current_user()} title={safe_title!r} "
+          f"path={rel_path} push_result={push_result!r}")
     return f"Saved: {rel_path}\n{push_result}"
 
 
