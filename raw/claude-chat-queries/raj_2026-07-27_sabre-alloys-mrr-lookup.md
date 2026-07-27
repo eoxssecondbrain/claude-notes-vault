@@ -28,3 +28,7 @@ Context flagged:
 Open breakdown: Communicated (not closed) 16, Need Developer 8, Ready for Sandbox 7, Task Pool 7, Assigned 5, Waiting for Client's Reply 2, Raj questions 1, QA Passed 1, Resolved 1, QA Failed 1.
 
 Flagged caveat: "Resolved" and "QA Passed" (1 each) aren't marked fold=true in this instance despite being logically near-done, so they're counted as open here — may need reclassification depending on use case. This is EOXS's internal tracker for PPC, not PPC's own ticketing (PPC has no individual client MCP).
+
+**User:** who is jessica at 3gm steel
+
+**Assistant:** Jessica Worley — primary contact at 3GM Steel, Director of Supply Chain Management (promoted from Office Administrator). jessica@3gmsteel.com. Signed the EOXS contract July 31, 2025. Highest-volume 3GM contact (449 threads), dominant day-to-day power user (product creation, variants, leads, CRM). Actually with 3GM since ~March 2022 as Office Administrator, day-to-day EOXS point of contact well before formal contract signing. Was on maternity leave from ~June 2024 (long handoff to Jerrica Eldridge/Shanan Shaver started Jan 2024). Absorbed Shanan Shaver's price-guideline duties after Shanan's Jan 2026 departure. Recurring friction point: repeatedly requesting expanded self-service system access, including CCO-level parity for Travis Lane (Mar 2026 request).
