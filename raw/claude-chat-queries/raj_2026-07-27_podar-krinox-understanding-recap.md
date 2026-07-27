@@ -45,3 +45,29 @@ Claude: Applied sales-strategist skill, Query type B. Ranked challenges by deal-
 5. CloudForge/category timing — competitor already pivoted to AI sales co-pilot on a metals database with a proven displacement win against EOXS (PPC Metals); risk of losing "AI layer for steel distributors" category framing if CloudForge gets there first.
 
 Closed by recommending Raj prioritize #1 (buy-vs-build) and #2 (security/access control) as the ones a good prospect will surface first.
+
+---
+
+User (Raj): "when should we start selling it?" (Krinox)
+
+Claude: Distinguished two different clocks — informal/warm-relationship selling vs. formal GTM launch.
+- Informal selling: can start now, using the Monarch AR/AP proof point as a live story with warm relationships — no website needed.
+- Formal GTM launch: too early. Missing — resolved buy-vs-build answer, security/access-control story, second reference client beyond Monarch.
+- Recommended sequence: close the real Sabre Krinox build → get Monarch to a citable ROI number → then open formal GTM. Rough estimate months not quarters if Sabre moves at normal pace, but trigger should be "two proof points," not a calendar date.
+
+---
+
+User (Raj): "formal gtm launch" (follow-up, asking Claude to focus specifically on formal launch timing)
+
+Claude: Laid out 4 gate conditions for formal GTM launch (not a fixed date):
+1. Two proof points minimum (Monarch + a second live Krinox client, e.g. Sabre) — avoids "just a custom build for Monarch" objection.
+2. Buy-vs-build answer resolved before launch — first question any technical buyer asks.
+3. Access-control story exists (doesn't need to be solved in code, but needs a coherent answer) before putting a waitlist in front of security-conscious buyers.
+4. Pricing tested via at least one real negotiation, not theoretical.
+Realistic sequencing estimate: ~2-3 months from now if Sabre build moves at normal pace, gated on the above conditions actually closing, not the calendar. Asked Raj whether urgency is coming from external pressure (investor timeline, CloudForge movement) or is open-ended.
+
+---
+
+User (Raj): "open ended"
+
+Claude: Reframed the implication of open-ended timing — argued it supports holding the line on gate conditions rather than picking an arbitrary date, but flagged the real risk: "open-ended" can quietly drift into "whenever it feels ready" with no forcing function. Recommended a 6-week review checkpoint (not a launch date) to reassess the four gate conditions against actual progress. Raised the sharper underlying question directly: is Krinox getting real weekly progress, or is it the project that moves only when there's spare time — noting this matters more than the launch date itself, especially given EOXS's $1M ARR goal is the thing actually on a deadline.
