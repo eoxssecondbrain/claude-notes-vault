@@ -2,3 +2,8 @@ __pycache__/
 *.pyc
 .env
 .venv/
+
+# Local working copy of OV2's repo, used only by propose_ov2_xref/apply_ov2_xref.
+# Must never be committed here — it's OV2's content, not this vault's.
+.ov2-clone/
+.ov2-xref-staging/

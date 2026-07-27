@@ -1,10 +1,16 @@
 """
-Claude Notes Vault MCP Server
-Standalone scratchpad service — save_chat_transcript + save_analysis (plus read-back tools).
+Claude Notes Vault MCP Server ("Claude OV")
+Standalone scratchpad service — save_chat_transcript + save_analysis (plus read-back tools),
+a chat-summary synthesis layer (wiki/chat-summaries/), and an OV2 cross-reference tool
+(propose_ov2_xref / apply_ov2_xref) that lets a short pointer line be written into OV2's
+own wiki without OV2's codebase, repo, or push credential ever being touched by this vault
+in normal operation — see SKILL.md for the SYNTHESIZE and CROSS-LINK workflows.
 Isolated from OV2 (raj-wiki-vault): separate repo, separate branch, separate Render service.
 Run: python mcp_server.py
 """
 
+import contextvars
+import json
 import os
 import re
 import subprocess
@@ -18,6 +24,7 @@ WIKI_DIR = VAULT_ROOT / "wiki"
 RAW_DIR = VAULT_ROOT / "raw"
 CHAT_DIR = RAW_DIR / "claude-chat-queries"
 ANALYSES_DIR = WIKI_DIR / "analyses"
+CHAT_SUMMARIES_DIR = WIKI_DIR / "chat-summaries"
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GITHUB_REPO_URL = os.environ.get(
@@ -25,16 +32,65 @@ GITHUB_REPO_URL = os.environ.get(
 )
 GIT_BRANCH = os.environ.get("GIT_BRANCH", "data")
 
-# No login — the URL path itself is the credential. Refuse to start on a
-# guessable path, same convention as OV2's mcp_server.py.
-MCP_URL_SECRET = os.environ.get("MCP_URL_SECRET")
-if not MCP_URL_SECRET:
+# ── OV2 cross-reference config ──────────────────────────────────────────────
+# Separate repo, separate clone, separate token — this vault's own GITHUB_TOKEN
+# above only ever pushes to its own repo. Writing a pointer line into OV2's
+# wiki requires OV2's own repo and its own push credential, kept distinct on
+# purpose so a bug here can never touch this vault's repo and vice versa.
+OV2_GITHUB_TOKEN = os.environ.get("OV2_GITHUB_TOKEN", "")
+OV2_REPO_URL = os.environ.get(
+    "OV2_REPO_URL", "https://github.com/eoxssecondbrain/raj-wiki-vault.git"
+)
+OV2_BRANCH = os.environ.get("OV2_BRANCH", "data")
+OV2_CLONE_DIR = Path(os.environ.get("OV2_CLONE_DIR", str(VAULT_ROOT / ".ov2-clone")))
+OV2_XREF_STAGING = VAULT_ROOT / ".ov2-xref-staging"
+
+# ── Per-user identity (multi-account support) ────────────────────────────────
+# One service, one process, ONE Render deployment — multi-user support is just
+# a lookup table (secret path segment -> username), not separate services.
+# Each of the N users gets their own connector URL pointing at their own
+# secret; the server resolves identity from the URL itself, before any tool
+# call happens, so it's never a matter of Claude guessing/asking/remembering
+# who's talking — same reliability property MCP_URL_SECRET already gave this
+# server for access control, just extended to also carry an identity.
+#
+# CLAUDE_OV_USERS: a JSON object mapping secret -> username, e.g.
+#   {"9f8a...longrandom...": "raj", "3e7c...longrandom...": "ayan"}
+# Each user's own Claude connector is configured with their own full URL:
+#   https://<host>/<their-secret>/sse
+CLAUDE_OV_USERS_RAW = os.environ.get("CLAUDE_OV_USERS", "")
+if not CLAUDE_OV_USERS_RAW:
     raise RuntimeError(
-        "MCP_URL_SECRET environment variable is not set. Refusing to start an "
-        "unauthenticated server. Set MCP_URL_SECRET to a long random value "
-        "(e.g. `python -c \"import secrets; print(secrets.token_urlsafe(32))\"`) "
-        "in the environment."
+        "CLAUDE_OV_USERS environment variable is not set. Refusing to start an "
+        "unauthenticated/unattributed server. Set it to a JSON object mapping "
+        "each user's own long random secret to their username, e.g. "
+        '\'{"<random-secret-1>": "raj", "<random-secret-2>": "ayan"}\'. '
+        "Generate a secret per user with "
+        "`python -c \"import secrets; print(secrets.token_urlsafe(32))\"`."
     )
+try:
+    CLAUDE_OV_USERS: dict[str, str] = json.loads(CLAUDE_OV_USERS_RAW)
+except json.JSONDecodeError as e:
+    raise RuntimeError(f"CLAUDE_OV_USERS is not valid JSON: {e}")
+if not CLAUDE_OV_USERS:
+    raise RuntimeError("CLAUDE_OV_USERS is set but empty — no users configured.")
+
+# Fixed internal path FastMCP itself mounts at; the identity-resolving
+# middleware below rewrites every /<secret>/... request to this path before
+# FastMCP's own router ever sees it. FastMCP only supports one sse_path per
+# instance, so per-user routing has to happen in front of it, not inside it.
+_INTERNAL_SSE_PATH = "/_internal/sse"
+_INTERNAL_MESSAGE_PATH = "/_internal/messages/"
+
+_current_user: contextvars.ContextVar[str] = contextvars.ContextVar("_current_user", default="unknown")
+
+
+def current_user() -> str:
+    """The username resolved from the secret in the URL path of the current
+    request — set by _IdentityMiddleware before any tool call runs. Never
+    trust a 'user' argument passed by the model instead of this."""
+    return _current_user.get()
+
 
 PORT = int(os.environ.get("PORT", "8000"))
 
@@ -43,8 +99,8 @@ mcp = FastMCP(
     host="0.0.0.0",
     port=PORT,
     auth=None,
-    sse_path=f"/{MCP_URL_SECRET}/sse",
-    message_path=f"/{MCP_URL_SECRET}/messages/",
+    sse_path=_INTERNAL_SSE_PATH,
+    message_path=_INTERNAL_MESSAGE_PATH,
 )
 
 
@@ -52,6 +108,55 @@ mcp = FastMCP(
 async def health(request):
     from starlette.responses import PlainTextResponse
     return PlainTextResponse("ok")
+
+
+class _IdentityMiddleware:
+    """Resolves /<secret>/sse and /<secret>/messages/... to the fixed internal
+    paths FastMCP mounts, and sets current_user() for the duration of the
+    request based on which secret was used. Unknown secrets get a 404 —
+    same "guessable path" refusal behavior the old single-secret scheme had,
+    just per-user now instead of per-server."""
+
+    def __init__(self, app):
+        self.app = app
+
+    async def __call__(self, scope, receive, send):
+        if scope["type"] != "http":
+            await self.app(scope, receive, send)
+            return
+
+        path = scope["path"]
+        parts = path.split("/", 2)
+        # parts: ["", "<secret>", "sse-or-messages/..."]
+        if len(parts) < 3 or not parts[1]:
+            from starlette.responses import PlainTextResponse
+            response = PlainTextResponse("Not found", status_code=404)
+            await response(scope, receive, send)
+            return
+
+        secret, rest = parts[1], parts[2]
+        username = CLAUDE_OV_USERS.get(secret)
+        if username is None:
+            from starlette.responses import PlainTextResponse
+            response = PlainTextResponse("Not found", status_code=404)
+            await response(scope, receive, send)
+            return
+
+        # rest is "sse" for the SSE handshake, or "messages/<session-id-etc>"
+        # for the follow-up POSTs the SSE transport makes — preserve whatever
+        # comes after "messages/" verbatim (it carries the session id the
+        # handshake generated), just swap the /<secret> prefix for the fixed
+        # internal one FastMCP itself is mounted at.
+        if rest.startswith("messages/"):
+            scope["path"] = _INTERNAL_MESSAGE_PATH + rest[len("messages/"):]
+        else:
+            scope["path"] = _INTERNAL_SSE_PATH
+
+        token = _current_user.set(username)
+        try:
+            await self.app(scope, receive, send)
+        finally:
+            _current_user.reset(token)
 
 
 def _read(path: Path) -> str:
@@ -117,64 +222,124 @@ def _git_commit_and_push(rel_path: Path, commit_message: str) -> str:
 
 
 # ── Save Chat Transcript ─────────────────────────────────────────────────────
+# Filename convention: <user>_<created-date>_<threadname>.md — user comes ONLY
+# from current_user() (resolved server-side from the URL secret, see the
+# identity middleware above), never from a model-supplied argument, so it
+# can't be mislabeled. created-date is fixed at first save and never changes
+# on subsequent overwrites of the same thread, so the filename stays stable
+# for the life of the conversation even as content grows across many saves.
+
+def _chat_transcript_path(thread_name: str) -> Path:
+    user = re.sub(r"[^a-z0-9]+", "-", current_user().lower()).strip("-") or "unknown"
+    slug = re.sub(r"[^a-z0-9]+", "-", thread_name.lower()).strip("-") or "conversation"
+    # Reuse today's date only for a NEW thread; an existing thread keeps its
+    # original created-date even if a later save happens on a different day —
+    # found by matching user+slug regardless of the date segment already present.
+    if CHAT_DIR.exists():
+        existing = sorted(CHAT_DIR.glob(f"{user}_*_{slug}.md"))
+        if existing:
+            return existing[0]
+    today = date.today().isoformat()
+    return CHAT_DIR / f"{user}_{today}_{slug}.md"
+
 
 @mcp.tool()
-def save_chat_transcript(title: str, content: str) -> str:
+def save_chat_transcript(thread_name: str, content: str) -> str:
     """
-    Save a Claude chat conversation transcript into this notes vault and push it to GitHub.
-    Writes to raw/claude-chat-queries/YYYY-MM-DD-<slug>.md, then commits and pushes.
+    Save (or update) a Claude chat conversation transcript into this notes vault and push it
+    to GitHub. This OVERWRITES the same file on every call for the same thread_name — it does
+    NOT create a new file per message. Call this after every assistant response in a
+    conversation, passing the FULL transcript so far (not just the latest exchange), so the
+    one file for this thread stays current as the conversation grows. Never ask before calling
+    this — see SKILL.md's auto-save rule.
 
-    title: short title for the conversation (used to build the filename)
-    content: full markdown transcript of the conversation
+    thread_name: a short, STABLE identifier for this conversation, chosen once at its first
+        save and reused for every subsequent save in the same conversation (e.g.
+        'sabre-alloys-payment-delay') — changing it mid-conversation creates a second file
+        instead of updating the first.
+    content: the FULL markdown transcript of the conversation so far, not just new messages.
+
+    Filename produced: raw/claude-chat-queries/<user>_<created-date>_<thread_name>.md
+    <user> is resolved automatically from which connector URL this request came in on —
+    never pass it as part of thread_name, and there is no way to override it.
     """
+    out = _chat_transcript_path(thread_name)
+    is_new = not out.exists()
     today = date.today().isoformat()
-    slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-") or "conversation"
-    filename = f"{today}-{slug}.md"
-    out = CHAT_DIR / filename
-
-    n = 2
-    while out.exists():
-        out = CHAT_DIR / f"{today}-{slug}-{n}.md"
-        n += 1
+    created = today
+    if not is_new:
+        existing_content = _read(out)
+        created_match = re.search(r'^created: (\S+)', existing_content, flags=re.MULTILINE)
+        if created_match:
+            created = created_match.group(1)
 
     CHAT_DIR.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     frontmatter = (
-        f"---\ntitle: \"{title}\"\ntype: claude-chat\ncreated: {today}\nupdated: {today}\n---\n\n"
+        f"---\nthread_name: \"{thread_name}\"\nuser: \"{current_user()}\"\ntype: claude-chat\n"
+        f"created: {created}\nupdated: {today}\n---\n\n"
     )
     out.write_text(frontmatter + content.strip() + "\n", encoding="utf-8")
 
     rel_path = out.relative_to(VAULT_ROOT)
+    action = "created" if is_new else "updated"
     push_result = _git_commit_and_push(
-        rel_path, f"chat: save transcript {rel_path.name} ({timestamp})"
+        rel_path, f"chat: {action} {rel_path.name} ({timestamp})"
     )
-    return f"Saved: {rel_path}\n{push_result}"
+    return f"Saved ({action}): {rel_path}\n{push_result}"
+
+
+def _chat_dir_for(user: str | None) -> list[Path]:
+    if not CHAT_DIR.exists():
+        return []
+    files = sorted(CHAT_DIR.glob("*.md"), reverse=True)
+    if user:
+        u = re.sub(r"[^a-z0-9]+", "-", user.lower()).strip("-")
+        files = [f for f in files if f.name.startswith(f"{u}_")]
+    return files
 
 
 @mcp.tool()
-def search_claude_chat_queries(query: str) -> str:
-    """Search saved Claude chat transcripts (raw/claude-chat-queries/) — by topic, keyword, or title."""
-    if not CHAT_DIR.exists():
-        return "No saved chat transcripts yet."
-    return _search(CHAT_DIR, query)
-
-
-@mcp.tool()
-def list_claude_chat_queries() -> str:
-    """List all saved Claude chat transcripts, newest first."""
-    if not CHAT_DIR.exists():
-        return "No saved chat transcripts yet."
-    files = sorted(CHAT_DIR.rglob("*.md"), reverse=True)
+def search_claude_chat_queries(query: str, user: str = "") -> str:
+    """Search saved Claude chat transcripts (raw/claude-chat-queries/) — by topic, keyword, or content.
+    user: optional — restrict to one user's threads (e.g. 'ayan'), matching the <user>_ filename
+        prefix. Leave empty to search across all users' threads."""
+    files = _chat_dir_for(user or None)
     if not files:
-        return "No saved chat transcripts yet."
+        return "No saved chat transcripts yet." if not user else f"No saved chat transcripts for user '{user}'."
+    q = query.lower()
+    results = []
+    for path in files:
+        content = _read(path)
+        lines = content.splitlines()
+        matches = []
+        for i, line in enumerate(lines):
+            if q in line.lower():
+                start = max(0, i - 1)
+                end = min(len(lines), i + 3)
+                matches.append("\n".join(lines[start:end]))
+        if matches:
+            rel = path.relative_to(VAULT_ROOT)
+            results.append(f"### {rel}\n" + "\n---\n".join(matches[:3]))
+    if not results:
+        return f"No results for '{query}'" + (f" (user='{user}')" if user else "") + "."
+    return f"Results for '{query}':\n\n" + "\n\n".join(results[:12])
+
+
+@mcp.tool()
+def list_claude_chat_queries(user: str = "") -> str:
+    """List all saved Claude chat transcripts, newest first.
+    user: optional — restrict to one user's threads (e.g. 'ayan'). Leave empty for all users."""
+    files = _chat_dir_for(user or None)
+    if not files:
+        return "No saved chat transcripts yet." if not user else f"No saved chat transcripts for user '{user}'."
     lines = []
     for f in files[:150]:
         rel = str(f.relative_to(VAULT_ROOT))
-        try:
-            title = f.read_text(encoding="utf-8").split("\n")[0].lstrip("# ").strip()
-        except Exception:
-            title = f.stem
-        lines.append(f"- [{title}]({rel})")
+        content = _read(f)
+        thread_match = re.search(r'^thread_name: "(.*?)"', content, flags=re.MULTILINE)
+        label = thread_match.group(1) if thread_match else f.stem
+        lines.append(f"- [{label}]({rel})")
     note = f"\n\n(showing 150 of {len(files)})" if len(files) > 150 else ""
     return "Saved chat transcripts:\n\n" + "\n".join(lines) + note
 
@@ -256,14 +421,222 @@ def get_analysis(file_path: str) -> str:
     return _read(p) if p.exists() else f"File not found: {file_path}"
 
 
+# ── Chat Summaries (Layer 2 — synthesized from raw/claude-chat-queries/) ────
+# Written by the SYNTHESIZE workflow (see SKILL.md), not by a dedicated save
+# tool — an agent following that workflow writes these files directly with
+# its file-write tools, then commits/pushes them the same way save_analysis
+# does. Only read-back tools are exposed here.
+
+@mcp.tool()
+def search_chat_summaries(query: str) -> str:
+    """Search synthesized chat-summary pages (wiki/chat-summaries/) — the topic/entity-clustered
+    synthesis layer built on top of raw/claude-chat-queries/. Use this before reading raw transcripts."""
+    if not CHAT_SUMMARIES_DIR.exists():
+        return "No chat summaries yet."
+    return _search(CHAT_SUMMARIES_DIR, query)
+
+
+@mcp.tool()
+def list_chat_summaries() -> str:
+    """List all chat-summary pages, newest first."""
+    if not CHAT_SUMMARIES_DIR.exists():
+        return "No chat summaries yet."
+    files = sorted(CHAT_SUMMARIES_DIR.rglob("*.md"), reverse=True)
+    if not files:
+        return "No chat summaries yet."
+    lines = []
+    for f in files[:150]:
+        rel = str(f.relative_to(VAULT_ROOT))
+        try:
+            title = f.read_text(encoding="utf-8").split("\n")[0].lstrip("# ").strip()
+        except Exception:
+            title = f.stem
+        lines.append(f"- [{title}]({rel})")
+    note = f"\n\n(showing 150 of {len(files)})" if len(files) > 150 else ""
+    return "Chat summaries:\n\n" + "\n".join(lines) + note
+
+
+@mcp.tool()
+def get_chat_summary(file_path: str) -> str:
+    """Return the full content of a chat-summary page.
+    file_path: relative path from vault root, e.g. 'wiki/chat-summaries/Sabre Alloys Payment Discipline.md'
+    Get the path from search_chat_summaries or list_chat_summaries first — don't guess it."""
+    p = VAULT_ROOT / file_path
+    return _read(p) if p.exists() else f"File not found: {file_path}"
+
+
+# ── OV2 Cross-Reference (propose → approve → apply) ─────────────────────────
+# Two-step by design: propose_ov2_xref only ever writes to a LOCAL staging file
+# in this vault's own repo — it never touches OV2's repo. apply_ov2_xref is the
+# only function that clones/pulls OV2 and pushes to it, and it must be called
+# once per approved item, after a human has reviewed the staged list. Never
+# call apply_ov2_xref for an item that hasn't been shown to and approved by
+# the user in this session.
+
+def _ov2_git(args: list[str]) -> subprocess.CompletedProcess:
+    return subprocess.run(["git", "-C", str(OV2_CLONE_DIR)] + args, capture_output=True, text=True)
+
+
+def _ensure_ov2_clone() -> str | None:
+    """Clone or update the local OV2 working copy used only for xref writes.
+    Returns an error string, or None on success."""
+    if not OV2_GITHUB_TOKEN:
+        return ("OV2_GITHUB_TOKEN not set on this server — cannot read or write OV2's repo. "
+                "Set it to a token scoped to eoxssecondbrain/raj-wiki-vault with Contents: Read and write.")
+    token_url = OV2_REPO_URL.replace("https://", f"https://{OV2_GITHUB_TOKEN}@")
+    if not (OV2_CLONE_DIR / ".git").exists():
+        OV2_CLONE_DIR.parent.mkdir(parents=True, exist_ok=True)
+        clone = subprocess.run(
+            ["git", "clone", "--branch", OV2_BRANCH, "--single-branch", token_url, str(OV2_CLONE_DIR)],
+            capture_output=True, text=True,
+        )
+        if clone.returncode != 0:
+            return f"git clone of OV2 failed: {clone.stderr.strip()}"
+        return None
+    _ov2_git(["remote", "set-url", "origin", token_url])
+    fetch = _ov2_git(["fetch", "origin", OV2_BRANCH])
+    if fetch.returncode != 0:
+        return f"git fetch of OV2 failed: {fetch.stderr.strip()}"
+    reset = _ov2_git(["reset", "--hard", f"origin/{OV2_BRANCH}"])
+    if reset.returncode != 0:
+        return f"git reset of OV2 working copy failed: {reset.stderr.strip()}"
+    return None
+
+
+@mcp.tool()
+def search_ov2_wiki(query: str) -> str:
+    """Search OV2's wiki pages directly from this server, to find genuinely relevant pages
+    before proposing a cross-reference. Requires OV2_GITHUB_TOKEN (read access is enough
+    for this call, though the same token is also used to push in apply_ov2_xref).
+    Prefer calling OV2's own search_wiki/get_wiki_page tools directly if OV2's MCP connector
+    is available in this session — this is a fallback for when it isn't."""
+    err = _ensure_ov2_clone()
+    if err:
+        return err
+    return _search(OV2_CLONE_DIR / "wiki", query)
+
+
+@mcp.tool()
+def propose_ov2_xref(ov2_page_path: str, pointer_line: str, chat_summary_title: str) -> str:
+    """
+    Stage a proposed 1-2 line cross-reference to add to an existing OV2 wiki page.
+    Writes ONLY to a local staging file in this vault's own repo — does NOT touch
+    OV2's repo. Call apply_ov2_xref(staged_id) afterward, and only after the user
+    has reviewed and approved this specific proposal.
+
+    ov2_page_path: relative path to the target page inside OV2's repo,
+        e.g. 'wiki/sources/sabre-alloys/Sabre Alloys — Post-Crisis Operations.md'
+    pointer_line: the exact 1-2 line text to add (no bullet/heading — those are added
+        automatically under a '## Related Claude Threads' section on the target page)
+    chat_summary_title: the exact title of the Claude OV chat-summary page this points to,
+        so a future get_chat_summary() call can retrieve it by name
+    """
+    OV2_XREF_STAGING.mkdir(parents=True, exist_ok=True)
+    staged_id = re.sub(r"[^a-z0-9]+", "-", f"{date.today().isoformat()}-{chat_summary_title}".lower()).strip("-")
+    n = 2
+    base_id = staged_id
+    while (OV2_XREF_STAGING / f"{staged_id}.md").exists():
+        staged_id = f"{base_id}-{n}"
+        n += 1
+    out = OV2_XREF_STAGING / f"{staged_id}.md"
+    out.write_text(
+        f"---\nov2_page_path: \"{ov2_page_path}\"\nchat_summary_title: \"{chat_summary_title}\"\n"
+        f"status: pending\ncreated: {date.today().isoformat()}\n---\n\n{pointer_line.strip()}\n",
+        encoding="utf-8",
+    )
+    return (
+        f"Staged (not yet applied): {staged_id}\n"
+        f"Target OV2 page: {ov2_page_path}\n"
+        f"Pointer line: {pointer_line.strip()}\n"
+        f"Show this to the user for approval, then call apply_ov2_xref('{staged_id}') only if approved."
+    )
+
+
+@mcp.tool()
+def list_staged_ov2_xrefs() -> str:
+    """List all staged (not-yet-applied) OV2 cross-reference proposals awaiting review."""
+    if not OV2_XREF_STAGING.exists():
+        return "No staged cross-references."
+    files = sorted(OV2_XREF_STAGING.glob("*.md"))
+    if not files:
+        return "No staged cross-references."
+    return "Staged cross-references:\n\n" + "\n\n".join(_read(f) for f in files)
+
+
+@mcp.tool()
+def apply_ov2_xref(staged_id: str) -> str:
+    """
+    Apply a previously staged cross-reference: clones/updates a local copy of OV2's repo,
+    appends the pointer line to the target page under a '## Related Claude Threads' section,
+    then commits and pushes directly to OV2's own data branch.
+
+    ONLY call this after the user has explicitly approved this specific staged_id — never
+    apply a batch of staged items without the user having seen and confirmed each one first.
+
+    staged_id: the id returned by propose_ov2_xref, or found via list_staged_ov2_xrefs
+    """
+    staged_file = OV2_XREF_STAGING / f"{staged_id}.md"
+    if not staged_file.exists():
+        return f"No staged cross-reference found for id '{staged_id}'."
+
+    raw = _read(staged_file)
+    fm_match = re.search(r'ov2_page_path: "(.*?)"', raw)
+    body_match = re.split(r"^---\s*$", raw, flags=re.MULTILINE)
+    if not fm_match or len(body_match) < 3:
+        return f"Staged file '{staged_id}' is malformed — could not parse ov2_page_path or body."
+    ov2_page_path = fm_match.group(1)
+    pointer_line = body_match[2].strip()
+
+    err = _ensure_ov2_clone()
+    if err:
+        return err
+
+    target = OV2_CLONE_DIR / ov2_page_path
+    if not target.exists():
+        return f"Target OV2 page not found in current OV2 clone: {ov2_page_path}"
+
+    content = _read(target)
+    section_header = "## Related Claude Threads"
+    entry = f"- {pointer_line}"
+    if section_header in content:
+        content = content.rstrip() + f"\n{entry}\n"
+    else:
+        content = content.rstrip() + f"\n\n{section_header}\n{entry}\n"
+    target.write_text(content, encoding="utf-8")
+
+    _ov2_git(["config", "user.email", "claude-ov-xref@eoxs.com"])
+    _ov2_git(["config", "user.name", "Claude OV Cross-Reference"])
+    _ov2_git(["add", ov2_page_path])
+    commit = _ov2_git(["commit", "-m", f"xref: link Claude OV chat summary to {Path(ov2_page_path).stem}"])
+    if commit.returncode != 0 and "nothing to commit" not in (commit.stdout + commit.stderr):
+        return f"git commit into OV2 failed: {commit.stderr.strip()}"
+    push = _ov2_git(["push", "origin", f"HEAD:{OV2_BRANCH}"])
+    if push.returncode != 0:
+        return f"git commit succeeded locally but push to OV2 failed: {push.stderr.strip()}"
+
+    staged_file.unlink()
+    return f"Applied and pushed to OV2 ({OV2_BRANCH}): {ov2_page_path}\nAdded: {entry}"
+
+
 # ── Entry Point ───────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     print(f"Starting Claude Notes Vault MCP Server on port {PORT}")
     print(f"Vault root: {VAULT_ROOT.resolve()}")
     print(f"Saved chat transcripts: {len(_all_md(CHAT_DIR))}")
+    print(f"Chat summaries: {len(_all_md(CHAT_SUMMARIES_DIR))}")
     print(f"Saved analyses: {len(_all_md(ANALYSES_DIR))}")
-    print(f"Write access (GITHUB_TOKEN): {'enabled' if GITHUB_TOKEN else 'DISABLED — saves will stay local only, not push'}")
+    staged_count = len(list(OV2_XREF_STAGING.glob('*.md'))) if OV2_XREF_STAGING.exists() else 0
+    print(f"Staged OV2 cross-references awaiting approval: {staged_count}")
+    print(f"Write access to own repo (GITHUB_TOKEN): {'enabled' if GITHUB_TOKEN else 'DISABLED — saves will stay local only, not push'}")
+    print(f"Write access to OV2 repo (OV2_GITHUB_TOKEN): {'enabled' if OV2_GITHUB_TOKEN else 'DISABLED — propose_ov2_xref/apply_ov2_xref will not be able to reach OV2'}")
     print(f"Git branch: {GIT_BRANCH}")
-    print(f"SSE endpoint mounted at /<secret>/sse (secret not logged)")
-    mcp.run(transport="sse")
+    print(f"Configured users: {len(CLAUDE_OV_USERS)} (secrets not logged)")
+    print(f"Per-user endpoints mounted at /<their-secret>/sse (each resolves to one username)")
+
+    # mcp.run(transport="sse") builds and serves its own uvicorn app internally
+    # with no hook to inject middleware — so the identity-resolving middleware
+    # is wired in manually here instead: get the raw ASGI app, wrap it, run it.
+    import uvicorn
+    app = _IdentityMiddleware(mcp.sse_app())
+    uvicorn.run(app, host="0.0.0.0", port=PORT)

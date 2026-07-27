@@ -1,16 +1,37 @@
-# Render deployment for the Claude Notes Vault — a standalone scratchpad
-# service, fully isolated from OV2 (raj-wiki-vault).
+# Render deployment for the Claude Notes Vault ("Claude OV") — a standalone
+# scratchpad service, fully isolated from OV2 (raj-wiki-vault).
 #
-# One service, one branch — there's no ingestion pipeline here, only two
-# agent-driven writes (save_chat_transcript, save_analysis), so there's no
-# webhook receiver, no cron, no persistent disk, and no main/data branch
-# split. All content lives on 'data'; 'main' would only ever hold this same
-# code, so keeping code and content on one branch is fine here (unlike OV2,
-# where a genuinely long multi-account pipeline run needed to avoid
-# retriggering its own mid-run redeploy).
+# One service, one branch — there's no ingestion pipeline here, only
+# agent-driven writes (save_chat_transcript, save_analysis, the SYNTHESIZE
+# workflow's chat-summary pages, and the CROSS-LINK workflow's OV2 xref
+# writes), so there's no webhook receiver, no cron, no persistent disk, and
+# no main/data branch split. All content lives on 'data'; 'main' would only
+# ever hold this same code, so keeping code and content on one branch is
+# fine here (unlike OV2, where a genuinely long multi-account pipeline run
+# needed to avoid retriggering its own mid-run redeploy).
 #
 # Each save is a single small file, so a self-triggered redeploy on every
 # push is an accepted tradeoff — same as OV2's mcp-server.
+#
+# Two separate GitHub tokens, two separate repos:
+#   GITHUB_TOKEN     — pushes only to THIS repo (claude-notes-vault), same
+#                       pattern as OV2's own mcp-server.
+#   OV2_GITHUB_TOKEN  — a SEPARATE fine-grained token, scoped only to
+#                       eoxssecondbrain/raj-wiki-vault (Contents: Read and
+#                       write), used only by apply_ov2_xref to push an
+#                       approved cross-reference line into OV2's wiki.
+#                       Keeping these as two distinct tokens means a bug in
+#                       this server's own-repo write path can never touch
+#                       OV2, and vice versa.
+
+# Multi-user identity: CLAUDE_OV_USERS is a single JSON object env var mapping
+# each user's own long random secret to their username, e.g.
+#   {"9f8a...longrandom...": "raj", "3e7c...longrandom...": "ayan"}
+# One service, one deployment — adding a user is editing this one JSON value
+# and giving them their own connector URL (https://<host>/<their-secret>/sse),
+# not standing up a new service. The server resolves identity from the URL
+# path itself before any tool call runs (see _IdentityMiddleware in
+# mcp_server.py) — never from a value the model passes or guesses.
 
 services:
   - type: web
@@ -24,7 +45,7 @@ services:
     envVars:
       - key: PORT
         value: "8000"
-      - key: MCP_URL_SECRET
+      - key: CLAUDE_OV_USERS
         sync: false
       - key: GITHUB_TOKEN
         sync: false
@@ -32,3 +53,11 @@ services:
         value: https://github.com/eoxssecondbrain/claude-notes-vault.git
       - key: GIT_BRANCH
         value: data
+      - key: OV2_GITHUB_TOKEN
+        sync: false
+      - key: OV2_REPO_URL
+        value: https://github.com/eoxssecondbrain/raj-wiki-vault.git
+      - key: OV2_BRANCH
+        value: data
+      - key: OV2_CLONE_DIR
+        value: /tmp/ov2-clone
