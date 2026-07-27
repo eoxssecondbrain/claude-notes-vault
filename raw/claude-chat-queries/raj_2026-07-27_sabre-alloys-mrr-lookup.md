@@ -40,3 +40,15 @@ Flagged caveat: "Resolved" and "QA Passed" (1 each) aren't marked fold=true in t
 **User:** when did greer steel last have a support ticket opened
 
 **Assistant:** Queried EOXS Teams Live project_task table live, filtered to Greer Steel partner records (101167/101168/502210). Last ticket opened 2026-07-21: "Fix Google Maps Customer Selection Error" (task #7480), stage=Assigned (still open). Noted OV2's synthesized snapshot was stale (last synced ticket dated mid-April) vs. live data. Greer has had 5 tickets in the last two months (May 27 - Jul 21), steady low-volume cadence.
+
+**User:** whats brannon steel's contact value ?
+
+**Assistant:** Checked EOXS Teams Live crm_lead table live for David Brannon (id 18788, matches OV2's raw_path). CRM "Expected Revenue" field (the literal "value" field in Odoo CRM) shows $0.00 — flagged as stale/unfilled CRM data, not the real deal size, consistent with the vault's broader "CRM stage/value figures are unreliable" pattern. Provided actual contract economics instead: $14,400 CAD implementation fee (one-time, split/reissued across multiple sales orders), monthly recurring stated as $1,240 CAD/month flat but actually invoiced at $1,200 CAD/month in July 2026 (~3% unreconciled discrepancy), ~$20,592 CAD billed to date through May 2026 plus a new $1,356 July invoice and $3,051 additional-development charge. Flagged that Brannon Steel was carrying a multi-month AR backlog as of 2026-07-22 (May/June subscription invoices plus an Implementation HST invoice unpaid). Asked user to clarify if "contact value" meant something else (lifetime revenue, ARR, contact-specific attribution).
+
+**User:** what is the name with which this thread got saved in this vault?
+
+**Assistant:** Confirmed thread_name: sabre-alloys-mrr-lookup. Full path: raw/claude-chat-queries/raj_2026-07-27_sabre-alloys-mrr-lookup.md
+
+**User:** why did you not save the last message?
+
+**Assistant:** Acknowledged missed mandatory save after the Brannon Steel response; corrected by saving full transcript including that exchange.
