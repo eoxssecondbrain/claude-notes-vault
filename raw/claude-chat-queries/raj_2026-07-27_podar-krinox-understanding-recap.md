@@ -32,3 +32,16 @@ Answer given:
 - Pushed back explicitly: don't lead sales conversations with "AI operating system" or the 8-layer architecture framing — that's internal vision, not a buyer's problem language. Buyers respond to "stop chasing AR manually," not "Company Brain → Digital Workforce."
 - Positioned Sabre's SA2/IRIS pilot and the 3GM CCO-dashboard angle as better suited to expansion motion (post-trust) than cold/early-stage deals.
 - Recommendation: repeat one narrow back-office dollar-denominated workflow (AR/AP, since there's already proof via Monarch) before diversifying into dashboards/advisory use cases, if the goal is proving Krinox as a category rather than just landing a second Monarch-style deal.
+
+---
+
+User (Raj): "what are some of the biggest challenges we can face while selling this to client" (Krinox)
+
+Claude: Applied sales-strategist skill, Query type B. Ranked challenges by deal-killing potential:
+1. Buy-vs-build objection — Ram Shenoy already raised "why not build ourselves with our own vault + Claude"; no crisp answer on record yet; flagged as the #1 positioning gap to close before scaling outbound.
+2. Security/access control credibility — OV has no native permissioning; pitching live access to email/ERP/call transcripts against a backdrop of EOXS's own plaintext-credential history and the Feb 2026 Sabre breach; flagged as a likely dealbreaker with any prospect that has a real security function.
+3. Brand confusion / trust transfer — Krinox/GFC is a brand-new entity riding on EOXS/Prata relationship credibility with zero own track record; Raj hasn't picked a lane between "same team, new product" vs. fully separate brand positioning.
+4. Unproven pricing model — platform fee + per-agent is untested; advised going into first real negotiation expecting to defend it, not discover it.
+5. CloudForge/category timing — competitor already pivoted to AI sales co-pilot on a metals database with a proven displacement win against EOXS (PPC Metals); risk of losing "AI layer for steel distributors" category framing if CloudForge gets there first.
+
+Closed by recommending Raj prioritize #1 (buy-vs-build) and #2 (security/access control) as the ones a good prospect will surface first.
