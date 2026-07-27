@@ -1,4 +1,4 @@
-# Claude Notes Vault ("Claude OV")
+# Claude Notes Vault ("Threads OV")
 
 A standalone scratchpad service for saving Claude chat transcripts and mining them
 for tribal knowledge — fully isolated from the OV2 vault (`raj-wiki-vault`).

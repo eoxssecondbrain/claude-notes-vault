@@ -1,5 +1,5 @@
 """
-Claude Notes Vault MCP Server ("Claude OV")
+Claude Notes Vault MCP Server ("Threads OV")
 Standalone scratchpad service — save_chat_transcript + save_analysis (plus read-back tools),
 a chat-summary synthesis layer (wiki/chat-summaries/), and an OV2 cross-reference tool
 (propose_ov2_xref / apply_ov2_xref) that lets a short pointer line be written into OV2's
@@ -583,7 +583,7 @@ def propose_ov2_xref(ov2_page_path: str, pointer_line: str, chat_summary_title: 
         e.g. 'wiki/sources/sabre-alloys/Sabre Alloys — Post-Crisis Operations.md'
     pointer_line: the exact 1-2 line text to add (no bullet/heading — those are added
         automatically under a '## Related Claude Threads' section on the target page)
-    chat_summary_title: the exact title of the Claude OV chat-summary page this points to,
+    chat_summary_title: the exact title of the Threads OV chat-summary page this points to,
         so a future get_chat_summary() call can retrieve it by name
     """
     OV2_XREF_STAGING.mkdir(parents=True, exist_ok=True)
@@ -660,9 +660,9 @@ def apply_ov2_xref(staged_id: str) -> str:
     target.write_text(content, encoding="utf-8")
 
     _ov2_git(["config", "user.email", "claude-ov-xref@eoxs.com"])
-    _ov2_git(["config", "user.name", "Claude OV Cross-Reference"])
+    _ov2_git(["config", "user.name", "Threads OV Cross-Reference"])
     _ov2_git(["add", ov2_page_path])
-    commit = _ov2_git(["commit", "-m", f"xref: link Claude OV chat summary to {Path(ov2_page_path).stem}"])
+    commit = _ov2_git(["commit", "-m", f"xref: link Threads OV chat summary to {Path(ov2_page_path).stem}"])
     if commit.returncode != 0 and "nothing to commit" not in (commit.stdout + commit.stderr):
         return f"git commit into OV2 failed: {commit.stderr.strip()}"
     push = _ov2_git(["push", "origin", f"HEAD:{OV2_BRANCH}"])

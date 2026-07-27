@@ -1,11 +1,11 @@
 ---
-name: claude-ov
-description: Save and synthesize Claude chat transcripts in a standalone vault ("Claude OV"), isolated from OV2 (raj-wiki-vault). Covers saving raw transcripts, synthesizing them into topic-clustered chat-summary pages, and proposing short cross-reference pointers into OV2's own wiki. Use whenever saving a Claude conversation, saving an analysis, running a chat-summary synthesis pass, or linking a chat-summary to an OV2 wiki page.
+name: threads-ov
+description: Save and synthesize chat transcripts in a standalone vault ("Threads OV"), isolated from OV2 (raj-wiki-vault). Covers saving raw transcripts, synthesizing them into topic-clustered chat-summary pages, and proposing short cross-reference pointers into OV2's own wiki. Use whenever saving a conversation, saving an analysis, running a chat-summary synthesis pass, or linking a chat-summary to an OV2 wiki page.
 ---
 
-# Claude OV — Session Skill
+# Threads OV — Session Skill
 
-You are embedded inside "Claude OV" (`claude-notes-vault`) — a small, standalone scratchpad vault that exists for exactly one reason: to keep Claude-chat-transcript bookkeeping (saving, summarizing, cross-referencing) completely out of OV2 (`raj-wiki-vault`), the main EOXS second brain. OV2 must never bloat with raw transcript volume — Claude OV absorbs that entirely, and only ever hands OV2 a one-to-two-line pointer when something is genuinely relevant.
+You are embedded inside "Threads OV" (`claude-notes-vault`) — a small, standalone scratchpad vault that exists for exactly one reason: to keep Claude-chat-transcript bookkeeping (saving, summarizing, cross-referencing) completely out of OV2 (`raj-wiki-vault`), the main EOXS second brain. OV2 must never bloat with raw transcript volume — Threads OV absorbs that entirely, and only ever hands OV2 a one-to-two-line pointer when something is genuinely relevant.
 
 This vault has three layers, in increasing order of compression:
 
@@ -51,7 +51,7 @@ This vault has three layers, in increasing order of compression:
 
 ### OV2 cross-reference (Layer 3 — propose, approve, apply)
 - **`search_ov2_wiki(query)`** — searches OV2's actual wiki content (via a local read-only clone) to verify a proposed link is grounded in a real OV2 page, not a guess. Prefer OV2's own `search_wiki`/`get_wiki_page` tools directly if OV2's MCP connector is enabled in this conversation — this is a fallback.
-- **`propose_ov2_xref(ov2_page_path, pointer_line, chat_summary_title)`** — stages a proposed 1-2 line addition to an OV2 page. Writes **only** to a local staging file inside Claude OV's own repo. Never touches OV2's repo.
+- **`propose_ov2_xref(ov2_page_path, pointer_line, chat_summary_title)`** — stages a proposed 1-2 line addition to an OV2 page. Writes **only** to a local staging file inside Threads OV's own repo. Never touches OV2's repo.
 - **`list_staged_ov2_xrefs()`** — lists everything staged and awaiting review.
 - **`apply_ov2_xref(staged_id)`** — the only tool that actually clones/pulls OV2's repo, edits the target page, commits, and pushes to OV2's `data` branch. **Call this only for a `staged_id` the user has explicitly approved in this session — never apply a batch unreviewed.**
 
@@ -120,11 +120,11 @@ Run this right after a SYNTHESIZE pass, using the "Candidate OV2 Cross-Reference
 
 2. **Draft the pointer line.** One sentence, specific, in the voice of a citation — not a summary of the whole thread. Follow this shape:
 
-   > "This issue also came up in a Claude conversation — see Claude OV: '\<chat-summary title\>'."
+   > "This issue also came up in a Claude conversation — see Threads OV: '\<chat-summary title\>'."
 
    Or, more specific when useful:
 
-   > "This pattern was discussed at length in a Claude conversation — see Claude OV: '\<chat-summary title\>'."
+   > "This pattern was discussed at length in a Claude conversation — see Threads OV: '\<chat-summary title\>'."
 
    Do not include raw chat content, dates from the transcript, or anything beyond the pointer itself — the detail lives in the chat-summary page, not in OV2.
 
@@ -134,7 +134,7 @@ Run this right after a SYNTHESIZE pass, using the "Candidate OV2 Cross-Reference
    ```
    3 proposed cross-references:
    1. [staged_id] → wiki/sources/sabre-alloys/Sabre Alloys — Post-Crisis Operations.md
-      "This issue also came up in a Claude conversation — see Claude OV: 'Sabre Alloys Payment Discipline — AR Verification'."
+      "This issue also came up in a Claude conversation — see Threads OV: 'Sabre Alloys Payment Discipline — AR Verification'."
    2. ...
    ```
    Ask which to apply — all, some, or none. Do not assume approval from silence or from the fact that SYNTHESIZE already ran.
@@ -145,7 +145,7 @@ Run this right after a SYNTHESIZE pass, using the "Candidate OV2 Cross-Reference
 
 ### How this surfaces later, in an OV2 query session
 
-Once applied, the pointer line lives directly on the OV2 page under a `## Related Claude Threads` section. When OV2 answers a query and that page is in scope, the pointer line is just part of the page text — cite it like any other line. If the user asks to expand on it, that's the cue to switch to (or ask the user to enable) the Claude OV connector and call `search_chat_summaries`/`get_chat_summary` using the exact title named in the pointer line — not a guess at a similar-sounding title.
+Once applied, the pointer line lives directly on the OV2 page under a `## Related Claude Threads` section. When OV2 answers a query and that page is in scope, the pointer line is just part of the page text — cite it like any other line. If the user asks to expand on it, that's the cue to switch to (or ask the user to enable) the Threads OV connector and call `search_chat_summaries`/`get_chat_summary` using the exact title named in the pointer line — not a guess at a similar-sounding title.
 
 ---
 

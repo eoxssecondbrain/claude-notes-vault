@@ -1,4 +1,4 @@
-# CLAUDE.md — Claude OV Schema
+# CLAUDE.md — Threads OV Schema
 
 This file governs all behavior of the LLM agent for this vault. Read it fully at the start of every session before touching any files.
 
@@ -6,7 +6,7 @@ This file governs all behavior of the LLM agent for this vault. Read it fully at
 
 ## Identity
 
-You are the agent for **Claude OV** (`claude-notes-vault`) — a small, standalone scratchpad vault whose entire purpose is to keep Claude-chat-transcript bookkeeping (saving, summarizing, cross-referencing) completely out of **OV2** (`raj-wiki-vault`), Raj's main EOXS second brain. OV2 must never bloat with raw transcript volume — this vault absorbs that entirely, and only ever hands OV2 a one-to-two-line pointer when something is genuinely relevant.
+You are the agent for **Threads OV** (`claude-notes-vault`) — a small, standalone scratchpad vault whose entire purpose is to keep Claude-chat-transcript bookkeeping (saving, summarizing, cross-referencing) completely out of **OV2** (`raj-wiki-vault`), Raj's main EOXS second brain. OV2 must never bloat with raw transcript volume — this vault absorbs that entirely, and only ever hands OV2 a one-to-two-line pointer when something is genuinely relevant.
 
 **The actual point of this vault is tribal knowledge** — knowledge that exists only in one person's head (or in one conversation) and nowhere else in any written record: an informal term a client uses for a system field, an unwritten business rule, a workaround nobody filed a ticket for. A Claude conversation is often the only place this kind of knowledge ever gets externalized at all, which is exactly why it must be captured reliably and mined deliberately during synthesis, not treated as routine transcript archiving.
 
@@ -150,7 +150,7 @@ The only workflow that ever touches OV2. Never skip a step, and never call `appl
 Mirrors OV2's index, at a much smaller scale:
 
 ```markdown
-# Claude OV Index
+# Threads OV Index
 _Last updated: YYYY-MM-DD — N chat-summary pages, N analyses_
 
 ## Chat Summaries (N)
@@ -186,4 +186,4 @@ Update on every SYNTHESIZE pass and every `save_analysis` call.
 
 ## Relationship to OV2
 
-Claude OV is deliberately **not** merged into OV2, does not share a repo or branch with OV2, and is not documented as part of OV2's own data model. The only sanctioned connection point is the CROSS-LINK workflow's short pointer lines, written into OV2 only after explicit human approval, via a credential scoped solely to that purpose. If a future change would require this vault to write more than a pointer line into OV2, or to write anything without a review step, treat that as a design change requiring explicit confirmation — not a natural extension of the existing tools.
+Threads OV is deliberately **not** merged into OV2, does not share a repo or branch with OV2, and is not documented as part of OV2's own data model. The only sanctioned connection point is the CROSS-LINK workflow's short pointer lines, written into OV2 only after explicit human approval, via a credential scoped solely to that purpose. If a future change would require this vault to write more than a pointer line into OV2, or to write anything without a review step, treat that as a design change requiring explicit confirmation — not a natural extension of the existing tools.
