@@ -8,22 +8,23 @@ updated: 2026-07-27
 
 User (Raj): pull out the last correspondence with austin, discount pipe. he had asked to send the list of all user. support sent something. and they mentioned that tina and jamie are not being charged.
 
-Assistant (Claude): Searched OV2 vault (raj_gmail, ron_gmail, support_zoho) for Austin Rayzor / Discount Pipe & Steel correspondence re: user/license list. Found two relevant threads:
+Assistant: [Summary of turn 1 already saved — see prior version. Found June 11 2026 "Licenses" thread and July 22-24 2026 "Re: Invoice / EOXS INV/2026/0283" thread. Answered with July thread as most recent correspondence: Ron told Austin they'd send a list of active users to be billed next month; support's July 24 reply listed Active Users (Billed) vs Active Users (No License Fee) — Tina Valdez and Jamie Vernon in the latter category. Noted the proactive heads-up about switching Tina/Jamie to billed (per Raj's existing decision/instruction to Ron) hasn't gone out yet.]
 
-1) raw/emails/ron_gmail/2026-06/2026-06-11-licenses.md — "Licenses" thread, June 11 2026. Austin asked Ron for current license list. Ron looped in AR (billing) team. AR sent list of users, flagging "Tina Valdez (Not Billable - Instructions from Raj)" and "Jamie Vernon (Not Billable - Instructions from Raj)". Ron flagged that Cameron Bain's user had been removed earlier in the year but was still being billed. AR confirmed Cameron's account wasn't archived (password reset only), corrected it, issued a $1,560 credit note, and sent updated invoice INV/2026/0259.
+User (Raj): yes. so now. i want to send a reasonable email to austin. that dude whats happening with these 2 users. we have actively served them and they should be paid users. initially we thought it was temporary, but how are we moving forward. because if they are still active, we need to start charging for them. something that sounds reasonable. you know how austin is and how he thinks.
 
-2) raw/emails/support_zoho/2026-07/2026-07-22-re-invoice-eoxs-inv20260283.md — "Re: Invoice / EOXS INV/2026/0283" thread, most recent (July 22-24 2026). Ron told Austin EOXS would send a list of all currently active users to be billed next month, and asked support to provide it. Support (2026-07-24) sent the list split into "Active Users (Billed)": Alicia Osthus, Alyssa Litwin, Austin Rayzor, Derrick Winn, Ryan Yandel, Zana Williams, Shipping, Lacee Hulsey; and "Active Users (No License Fee)": Tina Valdez, Jamie Vernon. Support also stated going forward an updated user/license list will be included with each monthly invoice.
+Assistant: Applied sales-strategist skill (email drafting, section C) on top of raj-eoxs-vault context. Drafted one email variant via message_compose_v1, signed as Ron (continuity with the June/July threads where Ron was Austin's contact on this topic):
 
-Answered Raj with the July 22-24 thread as the "last correspondence" matching his description (list of all users, Tina/Jamie flagged as not charged), with the June 11 thread as prior context. This connects to the existing memory item: Raj had decided to begin charging Tina Valdez and Jamie Vernon going forward, with Ron tasked to proactively notify Austin before the charge appears on an invoice — that notification has not yet happened per this July thread (both still shown as no license fee).
+Subject: "Update on Tina and Jamie's licenses"
+Body: explains the seats were kept off-bill on a temporary assumption, that assumption hasn't held since both are active users like the rest of the team, so they'll move to standard licensing starting next invoice cycle (reflected in the now-standard itemized monthly list), with an offer to call if Austin wants to discuss.
+
+Coaching given to Raj: Austin escalates methodically and wants itemized detail, so the email leads with a clear "why now" rather than announcing the change unexplained, and closes with an easy off-ramp (call) rather than a unilateral notice. Flagged an open gap: "starting next month's invoice" is vague — Raj should pin an actual invoice number/date before sending so Austin can't push back asking which invoice.
 
 ## Tribal Knowledge Extracted
-- EOXS billing/support team uses inline annotations like "(Not Billable - Instructions from Raj)" directly in user list emails sent to clients — a personal instruction from Raj becomes visible, verbatim-labeled text in client-facing correspondence rather than being tracked internally only.
-- A user's Odoo account being password-reset (access restricted) is NOT the same as being archived for billing purposes — this caused a real billing error (Cameron Bain billed for 4 months after his access was cut) at Discount Pipe & Steel. Support's process was corrected after the fact, not proactively.
-- Going forward (per July 24 2026 commitment), Discount Pipe & Steel will receive an itemized active-user/license list attached to every monthly invoice — a new standing process, not a one-off.
+- No new tribal knowledge beyond turn 1 (Cameron Bain archiving-vs-billing gap, "Not Billable - Instructions from Raj" annotation convention, and the new standing itemized-list-per-invoice process, already captured in the first save of this thread).
 
 ## Sources
 - raw/emails/ron_gmail/2026-06/2026-06-11-licenses.md
 - raw/emails/support_zoho/2026-07/2026-07-22-re-invoice-eoxs-inv20260283.md
 
 ## Candidate OV2 Cross-References
-- Discount Pipe & Steel (DPS) client entity page — the Tina Valdez/Jamie Vernon "not billable" arrangement and the pending decision to start charging them (already in Raj's active memory) directly updates/confirms DPS billing history; also the Cameron Bain billing-error/credit-note incident is a discrete billing incident worth a pointer if a DPS billing-history page exists.
+- Discount Pipe & Steel (DPS) client entity page — this thread produces the actual outbound email drafted to formally move Tina Valdez and Jamie Vernon to billed status, which is the concrete action item already noted in Raj's standing memory ("Ron tasked to send a proactive email to Austin Rayzor before the charge appears on an invoice") — worth a pointer once the email is actually sent and an invoice date is confirmed.
