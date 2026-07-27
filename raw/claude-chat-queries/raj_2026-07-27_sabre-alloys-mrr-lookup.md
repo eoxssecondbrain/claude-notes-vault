@@ -32,3 +32,7 @@ Flagged caveat: "Resolved" and "QA Passed" (1 each) aren't marked fold=true in t
 **User:** who is jessica at 3gm steel
 
 **Assistant:** Jessica Worley — primary contact at 3GM Steel, Director of Supply Chain Management (promoted from Office Administrator). jessica@3gmsteel.com. Signed the EOXS contract July 31, 2025. Highest-volume 3GM contact (449 threads), dominant day-to-day power user (product creation, variants, leads, CRM). Actually with 3GM since ~March 2022 as Office Administrator, day-to-day EOXS point of contact well before formal contract signing. Was on maternity leave from ~June 2024 (long handoff to Jerrica Eldridge/Shanan Shaver started Jan 2024). Absorbed Shanan Shaver's price-guideline duties after Shanan's Jan 2026 departure. Recurring friction point: repeatedly requesting expanded self-service system access, including CCO-level parity for Travis Lane (Mar 2026 request).
+
+**User:** what's dps's last invoice amount?
+
+**Assistant:** Queried EOXS Teams Live account_move table live, filtered to Discount Pipe & Steel's partner_id (502192), type=out_invoice. Last invoice: INV/2026/0283, dated 2026-06-30, $3,510.00, posted. Noted recent invoice amounts have fluctuated month to month (not flat recurring): $4,700 (Jun 2), $3,120 (May), $2,730 (Apr), $5,620 (Mar). Flagged that this predates the AltDigital consultant seat billing change (Tina Valdez, Jamie Vernon) currently in motion per standing account notes.
