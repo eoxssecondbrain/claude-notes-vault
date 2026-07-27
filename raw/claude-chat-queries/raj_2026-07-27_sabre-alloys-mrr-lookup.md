@@ -36,3 +36,7 @@ Flagged caveat: "Resolved" and "QA Passed" (1 each) aren't marked fold=true in t
 **User:** what's dps's last invoice amount?
 
 **Assistant:** Queried EOXS Teams Live account_move table live, filtered to Discount Pipe & Steel's partner_id (502192), type=out_invoice. Last invoice: INV/2026/0283, dated 2026-06-30, $3,510.00, posted. Noted recent invoice amounts have fluctuated month to month (not flat recurring): $4,700 (Jun 2), $3,120 (May), $2,730 (Apr), $5,620 (Mar). Flagged that this predates the AltDigital consultant seat billing change (Tina Valdez, Jamie Vernon) currently in motion per standing account notes.
+
+**User:** when did greer steel last have a support ticket opened
+
+**Assistant:** Queried EOXS Teams Live project_task table live, filtered to Greer Steel partner records (101167/101168/502210). Last ticket opened 2026-07-21: "Fix Google Maps Customer Selection Error" (task #7480), stage=Assigned (still open). Noted OV2's synthesized snapshot was stale (last synced ticket dated mid-April) vs. live data. Greer has had 5 tickets in the last two months (May 27 - Jul 21), steady low-volume cadence.
