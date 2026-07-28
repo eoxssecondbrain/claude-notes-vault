@@ -30,3 +30,9 @@ Findings (stage_id mapped via crm_stage table):
 - Ace Steel Supply: LOST (2026-07-15) — most recent touch of the whole set
 
 Recommended straight-line reach-out list: Coilplus, Horizon Steel, Modesto Steel, Steel Warehouse (Ted Lerman), HarbisonWalker (Crawford Murton). Flagged Titanium as cold, Monarch as past-prospect-stage, FerroSource/Ace Steel as LOST needing a reason before re-approach. Noted this was a stage-field-only pass and offered a 10ft deep pass (mail_message/description-level verification) as next step if wanted.
+
+## User
+horizon steel is an asshole. we dont want to business with them.
+
+## Assistant
+Removed Horizon Steel from the reach-out list per Raj's instruction. Updated straight-line reach-out list: Coilplus, Modesto Steel, Steel Warehouse (Ted Lerman), HarbisonWalker (Crawford Murton). Titanium stays cold, Monarch past-prospect, FerroSource/Ace Steel LOST needing a reason, Horizon Steel now excluded per Raj's call. Note: did not write this exclusion to persistent memory since Raj did not explicitly ask for it to be remembered (per his stated preference) — it's reflected in this thread only.
