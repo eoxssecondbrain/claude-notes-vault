@@ -57,10 +57,10 @@ Operating model adopted: Emotive Brand (SF-based B2B brand strategy agency). Key
 
 **Proof-point strategy:** Option 1 — "steel as credibility weapon." State plainly the product was built and proven inside one of the most fragmented, custom, undocumented industries in American manufacturing. Reframes the narrow proof as evidence of range, not a limitation to hide.
 
-**Draft hero copy (v1):**
+**Draft hero copy (v1, written when name was still Krinox):**
 > You built something real. Most of what you know about it still lives in your head, one employee's inbox, and a system nobody fully trusts.
 >
-> Krinox is the senior advisor that's actually read everything — every order, every call, every email — and tells you the truth about your business before you have to ask.
+> [Name] is the senior advisor that's actually read everything — every order, every call, every email — and tells you the truth about your business before you have to ask.
 >
 > [Book a fit call]
 
@@ -95,7 +95,7 @@ Emotional arc the page executes: Recognition → Tension → Clarity → Belief 
 
 ## Visual/design direction
 
-**Key correction issued:** Consumer luxury (gold, ornament, gloss) and enterprise luxury (restraint, space, precision) are opposite aesthetics. If Krinox looks like a watch brand, a CEO reads consultancy, not infrastructure. Target: quiet, dense, exact. Expensive because nothing is wasted. Reference set: Linear, Vercel, Stripe, Palantir.
+**Key correction issued:** Consumer luxury (gold, ornament, gloss) and enterprise luxury (restraint, space, precision) are opposite aesthetics. If the site looks like a watch brand, a CEO reads consultancy, not infrastructure. Target: quiet, dense, exact. Expensive because nothing is wasted. Reference set: Linear, Vercel, Stripe, Palantir.
 
 **Color:** Near-black base (#0B0C0E / #101114), never pure black. Surface layers #16181C, #1E2126 for elevation via background shift rather than borders. Text never pure white — #F2F3F5 primary, #9BA1A8 secondary, #6B7178 tertiary. Exactly one accent — either cold platinum (#C8CDD4) or low-frequency ember (#C8642A). Accent appears on under 5% of the page; scarcity is the signal.
 
@@ -115,35 +115,46 @@ Emotional arc the page executes: Recognition → Tension → Clarity → Belief 
 
 ---
 
-## Naming — status change
+## Naming — status
 
-**Krinox rejected by Raj.** His own stated reason: it isn't sticking, he keeps forgetting it himself. Correctly treated as a fatal signal — a name the founder forgets won't survive a single CEO hearing it on a call. (Note: krinox.com purchase was previously planned for 27 July; this decision supersedes that. Prior vault page "Podar Naming Decision — Krinox" is now partially obsolete.)
+**Krinox rejected by Raj.** His own stated reason: it isn't sticking, he keeps forgetting it himself. Correctly treated as a fatal signal. (Note: krinox.com purchase was previously planned for 27 July; this decision supersedes that. Prior vault page "Podar Naming Decision — Krinox" is now obsolete.)
 
-**Raj's brief for the new name:** must strike a thought in the mind of someone encountering it. Open to naming after a famous fictional character (cited Android/droid precedent). Cited "The Watcher" (Marvel's Uatu) as directionally interesting but too boring. Also open to two-letter names (e.g. EX, DJ) provided the letters carry real significance. Explicitly excluded: rundown names like Cortex, Pulse, Synapse.
+**Round 1 brief:** must strike a thought; open to famous fictional characters (Android/droid precedent); "The Watcher" (Uatu) cited as directionally right but boring; open to two-letter names with real significance; explicitly excluded Cortex/Pulse/Synapse-type names.
 
-**Key reframe offered:** The Watcher is boring because Uatu's defining trait is non-intervention. The product does the opposite — sees everything, then tells you. So the target archetype is not a watcher but a narrator: the one who sees the whole field and reports it truthfully to the person who cannot see it himself.
+**Key reframe offered:** The Watcher is boring because Uatu's defining trait is non-intervention. The product does the opposite — sees everything, then tells you. Target archetype is not a watcher but a narrator: sees the whole field and reports it truthfully to the person who cannot see it himself.
 
-### Candidates presented
+**Round 1 candidates (ALL REJECTED by Raj as "not memorable at all"):** Sanjaya (Mahabharata — divine sight narrating the battlefield to the blind king Dhritarashtra; was the top recommendation), Vidura, Chitragupta, Vyasa, Mimir, Muninn, Kvasir, Seldon, Varys, Mycroft, Demerzel, plus two-letter options MU / NB / KV.
 
-**Top recommendation — Sanjaya.** Mahabharata: granted divine sight to observe the entire Kurukshetra battlefield from a distance and narrate it in real time to the blind king Dhritarashtra. Maps exactly onto the product — a leader blind to his own operation, and a system with total sight reporting truth continuously. Three syllables, phonetically simple in English, carries a story (which is what makes a name unforgettable). Connects to the Ganesh Fruit Company heritage thread without repeating it. Risk flagged: American Idol association for a US age bracket.
+**Round 2 brief (current):** Raj wants SHORT names only — cited Odin, Zeus, Sage as the target register. Long names are hard to remember.
 
-**Same mythology:** Vidura (the counselor who told kings unwanted truths — Vidura Niti is essentially a treatise on advising power honestly); Chitragupta (divine accountant recording every action, keeper of the complete ledger — nearly on the nose for an ERP-derived product, but too long); Vyasa (literally means "the compiler," the one who arranged the Vedas into order).
+### Round 2 analysis
 
-**Norse:** Mimir (the head Odin consults for counsel; Odin traded an eye for a drink from Mimir's well — recently familiar via God of War); Muninn (Odin's raven, memory; with Huginn/thought they fly the world daily and report back — ingestion and reporting in one image); Kvasir (formed from the combined knowledge of all the gods, could answer any question).
+**Fatal conflicts flagged in Raj's own examples:**
+- **Sage — DEAD.** Sage Group is a multi-billion-pound accounting/ERP software company. Naming an ERP-adjacent AI product after the incumbent in the same category is instant, fatal.
+- **Zeus — compromised.** Zeus is one of the most famous banking trojans in history. Wrong association for a product requesting access to every email and transaction.
+- **Odin — survives but crowded.** Concept fits well (traded an eye for wisdom; two ravens fly the world daily and report back). Problem is it's one of the most-used names in tech/security. Not fatal, but undifferentiated.
 
-**Fiction:** Seldon (Foundation — used vast data to forecast a civilization's trajectory; reads as a surname/firm rather than a product, currently visible via Apple TV series); Varys (GoT Master of Whisperers, network of little birds, knows everything first — but he's a schemer, and that association is a real problem when asking for total data access); Mycroft (double resonance — Sherlock's smarter brother who never leaves his chair, and Heinlein's colony-running computer; flag: an open-source voice assistant used this name and wound down ~2023, space likely clear but needs checking); Demerzel (Foundation's machine advisor operating behind emperors for millennia).
+### Round 2 candidates presented (all 4–5 letters, 1–2 syllables)
 
-**Two-letter options:** MU (Muninn/memory; also the statistical mean); NB (Nabu, Babylonian god of scribes and keeper of the tablets of destiny + nota bene); KV (Kvasir compressed, reads like a ticker).
-Council's honest read: two-letter names demand enormous marketing spend because the letters carry no inherent meaning. IBM and BP earned their initials over a century. For founder-led selling targeting 30 customers in 90 days, a name that explains itself in one sentence is worth more than one that looks clean on a slide.
+Strongest:
+- **Norn** — the three Norse fates who see past, present and future and weave them together. Four letters, one syllable, hard Nordic consonants, sounds like infrastructure. Likely uncrowded — nobody has mined the Norns.
+- **Metis** — Zeus's first wife, goddess of counsel; he swallowed her so her wisdom would speak from inside him permanently. Maps exactly to "not an external tool, an advisor living inside the business."
+- **Scry** — to perceive what is hidden or distant. Four letters, one syllable, and a verb, so it feels active. Modern-sounding despite archaic root. Likely wide open.
 
-**Ruled out:** Palantír (taken, obviously). Argus (direct conflict — Argus Media is a major commodity price reporting agency covering metals, i.e. inside the beachhead industry). Oracle (taken). Cassandra (trap — she saw the truth and was never believed).
+Also strong:
+- **Maat** — Egyptian truth and cosmic order; the feather every heart was weighed against. A literal standard of truth.
+- **Rune** — encoded knowledge, marks carrying hidden meaning. Memorable; some tech usage but not in category.
+- **Thoth** — scribe of the gods, recorder of everything. Striking; needs pronunciation coaching.
+- **Ken** — real English word meaning the range of what one can see and know ("beyond my ken"). Three letters, exactly right meaning. Risk: reads as a first name.
+- **Vigil** — the watch actively kept. Raj's Watcher instinct, but awake and reporting.
+- **Nabu** — Babylonian god of scribes, keeper of the tablets of destiny. Four letters, unusual enough to stick.
 
-**Recommendation order:** Sanjaya first, Mimir second, Seldon third if the goal is to feel like an institution rather than an intelligence.
+**Top three recommended:** Norn (sounds like heavy infrastructure), Metis (sounds like counsel), Scry (sounds like a modern product rather than a mythology reference).
 
 ---
 
 ## Open items
-- No domain or trademark checks run on any of the new naming candidates yet — awaiting Raj's shortlist.
+- No domain or trademark checks run on any Round 2 candidates yet — awaiting Raj's shortlist of two or three.
 - Prior "Krinox" vault page needs superseding once a final name is chosen.
 - Homepage copy beyond the hero draft not yet written.
 - Delivery-capacity plan for 30 bespoke onboardings in 90 days still unresourced — flagged repeatedly as a higher risk to the $1M/90-day goal than anything on the website.
