@@ -117,44 +117,49 @@ Emotional arc the page executes: Recognition → Tension → Clarity → Belief 
 
 ## Naming — status
 
-**Krinox rejected by Raj.** His own stated reason: it isn't sticking, he keeps forgetting it himself. Correctly treated as a fatal signal. (Note: krinox.com purchase was previously planned for 27 July; this decision supersedes that. Prior vault page "Podar Naming Decision — Krinox" is now obsolete.)
+**Krinox rejected by Raj.** His own stated reason: it isn't sticking, he keeps forgetting it himself. Treated as a fatal signal. (krinox.com purchase previously planned for 27 July; superseded. Prior vault page "Podar Naming Decision — Krinox" is now obsolete.)
 
-**Round 1 brief:** must strike a thought; open to famous fictional characters (Android/droid precedent); "The Watcher" (Uatu) cited as directionally right but boring; open to two-letter names with real significance; explicitly excluded Cortex/Pulse/Synapse-type names.
+### Round 1 — REJECTED
+Brief: strike a thought; open to famous fictional characters; "The Watcher" (Uatu) directionally right but boring; open to two-letter names; excluded Cortex/Pulse/Synapse types.
 
-**Key reframe offered:** The Watcher is boring because Uatu's defining trait is non-intervention. The product does the opposite — sees everything, then tells you. Target archetype is not a watcher but a narrator: sees the whole field and reports it truthfully to the person who cannot see it himself.
+Reframe offered: The Watcher is boring because Uatu's defining trait is non-intervention. The product does the opposite — sees everything, then tells you. Target archetype is a narrator, not a watcher.
 
-**Round 1 candidates (ALL REJECTED by Raj as "not memorable at all"):** Sanjaya (Mahabharata — divine sight narrating the battlefield to the blind king Dhritarashtra; was the top recommendation), Vidura, Chitragupta, Vyasa, Mimir, Muninn, Kvasir, Seldon, Varys, Mycroft, Demerzel, plus two-letter options MU / NB / KV.
+Candidates (all rejected as "not memorable"): Sanjaya (top rec — Mahabharata, divine sight narrating the battlefield to the blind king), Vidura, Chitragupta, Vyasa, Mimir, Muninn, Kvasir, Seldon, Varys, Mycroft, Demerzel, plus MU / NB / KV.
 
-**Round 2 brief (current):** Raj wants SHORT names only — cited Odin, Zeus, Sage as the target register. Long names are hard to remember.
+### Round 2 — REJECTED
+Brief: SHORT names only. Cited Odin, Zeus, Sage as target register.
 
-### Round 2 analysis
+Fatal conflicts flagged in Raj's own examples:
+- **Sage — DEAD.** Sage Group is a multi-billion-pound accounting/ERP software company. Naming an ERP-adjacent AI product after the category incumbent is fatal.
+- **Zeus — compromised.** One of the most famous banking trojans in history. Wrong association for a product requesting access to every email and transaction.
+- **Odin — survives but crowded.** Concept fits (traded an eye for wisdom; two ravens report back daily). Heavily used in tech/security, but not fatal.
 
-**Fatal conflicts flagged in Raj's own examples:**
-- **Sage — DEAD.** Sage Group is a multi-billion-pound accounting/ERP software company. Naming an ERP-adjacent AI product after the incumbent in the same category is instant, fatal.
-- **Zeus — compromised.** Zeus is one of the most famous banking trojans in history. Wrong association for a product requesting access to every email and transaction.
-- **Odin — survives but crowded.** Concept fits well (traded an eye for wisdom; two ravens fly the world daily and report back). Problem is it's one of the most-used names in tech/security. Not fatal, but undifferentiated.
+Candidates (all rejected as "not catchy"): Norn, Metis, Scry, Maat, Rune, Thoth, Ken, Vigil, Nabu.
 
-### Round 2 candidates presented (all 4–5 letters, 1–2 syllables)
+### Round 3 — current
+Brief: famous and mainstream, yet out of the box. Raj likes Odin.
 
-Strongest:
-- **Norn** — the three Norse fates who see past, present and future and weave them together. Four letters, one syllable, hard Nordic consonants, sounds like infrastructure. Likely uncrowded — nobody has mined the Norns.
-- **Metis** — Zeus's first wife, goddess of counsel; he swallowed her so her wisdom would speak from inside him permanently. Maps exactly to "not an external tool, an advisor living inside the business."
-- **Scry** — to perceive what is hidden or distant. Four letters, one syllable, and a verb, so it feels active. Modern-sounding despite archaic root. Likely wide open.
+**Key strategic point raised:** Odin has survived three rounds in Raj's head; nothing else has. For a founder-led motion selling 30 deals in 90 days, memorability beats uniqueness. He is not fighting for SEO against other Odins — he is saying a name out loud to a CEO on a call. Crowding is a real problem at Series B, near-irrelevant at deal four. Recommendation: if Odin is what stuck, take Odin and stop spending cycles.
 
-Also strong:
-- **Maat** — Egyptian truth and cosmic order; the feather every heart was weighed against. A literal standard of truth.
-- **Rune** — encoded knowledge, marks carrying hidden meaning. Memorable; some tech usage but not in category.
-- **Thoth** — scribe of the gods, recorder of everything. Striking; needs pronunciation coaching.
-- **Ken** — real English word meaning the range of what one can see and know ("beyond my ken"). Three letters, exactly right meaning. Risk: reads as a first name.
-- **Vigil** — the watch actively kept. Raj's Watcher instinct, but awake and reporting.
-- **Nabu** — Babylonian god of scribes, keeper of the tablets of destiny. Four letters, unusual enough to stick.
+Candidates presented:
+- **Horus** — the all-seeing eye. One of the most recognizable symbols on earth, draws itself as a logo, untaken in enterprise AI. Strongest answer to "famous but out of the box."
+- **Merlin** — the advisor behind the throne. The entire Western archetype of counsel to a leader, zero explanation needed.
+- **Argo** — the ship that carried the crew after the thing worth having. Famous through myth and a Best Picture winner. Four letters, hard consonants.
+- **Neo** — the one who finally sees the code running underneath the world. Conceptually near-perfect; crowded in tech.
+- **Raven** — Odin's ravens fly the world daily and report back. Keeps the Norse register, but is plain English.
+- **Juno** — Roman goddess whose title Moneta means "the one who warns"; gave us both money and monitor. Mainstream via film and NASA mission.
+- **Orion** — the hunter who crosses the entire sky. Instantly known, easy to say and draw.
+- **Vulcan** — forge god plus the race defined by pure logic. Forge + logic is a strong double meaning for something built inside steel.
+- **Mentat** — Dune's human computers who ingest all information and advise the ruler. Mainstream after two blockbusters; job description matches the product exactly.
 
-**Top three recommended:** Norn (sounds like heavy infrastructure), Metis (sounds like counsel), Scry (sounds like a modern product rather than a mythology reference).
+Top three offered: Horus (symbol), Merlin (archetype), Argo (short and hard).
+
+**Test proposed to Raj:** say Odin, Horus, Merlin and Argo out loud in a sentence describing the product. Whichever he can recall the next morning without checking the chat is the name.
 
 ---
 
 ## Open items
-- No domain or trademark checks run on any Round 2 candidates yet — awaiting Raj's shortlist of two or three.
+- No domain or trademark checks run on any Round 2 or Round 3 candidates yet.
 - Prior "Krinox" vault page needs superseding once a final name is chosen.
 - Homepage copy beyond the hero draft not yet written.
 - Delivery-capacity plan for 30 bespoke onboardings in 90 days still unresourced — flagged repeatedly as a higher risk to the $1M/90-day goal than anything on the website.
