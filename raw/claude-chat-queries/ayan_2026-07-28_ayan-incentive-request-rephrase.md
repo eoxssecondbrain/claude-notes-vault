@@ -116,3 +116,22 @@ Happy to walk through any details if that's helpful on your end.
 Thanks so much,
 Ayan Dutta
 ---
+
+**User request:** "Write the message directly for Raj" — change the recipient from Isha to Raj.
+
+**Claude's updated response:**
+---
+Hi Raj,
+
+Hope you're doing well! I wanted to put in a request for a couple of incentives:
+
+1. ₹50,000 for the Brannon upsell (project value: $2,700)
+2. ₹10,000 for successfully converting the cold lead "Collier Metals" into a discovery call
+
+Happy to walk through any details if that's helpful on your end.
+
+Thanks so much,
+Ayan Dutta
+---
+
+Note: message content/amounts unchanged; only the greeting recipient was switched from Isha to Raj.
