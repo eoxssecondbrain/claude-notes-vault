@@ -52,7 +52,7 @@ Adjacent: their "Emotional Audit" checks internal team belief before external me
 **Draft hero copy:**
 > You built something real. Most of what you know about it still lives in your head, one employee's inbox, and a system nobody fully trusts.
 >
-> Krinox is the senior advisor that's actually read everything — every order, every call, every email — and tells you the truth about your business before you have to ask.
+> [Name] is the senior advisor that's actually read everything — every order, every call, every email — and tells you the truth about your business before you have to ask.
 >
 > [Book a fit call]
 
@@ -69,7 +69,7 @@ Emotional arc the page executes: **Recognition → Tension → Clarity → Belie
 3. **Credibility strip** — thin band directly under hero, logos or plain-text proof. Highest-leverage 40px on the page: resolves the skepticism spike a bold claim creates, before it hardens into a bounce.
 4. **The problem, articulated better than they could** — 3–4 concrete descriptions of fragmented reality. This is the oblique enemy at work. Also quietly qualifies out poor-fit visitors, protecting delivery capacity.
 5. **Why now** — 2–3 sentences on why newly *possible*, not newly desirable. Removes shame about past failed software purchases; creates urgency without fake scarcity.
-6. **What it actually is** — plain paragraph + simple diagram (your data → Krinox → answers). Deliberately boring clarity; confident people explain simply.
+6. **What it actually is** — plain paragraph + simple diagram (your data → product → answers). Deliberately boring clarity; confident people explain simply.
 7. **How it works, 3 steps** — connect → ingest → ask. Honest about bespoke onboarding, framed as thoroughness. Shrinks the buyer's private simulation of ERP-rollout pain. Pre-frames the fit call as necessary, not a sales gate.
 8. **What you can ask it** — 5–8 real example questions phrased as a CEO would type them. Highest-converting section. Pull from REAL client questions; invented ones read too clean.
 9. **What makes it different** — exactly 3 differentiators. Handles "how is this different from ChatGPT" without asking it aloud.
@@ -86,7 +86,7 @@ Emotional arc the page executes: **Recognition → Tension → Clarity → Belie
 
 ## DESIGN / AESTHETIC SPEC
 
-**Core correction given to Raj:** "Expensive" in consumer luxury and enterprise software are opposite aesthetics. Consumer luxury signals wealth through ornament (gold, serifs, gloss). Enterprise luxury signals it through restraint — space, precision, silence. If Krinox looks like a watch brand, a CEO reads consultancy, not infrastructure. Target: quiet, dense, exact. Expensive because nothing is wasted.
+**Core correction given to Raj:** "Expensive" in consumer luxury and enterprise software are opposite aesthetics. Consumer luxury signals wealth through ornament (gold, serifs, gloss). Enterprise luxury signals it through restraint — space, precision, silence. If it looks like a watch brand, a CEO reads consultancy, not infrastructure. Target: quiet, dense, exact. Expensive because nothing is wasted.
 
 **Color**
 - Base: near-black #0B0C0E or #101114 (never pure black — reads cheap on OLED, kills depth)
@@ -113,52 +113,74 @@ Emotional arc the page executes: **Recognition → Tension → Clarity → Belie
 
 ---
 
-## NAMING WORKSTREAM
+## NAMING WORKSTREAM — SIX ROUNDS, ALL REJECTED BY RAJ
 
 **Established pattern:** single dictionary nouns in obvious semantic fields are exhausted in AI/enterprise branding as of 2026.
 
-**Round 1 — industrial/structural metaphors, all rejected:**
+**Round 1 — industrial/structural metaphors, all collide:**
 - Ingot — INGOT Brokers (forex), Ingot Metal Company
 - Kiln — Kiln AI (kiln.tech, live open-source AI platform), The Kiln agency, Kiln 3D
 - Truss — UK AI fashion startup, US "Truss" GPT-token company, Trussed AI
 - Keel — London startup raised $13.1M bridging no-code and ERP (nearly identical positioning). Plus 3 other Keel AI products
 
-**Round 2 — coined words:** Veyra (2 consumer brands), Novira (UK clothing + 2 companies), Corvyn (clean), Tessero (clean)
+**Round 2 — coined words:** Veyra (2 consumer brands), Novira (UK clothing + 2 companies), Corvyn (clean), Tessero (CLEAN — worth remembering)
 
-**Round 3 — KRINOX selected and saved to OV2 as decision.** krinox.com not owned by an operating company, listed on BrandBucket marketplace (premium pricing expected). Only trivial namesakes: Malta hair-wax importer, Bolivia import/export, Instagram merch page. No tech/AI conflicts. Raj said he would buy it "tomorrow" (2026-07-28).
+**Round 3 — KRINOX selected, saved to OV2 as decision, Raj said he'd buy krinox.com.** Domain sits on BrandBucket marketplace (premium pricing). Only trivial namesakes (Malta hair wax, Bolivia import/export, Instagram merch). No tech/AI conflicts. NOTE: subsequently superseded — Raj later rejected it.
 
-**Round 4 — Raj then pivoted to two-word movie/history references.** Council output:
-- Map Room (Churchill's Cabinet War Rooms) — strongest on meaning; the single room where the whole picture lives
-- Mission Control (Apollo) — universal US executive recognition
-- First Mate — strongest persona fit; the officer who runs the ship so the captain can command
-- High Ground (Obi-Wan + military) — most memorable, but HighGround was an acquired HR software company
-- Round Table, Gordian Knot (Gordian is Fortive-owned, ruled out), Ironbridge (UK-weighted recognition), Crucible (one word, heavily used)
-- RECOMMENDED: Map Room and First Mate
+**Round 4 — two-word movie/history references:**
+- Map Room (Churchill's Cabinet War Rooms) — strongest on meaning
+- Mission Control (Apollo), First Mate (best persona fit), High Ground (Obi-Wan; HighGround was an acquired HR software co), Round Table, Gordian Knot (Gordian is Fortive-owned — ruled out), Ironbridge (UK-weighted), Crucible (heavily used)
 
 **Round 5 — domain evaluation:**
-- maproom.ca / prata.ca — BOTH REJECTED. .ca signals Canadian company to US buyers (the larger half of ICP), raising data-residency/jurisdiction anxiety in the URL itself. Also CIRA Canadian Presence Requirements may make Raj ineligible (Prata Inc is US, Raj operates from India — Brannon Steel being a client does not qualify). Separately, prata.ca collapses the deliberate Prata Inc / GFC entity separation and carries no buyer meaning.
-- mymaproom.com — REJECTED. "My" prefix is dated (2000s consumer web), shrinks a command center to a personal dashboard, kills the Churchill association, and parses ambiguously when spoken on a call.
-- themaproom.ai — GOOD. "The" makes it definite and institutional, opposite effect to "my." Parses cleanly spoken. Costs: 16 chars, and some users will type maproom.ai instead.
-- **Ranking: maproom.ai > themaproom.ai > getmaproom.com > maproomhq.com > mymaproom.com**
+- maproom.ca / prata.ca — BOTH REJECTED. .ca signals Canadian company to US buyers (larger half of ICP), raising data-residency/jurisdiction anxiety in the URL itself. CIRA Canadian Presence Requirements may make Raj ineligible (Prata Inc is US, Raj operates from India). Separately, prata.ca collapses the deliberate Prata Inc / GFC entity separation.
+- mymaproom.com — REJECTED. "My" prefix is dated (2000s consumer web), shrinks a command center to a personal dashboard, kills the Churchill association, parses ambiguously when spoken.
+- themaproom.ai — GOOD. "The" makes it definite/institutional. Ranking: maproom.ai > themaproom.ai > getmaproom.com > maproomhq.com > mymaproom.com
 
-**Round 6 — Raj proposed CEREBRO (X-Men reference, brain metaphor). Findings:**
-- Disney/Marvel is NOT the main risk. The real risks are commercial:
-  - **Cerebri AI Inc.** holds registered CEREBRI and CEREBRI AI marks covering software for improving business processes, sales, and customer service via machine learning, NLP, data integration and data analysis — nearly a definition of Krinox. Confusingly similar mark in identical class = strongest objection type.
-  - **CEREBRAS** registered to Cerebras Systems (filed 2020, registered 2022, AI software class). Cerebras filed an S-1 April 2026 — pre-IPO companies defend names aggressively.
-  - **CEREBRO** live/pending mark held by an Ontario company (2441674 Ontario Inc) in software class, fifth extension granted as of Mar 2026.
-  - **Cerebriu** — operating AI company in Denmark (brain MRI).
-  - Conclusion: "Cereb-" root is effectively closed.
-- Wider issue: brain anatomy is the most-mined naming field in AI (Cortex, Synapse, Neuron, Axon, Dendrite, Glia, Limbic, Thalamus all largely taken). Same wall as industrial metaphors.
-- Positioning objection: brain names describe the technology; Map Room describes where the buyer stands. A 50–100 employee CEO doesn't buy a cerebrum, he buys seeing his whole operation at once. Naming the organ is a founder's instinct; naming the room is a buyer's.
-- **Surviving anatomy candidates:** White Matter (best meaning fit — the wiring connecting separated regions, i.e. connective tissue between fragmented parts; two words, memorable), Myelin (speed of signal — differentiated claim), Broca (converts thought into language — fits NL query product; 5 letters), Medulla (background vital functions). AVOID amygdala (fear center).
-- Claude's read: none beat Map Room on buyer resonance; White Matter is closest.
+**Round 6 — CEREBRO / brain anatomy. Trademark findings:**
+- Disney/Marvel is NOT the main risk. Real risks are commercial:
+  - Cerebri AI Inc. holds registered CEREBRI and CEREBRI AI marks covering software for improving business processes, sales, and customer service via ML, NLP, data integration and data analysis — nearly a definition of the product. Confusingly similar mark, identical class.
+  - CEREBRAS registered to Cerebras Systems (AI software class); Cerebras filed an S-1 April 2026 — pre-IPO companies defend aggressively.
+  - CEREBRO live/pending mark, Ontario company, software class, fifth extension granted Mar 2026.
+  - Cerebriu — operating AI company (Denmark, brain MRI).
+- "Cereb-" root effectively closed. Brain anatomy is the most-mined field in AI naming.
+- Positioning objection: brain names describe the technology; Map Room describes where the buyer stands. Naming the organ is a founder's instinct; naming the room is a buyer's.
+- Surviving anatomy options: White Matter (best fit — the wiring connecting separated regions), Myelin (signal speed), Broca (thought→language), Medulla (background vital functions). AVOID amygdala (fear center).
+
+**Round 7 — Raj rejected everything, asked for "100 ft deep," out-of-the-box, a name that makes people question what it means. Obscure-real-word domain search conducted. ALL COLLIDE:**
+- Quipu (Incan knotted record system) — occupied 5x, incl. a deep-tech startup building "a real-time digital thread engine capturing the complete queryable history of complex systems as a living graph" = nearly Krinox's own spec. Plus Barcelona accounting SaaS, Colombian AI fintech, Italian medical AI, Peruvian AI consultancy.
+- Orrery — Orrery.ai exists (satellite/alt-data market intelligence). .ai gone, semantic overlap.
+- Alidade — Alidade Technology Inc (PA software firm since 2008, owns alidadetech.com) + Alidade research firm.
+- Gnomon — Gnomon Technology (custom software dev) + Gnomon School of Visual Effects.
+- Portolan — Portolan Commerce Solutions, German ERP software company founded 1990. Worst possible collision (ERP).
+- Ephemeris — AI astrology app ($1.5M sales), boutique tech agency, Ephemeris Net ISP. Permanently astrology-coded.
+- Vernier — Vernier Science Education (founded 1981, 118 employees, educational software, active trademarks). Dead.
+- Exchequer — accounting software product. Dead in finance category.
+- Palimpsest — marketing automation consultancy + text toolkit.
+
+**KEY STRATEGIC CONCLUSION delivered to Raj:** "Obscure real word with a devastating reveal" is NOT out-of-the-box — it is the single most standard naming playbook in enterprise software since Palantir (2003). The field is stripped bare. The only path satisfying all three constraints (sticky + mysterious + available) is a word COINED FROM REAL LATIN/GREEK MORPHEMES — unsearchable by definition (clean domain + mark), makes people ask what it means, and the etymology gives a real reveal on a sales call.
+
+**Round 7 candidate set (NOT yet verified — Raj to check registrar + USPTO TESS):**
+
+Real words, outside software field:
+- Quaestor — Roman magistrate of investigation and public accounts, from *quaerere*, "to ask/seek." A question-asking product named for the ancient office of asking. 8 letters, KWES-tor.
+- Adytum — innermost temple chamber, only the initiated enter. 6 letters. Maps to holding a company's private interior.
+- Tabularium — Rome's Capitoline record office holding the Republic's entire accounts and laws. Contains "tabular" (data tables) by etymological accident. Strongest reveal; 11 characters is the cost.
+
+Coined from real roots (inherently clear):
+- Veritor — *verus* (true) + agent suffix *-tor* = "the one that tells true." Reads centuries old; isn't.
+- Tessara — from *tessera*, the mosaic tile meaningless alone, meaningful only in the whole picture. Precise description of one email/order/call inside a business. Sibling of Tessero, which came back clean in Round 2.
+- Cernos — from *cernere*, to sift/separate/discern; root of "discern" and "certain."
+- Anamna — from *anamnesis*, Plato's recovery of knowledge already possessed. The pitch in one Greek concept: the business already knows; nothing is invented, only recovered.
+
+**Claude's ranking:** Veritor and Tessara (both coined, both will clear; Veritor matches the locked advisor/truth-teller persona, Tessara matches the architecture metaphor). Quaestor most interesting if it clears — etymology does real work, sounds institutional not invented.
 
 ---
 
 ## OPEN ITEMS / FLAGS RAISED
-1. **Naming is still undecided.** Raj has now generated three parallel candidate directions (Krinox — already saved as "final" and slated for purchase; Map Room; brain-anatomy) without choosing. Flagged repeatedly. Risk: money spent on multiple domains before a decision.
-2. **No formal trademark clearance run on anything.** All checks are informal search only. USPTO TESS + registrar check on White Matter, Myelin, Broca, maproom.ai recommended — ~15 minutes total.
-3. **Delivery capacity is the real risk to $1M/3 months, not messaging.** 30 bespoke integrations in 90 days, on top of existing Sabre/DPS/3GM/ESS load, with the hiring plan not yet executed. A perfect website cannot create engineering bandwidth, and an open CTA fills a pipeline that can't be serviced — damaging exactly the credibility the site is built to create.
-4. Homepage copy beyond the hero draft not yet written. Blueprint and design spec are done; execution pending.
-5. Whether GFC or the product name appears as primary brand on the site — still undecided.
-6. Raj has real primary research (client call transcripts, emails in the vault) that has not been mined for messaging language. Emotive Brand's method says this should drive the copy. Unused asset.
+1. **Naming has consumed four full directions with everything rejected.** Flagged directly to Raj: this may mean the names were wrong, or it may mean naming is absorbing attention that belongs elsewhere. A name he tolerates ships revenue; a name he loves ships nothing by itself.
+2. **No formal trademark clearance run on anything, ever, this whole session.** All checks informal search only. USPTO TESS + registrar needed on Veritor, Tessara, Quaestor.
+3. **Delivery capacity is the real risk to $1M/3 months, not messaging or naming.** 30 bespoke integrations in 90 days, on top of Sabre/DPS/3GM/ESS load, with the hiring plan not yet started. A perfect website cannot create engineering bandwidth; an open CTA fills a pipeline that can't be serviced, damaging the exact credibility the site exists to build.
+4. **Homepage copy still not written.** Blueprint (15 sections) and full design spec are complete. Only the hero is drafted.
+5. **Raj's own primary research is unmined.** Real client call transcripts and emails sit in the vault. Emotive Brand's core method says this should drive the copy language. Largest unused asset in the project.
+6. Whether GFC or the product name appears as primary brand on the site — still undecided.
+7. Krinox purchase decision now ambiguous — Raj said he would buy it, then rejected all prior names. Status unclear.
