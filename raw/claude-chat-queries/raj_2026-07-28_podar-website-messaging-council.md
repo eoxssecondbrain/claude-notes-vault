@@ -57,7 +57,7 @@ Operating model adopted: Emotive Brand (SF-based B2B brand strategy agency). Key
 
 **Proof-point strategy:** Option 1 — "steel as credibility weapon." State plainly the product was built and proven inside one of the most fragmented, custom, undocumented industries in American manufacturing. Reframes the narrow proof as evidence of range, not a limitation to hide.
 
-**Draft hero copy (v1, written when name was still Krinox):**
+**Draft hero copy (v1):**
 > You built something real. Most of what you know about it still lives in your head, one employee's inbox, and a system nobody fully trusts.
 >
 > [Name] is the senior advisor that's actually read everything — every order, every call, every email — and tells you the truth about your business before you have to ask.
@@ -99,68 +99,74 @@ Emotional arc the page executes: Recognition → Tension → Clarity → Belief 
 
 **Color:** Near-black base (#0B0C0E / #101114), never pure black. Surface layers #16181C, #1E2126 for elevation via background shift rather than borders. Text never pure white — #F2F3F5 primary, #9BA1A8 secondary, #6B7178 tertiary. Exactly one accent — either cold platinum (#C8CDD4) or low-frequency ember (#C8642A). Accent appears on under 5% of the page; scarcity is the signal.
 
-**Typography:** Two families max. Display: high-contrast neo-grotesque or restrained transitional serif (Söhne, Neue Haas Grotesk, GT America, or Editorial New/Signifier for a serif move — serif headlines signal institution and permanence). Body: Inter, Söhne, or Suisse International. Headline tracking -0.02 to -0.03em. Body line-height 1.6–1.7, size 17–19px. Max three weights sitewide. Tabular figures wherever numbers appear.
+**Typography:** Two families max. Display: high-contrast neo-grotesque or restrained transitional serif (Söhne, Neue Haas Grotesk, GT America, or Editorial New/Signifier — serif headlines signal institution and permanence). Body: Inter, Söhne, or Suisse International. Headline tracking -0.02 to -0.03em. Body line-height 1.6–1.7, size 17–19px. Max three weights sitewide. Tabular figures wherever numbers appear.
 
 **Space:** Section padding 120–180px desktop. Content capped ~1100–1200px, text columns 65–70 characters. Asymmetry over centring. Empty space is the luxury signal.
 
-**Motion:** Weight, not animation. Easing cubic-bezier(0.16, 1, 0.3, 1). 400–700ms entrances, 150–250ms hover feedback. Scroll reveals fade + 12–20px translate only, 60–80ms sibling stagger, trigger at ~15% into viewport. No scale-on-hover — shift elevation layer or accent opacity instead. Only ~1/3 of sections animate at all; static sections create rhythm. Respect prefers-reduced-motion.
+**Motion:** Weight, not animation. Easing cubic-bezier(0.16, 1, 0.3, 1). 400–700ms entrances, 150–250ms hover feedback. Scroll reveals fade + 12–20px translate only, 60–80ms sibling stagger, trigger at ~15% into viewport. No scale-on-hover. Only ~1/3 of sections animate at all. Respect prefers-reduced-motion.
 
-**Graphics:** No stock photography under any circumstances. Three viable directions: (1) product as hero — real interface, real queries, dark surfaces, cropped at section edges [recommended primary]; (2) data as abstraction — 1px line work in tertiary grey, specific to the actual architecture, never generic node-and-line clichés [recommended as connective tissue]; (3) real industrial photography, only if genuine client-facility access exists [skip for launch].
+**Graphics:** No stock photography. Primary direction: product as hero — real interface, real queries, dark surfaces, cropped at section edges. Secondary: data as abstraction — 1px line work in tertiary grey, specific to the actual architecture. Skip industrial photography for launch unless genuine client-facility access exists.
 
-**Texture:** 2–4% noise overlay on base background. Soft colourless radial elevation glow behind hero. Borders as rgba white at 6–8%, not solid grey. Corner radius small and consistent, 6–8px.
+**Texture:** 2–4% noise overlay on base background. Soft colourless radial elevation glow behind hero. Borders as rgba white at 6–8%. Corner radius small and consistent, 6–8px.
 
 **Explicitly forbidden:** gold/metallic gradients/shine; purple-blue AI gradient; glassmorphism; stock photography; bounce/elastic easing; custom cursors; scale-on-hover; more than one accent; pure black or white; centred-everything layout.
-
-**Review test:** could anything be removed without losing meaning? If yes, remove it.
 
 ---
 
 ## Naming — status
 
-**Krinox rejected by Raj.** His own stated reason: it isn't sticking, he keeps forgetting it himself. Treated as a fatal signal. (krinox.com purchase previously planned for 27 July; superseded. Prior vault page "Podar Naming Decision — Krinox" is now obsolete.)
+**Krinox rejected by Raj** — he kept forgetting it himself. Treated as fatal. (krinox.com purchase previously planned for 27 July; superseded. Prior vault page "Podar Naming Decision — Krinox" now obsolete.)
 
-### Round 1 — REJECTED
-Brief: strike a thought; open to famous fictional characters; "The Watcher" (Uatu) directionally right but boring; open to two-letter names; excluded Cortex/Pulse/Synapse types.
+### Round 1 — REJECTED as "not memorable"
+Reframe offered: The Watcher (Uatu) is boring because his defining trait is non-intervention. The product does the opposite — sees everything, then tells you. Target archetype is a narrator, not a watcher.
+Candidates: Sanjaya (top rec), Vidura, Chitragupta, Vyasa, Mimir, Muninn, Kvasir, Seldon, Varys, Mycroft, Demerzel, MU/NB/KV.
 
-Reframe offered: The Watcher is boring because Uatu's defining trait is non-intervention. The product does the opposite — sees everything, then tells you. Target archetype is a narrator, not a watcher.
+### Round 2 — REJECTED as "not catchy"
+Brief: short names only. Raj cited Odin, Zeus, Sage.
+- **Sage — DEAD.** Sage Group is a multi-billion-pound accounting/ERP software company. Fatal in his category.
+- **Zeus — compromised.** Famous banking trojan. Wrong association for a product requesting total data access.
+- **Odin — survives, crowded but generically so.**
+Candidates: Norn, Metis, Scry, Maat, Rune, Thoth, Ken, Vigil, Nabu.
 
-Candidates (all rejected as "not memorable"): Sanjaya (top rec — Mahabharata, divine sight narrating the battlefield to the blind king), Vidura, Chitragupta, Vyasa, Mimir, Muninn, Kvasir, Seldon, Varys, Mycroft, Demerzel, plus MU / NB / KV.
+### Round 3 — famous/mainstream brief
+Strategic point raised: Odin survived three rounds in Raj's head; nothing else did. For founder-led selling of 30 deals in 90 days, memorability beats uniqueness; crowding matters at Series B, not at deal four.
+Candidates: Horus, Merlin, Argo, Neo, Raven, Juno, Orion, Vulcan, Mentat.
 
-### Round 2 — REJECTED
-Brief: SHORT names only. Cited Odin, Zeus, Sage as target register.
+### Round 4 — Raven proposed by Raj, then re-resolved to Odin
 
-Fatal conflicts flagged in Raj's own examples:
-- **Sage — DEAD.** Sage Group is a multi-billion-pound accounting/ERP software company. Naming an ERP-adjacent AI product after the category incumbent is fatal.
-- **Zeus — compromised.** One of the most famous banking trojans in history. Wrong association for a product requesting access to every email and transaction.
-- **Odin — survives but crowded.** Concept fits (traded an eye for wisdom; two ravens report back daily). Heavily used in tech/security, but not fatal.
+**Raj's concept (strong, and retained):** Name inspired by the Three-Eyed Raven from Game of Thrones. The product is an eye into the business that sees and knows everything. The Three-Eyed Raven knows the past and present, and from them can predict the future. Knowledge is power.
 
-Candidates (all rejected as "not catchy"): Norn, Metis, Scry, Maat, Rune, Thoth, Ken, Vigil, Nabu.
+Council view: best-fitting archetype found in the whole process, because it maps to a three-part product architecture rather than just a mood — past (historical ERP data), present (live ingestion of email, calls, transactions), future (forecasting from both).
 
-### Round 3 — current
-Brief: famous and mainstream, yet out of the box. Raj likes Odin.
+**CROWDING CHECK RUN — Raven is the most contested name evaluated, and unlike Odin the collisions are inside the category:**
+- **Raven (Y Combinator, Bengaluru, founded 2021)** — AI assistants for manufacturing operations: plant troubleshooting, job planning, reporting, real-time analytics, integrating with existing systems. Nearly Raj's product description, adjacent buyer, India-based team. Highest confusion risk in a live deal.
+- **Raven Intelligence (ravenintel.com)** — independent review site for ERP implementation partners; publishes on SAP, Unit4, and ERP moving from "system of record" to "system of reasoning." Directly in Raj's industry media space.
+- **Raven.io** — raised $20M March 2026, led by Norwest and Elron Ventures, runtime application security, San Francisco, ~23 people. Holds the obvious domain.
+- Ravenna.ai — AI-native ITSM, $15M from Madrona and Khosla.
+- Raven360/Revinova — enterprise AI learning, $12M raised.
+- Raven.build — AI CAD with enterprise tier.
+- Raven Software — Activision studio, 350 people.
 
-**Key strategic point raised:** Odin has survived three rounds in Raj's head; nothing else has. For a founder-led motion selling 30 deals in 90 days, memorability beats uniqueness. He is not fighting for SEO against other Odins — he is saying a name out loud to a CEO on a call. Crowding is a real problem at Series B, near-irrelevant at deal four. Recommendation: if Odin is what stuck, take Odin and stop spending cycles.
+**Earlier "crowding barely matters" advice explicitly retracted for this case:** it held when conflicts were generic tech; it fails when a same-named competitor sells AI assistants to manufacturing plants.
 
-Candidates presented:
-- **Horus** — the all-seeing eye. One of the most recognizable symbols on earth, draws itself as a logo, untaken in enterprise AI. Strongest answer to "famous but out of the box."
-- **Merlin** — the advisor behind the throne. The entire Western archetype of counsel to a leader, zero explanation needed.
-- **Argo** — the ship that carried the crew after the thing worth having. Famous through myth and a Best Picture winner. Four letters, hard consonants.
-- **Neo** — the one who finally sees the code running underneath the world. Conceptually near-perfect; crowded in tech.
-- **Raven** — Odin's ravens fly the world daily and report back. Keeps the Norse register, but is plain English.
-- **Juno** — Roman goddess whose title Moneta means "the one who warns"; gave us both money and monitor. Mainstream via film and NASA mission.
-- **Orion** — the hunter who crosses the entire sky. Instantly known, easy to say and draw.
-- **Vulcan** — forge god plus the race defined by pure logic. Forge + logic is a strong double meaning for something built inside steel.
-- **Mentat** — Dune's human computers who ingest all information and advise the ruler. Mainstream after two blockbusters; job description matches the product exactly.
+### RESOLUTION PROPOSED: name it Odin, keep the raven
 
-Top three offered: Horus (symbol), Merlin (archetype), Argo (short and hard).
+Odin natively contains the entire Three-Eyed Raven story, and predates it:
+- Huginn and Muninn (thought and memory) fly across the whole world every day and return to tell Odin everything they saw — this is the ingestion layer.
+- Odin traded an eye at Mimir's well for knowledge of what was, what is, and what is coming — sight sacrificed for total knowledge across past, present and future.
+- GoT was drawing from this source myth.
 
-**Test proposed to Raj:** say Odin, Horus, Merlin and Argo out loud in a sentence describing the product. Whichever he can recall the next morning without checking the chat is the name.
+So: name = Odin. Visual identity = the raven mark (better logo than an Odin mark, works in monochrome against the near-black palette). Copy = the raven story. Architecture = Raj's three-part past/present/forecast framing, retained intact.
+
+Outcome: keeps the name that stuck across three rounds, the bird he wants as a logo, and avoids collision with a YC company selling to manufacturers.
+
+**Alternative offered if he wants the bird as the name itself:** Corvus — Latin for raven and a constellation, more institutional in tone, likely far less contested. Advised to say it aloud before deciding.
 
 ---
 
 ## Open items
-- No domain or trademark checks run on any Round 2 or Round 3 candidates yet.
-- Prior "Krinox" vault page needs superseding once a final name is chosen.
+- No formal trademark clearance (USPTO) or domain check run on Odin, Raven, or Corvus. Required before commitment.
+- Prior "Krinox" vault page needs superseding once final name is locked.
 - Homepage copy beyond the hero draft not yet written.
-- Delivery-capacity plan for 30 bespoke onboardings in 90 days still unresourced — flagged repeatedly as a higher risk to the $1M/90-day goal than anything on the website.
+- Delivery-capacity plan for 30 bespoke onboardings in 90 days still unresourced — repeatedly flagged as a higher risk to the $1M/90-day goal than anything on the website.
 - Whether GFC or the product name is the primary brand on the site — still undecided.
