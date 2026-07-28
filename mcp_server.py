@@ -322,20 +322,21 @@ def _chat_transcript_path(thread_name: str) -> Path:
 
 
 @mcp.tool()
-def save_chat_transcript(thread_name: str, content: str) -> str:
+def save_chat_transcript(thread_name: str, new_messages: str) -> str:
     """
     Save (or update) a Claude chat conversation transcript into this notes vault and push it
-    to GitHub. This OVERWRITES the same file on every call for the same thread_name — it does
-    NOT create a new file per message. Call this after every assistant response in a
-    conversation, passing the FULL transcript so far (not just the latest exchange), so the
-    one file for this thread stays current as the conversation grows. Never ask before calling
-    this — see SKILL.md's auto-save rule.
+    to GitHub. This APPENDS to the file on every call for the same thread_name. Call this 
+    after every assistant response in a conversation, passing ONLY the new messages (the 
+    user's latest prompt and your response) so the one file for this thread stays current 
+    without hitting output token limits. Never ask before calling this — see SKILL.md's 
+    auto-save rule.
 
     thread_name: a short, STABLE identifier for this conversation, chosen once at its first
         save and reused for every subsequent save in the same conversation (e.g.
         'sabre-alloys-payment-delay') — changing it mid-conversation creates a second file
         instead of updating the first.
-    content: the FULL markdown transcript of the conversation so far, not just new messages.
+    new_messages: ONLY the new messages exchanged since the last save (e.g. the user's latest
+        prompt and your response), NOT the full transcript.
 
     Filename produced: raw/claude-chat-queries/<user>_<created-date>_<thread_name>.md
     <user> is resolved automatically from which connector URL this request came in on —
@@ -345,11 +346,19 @@ def save_chat_transcript(thread_name: str, content: str) -> str:
     is_new = not out.exists()
     today = date.today().isoformat()
     created = today
+    existing_content = ""
+    
     if not is_new:
         existing_content = _read(out)
-        created_match = re.search(r'^created: (\S+)', existing_content, flags=re.MULTILINE)
-        if created_match:
-            created = created_match.group(1)
+        body_start = 0
+        if existing_content.startswith("---"):
+            end_fm = existing_content.find("---", 3)
+            if end_fm != -1:
+                body_start = end_fm + 3
+                created_match = re.search(r'^created: (\S+)', existing_content[:body_start], flags=re.MULTILINE)
+                if created_match:
+                    created = created_match.group(1)
+        existing_content = existing_content[body_start:].lstrip()
 
     CHAT_DIR.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
@@ -357,7 +366,13 @@ def save_chat_transcript(thread_name: str, content: str) -> str:
         f"---\nthread_name: \"{thread_name}\"\nuser: \"{current_user()}\"\ntype: claude-chat\n"
         f"created: {created}\nupdated: {today}\n---\n\n"
     )
-    out.write_text(frontmatter + content.strip() + "\n", encoding="utf-8")
+    
+    final_content = frontmatter
+    if existing_content:
+        final_content += existing_content.strip() + "\n\n"
+    final_content += new_messages.strip() + "\n"
+    
+    out.write_text(final_content, encoding="utf-8")
 
     rel_path = out.relative_to(VAULT_ROOT)
     action = "created" if is_new else "updated"

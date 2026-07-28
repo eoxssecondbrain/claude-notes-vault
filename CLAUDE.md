@@ -29,7 +29,7 @@ claude-notes-vault/
 │                                 <user>_<created-date>_<thread_name>.md. Written/overwritten
 │                                 only by save_chat_transcript — see "Auto-save" and "Per-user
 │                                 identity" below. Each file grows in place across a conversation
-│                                 (repeated overwrites of the same file), unlike OV2's raw/ which
+│                                 (by appending to the same file), unlike OV2's raw/ which
 │                                 is genuinely immutable-once-written — the "final" version of a
 │                                 thread file only exists once the conversation itself has ended.
 ├── wiki/
@@ -67,7 +67,7 @@ Multiple people (Raj, Ayan, and others) connect to this same vault through the s
 
 ## Auto-Save
 
-`save_chat_transcript(thread_name, content)` is called automatically, after every assistant response, with no user request needed — see SKILL.md Section 0 for the full rule and its honest limitations (this is a best-effort instruction to the model, not a system-enforced guarantee; nothing outside the model's own instruction-following catches a missed save). Every call for the same `thread_name` from the same user overwrites one file — `raw/claude-chat-queries/<user>_<created-date>_<thread_name>.md` — rather than creating a new file per message. `<created-date>` is fixed at the thread's first save.
+`save_chat_transcript(thread_name, new_messages)` is called automatically, after every assistant response, with no user request needed — see SKILL.md Section 0 for the full rule and its honest limitations (this is a best-effort instruction to the model, not a system-enforced guarantee; nothing outside the model's own instruction-following catches a missed save). Every call for the same `thread_name` from the same user appends to one file — `raw/claude-chat-queries/<user>_<created-date>_<thread_name>.md` — rather than creating a new file per message. `<created-date>` is fixed at the thread's first save.
 
 `save_analysis` is unaffected by this — it keeps the original "always ask first" rule, since it represents a deliberate, one-off finished write-up rather than an ongoing conversation capture.
 
