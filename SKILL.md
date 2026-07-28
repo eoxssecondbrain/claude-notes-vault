@@ -21,9 +21,11 @@ Call `save_chat_transcript` as the LAST action of every single response, every t
 
 1. On the FIRST turn only: choose a short, stable `thread_name` (e.g. `sabre-alloys-payment-delay`). It identifies the CONVERSATION, not the current message's topic — never change it, even on a hard, unrelated subject jump (e.g. the conversation was about incentive requests and the user suddenly asks "who is Sabre Alloys" — still the same `thread_name`). Do not re-evaluate whether the name still "fits" the latest message. Changing it creates a second file and orphans the first.
 2. Compose the response normally.
-3. Before ending the turn, call `save_chat_transcript(thread_name, content=<full transcript so far, including this response>)`. Every turn gets its own call, even if the previous turn already saved.
+3. Before ending the turn, call `save_chat_transcript(thread_name, content=<the conversation VERBATIM, in full>)`. Every turn gets its own call, even if the previous turn already saved.
 
-Two failure modes to actively guard against, both already observed in practice: (a) saving once at conversation start and treating that as covering the rest of the conversation — it doesn't, every turn is independent; (b) going silent the moment a message has no topical connection to what came before — an unrelated question is not a cue to reconsider `thread_name`.
+**`content` is the literal text of every message, word for word — never a summary of it, no matter how long the response was.** `[Offered three rigor-level options; queried EOXS Teams Live for invoice status; found one open invoice]` is WRONG — that narrates the turn instead of reproducing it. Paste your actual response text in full: every table, every finding, every sentence exactly as written. This applies with no exception to long research/analysis responses (tables, multi-source findings, tool-call-heavy answers) — those are exactly the responses most likely to get shortened into a narrated summary because they "feel" already-said, and that instinct is wrong every time. There is no length at which reproducing the actual text becomes optional; a 2000-word findings response gets pasted as all 2000 words.
+
+Three failure modes to actively guard against, all already observed in practice: (a) saving once at conversation start and treating that as covering the rest of the conversation — it doesn't, every turn is independent; (b) going silent the moment a message has no topical connection to what came before — an unrelated question is not a cue to reconsider `thread_name`; (c) passing a narrated summary as `content` instead of the actual verbatim exchange — a thread saved this way was never really captured, even though the tool call itself succeeded.
 
 This is best-effort, not system-enforced — nothing outside this instruction catches a missed call, which is why it's written as a per-turn checklist rather than a general policy.
 
@@ -38,6 +40,7 @@ This is best-effort, not system-enforced — nothing outside this instruction ca
   - `<user>` is resolved server-side from the connector URL — never supplied by you, never overridable.
   - `<created-date>` is fixed at first save.
   - Same `thread_name` overwrites the same file — no `-2`, `-3` suffixes. Always pass the full transcript, not a delta.
+  - `content` is verbatim text, not a summary — see Section 0. A file containing `[Offered rigor-level options; queried CRM; found one invoice]` instead of the actual question and actual response text is a broken save, even though the tool call succeeded.
 - **`search_claude_chat_queries(query, user="")`**, **`list_claude_chat_queries(user="")`**, **`get_claude_chat_query(file_path)`** — read back. Optional `user` filter (e.g. `"ayan"`) restricts to one person's threads.
 
 ### Analyses (separate concern)
