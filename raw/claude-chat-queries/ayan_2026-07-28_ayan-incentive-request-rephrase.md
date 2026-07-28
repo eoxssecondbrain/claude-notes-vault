@@ -63,3 +63,22 @@ Let me know if you need more info on this.
 Thanks,
 Ayan Dutta
 ---
+
+**User request:** "How can this be phrased better" (asking for further improvement)
+
+**Claude's updated response:**
+---
+Hi Isha,
+
+I'd like to request the following incentives:
+
+1. ₹20,000 for the Brannon upsell (project value: $2,700)
+2. ₹10,000 for successfully converting the cold lead "Collier Metals" into a discovery call
+
+Happy to share any additional details if that would help with processing this.
+
+Thanks,
+Ayan Dutta
+---
+
+Claude explained the reasoning: swapped the closing line to a warmer, more proactive offer ("Happy to share any additional details...") instead of "let me know if you need more info," and kept the numbered list for easy scanning.
