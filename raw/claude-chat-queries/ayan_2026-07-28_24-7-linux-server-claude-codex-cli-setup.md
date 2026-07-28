@@ -1,0 +1,31 @@
+---
+thread_name: "24-7-linux-server-claude-codex-cli-setup"
+user: "ayan"
+type: claude-chat
+created: 2026-07-28
+updated: 2026-07-28
+---
+
+## User
+I want to set up a Linux server, a hardware that runs twenty four seven, and is hosted on a server platform that is connected to cloud code and codec CLI. The purpose of this tool would be to have a multisystem connected CLI connection that is interconnected to the same account and always runs twenty four seven to that hardware. Basically, a remote service that works on cloud code and codecs as well. I might be wrong about some technicalities here. Let's expand on this idea of how it can be implemented.
+
+## Assistant
+Explained the concept: an always-on Linux server (VPS or hardware) running Claude Code and Codex CLI, reachable from multiple devices via SSH, using tmux to persist sessions and Tailscale/Mosh for reliable remote access. Covered: always-on machine choice, installing CLIs on server, keeping sessions alive with tmux, reaching from multiple devices, optional Docker isolation, and security/cost considerations to decide before building.
+
+## User
+The first information that I need is what would be the setup cost to run a server like this twenty four seven. Be very mindful about the fact that there will be multiple jobs running through Claude Code and Codex on this, like, for multiple clients, like, ten to fifteen different companies, and the data will be constantly structured and cleaned up to different AI models. So what could the setup cost for this be? Don't go too much into it - find a sweet spot, not bare minimum, not flagship hardware.
+
+## Assistant
+Explained workload is network/memory-bound, not CPU-bound, since it's mostly orchestrating CLI calls to Claude/OpenAI APIs. Researched current Hetzner Cloud pricing via web search. Recommended sweet-spot tier: Hetzner CX32 (4 vCPU / 8GB RAM / 80GB NVMe) at roughly $7.59-12/month, with 8 vCPU/16GB as a step-up option (~$18/month) if concurrent load is heavier. Noted backups (~20% of server cost), generous free bandwidth, and location tradeoffs (EU vs Singapore given user is in Kolkata, India). Total estimate: ~$10-15/month sweet spot, ~$20-25/month for step-up tier.
+
+## User
+Which is the better approach here, to get a Linux hardware that runs and hosts on a server or get a server itself?
+
+## Assistant
+Recommended cloud VPS over self-hosted physical hardware. Laid out tradeoffs: owning hardware means being responsible for power/internet uptime, static IP, physical failure, and security exposure, with upfront cost of $200-400+, versus a VPS's near-zero upfront cost, datacenter-grade uptime, and easy scaling. Gave a comparison table across cost, uptime, setup effort, scaling, failure recovery, and outage responsibility. Recommended sticking with the Hetzner VPS sweet spot sized earlier, and offered to walk through provisioning steps next.
+
+## User
+ok lets walk through it, how can i do it.
+
+## Assistant
+Created a step-by-step markdown guide (24-7-server-setup-guide.md) covering: creating the Hetzner server (CX32, Ubuntu 24.04, SSH key, backups), initial login and hardening (non-root user, ufw firewall, disabling root/password SSH login), installing Node.js, installing and authenticating Claude Code and Codex CLI, setting up tmux for persistent sessions, organizing the 10-15 clients via one directory + tmux session per client (with a note to move to per-client Docker containers for harder isolation past ~15 clients), setting up Tailscale for secure multi-device access, and a daily workflow summary plus a setup checklist. Presented the file to the user.
