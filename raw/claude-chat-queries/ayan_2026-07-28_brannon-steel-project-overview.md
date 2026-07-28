@@ -37,3 +37,31 @@ updated: 2026-07-28
 **Overall risk:** LOW — engaged client, concrete bug list being worked through, no churn signals, just some billing/paperwork loose ends.
 
 Source: OV2 wiki page [[Brannon Steel]] (wiki/entities/clients/Brannon Steel.md)
+
+---
+
+**User:** tell me about Ranim
+
+**Assistant:**
+
+## Ranim Fallaha (aka "Raneem Fallaha")
+
+**Role:** APQP Manager / Materials Engineer at Brannon Steel, Brampton, Ontario. Ex-Gerdau — that industry background is one of the trust signals EOXS's sales team leaned on during the pitch.
+
+**Two emails, one person:** CRM lists her as ranim.fallaha@brannonsteel.com, but her actual working email (used on calls and in the task threads) is rfallaha@brannonsteel.com.
+
+**Her role in the deal:** Not the primary account contact (that's Manish Trivedi) — she's the primary hands-on tester of MTR AI. She was formally appointed Brannon-side project lead on Dec 22, 2025, and has been Brannon's consistent presence across all 14 weekly implementation huddles from March through June 2026.
+
+**What she's actually been doing:**
+- Back in Feb 2026, she was one of two people (with Manish) EOXS asked to supply 200–300 sample MTRs to train/validate the AI's extraction.
+- She sized the real scope of the job April 7 by reporting Brannon has 4,777 unique MTR numbers on file (2024–2026) — which then triggered a pricing/scope negotiation, since the flat monthly fee assumed a much smaller ongoing volume.
+- She owns the manual workflow for batch-number mapping and pushed to get it made editable.
+- She's the one who's been catching the AI's real accuracy failures — grade misreads, a missed manganese-too-high failure, missing carbon equivalency, and impact-test results shown with a qualitative "Excellent" label but no actual numbers behind it.
+- She's technically sharp — she understands MTR chemistry, grade specs, and CVN (Charpy V-notch) test logic well enough to spot when the AI's compliance logic is wrong, not just when it's broken.
+- She's also expressed interest in Phase 2 (replacing Brannon's aging shop-floor system).
+
+**Vault flags of note:** one open, unresolved thread ties her to a "Steel America" affiliation via her Odoo notification alias — the same branding that shows up on a separate, identity-unclear account (Velox Steel). Nothing in the wiki explains whether that's a real corporate link, a shared reseller instance, or just a naming coincidence.
+
+**Overall picture:** she's the most engaged, technically credible person on the Brannon side — thorough, constructive, and central to why this account's risk is rated LOW despite a real backlog of bugs.
+
+Sources: OV2 wiki pages [[Ranim Fallaha]] (wiki/entities/contacts/brannon-steel/Ranim Fallaha.md), [[Brannon Steel]]
