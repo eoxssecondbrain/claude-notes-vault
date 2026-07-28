@@ -29,7 +29,7 @@ Six seats: Claude as facilitator/critic, plus Category Positioning Strategist, B
 - Delivery capacity: plan is to hire/scale delivery fast enough — NOT yet done
 
 ## Phase 3 — Emotive Brand tier-3 research findings
-1. "Why" before "what"/"how" — must articulate why status quo is broken and ignite belief before explaining product
+1. "Why" before "what"/"how" — articulate why the status quo is broken and ignite belief before explaining the product
 2. Research-led, not founder-assumed — Raj already has primary research sitting unused in the vault (Sabre/Monarch/DPS call transcripts and emails)
 3. Rational + emotional bond — emotion is the accelerant for enterprise buying, not just B2C
 Adjacent: their "Emotional Audit" checks internal team belief before external messaging — parallels EOXS Energy & Culture Charter.
@@ -101,48 +101,69 @@ Emotional arc: **Recognition → Tension → Clarity → Belief → Confidence �
 
 ---
 
-## NAMING WORKSTREAM — EIGHT ROUNDS
+## NAMING WORKSTREAM — NINE ROUNDS
 
 **Round 1 — industrial/structural metaphors, all collide:** Ingot (INGOT Brokers forex, Ingot Metal), Kiln (Kiln AI at kiln.tech, The Kiln agency, Kiln 3D), Truss (UK AI fashion startup, US GPT-token co, Trussed AI), Keel (London startup raised $13.1M bridging no-code and ERP — nearly identical positioning; plus 3 other Keel AI products).
 
 **Round 2 — coined words:** Veyra (2 consumer brands), Novira (UK clothing + 2 cos), Corvyn (clean), Tessero (CLEAN).
 
-**Round 3 — KRINOX selected, saved to OV2, Raj said he'd buy krinox.com** (BrandBucket listing, premium pricing; only trivial namesakes — Malta hair wax, Bolivia import/export, Instagram merch; no tech/AI conflicts). LATER REJECTED by Raj.
+**Round 3 — KRINOX selected, saved to OV2, Raj said he'd buy krinox.com** (BrandBucket listing, premium pricing; only trivial namesakes; no tech/AI conflicts). LATER REJECTED.
 
-**Round 4 — two-word movie/history:** Map Room (Churchill's Cabinet War Rooms — strongest on meaning), Mission Control, First Mate (best persona fit), High Ground (HighGround was an acquired HR software co), Round Table, Gordian Knot (Fortive-owned — ruled out), Ironbridge (UK-weighted recognition), Crucible (heavily used).
+**Round 4 — two-word movie/history:** Map Room (Churchill's Cabinet War Rooms — strongest on meaning), Mission Control, First Mate (best persona fit), High Ground, Round Table, Gordian Knot (Fortive-owned — ruled out), Ironbridge, Crucible.
 
-**Round 5 — domains:** maproom.ca and prata.ca BOTH REJECTED — .ca signals Canadian company to US buyers (larger half of ICP), raising data-residency/jurisdiction anxiety in the URL itself; CIRA Canadian Presence Requirements may make Raj ineligible (Prata Inc is US, Raj in India); prata.ca also collapses the deliberate Prata Inc / GFC separation. mymaproom.com REJECTED ("my" is dated 2000s consumer web, shrinks a command center to a personal dashboard, kills the Churchill association, parses ambiguously spoken). themaproom.ai GOOD. Ranking: maproom.ai > themaproom.ai > getmaproom.com > maproomhq.com > mymaproom.com.
+**Round 5 — domains:** maproom.ca and prata.ca BOTH REJECTED — .ca signals Canadian company to US buyers (larger half of ICP), raising data-residency/jurisdiction anxiety in the URL itself; CIRA Canadian Presence Requirements may make Raj ineligible; prata.ca also collapses the deliberate Prata Inc / GFC separation. mymaproom.com REJECTED ("my" is dated, shrinks a command center to a personal dashboard, kills the Churchill association). themaproom.ai GOOD. Ranking: maproom.ai > themaproom.ai > getmaproom.com > maproomhq.com > mymaproom.com.
 
-**Round 6 — CEREBRO / brain anatomy. Trademark findings:** Disney/Marvel is NOT the main risk. Cerebri AI Inc. holds registered CEREBRI and CEREBRI AI marks covering software for improving business processes, sales and customer service via ML, NLP, data integration and data analysis — nearly a definition of the product; confusingly similar mark, identical class. CEREBRAS registered to Cerebras Systems, AI software class, S-1 filed April 2026 (pre-IPO companies defend aggressively). CEREBRO live/pending mark, Ontario company, software class, fifth extension Mar 2026. Cerebriu operating in Denmark. "Cereb-" root closed. Brain anatomy is the most-mined field in AI naming. Positioning objection: brain names describe the technology; Map Room describes where the buyer stands. Surviving anatomy options: White Matter (best — the wiring connecting separated regions), Myelin, Broca, Medulla. AVOID amygdala (fear center).
+**Round 6 — CEREBRO / brain anatomy:** Disney/Marvel is NOT the main risk. Cerebri AI Inc. holds registered CEREBRI and CEREBRI AI marks covering software for improving business processes via ML, NLP, data integration and data analysis — nearly a definition of the product, identical class. CEREBRAS registered to Cerebras Systems, AI software class, S-1 filed April 2026. CEREBRO live/pending mark, Ontario company, software class. Cerebriu operating in Denmark. "Cereb-" root closed. Brain anatomy is the most-mined field in AI naming. Surviving options were White Matter, Myelin, Broca, Medulla. AVOID amygdala.
 
-**Round 7 — obscure real words, "100 ft deep." ALL COLLIDE:** Quipu (occupied 5x incl. a deep-tech startup building "a real-time digital thread engine capturing the complete queryable history of complex systems as a living graph" = nearly this product's own spec), Orrery (Orrery.ai — satellite/alt-data market intelligence), Alidade (Alidade Technology Inc, PA software firm since 2008, owns alidadetech.com), Gnomon (Gnomon Technology custom software dev + Gnomon School), Portolan (Portolan Commerce Solutions — German ERP software company founded 1990; worst possible collision), Ephemeris (AI astrology app $1.5M sales, boutique tech agency, ISP; permanently astrology-coded), Vernier (Vernier Science Education, founded 1981, 118 employees, educational software, active trademarks), Exchequer (accounting software product), Palimpsest (marketing automation consultancy).
+**Round 7 — obscure real words, "100 ft deep." ALL COLLIDE:** Quipu (occupied 5x incl. a deep-tech startup building "a real-time digital thread engine capturing the complete queryable history of complex systems as a living graph" = nearly this product's spec), Orrery (Orrery.ai), Alidade (Alidade Technology Inc, PA, owns alidadetech.com), Gnomon (Gnomon Technology), Portolan (Portolan Commerce Solutions — German ERP software company founded 1990; worst collision), Ephemeris (AI astrology app, tech agency, ISP), Vernier (Vernier Science Education, 1981, educational software, active marks), Exchequer (accounting software), Palimpsest (marketing automation consultancy).
 
-**Round 7 conclusion delivered:** "Obscure real word with a devastating reveal" is NOT out-of-the-box — it is the most standard naming playbook in enterprise software since Palantir (2003). Field is stripped bare. Proposed coined-from-real-morphemes: Quaestor, Adytum, Tabularium, Veritor, Tessara, Cernos, Anamna.
+**Conclusion:** "Obscure real word with a devastating reveal" is the most standard naming playbook in enterprise software since Palantir (2003). Field stripped bare. Proposed coined-from-morphemes: Quaestor, Adytum, Tabularium, Veritor, Tessara, Cernos, Anamna.
 
-**Round 8 — Raj rejected ALL of the above. His objection: "they do not have any significance... I as a creator won't be able to remember. we need a name that stays with you once you hear it."**
+**Round 8 — Raj rejected ALL coined Latin. His objection: "they do not have any significance... I as a creator won't be able to remember. we need a name that stays with you once you hear it."**
 
-**CRITICAL DIAGNOSIS DELIVERED — the contradiction:** Raj had asked for a name that "makes a person question what it means" AND one that "stays with you once you hear it." These fight each other. Obscure words provoke curiosity precisely because they have no foothold in memory — which is also why those domains were available. Memorability comes from familiarity and concreteness, not rarity. Claude had been handing over rarer words when rarity was the problem.
+**CRITICAL DIAGNOSIS:** Raj had asked for a name that "makes a person question what it means" AND one that "stays with you once you hear it." These fight each other. Obscure words provoke curiosity precisely because they have no foothold in memory — which is also why those domains were available. Memorability comes from familiarity and concreteness, not rarity.
 
-**THE INSIGHT THAT REFRAMES THE WHOLE EXERCISE:** The only name in this venture that has stuck, that Raj never second-guessed, is *Ganesh Fruit Company* — named for his grandfather's fifty-year fruit business. Significance from heritage and story, not etymology. Claude had been searching Latin dictionaries when the answer was in Raj's own family history.
+**THE REFRAMING INSIGHT:** The only name in this venture that ever stuck is *Ganesh Fruit Company* — named for Raj's grandfather's fifty-year fruit business. Significance from heritage and story, not etymology. The answer was in Raj's own family history, not in Latin dictionaries.
 
-**Round 8 recommendation — MUNIM (top pick, real conviction):**
-In a traditional Indian family business — a business exactly like his grandfather's — the *munim* was the man who kept the books. He knew every customer, every outstanding debt, every crate out and every rupee back. He held the entire operational memory of the business in his ledgers and his head. The owner made the decisions; the munim was the reason the owner could. That is a literal description of the product, and almost certainly a real person who worked for Raj's grandfather. Two syllables, MOO-nim, phonetically simple for an American buyer, no consonant cluster. One-sentence sales-call story: "Every family business used to have a munim — the one man who knew everything. Most companies your size lost him thirty years ago."
+**MUNIM proposed** — in a traditional Indian family business the munim kept the books, knew every customer, every debt, every crate out and rupee back; held the entire operational memory of the business. Literal description of the product, and almost certainly a real person who worked for Raj's grandfather. Raj LIKED THE DIRECTION but munim.com and munim.ai are unavailable.
 
-**Alternative from the same well — DIWAN:** chief minister of an Indian princely state; the one figure who understood the entire treasury and administration. Closer to the advisor persona, slightly grander. Munim is the better fit because it's about records and knowing; Diwan is about authority and counsel — the product does the first to enable the second.
+**Round 9 — more options in the Indian-heritage vein:**
 
-**Plain-English options that pass "stays with you":** Daybook (the original journal where every transaction was written as it happened — two common words, instantly decodable, meaning is exact) and Linchpin (the pin holding a wheel on its axle; every operator knows this word physically).
+*Ruled out with reasons:*
+- Daftar (Persian-Urdu for record office) — means "list" in Indonesian/Malay; search returns nothing but Indonesian startup directories. Fighting an entire language for SEO.
+- Karta — an AI customer support company already uses it.
+- Khata — Khatabook (major Indian fintech).
 
-**Strategic bonus:** Munim + GFC solves a previously unresolved problem — how the holding company and product relate on the website. They'd relate through Raj's grandfather. Two names from one family history is a founder story investors remember and buyers repeat.
+*Record-keepers, closest siblings to Munim:*
+- **Munshi** — the Mughal/colonial-era clerk and secretary who kept the books AND wrote all correspondence. The only historical role that did both records and letters — doubly apt since the product ingests email. MUN-shee. No software company found on it.
+- Patwari — village officer holding the definitive land record; his book settled disputes. Three syllables.
+- Kanungo — district officer above the patwari who maintained and verified records regionally. From *kanun* (law) + *go* (one who tells).
+- Bahi — the cloth-bound ledger every Indian merchant family kept. BA-hee, very easy for Americans.
 
-Next step given: run Munim and Diwan through a registrar and USPTO TESS. Both are common words in India so some usage exists, but neither is near American enterprise software where the mark matters.
+*Discernment and true value:*
+- **Paras** — the mythical stone that turns iron into gold on contact. Two open syllables, PA-ras, easiest American pronunciation of any candidate all session. For a company forged in steel, "the stone that turns iron into gold" is a one-sentence story a distributor CEO won't forget.
+- Parakh — to appraise, to assess true worth. A *parakhi* is an appraiser. Two syllables.
+- Kasauti — the touchstone against which gold is rubbed to test purity. Three syllables.
+
+*The witness and the account:*
+- Sakshi — the witness; in Indian philosophy the one who observes everything without judging or interfering. Also a common given name, so instantly human and memorable.
+- Lekha — the account, the written record (Sanskrit).
+- Hisab — accounts, the reckoning, as in *hisab-kitab*.
+
+*Trust across distance:*
+- Hundi — the bill of exchange that moved money and credit across India for centuries with no bank, purely on trust between parties who often never met.
+
+**Claude's recommendation: PARAS first, MUNSHI second.** Paras wins on Raj's actual stated criterion (stays with you after one hearing — concrete image, one-sentence story, easiest to say/spell/repeat for a US CEO, and the iron-into-gold metaphor suits a company whose credibility was forged in metals). Munshi wins on precision of meaning — the closest thing to a literal job description of the product in any language.
+
+Next step given: check Paras and Munshi on a registrar and USPTO TESS. Claude can find existing companies but cannot confirm what is purchasable.
 
 ---
 
 ## OPEN ITEMS / FLAGS RAISED
-1. **Naming has now consumed eight rounds with everything rejected until Round 8.** Flagged directly: a name he tolerates ships revenue; a name he loves ships nothing by itself. Naming is lower leverage than the two items below.
-2. **No formal trademark clearance has been run on anything, this entire session.** All checks informal search only. USPTO TESS + registrar needed on Munim, Diwan.
+1. **Naming has now consumed nine rounds.** Flagged directly: a name he tolerates ships revenue; a name he loves ships nothing by itself. Naming is lower leverage than items 3 and 5 below.
+2. **No formal trademark clearance has been run on anything this entire session.** All checks informal search only. USPTO TESS + registrar needed on Paras, Munshi.
 3. **Delivery capacity is the real risk to $1M/3 months, not messaging or naming.** 30 bespoke integrations in 90 days on top of Sabre/DPS/3GM/ESS load, hiring plan not started. A perfect website cannot create engineering bandwidth; an open CTA fills a pipeline that can't be serviced, damaging the exact credibility the site exists to build.
 4. **Homepage copy still not written.** Blueprint (15 sections) and full design spec complete. Only the hero is drafted.
-5. **Raj's own primary research remains unmined.** Real client call transcripts and emails sit in the vault. Emotive Brand's core method says this should drive the copy language. Largest unused asset in the project.
-6. Whether GFC or the product name is the primary brand on the site — Munim recommendation offers a resolution (both, related through family history) but not yet decided.
+5. **Raj's own primary research remains unmined.** Real client call transcripts and emails sit in the vault. Emotive Brand's core method says this should drive copy language. Largest unused asset in the project.
+6. Whether GFC or the product name is the primary brand on the site — the heritage-naming direction offers a resolution (both, related through family history) but not yet decided.
 7. Krinox purchase status ambiguous — Raj said he'd buy it, then rejected all prior names.
