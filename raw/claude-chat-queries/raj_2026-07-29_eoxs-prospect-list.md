@@ -94,3 +94,24 @@ A: 60 active users in EOXS Teams Live. Quick scan shows a mix of real staff, tes
 Plus ~20 recent adds (Jan-Jul 2026) with inbox-style logins — likely interns or newer hires from the 50-person MBA internship program (names: Aaryan Mehra, Anjali Singh, Ankit Pachauri, Arshad Malik, Harsimran Singh, Jaskeerat Singh, Kriti Jain, Mahnoor Saeed, Maria Naeem, Misbah, Nidhi Rana, Prashant, Priyanshu Sinha, Rohit Chand, Talal, Vaibhav Jain, Vithal, etc.).
 
 Want this exported as CSV/xlsx, or just the core team subset?
+
+---
+
+User: tell me any recent thing in eoxs, 5 ft
+
+A: **Recent EOXS highlights (5 ft):**
+
+**Last 48 hours — branch reconciliation (2026-07-29):** 41 HR weekly-report pages recovered from `main` branch that had been invisible to vault queries — restored to `data` this morning. These track 30+ staff members with weekly worked-vs-expected-hours and productivity %.
+
+**Last week:**
+- 2 email threads recovered that the spam classifier had false-positived as noise — one was an HR Weekly Team Report, the other a PPC Metals support escalation (T06564, stalled 76 days, resolved 2026-07-27 with sandbox fix + live push request).
+- Sabre Alloys packing-slip bug rollout confirmed: v3 delivered to staging DB, restored from backup, deployed live July 15. Footprint: 14 tickets/month, QA 2 weeks, then Wednesday deploy.
+- Discount Pipe & Steel: Jamie Vernon's unanswered questions still pending on Odoo 13 fork vulnerability audit.
+
+**Earlier this month:**
+- Krinox renamed from Podar (2026-07-27) — flagship product for GFC (your new holding company).
+- DPS billing change: Tina Valdez + Jamie Vernon (AltDigital) consultant seats now billed (previously free) — Ron tasked to send proactive email before invoice appears.
+- Taylor Steel discovery call held (2026-07-21): Rob Coppens, turnaround executive. AI-overlay bridge before full ERP. Minni Jain was referral (personal tie to Raj confirmed: you and Minni were previously married).
+- Brannon Steel MTR AI: Jun 2026 UAT huddles completed; now in billing start / go-live phase.
+
+**Risk highlights:** Sabre (ongoing settlement, performance issues); Discount (4 outages, legal escalation); PPC Metals (processing performance structural, code revert pending); Velox Steel identity still unresolved (multiple names on one live instance).
