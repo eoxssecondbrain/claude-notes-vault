@@ -39,3 +39,15 @@ Assistant: A few 5ft-level questions worth asking, given what's active right now
 - Any unresolved emails/tickets flagging the Odoo 13 CVE/security audit gap?
 
 These are all quick, single-source lookups (one invoice table, one ticket query, one email thread) — a good fit for 5ft. Anything comparing multiple clients or needing cross-verification (e.g. "which accounts are at churn risk") would really want 10ft or 50ft instead.
+
+User: Where does the 3GM Steel / Travis Lane IRIS pitch stand post-call?
+
+Assistant: No hits in the vault for the actual pitch call itself — the memory of "call with Travis Lane to pitch IRIS as CCO dashboard" isn't showing up in emails, Fireflies, or Fathom search under any phrasing I've tried. This is most likely a freshness gap: the vault syncs continuously but not instantly, so if that call happened very recently it may not be ingested yet.
+
+What the vault does confirm: Travis Lane is GM at 3GM Steel (a 5-year EOXS client, Kentucky-based coil distributor), and he's a known long-term contact going back to 2022 onboarding. But nothing post-call, no pitch outcome, no follow-up thread.
+
+Two ways to close this at 5ft:
+1. You tell me directly what happened on the call (fastest — you have it, the vault might not yet).
+2. I bump this to 10ft and check Zoho support, the client Kanban file (search_client), and CRM stage in EOXS Teams Live directly, in case the call is logged there instead of Fireflies/Gmail.
+
+Want me to go to 10ft, or do you have the call outcome to give me directly?
