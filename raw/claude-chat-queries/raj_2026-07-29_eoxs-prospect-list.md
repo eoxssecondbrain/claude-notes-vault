@@ -195,3 +195,66 @@ Which depth?
 - Bug fix momentum: Sabre packing-slip v3 deployed live (Jul 15), PPC freight-line stalled but tracked for resolution
 
 Bottom line (5 ft): EOXS has a working product-market fit with real clients, a differentiated AI approach, a capable core team, and institutional backing. The client concentration risk is real, but retention is solid and the pipeline is moving. Biggest asset is the founder's personal relationships + the ERP-to-AI-layer positioning vs. competitors still selling spreadsheets or legacy systems.
+
+---
+
+User: tell me some facts of eoxs in 5 ft
+
+A: **EOXS Facts (5 ft) — Quick Snapshot:**
+
+**Company & Structure**
+- Founded as EOXS (under Prata Inc, Delaware C-Corp); now spinning out Krinox (GFC — Ganesh Fruit Company holding entity) with Raj (51%), Ron (20%), Ayan (20%), 9% ESOP
+- Raj is CEO; Ron leads implementation; Ayan handles engineering/AI architecture
+- ~30 core staff + 50 MBA interns (deployed Jul 2026 at ₹10K/month, 6-month contract)
+
+**Financials & Funding**
+- Mucker Capital: $350K confirmed across 3 tranches (~12.16% equity)
+- Target: $1M ARR within 12 months (EOXS goal, separate from GFC/Krinox)
+- 9 paying clients generating recurring MRR; exact current ARR not disclosed in vault but tracked via invoices
+- Founder salaries deferred until financial health warrants (Raj, Ron, Ayan all unpaid as of Jul 2026)
+
+**Product & Technology**
+- Core: Heavily customized Odoo 13 ERP for steel/metals distribution
+- AI layer: 15 AI Workers co-pilots; IRIS (natural-language BI, $4K/month standalone); MTR AI (call/doc digitization); SmartQuote AI (60-sec quoting)
+- Krinox (formerly Podar): AI operating system superset — OV (Obsidian vault) + IRIS + Claude integration + live email/call transcripts + real-time ERP query layer
+- R&D: Zola (live-call AI assistant), Second Brain vault architecture, role-based AI agents in roadmap
+
+**Client Base (9 paying)**
+- Sabre Alloys (crisis aftermath, $10.9K MRR, ongoing settlement dispute)
+- 3GM Steel ($4.75K MRR, renewed 3-year, locked through mid-2028)
+- Discount Pipe & Steel ($3.1K MRR, 4 outages, legal escalation, reservation defect materialized Jun 26)
+- Eastern States Steel (~$2.3K MRR, soft launch Nov 2025, LPD wind-down Dec 2026)
+- PPC Metals (~$2.75K MRR, processing performance structural, code revert pending)
+- Ohio Strip Steel/Greer Steel ($1.7K MRR, rebranded Jun 2026 post-Mutares acquisition)
+- RW Conklin Steel ($450/month, smallest deal, unresolved 2024 accounting gap)
+- Brannon Steel (~$927 USD/month, MTR AI only, UAT complete, live phase starting)
+- Velox Steel (identity unresolved — "Velox Steel" / "Steel America" / "Mill Mechanical, LLC" — 9 tickets, none deployed)
+
+**Market & ICP**
+- Target: 10–200 employee steel service centers, North America + Canada (Brannon is first Canadian client)
+- SOM/SOM-SA/UUM tier segmentation defined
+- Industry reach: 20,000+ LinkedIn connections (Raj personal), SMU Steel Summit (Aug 24–26 registered), AISTech conference network
+
+**Pipeline**
+- 252 total CRM opportunities; 196 active (data quality issue: 60-70% have $0 expected_revenue, most stalled since 2025)
+- High-confidence prospects: Titanium Industries, North Shore Steel, Coilplus, Farmers Copper, Monarch Steel, Modesto Steel, Ace Steel
+- Recent activity: Taylor Steel discovery (Jul 21), Collier Metals demo (Jul 20), Alascop technical eval (Jul 22)
+
+**Team**
+- Leadership: Rajat Jain (CEO/sales), Ron J (implementation), Ayan Dutta (engineering/AI), Aryan Bakshi (implementation)
+- Engineering: Dhrup Kumar Singh (lead dev), Kartikey Tripathi, G. Nijamuddin, Hashir Saleem, Humaira Zainab (PM)
+- Sales: Scott Begin, Yashvir Singh Thakur, Lew Dennen, Timothy Quinn, RJ
+
+**Recent (Jul 2026)**
+- Krinox rebrand finalized (Podar → Krinox); IRIS transferred to GFC ($10K valuation)
+- Sabre packing-slip v3 deployed live (Jul 15, 14 tickets/month footprint, 2-week QA cycle)
+- Brannon MTR AI post-launch (UAT complete)
+- DPS billing change: Tina Valdez + Jamie Vernon (AltDigital consultants) now billed (previously free)
+
+**Risks**
+- Client concentration (9 clients, top 3 = ~60% of revenue)
+- Infrastructure issues: Feb 2026 Contabo breach, GoDaddy reliability crisis (Nov 2024–Sep 2025)
+- High-touch implementation model doesn't scale easily
+- Sabre settlement dispute ongoing; Discount legal escalation active; PPC performance crisis unresolved
+
+Bottom line: EOXS is a founder-led, AI-forward ERP play for a tight niche (steel distributors), generating revenue from 9 real clients with proven product-market fit but facing concentration risk and infrastructure/client stability issues that could derail $1M ARR target if not addressed.
