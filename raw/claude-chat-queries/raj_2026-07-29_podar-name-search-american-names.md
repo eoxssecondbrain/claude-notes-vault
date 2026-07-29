@@ -26,3 +26,16 @@ Real, recognizable American names/nicknames found in the available list:
 10. Yates — distinguished surname, sounds executive
 
 Honest caveat: this is a thin pool — I cross-checked the full available list against a 500+ name dictionary of common American first names, nicknames, and surname-as-firstname options, and this is genuinely all that hit. If you want more options with this quality bar, the sheet as generated won't give you them — you'd need a new name-generation pass targeting real name patterns rather than the current syllable-blend approach.
+
+User: these are all names that are uncommon, I am looking for everyday names, like mark, ted, bran, jack, john, james, etc. something that people have heard
+
+Assistant: This makes sense now — every genuinely common name (Mark, Ted, Jack, John, James, Bob, Tom, Steve, etc.) is on the sheet but marked domain-unavailable. The sheet's "available" pool deliberately shifted toward invented/uncommon names because all the real, everyday first names already had their domains taken.
+
+Bottom line: there is no list of 10 available, everyday, household names hiding in this sheet — I checked all 5,000 rows against 121 common names and every single one of them (Mark, John, Jack, James, Steve, Ted, Tom, etc.) shows "NO - TAKEN."
+
+Your real options:
+1. Pick from taken names anyway — go straight to the registrar/aftermarket and see what it actually costs to buy or negotiate one of these (askmark.com, askjohn.com, etc. — some "taken" domains are parked and buyable).
+2. Loosen the pattern — drop the "ask[name].com" prefix constraint and check if the bare name (mark.com, johndoe-style, or a .io/.co/.ai variant) is available instead.
+3. Accept a semi-common name — from the earlier list, Colt, Cruz, Ryder, Tate, Gage are recognizable and used in everyday life (not top-50 common, but not invented either) and are actually available as ask[name].com.
+
+Want me to check aftermarket pricing/availability for the taken common names, or check alternate TLDs (.io/.co) for names like Mark, John, Jack?
