@@ -115,3 +115,19 @@ A: **Recent EOXS highlights (5 ft):**
 - Brannon Steel MTR AI: Jun 2026 UAT huddles completed; now in billing start / go-live phase.
 
 **Risk highlights:** Sabre (ongoing settlement, performance issues); Discount (4 outages, legal escalation); PPC Metals (processing performance structural, code revert pending); Velox Steel identity still unresolved (multiple names on one live instance).
+
+---
+
+User: what is the DA of eoxs site
+
+A: I can't pull EOXS's live Domain Authority score from search results. The web search isn't returning eoxs.com's specific DA data. To get this, you'd need to:
+
+- Check Moz's DA Checker directly (moz.com/domain-analysis)
+- Use Ahrefs Domain Rating checker
+- Check Semrush's Authority Score tool
+
+All are free or freemium. DA (Moz scale 0-100) depends on backlink quality and quantity — EOXS would need a strong linking profile from authoritative industry sites to move the needle.
+
+From the vault, I see EOXS had a **chronic GoDaddy hosting reliability crisis (Nov 2024–Sep 2025)**, a **Feb 2026 Contabo breach**, and multiple security incidents. These could impact crawlability and trust signals if search engines flagged downtime. That's probably more relevant to SEO strength than the DA number itself.
+
+Want me to check if the vault has any SEO strategy docs or link-building plans on file?
