@@ -24,3 +24,18 @@ At 5ft depth (public web search, no verification), there's no genuine "news" —
 Bottom line: there's no public news cycle on EOXS right now — no funding, product launch, or leadership news is circulating externally. Whatever's actually "recent" for EOXS is internal (client deals, GFC/Krinox build-out) and lives in the vault, not the press.
 
 If you meant internal recent developments instead of public press, say so and I'll pull from OV2/vault at whichever depth you want.
+
+User: suggest me question that i should ask to you about eoxs in 5 ft dept
+
+Assistant: A few 5ft-level questions worth asking, given what's active right now:
+
+- What's the current status of the DPS AltDigital billing change — has Ron sent the Austin Rayzor heads-up yet?
+- Where does the 3GM Steel / Travis Lane IRIS pitch stand post-call?
+- What open support tickets exist across Sabre, DPS, Brannon, and Greer right now?
+- Which invoices are overdue across all clients?
+- What's the latest on Eastern States Steel's transition now that Ryan Capinski is being replaced?
+- Any new inbound activity on Taylor Steel or IMS Metals since the last touch?
+- What's Sabre's current payment status — still 30+ days out?
+- Any unresolved emails/tickets flagging the Odoo 13 CVE/security audit gap?
+
+These are all quick, single-source lookups (one invoice table, one ticket query, one email thread) — a good fit for 5ft. Anything comparing multiple clients or needing cross-verification (e.g. "which accounts are at churn risk") would really want 10ft or 50ft instead.
