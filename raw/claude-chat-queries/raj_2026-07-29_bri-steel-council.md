@@ -70,3 +70,49 @@ Live options on the table:
 5. Replace Brian as the operational contact — chronic non-responsiveness has been flagged twice with zero resolution.
 
 Which of these do you want the council to build out — the capital-purchase reframe, the cut-down wedge offer, or getting to the owner directly? Those are three different deals, not variations on one pitch.
+
+USER:
+lets analysis, who should we talk to .. should we send them an email or call them. we need to execute on the next step today.. i was thinking that we can show her value in podar, which can convince them to buy eoxs. 
+
+ASSISTANT:
+Recommendation: email first, addressed to Charlotte with Neil cc'd, not a call. Reasoning:
+
+- Charlotte is the right target. She's the one who proposed her own AI/inventory concept back in March 2025 — she's already primed to get the Krinox angle without translation. Neil is sold on the product already; his objection was never features, it was price. Going after him again with another AI pitch just repeats what didn't work in September.
+- It's been 2.5 months of silence since the May 19 call. A cold call into that gap risks catching her unprepared and reopening the conversation on weak footing. An email lets you control the frame — specifically, give her the ROI language she said she needed to make the case to her grandfather, which nobody has actually supplied her with yet.
+- The ask in the email should be a short scheduled call, not a full pitch by email. Email opens the door, the call does the selling.
+
+One flag before the draft: Krinox is technically a GFC product now, not an EOXS product. You're fine using it as a hook since you're aware of that separation, but worth being deliberate that what you're actually selling here is still the EOXS ERP — Krinox is bait and proof-of-value, not the thing being invoiced. Keep the ask in the email pointed at EOXS, not at Krinox as a standalone purchase, or you risk creating a second, smaller, off-books deal instead of reviving the real one.
+
+Positioning that actually lands: don't pitch Krinox as "cool new AI feature." Pitch it as solving the exact thing Bri-Steel already told you is broken — four disconnected systems (Navision, Access, spreadsheets, manual cross-checking) with data-consistency problems. Frame it as a way to prove value fast and cheap before anyone has to face the "$300K money pit" conversation again. That's the missing piece from both prior attempts — you kept discounting the big number instead of shrinking the first ask.
+
+Draft:
+
+[Email draft, "Krinox proof-of-value hook" variant]
+Subject: A faster way to test this before the bigger decision
+
+Charlotte,
+
+Good to reconnect in May. Since then we've built something that changes the shape of this decision for you and your grandfather.
+
+Bri-Steel is running four disconnected systems right now — Navision, the Access database, spreadsheets, and manual cross-checking to keep them consistent. That's the exact problem Krinox was built to solve: it sits on top of what you already have and gives instant, reliable answers across all of it, without waiting on a 15-18 week implementation or committing to the full platform first.
+
+The reason this matters for your conversation with him: it's a way to show real, measurable value in weeks, not a leap-of-faith subscription he has to trust blind. If it doesn't deliver, you've lost very little. If it does, you'll have your own proof to bring him instead of our numbers.
+
+20 minutes this week to show you live, on your own data where possible?
+
+Raj
+
+[Alternate variant, "Direct, no AI framing"]
+Subject: Picking back up from May
+
+Charlotte,
+
+We left things in May without a clear next step. I don't want to send you another proposal — the last two didn't move the real question, which is your grandfather's comfort with ongoing cost, not whether the system works.
+
+We've since built a way to prove value on a smaller, faster footprint before any full commitment. Worth 20 minutes this week to walk you through it and figure out together whether it's the right way to bring this back to him?
+
+Raj
+
+Send today, to crasmussen@bri-steel.com, cc nrasmussen@bri-steel.com. Go with the first variant — it gives Charlotte the specific ROI language she said she needed, tied to a real pain point on record (the four-system fragmentation), not just a feature demo. Ask is a 20-minute call this week, not a meeting to re-pitch the full deal.
+
+If she books it, that call is where Bernadette and Brian become relevant — worth having Ron or Ayan on standby to actually run the Krinox demo live, since Charlotte will likely want to see it against something close to Bri-Steel's real data, not a generic walkthrough.
