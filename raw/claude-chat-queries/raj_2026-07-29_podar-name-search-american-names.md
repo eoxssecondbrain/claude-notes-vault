@@ -39,3 +39,17 @@ Your real options:
 3. Accept a semi-common name — from the earlier list, Colt, Cruz, Ryder, Tate, Gage are recognizable and used in everyday life (not top-50 common, but not invented either) and are actually available as ask[name].com.
 
 Want me to check aftermarket pricing/availability for the taken common names, or check alternate TLDs (.io/.co) for names like Mark, John, Jack?
+
+User: i want a common name from the available pool, find me 5 of them
+
+Assistant: From the available pool, these 5 are the ones people actually hear/use as everyday first names — not invented, not obscure surnames:
+
+1. Cruz — widely recognized (Ted Cruz, Penelope Cruz), currently a popular baby name too
+2. Ryder — one of the most common modern American boy names right now
+3. Tate — short, common, used as both first and last name
+4. Gage — a mainstream American first name, been in the US top-200 for years
+5. Colt — commonly heard, especially in the Midwest/South
+
+All 5 confirmed as "YES - AVAILABLE" in the sheet, domain pattern ask[name].com.
+
+The rest of my earlier shortlist (Alton, Polk, Abner, Dyer, Yates, Bren, Egan, Elam, Elan, Leary, Pokey) are real but skew either dated, presidential/surname-heavy, or obscure — didn't make this cut since you're optimizing for "people have heard this."
