@@ -46,3 +46,39 @@ Also on record: Ayan requested and you approved a ₹10,000 internal incentive f
 One open item the vault hasn't resolved: whether "Rick" at Eastern States Steel (cited by Ayan as a prior PS Data-migration reference) is a usable case study — unverified against ESS's own pages. I'd hold off citing that one until you've confirmed it.
 
 Ready to build the structure for the call whenever you are.
+
+User: so what should my questions on this call be. think from solutions selling. it would make sense to look at it from a high level, erp need, AI need, and then maybe mtr needs. what do you say. 
+
+Assistant: Reverse your order. Leading with "ERP need" walks straight into the wall you already know about — they just bought scanners/cameras wired into Business Central, so an ERP-replacement conversation reads as EOXS not having listened. Start where the pull already exists (MTR/AI), and treat ERP as a background/roadmap question, not a pitch.
+
+Second thing: Tripp isn't a typical buyer, he's a builder — he made his own slitter tool. Selling to a builder means understanding what he built and why before you pitch anything. That's your real opening, not "high level."
+
+Structure I'd use:
+
+1. Tripp's own build (credibility + buy-vs-build intel)
+- Walk me through the slitter tool — what does it actually do, what did you build it on?
+- What made you build it yourself instead of buying something?
+- Where does it stop being useful — what's outside what one person can maintain?
+This tells you his technical ceiling and exactly what argument will land later (in-house tools don't scale/aren't maintainable when he's not the one maintaining them).
+
+2. MTR pain (the proven interest — go deep here)
+- Roughly how many MTRs come through in a week/month?
+- Walk me through what happens today from PDF landing in your inbox to that data being usable in PS Data.
+- Where does it actually break — data entry errors, compliance risk, delay to shipping?
+- Who touches this process — one person, several?
+- What happens when a customer spec needs to be matched against your MTRs today?
+
+3. Broader AI appetite (use the fact you already have — 3 of 6 execs use AI daily)
+- Where else internally are people already improvising with AI on their own?
+- If you could hand off one manual process to something like this tool, what would it be?
+
+4. ERP/systems posture — light touch, forward-looking only
+- How are you thinking about your systems stack over the next few years, especially with the transition to your son?
+- Any friction with Business Central today, or is it mostly working for you?
+Don't push past what they volunteer here. If BC is fine, let it be fine — you're not selling ERP replacement today.
+
+5. Close
+- What would need to be true for this to be worth a real pilot?
+- Who else needs to be in the room for that decision — just you two, or anyone else?
+
+One more thing: don't reintroduce the "chemistries → predict mechanical properties" ask unless you've actually got something to show — if that's still vaporware, raising it again costs you credibility with a guy who builds his own tools and will smell a gap.
