@@ -6,47 +6,41 @@ created: 2026-07-30
 updated: 2026-07-30
 ---
 
-User: we have a call with collier metals right now. ayan spoek with them last week. can you pull up all the info about the people we have a call with, the history of our previous call and then we will create a structure for todays call. give me all the info that i need to prep for this call properly. if we know what technology they use etc.
+User: [uploaded Collier_EOXS_AI_Brainstorming.md call transcript and Proposal_Collier_Metals_-_Quote.pdf] this is the call we had. this is the email i am sending and the proposal. review it and give me your thoughts. tell me if i missing something. if i need to change something or remove somethiong. build a council that will help you execute this task.
 
-Assistant: Call: **Collier / EOXS – AI Brainstorming**, today (Thu Jul 30) 12PM EST. Confirmed by both sides via email thread 07-28/29.
+[Email draft text]:
+Tripp & Rob,
+Good conversation today. Your point about not wanting to hire into positions that AI will make obsolete in a year or two, that's exactly the right way to think about scaling right now, and it's rarer than you'd think.
+Here's where things stand:
+1. EOXSplore Video library — full video walkthrough (150 videos covering every part of the system) is on its way. Access is open for one week, so get your team into it as soon as it lands.
+2. Q&A doc — a shared Google Sheet so you and your team can log questions as you go through the videos, and we'll respond there so everything stays documented.
+Attached is the pricing proposal we discussed — covering licensing, implementation, timeline.
+R.
 
-**Who's on it**
+[Proposal PDF]: EOXS ERP proposal for Collier Metals - 18 users at $380/user/month = $6,840/month. Implementation: Discovery 5 days, Design 2, Product Config 5, Master Data Import 3, Testing 2, Training 10, Go Live/Support 10 = 37 days total at $1,920/day = $71,040 (net $72,000). 3-year contract, 4% annual renewal cap. Payment: $20,000 at kickoff, $12,000/month until settled.
 
-Collier Metals side:
-- Rob Drum (rdrum@colliermetals.com, 205-253-8756) — sales-side, reports to Tripp. Met you at SMU, is the origin of this whole thread.
-- Tripp Collier (tcollier@colliermetals.com) — owner, second-generation (father founded the company). Per your own internal CRM note from the SMU conversation, his son takes over the business this coming October — so Tripp may be thinking succession/systems-handoff, not just tooling. Personally deep into AI — built his own slitter setup-calculation tool that reportedly saves the shop ~10 hrs/week. He's the actual decision-maker.
+Assistant: [Read full call transcript - "Collier / EOXS - AI Brainstorming" 30-Jul-2026, ~85 min call. Raj, Ayan Dutta on EOXS side; Tripp Collier (owner, 2nd gen, bought business from father last year, tripling revenue this year, 2 shifts, expanding capacity, 2 slitting lines + cut-to-length + edging lines, 9.5 acres, currently ~95% secondary/seconds material, Atlanta-based, building pre-WWII/locomotive shop heritage) and Rob Drum (sales) on Collier side.
 
-EOXS side: Ayan (led the July 20 demo, scheduled this one), and you're on it too per the thread.
+Key call content:
+- Tripp uses PS Data since 2015, recently invested in Shop Floor module, service level "falling very short." Considering building own AI-based ERP internally before this call.
+- Raj pitched EOXS as plug-and-play ERP + Claude AI layer on top, gave Eastern States Steel / Ryan as reference (similar succession story, chose EOXS over PS Data/Nmark/Invera), promised to make an introduction to Ryan as next step.
+- Raj gave live ERP demo: sales/purchase/processing/inventory/accounting modules, landed cost calc, breadcrumb traceability, dashboard, MTR AI live demo by Ayan (22,000 MTR records, spec matching, MTR chatbot).
+- Pricing discussed live: Raj quoted range "$350-500/user, up to ~$7,000/month, implementation $50-70k" for 18 users (10 office + 8 shop floor operators), matches proposal's $6,840/mo + $72k implementation.
+- Raj made an explicit guarantee on the call: "if we are not live in four weeks... we'll reduce $5,000 a week for any delay" — this directly contradicts the proposal's own 37-business-day (~7-8 week) implementation plan.
+- Claude/AI integration pricing given verbally but NOT in the proposal: $1,000 one-time per Claude account integration, $100/month per account, custom agent/automation work priced separately (Monarch AP-agent example, $2,000/six-hour-prompt example for deep agentic analysis).
+- Tripp's stated primary motivator repeatedly: "you don't have to sell me on features... the AI integration is the mover for me," not the base ERP.
+- Explicit next steps agreed on call: (1) EOXSplore video library access opened for 1 week, (2) Google Sheet Q&A doc for logging questions, (3) Raj to introduce Tripp to Ryan at Eastern States Steel as reference, (4) one-page pricing proposal to follow, (5) follow-up call same time Thursday, two weeks out — Tripp explicitly said "put it on the calendar."
 
-**Company profile**
+Delivered Council-mode review (GTM strategist / pricing-packaging / RevOps / enterprise sales motion / category positioning / facilitator seats) with these findings:
+1. TOP ISSUE - proposal contains zero AI/Claude/MTR pricing despite that being the entire reason Tripp is motivated to buy; recommended adding a line item or soft mention so the AI conversation has a paper trail.
+2. Ryan/Eastern States Steel introduction promised live on the call is missing from the follow-up email entirely — flagged as biggest single miss.
+3. Four-week go-live guarantee with $5k/week penalty stated on the call contradicts the proposal's own 37-day implementation timeline — flagged as integrity/credibility risk needing reconciliation before it's memorialized in writing.
+4. Payment schedule math doesn't divide cleanly: $72k total - $20k kickoff = $52k remaining, doesn't divide evenly into $12k/month increments (stub month of $4k) — flagged given Tripp's demonstrated attention to detail throughout the call.
+5. No explicit next-call date referenced in the email despite one being verbally agreed on the call.
+6. Recommended keeping pricing as-is (no discount) — Raj's pre-call worry that Collier would be a cheap/price-sensitive buyer did not materialize on the call; Tripp never questioned cost and explicitly said features/price weren't the issue.
+7. Minor style note: sign-off "R." undersells the personal warmth built during a call that covered family, kids, and buying out his father's business — recommended a warmer full-name sign-off.
+Offered to redraft the email with Ryan intro + AI line item folded in.
 
-Steel service center, 25–30 employees. Runs Microsoft Business Central as core ERP, plus PS Data for MTR/quality-cert workflows. Rob volunteered unprompted that PS Data "looks ancient" with a steep learning curve. Currently carries relatively low on-hand inventory — Rob himself flagged the MTR/matching tool as more valuable for larger multi-location service centers than for Collier's current scale, though he still saw value in it.
+User: Regarding the second issue, I was actually going to do that in a separate email with CCing Ryan. Regarding the third issue, you are correct however I had a understanding that they have 8 to 10 people in their team and hence I quoted four weeks at the early stage of the call maybe we can clarify it for them. It is going to take eight weeks. Training 18 people takes time. Regarding the fifth point, we have already put the call on the calendar and he has even accepted the invite.
 
-Leadership is unusually AI-forward for this vault's steel accounts — Rob estimates 3 of 6 execs use AI tools daily.
-
-One real headwind: Collier recently invested in shop-floor scanners/cameras tied into Business Central for run-time tracking. Rob cited this as a reason he's more reluctant to consider switching off Business Central as the core ERP — even while staying open to AI overlay tools. So a full-ERP pitch is a much harder sell than an overlay pitch here.
-
-**What's already been shown (July 20 demo, Ayan solo — you were hospitalized after the bike accident)**
-
-1. MTR AI — live walkthrough of the ~22,000-record MTR database, PDF extraction of chemistry/mechanical properties, spec-matching, and a natural-language MTR chatbot (demoed with a real filtered query, correctly returned 2 matches with full traceability). This directly hits Collier's stated biggest pain point: manually transcribing chemistry/yield/tensile data out of MTR PDFs into PS Data. Rob called this "the biggest thing we can't figure out ourselves."
-2. Second Brain / internally codenamed "Turing" — the company-wide Claude-powered knowledge vault, demoed live. Ayan positioned this as C-suite/ownership-only, not for line staff.
-
-Ayan's positioning on that call, worth reusing: EOXS is not a PS Data or Business Central competitor — overlay tools on top of the existing ERP, not a replacement ("Rolex" / "Cadillac you can customize" framing). Reference points he used: Sabre Alloys (full ERP), Brannon Steel (MTR-only overlay on their existing Business Central — this is your closest apples-to-apples precedent for Collier), Gerdau/"AI Joe" (Rob was visibly happy when Gerdau came up).
-
-Rob also asked for a second capability on that call: given a list of chemistries, predict mechanical properties (yield, tensile, elongation). You reportedly told him you'd develop that — worth confirming status before this call if it's come up internally.
-
-Outcome of the July 20 call: no pricing discussed, relationship-building framing throughout. Rob said he'd brief Tripp and gauge interest — that's exactly what produced today's call.
-
-**One flag on your own CRM**
-
-The internal Odoo lead for Collier Metals (Rob Drum, stage "Leads," $0 expected revenue, 21.8% probability) hasn't been touched since Nov 27, 2025, and is still assigned to Scott Begin — not Ayan. It's badly out of sync with the actual relationship, which has clearly moved since. Worth reassigning ownership after today's call so it doesn't sit stale again.
-
-Also on record: Ayan requested and you approved a ₹10,000 internal incentive for converting this cold lead into a discovery call (paid 07-28) — so there's already a completed internal loop tied to getting to today.
-
-One open item the vault hasn't resolved: whether "Rick" at Eastern States Steel (cited by Ayan as a prior PS Data-migration reference) is a usable case study — unverified against ESS's own pages. I'd hold off citing that one until you've confirmed it.
-
-Ready to build the structure for the call whenever you are.
-
-User: ok
-
-Assistant: Whenever you're ready, tell me and we'll build the structure for the call — agenda, what to lead with, what to hold back, how to handle the Business Central objection.
+Assistant: Confirmed items 2 and 5 already handled (separate Ryan-intro email with CC planned; follow-up call already calendared and accepted). On item 3, recommended proactively correcting the four-week estimate to the real eight-week timeline before Tripp catches the discrepancy himself — framed as Raj's own diligence/early-disclosure principle (echoing what Raj told Tripp on the call about surfacing awkward things early), either folded into the Ryan-intro email or sent as a standalone clarification. Offered to draft that clarification line.
