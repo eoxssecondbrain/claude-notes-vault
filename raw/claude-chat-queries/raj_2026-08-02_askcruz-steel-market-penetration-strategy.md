@@ -6,22 +6,40 @@ created: 2026-08-02
 updated: 2026-08-02
 ---
 
-User: Ayan and Nidhi took a lot of time to figure this out. I checked with Ayan and he said that if they have to do the same thing for a new client, it would take comparatively less time. And we are even exploring the idea of Hiring 50 software engineer, freshers who will be able to multiply Nidhis role. It took us time the first time because we were figuring out everything and we were understanding how this product can work properly. In this whole product are product will be really the obsidian vault that we can maybe charge per User monthly. And then we can start slowly introducing AI agents into the work frame to automate their workflow, but primarily provide them insight on their business backed with their own data. I am not envisioning this as a Software company. I am envisioning this as a consulting company. Imagine for years companies like Mckenzie would only be accessible to enterprise, and now it can be accessible to small and medium businesses.
+User: Yeah, let's work through economic unit.
 
-Imagine going to a CEO and asking him what is his vision with the business and he says that he wants to grow this business to two x revenue in the next 12 months. And now he and his team gets all the different kind of reports that will help him execute this vision.
+I had a few ideas
 
-I was going with an idea that a business is primarily a product, capital and decision-making and Cruz helps you make the right decisions because Cruz can go read through your data and do expert analysis on that Data
+We could charge them hundred dollars per User per month to use our obsidian vault so if a company has 50 employees, we could give them 40 Claude account accounts for 40 employees and we could find a way to set some access rights for every role on those Claude account accounts and we are making $4000 a month
 
-Assistant: The McKinsey analogy is doing real work here — it's a legitimate repositioning, not just a metaphor. McKinsey's value isn't spreadsheets, it's judgment applied to data that most companies can't organize or interpret themselves. If Cruz gives a 60-person steel company that same judgment quality at a fraction of the cost, that's a real underserved market. Nobody's selling McKinsey-grade insight to companies too small for McKinsey to answer the phone.
+But that's just a start
 
-Three things need real numbers behind them before this becomes the plan, not just the direction.
+We could now start charging them for more token usage
+A simple query of doing product analysis can be at a very high level or be in depth you know the 5 feet and 10 feet regular level we have created. We can offer them the 5 feet as part of their base and if they want a deeper analysis on whatever they are looking for they have to pay for it. So imagine the CEO goes and says that do a detailed sales analysis and now he's given three options.
 
-The freshers plan needs a leverage ratio, not just headcount. McKinsey's staffing pyramid works because a small number of senior partners each oversee several associates who each oversee several analysts — quality control flows top-down. "50 freshers multiplying Nidhi" only works if you design that same pyramid: who reviews a fresher's OV build before it ships to a client? Right now that's presumably Nidhi alone, and you already have Dhrup flagged as a QA single-point-of-failure with an unresolved raise conversation. Scaling engineering headcount 50x on top of an already-strained senior layer is how quality collapses quietly across dozens of client builds before anyone notices.
+Then we can have AI agent agent agent that we can sell to them at an additional cost. These can be agents that automate their workflow like entering vendor invoices in the Erp.
+Another agent which I had in mind could be really great and I am building this for myself
 
-The pricing needs to actually hit your target, not just sound recurring. "Per user monthly" only gets you to $30K ACV if you do the math — at a 50-100 employee company, how many of them are actual Cruz users, and at what price point? If it's $50/user/month and 15 relevant users, that's $9K/year, a third of target. Model the real seat count and price before this becomes the pitch.
+Imagine these users are now talking to Claude every day
 
-The shift from insight to advice raises the stakes on being right. "Query your own ERP data" is informational — low liability, easy to defend if wrong. "Here are the reports that help you execute your 2x revenue vision" is prescriptive advice a CEO might act on. McKinsey carries that liability with contracts, disclaimers, and track record built over decades. Before you sell outcomes, not just visibility, you need at least one real case study of Cruz actually helping a client hit a number — not a demo, a result.
+We save all those threads in a database, and at the end of the day this agent goes through all the conversations in these threats and populate the the knowledge in a knowledge base, he got from all these conversations. Summarizes all these conversation, conversations and creates a separate wiki. Imagine as a CEO now I can go and prompt my Claude and ask what is my team been talking about in the last one month? Or based on all the conversations, my team is having with you what problems are we facing as a team? We will call this agent - Agent Vinod. Very important and remember this.
 
-Good direction. Want to work through the unit economics next — seat price, users per client, delivery hours per build — so the $30K ACV number is actually load-bearing instead of assumed?
+Assistant: [Saved memory: Agent Vinod is an AskCruz product concept — an agent that ingests all of a client org's daily Claude conversation threads, summarizes them, and populates a searchable knowledge base/wiki, letting a CEO ask what their team has been talking about or what problems they're facing based on conversations with Claude.]
 
-Note: Direction refined further. AskCruz positioning is now "McKinsey-style consulting for SMBs" (not a software company) — core product is the structured Obsidian vault charged per-user monthly, with AI agents introduced progressively to automate workflows and provide data-backed business insight/decisions. Raj is exploring hiring 50 fresher software engineers to multiply Nidhi's build capacity, since Ayan confirmed repeat builds take comparatively less time than the first (which included R&D/figuring-out time). Open unresolved items flagged: (1) leverage/QA ratio for scaling freshers under Nidhi, especially given existing unresolved Dhrup QA bottleneck; (2) per-user pricing math needs modeling against actual $30K ACV target; (3) liability/accuracy risk increases as product shifts from informational (query your data) to prescriptive (advice toward business outcomes like 2x revenue) — needs at least one real case study before selling on outcomes.
+Good tiered structure. Walking through the actual numbers.
+
+Tier 1 — seats: 40 seats at a 50-person company is optimistic. Not everyone in a steel company is a knowledge worker who'll use an AI copilot daily — warehouse, production floor, drivers typically won't. A more realistic penetration is office/ops/sales roles only: probably 15-25 seats at a 50-person shop, 25-40 at 100-person. Run the model on 20 seats: 20 x $100 x 12 = $24,000/year. Below the $30K target alone, but not meant to carry the whole number alone.
+
+Tier 2 — depth-based usage: Smart mechanism, productizes the 5ft/10ft/50ft framework already validated on Raj himself. Recommendation: get Ayan or Nidhi to log actual token/tool-call cost on a real 10ft and 50ft query before pricing the upsell, to avoid selling a deep-analysis credit below cost.
+
+Tier 3 — automation agents (e.g. vendor invoice entry to ERP): Highest-value, highest-risk tier. Writing to a client's ERP means a bad automation creates real financial errors. Needs senior review on every build, not fresher throughput — the one tier where the "50 juniors multiplying Nidhi" plan doesn't apply. Recommended pricing: $500-1,500/month per agent to reflect QA weight.
+
+Agent Vinod: Mechanism is sound and structurally similar to Raj's own existing chat-summary synthesis infrastructure. Real risk is trust, not technical: if employees know their Claude conversations are being summarized and surfaced to the CEO, they'll self-censor and the tool becomes a surveillance layer instead of a work tool, undermining its value. Needs disclosure built into the pitch from day one — either scoped to work-only threads with clear upfront disclosure, or explicitly opt-in per employee.
+
+Rough blended ACV modeling (conservative assumptions):
+- Seats: 20 x $100 x 12 = $24,000
+- Usage tier, moderate uptake: ~$4,000-6,000/year
+- One automation agent: ~$8,000-15,000/year
+- Total: roughly $36,000-45,000/year per client
+
+This clears the $30K ACV target even on conservative seat assumptions, without Agent Vinod or a second agent. Recommendation: lock in seat + one-agent combination as the core pitch; treat deep-analysis credits and Agent Vinod as expansion revenue on existing accounts rather than day-one requirements.
