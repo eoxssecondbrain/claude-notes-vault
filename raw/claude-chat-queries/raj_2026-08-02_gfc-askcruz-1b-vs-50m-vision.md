@@ -119,3 +119,11 @@ Fork A: AskCruz stays a vertical AI platform for steel/metals and close-adjacent
 Fork B: AskCruz becomes a genuine horizontal or multi-vertical enterprise AI agent platform, competing for the same capital and market as Sierra/Harvey/Glean-tier companies. This requires abandoning "steel network is my unfair advantage" as the core GTM thesis within 12-24 months, raising real institutional money, and proving autonomous execution (not chat-over-data) fast enough to avoid being classified as a wrapper. This is the only version of GFC that can plausibly reach $1B, and it's a materially different company than the one your current 90-day plan is building.
 
 Blind spot worth naming directly: you can't half-run both. The steel-network advantage that makes Fork A tractable actively works against Fork B's need to look horizontal/category-defining to Series A investors — a fundraise narrative built on "I have 20K steel LinkedIn connections" reads as vertical-niche, not $1B-agent-platform, to the same investors funding Sierra-style rounds. The near-term 30-client/90-day plan is a legitimate proof point for either fork, but the fork itself needs to be chosen before or shortly after that proof point lands, not five years from now.
+
+**User:** ok.. make this correction also. and remember it. Raj is the CEO of ask cruz and he hold 100% equity.
+
+**Assistant:** [Updated memory edit #3 via memory_user_edits tool: GFC equity corrected from Rajat 51%/Ron 20%/Ayan 20%/ESOP 9% to Rajat holds 100% equity in AskCruz/GFC.]
+
+Updated — Raj holds 100% equity in AskCruz/GFC, correction saved to memory.
+
+That changes the dilution math from my earlier analysis: there's no existing 20/20/9 split to protect. Fork B (the $1B path) still means giving up 70-85% of the company across institutional rounds to reach $67-90M ARR, but you're starting from a clean 100% cap table rather than one already split three ways — meaningfully better negotiating position and a much cleaner diligence story than EOXS's messy Mucker/advisor history. Ron and Ayan's compensation for their committed roles (product/delivery, engineering) would need to be structured as future equity grants or comp rather than an existing stake — worth deciding explicitly before a raise, since investors will ask how the two people running product and engineering are incentivized if they hold nothing today.
