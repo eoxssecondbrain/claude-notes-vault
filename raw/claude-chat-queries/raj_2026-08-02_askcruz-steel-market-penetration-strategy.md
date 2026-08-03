@@ -3,43 +3,26 @@ thread_name: "askcruz-steel-market-penetration-strategy"
 user: "raj"
 type: claude-chat
 created: 2026-08-02
-updated: 2026-08-02
+updated: 2026-08-03
 ---
 
-User: Yeah, let's work through economic unit.
+User: I had sent Michael Mercadante from Sabre alloys an email to meet next week. We will set up some time you understand the emails he had sent me regarding his require. You understand what we have to offer right now. Take some time to create a profile of Michael and Tye to get a better understanding of how to pitch these guys and take some time to understand our product range and the emails that he sent to state his requirement and then prepare me a structure for the meeting. It will be a 30 minute meeting. We want to keep it crisp and to the point. And prepare me a presentation to clearly show him things we can offer him today and in the coming. They have already been using Iris and we have not charged them anything. They've been using that for the last 23 months and I have seen that Michael does use that product quite often.
 
-I had a few ideas
+Assistant: [Queried OV2 vault: get_index, Michael Mercadante entity page, Tye Webb entity page, AI Workers concept page (20-category requirements), IRIS product page. Searched raj_gmail for recent Michael Mercadante correspondence — only found older 2023-2024 threads; the specific "let's meet next week" email is likely too recent (post 2026-07-30 last vault sync) to be captured.]
 
-We could charge them hundred dollars per User per month to use our obsidian vault so if a company has 50 employees, we could give them 40 Claude account accounts for 40 employees and we could find a way to set some access rights for every role on those Claude account accounts and we are making $4000 a month
+Provided profile summary:
 
-But that's just a start
+Michael Mercadante, CEO/Owner of Sabre Alloys — strategic sponsor, not just a stakeholder. Independently building his own AI infrastructure (45-page self-trained ChatGPT sales/pricing playbook). Compiled a 20-category, 20-question AI requirements spec in June 2026 — most detailed product engagement document any EOXS client has produced. Wants a daily management briefing (cash risk, late orders, AR, margin exceptions, inventory, vendor problems) in plain English, source-traceable. Decisive, reactive ("Gold fucking mine" internal quote from Rajat). Issued a churn threat in Oct 2024 — holds real switching leverage.
 
-We could now start charging them for more token usage
-A simple query of doing product analysis can be at a very high level or be in depth you know the 5 feet and 10 feet regular level we have created. We can offer them the 5 feet as part of their base and if they want a deeper analysis on whatever they are looking for they have to pay for it. So imagine the CEO goes and says that do a detailed sales analysis and now he's given three options.
+Tye Webb, COO/VP Operations — operational enforcer, highest-volume Sabre contact (477 threads). Blunt, low tolerance for disruption, escalates in writing with specifics. Independently proposed the same "AI sales director" concept EOXS is building — audits rep response times, explicit headcount-hire substitute framing ("we don't want to hire a sales director"). Already live-testing the Claude account against real RFQs. Currently managing an unresolved, actively-escalated complaint — flagged as needing acknowledgment before any new pitch, or it reads as tone-deaf. Relationship status per vault: "At risk."
 
-Then we can have AI agent agent agent that we can sell to them at an additional cost. These can be agents that automate their workflow like entering vendor invoices in the Erp.
-Another agent which I had in mind could be really great and I am building this for myself
+Flagged a data discrepancy: Raj stated 23 months of free IRIS usage, but the vault shows Sabre's been an EOXS ERP client ~26 months (since May 2024), while the specific Claude/IRIS access — the actual product this meeting is about — was issued May 26, 2026, ~2 months ago. Recommended confirming which number Raj means before the meeting.
 
-Imagine these users are now talking to Claude every day
+Provided a 30-minute meeting structure:
+0-3 min: Acknowledge open items first (unresolved escalation, outage-credit settlement status) before any product talk
+3-10 min: Recap what's live — map Michael's 20 questions honestly (answerable today / needs configuration / needs cleaner data)
+10-20 min: Show what's next — Tye's own "Sales Director" AI agent idea handed back as something being built, plus Zola live-call assistant
+20-27 min: The ask — formalizing the relationship (positioned as transition from free pilot to structured plan, not a surprise bill; kept numbers directional since AskCruz per-seat pricing isn't finalized)
+27-30 min: One concrete next step with a date
 
-We save all those threads in a database, and at the end of the day this agent goes through all the conversations in these threats and populate the the knowledge in a knowledge base, he got from all these conversations. Summarizes all these conversation, conversations and creates a separate wiki. Imagine as a CEO now I can go and prompt my Claude and ask what is my team been talking about in the last one month? Or based on all the conversations, my team is having with you what problems are we facing as a team? We will call this agent - Agent Vinod. Very important and remember this.
-
-Assistant: [Saved memory: Agent Vinod is an AskCruz product concept — an agent that ingests all of a client org's daily Claude conversation threads, summarizes them, and populates a searchable knowledge base/wiki, letting a CEO ask what their team has been talking about or what problems they're facing based on conversations with Claude.]
-
-Good tiered structure. Walking through the actual numbers.
-
-Tier 1 — seats: 40 seats at a 50-person company is optimistic. Not everyone in a steel company is a knowledge worker who'll use an AI copilot daily — warehouse, production floor, drivers typically won't. A more realistic penetration is office/ops/sales roles only: probably 15-25 seats at a 50-person shop, 25-40 at 100-person. Run the model on 20 seats: 20 x $100 x 12 = $24,000/year. Below the $30K target alone, but not meant to carry the whole number alone.
-
-Tier 2 — depth-based usage: Smart mechanism, productizes the 5ft/10ft/50ft framework already validated on Raj himself. Recommendation: get Ayan or Nidhi to log actual token/tool-call cost on a real 10ft and 50ft query before pricing the upsell, to avoid selling a deep-analysis credit below cost.
-
-Tier 3 — automation agents (e.g. vendor invoice entry to ERP): Highest-value, highest-risk tier. Writing to a client's ERP means a bad automation creates real financial errors. Needs senior review on every build, not fresher throughput — the one tier where the "50 juniors multiplying Nidhi" plan doesn't apply. Recommended pricing: $500-1,500/month per agent to reflect QA weight.
-
-Agent Vinod: Mechanism is sound and structurally similar to Raj's own existing chat-summary synthesis infrastructure. Real risk is trust, not technical: if employees know their Claude conversations are being summarized and surfaced to the CEO, they'll self-censor and the tool becomes a surveillance layer instead of a work tool, undermining its value. Needs disclosure built into the pitch from day one — either scoped to work-only threads with clear upfront disclosure, or explicitly opt-in per employee.
-
-Rough blended ACV modeling (conservative assumptions):
-- Seats: 20 x $100 x 12 = $24,000
-- Usage tier, moderate uptake: ~$4,000-6,000/year
-- One automation agent: ~$8,000-15,000/year
-- Total: roughly $36,000-45,000/year per client
-
-This clears the $30K ACV target even on conservative seat assumptions, without Agent Vinod or a second agent. Recommendation: lock in seat + one-agent combination as the core pitch; treat deep-analysis credits and Agent Vinod as expansion revenue on existing accounts rather than day-one requirements.
+Built and delivered a 6-slide pptx presentation (/mnt/user-data/outputs/Sabre_Alloys_EOXS_Meeting.pptx) following this structure: Title, Where Things Stand (open items acknowledgment), Current State (20-question mapping), What's Next (Sales Director agent + Zola), The Ask (formalizing the relationship), Next Step. Validated via pptx skill (schema validation passed, visual QA on all 6 slides confirmed no overflow/overlap issues).
