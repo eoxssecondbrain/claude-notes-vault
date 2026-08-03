@@ -56,4 +56,26 @@ One-page cinematic scroll, black background, single accent color (I'd suggest a 
 
 I'll write the full Claude Code build prompt as a file so you can paste it straight in.
 
-[Created file: askcruz-website-claude-code-prompt.md — full Claude Code build prompt covering stack (Next.js + TypeScript + Tailwind + React Three Fiber/drei + GSAP ScrollTrigger), design direction (near-black background, single electric blue accent, no stock illustration/glassmorphism, calm non-hypey copy), five page sections (Hero with neural core 3D object and "Cruz has read every order, every email, and every call in your business. Ask him anything." headline and "Book a fit call" CTA; Data absorption scroll sequence with email/order/call particles flying into the core; Proof section with a real mocked Q&A example; How it connects section with three glowing data-source nodes; Closing CTA section reprising the core and CTA), technical/UX constraints (reduced-motion and low-end device fallback, mobile shader simplification, lazy-loaded canvas, accessibility), and an explicit "what not to do" list (no pricing table, no product grid, no testimonial carousel, no anthropomorphized robot character). File presented to user via present_files.]
+[Created file: askcruz-website-claude-code-prompt.md — full Claude Code build prompt covering stack (Next.js + TypeScript + Tailwind + React Three Fiber/drei + GSAP ScrollTrigger), design direction, five page sections, technical/UX constraints, and a "what not to do" list. File presented to user via present_files.]
+
+Assistant: That's the file — ready to paste into Claude Code as-is. One thing worth deciding before you run it: I defaulted to electric blue over the reel's gold, since gold reads luxury-retail and blue reads intelligence/precision for an AI product. If you'd rather keep closer to the reel's warmth for brand-consistency reasons with anything else you're building, say so and I'll swap the accent color and re-issue the file.
+
+User: i want to use the higgsfield MCP to create this website. do i need to add it in the prompt
+
+Assistant: Yes — MCP tools don't get called automatically just because they're connected. Claude Code only reaches for Higgsfield if the prompt explicitly tells it to, with specifics on what to generate and how.
+
+But this actually changes the technical approach, not just adds a line. Higgsfield is a generation service (Veo, Kling, Soul, Cinema Studio, etc.) that produces images and video clips — it doesn't build interactive 3D scenes. So there are two genuinely different ways to build the hero section, and they're not a minor variant of each other:
+
+Real-time 3D (what I originally scoped) — React Three Fiber renders the core live in the browser, reacts to scroll/mouse, fully interactive, but is real engineering work (shaders, particle systems, perf tuning across devices).
+
+Pre-rendered cinematic loops via Higgsfield — Claude Code asks Higgsfield to generate the core idle animation, the particle-absorption sequence, and the closing shot as short video clips (this is honestly closer to what the Assam Tea reel likely did — that level of photoreal steam/particle work reads like Cinema Studio or Veo output, not live WebGL). Claude Code then just builds scroll-triggered video crossfades. Far less engineering risk, ships faster, looks more cinematic — costs Higgsfield credits per generation and isn't interactive/reactive to the user.
+
+Given AskCruz's actual constraint (thin engineering bandwidth, 90-day delivery pressure on the product side already flagged as the highest-risk gap), the video-loop route is the more pragmatic call.
+
+[Asked via interactive options tool: "Which hero approach should the prompt build?" — options: Higgsfield video loops (faster to ship, cinematic, not interactive) / Real-time 3D / React Three Fiber (interactive, more engineering work) / Hybrid: Higgsfield for background texture/atmosphere, R3F for the core object itself]
+
+User: [selected] Hybrid: Higgsfield for background texture/atmosphere, R3F for the core object itself
+
+Assistant: Updated. The core stays R3F and interactive (reacts to cursor, does the actual absorption animation), while Higgsfield generates the atmosphere loops sitting behind it — that's the split you asked for. One thing to know going in: Claude Code will need the Higgsfield MCP actually toggled on for that session/connector before it can call it, same as your other connectors — otherwise it'll silently skip Step 0 or hallucinate the asset files.
+
+[File updated: askcruz-website-claude-code-prompt.md — added Step 0 (Higgsfield MCP asset generation: hero-loop.mp4, absorb-loop.mp4, fallback-still.jpg with detailed generation briefs for each, saved to /public/atmosphere/), updated Stack section to note the hybrid R3F + Higgsfield split, updated Hero section to layer hero-loop.mp4 background behind the transparent R3F canvas with the core reacting subtly to cursor position, updated Data absorption section to crossfade to absorb-loop.mp4, updated technical constraints to use fallback-still.jpg instead of a plain gradient for the reduced-motion fallback. File re-presented to user via present_files.]
