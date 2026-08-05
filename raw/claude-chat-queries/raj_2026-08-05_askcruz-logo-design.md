@@ -43,3 +43,18 @@ Bold and confident cuts against B slightly — it's the friendliest of the three
 **Assistant:** Fair — bold read as heavy-handed. Let's reset direction.
 
 [Asked via ask_user_input_v0: "What personality should the logo convey instead?" — Options: Minimal & modern / Technical & precise / Warm & approachable / Something else — I'll describe it]
+
+**User selection:** Minimal & modern
+
+**Assistant:** [Rendered a second inline SVG widget titled askcruz_logo_concepts_v2 showing three new abstract icon+wordmark logo concepts in a minimal, modern style, each shown on the same light (#EDEBE4) and dark (#14151A) backgrounds, keeping the ink/off-white/brass palette but switching from solid blocked shapes to thin monoline strokes, lighter type weight (Ask at 400, Cruz at 600, down from 500/700), and more negative space. The three concepts:
+- Concept A — the open ring: a near-complete monoline circle with one small gap, closed by a single solid brass dot at the gap.
+- Concept B — the focus corners: two open corner brackets (top-left in ink/off-white, bottom-right in brass), same question-in-ink/answer-in-brass logic as before but reduced to line work instead of solid blocks.
+- Concept C — the connect mark: a hollow circle connected by a thin line to one small solid brass dot.]
+
+Same ink, off-white, and brass foundation, but now line-based instead of blocked, more air around each mark, lighter type weight.
+
+Concept A, the open ring: a near-complete circle with one small gap, closed by a single brass dot. Reads as "the loop closes here."
+
+Concept B, the focus corners: same question-in-ink, answer-in-brass logic as before, but reduced to two open corner brackets instead of solid blocks — quieter, more like a camera focus mark than a badge.
+
+Concept C, the connect mark: a hollow circle (everything you run — open, unresolved) connected by a thin line to one solid brass dot (the answer). Most literal to "reads every order, email, call — ask him anything," most abstract in form.
