@@ -37,3 +37,9 @@ Concept C, the signet mark: a solid badge with one chamfered, brass-lit corner �
 Bold and confident cuts against B slightly — it's the friendliest of the three. A and C carry the weight better.
 
 [Asked follow-up via ask_user_input_v0: "Which one should I take into a final, production-ready lockup?" — Options: Concept A — cross-cut / Concept B — bracket / Concept C — signet / Mix elements from a couple]
+
+**User:** i dont like any. lets change the personilty it conveys
+
+**Assistant:** Fair — bold read as heavy-handed. Let's reset direction.
+
+[Asked via ask_user_input_v0: "What personality should the logo convey instead?" — Options: Minimal & modern / Technical & precise / Warm & approachable / Something else — I'll describe it]
