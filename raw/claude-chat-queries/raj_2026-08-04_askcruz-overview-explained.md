@@ -3,7 +3,7 @@ thread_name: "askcruz-overview-explained"
 user: "raj"
 type: claude-chat
 created: 2026-08-04
-updated: 2026-08-04
+updated: 2026-08-05
 ---
 
 User: What exactly is Cruz? What are we building, how are we building it, what it will do, who will it cater, everything about it. Explain it to me like I haven't heard of it.
@@ -65,4 +65,18 @@ Frontend plan: a self-hosted open-source frontend (Open WebUI or LibreChat) rath
 
 Delivery capacity: hitting ~30 bespoke client integrations in 90 days is the highest-risk gap in the whole plan. Everything else — positioning, ICP, pricing, GTM motion — has a defined answer. This one doesn't yet, and it's the thing most likely to break the revenue target if it isn't solved before the sales motion starts converting.
 
-That's the full picture as it stands. If you want, I can pull the actual OV threads/emails behind any one of these pieces (e.g. the Mainsail Partners "Glazix" outreach that's still flagged unverified and unrelated to AskCruz, or the Sabre/Monarch build status) rather than working from the synthesized summary.</content>
+That's the full picture as it stands. If you want, I can pull the actual OV threads/emails behind any one of these pieces (e.g. the Mainsail Partners "Glazix" outreach that's still flagged unverified and unrelated to AskCruz, or the Sabre/Monarch build status) rather than working from the synthesized summary.
+
+User: what do you think should be the logo for Cruz. Should it be AskCruz or simply Cruz?
+
+Assistant: Naming: keep AskCruz as the registered brand (domain, equity docs, GTM material already anchor there) but let the logo itself lean on "Cruz" as the dominant visual element.
+
+Reasoning — the "Ask" prefix does real work in year one: your ICP doesn't know what Cruz is yet, and "Ask_____" tells a cold prospect what to do with it in one word (compare Ask Jeeves, Ask.com — the verb front-loads the interaction model when the brand has zero recognition). Dropping straight to "Cruz" now would read like an established consumer brand (Siri, Alexa) you haven't earned yet — those products dropped their explanatory framing only after mass adoption did the explaining for them.
+
+But in daily use, people won't say "AskCruz" — they'll say "ask Cruz" as a sentence, or just "Cruz" as the entity. That's fine and expected; it's the same pattern as "I'll Slack you" from "Slack" or "check Notion" from "Notion." So don't force the wordmark to spell out the full brand at equal weight every time.
+
+Logo direction: a wordmark where "Cruz" carries the visual weight — larger, bolder, the actual identity — with "Ask" treated as a smaller lockup element (lighter weight, tucked above/before, sometimes droppable in tight contexts like a favicon or app icon, where you'd just show "C" or "Cruz"). This gives you one asset that reads correctly in a cold LinkedIn outbound message (full "AskCruz" branding, unfamiliar audience) and also works standalone once a client's team is on a first-name basis with their own instance ("morning check with Cruz").
+
+Avoid an avatar/face icon for the mark itself — Cruz being personified as an agent inside the product is fine, but a literal face-mark on the corporate logo undercuts the "operating system" positioning and drifts toward looking like a chatbot mascot, which is the opposite of what you're selling to a mid-market CEO writing a $30K check.
+
+I can mock up a few wordmark directions as an actual visual if that would help you react to something concrete rather than a description.</content>
