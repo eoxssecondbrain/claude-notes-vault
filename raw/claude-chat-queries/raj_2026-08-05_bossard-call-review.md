@@ -110,3 +110,36 @@ Creating the quote inside EOXS's own system instead of writing it into Bossard's
 Here's the catch: if the auto-created quote lives outside Dynamics permanently, that's the exact problem Lucas described as their second-order pain — quotes done outside the system inflate win-rate numbers and break their own analytics ("our win rate in Dynamics is a lot higher than outside of Dynamics... how can we get everything managed to show what's actually happening"). A quote that's born in EOXS's system and never lands in Dynamics reproduces that problem instead of solving it, unless there's a path back in — even something as simple as the salesperson forwarding the finished quote into Dynamics in one action, versus a batch sync, versus nothing at all. Those are three different technical claims, and different sentences in the 1-pager.
 
 Three things left before I draft: [asked via interactive question card] (A) What does the Bossard salesperson actually receive when a quote auto-creates in EOXS's system — a ready-to-send quote they forward straight to the customer, a pre-filled quote they still manually re-enter into Dynamics, a one-click sync/forward into Dynamics, or Claude's recommendation? (B) Inventory check — live stock-on-hand, negotiated cost/pricing history per SKU, both, or Claude's recommendation? (C) Given full auto-creation is back in scope, should the ROI story move closer to the original bigger framing, stay conservative until real data exists, or Claude's recommendation?
+
+User: Q: What does the Bossard salesperson actually receive when a quote auto-creates in EOXS's system?
+A: Want your recommendation
+
+Q: Inventory check — what data source do you mean?
+A: Live stock-on-hand
+
+Q: Full auto-creation is back in scope — how should the ROI story be framed?
+A: Closer to original — bigger claim, full automation
+
+Assistant: Recommendation locked in on the salesperson-experience question: one-click save into Dynamics, under the salesperson's own login — not an EOXS or AI service account. Smart Quote assembles the complete quote in seconds; the salesperson gets it pre-filled and hits save themselves. That's the one design that satisfies everything on the table at once: full automation (matching, pricing, formatting — all done for them), zero AI write-back into their environment (the write is always a human action under their own credentials, so it doesn't trip the objection Emily raised), and the quote still lands natively in Dynamics, so it doesn't reproduce Lucas's win-rate/tracking problem. That's also why the ROI framing in the proposal can move closer to your original numbers — this design earns it, since almost none of the manual labor survives except the click itself.
+
+One thing I built into the copy rather than asking about: the $22M is presented as Bossard's own estimate, not an EOXS-guaranteed outcome — Lucas already contested that number's causality live on the call, and claiming it as a promise hands a technical committee an easy objection later. The 5,000-hours figure is framed as the direct target instead, since that's a labor claim this design can actually defend.
+
+Two documents, both under EOXS, standalone — no company-brain mention: a one-page PDF proposal (EOXS letterhead, "Smart Quote" product name; sections: The Problem, How It Works, In Scope / Not In Scope Yet, Why This Scope, Impact (~5,000 hrs/yr, ~$22M, Seconds), Pricing ($4/quote generated, implementation scoped after data walkthrough), Next Step (30-minute technical walkthrough); footer Rajat Jain, CEO, rajat@eoxs.com) created and delivered as EOXS Smart Quote - Bossard Proposal.pdf, plus an email:
+
+Subject: Bossard × EOXS — path forward on quoting
+
+Hi Emily, Amy, Lucas, Tyler, Katie,
+
+Following yesterday's conversation, here's the direction Bossard is heading with EOXS — and why.
+
+The full concept we discussed — ingesting your ERP and email data into a company-wide knowledge layer — is more infrastructure than this specific problem needs. The actual bottleneck is line volume on new-business RFQs, and solving it doesn't require rebuilding how your data lives. It requires getting quotes out faster on business you already have pricing and stock history for.
+
+Smart Quote reads an inbound RFQ, matches each line against Bossard's pricing history and live Dynamics inventory, and hands the assigned salesperson a quote that's ready to enter — one click, and it's saved natively in Dynamics. Your win-rate reporting stays clean instead of splitting between in-system and outside-system quoting, which Lucas flagged as a real problem on the call.
+
+This also lines up with what your team raised directly: AI writing into Dynamics unsupervised is exactly the kind of thing your IT process would need to review closely. This approach doesn't ask for that — it reads pricing and inventory data, nothing more.
+
+The attached one-pager covers scope, what's in and out for now, and pricing. Worth a 30-minute technical walkthrough with your Dynamics or IT contact to confirm data access ahead of your executive review — I can make time this week.
+
+Raj
+
+Both documents are dated today and ready to send. Confirm "next Wednesday" with Emily before you do — that's still the one open unknown nothing here can resolve for you.
