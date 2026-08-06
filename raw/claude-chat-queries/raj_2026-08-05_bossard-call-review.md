@@ -91,3 +91,22 @@ Fifth — deal hygiene, outside the proposal itself: I checked EOXS Teams Live. 
 Two things I'm not blocking on, just flagging as assumptions: pricing — I'll keep the $4/quote reference loosely in play and note in the proposal that final pricing follows their data confirmation, unless you say otherwise. Timing — get someone to confirm "next Wednesday" with Emily directly; I'll draft against the tighter read since a wrong assumption there costs more than a right one.
 
 Three decisions actually change what I write, so I need them before drafting the email and PDF: [asked via interactive question card] (1) Which entity/brand should this proposal represent — EOXS as introduced on the call, AskCruz repositioned as the AI product line, or Claude's recommendation? (2) Should the pitch stay fully read-only/zero write-back into Dynamics, keep the option to create a pending draft quote in Dynamics for approval, offer both as phased options, or defer to Claude's recommendation? (3) Should the 1-pager present this as a standalone lightweight product, explicitly frame it as Phase 1 of the bigger company-brain vision, or defer to Claude's recommendation?
+
+User: Q: Which entity/brand should this Bossard proposal go out under?
+A: EOXS — as I introduced myself on the call
+
+Q: Should the tool stay zero write-back into Dynamics, or keep quote-creation capability?
+A: 2. Or we can even create quotes in Eoxs's. We don't have to tell the client this, but maybe this could be something. But automatically creating a quote is super important.
+
+Q: Should the 1-pager reference the bigger company-brain vision from the first call?
+A: No — standalone product, don't mention it
+
+Assistant: Confirmed: EOXS branding, standalone framing — no mention of the company-brain vision.
+
+On the quote-creation point — real pivot, and the council has one thing to stress-test before I lock it in.
+
+Creating the quote inside EOXS's own system instead of writing it into Bossard's Dynamics solves the write-back objection Emily raised while still delivering full automation, not just a suggestion. That's genuinely stronger than either option I gave you. Not disclosing the mechanism to Bossard is fine — normal vendor practice, not misleading, as long as nothing in the proposal claims something false, like "no access to your systems" when we're still reading their pricing and inventory data.
+
+Here's the catch: if the auto-created quote lives outside Dynamics permanently, that's the exact problem Lucas described as their second-order pain — quotes done outside the system inflate win-rate numbers and break their own analytics ("our win rate in Dynamics is a lot higher than outside of Dynamics... how can we get everything managed to show what's actually happening"). A quote that's born in EOXS's system and never lands in Dynamics reproduces that problem instead of solving it, unless there's a path back in — even something as simple as the salesperson forwarding the finished quote into Dynamics in one action, versus a batch sync, versus nothing at all. Those are three different technical claims, and different sentences in the 1-pager.
+
+Three things left before I draft: [asked via interactive question card] (A) What does the Bossard salesperson actually receive when a quote auto-creates in EOXS's system — a ready-to-send quote they forward straight to the customer, a pre-filled quote they still manually re-enter into Dynamics, a one-click sync/forward into Dynamics, or Claude's recommendation? (B) Inventory check — live stock-on-hand, negotiated cost/pricing history per SKU, both, or Claude's recommendation? (C) Given full auto-creation is back in scope, should the ROI story move closer to the original bigger framing, stay conservative until real data exists, or Claude's recommendation?
