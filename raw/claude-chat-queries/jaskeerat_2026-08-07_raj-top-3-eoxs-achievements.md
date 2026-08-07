@@ -6,20 +6,21 @@ created: 2026-08-07
 updated: 2026-08-07
 ---
 
-# Raj — Top 3 EOXS Achievements
+# Top Achievements — corrected identity: Aryan (not Raj)
 
-**User:** what do you think are my top 3 achievements in EOXS till date
+**Turn 1 (as "raj"):** User asked "what do you think are my top 3 achievements in EOXS till date." Assistant researched under assumption of Raj/founder identity (no memory found), answered with: (1) building EOXS from scratch into a revenue company, (2) retaining Sabre Alloys/3GM Steel anchor accounts, (3) building AI Workers product line. Caveated that no canonical "Rajat Jain" bio page exists in wiki.
 
-**Assistant:** (researched vault: life-story transcript, EOXS Company Overview, EOXS ERP wiki page, 3-year sales analysis, client wiki pages)
+**Turn 2:** User corrected: "my name is aryan btw and now tell me what are my biggest achievements."
 
-Top 3 identified (framed as assistant's inference/judgment, clearly caveated):
+Assistant identified user as **Aryan Bakshi** — Jr. Implementation Manager, Product team, aryan@eoxsteam.com, EOXS support/implementation staffer — via wiki entity page "Aryan Bakshi" and prior self-performance-review thread (jaskeerat_2026-08-05_aryan-bakshi-self-performance-review.md, where a user also self-identified as Aryan).
 
-1. **Building EOXS from scratch into a real revenue-generating AI-native ERP company** — starting point per Raj's own saved life story (repeated 7th grade, no formal/MBA education, self-taught commission-only steel sales, closed a ~$500K deal with zero experience) → founded EOXS/Prata Inc. ~2021 → revenue grew $80.5K (2023) → $265.6K (2024, +230%) → $374.8K (2025, +41%), 15 distinct clients invoiced since 2020. Sources: raj_2026-07-30_raj-life-story-share transcript; EOXS Company Overview wiki; sales-numbers-3yr-analysis thread (2026-07-31).
+**Top achievements delivered for Aryan:**
+1. Highest human ticket handler on Sabre Alloys (82 tickets vs 45 to SupportAI bot) — Sabre Alloys is EOXS's largest lifetime client ($375K revenue, revenue every year since 2023). Source: "Sabre Alloys — Support Tickets" wiki page.
+2. Caught and fixed a ~$288,000 inventory valuation error same-day on Sabre Alloys SO-20525 (PO line entered "409 Each" instead of "409 lbs"), drew explicit praise from Ron J ("The email is good. Great job."). Source: Internal Email Archive — Product and Operations batch 18, 2026-04-30 to 2026-06-26.
+3. QA lead on Discount Pipe & Steel through Q2 2026 (auction transfer, invoicing, reservation, delivery workflows); first confirmed on that account Nov 11, 2025, resolving packing-list tag/transfer tickets directly with client contacts Cameron Bain and Zana Williams; frequent first-responder on Zana Williams's urgent tickets. Source: "Discount Pipe & Steel — Implementation Kanban (Odoo)", "Discount Pipe & Steel — Post-Go-Live Operations", Aryan Bakshi entity page.
 
-2. **Landing and retaining anchor accounts across multiple years — Sabre Alloys and 3GM Steel**. Only two clients with revenue in every one of the last 3 years; Sabre Alloys is the largest lifetime account at $375K. Source: sales-numbers-3yr-analysis (2026-07-31); Sabre Alloys wiki pages (CRM Training & Initial Setup, Data Entry & Gap Analysis).
+Supporting context: July 2026 productivity 51.4%, above team average (Ron J 25.3%, Hashir Saleem 24.8%, Dhrup Kumar 28.1%); both June/July monthly reports flagged "No productivity issues." Source: Monthly Performance Summary — July 2026 email (raj_gmail, 2026-08-01).
 
-3. **Building the AI Workers product line (12+ agents, ERP-agnostic)** as a second revenue track decoupled from the ERP replacement sales cycle — SmartQuote AI, ViewStock AI, RevTrack AI, AI Joe, etc., compatible with Invera/Stratix/SAP/Epicor. Source: EOXS ERP wiki page; EOXS Company Overview wiki.
+Caveat surfaced: open P1 ticket under Aryan's name ("Multiple Reservations on Same Tag — Conflict Handling"), 78 days stale per Raj's Aug 2, 2026 company-wide task-board review email — framed as systemic/team-wide issue, not Aryan-specific (other names also flagged: Nijamuddin, Hashir Saleem, Lokendra Singh Tomar, Kartikey Tripathi).
 
-Honorable mention flagged as not-yet-achieved: the 50-MBA-vs-founder hiring initiative (starts Aug 1) — forward-looking bet, not a completed achievement.
-
-Caveat given to user: no single canonical "Rajat Jain" bio/entity wiki page exists in the vault; synthesis drawn from life-story transcript + company overview + sales analysis + client pages. Offered to dig deeper into a specific angle (product launches, a client save, fundraising/press) if desired.
+Note: earlier in this same conversation the assistant had researched under the false assumption the user was "Raj" (founder) — this was corrected mid-conversation once user clarified their name.
