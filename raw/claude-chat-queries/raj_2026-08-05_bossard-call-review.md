@@ -140,3 +140,21 @@ What's still open before this is proposal-ready
 User: you are talking too much.
 
 Assistant: Noted — I'll cut the padding. What do you want next: numbers finalized, or something else?
+
+User: show me a framwork for the proposal. what are we proposing.
+
+Assistant: What we're proposing: Smart Quote AI Assist — a Dynamics-embedded agent that reads inbound RFQ emails, matches to SKU, pulls pricing + inventory, drafts the quote inside Dynamics, and routes it to the salesperson for one-click approval before anything goes to the customer. No second brain, no separate front end. Known-SKU path is the v1 core — new-part RFQ triage is still an open call.
+
+Proposal doc framework:
+
+1. Problem — their own numbers: 45-day new-part cycle, manual spreadsheet quoting past ~5-line RFQs, $22M leakage, ~5,000 hrs/year
+2. What we're proposing — Smart Quote AI Assist definition + workflow: email in → SKU match/flag → pricing + inventory pull → quote drafted in Dynamics → salesperson approves → sent
+3. Scope boundaries — explicitly excluded: blanket/replenishment orders, no auto-send without approval, vendor RFQ automation (unless you decide to include it)
+4. Delivery plan — 4 phases: feasibility/access → core agent → pricing+inventory integration → rollout/training
+5. Security & access — IAM/SSO, audit log per quote, ZDR cert, read-only + human-approved writes only
+6. Pricing — phased implementation fee, flat monthly, per-quote (package-tiered, not raw per-line)
+7. What's included — support SLA, usage reporting, onboarding, ongoing model-tuning/curation
+8. Dependencies — Dynamics line-item attachment fix, owned by their Dynamics partner, named with a target date
+9. Next steps — timeline to their exec meeting
+
+Two decisions still open before this locks: new-part RFQ triage in v1 or not, and per-quote priced as package tiers or straight per-line.
