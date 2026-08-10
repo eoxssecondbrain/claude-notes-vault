@@ -3,7 +3,7 @@ thread_name: "bossard-call-review"
 user: "raj"
 type: claude-chat
 created: 2026-08-05
-updated: 2026-08-07
+updated: 2026-08-10
 ---
 
 User: we had a call with Bossard yesterday. pull it up. pull the fireflies transcript.
@@ -53,3 +53,7 @@ Repriced Pricing & Implementation section using the IMS Metals structure as the 
 User: Confirmed
 
 Assistant: Acknowledged — the $48,000/four-phase/$3,500-month figures stand as accurate to the actual IMS Metals/Ram Shenoy deal. Proposal and email are finalized and ready to send as-is; no further changes made. Flagged the one remaining open item from the very first round of this thread, still unresolved: confirming with Emily whether "next Wednesday" means Aug 5 (same-day urgency) or Aug 12, since that determines send timing.
+
+User: Ok. Where are we. Bring me up to speed on the thread. Just give me a snippet.
+
+Assistant: Gave a short status recap: Bossard Smart Quote proposal, landed on an EOXS-branded standalone quoting AI assist (RFQ matching against pricing history + live Dynamics inventory, one-click save into Dynamics under the salesperson's own login — zero AI write-back, quotes still land natively for clean win-rate reporting). Pricing: $4/quote (up to 5 lines, then $0.50/line) + $48,000 implementation across 4 phases + $3,500/month platform fee, anchored to the IMS Metals/Ram Shenoy deal. Email and 1-page PDF both finalized and ready to send. Open item: confirm "next Wednesday" timing with Emily before sending.
