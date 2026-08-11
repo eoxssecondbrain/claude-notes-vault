@@ -6,21 +6,30 @@ created: 2026-08-11
 updated: 2026-08-11
 ---
 
-# Managing a Product Team That Needs Monitoring
+# Managing a Product Team That Needs Monitoring (Cattr)
 
-**User question:** What is something that is needed to manage a product team. The people do not work unless someone is monitoring them and are on top of them.
+## Turn 1
+**User:** What is something that is needed to manage a product team. The people do not work unless someone is monitoring them and are on top of them.
 
-**Assistant answer:**
+**Assistant:** Pointed to "Ask Cruz : Intro Call" (Raj & Joe Brom, 2026-08-10, Fireflies id 2386) where Joe Brom raises exactly this concern about micromanagement vs. metrics, and Raj's product "Cruise" is built to give self-monitoring/automated flagging instead of a human watching people. Also cited Ryan Capinski call (Fathom 2026-02-05) on CRM needing per-person ownership to work, and Brandon and EOXS call (2026-01-13) on dashboards/KPIs as the alternative to micromanaging. Saved as inference that EOXS's consistent pitch is visibility infrastructure as an alternative to micromanagement.
 
-Short answer: What's needed is a system of automated metrics/accountability tooling — not a human standing over people — that flags stalled work and lets people (and managers) see it themselves, so oversight happens without manual micromanagement.
+## Turn 2
+**User:** Raj mentioned that because I am not able to manage people that is making him weak and I should keep a tight leash on these people. We have Cattr. What is something that I can do on this.
 
-Primary source: "Ask Cruz : Intro Call" — Raj & Joe Brom, 2026-08-10 (Fireflies call id 2386). Joe Brom: "I don't want a scenario where a big big brother the employees to death or micromanage. But how do you set up... some kind of metric or a measurable... Hey, it's been three days. Did you forget about this?... The metrics are already built for the guys to measure themselves."
+**Assistant:** Searched vault (calls, emails, chat summaries) for "Cattr" — found no call transcripts but extensive email history under raj_gmail showing EOXS's actual internal Cattr playbook:
 
-Raj's product "Cruise" addresses this: tracks response times and flags automatically, gives self-monitoring, gives admins/VPs visibility without constant supervision. Call summary: "system promotes employee self-monitoring to avoid micromanagement while ensuring accountability."
+1. Weekly Cattr report + screenshot review is a named HR duty (Isha Bisht's role description, email "My Roles and Responsibilities at EOXS," 2025-11-12/17/20) — Raj marked "Reviewing Cattr screenshots and ensuring productivity compliance" as "(IMP)".
 
-Supporting context:
-- Ryan Capinski call (Fathom, 2026-02-05): "CRM is helpful, but it needs to be something which is monitored by every single person. And someone needs to have ownership for each and every call... it will only work if everyone is actually actively using it."
-- Brandon and EOXS (Fireflies, 2026-01-13): Raj pitching dashboards — "In our system we have dashboards where you can see all your KPIs on a dashboard in real time... Creating a more competitive environment."
-- Other calls mentioning "micromanaging" as a problem being solved: Sabre Alloys workflow training (2024-08-29), Siddique Momin (2024-01-24), Ian Heller (2024-02-26).
+2. Automated threshold-based flagging exists: "If activity is not captured for 4–5 screenshot intervals, the productivity percentage may drop below the expected threshold (typically 10–20%), which can trigger an automated email." (Email "Regarding Attendance and Productivity," 2026-06-24)
 
-Inference: EOXS's consistent pitch is that visibility infrastructure (dashboards, KPIs, AI agents) is the alternative to micromanagement, not a justification for it.
+3. Standing "Cattr Automation" task is audited weekly: Kriti Jain confirmed to Rajat "Weekly trigger running perfectly and generating emails for flagged performances and also weekly summary report." (Email "Re: Cattr Automation," 2026-08-03)
+
+4. Real escalation chain example (Harsimran Singh, 2026-06-15, "Concern Regarding Low Productivity"): HR flags low activity → Raj demands explanation → employee explains in writing → Raj loops in HR to investigate AND pulls employee onto a witnessed call.
+
+5. Applied uniformly even to senior staff: Ron J's logged hours (31.6 vs required 42.5) were flagged the same way; Raj personally questioned it ("31 hours .. really."). (Email "Work Hours Reminder," 2026-06-15)
+
+6. Cattr records used as evidentiary record in termination disputes (Email "Re: Termination of Employment," 2025-08-14).
+
+Recommended concrete actions: set up automated threshold alerts, institute weekly Cattr summary reports, follow the "explain in writing → escalate to witnessed call" script when flags fire, apply uniformly regardless of seniority, keep Cattr data as paper trail.
+
+Noted: could not find the specific call/email where Raj told the user "keep a tight leash" — searched "tight leash," "weak," "manage people" with no direct hit; offered to look further if user provides source.
