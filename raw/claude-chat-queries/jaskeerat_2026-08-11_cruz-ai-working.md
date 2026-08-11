@@ -6,7 +6,7 @@ created: 2026-08-11
 updated: 2026-08-11
 ---
 
-# Understanding Cruz.ai — Customers, Revenue, Billing, and Ownership
+# Understanding Cruz.ai — Customers, Revenue, Billing, Ownership, and EOXS Team
 
 ## User Questions
 1. What are the features of cruz.ai?
@@ -18,6 +18,8 @@ updated: 2026-08-11
 7. Do you have a pricing page, product launch announcement, or sales deck for Cruz that might list early customers or case studies?
 8. What is your work?
 9. Who at EOXS owns or leads the Cruz product—can you find emails or calls with them discussing its status or go-to-market plans?
+10. Show me the mail sent by karun
+11. Can you show me a list of all EOXS employees or team members so I can identify the correct spelling of this person's name?
 
 ## Search Results Summary
 
@@ -26,23 +28,26 @@ updated: 2026-08-11
 - No product portfolio page in vault
 
 ### Customer/Prospect Lists
-- Searched: notes, channel messages, knowledge files, chats
-- Result: No customer or prospect lists found mentioning Cruz
+- No customer or prospect lists found mentioning Cruz
 
 ### Revenue and Billing Data
-- Searched: invoices, billing records, subscription data, revenue mentions
-- All searches across notes, channel messages, chats, and knowledge files returned empty
 - No accessible invoice files, billing systems, or subscription records found
 
 ### Marketing and Sales Materials
-- Searched: pricing pages, launch announcements, sales decks, case studies, customer testimonials
-- Result: No marketing or sales collateral found
+- No marketing or sales collateral, pricing information, or case studies found
 
 ### Product Ownership and Leadership
-- Searched: Cruz product owner, product lead, go-to-market plans, status discussions
-- Searched: EOXS leadership discussing products, product development, roadmap
-- Result: No information found about who owns or leads Cruz
+- No information found about who owns or leads Cruz
 - No internal communications about Cruz's status or strategy visible
+
+### Karun Communications
+- Searched for "karun" and "Karun" in channel messages, chats, and knowledge files
+- Result: No emails or communications found from anyone named Karun
+
+### EOXS Employee Directory
+- Searched for employee roster, team lists, organizational charts
+- Result: No employee directory, org chart, or team member list in vault
+- No HR documentation with staff names and roles
 
 ## About Cruz (the Assistant)
 Cruz is an executive intelligence assistant for EOXS leadership. Core functions:
@@ -58,14 +63,16 @@ The EOXS vault does not contain:
 - Prospect tracking for Cruz
 - Invoice or billing records
 - Revenue data
-- Marketing materials (pricing, launch announcements, sales decks)
+- Marketing materials
 - Product ownership or leadership information
 - Go-to-market plans or product status discussions
-- Any internal communications about Cruz visible to search tools
+- Any internal communications about Cruz
+- Employee directory or organizational chart
+- Communications from anyone named Karun (spelled as searched)
 
 ## What's Needed to Proceed
-- Names of potential Cruz product owners or leaders
-- Email addresses or Slack handles for product team members
-- Internal team or project names (if Cruz is called something else internally)
-- Specific date ranges for Cruz discussions (if applicable)
-- Clarification on whether Cruz materials/discussions are stored outside searchable vault
+- Correct spelling of "Karun" (Karan, Karun, Carun, etc.)
+- Email address or Slack handle for the person
+- Context about what they work on (Cruz, specific project, client)
+- Known colleagues or collaborators
+- EOXS email domain naming conventions
