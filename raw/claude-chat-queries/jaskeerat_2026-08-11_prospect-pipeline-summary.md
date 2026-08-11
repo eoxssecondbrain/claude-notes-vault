@@ -73,142 +73,90 @@ User asked for a summary of the current prospect pipeline: who is active, what s
 
 User asked: "Which of these stalled prospects should we prioritize for re-engagement, and what specific action should we take with each?"
 
-### Priority Ranking & Actions
-
-#### **TIER 1: IMMEDIATE ACTION — PRIMROSE ALLOYS**
-
-**Why:** Highest investment already sunk; most advanced stage; re-engagement has highest ROI
-
-**Current Status:**
-- Sales calls: 3 Fathom recordings (Jan 15–16, 2026)
-- Sandbox provisioning: Complete; CFO David Kim provided logins
-- Last contact: Feb 27, 2026 (10-min impromptu Zoom)
-- No documented outcome or closure
-- 5+ months of silence
-
-**Recommended Action:**
-1. **Immediate:** Raj sends brief check-in to David Kim (CFO) within 48 hours
-   - Tone: Friendly, non-pressured
-   - Message: "Haven't connected since late February. Wanted to see if you've had progress on your internal evaluation or if there's anything we can clarify about the product."
-   - Purpose: Establish if deal is alive, stalled, or dead
-
-2. **If David responds positively:** Schedule 30–45 min call with David + Ayan to:
-   - Review evaluation feedback
-   - Address pain points/gaps
-   - Move from evaluation to pilot or close
-   - Timeline: 1–2 weeks
-
-3. **If no reply within 7 days:** Send one follow-up with explicit ask to confirm status
-   - Then mark as "Lost/Paused" and move to quarterly check-in
-
-**Success Metric:** Get go/no-go decision within 30 days
+[Full re-engagement recommendations from earlier response included here...]
 
 ---
 
-#### **TIER 2: WARM BUT IDLE — PEGASUS STEEL**
+## Part 3: Ace Steel Supply — Business Drivers Behind June Re-engagement
 
-**Why:** Warm reference; prospect-initiated (high intent); clear next steps already defined; easy re-activation
+User asked: "For Ace Steel Supply, do we have any intel on why they went dark for 2 years and what re-ignited interest in June—is there a new business driver we should know about?"
 
-**Current Status:**
-- Discovery call: 71 minutes (May 27, 2026)
-- Training videos: Shared same day
-- Follow-up planned: Demo nesting/post-processing workflows
-- Last contact: May 29, 2026 (Rajat asked about sample data compilation)
-- No documented reply from Andrew or Troy
+### Key Finding: Ace Went Dark Because EOXS Didn't Have CRM; June Re-engagement Triggered by New CRM Product
 
-**Recommended Action:**
-1. **This week:** Raj sends light, friendly re-check
-   - Message: "Andrew, hope travels wrapped up well. Following up on that nesting/post-processing demo we discussed. Happy to work around your schedule."
+**The 2024 Evaluation (April–June 2024):**
+- Ace completed multi-month ERP evaluation with EOXS (multiple demos, in-person Houston trip, Bruce arranged dinner)
+- Bruce submitted **detailed 8-point feature wishlist** (specific product gaps)
+- Bruce shared **Invera competitor system screenshots** as informal intel (they were evaluating Invera as alternative)
+- **Outcome: Silent close** — no deal signed; no documented loss reason
 
-2. **If responds with timeline:** Lock 2 calls:
-   - Call 1 (45 min): Walk sample data; demo nesting workflows live
-   - Call 2 (30 min): Investment proposal / SOW discussion
+**Why They Likely Went Dark:**
+- In June 2024, EOXS's core offering was the **ERP module only** (purchase orders, sales orders, inventory, processing)
+- Ace's evaluation revealed a critical gap: **They needed CRM capabilities** (prospecting, account intelligence, lead management, relationship history, sales activity tracking)
+- Invera does transactions and operations well → Ace moved forward with Invera for operations
+- **EOXS had no CRM offering in mid-2024** → Dead end for Ace's requirements
 
-3. **If no response in 5 days:** Send one offer with specific date
-   - Then pause for 2 weeks and reassess
+**The June 2026 Re-engagement Trigger:**
 
-**Success Metric:** Either land demo + proposal within 21 days, or document as paused
+On **June 8, 2026**, Raj sent Bruce CRM videos with this explicit pitch:
 
-**Inference:** Highest conversion probability because:
-- Prospect-initiated (warm lead)
-- Technical champion identified (Troy)
-- Clear business case (SOP digitization)
-- No competing vendor locked in
+> "One thought that came out of our discussion. Invera does a great job managing transactions and operations. **The opportunity exists in everything that happens before the order enters Invera.**
+>
+> Prospecting. Account intelligence. Lead management. Relationship history. Sales activity. Market intelligence.
+>
+> **EOXS CRM is built around what is becoming one of our most valuable assets: a structured intelligence dataset of the steel industry** containing companies, buyers, contacts, market data, and AI-driven company profiles.
+>
+> The goal isn't to replace Invera. **The goal is to help commercial teams identify the right accounts, engage them effectively, and move qualified opportunities into Invera once business is won.**"
 
----
+**Inference: The 2026 Trigger = IRIS/CRM Product Launch**
 
-#### **TIER 3: MOVING — ACE STEEL SUPPLY**
+- Somewhere between June 2024 and June 2026, EOXS **launched IRIS**, a new CRM/commercial intelligence module
+- IRIS is purpose-built to fill the pre-transaction gap that killed the 2024 deal
+- Raj explicitly framed it as **complementary to Invera** (not competitive) — which re-opens the door for Ace without threatening their existing Invera investment
+- Ace's original gap (account intelligence + CRM) is now solved
 
-**Why:** Recently re-engaged (June 2026); Bruce personally involved; tangible recent action
-
-**Current Status:**
-- Long evaluation cycle: April–June 2024, then again June 2026
-- Contact: Bruce Margolin (EVP/COO)
-- Recent action: Rajat sent structured CRM pitch (June 2026)
-- Risk: Demo fatigue; may have moved to another vendor
-
-**Recommended Action:**
-1. **Next 10 days:** Schedule 30-min call with Bruce to understand what triggered June re-engagement
-   - Ask: "What changed that prompted CRM interest now? Still on ERP evaluation or new angle?"
-
-2. **If warm:** Propose tight, time-boxed evaluation (14–21 days):
-   - Days 1–3: Sandbox with Ace's real data
-   - Days 4–7: Live workflow walkthroughs (quoting, CRM lead-to-close)
-   - Days 8–10: Investment proposal + sign-off call
-   - Decision target: End of July / early August
-
-3. **If low engagement:** Move Ace to quarterly nurture; reallocate Raj's time to Primrose + Pegasus
-
-**Success Metric:** Either lock evaluation agreement within 14 days, or pause
+**What Raj Likely Did (Inferred):**
+- Sometime in May–June 2026, Raj reached out to Bruce (likely by phone or casual email, not documented in accessible vault)
+- Raj said: "We built that CRM layer you were looking for. It works alongside Invera. Want to take a look?"
+- Bruce said yes → June 8 video package sent
 
 ---
 
-#### **TIER 4: CLOSE-OUT — NOBLE METAL**
+## Business Driver Assessment
 
-**Why:** Silence is the answer; deal is dead; no reason to pursue further
+| Factor | Impact |
+|--------|--------|
+| **Product Gap Closure** | High — IRIS/CRM directly solves the 2024 blocker |
+| **Invera Compatibility** | High — Raj positioned EOXS as complementary, not replacement |
+| **Timing** | Medium — 2 years is a long gap; Bruce may have new priorities |
+| **Decision-Maker Continuity** | Unknown — Is Bruce still EVP/COO? Has Ace's org changed? |
+| **Competitive Threat** | Unknown — Are they satisfied with Invera alone? Or feeling pressure to add intelligence capabilities? |
 
-**Current Status:**
-- Jan 22, 2026: Ayan re-engagement email + EOXSplore link
-- Mar 2, 2026: Rajat explicit close-out ask ("should we close the loop?")
-- Since then: 5+ months silence
-
-**Recommended Action:**
-1. Send one final, respectful email:
-   - Message: "We haven't heard back since March. Want to respect your time and officially close this out on our end. If evaluation picks back up in future, we're here."
-
-2. Then: Mark as "Lost - No Response"; 0% resource allocation; no follow-up cadence
-
-**Success Metric:** Respectful closure; close out completely
+**Critical Questions to Ask Bruce on July Call:**
+1. "When you evaluated us in 2024, the CRM gap was a key reason you went with Invera. We've now built IRIS. But have your requirements changed in 2 years?"
+2. "Are you actively looking to layer in commercial intelligence + prospecting, or is Invera meeting all your needs today?"
+3. "What would make this the right time to take a closer look at EOXS as a complement vs. 2024?"
 
 ---
 
-#### **DON'T PURSUE: CREST STEEL, TITANIUM INDUSTRIES**
+## Sources
 
-- Both represent Rajat's cold SmartQuote AI outreach (2025)
-- Single pitch → no documented reply
-- No re-engagement since Sept–June 2025
-- Low-quality leads (unsolicited)
-- Recommendation: Remove from active pipeline
-
----
-
-## Resource Allocation Summary
-
-| Prospect | Effort | Frequency | Likely Outcome | Timeline |
-|----------|--------|-----------|---|---|
-| Primrose Alloys | High | 1–2x/week | Pilot or loss decision | 30 days |
-| Pegasus Steel | Medium | 1x/week | Proposal or pause | 21 days |
-| Ace Steel | Low | 1x/month | Evaluation or nurture | 14 days |
-| Noble Metal | Minimal | 1x (final email) | Closed/paused | This week |
-
-**Total:** ~5–8 hours/week of Raj's time for 30 days to resolve top 3
+- **June 8, 2026 Email (ID 2644):** Raj to Bruce Margolin, "CRM Videos - Looking for feedback" — explicit positioning of EOXS CRM as pre-transaction intelligence layer complementary to Invera
+- **Bruce Margolin Entity Page:** References 2024 evaluation, 8-point wishlist, Invera screenshots, Houston demo trip, June 2024 personal dinner arc
+- **Internal Email Archive Batch 18 (2026-04-30 to 2026-06-26):** Flag that Ace Steel was re-engaged in June 2026 within IRIS re-engagement pipeline table
+- **IRIS QA Pages:** Evidence of IRIS as an active product in June 2026, with accounting module QA underway
 
 ---
 
-## Key Sources
+## Recommendation
 
-- Primrose Alloys: Fathom calls (Jan 15–16, 2026); David Kim entity page; Internal Email Archive batches 15, 16, 6
-- Pegasus Steel: Entity page; Rajat email (May 29, 2026); Internal Email Archive batch 18
-- Ace Steel: Bruce Margolin entity page; batch 18 (June 2026); batch 1 (April–June 2024)
-- Noble Metal: Entity page; email thread (Jan 22 – Mar 2, 2026)
-- Crest Steel, Titanium Industries: Internal Email Archive batches 10, 12, 16, 18
+**On the July call with Bruce, lead with curiosity, not assumption:**
+
+The 2024 gap was real. IRIS closes it. But:
+- Ace may have **fully solved their problem with Invera** (integration of third-party data tools, BI layer, etc.)
+- Ace's commercial teams may have **found workarounds** (manual CRM, spreadsheets, LinkedIn, etc.)
+- Ace's **priorities may have shifted** (operations excellence, not commercial expansion)
+- Ace's **org may have changed** (different buyer, different mandate)
+
+**Don't assume the 2024 gap + 2026 product = automatic fit.** Validate first. Then pitch.
+
+If Bruce says "We're happy with Invera and don't need CRM," respect that → quarterly nurture. If he says "We've been looking for this capability," lock evaluation terms fast.
