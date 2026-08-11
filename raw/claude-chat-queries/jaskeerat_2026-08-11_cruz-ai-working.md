@@ -6,28 +6,41 @@ created: 2026-08-11
 updated: 2026-08-11
 ---
 
-# Understanding Cruz.ai
+# Understanding Cruz.ai — Customers, Revenue, and Billing
 
 ## User Questions
 1. What are the features of cruz.ai?
 2. What is cruz.ai to EOXS?
 3. Can you search the wiki for EOXS's product portfolio or Cruz.ai product page?
 4. Working of cruz.ai?
+5. Send detailed list of customers and potential customers of Cruz
+6. What revenue or billing data exists for Cruz—invoices or subscription records?
 
-## Search Results
-- No dedicated product documentation, wiki pages, or analyses about Cruz.ai found in vault
-- No product portfolio page identified
-- Knowledge bases appear empty or inaccessible
-- No relevant notes, analyses, or chat summaries about Cruz.ai product details
+## Search Results Summary
 
-## What Cruz (the Assistant) Does
-Based on my design as an executive intelligence assistant:
-- Searches EOXS company vault (emails, calls, invoices, clients, wiki)
-- Answers with citations from specific sources
-- Connects information across multiple documents
-- Distinguishes documented facts from inferences
+### Product Documentation
+- No dedicated product wiki, documentation, or strategy pages found
+- No product portfolio page in vault
 
-## Gap
-- EOXS's Cruz.ai product documentation is not in the vault
-- Technical specifications, marketing materials, or internal strategy docs not found
-- Cannot confirm what Cruz.ai offering consists of or how it works specifically
+### Customer/Prospect Lists
+- Searched: notes, channel messages, knowledge files, chats
+- Result: No customer or prospect lists found mentioning Cruz
+
+### Revenue and Billing Data
+- Searched: invoices, billing records, subscription data, revenue mentions
+- All searches across notes, channel messages, chats, and knowledge files returned empty
+- No accessible invoice files, billing systems, or subscription records found
+
+## Current State
+- The EOXS vault does not contain:
+  - Customer lists for Cruz
+  - Prospect tracking for Cruz
+  - Invoice or billing records
+  - Revenue data
+  - Financial records
+
+## What's Needed
+- Access to accounting/billing system (Stripe, Chargify, custom invoicing)
+- Invoice file locations or system connections
+- CRM or customer tracking database
+- Sales emails or call transcripts discussing Cruz customers
