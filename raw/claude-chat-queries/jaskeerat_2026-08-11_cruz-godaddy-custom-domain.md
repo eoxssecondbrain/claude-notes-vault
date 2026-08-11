@@ -15,61 +15,66 @@ updated: 2026-08-11
 Context from the repo: `render.yaml` defines a single web service `cruz` (Docker, Standard plan, region singapore, branch `deploy/render`), currently reachable at `https://cruz-dsvf.onrender.com`. `WEBUI_URL` is `sync: false` and set in the dashboard. No OAuth provider is configured, so there are no redirect URIs to update.
 
 ## 1. Pick the hostname
-Recommend a subdomain — `chat.<domain>` or `cruz.<domain>`. Subdomains use a CNAME, which is what Render actually wants. Apex/root (`<domain>` with no prefix) needs an A record and is more fragile. If the apex is wanted, add both and let Render redirect apex → subdomain.
+Recommend a subdomain — `chat.<domain>` or `cruz.<domain>`. Subdomains use a CNAME, which is what Render actually wants. Apex/root needs an A record and is more fragile.
 
 ## 2. Render: add the custom domain
-Dashboard → `cruz` service → **Settings** → **Custom Domains** → **Add Custom Domain**. Enter `chat.<domain>`. Render then displays the exact DNS record to create — use the value it shows, not a remembered one.
-
+Dashboard → `cruz` service → **Settings** → **Custom Domains** → **Add Custom Domain**. Render then displays the exact DNS record to create.
 - Subdomain → `CNAME` pointing at `cruz-dsvf.onrender.com`
 - Apex → `A` record at Render's anycast IP (currently `216.24.57.1`)
 
-Custom domains are free on all Render plans.
-
 ## 3. GoDaddy: create the DNS records
-First confirm the domain still uses GoDaddy nameservers (Domain Settings → Nameservers). If they were moved to Cloudflare or elsewhere, edit DNS there instead.
-
-GoDaddy → **My Products** → domain → **DNS** → **Manage DNS**.
-
-Delete GoDaddy's parked defaults first, or they will conflict:
-- the `A` record on `@` pointing at a GoDaddy parking IP
-- the `CNAME` on `www` pointing at `@`
-
-Then add:
-
-| Type | Name | Value | TTL |
-|---|---|---|---|
-| CNAME | `chat` | `cruz-dsvf.onrender.com` | 600 |
-| A (only if apex is wanted) | `@` | value Render displays | 600 |
-
-Two cautions:
-- **Do not use GoDaddy "Domain Forwarding"** for this. It serves a GoDaddy redirect page and blocks Render's certificate issuance.
-- Name is just the label (`chat`), not the full hostname — GoDaddy appends the domain.
+Confirm the domain still uses GoDaddy nameservers. Delete GoDaddy's parked defaults (`A` on `@`, `CNAME` on `www`) first. Do **not** use GoDaddy "Domain Forwarding" — it serves a GoDaddy redirect page and blocks Render's certificate issuance.
 
 ## 4. Wait for verification and the certificate
-Render polls DNS and flips the domain to **Verified**, then issues a Let's Encrypt cert automatically. Usually minutes; GoDaddy propagation can take up to an hour. No action needed for HTTPS.
+Render polls DNS, flips the domain to **Verified**, then issues a Let's Encrypt cert automatically.
 
 ## 5. Update WEBUI_URL — including the persistent-config trap
-Set `WEBUI_URL=https://chat.<domain>` in the Render Environment tab (per `DEPLOY-RENDER.md` step 6).
-
-**Gotcha:** `webui.url` is a *persistent* config key. In `backend/open_webui/models/config.py:139`, `Config.get` reads the DB row first and only falls back to the env-var default when no row exists. The production DB was seeded from the local `webui.db`, where `WEBUI_URL=http://localhost:5173`. If a row was written, the env var will be silently ignored.
-
-Fix either way:
-- change it in **Admin Settings → General** in the running app (writes the DB row), or
-- set `ENABLE_PERSISTENT_CONFIG=false` so env vars always win — cleaner for a Render deploy where env is the source of truth, but it makes every other admin-settings change env-only too.
-
-Then redeploy.
+`webui.url` is a *persistent* config key. `Config.get` (`backend/open_webui/models/config.py:139`) reads the DB row first and only falls back to the env default when no row exists. The production DB was seeded from the local `webui.db`, where `WEBUI_URL=http://localhost:5173`. Fix by changing it in Admin Settings → General, or setting `ENABLE_PERSISTENT_CONFIG=false`.
 
 ## 6. Verify
-- `https://chat.<domain>` loads, padlock valid
-- log in as `ijassandhu.dev@gmail.com`; Workspace → Models shows both `eoxs-vault-assistant` models
-- `+` menu in a chat lists the vault tools (bridges are on `127.0.0.1:909x`, unaffected by the domain)
-- streaming responses work (websocket upgrade through the new host)
-
-The `.onrender.com` URL keeps working; Render does not redirect it. Set the custom domain as primary in Render if you want the old one to redirect.
+Load the domain, log in as `ijassandhu.dev@gmail.com`, confirm both `eoxs-vault-assistant` models and the vault tools in the `+` menu, and check streaming works (websocket upgrade).
 
 ## 7. Optional follow-ups
-- Add `domains: [chat.<domain>]` to the web service in `render.yaml` so the domain is reproducible from the blueprint rather than dashboard-only state.
-- Tighten `CORS_ALLOW_ORIGIN` — it currently defaults to `*`. Production is same-origin, so `https://chat.<domain>` is sufficient.
-- Update `DEPLOY-RENDER.md` step 6 and `PROJECT_SOT.md` (service table + the `WEBUI_URL` notes) once the domain is live.
+Add `domains:` to `render.yaml`; tighten `CORS_ALLOW_ORIGIN`; update `DEPLOY-RENDER.md` and `PROJECT_SOT.md`.
 
-Nothing in the app code needs to change. The MCP upstreams (`raj-vault-mcp-server.onrender.com`, `claude-notes-vault.onrender.com`) are separate services and are not affected.
+---
+
+**User:** *(screenshot of Render's "Add Custom Domain" dialog)* — domain `eoxs.askcruz.com`, Hostname `eoxs`, Target value `cruz-dsvf.onrender.com`. Added this in Render, what next?
+
+**Claude:**
+
+Checked DNS: `askcruz.com` nameservers are `ns07/ns08.domaincontrol.com` (GoDaddy, so DNS is edited there), and `eoxs.askcruz.com` does not resolve yet — the record isn't in.
+
+## Next: add the CNAME in GoDaddy
+
+GoDaddy → **My Products** → `askcruz.com` → **DNS** → **Manage DNS** → **Add New Record**:
+
+| Field | Value |
+|---|---|
+| Type | `CNAME` |
+| Name | `eoxs` |
+| Value | `cruz-dsvf.onrender.com` |
+| TTL | Custom, 600 seconds |
+
+Name is `eoxs` only, not the full hostname — GoDaddy appends `askcruz.com`. No trailing dot on the value. Nothing to delete: the parked `@` and `www` records don't collide with the `eoxs` label. Do not use Domain Forwarding.
+
+## Then click Verify in Render
+
+Once the record resolves, hit **Verify** in the dialog still open. Render marks the domain Verified and issues a Let's Encrypt certificate — typically a few minutes after DNS propagates, though the dialog warns it can take 24 h.
+
+Check propagation with:
+```
+nslookup eoxs.askcruz.com
+```
+Expect `cruz-dsvf.onrender.com` in the answer. Until then, the CNAME is simply not published yet — clicking Verify early is harmless, it just fails.
+
+## Then set WEBUI_URL
+
+`WEBUI_URL=https://eoxs.askcruz.com` in the Render Environment tab, and mind the persistent-config trap from step 5 above: check Admin Settings → General actually shows the new URL after the redeploy, because a `webui.url` row in the DB silently wins over the environment variable.
+
+## Repo changes made
+
+- `render.yaml` — added a `domains: [eoxs.askcruz.com]` block to the `cruz` service so the domain is reproducible from the blueprint rather than dashboard-only state.
+- `DEPLOY-RENDER.md` — step 6 now names the real URL, documents the persistent-config trap with the `config.py:139` reference, and adds a "The custom domain" subsection recording the GoDaddy CNAME, the nameservers, and the Domain-Forwarding warning.
+
+`PROJECT_SOT.md` gets its entry once the domain is verified and serving, rather than recording an intention.
