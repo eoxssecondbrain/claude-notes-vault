@@ -3,7 +3,7 @@ thread_name: "bossard-call-review"
 user: "raj"
 type: claude-chat
 created: 2026-08-05
-updated: 2026-08-10
+updated: 2026-08-11
 ---
 
 User: we had a call with Bossard yesterday. pull it up. pull the fireflies transcript.
@@ -158,3 +158,7 @@ Proposal doc framework:
 9. Next steps — timeline to their exec meeting
 
 Two decisions still open before this locks: new-part RFQ triage in v1 or not, and per-quote priced as package tiers or straight per-line.
+
+User: can you please talk to me in simple language?
+
+Assistant: Got it. I'll keep things plain and simple from here. What do you want to look at next?
