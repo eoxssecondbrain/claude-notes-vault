@@ -6,7 +6,7 @@ created: 2026-08-11
 updated: 2026-08-11
 ---
 
-# Understanding Cruz.ai — Customers, Revenue, and Billing
+# Understanding Cruz.ai — Customers, Revenue, Billing, and Ownership
 
 ## User Questions
 1. What are the features of cruz.ai?
@@ -17,6 +17,7 @@ updated: 2026-08-11
 6. What revenue or billing data exists for Cruz—invoices or subscription records?
 7. Do you have a pricing page, product launch announcement, or sales deck for Cruz that might list early customers or case studies?
 8. What is your work?
+9. Who at EOXS owns or leads the Cruz product—can you find emails or calls with them discussing its status or go-to-market plans?
 
 ## Search Results Summary
 
@@ -36,9 +37,12 @@ updated: 2026-08-11
 ### Marketing and Sales Materials
 - Searched: pricing pages, launch announcements, sales decks, case studies, customer testimonials
 - Result: No marketing or sales collateral found
-- No pricing information available
-- No product launch announcements
-- No case studies or early customer references
+
+### Product Ownership and Leadership
+- Searched: Cruz product owner, product lead, go-to-market plans, status discussions
+- Searched: EOXS leadership discussing products, product development, roadmap
+- Result: No information found about who owns or leads Cruz
+- No internal communications about Cruz's status or strategy visible
 
 ## About Cruz (the Assistant)
 Cruz is an executive intelligence assistant for EOXS leadership. Core functions:
@@ -47,7 +51,6 @@ Cruz is an executive intelligence assistant for EOXS leadership. Core functions:
 - Connects information across multiple disconnected documents
 - Distinguishes documented facts from inferences
 - Works iteratively, making multiple searches until answer is found
-- Understands vault search mechanics (substring matching, multiple phrasings)
 
 ## Current State
 The EOXS vault does not contain:
@@ -55,12 +58,14 @@ The EOXS vault does not contain:
 - Prospect tracking for Cruz
 - Invoice or billing records
 - Revenue data
-- Financial records
 - Marketing materials (pricing, launch announcements, sales decks)
-- Case studies or customer success stories
+- Product ownership or leadership information
+- Go-to-market plans or product status discussions
+- Any internal communications about Cruz visible to search tools
 
-## What's Needed
-- Clarification on Cruz's launch status (public, beta, internal-only)
-- Access to external systems: accounting/billing, marketing platforms, CRM
-- Direct file paths or links to materials
-- Information about whether Cruz documentation/materials are stored outside the vault
+## What's Needed to Proceed
+- Names of potential Cruz product owners or leaders
+- Email addresses or Slack handles for product team members
+- Internal team or project names (if Cruz is called something else internally)
+- Specific date ranges for Cruz discussions (if applicable)
+- Clarification on whether Cruz materials/discussions are stored outside searchable vault
