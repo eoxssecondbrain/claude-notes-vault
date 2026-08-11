@@ -15,6 +15,7 @@ updated: 2026-08-11
 4. Working of cruz.ai?
 5. Send detailed list of customers and potential customers of Cruz
 6. What revenue or billing data exists for Cruz—invoices or subscription records?
+7. Do you have a pricing page, product launch announcement, or sales deck for Cruz that might list early customers or case studies?
 
 ## Search Results Summary
 
@@ -31,16 +32,25 @@ updated: 2026-08-11
 - All searches across notes, channel messages, chats, and knowledge files returned empty
 - No accessible invoice files, billing systems, or subscription records found
 
+### Marketing and Sales Materials
+- Searched: pricing pages, launch announcements, sales decks, case studies, customer testimonials
+- Result: No marketing or sales collateral found
+- No pricing information available
+- No product launch announcements
+- No case studies or early customer references
+
 ## Current State
-- The EOXS vault does not contain:
-  - Customer lists for Cruz
-  - Prospect tracking for Cruz
-  - Invoice or billing records
-  - Revenue data
-  - Financial records
+The EOXS vault does not contain:
+- Customer lists for Cruz
+- Prospect tracking for Cruz
+- Invoice or billing records
+- Revenue data
+- Financial records
+- Marketing materials (pricing, launch announcements, sales decks)
+- Case studies or customer success stories
 
 ## What's Needed
-- Access to accounting/billing system (Stripe, Chargify, custom invoicing)
-- Invoice file locations or system connections
-- CRM or customer tracking database
-- Sales emails or call transcripts discussing Cruz customers
+- Clarification on Cruz's launch status (public, beta, internal-only)
+- Access to external systems: accounting/billing, marketing platforms, CRM
+- Direct file paths or links to materials
+- Information about whether Cruz documentation/materials are stored outside the vault
