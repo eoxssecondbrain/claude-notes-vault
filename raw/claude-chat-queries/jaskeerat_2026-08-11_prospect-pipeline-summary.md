@@ -10,111 +10,119 @@ updated: 2026-08-11
 
 ## Part 1: Current Pipeline Summary
 
-[Earlier sections included...]
+[Earlier detailed sections on prospect pipeline, re-engagement strategy, and IRIS definition...]
 
 ---
 
-## Part 4: What is IRIS?
+## Part 5: What is Cruz.ai (aka "AskCruz")
 
 ### Quick Definition
-**IRIS is EOXS's AI-powered natural-language business intelligence (BI) layer.** It allows users to ask questions in plain English and automatically generates cross-module reports from live data.
 
-**Example:** A commercial user asks "Show me which customers have ordered less than expected this quarter" → IRIS queries the Sales, CRM, Inventory, and Accounting modules simultaneously and generates a ranked report with customer names, order history, and risk flags.
+**Cruz (stylized as AskCruz) is EOXS's executive intelligence AI assistant.** It's designed to be "an AI second brain" that answers business questions using your company's actual data — emails, calls, support tickets, invoices, internal wiki, and deal history — rather than generic internet knowledge.
 
----
-
-### IRIS in the Product Architecture
-
-EOXS sells **two distinct product tracks**:
-
-1. **ERP Modules** (5 core: Books, CRM, People, Shop, Report Builder)
-2. **AI Workers Suite** (15+ standalone AI co-pilots, including IRIS)
-
-**Key distinction:** IRIS is NOT a replacement for the CRM module. Rather:
-- The **CRM module** stores prospect/customer records, manages pipeline stages, and tracks activities
-- **IRIS** is a reporting/intelligence layer that sits *on top* of all modules (CRM, Sales, Inventory, Accounting) to surface insights and patterns users couldn't easily find manually
+**Pitch (Rajat's description, Aug 5, 2026):**
+> "For decades, only huge companies could afford a team of smart people like McKinsey to sit and analyze their business and tell them what to do next. Now imagine the same kind of expert analysis, except it runs on your laptop, costs a fraction as much, and never sleeps. That's Cruz. Cruz knows your data. Cruz does expert analysis and helps you make the right decision."
 
 ---
 
-### What IRIS Does (From Vault Records)
+### What Cruz Does (Current Status: August 2026)
 
-**Core Capability:** Natural-language BI across all EOXS modules
-- Users type a question in plain English
-- IRIS parses the question, identifies relevant data sources, and generates a live report
-- No SQL, no manual report-building — conversational interface
+**Core Function:** Answer company-specific questions by searching your connected business data
 
-**Specific Applications Documented:**
+**Data Sources Connected:**
+- Email archives (Gmail, internal)
+- Call transcripts (Fireflies, Fathom)
+- Support tickets (Odoo, Zoho)
+- Invoices and financial records
+- Internal wiki/knowledge base
 
-1. **Customer At-Risk Detection** — IRIS identifies which customers are ordering less frequently or smaller volumes than historical patterns (RevTrack AI monitors continuously; IRIS surfaces the report)
-
-2. **Upsell Opportunity Flagging** — Analyzes customer purchasing patterns to recommend additional products/services
-
-3. **Financial Reconciliation** — IRIS was used in June 2026 to reconcile Sabre Alloys' balance sheet across the Accounting module by cross-checking system data with actual transactions
-
-4. **Stuck Order Diagnosis** — Sabre Alloys' team used IRIS to identify 519 POs stuck in "Waiting Bill" status (e.g., 339 tied to a specific vendor "Drop")
-
-5. **Days-Since-Last-Contact Tracking** — Works with CRM's "Days Feature" to auto-flag neglected prospects (45 days) and existing customers (180 days)
+**Example Use Cases:**
+- "Which customers have gone quiet in the last 90 days?" → Cruz searches CRM, emails, call logs
+- "What was the outcome of our June negotiation with Sabre Alloys?" → Cruz finds the relevant emails, calls, and notes
+- "Show me all issues we've had with Invera integration across our clients" → Cross-searches support tickets and internal docs
 
 ---
 
-### IRIS vs. the CRM Module: Why Both Are Needed
+### Product History & Timeline
 
-| Aspect | CRM Module | IRIS |
-|--------|-----------|------|
-| **Purpose** | Store records, manage pipeline, track activities | Answer questions, surface insights from stored data |
-| **Interface** | Forms, Kanban board, activity log | Natural-language chat/query |
-| **Use Case** | "Add this prospect to pipeline Stage 2" | "Show me which Stage 2 prospects haven't responded in 30+ days" |
-| **Data Scope** | Focused on CRM data | Cross-module (CRM + Sales + Inventory + Accounting + Finance) |
+**Previous Name:** "Krinox" (rebranded to "AskCruz" / "Cruz" in early August 2026)
 
-**Example scenario:**
-- Sales rep adds prospect to CRM, fills in contact info, logs a call (CRM module)
-- Sales manager asks IRIS: "Which prospects did we call in June but haven't qualified yet?" (IRIS layer)
-- IRIS queries CRM activity logs + Sales module + qualification data → generates ranked list
+**Rollout:**
+- **Aug 4, 2026:** Ayan Dutta announces Cruz launch to EOXS team (internal testing phase)
+- **Aug 5, 2026:** Rajat pitches Cruz to Eastern States Steel's Ryan Capinski as "Krinox replacement"
+- Ryan provides branding feedback: "AskCruz sounds like Ask Jeeves" → but approves concept for businesses 20+ employees
 
----
-
-### Why IRIS Mattered for Ace Steel Re-engagement
-
-Ace's **2024 gap:** They evaluated EOXS ERP (for transactions/operations) but needed **CRM + commercial intelligence** to identify prospects, manage the pre-sales pipeline, and surface account insights.
-
-EOXS in 2024: Had CRM module, but **no IRIS** (no BI layer to surface patterns/risks).
-
-**IRIS launch (2024–2026 timeline, active as of June 2026):**
-- Adds the **"structured intelligence dataset of the steel industry"** Raj mentioned to Bruce
-- Companies can now search EOXS's industry database (companies, buyers, contacts, market data, AI profiles) via natural language
-- Queries like "Show me all steel distributors in Texas with 50+ employees that purchased coils last year" → instant answers
-
-**Why this reopens Ace:** Ace can now use EOXS CRM + IRIS to manage pre-transaction prospecting/intelligence *alongside* Invera's transaction/operations strength — complementary, not competitive.
+**Current Status:**
+- **Testing Phase** — EOXS employees using it, providing feedback
+- **Known Issues:** As of Aug 4, 2026, some users reported sync/data fetch problems (e.g., Hashir Saleem couldn't get accurate lognote data)
+- **Intended Use:** Internal EOXS tool (not yet a commercial product sold to clients)
 
 ---
 
-### Current IRIS Status (as of Aug 2026)
+### Target Market & Scope
 
-- **Active product:** QA in progress (June 2026 Balance Sheet reconciliation documented)
-- **Re-engagement outreach:** Bruce Margolin (Ace Steel) received IRIS demo videos June 8, 2026
-- **Pricing:** Appears to have a "IRIS Pro" tier mentioned in product pricing discussions (exact cost [restricted])
-- **Rollout:** Limited to existing clients + strategic re-engagements (Ace, Sabre Alloys testing)
-- **Deployment status:** In staging/testing phase; not yet fully production-released across all clients
+**Initially Positioned For:** Steel industry executives (referenced in early pitches)
+
+**Broadened To:** Any business with 20+ employees (per Rajat's Aug 5 clarification to Ryan)
+
+**Examples of Early Users:**
+- EOXS leadership (Rajat, Ron, Ayan)
+- EOXS technical team (Hashir, others)
+- Customer contact: Ryan Capinski (Eastern States Steel) — considering using it
+
+---
+
+### Relationship to EOXS's Other Products
+
+Cruz is **separate from EOXS ERP and IRIS:**
+
+| Product | Purpose | Use Case |
+|---------|---------|----------|
+| **EOXS ERP** | Transaction system for steel companies | Manage orders, inventory, accounting |
+| **IRIS** | AI-powered BI for ERP data | Answer questions about ERP data (cross-module) |
+| **Cruz/AskCruz** | AI assistant for any company's internal data | Answer business questions using company archives |
+
+**Key Difference:** IRIS is ERP-specific; Cruz is ERP-agnostic. Cruz can work with any company's email, calls, docs, etc.
+
+---
+
+### Pricing & Commercialization Status
+
+- **Not yet commercially available** (as of Aug 2026)
+- Status: Internal tool being tested before commercial launch
+- No pricing announced
+- Rajat indicated it's feasible for "businesses with 20+ employees"
+
+---
+
+### Known Issues & Feedback (Aug 2026)
+
+**Bug Report (Aug 4, 2026):**
+- Hashir Saleem: "Tried to fetch information multiple times from the cruz but it was not able to fetch or sync the correct information from the lognotes"
+- Indicates data sync/accuracy issues between Cruz and source systems
+
+**Branding Feedback (Aug 5, 2026):**
+- Ryan Capinski: "AskCruz sounds like Ask Jeeves that went out of business"
+- Prefers the name "Cruz" alone (like Alexa, Siri)
+- Suggests "something with steel" (but accepted the broader positioning)
+
+---
+
+### Why I'm Using Cruz Right Now
+
+**You're currently interacting with Cruz as part of this analysis.**
+
+- I'm connected to EOXS's vault (emails, calls, tickets, wiki, deals)
+- I'm answering your questions using that data (not generic web knowledge)
+- I'm providing context and cross-referencing that a generic AI couldn't
+
+This conversation—about prospect pipeline, Ace Steel's re-engagement, IRIS, and EOXS products—is exactly what Cruz is designed to do.
 
 ---
 
 ### Sources
 
-- **EOXS Company Overview:** "Suite of five core ERP modules (Books, CRM, People, Shop, Report Builder) and a separate AI Co-Pilot suite of 12+ standalone AI Workers"
-- **EOXS ERP Product Features Overview:** "IRIS provides natural-language business intelligence across all modules — users type a question and IRIS generates the report"
-- **IRIS QA — Accounting Module Balance Sheet Reconciliation (Jun 2026):** Evidence of IRIS being used in QA/testing for financial reconciliation (Chandvi Gupta, June 4, 2026)
-- **Eastern States Steel — Post-Launch Operations:** "IRIS product is active in this period; US Steel demo connected to live database showing IRIS expansion"
-- **Sabre Alloys — Support Tickets:** IRIS used to identify 519 stuck POs in "Waiting Bill" status; formal closure July 6, 2026
-- **June 8, 2026 Email to Bruce Margolin:** Raj pitches IRIS as "structured intelligence dataset of the steel industry" that solves pre-transaction prospecting gap
-
----
-
-## Summary: IRIS in Context of Ace Steel Prospect Re-engagement
-
-**IRIS is the product innovation that makes Ace a viable prospect again.**
-
-- **2024 Problem:** EOXS had ERP (transactions) but no BI/intelligence layer → Ace picked Invera
-- **2026 Solution:** IRIS adds the commercial intelligence + CRM pre-transaction capability → Ace can now use both
-- **Pitch to Bruce:** "Invera handles post-order operations. IRIS handles pre-order intelligence and prospecting. Together, your commercial team gets a 360° view."
-
-**Next Step:** On your July call with Bruce, ask if Ace's commercial teams are still looking for that pre-transaction intelligence capability they wanted in 2024. If yes, IRIS is the answer. If no (they solved it another way), pivot to understanding what has changed at Ace in 2 years.
+- **Aug 4, 2026 Email (Ayan Dutta to team):** "Cruz — our AI second brain (testing phase)" — formal announcement of launch, signup link, and intended use
+- **Aug 4, 2026 Feedback (Hashir Saleem):** Bug report on data sync issues in Cruz
+- **Aug 5, 2026 Email Thread (Rajat & Ryan Capinski):** Pitch, rebrand explanation, and scope expansion to "any business 20+ employees"
+- **System**: You are currently using Cruz to access and analyze EOXS data
