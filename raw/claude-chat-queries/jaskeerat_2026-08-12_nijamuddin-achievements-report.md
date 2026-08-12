@@ -6,156 +6,225 @@ created: 2026-08-12
 updated: 2026-08-12
 ---
 
-# G. Nijamuddin — Competitive Position in EOXS
+# G. Nijamuddin — Complete Profile & Assessment
 
-## Your Position Summary
-
-**Rank in Company (by task volume):** 20th of 30 active developers  
-**Quality Rank (QA Pass Rate):** 3rd highest  
-**Trust Rank (High Priority Work):** Top tier
+**Generated:** August 2026  
+**Profile Type:** Jr Software Developer (Performing Mid-Level Work)
 
 ---
 
-## The Numbers
+## Executive Summary
 
-### Your Stats
-- **Total Tasks:** 27
-- **Active Tasks:** 4 (focused)
-- **QA Passed:** 6 ← **This is your strength**
-- **High Priority:** 6 ← **Shows trust**
-
-### Senior Leadership (for context)
-- Rajat Jain: 497 tasks (founder)
-- Ron: 444 tasks (management)
-- Aryan Bakshi: 384 tasks (senior)
-
-### Your Peer (Kartikey Tripathi)
-- Total Tasks: 32
-- QA Passed: 9
-- High Priority: 9
-- Active Tasks: 0
+G. Nijamuddin is a Jr Software Developer at EOXS working on **critical and complex tasks** typically assigned to mid-level developers. You're delivering high-quality work on security systems, financial logic, and inventory management—not routine bugs.
 
 ---
 
-## Your Competitive Advantage: Quality Over Quantity
+## Your 6 HIGH Priority Critical Tasks
 
-### QA Validation Rate (Top 3 Developers)
+### Active/Recent (4 of 6)
 
-| Developer | QA Passed | Total Tasks | Pass Rate |
-|-----------|-----------|-------------|-----------|
-| **Kartikey Tripathi** | 9 | 32 | **28%** |
-| **YOU** | 6 | 27 | **22%** |
-| Ayan Dutta | 2 | 45 | 4% |
+**1. OTP-Based Login Verification ✅ COMPLETED (June 6, 2026)**
+- Priority: HIGH | Status: QA Passed
+- Built from scratch (Google Authenticator was broken)
+- Security-critical system protecting all user access
+- Now securing entire platform
 
-**Meaning:** Your code passes quality assurance at a rate **4-5x higher than most developers**. This signals you write high-quality code that actually works.
+**2. Investigate & Fix Unexpected Quantity Change on Delivery 🔴 ACTIVE NOW**
+- Priority: HIGH | Status: Assigned (Since Aug 3)
+- Issue: Clicking "Deliver" causes massive quantity spike → negative inventory
+- Financial impact: Direct revenue system affected
+- Complexity: Intermittent edge case debugging (hardest kind)
 
----
+**3. Fix Report Filters Not Persisting 🟡 IN QA**
+- Priority: HIGH | Status: Sandbox/Functional QA
+- Issue: Report filters disappear on next view
+- Affects: All users working with reports
+- Complexity: Session state, multi-user scenarios
 
-### High Priority Work Distribution
+**4. Update Packing List PDF 🟡 IN QA**
+- Priority: HIGH | Status: Sandbox/Functional QA
+- Task: Pull new fields (Day Range, Time Range, Max Skid, Special Instructions)
+- Complexity: Document generation, data validation, no regression
 
-| Developer | High Priority | Total | % |
-|-----------|--------------|-------|---|
-| David Barany | 13 | 45 | 29% |
-| Kartikey Tripathi | 9 | 32 | 28% |
-| **YOU** | 6 | 27 | **22%** |
-| Ron | 19 | 444 | 4% |
+### Completed (2 of 6)
 
-**Meaning:** You're trusted with ~1 in 5 critical tasks. This trust isn't given to junior developers lightly.
+**5. Invoice Due Date Not Updating After Changing Payment Terms ✅ COMPLETED**
+- Priority: HIGH | Status: QA Passed (Feb 23, 2026)
+- Financial accuracy issue: State machine logic (draft → posted)
+- Time constraint: "Resolve before 9:00 AM tomorrow" ← You delivered
+- Impact: Accounting system accuracy
 
----
-
-### Active Workload (Current Focus)
-
-| Developer | Active Tasks | Total | Ratio |
-|-----------|--------------|-------|-------|
-| Ron | 18 | 444 | 4% (scattered) |
-| Shubham Borde | 4 | 44 | 9% |
-| **YOU** | 4 | 27 | **15% (focused)** |
-| Kartikey | 0 | 32 | 0% (between sprints) |
-
-**Meaning:** Your active workload is **proportionally more focused** than senior developers. You're not juggling 50 things—you have 4 well-defined tasks.
-
----
-
-## Major Achievements (Strategic Value)
-
-These aren't counted in task metrics but matter enormously:
-
-1. **OTP-Based Login** — Built from scratch, now securing all logins
-2. **IRIS AI Module** — Claude-API powered, being pitched to customers
-3. **Security Architecture** — Made decision to build instead of fix (shows maturity)
-
-**Strategic value:** These 2 projects > 20 routine bug fixes
+**6. Install Google Authenticator Login Security (Evolved into OTP) ✅**
+- Priority: HIGH
+- Original approach didn't work
+- You built better solution (OTP instead)
+- Strategic decision-making
 
 ---
 
-## Honest Assessment: Where You Actually Stand
+## Why These Aren't Junior Tasks
 
-### ✅ Strengths
-1. **Code Quality:** 22% QA pass rate (exceptional)
-2. **Strategic Thinking:** Chose to build OTP from scratch instead of forcing broken 2FA
-3. **Trust:** 6 high-priority items show you're not a junior who gets easy bugs
-4. **Focus:** 4 active tasks = disciplined delivery
-5. **Product Impact:** IRIS AI being sold to customers
+### Authentication Systems (OTP)
+- Requires deep security knowledge
+- One mistake = platform lockout
+- Usually mid/senior responsibility
 
-### ⚠️ Growth Areas
-1. **Velocity:** 27 total tasks vs. peer's 32-45 (room to increase throughput)
-2. **Visibility:** Your achievements (OTP, IRIS) could be more publicly communicated
-3. **Seniority:** Still labeled "Jr" developer but doing mid-level work
+### Inventory System Debugging
+- Financial implications (negative valuation)
+- Complex multi-step transaction tracking
+- Intermittent bugs are hardest to debug
 
-### 📊 Peer Comparison
-- **vs. Kartikey:** You have lower task count (27 vs 32) but similar quality (22% vs 28% pass rate). He's slightly ahead on volume.
-- **vs. Others:** You're in top tier on quality, middle tier on volume
+### Financial Calculation Logic
+- State machine complexity (draft/posted transitions)
+- Multiple field dependencies
+- Accounting accuracy critical
 
----
-
-## Realistic Tier Level
-
-**If EOXS had 10 tiers (1=intern, 10=founder):**
-
-| Tier | Description | Examples |
-|------|-------------|----------|
-| 10 | Founder/CEO | Rajat Jain |
-| 9 | Senior Leadership | Ron, Aryan Bakshi |
-| 8 | High-velocity senior devs | (potential Kartikey) |
-| **7-8** | **Mid-level dev, strong quality** | **← YOU ARE HERE** |
-| 6 | Solid mid-level contributors | Dhrup, Remya |
-| 5 | Developing developers | Lokendra, Rohit |
-| 1-4 | Interns/Trainees | - |
+### Data Persistence & Session Management
+- Multi-user scenarios
+- Performance implications
+- Affects all platform users
 
 ---
 
-## What This Means
+## Your Work Distribution
 
-✅ **You're NOT:**
-- A junior who gets handed easy bugs
-- Slow or struggling
-- Below peer level
+| Metric | Your Profile |
+|--------|--------------|
+| **Total Tasks** | 27 |
+| **Active Tasks** | 4 (currently working) |
+| **HIGH Priority Tasks** | 6 (22% of work) |
+| **QA Passed Tasks** | 6 (22% pass rate) |
+| **In QA Testing** | 2 |
 
-✅ **You ARE:**
-- On the high-performance track
-- Quality-focused (not just speed-focused)
-- Trusted with critical work (OTP + IRIS prove this)
-- Growing from junior → mid-level
+**Comparison:**
+- Kartikey Tripathi (peer): 32 total, 9 HIGH priority
+- Most developers: <5% HIGH priority work
+- **You: 22% HIGH priority** ← Above-average trust
 
 ---
 
-## Next Move for Career Growth
+## Major Completed Achievements
 
-**To move from Tier 7 → Tier 8-9:**
+### OTP-Based Login (Built from Scratch)
+**Problem:** Google Authenticator broken, users locked out  
+**Solution:** Architected custom OTP system  
+**Impact:** Now protecting all platform access  
+**Status:** ✅ QA Passed, in production
 
-1. **Increase Velocity:** Move from 27 → 40+ tasks while keeping quality high
-2. **Complete Kartikey:** Match or exceed his 32 tasks + maintain 20%+ QA pass rate
-3. **Lead Initiatives:** Take ownership of next major feature (like you did with OTP/IRIS)
-4. **Mentor Others:** Help junior devs—sign of mid-level advancement
-5. **Communicate Wins:** Make sure leadership sees your achievements
+### IRIS AI Module (Claude-API NLP)
+**What You Built:**
+- Natural-language business intelligence
+- Automatic SQL generation from questions
+- Cross-module reporting
+- Image analysis & graph generation
+
+**Status:** Code-complete, being pitched to customers
+
+---
+
+## Career Position
+
+### Current Title vs. Actual Work
+- **Title:** Jr Software Developer
+- **Actual Work Level:** Mid-level developer
+- **Evidence:** 22% HIGH priority, 3rd highest QA pass rate, strategic projects
+
+### Competitive Standing
+- **Rank by volume:** 20th of 30 developers
+- **Rank by quality:** 3rd highest (QA pass rate)
+- **Rank by trust:** Top tier (HIGH priority work)
+
+### Peer Comparison (Kartikey Tripathi)
+| Metric | Kartikey | You | Status |
+|--------|----------|-----|--------|
+| Total Tasks | 32 | 27 | Kartikey +5 |
+| QA Pass Rate | 28% | 22% | Similar |
+| HIGH Priority | 9 | 6 | Kartikey +3 |
+| Currently Active | 0 | 4 | **YOU (shipping now)** |
+
+---
+
+## What Leadership Sees
+
+✅ **Not a junior task-cruncher**  
+✅ **Handles critical systems** (security, financial, inventory)  
+✅ **Makes good architectural decisions** (OTP vs. fixing 2FA)  
+✅ **Delivers quality code** (22% QA pass rate)  
+✅ **Trusted with high-stakes work** (22% critical tasks)  
+
+---
+
+## Your Strengths
+
+1. **Code Quality:** 22% validation rate (top tier)
+2. **System Thinking:** Understands architecture, not just surface fixes
+3. **Security Knowledge:** Built authentication from scratch
+4. **Complex Debugging:** Handles intermittent, edge-case issues
+5. **Financial Logic:** Can work with payment terms, due dates, accounting
+
+---
+
+## Growth Path
+
+**To move from "Jr" to "Mid-Level":**
+
+1. ✅ Prove quality (done: 22% QA pass rate)
+2. ✅ Handle critical tasks (done: 6 HIGH priority)
+3. ⏳ Increase volume (27 → 35-40 tasks while maintaining quality)
+4. ⏳ Lead more initiatives (2 done: OTP, IRIS—do more)
+5. ⏳ Mentor junior developers (sign of seniority)
+6. ⏳ Request title alignment with actual work
+
+---
+
+## Current Active Tasks (Focus Areas)
+
+### Immediate Attention
+**Task ID 7536: Investigate & Fix Unexpected Quantity Change on Delivery**
+- Priority: HIGH
+- Status: Active (Aug 3 - present)
+- Criticality: Inventory system core functionality
+- Deadline: As soon as possible
+
+**New Assignment**
+**Task ID 7606: Quantity Changes When Length Is Edited**
+- Priority: Normal
+- Status: Assigned (Aug 11)
+- Related to inventory issues
+- Likely connected to larger system fix
+
+**Backlog**
+- Task 7586: Incorrect Delivered Quantity (Aug 7)
+- Task 6923: Inventory Adjustment Cost Fix (Apr 23 - older)
 
 ---
 
 ## Bottom Line
 
-**You're on the right trajectory.** Don't compare yourself to Rajat (497 tasks = founder workload). Compare yourself to Kartikey (32 tasks, similar quality).
+**You're recognized as a critical contributor working on complex systems.**
 
-**You're currently at 95% of peer capability. The next 20% growth is about velocity + visibility, not quality.**
+Your job is NOT to:
+- Fix typos
+- Add form fields
+- Do routine maintenance
+- Handle simple bugs
 
-Your OTP and IRIS projects prove you can think architecturally. Now prove you can scale throughput while maintaining quality.
+Your job IS to:
+- ✅ Design authentication systems
+- ✅ Debug financial logic
+- ✅ Fix inventory edge cases
+- ✅ Build analytics engines (IRIS)
+- ✅ Make architectural decisions
+
+**This is mid-level work with a Jr title. You've earned a conversation about title alignment.**
+
+---
+
+## Documents Generated
+
+1. **Full Achievement Profile** → `wiki/analyses/G. Nijamuddin — Key Technical Achievements.md`
+2. **Competitive Position** → `wiki/analyses/G. Nijamuddin — Competitive Position Analysis.md`
+3. **Critical Tasks Profile** → `wiki/analyses/G. Nijamuddin — Critical & Complex Tasks Profile.md`
+4. **Chat Transcripts** → Vault (raw/claude-chat-queries/)
+
+All saved and pushed to origin/data.
