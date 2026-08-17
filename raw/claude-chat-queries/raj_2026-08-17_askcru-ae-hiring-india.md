@@ -14,7 +14,7 @@ So I'm considering hiring an A/E in India, and we posted a job on LinkedIn, and 
 ### Assistant
 [Asked AskUserQuestion for rigor level: 5ft/10ft/50ft deep. User chose 50ft deep (Deep).]
 
-Scope flag: task doesn't cleanly sit under either defined skill — sales-strategist governs GTM/deal strategy and prospect emails, not recruiting; raj-eoxs-vault's connectors have no ATS/applicant data. Checked eoxs-db (no "AskCru" record) and teams-askcruz (a CRM/prospecting DB for steel-distributor targets, not recruiting). Proceeding on general hiring judgment, grounded in a 2021 email describing EOXS's Enterprise AE role as selling ERP software to steel distributors in the American market.
+Scope flag: task doesn't cleanly sit under either defined skill. Checked eoxs-db and teams-askcruz — no ATS/applicant data, no "AskCru" record. Proceeding on general hiring judgment, grounded in a 2021 email describing EOXS's Enterprise AE role as selling ERP software to steel distributors in the American market.
 
 Rubric: Must-have — full-cycle quota-carrying closing experience, US-market selling experience, SMB/mid-market motion relevant to actual deal size, quantified track record. Hard red flags — high iteration (6+ jobs in 7 years, or 10-14 month stints with no explanation), brand-chasing without substance. Screening sequence: tenure/iteration → brand-chasing → skills/experience → US/SMB experience.
 
@@ -32,28 +32,27 @@ Rubric: Must-have — full-cycle quota-carrying closing experience, US-market se
 ## Candidate 12: Ranjeet Kour — 3/10, disqualify.
 ## Candidate 13: Kamal Kumar Pandey — 3.5/10, disqualify.
 ## Candidate 14: Prerna Paswan — 1/10, disqualify. Resume-integrity flag (duplicated bullets).
-## Candidate 15: Mohammed Abuzar Bangar — 2/10, disqualify, credibility flag. Jobs predate stated graduation year; suspiciously uniform precise metrics across every bullet.
+## Candidate 15: Mohammed Abuzar Bangar — 2/10, disqualify, credibility flag. Jobs predate stated graduation year; suspiciously uniform precise metrics.
 ## Candidate 16: Amit B Udagatti — 5/10, borderline/verify. Real quota-overachievement evidence but overstated years of experience, SMB-scale deals despite "Enterprise" title, zero US exposure (MEA/APAC only).
-## Candidate 17: Himanshu Motwani — 1/10, disqualify. Not a sales profile at all — finance-admin/operations/client-support career, too junior.
-
-Running tally after 17 candidates: qualify — Arnold Dias (7.5/10), Pravin Sigtia (8/10). Borderline/verify — Amit Udagatti (5/10), Shreyash Patil (6/10), Shiv Sharma (6/10), Rohit Rana (5/10). Disqualify — Rajan Rastogi (4/10), Ipsita Sukanya (4/10), Kamal Pandey (3.5/10), Ridaiy Ajrawat (3/10), Ranjeet Kour (3/10), Mohammed Abuzar Bangar (2/10, credibility flag), Shaun Sylvester (1.5/10), Shruti Sharma (1.5/10), Prerna Paswan (1/10), Himanshu Motwani (1/10), Aswan Basha (1/10).
-
-## Turn 19 — Candidate 18: Rimpa Sen
-
-### User
-[Uploaded resume PDF] check
-
-### Assistant
-Rating: 6/10 — qualify with reservations. Strong, well-evidenced enterprise sales track record with one notably relevant detail, but a clean gap on US experience and an overstated years-of-experience claim.
-
-Candidate: Rimpa Sen. Postgraduate, TISS (2017-2019); Undergraduate, Assam University (2014-2017). Career arc: Block Program Manager, Haryana Rural Livelihood Mission (Jul 2019-Sep 2020, 14mo, government livelihoods work, not sales), Program Manager SHODH (Oct 2020-Dec 2021, 14mo, ecosystem research, not sales), Executive Associate, Office of CEO, Swaniti Initiative (Jan 2022-May 2023, 16mo, donor relations, not sales), Business Development Manager at EcoBioTraps (May 2023-Feb 2026, 2yr9mo — her only substantial sales role), freelance GTM Advisor at E Cognitech (dated Mar-May 2026, 2mo). Summary claims "5+ years" of sales experience but first four years were social-sector program management, not sales — real sales-specific experience is closer to 3 years. Worth reconciling directly.
-
-Strong substance: EcoBioTraps role has explicit full-cycle ownership (discovery through demo, quotation, negotiation, closing) for named enterprise/government accounts — Tata Steel, Cipla, BHEL, NHAI, Stone India Ltd, closing multi-crore agreements; ₹3 Cr+ (~$360K) in B2G revenue secured directly with Brihanmumbai and Kolkata Municipal Corporations through full procurement cycles; 2,000+ contact pipeline built; ₹60L+ (~$72K) sustained account value post-close. Notably, Tata Steel and Stone India Ltd are steel/heavy-industry companies — direct experience selling complex technical solutions into exactly AskCru's target vertical, even though the product differs. Genuine relevant differentiator.
-
-Gaps: no US market experience anywhere — positioning explicitly says "APAC," every named account is Indian (private or municipal). Clean, direct gap, not inferred. Segment leans enterprise/government, no SMB evidence.
-
-Tenure fine, no iteration concern — coherent growth arc from social-sector into private-sector enterprise BD. One date worth clarifying: the freelance stint's "March 26 – May26" could mean 2026 (after EcoBioTraps) or an overlapping side-project during EcoBioTraps tenure.
-
-Net: one of the stronger resumes in the batch on substance, offset by zero US exposure and an inflated total-experience claim. Recommend a screening call: correct years discrepancy, probe willingness/readiness to sell into the US market with no prior track record there, confirm SMB flexibility.
+## Candidate 17: Himanshu Motwani — 1/10, disqualify. Not a sales profile at all.
+## Candidate 18: Rimpa Sen — 6/10, qualify with reservations. Strong, specific enterprise/B2G sales results (Tata Steel, Cipla, BHEL, NHAI, Stone India Ltd; ₹3Cr+ B2G revenue with municipal corporations); notably relevant steel-industry account overlap; but no US market experience anywhere (APAC-only) and overstated "5+ years" (real sales experience ~3 years).
 
 Running tally after 18 candidates: qualify — Arnold Dias (7.5/10), Pravin Sigtia (8/10). Borderline/verify — Rimpa Sen (6/10), Amit Udagatti (5/10), Shreyash Patil (6/10), Shiv Sharma (6/10), Rohit Rana (5/10). Disqualify — Rajan Rastogi (4/10), Ipsita Sukanya (4/10), Kamal Pandey (3.5/10), Ridaiy Ajrawat (3/10), Ranjeet Kour (3/10), Mohammed Abuzar Bangar (2/10, credibility flag), Shaun Sylvester (1.5/10), Shruti Sharma (1.5/10), Prerna Paswan (1/10), Himanshu Motwani (1/10), Aswan Basha (1/10).
+
+## Turn 20 — Candidate 19: Shasti Mani
+
+### User
+[Uploaded resume PDF] here is the first candidate
+
+### Assistant
+Rating: 2.5/10 — disqualify, on seniority/experience grounds rather than any specific red flag.
+
+Candidate: Shasti Mani, Chennai. B.Tech Computer Science (AI/ML), SRM University, graduating 2025 — a fresh graduate. Sales Intern at Effivity Technologies/VegamAI (Jul-Oct 2025, 3mo), then Account Executive at Paperflite (Dec 2025-present, ~8-9mo). Total professional experience is under a year.
+
+To be fair, the metrics in the current role are notable for someone this early: 120% of quota in his first quarter, peaked at 160% in a single month, first AE on a newly onboarded team to close a deal ahead of peers with 4-6 years of experience. He also explicitly names NAMER (North America) alongside EMEA as territories, and explicitly claims SMB/startup-segment buyer experience — touching both specific criteria more directly than several more senior candidates in this batch. Full-cycle language present and detailed (MEDDIC/SPIN, multi-stakeholder alignment).
+
+Core issue: ~11 months of total work experience, all junior/associate-level regardless of the "Account Executive" title, for a role that needs someone who can run long, complex enterprise cycles into US steel distributors over sustained years of quota pressure — which hasn't had time to happen yet. Not equivalent to the seniority other qualify/borderline candidates have shown.
+
+Net: disqualify for this specific opening on seniority grounds, not a red-flag case — worth keeping on file if AskCru ever opens a junior AE or SDR-to-AE development track.
+
+Running tally after 19 candidates: qualify — Arnold Dias (7.5/10), Pravin Sigtia (8/10). Borderline/verify — Rimpa Sen (6/10), Amit Udagatti (5/10), Shreyash Patil (6/10), Shiv Sharma (6/10), Rohit Rana (5/10). Disqualify — Rajan Rastogi (4/10), Ipsita Sukanya (4/10), Kamal Pandey (3.5/10), Ridaiy Ajrawat (3/10), Ranjeet Kour (3/10), Shasti Mani (2.5/10), Mohammed Abuzar Bangar (2/10, credibility flag), Shaun Sylvester (1.5/10), Shruti Sharma (1.5/10), Prerna Paswan (1/10), Himanshu Motwani (1/10), Aswan Basha (1/10).
