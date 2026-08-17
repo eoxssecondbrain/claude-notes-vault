@@ -140,3 +140,16 @@ Loop in whoever owns the ABAC design and the security audit so she has the sourc
 Set a review checkpoint when it's done, and make the leadership call then, not now. Two weeks of tenure and one unprompted case study is not enough signal either way.
 
 Don't let this become a distraction from what's already in motion. The Trust Layer work is genuinely useful, but it's roadmap, not pipeline — it doesn't move you toward $1M ARR this quarter. Keep her time-boxed on it so it doesn't quietly become her full-time focus.
+
+User: Don't give me any work right now. Let's keep her busy with something. Ask her something to do.
+
+Assistant response:
+Task for Jaee — self-contained, no input needed from you or anyone else:
+
+Turn the Cruz Trust Layer case study into a technical spec. Same topic, one level deeper:
+
+1. Data model: what tables/objects does this need — roles, permissions, risk classifications, action logs, approval records? Sketch the schema.
+2. One end-to-end example: pick one high-risk action (e.g. "change pricing") and walk it through the full pipeline — what data it touches, what role check fires, what gets logged, what triggers human approval, what the approver sees.
+3. Competitive scan: look at how 2-3 real vendors handle this problem (Salesforce Agentforce, Microsoft Copilot governance, Glean, or similar) and note what they do that this proposal doesn't yet cover, or vice versa.
+
+No deadline pressure — this is a "keep sharpening it" assignment, not a critical-path one. Have her send it back when done and I'll fold it into the review with the ABAC/audit reconciliation later.
