@@ -106,3 +106,32 @@ Comprehension quiz — company primer
  Correct: scattered company knowledge (in inboxes, calls, spreadsheets) that's hard to query or act on.
 
 If you want, I can turn this into an actual interactive quiz widget instead of plain text, or draft the role-track outlines once you have the hiring mix from wherever that plan is being built.
+
+User: Let's start by creating what all needs to be in this onboarding document.
+We need to make sure they have their askcru.com credentials set up. We need to give them a set prompt which they will put in AI and generate a professional picture of themselves, which they will update on LinkedIn. They will update their job profile on LinkedIn and connect it with AskCruz. They need to be provided with an email address. Then there CHattr (time tracing ) tool needs to be set up, and they need to start using it. We need to even give them all the instructions on the severity of using the time tracking tool without tampering with it, which can result in consequences. At the start of the email, I should have some something like words of wisdom from the CEO, and it should contain things like:
+
+* Try and fail rather than fail to try.
+* Explain a little bit about my philosophy on the kind of culture I set in the company.
+* We can talk about the map of consciousness and how important it is for me to function in reason energy and not fear energy.
+* What kind of materials we can direct them to study and understand the map of consciousness briefly.
+* If I ask a question, try to answer it in the least possible words. Then, assumptions are the mother of all fuck-ups, and what do I really mean by this? The importance of using the task tracker to manage all activities. Maybe this could be a complete section in itself where every person needs to sign off, saying that they understand that they have to update whatever tasks have been assigned to them. They have to update them on a daily basis, even if nothing has happened. We can even explain to them how we get automated reports from that task tracker, so if they do not update the task tracker, they will never be notified in the reports which I receive. 
+
+
+
+These are my high-level thoughts. You can take it up from here and work with your own expertise. Think like a professional HR director of a 300-person company and the kind of SOPs they would create to make sure that the entire team is up to knowledge on how this company operates. We should even maybe mention somewhere that we are a no-manager company, and AI is the middle management.
+
+Assistant: Before I write this, a few things surfaced in the vault that should shape the content — not blockers, just worth knowing before this goes out to 150 people:
+
+The task tracker problem you're asking me to solve for is already happening live. The AskCruz Odoo board is generating daily scrum reports right now, and the most recent one (today) shows most assignees at 0-2/10 engagement, with the report itself flagging that the scores are "measuring your nagging activity, not team engagement" because you're the one doing all the updates. This isn't hypothetical — the daily-update section of this document is solving a problem that's costing you time today.
+
+Cattr has real reliability issues on record — it intermittently drops tracked time or loses the timer option entirely for several people, independent of anything the employee did. A real anti-gaming detector does exist and has flagged people for faking activity, so the "consequences" language is grounded in something real, not an empty threat — but the severity messaging needs one caveat built in: a tool glitch and deliberate tampering aren't the same thing, and the document should tell people how to report the former so it isn't punished as the latter.
+
+I found no existing write-up of your Map of Consciousness / reason-vs-fear philosophy anywhere in the vault. I'll draft that section from your notes plus the general Hawkins framework, but it's your voice and your belief system — treat it as a first draft to rewrite in your own words, not something to ship as-is.
+
+Building the full document now.
+
+[Created file: AskCruz_Onboarding_Document_Draft.md containing full onboarding document with Section 0 (CEO Welcome — try/fail philosophy, culture, Map of Consciousness/Hawkins framework, reason vs fear energy, Power vs Force book recommendation, least-words communication norm, "assumptions are the mother of all f***-ups", no-manager/AI-as-middle-management framing), Section 1 (AskCruz credentials setup, flagged shared-password security issue), Section 2 (LinkedIn photo AI prompt + profile update, flagged need for Raj's approved exact prompt), Section 3 (Cattr time tracking setup, severity/tampering consequences language, glitch-vs-tampering distinction, signature acknowledgment line), Section 4 (Task tracker daily update requirement as standalone section with signature acknowledgment, explanation of automated reports to Rajat, "unupdated task reads as unaddressed not fine" framing grounded in the live Aug 17 2026 scrum report data), Section 5 (No-manager/AI-as-middle-management structural explainer), and a final sign-off page with name/role/date/signature fields.]
+
+Assistant: Three things need your direct input before this ships, flagged inline in the doc: your actual philosophy/culture voice in Section 0 (I drafted a starting point, don't ship it unedited), the exact LinkedIn photo-generation prompt in Section 2 (brand consistency across 150 people depends on it being one approved prompt, not 150 improvised ones), and the shared-plaintext-password issue in Section 1 — worth fixing before this scales 30x.
+
+Once you've got the hiring role breakdown, the next layer is the role-specific tracks that sit on top of this shared document.
