@@ -31,3 +31,21 @@ Five questions:
 One thing worth naming directly: last time, an SDR ran the follow-through after Steve was already sold in the room, and it went cold for three years. You have direct access to Steve now — use this call to leave with a second decision-maker's name, not to leave with another "great conversation."
 
 Sources: OV2 wiki — Pacesetter Steel Service; raw emails "Email to be sent to Aviva" (2023-09-13) and "Fwd: What is the current cost of steel.com" (2023-07-06).
+
+USER:
+Give me something on which I can create rapport with him before I start this call. See if you can find something personal from the database.
+
+ASSISTANT:
+The strongest one is the Atlanta meeting itself — you don't need a manufactured rapport point, you have a real one.
+
+You personally spent five hours with him in 2023 (a 30-minute meeting that just kept going). That's the opener: reference it directly, specifically, not generically — "last time we talked, thirty minutes turned into five hours" signals you remember him as a person, not a lead in a CRM.
+
+Beyond that, three more things from the vault worth knowing before the call, not necessarily to open with:
+
+Pacesetter is a true founder story — Steve started it in 1977 in Atlanta and, per his LinkedIn, is still CEO 49 years later. He built it with his wife, Bobbi Leebow, as co-leadership, and the company culture (work ethic, customer focus, teamwork) is described as something he instilled personally from day one. That's a generational business, run by the person who built it — not a hired executive. Given GFC's own origin story for you, this is genuine common ground if it comes up naturally, not something to force.
+
+Matthew Leebow also came up alongside Steve in a 2023 email — likely next-generation family in the business. Worth listening for whether Matthew's name comes up on the call; if Pacesetter is mid-succession, that changes who else needs to be sold.
+
+He's Ohio State educated, which is a safe, low-effort college-sports opener if you want a warmup line before getting into it — lower value than the Atlanta callback, but easy and low-risk.
+
+Skip trying to manufacture something clever. The five-hour meeting is real, it's specific to him, and it already tells him you remember the relationship, not just the opportunity.
