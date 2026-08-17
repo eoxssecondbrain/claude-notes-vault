@@ -6,43 +6,51 @@ created: 2026-08-17
 updated: 2026-08-17
 ---
 
-[Document attached by user, no accompanying message]
+[Previous turns already saved. Continuing thread.]
 
-Document content:
-"Before the framework — a scope flag: this task (building a hiring rubric and screening ~300 applicants) doesn't cleanly sit under either skill you've defined. sales-strategist governs GTM/deal strategy, objection handling, and prospect-facing emails — not recruiting. raj-eoxs-vault gives me EOXS's data connectors, but none of them are an ATS — no resumes, no applicant tracker. I checked anyway: eoxs-db has no wiki page or record for "AskCru," and the teams-askcruz Odoo instance I have access to is a CRM/prospecting database (prospect job titles at target steel-distributor companies), not a recruiting system — it doesn't hold your 300 applicants. So I'm proceeding on general hiring-strategy judgment, grounded in one real data point I did find: a 2021 email describing EOXS's Enterprise AE role as selling ERP software to steel distributors in the American market. If AskCru is a different product or ICP than that, tell me and I'll adjust the rubric below.
+User: [uploaded 24.pdf - resume for Pranay Bahira]
+also here is the first candidate give me rating, qualify or disqualify
 
-Rubric for the A/E role
+Resume content:
+Pranay Bahira, MBA Professional, pranaybahira@gmail.com, +91 9004343787, Navi Mumbai India, DOB 04 January 1994
 
-Must-have (screen in):
+Education:
+MBA Marketing, ICFAI Business School Dehradun, 2017-Present
+PGPM Marketing, ICFAI Business School Mumbai, 2017-2019, 5.98 cgpa
+Bachelor of Mass Media Advertising, SIES Nerul, 2014-2017, 5.77 cgpa
+HSC Science, KSA Barns Panvel, 2010-2011, 58.67%
+SSC, St. Joseph's High School Kalamboli, 2008-2009, 70.92%
 
-Full-cycle, quota-carrying closing experience — not just SDR/BDR prospecting. You need someone who has owned a number and closed against it, not just booked meetings.
+Work Experience:
+Marketing and Sales intern, Lodha Group, Thane, 02/2018-05/2018
+Tasks: Achieving sales targets through acquisition of new channel partners and growing business from existing CP's. Developing and generating leads through customer VDNB data. Achieving sales targets by closing the deals at the site. Maintaining Customer Relationship during after sales service.
 
-US-market selling experience — sold to US buyers, worked US time zones, communicates the way American buyers expect (directness, written follow-up discipline, objection handling in English at native-adjacent fluency). This matters more than pedigree because your buyer is American even though the hire is in India.
+Co-curricular Activities: Digital Head Konflux IBS (2018-2019), Digital Creative Head Frames Film Festival (2015-2016), Ramp Walk Polaris Wilson's (2014-2017), President Shivpratap Sanstha NGO (2009-Present)
 
-SMB or mid-market motion experience relevant to your actual deal size. This only screens correctly once we confirm AskCru's ICP — enterprise-only experience can be a mismatch for an SMB-heavy pipeline (different sales cycle, different objection set, different decision-maker access) even from strong sellers.
+Skills: MS Office, Photoshop, Creativity, Designing, Leadership, Project planning, Adaptability, Negotiation, Customer Service, Reliability
 
-Quantified track record on the resume itself — quota attainment %, ARR/deal size closed, win rate, ramp time. A resume with no numbers is a resume you can't evaluate on merit alone.
+Personal Projects: Analysis & implementation of sourcing, closing and after sales service process (2018); Created a service/product brand - Food Safari for Brand It IBS Mumbai (2017-2018); Advertising campaign designing during BMM (2016-2017); Logo and IMC tools designing as freelancer (2011-Present)
 
-Hard red flags (auto-disqualify):
+Certificates: Fundamentals of Digital Marketing (08/2019) Google Certified; Computer Operating Ms.office DTP Tally (02/2010) Kohinoor Technical Institute
 
-High iteration / job-hopping. Your instinct is correct and it's a legitimate hard filter, not just a preference: someone with 6+ jobs in 7 years, or a pattern of 10-14 month stints with no external explanation (acquisition, layoff, company shutdown), has not demonstrated they can survive a normal sales ramp-and-build cycle. In an AE role that typically takes 3-6 months to ramp, someone who leaves every 12 months was likely still learning the job when they left, or leaving before results showed — neither is a signal you want.
+Achievements: Runner-up Carom Doubles (2018) Tarkash IBS; Maharashtra State Football Champions U17 (2011) WIFA; 8th National Cyber Olympiad (2008)
 
-Brand-chasing without substance. A resume that's a list of recognizable logos with vague bullet points ("responsible for enterprise accounts," "drove revenue growth") and no attached numbers is someone who optimized for the name on the resume, not for provable performance. This is different from someone who worked at a known company AND has quantified results — that's a plus, not a flag. The flag is brand names as the whole pitch.
-
-Screening sequence (matches the order you described):
-
-1. Tenure/iteration pass — reject high-iteration resumes first. This is a cheap, high-signal filter that cuts volume fast.
-2. Brand-chasing pass — reject logo-heavy, numbers-empty resumes.
-3. Skills/experience match — full-cycle closing, sales methodology, relevant industry/vertical experience (ERP, B2B software, manufacturing/distribution is a bonus, not a requirement).
-4. US selling / SMB experience — the final differentiator once the pool is down to people who've already cleared 1-3.
-
-One thing worth stress-testing before you run 300 resumes through this: "job-hopping" as a hard red flag can also filter out strong people who left because of company failure, acquisition, or being laid off in a bad market — not because they're flaky. Worth having a secondary check (LinkedIn "About" section, or a quick screening question) before hard-disqualifying rather than auto-rejecting on tenure math alone, since that's the rule most likely to cost you a good candidate by mistake.
-
-Two things I need from you before I can actually run the 300 through this: confirm whether AskCru = the ERP-to-steel-distributors, American-market business, and share the applicant data (resumes or the LinkedIn applicant export) so I can start scoring against this rubric."
+Languages: English, Hindi, Marathi
+Interests: Gaming, Designing, Photography, Trekking, Football, Cricket, Badminton, Social Work
 
 Assistant response:
-There's no actual question attached — just a document containing what looks like a past AE hiring-rubric response (job-hopping filters, US-market selling, brand-chasing flags, etc.).
+Disqualify.
 
-Scope flag: this doesn't cleanly match either skill I checked. sales-strategist covers GTM/deal strategy and prospect emails, not recruiting. raj-eoxs-vault covers EOXS's data connectors (eoxs-db/eoxs-teams/teams-askcruz), and none of them hold an applicant tracker or resumes — so I can't pull the 300 applicants from there even if this were a recruiting task.
+Checked against the four must-haves from the rubric — fails three of four:
 
-What do you want me to do with this document — review/critique the rubric, refine it, apply it to actual applicant data you'll paste in, or something else?
+1. Full-cycle, quota-carrying closing experience — fails. Only work experience listed is a 3-month internship (Feb–May 2018) at Lodha Group. No post-MBA employment shown at all. Nothing resembling owning a quota or closing cycle independently.
+
+2. US-market selling experience — fails. All experience is domestic Indian real estate (Lodha Group, Navi Mumbai/Thane). No signal of selling to US buyers.
+
+3. SMB/mid-market motion relevant to deal size — not assessable, no relevant sales tenure to evaluate against.
+
+4. Quantified track record — fails. Zero numbers anywhere: no quota attainment, no deal size, no revenue figures, no win rate. Bullet points are generic ("achieving sales targets," "developing leads") with nothing measurable attached.
+
+Additional flag: resume data looks stale/inconsistent — MBA Marketing at ICFAI Dehradun listed as "2017–Present" while a separate PGPM Marketing at ICFAI Mumbai is listed "2017–2019," and the only work experience predates both. This reads as an unmaintained resume rather than an active professional 8+ years post-MBA-start, which itself is a soft red flag on current relevance.
+
+Rating: 1/5 for this role. Not a borderline case — no full-cycle closing history and no US exposure are both hard must-haves, and this candidate has neither.
