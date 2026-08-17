@@ -92,3 +92,90 @@ Company legitimacy: for employers I do not recognize, I will do a quick check on
 Output format per candidate: verdict of reject or proceed, the one or two decisive reasons, and any 50ft flags worth your attention. I will keep it tight so you can move through 61 of these without wading through prose.
 
 Send the first one whenever you are ready.
+
+USER:
+[Uploaded file: 5.pdf — resume of Keno Garcia]
+KENO GARCIA
+Regina, Saskatchewan | (306) 331-4530 | kenopgarcia@gmail.com | LinkedIn: www.linkedin.com/in/keno-garcia-4079aa41b
+PROFESSIONAL SUMMARY
+Relationship-focused professional transitioning into Business Development with experience in customer engagement, communication, relationship management, and problem-solving. Bachelor of Human Justice graduate with a background in public safety, sales, and client-focused environments. Skilled at building trust, understanding needs, managing challenging conversations, and developing solutions. Brings strong communication, resilience, and interpersonal skills to support customer acquisition and business growth in a remote Business Development Representative (BDR/SDR) role.
+CORE SKILLS
+Business Development | Sales Development | Customer Engagement | Relationship Building | Consultative Selling | Prospecting | Lead Generation | Client Communication | Needs Assessment | Active Listening | Objection Handling | Negotiation | CRM Fundamentals | Problem Solving | Time Management
+PROFESSIONAL EXPERIENCE
+CORRECTIONAL PEACE OFFICER
+Government of Saskatchewan – Regina Correctional Centre | Regina, SK
+April 2024 – Present
+• Build professional relationships through trust, active listening, and effective communication with diverse individuals.
+• Manage difficult conversations by identifying concerns, addressing resistance, and finding appropriate solutions.
+• Apply problem-solving, decision-making, and communication skills in high-pressure environments.
+• Gather information, maintain accurate documentation, and follow structured processes.
+• Collaborate with teams to achieve objectives while maintaining professionalism and accountability.
+COMMUNITY PEACE OFFICER – ARREST PROCESSING UNIT
+Edmonton Police Service – Commissionaires Canada | Edmonton, AB
+February 2022 – August 2022
+• Communicated with diverse individuals while gathering information, addressing concerns, and maintaining professionalism.
+• Built rapport quickly through active listening and relationship management.
+• Managed confidential information while maintaining accuracy and attention to detail.
+• Followed established procedures while working in a fast-paced public-facing environment.
+• Developed strong communication skills through daily interactions with individuals and professionals.
+PERSONAL SUPPORT WORKER
+Ranch Ehrlo Society | Regina, SK
+March 2020 – August 2021
+• Built trusting relationships by understanding individual needs and providing personalized support.
+• Used communication, empathy, and conflict-resolution skills to navigate challenging situations.
+• Adapted communication styles to effectively engage individuals from diverse backgrounds.
+SALES ASSOCIATE
+GNC – General Nutrition Centers | Regina, SK
+July 2017 – July 2018
+• Delivered consultative customer service by identifying customer needs and recommending appropriate solutions.
+• Educated customers on product benefits and supported purchasing decisions.
+• Built customer relationships through communication, trust, and product knowledge.
+SALES ASSOCIATE
+Foot Locker | Regina, SK
+October 2016 – June 2017
+• Assisted customers by understanding preferences and providing personalized recommendations.
+• Created positive customer experiences through communication and relationship building.
+• Supported sales goals in a fast-paced retail environment.
+OFFICE ADMINISTRATOR
+Government of Saskatchewan | Regina, SK
+April 2019 – November 2019
+• Managed confidential records while maintaining accuracy and organization.
+• Responded professionally to public inquiries and administrative requests.
+• Prioritized tasks and maintained attention to detail in a deadline-driven environment.
+EDUCATION
+UNIVERSITY OF REGINA
+Bachelor of Human Justice | 2017 – 2022
+Relevant Studies: Communication, Human Behaviour, Conflict Resolution, Ethics, Research Methods
+SALES DEVELOPMENT & PROFESSIONAL TRAINING
+HubSpot Academy (In Progress)
+• Inbound Sales Certification
+• Sales Prospecting Certification
+• Sales Hub Software Certification
+Salesforce Trailhead (In Progress)
+• CRM Fundamentals
+CERTIFICATIONS
+CPR & First Aid | Trauma-Informed Care | Motivational Interviewing | Therapeutic Crisis Intervention (TCI) | WHMIS | Naloxone Certification
+VOLUNTEER EXPERIENCE
+El Rio Hostel – Colombia
+• Built relationships with international guests through communication, hospitality, and event coordination.
+• Supported English learning and youth soccer coaching in a multicultural environment.
+Revolution Hostel – Thailand
+• Organized social activities and events while developing communication and networking skills.
+LANGUAGES
+English (Fluent) | Filipino/Tagalog (Fluent) | Spanish (Basic Conversational)
+
+ASSISTANT:
+Candidate 1 — Keno Garcia
+
+Verdict: Reject
+
+Decisive reasons:
+1. No software/SaaS sales experience of any kind. Zero SDR/BDR history — background is corrections, peace officer work, PSW, and retail sales (GNC, Foot Locker). This fails the hard disqualifier outright regardless of soft-skill framing in the summary.
+2. Based in Regina, Saskatchewan, not Toronto. Even setting aside the software gap, location doesn't match the role.
+
+50ft flags:
+- Unexplained ~20-month gap between Community Peace Officer (ended Aug 2022) and Correctional Peace Officer (started Apr 2024).
+- Career pattern jumps across unrelated fields (corrections, PSW, retail, admin) every 5-16 months — not sales-specific job-hopping, but a broader instability signal worth noting even though it's not the reason for rejection here.
+- HubSpot/Salesforce certifications are listed as "in progress," not completed — resume is compensating for the lack of real sales experience with training-in-progress credentials, which is a common pattern for candidates trying to break into SDR roles cold.
+
+Next one when ready.
