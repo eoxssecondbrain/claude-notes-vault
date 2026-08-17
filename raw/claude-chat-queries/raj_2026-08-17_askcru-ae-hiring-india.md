@@ -33,26 +33,25 @@ Rubric: Must-have — full-cycle quota-carrying closing experience, US-market se
 ## Candidate 13: Kamal Kumar Pandey — 3.5/10, disqualify.
 ## Candidate 14: Prerna Paswan — 1/10, disqualify. Resume-integrity flag (duplicated bullets).
 ## Candidate 15: Mohammed Abuzar Bangar — 2/10, disqualify, credibility flag. Jobs predate stated graduation year; suspiciously uniform precise metrics.
-## Candidate 16: Amit B Udagatti — 5/10, borderline/verify. Real quota-overachievement evidence but overstated years of experience, SMB-scale deals despite "Enterprise" title, zero US exposure (MEA/APAC only).
+## Candidate 16: Amit B Udagatti — 5/10, borderline/verify. Real quota-overachievement evidence but overstated years of experience, SMB-scale deals despite "Enterprise" title, zero US exposure.
 ## Candidate 17: Himanshu Motwani — 1/10, disqualify. Not a sales profile at all.
-## Candidate 18: Rimpa Sen — 6/10, qualify with reservations. Strong, specific enterprise/B2G sales results (Tata Steel, Cipla, BHEL, NHAI, Stone India Ltd; ₹3Cr+ B2G revenue with municipal corporations); notably relevant steel-industry account overlap; but no US market experience anywhere (APAC-only) and overstated "5+ years" (real sales experience ~3 years).
-
-Running tally after 18 candidates: qualify — Arnold Dias (7.5/10), Pravin Sigtia (8/10). Borderline/verify — Rimpa Sen (6/10), Amit Udagatti (5/10), Shreyash Patil (6/10), Shiv Sharma (6/10), Rohit Rana (5/10). Disqualify — Rajan Rastogi (4/10), Ipsita Sukanya (4/10), Kamal Pandey (3.5/10), Ridaiy Ajrawat (3/10), Ranjeet Kour (3/10), Mohammed Abuzar Bangar (2/10, credibility flag), Shaun Sylvester (1.5/10), Shruti Sharma (1.5/10), Prerna Paswan (1/10), Himanshu Motwani (1/10), Aswan Basha (1/10).
-
-## Turn 20 — Candidate 19: Shasti Mani
-
-### User
-[Uploaded resume PDF] here is the first candidate
-
-### Assistant
-Rating: 2.5/10 — disqualify, on seniority/experience grounds rather than any specific red flag.
-
-Candidate: Shasti Mani, Chennai. B.Tech Computer Science (AI/ML), SRM University, graduating 2025 — a fresh graduate. Sales Intern at Effivity Technologies/VegamAI (Jul-Oct 2025, 3mo), then Account Executive at Paperflite (Dec 2025-present, ~8-9mo). Total professional experience is under a year.
-
-To be fair, the metrics in the current role are notable for someone this early: 120% of quota in his first quarter, peaked at 160% in a single month, first AE on a newly onboarded team to close a deal ahead of peers with 4-6 years of experience. He also explicitly names NAMER (North America) alongside EMEA as territories, and explicitly claims SMB/startup-segment buyer experience — touching both specific criteria more directly than several more senior candidates in this batch. Full-cycle language present and detailed (MEDDIC/SPIN, multi-stakeholder alignment).
-
-Core issue: ~11 months of total work experience, all junior/associate-level regardless of the "Account Executive" title, for a role that needs someone who can run long, complex enterprise cycles into US steel distributors over sustained years of quota pressure — which hasn't had time to happen yet. Not equivalent to the seniority other qualify/borderline candidates have shown.
-
-Net: disqualify for this specific opening on seniority grounds, not a red-flag case — worth keeping on file if AskCru ever opens a junior AE or SDR-to-AE development track.
+## Candidate 18: Rimpa Sen — 6/10, qualify with reservations. Strong enterprise/B2G results incl. steel-industry accounts (Tata Steel, Stone India Ltd); no US experience, overstated years.
+## Candidate 19: Shasti Mani — 2.5/10, disqualify on seniority — fresh graduate, ~11 months total experience despite strong early metrics and stated NAMER/SMB exposure.
 
 Running tally after 19 candidates: qualify — Arnold Dias (7.5/10), Pravin Sigtia (8/10). Borderline/verify — Rimpa Sen (6/10), Amit Udagatti (5/10), Shreyash Patil (6/10), Shiv Sharma (6/10), Rohit Rana (5/10). Disqualify — Rajan Rastogi (4/10), Ipsita Sukanya (4/10), Kamal Pandey (3.5/10), Ridaiy Ajrawat (3/10), Ranjeet Kour (3/10), Shasti Mani (2.5/10), Mohammed Abuzar Bangar (2/10, credibility flag), Shaun Sylvester (1.5/10), Shruti Sharma (1.5/10), Prerna Paswan (1/10), Himanshu Motwani (1/10), Aswan Basha (1/10).
+
+## Turn 21 — Candidate 20: Anshuman Saini
+
+### User
+[Uploaded resume PDF] check
+
+### Assistant
+Rating: 1/10 — disqualify, clear mismatch.
+
+Candidate: Anshuman Saini. MBA Finance & Marketing (2018), B.Com (2016). Career: HDFC Bank Virtual Relationship Manager (Dec 2018-Apr 2021, cross-selling banking products to a 2,000+ customer portfolio), Yes Bank Personal Banker (May 2021-Sep 2022, teller/branch service), Axis Bank Deputy Manager (Oct 2022-Aug 2023, branch manager duties), Paytm Key Account Manager (Aug 2023-Apr 2024, merchant portfolio management/B2B escalations for payment devices).
+
+Entire career is retail banking and merchant-account operations, not B2B software sales — no prospecting, no outbound pipeline, no full sales-cycle ownership of a software product, no SaaS/ERP mention anywhere. His own career objective states he's seeking a role "within the finance sector" — reads like a banking-sector job search, not an application built around this AE opening. Roughly 28-month unexplained gap since Paytm ended (Apr 2024) — over two years out of work as of today. No US or SMB/enterprise software segment experience anywhere.
+
+Net: wrong industry, wrong function, major unexplained current gap, career objective doesn't even target this kind of role. Clear disqualify, not worth a screening call.
+
+Running tally after 20 candidates: qualify — Arnold Dias (7.5/10), Pravin Sigtia (8/10). Borderline/verify — Rimpa Sen (6/10), Amit Udagatti (5/10), Shreyash Patil (6/10), Shiv Sharma (6/10), Rohit Rana (5/10). Disqualify — Rajan Rastogi (4/10), Ipsita Sukanya (4/10), Kamal Pandey (3.5/10), Ridaiy Ajrawat (3/10), Ranjeet Kour (3/10), Shasti Mani (2.5/10), Mohammed Abuzar Bangar (2/10, credibility flag), Shaun Sylvester (1.5/10), Shruti Sharma (1.5/10), Anshuman Saini (1/10), Prerna Paswan (1/10), Himanshu Motwani (1/10), Aswan Basha (1/10).
