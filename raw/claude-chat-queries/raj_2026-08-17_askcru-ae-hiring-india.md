@@ -29,95 +29,46 @@ One thing worth stress-testing before you run 300 resumes through this: "job-hop
 Two things I need from you before I can actually run the 300 through this: confirm whether AskCru = the ERP-to-steel-distributors, American-market business, and share the applicant data.
 
 ## Turn 2 — Candidate 1: Rajan Rastogi
-
-### User
-[Uploaded resume PDF] Here is the first candidate. Give me a rating out of 10 and qualify or disqualify
-
-### Assistant
-Rating: 4/10 — disqualify (borderline). 7 employers in 10 years, three under 9 months clustered in 2020-2024, two unexplained gaps. No brand-chasing. No quantified quota/ARR/deal-size numbers anywhere in 9 years. US exposure present (Magnimus, SignalX target US) but never states he personally closed US deals. Billfree's merchant-acquisition work is SMB-flavored. Unexplained ~8-year gap between B.E. (2008) and first job (2016). Recommend disqualify, or hold as low-priority maybe only if SMB angle strongly matches ICP.
+Rating: 4/10 — disqualify (borderline). 7 employers in 10 years, three under 9 months clustered in 2020-2024, two unexplained gaps. No brand-chasing. No quantified quota/ARR/deal-size numbers anywhere in 9 years. US exposure present but never states he personally closed US deals. Billfree's merchant-acquisition work is SMB-flavored. Unexplained ~8-year gap between B.E. (2008) and first job (2016).
 
 ## Turn 3 — Candidate 2: Ipsita Sukanya
-
-### User
-[Uploaded resume PDF] Check this
-
-### Assistant
-Rating: 4/10 — disqualify. Strong tenure (Vyze 19mo, Kapiva ~5yr) — opposite of iteration red flag. Problem is fit: current 5+ year role is B2C consumer wellness telesales, not B2B enterprise software. Only relevant B2B/US experience is the 19-month Vyze stint, 4+ years stale. Kapiva achievements entirely qualitative, no numbers. No brand-chasing. Disqualify for the AskCru AE opening specifically.
+Rating: 4/10 — disqualify. Strong tenure (Vyze 19mo, Kapiva ~5yr) but current 5+ year role is B2C consumer wellness telesales, not B2B enterprise software. Only relevant B2B/US experience is the 19-month Vyze stint, 4+ years stale, no numbers.
 
 ## Turn 4 — Candidate 3: Shaun Sylvester
-
-### User
-[Uploaded resume PDF] check it.
-
-### Assistant
-Rating: 1.5/10 — clear disqualify. 4 employers in 3.5 years (Mycaptain 14mo, Corizo 16mo, Simplilearn 3mo, Intellirose ~3.5mo), accelerating to two sub-4-month stints most recently — more severe than the stated hard red flag. Zero quantified numbers anywhere. No US/SaaS/enterprise/SMB signal. No brand-chasing (no recognizable names). Clearest disqualify so far.
+Rating: 1.5/10 — clear disqualify. 4 employers in 3.5 years, accelerating to two sub-4-month stints most recently. Zero quantified numbers, no US/SaaS/enterprise/SMB signal.
 
 ## Turn 5 — Candidate 4: Pravin Sigtia
-
-### User
-[Uploaded resume PDF] check this
-
-### Assistant
-Rating: 8/10 — qualify, move to interview. Two employers in 15 years (Monster 2011-2023 with internal promotion, TargetBay 2023-present) — opposite of iteration red flag. Quantified results: 120-135% of quota multiple consecutive quarters, Top 5 Account Manager 8 consecutive years, 1,000+ demos, 20% deal-size increase, 25% demo-to-close improvement, 18% renewal-rate improvement. US market explicit: "high-value enterprise clients across the U.S." for over a decade. Full-cycle closing explicitly described. Verify: his US experience is at Monster (ITES/recruitment, not software) — only 3.5yr is actual SaaS experience; confirm he wants an IC AE role given current management scope; confirm SMB vs enterprise fit. Clear qualify, worth a screening call.
+Rating: 8/10 — qualify, move to interview. Two employers in 15 years (Monster with internal promotion, TargetBay). Quantified: 120-135% quota multiple quarters, Top 5 AM 8 consecutive years, 1,000+ demos, 20% deal-size increase, 25% demo-to-close improvement, 18% renewal improvement. Explicit US enterprise clients for a decade. Verify: US experience is ITES not software (only 3.5yr actual SaaS); confirm IC vs management fit; confirm SMB vs enterprise.
 
 ## Turn 6 — Candidate 5: Shreyash Patil
-
-### User
-[Uploaded resume PDF] check this one
-
-### Assistant
-Rating: 6/10 — genuine judgment call, directly tests your own stated rule. 3 jobs in 4 years (Talent Titan 1yr, Simplilearn 1.7yr, 6-month gap, Globussoft ~1yr) — close to a literal match for the hard red flag. But substance is strongest in the batch: $35,000 revenue, $200,000+ annual revenue with 157% of quota and $1,250 ACV, $7,000 monthly quota, $250,000+ cumulative revenue. Full-cycle closing explicitly and consistently claimed. Never says "United States" — only Europe/Middle East/South Asia/APAC/Domestic, a real gap. Resume is unusually complete/rubric-shaped — worth one verification step before trusting numbers. Recommend a screening call: press on US exposure, explain job changes and gap, substantiate numbers.
+Rating: 6/10 — judgment call. 3 jobs in 4 years (~12-20mo each) — close to literal match for hard red flag, but strongest quantified substance in batch ($35K, $200K+/157% quota/$1,250 ACV, $7K monthly quota, $250K+ cumulative). Never says "United States" explicitly — gap on that criterion. Resume unusually complete/rubric-shaped — verify numbers. Recommend screening call.
 
 ## Turn 7 — Candidate 6: Shiv Sharma
-
-### User
-[Uploaded resume PDF] check this
-
-### Assistant
-Rating: 6/10 — qualify with reservations. Four employers across 13 years, last nine at one company (ProProfs) — cleanly clears iteration red flag, longest single-employer tenure in the batch. US/SMB experience present but old (2013-2016, IT-services/offshoring partner development, ended ~10 years ago) and a different motion than product sales. Current 9-year role is inbound-lead conversion (15 demos/week, 30% close rate) with no outbound-prospecting language and no revenue/quota figures. No brand-chasing. Recommend a screening call on one question: has he ever built his own outbound pipeline from scratch?
+Rating: 6/10 — qualify with reservations. Four employers/13 years, last nine at ProProfs — clears iteration flag, longest single-employer tenure in batch. US/SMB experience old (2013-2016, offshoring partner dev, different motion) and stale. Current 9-year role is inbound-only (30% close rate, no revenue/quota figures, no outbound language). Recommend screening call: has he ever built outbound pipeline from scratch?
 
 ## Turn 8 — Candidate 7: Aswan Basha I
-
-### User
-[Uploaded resume PDF] check this
-
-### Assistant
-Rating: 1/10 — clear disqualify, not close. Total actual sales experience ~14 months (2-month internship + 1yr BDE at Ediglobe). Most recent two years (2024-2026, current) are unrelated freelance UI/UX design work. Resume self-identifies as seeking SDR/BDE-level roles — wrong seniority for an AE opening. No quantified results, no US market, no enterprise/SaaS signal. Entry-level profile with a two-year gap in an unrelated field. Disqualify.
+Rating: 1/10 — clear disqualify. ~14 months total sales experience, most recent two years unrelated freelance design work, self-identifies as seeking SDR/BDE roles. Wrong seniority level entirely.
 
 ## Turn 9 — Candidate 8: Rohit Rana
-
-### User
-[Uploaded resume PDF] check this
-
-### Assistant
-Rating: 5/10 — borderline, recommend a verification call. Only two employers across ~7 years (Daurcom 4.5yr, NetCom ~26mo) — strong stability. 7-month current gap unexplained, worth asking about. Real question is role type: Daurcom years were pure Customer Success (no prospecting/closing language). NetCom claims full funnel including closing but "Partner Account Manager" title and Cisco/Microsoft co-selling emphasis suggests channel/partnership management more than net-new hunting. US/segment signal reasonably strong but partly inferred (SLG/DOD/CPG/FSI = US GTM shorthand); both roles skew mid-market/enterprise, not SMB. Recommend screening call on hunter-vs-account-manager distinction plus the gap.
+Rating: 5/10 — borderline, verify. Two employers/~7 years (Daurcom 4.5yr CS role, NetCom ~26mo). 7-month current gap unexplained. Daurcom was pure Customer Success (no closing language); NetCom claims full funnel but title/co-selling emphasis suggests channel/partnership management, not net-new hunting — verify. US signal inferred (SLG/DOD/CPG/FSI); both roles skew mid-market/enterprise not SMB.
 
 ## Turn 10 — Candidate 9: Ridaiy Ajrawat
-
-### User
-[Uploaded resume PDF] check this
-
-### Assistant
-Rating: 3/10 — disqualify for this AE opening, though underlying skill set might fit a different requisition. 7 employers in 9 years, most recent four landing at ~12-13 months each before collapsing to a 1-2 month freelance stint (Stamina.io, Mar-Apr 2026) — clearest match yet for the hard red flag. His actual AE-title closing experience is only that 1-2 month freelance stint on tiny $999 TCV deals; everything Aug 2022-Jan 2026 was SDR/Senior SDR (pipeline generation, not closing) — his summary overstates real closing experience. Positives: last three roles show direct, current, consistent US/SMB exposure, real methodology fluency (BANT/SPIN/MEDDPICC), honest (not inflated) quota numbers. Disqualify for the AE opening; worth a second look for a future SDR/BDR requisition.
-
-Running tally after 9 candidates: qualify — Pravin Sigtia (8/10). Borderline/verify — Shreyash Patil (6/10), Shiv Sharma (6/10), Rohit Rana (5/10). Disqualify — Rajan Rastogi (4/10), Ipsita Sukanya (4/10), Shaun Sylvester (1.5/10), Aswan Basha (1/10), Ridaiy Ajrawat (3/10).
+Rating: 3/10 — disqualify for this AE opening. 7 employers/9 years, most recent four at ~12-13mo each collapsing to a 1-2 month freelance stint. Actual AE-title closing experience is only that 1-2 month stint on $999 TCV deals; 3.5 years prior were all SDR/Senior SDR (pipeline gen, not closing) — summary overstates closing experience. Real positives: current US/SMB exposure, methodology fluency, honest (not inflated) quota numbers. Worth a look for a future SDR/BDR requisition instead.
 
 ## Turn 11 — Candidate 10: Arnold Stanley Dias
-
-### User
-[Uploaded resume PDF] check this
-
-### Assistant
-Rating: 7.5/10 — qualify, move to screening call. Strongest overall candidate in the batch on substance. Bimodal tenure pattern: two long stable/high-performing runs (Flair IT 4.25yr, Agile CRM 3yr, Doctor Alliance 2.8yr) bookending a rougher 2019-2022 stretch (three short jobs, two gaps, plausibly pandemic-era) plus a current 12-month gap since Aug 2025 that needs a direct explanation. Substance: repeated, specific, multi-employer quantified results — $550K+ ARR in year one at Doctor Alliance (US healthcare, Enterprise Accounts across the US), $22K closed in 25 days plus $150K pipeline in 50 days at Electroneek (highest revenue in region for the quarter), doubled territory MRR over 2.7 years at Agile CRM. Cleanest, most explicit, most current match on both US and SMB-through-enterprise criteria simultaneously. Advance via screening call focused on the 2019-2022 volatility and the current 12-month gap.
-
-Running tally after 10 candidates: qualify — Arnold Dias (7.5/10), Pravin Sigtia (8/10). Borderline/verify — Shreyash Patil (6/10), Shiv Sharma (6/10), Rohit Rana (5/10). Disqualify — Rajan Rastogi (4/10), Ipsita Sukanya (4/10), Ridaiy Ajrawat (3/10), Shaun Sylvester (1.5/10), Aswan Basha (1/10).
+Rating: 7.5/10 — qualify, move to screening call. Strongest substance in batch. Bimodal tenure: two long stable/high-performing runs (Flair IT 4.25yr, Agile CRM 3yr, Doctor Alliance 2.8yr) bookending a rougher 2019-2022 stretch (plausibly pandemic-era) plus a current 12-month gap since Aug 2025 needing direct explanation. Repeated multi-employer quantified results: $550K+ ARR year one at Doctor Alliance (US healthcare, Enterprise Accounts across the US), $22K in 25 days + $150K pipeline in 50 days at Electroneek (highest revenue in region), doubled territory MRR over 2.7 years at Agile CRM. Cleanest, most current match on both US and SMB-through-enterprise criteria. Screening call should probe the 2019-2022 volatility and the current gap.
 
 ## Turn 12 — Candidate 11: Shruti Sharma
-
-### User
-[Uploaded resume PDF] check this
-
-### Assistant
-Rating: 1.5/10 — disqualify. Tenure is fine (four employers in 6.5 years, no iteration concern). The problem is fit, fundamentally: only one of four roles (Click Labs, 15 months) has any sales-flavored language, and even that is thin with no quota/revenue/deal figures. Every other role (Bandhan Bank CRO, uExcelerate Business Execution Consultant, current Eupnea Management Consultant) is operations, client servicing, and project coordination, not sales — her own summary self-identifies as "Account Management and Client Operations." No quota-carrying language, no revenue figures, no US market mention, no SMB/enterprise segment language anywhere. This is a client-operations/project-coordination profile, not an AE candidate. Disqualify.
+Rating: 1.5/10 — disqualify. Tenure fine (four employers/6.5 years, no iteration issue) but this is fundamentally an operations/account-management/project-coordination career, not sales — only one of four roles (Click Labs, 15mo) has any sales language, and even that is thin with no numbers. No quota language, no revenue figures, no US or SMB/enterprise signal anywhere. Not an AE candidate.
 
 Running tally after 11 candidates: qualify — Arnold Dias (7.5/10), Pravin Sigtia (8/10). Borderline/verify — Shreyash Patil (6/10), Shiv Sharma (6/10), Rohit Rana (5/10). Disqualify — Rajan Rastogi (4/10), Ipsita Sukanya (4/10), Ridaiy Ajrawat (3/10), Shaun Sylvester (1.5/10), Shruti Sharma (1.5/10), Aswan Basha (1/10).
+
+## Turn 13 — Candidate 12: Ranjeet Kour
+
+### User
+[Uploaded resume PDF] check this onr
+
+### Assistant
+Rating: 3/10 — disqualify, though tenure discipline is genuinely good. Only two employers across 8.5 years (Sitel 13mo, then Dell Aug 2018-Jan 2026 continuously via internal promotion from technical support to Account Manager 1, Inside Sales) — clears the iteration red flag cleanly. But real sales-titled experience is only ~4.2 years (Nov 2021-Jan 2026), described entirely generically with no quota, revenue, deal size, or attainment percentage anywhere. "Client and Enterprise products" almost certainly refers to Dell's internal product-line naming, not a customer-segment claim — no real evidence of SMB or enterprise customer experience, and no US/international customer mention at all; looks like a domestic India-facing inside sales role. Currently out of work since Jan 2026 (~7 months, unexplained), and his own summary includes an unusual line about wanting to "re-establish a successful sales career," suggesting something didn't go as planned recently — worth asking about directly. Net: real company loyalty, but no quantified proof of sales performance and no evidence on either of the two specific criteria (US, SMB/enterprise). Disqualify.
+
+Running tally after 12 candidates: qualify — Arnold Dias (7.5/10), Pravin Sigtia (8/10). Borderline/verify — Shreyash Patil (6/10), Shiv Sharma (6/10), Rohit Rana (5/10). Disqualify — Rajan Rastogi (4/10), Ipsita Sukanya (4/10), Ridaiy Ajrawat (3/10), Ranjeet Kour (3/10), Shaun Sylvester (1.5/10), Shruti Sharma (1.5/10), Aswan Basha (1/10).
