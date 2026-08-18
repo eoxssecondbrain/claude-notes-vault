@@ -6,18 +6,24 @@ created: 2026-08-18
 updated: 2026-08-18
 ---
 
-User: That's it. We don't need anything else. You can think outside the box. Give me some ideas on what all we can do tomorrow if we dedicate the whole day towards this implementation.
+User: Let's give these guys 10 prompts each that they can put in the Claude account. Things like:
 
-Assistant: A few things beyond the core agenda, if the whole day is open:
+* Start with: "What do you know about me?"
+* They can fix it if something is wrong.
+* "What do you think my roles and responsibilities are?"
+* Make me a six-month growth plan.
 
-Build the onboarding SOP live, using Claude itself. Instead of writing the 150-person onboarding doc separately, have Isha and Claude draft it during the day, based on what actually worked in the room. Dogfooding your own AI to build the doc that teaches everyone else how to use AI.
+Assistant: Ten prompts, same set for all 10 people tomorrow — works for any role, and doubles as the "break it" and tribal-knowledge exercises from before:
 
-End the day with a real showcase, not a wrap-up meeting. Each of the 10 people demos the one automation they built live, screen-shared. Record it. That recording becomes onboarding material for the next 105, and later, a proof-point asset for Sabre or 3GM sales conversations — real EOXS people, real time saved, not a pitch deck mockup.
+1. What do you know about me?
+2. Anything wrong or missing in that — fix it.
+3. Based on what you know, what do you think my role and responsibilities are?
+4. What are 3 things I should be doing daily that I'm probably not?
+5. Make me a six-month growth plan for my role.
+6. What's one task I do every week you could take off my plate? Set it up as a scheduled task.
+7. Tell me one thing about my job that's never been written down anywhere. Turn it into a note.
+8. Look at my recent emails and calls — what's the most important thing I might be missing right now?
+9. Draft a message to [a colleague] about [something pending] in the tone I'd actually use.
+10. Where could you be wrong or out of date about what you just told me?
 
-Run a "break it" hour. 30 minutes where the group deliberately tries to get OV2 or Claude to say something wrong about EOXS data — bad numbers, wrong client info, access it shouldn't have. Better to find the failure mode today, on your own team, than after you've handed this to a client.
-
-Capture tribal knowledge as you go. Each person writes down one thing about their job that's never been documented — a workaround, an unwritten rule — and turns it into a skill or wiki note with Claude's help today. That's institutional knowledge that normally only lives in someone's head, captured for free.
-
-Measure something real. Pick one task each person automates and log time-before vs time-after for the rest of the week. Ten small numbers, added up, becomes your first real ROI data point — for you, and eventually for a Sabre or 3GM pitch.
-
-Use the support skill as a live test, not a demo. Have Humaira run today's actual support tickets through the new skill alongside her normal process, side by side, and compare. Real tickets beat a sample prompt.
+Prompt 10 matters most tomorrow — it's the one that surfaces whether OV2's answer about someone is stale, wrong, or leaking something it shouldn't.
