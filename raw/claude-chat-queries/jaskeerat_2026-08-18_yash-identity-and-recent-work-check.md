@@ -52,3 +52,17 @@ Yash Motghare — mentioned inside a different page, titled "Internal Email Arch
 Yashvir Test — wiki page titled "Yashvir Test — Weekly Time Tracking," page_type: analysis, source_file_path: wiki/analyses/hr-weekly-reports/Yashvir Test.md. Returned by get_wiki_page(title="Yashvir Test").
 
 That third one also has a hard file path attached since I opened it directly rather than just seeing it in search snippets — the other two I have as page titles only, not underlying file paths, since search_wiki doesn't return source_file_path in its result list.
+
+User: What is Yashvir Singh Thakur currently working on?
+
+Assistant: Most recent verified activity, from email thread id 275 ("Sales person on boarding training and KT," raj_gmail, Aug 4–6 2026):
+
+Yashvir Singh Thakur (yash@eoxsteam.com) is handling operational onboarding for a new two-week trial sales contractor, Folabi Odunaiya (Aug 4–14 2026 engagement). Rajat Jain's own words in that thread: "Yashvir Singh Thakur is copied. He sets up your accounts and handles anything operational. Anything about the pitch, a live opportunity, or a prospect who wants to talk numbers comes to me." So his current, concrete task: account/system setup and logistics (a later message in the same thread is him fixing a wrong Zoom link) for that onboarding, not the sales pitch itself — that stays with Raj.
+
+That sits alongside two other things the vault has on him as ongoing, not one-off:
+- Internal recruiting operations — his longer-running role since Jan 2024 (entity page, corroborated by multiple recruiting/hiring email archive batches).
+- Listed as part of the "EOXS AI/BI team" in Eastern States Steel's post-launch operations page, alongside Hashir Saleem on the dev/support side.
+
+Two open flags worth knowing about, not resolved: a Cattr time-tracking ambiguity (unclear whether a July 2026 "Yashvir Thakur" hours row belongs to him or to the separate "Yashvir Test" placeholder entry), and a travel-reimbursement discrepancy where a claimed 2-night stay doesn't match a submitted 1-night Airbnb receipt — flagged for review, unresolved.
+
+Nothing in search results is newer than Aug 6, 2026 for him specifically.
