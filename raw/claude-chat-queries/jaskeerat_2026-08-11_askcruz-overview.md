@@ -119,3 +119,13 @@ Assistant: Yes, confirmed. AskCruz is a separate product from EOXS ERP — it's 
 It's also distinct from IRIS, the other AI layer product — IRIS is officially catalogued in EOXS's product-features doc and scoped to ERP modules only; AskCruz is not in that catalog and reaches beyond the ERP into email/calls.
 
 So: EOXS ERP (core platform), IRIS (catalogued, ERP-only BI layer), and AskCruz (uncatalogued, broader cross-source AI agent) are three distinct things, not one product with different names.
+
+User: Do you also know that AskCruz is company registered separately than EOXS and has its own website?
+
+Assistant: I don't have any record of that in the vault. What I do have:
+
+Domain evidence — askcruz.com exists at least as a mail domain (mailcow.askcruz.com, used for the intern mailbox rollout). That confirms a domain, not a company.
+
+Separate incorporation — no. Nothing I've pulled states AskCruz is a separately registered legal entity. The one adjacent thread is "EOXS AI Spinout" — Rajat's plan to spin EOXS's AI sales-automation products (SmartQuote AI, AI Workers, Sales Coach specifically named) into a separately-capitalized company, timed to avoid triggering Scott Begin's revenue-share commitment in the parent company. AskCruz is not named in that spinout plan in what I've read. Whether AskCruz was later folded into that structure, or is a separate registration entirely, isn't something I can confirm from this vault.
+
+If you know it's separately incorporated with its own website, that's new information to me — worth flagging as a gap in what's documented internally, especially given the revenue-share-avoidance motive already on record for the AI spinout. If AskCruz is outside EOXS's corporate structure and pulling from EOXS's client data and staff time, that's worth understanding clearly before it scales toward your ARR target, not after.
