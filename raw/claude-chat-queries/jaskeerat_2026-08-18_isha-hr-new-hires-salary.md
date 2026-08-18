@@ -69,7 +69,28 @@ Want me to do anything with this right now — like draft a template (offer lett
 USER (turn 2):
 Hi Could tell me new Hires salary data?
 
-ASSISTANT (turn 2, in progress):
-[Read threads-ov/SKILL.md and eoxs-wiki-db/SKILL.md per mandatory session-start rule. Called HR MCP get_index, list_employees(status=active) — 115 active employee records returned. Called HR MCP list_assets and get_asset(eoxs-salary-details) — retrieved the full EOXS Salary Details register (tier2_confidential), covering Aug 2023 through Jun 2026. Cross-checking the employee directory's date_of_joining field against the salary register's most recent months (2026) shows two different pictures of "new hires": (a) employee-directory joiners from Sep-Oct 2025 (last recorded joining dates in that table), and (b) roughly 40 names that first appear in the salary register starting Jan-Apr 2026 (mostly interns/BA/Software Interns/Mkt-Ops roles) with no matching date_of_joining record in the employee directory at all — a data gap between the two sources worth flagging once we define the timeframe.]
+ASSISTANT (turn 2):
+One flag before I pull this: the employee directory's date_of_joining field and the salary register disagree on who counts as a "new hire" — the directory's most recent recorded joining dates are Sep–Oct 2025, but the salary register shows ~40 more names (mostly interns/BAs) first appearing on payroll between Jan–Apr 2026 with no matching join-date record in the directory at all. That's a data gap worth knowing about regardless of what you pick below.
 
-Asking Isha to confirm the timeframe for "new hires" before pulling the full breakdown, since the two source tables disagree on who counts as recent and the answer would otherwise be either incomplete or padded with ~2 years of joiners depending on interpretation.
+What counts as "new hires" for this?
+
+[ask_user_input_v0 tool called with options: "Last 30-60 days (2026 payroll additions)", "All of 2026 hires so far", "Employees directory shows joined Sep-Oct 2025", "Custom date range (I'll specify)"]
+
+USER (turn 3):
+isha bisht salary details
+
+ASSISTANT (turn 3):
+Isha Bisht — HR Lead, HR department, employee id 46, manager Remya, official join date on record: 2024-06-24.
+
+Salary register entries (INR, monthly):
+- 2025: Apr 7,000 · May 7,000 · Jun 7,000 · Jul 7,000 · Aug 7,000 · Sep 7,000 · Oct 7,000 · Nov 11,428 · Dec 16,500
+- 2026: Jan 16,500 · Feb 16,500 · Mar 16,500 · Apr 16,500 · May 16,500 · Jun 44,500
+
+Two things worth flagging:
+
+1. Your directory join date is 2024-06-24, but the salary register has no entries before Apr 2025 — a 10-month gap. Either the register is incomplete for that period or your actual pay start date differs from the recorded join date.
+2. Jun 2026 jumps from 16,500 to 44,500 — a large one-month spike with no note attached (could be a bonus, arrears, or a data entry issue). Worth checking against payroll records directly since the asset itself gives no explanation.
+
+Source: eoxs-db, asset "EOXS Salary Details" (tier2_confidential) + employee directory.
+
+Still want the new-hires breakdown from earlier, and if so which group?
