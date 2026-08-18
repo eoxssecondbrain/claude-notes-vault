@@ -97,3 +97,13 @@ Companies/contacts database — likely yes, since IRIS spans "all modules" and C
 Historical data — yes, this one is solid. ERP modules include inventory forecasting (explicitly historical), sales history, financial statements with drill-down. If IRIS spans "all modules," it spans that historical data too.
 
 So the real dividing line here isn't "does IRIS see less data" in a vague sense — it's that IRIS is bounded to the ERP system itself, while AskCruz/the Claude agent concept is the one built to reach outside the ERP into email and calls. That's consistent with everything else we've found: IRIS is the catalogued, ERP-native BI tool; AskCruz is the broader, still-informal cross-source agent.
+
+User: So it just have an access to an inbuilt ERP CRM that breakdowns the complex answers to simple words?
+
+Assistant: Close, but two corrections worth making:
+
+Not just CRM — it spans all ERP modules, not one. Sales, inventory, finance, purchasing, processing, supply chain — same natural-language interface across all of them, and it can pull cross-module (e.g., a question that needs both sales and inventory data in one answer).
+
+It's not simplifying existing complex answers — it's generating the report from raw data on the fly. You ask a question in plain language, it queries the underlying data and produces the report itself, rather than taking some existing complex output and rephrasing it simpler.
+
+So more accurate framing: IRIS is a natural-language query layer over the ERP's own data across every module, that builds the answer/report live rather than translating a pre-existing one. What it doesn't do is reach outside the ERP — no email, no calls, no external correspondence. That's the boundary that separates it from AskCruz.
