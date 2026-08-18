@@ -37,3 +37,17 @@ User: Is AskCruz a different product than the EOXS?
 Assistant: Yes. Same answer as above: AskCruz is a separate AI reasoning/agent layer, not part of EOXS ERP itself. EOXS ERP is the core steel-industry ERP platform (sales/CRM, inventory, processing). AskCruz sits on top of ERP, email, and call data and is sold separately — as an add-on to existing EOXS clients (3GM Steel) and also standalone to entities with no EOXS ERP relationship at all (the legal-services prospect, virtualilegal.com).
 
 The one open question, still unresolved in the data: whether AskCruz is functionally the same thing as IRIS (a separately-named natural-language BI product) or genuinely distinct — the vault itself hasn't reconciled that naming overlap.
+
+User: One thing I can't fully resolve from the data: there's naming overlap/inconsistency across threads between AskCruz, "Company Brain," and IRIS (a separately-documented natural-language BI product, also sold both as an EOXS add-on and standalone against other ERPs like Invera)
+
+where is this mentioned?
+
+Assistant: That comes from three separate pages I pulled:
+
+3GM Steel — AskCruz (Company Brain) Proposal Call (Aug 2026) — this page itself notes the pivot: Ron J's Aug 17 corrected proposal included "a notable strategic decision to run Company Brain on Claude rather than AskCruz as the client-facing front end." That's Rajat/Ron treating AskCruz and the Claude-direct approach as two different implementation paths for the same "Company Brain" pitch.
+
+AskCruz API Cost Pause (Aug 13, 2026) — contains this flag verbatim in the tool data: "Tanya Shrivastava says AskCruz couldn't answer questions 'about EOXS,' which is odd if AskCruz is... 'the same system this wiki runs on'... the transcript is ambiguous between 'eos' (EOXS) and 'Ask[C]ruz' as what couldn't be answered." That's the unresolved confusion I referenced.
+
+IRIS (wiki page, filed under "3GM Steel — IRIS AI Historical Data Preload") and EOXS ERP page — these describe IRIS separately as "Natural-language BI — type a question, get a live cross-module report," sold both as an EOXS add-on and as a standalone product for non-EOXS ERPs (Invera, Steel Tracks, QuickBooks). Nothing in the wiki explicitly states IRIS and AskCruz are the same or different product — they're just documented on separate pages with separate naming, which is the inconsistency.
+
+None of these pages state directly "AskCruz and IRIS are the same/different" — that's my own inference from seeing both used to describe similar AI-reasoning-over-ERP-data functionality without a page that cross-references or distinguishes them. Flagging it as unresolved was my call, not a sourced claim from any single page.
