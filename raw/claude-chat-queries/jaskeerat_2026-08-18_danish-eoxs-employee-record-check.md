@@ -59,3 +59,25 @@ Based on the record, none currently — your last active client thread (Sabre Al
 - The "reinstatement" between your Nov 2025 resignation and July 2026 termination is inferred by the system from leave-allocation data, not stated outright anywhere — worth confirming directly if it matters to you.
 
 Source: EOXS Data General (eoxs-db) — wiki entity page, HR/termination emails, weekly time-tracking and Sabre Alloys task pages. Employee performance/monitoring figures (Cattr hours, productivity numbers) are redacted at the connector level, not something I chose to omit.
+
+USER: Note: the transcript saved under a `jaskeerat_` filename prefix — that's resolved server-side from the connector's authenticated user, not from anything I set, and it doesn't match the name you gave me. Worth knowing if you're relying on these saves being attributed to you specifically.
+
+write an email where i wants to send email to Ayan project manager keeping Raj in CC that it should not show jaskeerats name
+
+ASSISTANT: [Drafted email via message_compose_v1 tool - kind: email]
+Subject: Chat transcript saves attributing to wrong user - Jaskeerat instead of Danish
+
+Hi Ayan,
+
+Flagging an issue with the Threads OV chat-transcript save tool. When I save a conversation, the output file is named with a jaskeerat_ prefix instead of my own name, even though I'm the one initiating and authenticated on my own session.
+
+Example: raw/claude-chat-queries/jaskeerat_2026-08-18_danish-eoxs-employee-record-check.md
+
+The user attribution is resolved server-side from the connector URL, so this looks like a config issue on that connector rather than something I can fix from my end. Can you check the connector setup and correct the mapping so saves under my session are attributed to me, not Jaskeerat?
+
+Looping in Raj for visibility.
+
+Thanks,
+Danish
+
+ASSISTANT (chat reply): Drafted above — flags the misattribution, points to the connector config as the likely fix, CCs Raj for visibility.
