@@ -26,3 +26,17 @@ Yes, at least three:
 - "Yashvir Test" — a placeholder/test row in the automated weekly Cattr time-tracking reports. The vault itself flags an unresolved contradiction over whether a "Yashvir Thakur" row in one report belongs to this test entry or to Yashvir Singh Thakur.
 
 One vault page states outright that multiple people at EOXS use variants of the name. Practical disambiguator: email handle and role — recruiting generalist (Thakur) vs. marketing-to-functional-consultant (Motghare) vs. you, who don't currently have your own entity record in this vault under "Yashvir Singh" at all — only the "jaskeerat" account label ties back to you here.
+
+User: Where did you find the data from, about there are 3 similar names?
+
+Assistant: Direct sourcing, no bold per your preference:
+
+I ran search_wiki(query="Yashvir") on the EOXS data general connector first. That returned a wiki entity page titled "Yashvir Singh Thakur" with a snippet describing him as an EOXS generalist hire (Jan 2024) who grew into running internal recruiting operations. Several other hits in that same search were email-archive source pages referencing the same person by his actual address, yashvirthakur351@gmail.com.
+
+The second name came from a follow-up search, search_wiki(query="Yashvir Singh Thakur entity generalist recruiting"). One result, a source page titled "Internal Email Archive — HR and Team Administration (batch 4, 2025-08-12 to 2026-03-10)," stated that a separate archive batch documents "a different Yash (yashmotghare918@gmail.com) chasing a transition offer letter for an internal move from Marketing Generalist to Junior Functional Consultant."
+
+The third name came from directly opening the page: get_wiki_page(title="Yashvir Test"). That's an analysis page, "Yashvir Test — Weekly Time Tracking," part of the automated HR Cattr time-tracking report set. It carries a flag (type: contradiction) stating that a July 2026 Monthly Performance Summary has a row for "Yashvir Thakur" that no source confirms belongs to this "Yashvir Test" entry or to the separate "Yashvir Singh Thakur" entity page — left unmapped in the vault itself.
+
+The general line "multiple people at EOXS use variants of the name" is a direct quote-paraphrase from that same "Internal Email Archive — HR and Team Administration (batch 4)" source page, in the same sentence that flagged Yash Motghare.
+
+So: one search_wiki call, one more targeted search_wiki call, and one get_wiki_page call — three separate calls, three separate hits, none inferred.
