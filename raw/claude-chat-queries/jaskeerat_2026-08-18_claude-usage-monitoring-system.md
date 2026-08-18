@@ -67,3 +67,25 @@ The one thing I couldn't confirm: what happens with the "edit an old message to 
 So in short: the biggest win is switching from personal accounts to company accounts. That alone solves most of what Raj is worried about. There's just one open question mark on the "edit a message" trick, which is where a homemade backup solution would still come in.
 
 Want me to keep going, in the same simple style, into what that homemade backup solution could actually look like?
+
+**User (turn 4):**
+basically we have company emails and the company is paying for the claude subscriptions. so we can make something some agent some mcp somethig just think about it something  that can be done locally on the PCs of every one. so it keeps a record of it the message that is being sent somewhere in the data base and the edited message also there. just that is what we want.
+
+**Assistant (turn 4):**
+Yes, that's doable, and it's actually simpler than the other options I was going to walk through. Let me explain the idea plainly.
+
+The building block is a small add-on (a browser extension) that IT installs on every company laptop, sitting inside Chrome. Its only job is to watch the Claude tab.
+
+Here's the key trick that solves the "edit it later" problem: the extension doesn't wait and check later what someone's chat looks like. It watches the exact moment someone hits send. The second that happens, it grabs whatever text was just typed, stamps it with who sent it, when, and which chat, and immediately sends a copy to our own private database — completely separate from Claude. So even if the person goes back five minutes later and edits that same message to something harmless, it doesn't matter. We already had our own copy from the moment it was sent, sitting safely in a database they have no access to. Same thing with deleting the whole chat — irrelevant, because our copy left their laptop before any of that happened.
+
+If they edit a message and resend it, that's just a second "send" moment, so we'd capture that too, as a new entry — meaning we'd actually end up with the full history: what they first asked, and what they changed it to. Even better than just one snapshot.
+
+Where does it save to: a simple database that only the company controls — could be as basic as a small internal server with a database attached, and every laptop's extension just quietly sends its captures there over the internet in the background.
+
+Two things worth being upfront about, since you'd want to know before building this, not after:
+
+First, the extension needs to be locked so employees can't just turn it off or uninstall it. IT can push a setting (through the same system that manages company laptops) that force-installs it and hides the option to remove it. Without that lock, this whole thing is pointless — anyone could just disable it for five minutes.
+
+Second, this only works on the company laptop, in the browser it's installed in. If someone uses their phone, a personal laptop, or a different browser without the extension, none of this sees it. That's a real gap, not a small one — it just needs to be said plainly rather than assumed away.
+
+If this sounds like the direction you want, next step is me laying out exactly what needs to be built: the extension itself, the small server + database it talks to, and how IT locks it down on every laptop. Want me to go there?
