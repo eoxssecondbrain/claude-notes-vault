@@ -6,31 +6,18 @@ created: 2026-08-18
 updated: 2026-08-18
 ---
 
-User: Note that all 115 people are not getting 20 accounts. Only 10 people are getting it. They are:
+User: PRO
 
-* Ayan
-* Ron
-* Humaira
-* Hashir
-* Aryan
-* Mehra
-* Muskan
+Assistant: Pro it is. Final version for 10 seats tomorrow:
 
-For HR, one common account for all the interns. Isha will have a separate account. Kartik Nizamudin
+Tonight — Ron collects the 9 names + HR's shared login email, pre-loads them so account creation isn't done live at 9:00.
 
-Assistant: Some of these don't match cleanly to one person. Before I lock the roster: [asked 3 clarifying questions via selector: which Ayan, whether Aryan/Mehra is one person or two, whether Kartik Nizamudin is one person or two]
+9:00 — each person creates their $20 Pro account on the card, then pastes the OV2 URL into Customize > Connectors and authenticates. Since it's Pro, this is manual per person — Ron confirms each one connects before moving to the next.
 
-User: Q: "Ayan" — two people match this name in records. Which one?
-A: Ayan Dutta (Sales, Sr. Lead Dev Rep)
+10:00 — MD files, scheduled tasks (Cowork > Scheduled), and basic Cowork use. Have each of the 10 set up one real scheduled task live in the room.
 
-Q: "Aryan" and "Mehra" — one person or two?
-A: No, it was ARYAN BAKSHI
+After that — Ron builds personalized settings per person. Priority: Humaira's support-email tone/format skill, since that's client-facing starting day one.
 
-Q: "Kartik Nizamudin" — one person or two?
-A: Two people: Kartik (Product) + G. Nijamuddin (Product)
+Wednesday check — all 10 logged in, OV2 connected, one scheduled task live, one personalized setting saved.
 
-Assistant: Locked roster — 9 named accounts + 1 shared:
-
-Ayan Dutta (Sales), Ron (Product), Humaira Zainab (Support), Hashir Saleem (Product), Aryan Bakshi (Product), Muskan Sharma (MBA Ops), Isha Bisht (HR Lead, separate), Kartik (Product), G. Nijamuddin (Product), plus one shared HR account for the rest of the interns.
-
-At 10 seats, plan choice matters less on cost — still open on control. Pro: each person adds the OV2 connector themselves, no admin oversight. Team: Ron adds it once at the org level, sees who's connected, can pull access if needed. Given this group includes support (client-facing) and product devs with SQL-console reach into production, I'd still do Team. Your call — proceed on Pro, or switch to Team?
+Standing note, not re-litigating: on Pro there's no connector allowlist, so all 10 get the same full-clearance OV2 access, including support and interns. That's your call already made — just make sure Ron knows it going in.
