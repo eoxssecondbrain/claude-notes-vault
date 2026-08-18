@@ -48,3 +48,21 @@ Workaround for now: split into two separate landed cost entries when this comes 
 
 Raj
 @Rajat Jain
+
+User:
+rewrite this 
+Hi @Christi 
+This draft invoice have been created now for the control tags which were delivered in the PL - B/OUT/09678
+Please review this once and let us know if this is good.
+Thank you
+Hashir
+
+Assistant:
+Hi Christi,
+
+The draft invoice has now been created for the control tags delivered in PL - B/OUT/09678.
+
+Please review and let us know if this looks good.
+
+Thanks,
+Hashir
