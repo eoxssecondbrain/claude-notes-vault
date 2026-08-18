@@ -111,3 +111,11 @@ So more accurate framing: IRIS is a natural-language query layer over the ERP's 
 User: Ohhh that makes sense now.
 
 Assistant: Good. Anything else on AskCruz/IRIS, or a different topic?
+
+User: noo, lets come back to the main thing, so you know that askcruz is a different product right?
+
+Assistant: Yes, confirmed. AskCruz is a separate product from EOXS ERP — it's not a module inside the ERP platform. It's an AI reasoning/agent layer (Claude-based) that sits on top of ERP, email, and call data, sold both as an add-on to existing EOXS clients and standalone to prospects with no EOXS ERP relationship at all.
+
+It's also distinct from IRIS, the other AI layer product — IRIS is officially catalogued in EOXS's product-features doc and scoped to ERP modules only; AskCruz is not in that catalog and reaches beyond the ERP into email/calls.
+
+So: EOXS ERP (core platform), IRIS (catalogued, ERP-only BI layer), and AskCruz (uncatalogued, broader cross-source AI agent) are three distinct things, not one product with different names.
