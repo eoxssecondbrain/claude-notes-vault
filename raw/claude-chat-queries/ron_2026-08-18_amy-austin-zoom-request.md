@@ -34,3 +34,19 @@ Ron
 ---
 
 Calibrated to level 1 — warm, no pressure, no reference to the reserve/inventory issue since you didn't ask me to address it directly. Want it firmer, or should I fold in the specific issue instead of leaving it open-ended?
+
+Human: "Hi Austin/Amy,
+
+Do you have 15 minutes today for a quick Zoom call? Let me know what time works and I'll send the invite.
+
+Ron"
+
+Thoughts on this?
+
+Assistant: Two issues:
+
+1. You asked for Amy specifically — this addresses "Austin/Amy" both. If the point is a direct line to Amy given her frustration, cc'ing/addressing Austin dilutes that and turns it into a group scheduling email rather than a direct check-in with her.
+
+2. Dropping "I'd like to connect directly on where things stand" leaves zero context for the ask. Given DPS is already tense, an unexplained "can we hop on a call today" from Ron can read as ominous rather than neutral — people fill in the blank themselves. A one-line reason costs nothing and prevents that.
+
+If the goal really is both of them, keep "Austin/Amy" and add back a reason. If the goal is specifically Amy, address just her.
