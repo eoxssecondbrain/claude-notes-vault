@@ -21,3 +21,13 @@ Org/process — there's a dedicated AskCruz project board in the teams-askcruz O
 Given the $1M ARR target, the load-bearing gap right now is that no deal has closed or been confirmed accepted — 3GM is the furthest along but stalled on proposal accuracy, and none of the others have progressed past intro/referral stage. Pricing figures are redacted in what I can see here.
 
 Sources: EOXS wiki — "3GM Steel — AskCruz (Company Brain) Proposal Call," "TA Associates — Inbound Investor Outreach," "AskCruz API Cost Pause," "AskCruz Board Scrum Reporting," "Ohio Strip Steel — Ask Cruz AI-Agent Intro Call."
+
+User: Is AskCruz a different product than the EOXS?
+
+Assistant: Yes — AskCruz is a separate product from EOXS ERP, not a module inside it.
+
+EOXS ERP is the core platform: cloud-based, steel-industry-specific ERP built by Prata Inc. (trading as EOXS) — sales/CRM, inventory, processing, etc.
+
+AskCruz is an AI agent/intelligence layer that sits on top of ERP, email, and call data — reasoning over that data rather than being the system of record itself. It's sold as an add-on/upsell to existing EOXS clients (that's the 3GM Steel proposal), but it's also being pitched independent of EOXS ERP entirely — the legal-services prospect (virtualilegal.com) has no EOXS ERP relationship at all, which means AskCruz can be sold standalone.
+
+One thing I can't fully resolve from the data: there's naming overlap/inconsistency across threads between AskCruz, "Company Brain," and IRIS (a separately-documented natural-language BI product, also sold both as an EOXS add-on and standalone against other ERPs like Invera). The 3GM proposal call page explicitly flags this — Rajat pivoted 3GM's deal to running "Company Brain" on Claude directly rather than through AskCruz as the front end, and a separate internal call has unresolved confusion about whether AskCruz can answer questions "about EOXS." I'm not treating AskCruz and IRIS as confirmed-identical or confirmed-distinct — the vault itself hasn't reconciled that, and I'd rather flag it than guess.
