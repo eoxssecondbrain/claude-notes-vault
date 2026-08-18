@@ -40,3 +40,15 @@ The third name came from directly opening the page: get_wiki_page(title="Yashvir
 The general line "multiple people at EOXS use variants of the name" is a direct quote-paraphrase from that same "Internal Email Archive — HR and Team Administration (batch 4)" source page, in the same sentence that flagged Yash Motghare.
 
 So: one search_wiki call, one more targeted search_wiki call, and one get_wiki_page call — three separate calls, three separate hits, none inferred.
+
+User: Can you give me the exact source name from where you fetched this data from?
+
+Assistant: Exact page titles, as returned by the tools, one per finding:
+
+Yashvir Singh Thakur — wiki page titled "Yashvir Singh Thakur," page_type: entity. Returned directly by search_wiki(query="Yashvir").
+
+Yash Motghare — mentioned inside a different page, titled "Internal Email Archive — HR and Team Administration (batch 4, 2025-08-12 to 2026-03-10)," page_type: source. Returned by search_wiki(query="Yashvir Singh Thakur entity generalist recruiting").
+
+Yashvir Test — wiki page titled "Yashvir Test — Weekly Time Tracking," page_type: analysis, source_file_path: wiki/analyses/hr-weekly-reports/Yashvir Test.md. Returned by get_wiki_page(title="Yashvir Test").
+
+That third one also has a hard file path attached since I opened it directly rather than just seeing it in search snippets — the other two I have as page titles only, not underlying file paths, since search_wiki doesn't return source_file_path in its result list.
