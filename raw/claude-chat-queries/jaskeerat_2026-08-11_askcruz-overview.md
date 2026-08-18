@@ -51,3 +51,19 @@ AskCruz API Cost Pause (Aug 13, 2026) — contains this flag verbatim in the too
 IRIS (wiki page, filed under "3GM Steel — IRIS AI Historical Data Preload") and EOXS ERP page — these describe IRIS separately as "Natural-language BI — type a question, get a live cross-module report," sold both as an EOXS add-on and as a standalone product for non-EOXS ERPs (Invera, Steel Tracks, QuickBooks). Nothing in the wiki explicitly states IRIS and AskCruz are the same or different product — they're just documented on separate pages with separate naming, which is the inconsistency.
 
 None of these pages state directly "AskCruz and IRIS are the same/different" — that's my own inference from seeing both used to describe similar AI-reasoning-over-ERP-data functionality without a page that cross-references or distinguishes them. Flagging it as unresolved was my call, not a sourced claim from any single page.
+
+User: How is IRIS different than AskCruz?
+
+Assistant: That asset doc — "EOXS ERP — Product Features Overview" (the official internal product-features reference) — settles this more than the wiki threads did.
+
+IRIS is an official, catalogued EOXS product. It's listed in the AI Tools table alongside 14 other named tools (SmartQuote AI, Contract Review AI, PromptPO AI, etc.), officially defined as: "Natural-language business intelligence across all modules; type a question and IRIS generates the report — covering sales, ops, finance, and supply chain."
+
+AskCruz does not appear anywhere in that official product-features document. Not in the AI Tools table, not elsewhere.
+
+So the practical difference:
+
+IRIS — a formalized, documented product module, sold as part of the EOXS catalog and pitched standalone to non-EOXS-ERP prospects (Invera, Steel Tracks, QuickBooks users). It's the natural-language BI layer specifically — ask a question, get a cross-module report.
+
+AskCruz — not in the official product catalog at all. It's functioning as an internal, still-forming initiative: an AI agent/reasoning layer built on Claude, referred to informally as "Cruz" or "Company Brain," being pitched ad hoc to specific prospects (3GM, Ohio Strip Steel, Collier Metals, a legal-services company) without a settled feature definition, pricing model, or even consistent internal naming — hence the confusion in the Aug 13 call about whether it can answer "about EOXS" questions.
+
+That's a meaningful distinction for your ARR target: IRIS is a shippable, definable product with an existing sales motion inside the EOXS catalog. AskCruz right now reads as pre-product — pitched deal-by-deal, without the same institutional definition, which is likely part of why the 3GM proposal had pricing inconsistencies and a mid-deal pivot to a different technical approach.
