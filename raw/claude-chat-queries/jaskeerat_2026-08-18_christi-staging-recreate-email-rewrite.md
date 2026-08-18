@@ -66,3 +66,24 @@ Please review and let us know if this looks good.
 
 Thanks,
 Hashir
+
+User:
+Rewrite this
+Hi @Christi 
+Please look into the new invoice which have been created and let us know if that is good.
+Also the backorder PL, is also created.
+Let us know if something else is required.
+Thank you 
+Hashir
+
+Assistant:
+Hi Christi,
+
+Please look into the new invoice that has been created and let us know if it's good.
+
+The backorder PL has also been created.
+
+Let us know if anything else is required.
+
+Thanks,
+Hashir
