@@ -107,3 +107,7 @@ Not just CRM — it spans all ERP modules, not one. Sales, inventory, finance, p
 It's not simplifying existing complex answers — it's generating the report from raw data on the fly. You ask a question in plain language, it queries the underlying data and produces the report itself, rather than taking some existing complex output and rephrasing it simpler.
 
 So more accurate framing: IRIS is a natural-language query layer over the ERP's own data across every module, that builds the answer/report live rather than translating a pre-existing one. What it doesn't do is reach outside the ERP — no email, no calls, no external correspondence. That's the boundary that separates it from AskCruz.
+
+User: Ohhh that makes sense now.
+
+Assistant: Good. Anything else on AskCruz/IRIS, or a different topic?
