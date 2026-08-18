@@ -133,3 +133,13 @@ AskCruz was renamed from Krinox on Aug 5, 2026. Same email: "We renamed Krinox t
 It's explicitly positioned as not steel-specific. Rajat's own words: "this is not limited to Steel. This product fits any business with 20+ employees." That's a materially different scope than what the 3GM/Sabre steel-account threads implied — those are just where the current sales activity happens to be.
 
 One thing to flag honestly: this creates real naming instability I should have caught sooner. In one thread it's "AskCruz," pitched broadly beyond steel; in another it's "Company Brain," pitched specifically to steel clients as an EOXS upsell; and Krinox was the freight-specific predecessor name. Whether these are all the same evolving product under different names at different times, or genuinely separate initiatives that happen to share underlying tech, isn't settled in the data — worth asking Raj directly rather than me continuing to infer.
+
+User: So until now whatever responses you gave, you didn't know everything about askCruz?
+
+Assistant: Correct — and worth being precise about why.
+
+My earlier answers were built from the synthesized wiki pages (the "second brain" layer), which is a curated summary sitting on top of the raw emails, not the raw emails themselves. Those wiki pages never mentioned askcruz.com, the Krinox rename, or the "any business with 20+ employees, not steel-specific" positioning. I only found those by running a direct full-text email search just now — something I hadn't done for this thread until you specifically asked about a website.
+
+So the gap wasn't that the data doesn't exist in the vault — it does, in a raw email from Aug 5. It's that the synthesized layer I was defaulting to hadn't captured it yet, and I didn't cross-check raw correspondence until prompted.
+
+Practical implication for you: everything I told you earlier about AskCruz's product identity, naming, and scope should be treated as "what the synthesized wiki currently reflects," not "the full picture." The wiki itself has a known lag (per the connector's freshness rules — new pages draft every 6 hours, and there's no guarantee everything gets promoted or written up). Given that AskCruz's whole pitch to clients is being a more complete, always-current second brain than what a human would piece together manually, this specific gap is a little ironic — and a reason to verify anything AskCruz-related against raw emails/calls before treating the wiki synthesis as final, especially for anything client-facing or pricing-related.
