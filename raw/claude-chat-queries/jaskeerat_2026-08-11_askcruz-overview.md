@@ -83,3 +83,17 @@ Both are being pitched into overlapping accounts. 3GM Steel has an active IRIS t
 Both have real deployment friction documented. IRIS at Sabre was flagged as sandbox/QA only, no signed commercial terms. AskCruz at 3GM has the pricing-inconsistency and mid-deal technical pivot problems already covered.
 
 Net: they're two expressions of the same strategic bet — that the reasoning/query layer over business data is a sellable product distinct from the ERP itself. IRIS is the version EOXS has formalized and named in its own product catalog; AskCruz is the version still being improvised deal by deal. Worth asking Raj directly whether these are meant to converge into one product or stay separate — the data doesn't show that decision has been made, and running two undifferentiated AI-layer pitches into the same accounts is the kind of thing that costs you deal velocity, not gains it.
+
+User: Does IRIS have access to email, companies database historic data, ?
+
+Assistant: Per the official product-features doc, no — IRIS is scoped to ERP modules only. It's defined as "natural-language business intelligence across all modules... covering sales, ops, finance, and supply chain." That's ERP transactional data, not correspondence.
+
+Breaking down your three questions:
+
+Email — not in scope. No source describes IRIS ingesting email. Email/call ingestion is documented specifically for the AskCruz/Claude-agent side and the internal second-brain vault, not IRIS. The AI Workers page draws this line explicitly: it separates workflow-automation tools and IRIS (ERP-only BI) from "the concept of a Claude AI agent connected directly to client ERP data" — which Sabre Alloys piloted May–June 2026 and which is the thing that became AskCruz/Cruz. That pilot is the one with the broader multi-source reach.
+
+Companies/contacts database — likely yes, since IRIS spans "all modules" and CRM/Contacts is one of EOXS ERP's core modules, but I don't have an explicit line confirming IRIS queries the Contacts module specifically. Flagging that as inferred, not sourced.
+
+Historical data — yes, this one is solid. ERP modules include inventory forecasting (explicitly historical), sales history, financial statements with drill-down. If IRIS spans "all modules," it spans that historical data too.
+
+So the real dividing line here isn't "does IRIS see less data" in a vague sense — it's that IRIS is bounded to the ERP system itself, while AskCruz/the Claude agent concept is the one built to reach outside the ERP into email and calls. That's consistent with everything else we've found: IRIS is the catalogued, ERP-native BI tool; AskCruz is the broader, still-informal cross-source agent.
