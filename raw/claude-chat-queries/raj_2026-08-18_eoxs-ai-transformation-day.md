@@ -42,3 +42,17 @@ Here's the day:
 6. Wednesday morning check — Confirm: every intended person has an active account, OV2 connected, one scheduled task running, and one personalized setting saved. Anyone missing any of these isn't AI-powered yet, they've just installed an app.
 
 One question for you: Team plan or 115 separate Pro accounts — which way do you want to go tonight?
+
+User: Note that all 115 people are not getting 20 accounts. Only 10 people are getting it. They are:
+
+* Ayan
+* Ron
+* Humaira
+* Hashir
+* Aryan
+* Mehra
+* Muskan
+
+For HR, one common account for all the interns. Isha will have a separate account. Kartik Nizamudin
+
+Assistant: Some of these don't match cleanly to one person. Before I lock the roster: [asked 3 clarifying questions via selector: which Ayan, whether Aryan/Mehra is one person or two, whether Kartik Nizamudin is one person or two]
