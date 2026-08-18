@@ -27,3 +27,7 @@ Assistant: Saved: reporting line to Sheenam, and the hire history (Marketing Int
 One thing before I lock it in: you said the full-time AI Engineer offer was "on 12th May" — but that's before your May 25 Marketing Intern hire date. That's likely a typo for a different month or year. What's the actual offer date?
 
 Also worth flagging: Odoo's hr_employee record for you still shows "Marketing Intern" in "Marketing/OPS Team" with no manager set. None of this — Sheenam as manager, the move to Software Developer Intern, the AI Engineer promotion — is reflected there. That's a live HR data gap on their end, not something I can fix since the connector is read-only.
+
+User: sorry my bad, it was march 25 and then 12 may.
+
+Assistant: Fixed — March 25 hire, May 12 offer. That timeline checks out now.
