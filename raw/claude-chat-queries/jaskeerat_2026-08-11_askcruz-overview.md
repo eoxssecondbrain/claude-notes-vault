@@ -143,3 +143,17 @@ My earlier answers were built from the synthesized wiki pages (the "second brain
 So the gap wasn't that the data doesn't exist in the vault — it does, in a raw email from Aug 5. It's that the synthesized layer I was defaulting to hadn't captured it yet, and I didn't cross-check raw correspondence until prompted.
 
 Practical implication for you: everything I told you earlier about AskCruz's product identity, naming, and scope should be treated as "what the synthesized wiki currently reflects," not "the full picture." The wiki itself has a known lag (per the connector's freshness rules — new pages draft every 6 hours, and there's no guarantee everything gets promoted or written up). Given that AskCruz's whole pitch to clients is being a more complete, always-current second brain than what a human would piece together manually, this specific gap is a little ironic — and a reason to verify anything AskCruz-related against raw emails/calls before treating the wiki synthesis as final, especially for anything client-facing or pricing-related.
+
+User: Out of everything do you atlease know we're selling askcruz as a seperate product?
+
+Assistant: Yes — that part is solid, corroborated across four independent accounts, not just one thread:
+
+3GM Steel — a standalone written proposal (separate pricing lines) for "Company Brain," pitched as an add-on/upsell to an existing EOXS client.
+
+Eastern States Steel — Krinox/AskCruz pitched with its own proposed pricing structure, evaluated by Ryan Capinski as a separate purchase decision against just "getting more value out of core EOXS first." That framing alone confirms it's being sold and evaluated as distinct from the ERP.
+
+Ohio Strip Steel — a dedicated "Ask Cruz: Intro Call," separate from ERP onboarding, run by Rajat specifically to demo Cruz.
+
+Legal-services prospect (virtualilegal.com) — pitched with zero EOXS ERP relationship at all, which only works if it's sold as its own product.
+
+So across four separate deal threads, four different prospects, and two different account owners, AskCruz consistently shows up with its own sales motion, its own proposal documents, and its own pricing — never bundled silently into an ERP implementation. That's the one fact in this whole conversation I'd call fully confirmed, not inferred.
