@@ -6,18 +6,18 @@ created: 2026-08-18
 updated: 2026-08-18
 ---
 
-User: PRO
+User: That's it. We don't need anything else. You can think outside the box. Give me some ideas on what all we can do tomorrow if we dedicate the whole day towards this implementation.
 
-Assistant: Pro it is. Final version for 10 seats tomorrow:
+Assistant: A few things beyond the core agenda, if the whole day is open:
 
-Tonight — Ron collects the 9 names + HR's shared login email, pre-loads them so account creation isn't done live at 9:00.
+Build the onboarding SOP live, using Claude itself. Instead of writing the 150-person onboarding doc separately, have Isha and Claude draft it during the day, based on what actually worked in the room. Dogfooding your own AI to build the doc that teaches everyone else how to use AI.
 
-9:00 — each person creates their $20 Pro account on the card, then pastes the OV2 URL into Customize > Connectors and authenticates. Since it's Pro, this is manual per person — Ron confirms each one connects before moving to the next.
+End the day with a real showcase, not a wrap-up meeting. Each of the 10 people demos the one automation they built live, screen-shared. Record it. That recording becomes onboarding material for the next 105, and later, a proof-point asset for Sabre or 3GM sales conversations — real EOXS people, real time saved, not a pitch deck mockup.
 
-10:00 — MD files, scheduled tasks (Cowork > Scheduled), and basic Cowork use. Have each of the 10 set up one real scheduled task live in the room.
+Run a "break it" hour. 30 minutes where the group deliberately tries to get OV2 or Claude to say something wrong about EOXS data — bad numbers, wrong client info, access it shouldn't have. Better to find the failure mode today, on your own team, than after you've handed this to a client.
 
-After that — Ron builds personalized settings per person. Priority: Humaira's support-email tone/format skill, since that's client-facing starting day one.
+Capture tribal knowledge as you go. Each person writes down one thing about their job that's never been documented — a workaround, an unwritten rule — and turns it into a skill or wiki note with Claude's help today. That's institutional knowledge that normally only lives in someone's head, captured for free.
 
-Wednesday check — all 10 logged in, OV2 connected, one scheduled task live, one personalized setting saved.
+Measure something real. Pick one task each person automates and log time-before vs time-after for the rest of the week. Ten small numbers, added up, becomes your first real ROI data point — for you, and eventually for a Sabre or 3GM pitch.
 
-Standing note, not re-litigating: on Pro there's no connector allowlist, so all 10 get the same full-clearance OV2 access, including support and interns. That's your call already made — just make sure Ron knows it going in.
+Use the support skill as a live test, not a demo. Have Humaira run today's actual support tickets through the new skill alongside her normal process, side by side, and compare. Real tickets beat a sample prompt.
