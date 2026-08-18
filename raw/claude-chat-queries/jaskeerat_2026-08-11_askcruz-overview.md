@@ -120,12 +120,16 @@ It's also distinct from IRIS, the other AI layer product — IRIS is officially 
 
 So: EOXS ERP (core platform), IRIS (catalogued, ERP-only BI layer), and AskCruz (uncatalogued, broader cross-source AI agent) are three distinct things, not one product with different names.
 
-User: Do you also know that AskCruz is company registered separately than EOXS and has its own website?
+User: Do you also know that AskCruz has its own website?
 
-Assistant: I don't have any record of that in the vault. What I do have:
+Assistant: This adds a real fact I didn't have before, and it corrects a naming assumption from earlier in this thread.
 
-Domain evidence — askcruz.com exists at least as a mail domain (mailcow.askcruz.com, used for the intern mailbox rollout). That confirms a domain, not a company.
+Direct answer: yes — askcruz.com is the website. This is confirmed in a raw email (Aug 5, 2026, Rajat to Ryan Capinski at Eastern States Steel): "While 'askcruz' is the website. The AI is called just Cruz."
 
-Separate incorporation — no. Nothing I've pulled states AskCruz is a separately registered legal entity. The one adjacent thread is "EOXS AI Spinout" — Rajat's plan to spin EOXS's AI sales-automation products (SmartQuote AI, AI Workers, Sales Coach specifically named) into a separately-capitalized company, timed to avoid triggering Scott Begin's revenue-share commitment in the parent company. AskCruz is not named in that spinout plan in what I've read. Whether AskCruz was later folded into that structure, or is a separate registration entirely, isn't something I can confirm from this vault.
+Two things this email surfaces that we hadn't established yet:
 
-If you know it's separately incorporated with its own website, that's new information to me — worth flagging as a gap in what's documented internally, especially given the revenue-share-avoidance motive already on record for the AI spinout. If AskCruz is outside EOXS's corporate structure and pulling from EOXS's client data and staff time, that's worth understanding clearly before it scales toward your ARR target, not after.
+AskCruz was renamed from Krinox on Aug 5, 2026. Same email: "We renamed Krinox to AskCruz." Krinox is documented elsewhere in the wiki as a query-layer product for freight/logistics-heavy operations, pitched to Eastern States Steel — not yet confirmed/signed there. So Krinox = AskCruz's earlier name, at least for this product line.
+
+It's explicitly positioned as not steel-specific. Rajat's own words: "this is not limited to Steel. This product fits any business with 20+ employees." That's a materially different scope than what the 3GM/Sabre steel-account threads implied — those are just where the current sales activity happens to be.
+
+One thing to flag honestly: this creates real naming instability I should have caught sooner. In one thread it's "AskCruz," pitched broadly beyond steel; in another it's "Company Brain," pitched specifically to steel clients as an EOXS upsell; and Krinox was the freight-specific predecessor name. Whether these are all the same evolving product under different names at different times, or genuinely separate initiatives that happen to share underlying tech, isn't settled in the data — worth asking Raj directly rather than me continuing to infer.
