@@ -7,3 +7,8 @@ __pycache__/
 # Must never be committed here — it's OV2's content, not this vault's.
 .ov2-clone/
 .ov2-xref-staging/
+
+# Pending user secrets awaiting assignment to real names — credential material,
+# must never be committed. See mcp_server.py's CLAUDE_OV_USERS.
+.pending-users-DO-NOT-COMMIT.json
+.pending-users-DO-NOT-COMMIT.md
