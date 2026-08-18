@@ -6,48 +6,37 @@ created: 2026-08-18
 updated: 2026-08-18
 ---
 
-User: We could have one session squeezed in between where we give them a set of questions that they will ask Claude, which will help Claude understand them better. If there is any ambiguity, it will help Claude learn about these people.
+User: I was thinking of sending the team something like this. 
 
-Assistant: Good addition — and it doubles as a live fix for the exact ambiguity problem we just hit with names like Ayan and Kriti. Ten questions for that session:
+Starting tomorrow there will be a 1 hour study. 9 - 10 am. Everyone in the team is going to meet here. If anyone cant make it they need to inform me. No show will be unacceptable.
+Isha will keep attendance.
+In this hour we will only be talking to Claude for the first 45 minutes and then 15 minutes, everyone will share something interesting they discovered. We will do this for the next two weeks
 
-1. My full name is [X], I go by [Y] — remember that.
-2. What's my job title and department, based on what you can see?
-3. Who do I report to, and who reports to me?
-4. What have I actually been working on most recently?
-5. Is there anyone else at EOXS with a name close to mine? How do you tell us apart?
-6. What client or project should you always loop me into?
-7. What's something I do regularly that isn't in any job description?
-8. How do I usually write — formal, casual, short and direct?
-9. What should you always check with me before acting on, rather than just doing?
-10. Anything in my record right now that looks wrong or incomplete?
+Assistant: Good structure — daily cadence over two weeks is stronger than my one-off Thursday split for building the habit. Two things to flag before I write it:
 
-This slots in right after OV2 connects and before the driver's seat hour — better context in, before they perform in front of the group. Updated schedule:
+Setting up 13 accounts and connecting OV2 for everyone won't fit in the 45 minutes talking-to-Claude block, especially since Pro connector setup is manual per person. That has to happen before 9:00 tomorrow, not during. I'd say send it as a required Day 0 step tonight, or have people arrive by 8:45.
 
-[Redrafted email via message_compose_v1]
-Subject: AI Transformation Day - Schedule for Tomorrow and Thursday
+Does Thursday still get the separate "build on your own, share in the evening" version I drafted earlier, or does the daily 9-10 format just replace that entirely for the whole two weeks?
+
+Email, assuming daily format replaces everything and accounts are set up before tomorrow:
+
+[Drafted email via message_compose_v1]
+Subject: Starting Tomorrow: Daily 9-10 AM Claude Session
 
 Hi Ayan, Ron, Humaira, Hashir, Aryan, Muskan, Isha, Kartik, Nijamuddin, Vanshi, Harsimran, and Kriti,
 
-Tomorrow is our AI transformation day. Here's how it will run.
+Before 9 AM tomorrow - Create your Claude account and connect OV2 on your own. Ron will confirm every connection works before 9. Isha, please also set up the shared intern account separately.
 
-9:00 - Create your Claude account and connect OV2. Ron will confirm each connection before we move on. Isha - please also set up the shared intern account separately for the rest of the team.
+Starting tomorrow, 9-10 AM, one hour, every day for the next two weeks. Everyone meets here.
 
-9:45 - Get-to-know-you session. You'll ask Claude a set of questions we'll hand out, so it actually learns who you are and how you work - and so we catch anything it has wrong or mixed up with someone else, before you go live in front of the group.
+If you can't make it, tell me directly. No-shows are not acceptable. Isha will keep attendance.
 
-10:30 - Training on MD files, scheduled tasks, and Cowork.
+9:00-9:45 - Talking to Claude. Use it for real work, ask it questions about yourself and your role, fix anything it gets wrong.
 
-Driver's seat hour - You use Claude in front of us for a full hour, your own way. We're in the passenger seat - watching, not driving. If you get stuck, we help.
+9:45-10:00 - Everyone shares one thing they found interesting or useful that day.
 
-Feedback session, 30 minutes - We stop and you flag anything Claude got wrong about you or your work. Fix it live. If you want, walk us through how you actually do your job day to day - this is how we start turning it into real SOPs.
+We'll build our SOPs, recurring tasks, and what actually works out of what comes from these two weeks.
 
-Rest of this week - Pick one task you do every week and hand it to Claude. Track how long it used to take you versus now. If what you find is genuinely useful, we'll recognize it - and it might become a recurring task the whole team uses.
-
-Thursday morning - Work on your own. Build something or use Claude your own way. No agenda from us.
-
-Thursday evening - We meet again. Everyone shows the group one thing they found.
-
-Whatever good workflows come out of this week become the SOPs and recurring tasks we roll out to everyone else after.
-
-Looking forward to it.
+See everyone at 9.
 
 Raj
