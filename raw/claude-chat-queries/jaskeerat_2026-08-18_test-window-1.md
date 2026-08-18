@@ -6,12 +6,6 @@ created: 2026-08-18
 updated: 2026-08-18
 ---
 
-# Test Window 1
+Human: hello test window 1.0
 
-**Kriti:** hello test window 1
-
-**Claude:** Acknowledged setup — no substantive query yet in this thread.
-
-**Kriti:** test window 2
-
-**Claude:** Acknowledged — still no substantive query yet in this thread.
+Assistant: Hello — reading you loud and clear. This is a fresh thread, no query yet to route. Skills loaded (threads-ov, eoxs-data-general). What do you need?
