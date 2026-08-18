@@ -67,3 +67,19 @@ IRIS — a formalized, documented product module, sold as part of the EOXS catal
 AskCruz — not in the official product catalog at all. It's functioning as an internal, still-forming initiative: an AI agent/reasoning layer built on Claude, referred to informally as "Cruz" or "Company Brain," being pitched ad hoc to specific prospects (3GM, Ohio Strip Steel, Collier Metals, a legal-services company) without a settled feature definition, pricing model, or even consistent internal naming — hence the confusion in the Aug 13 call about whether it can answer "about EOXS" questions.
 
 That's a meaningful distinction for your ARR target: IRIS is a shippable, definable product with an existing sales motion inside the EOXS catalog. AskCruz right now reads as pre-product — pitched deal-by-deal, without the same institutional definition, which is likely part of why the 3GM proposal had pricing inconsistencies and a mid-deal pivot to a different technical approach.
+
+User: What are similarities in IRIS and AskCruz?
+
+Assistant: Both surface from the same underlying idea, even though only one is formally catalogued:
+
+Both are AI layers on top of data, not the system of record. Neither replaces EOXS ERP — they answer questions about the data the ERP (and other sources) holds, rather than storing/processing transactions themselves.
+
+Both use natural-language query as the interface. IRIS: "type a question and IRIS generates the report." AskCruz: same interaction pattern, reasoning over ERP, email, and call data via an MCP query layer.
+
+Both are sold two ways — as an EOXS add-on to existing clients, and standalone to organizations with no EOXS ERP relationship at all. IRIS standalone targets are other ERPs (Invera, Steel Tracks, QuickBooks). AskCruz standalone target so far is the legal-services prospect (virtualilegal.com) — different vertical entirely, same "sell the intelligence layer without the ERP" motion.
+
+Both are being pitched into overlapping accounts. 3GM Steel has an active IRIS trial (data preload discussion, Aug 2026) running at the same time as the AskCruz/Company Brain proposal. Sabre Alloys shows up in both AskCruz-adjacent threads (Claude AI Agent Request) and prior IRIS deployment notes from memory — so the sales motions aren't cleanly separated by account either.
+
+Both have real deployment friction documented. IRIS at Sabre was flagged as sandbox/QA only, no signed commercial terms. AskCruz at 3GM has the pricing-inconsistency and mid-deal technical pivot problems already covered.
+
+Net: they're two expressions of the same strategic bet — that the reasoning/query layer over business data is a sellable product distinct from the ERP itself. IRIS is the version EOXS has formalized and named in its own product catalog; AskCruz is the version still being improvised deal by deal. Worth asking Raj directly whether these are meant to converge into one product or stay separate — the data doesn't show that decision has been made, and running two undifferentiated AI-layer pitches into the same accounts is the kind of thing that costs you deal velocity, not gains it.
