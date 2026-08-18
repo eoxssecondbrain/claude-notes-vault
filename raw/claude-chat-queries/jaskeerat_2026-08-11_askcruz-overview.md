@@ -31,3 +31,9 @@ EOXS ERP is the core platform: cloud-based, steel-industry-specific ERP built by
 AskCruz is an AI agent/intelligence layer that sits on top of ERP, email, and call data — reasoning over that data rather than being the system of record itself. It's sold as an add-on/upsell to existing EOXS clients (that's the 3GM Steel proposal), but it's also being pitched independent of EOXS ERP entirely — the legal-services prospect (virtualilegal.com) has no EOXS ERP relationship at all, which means AskCruz can be sold standalone.
 
 One thing I can't fully resolve from the data: there's naming overlap/inconsistency across threads between AskCruz, "Company Brain," and IRIS (a separately-documented natural-language BI product, also sold both as an EOXS add-on and standalone against other ERPs like Invera). The 3GM proposal call page explicitly flags this — Rajat pivoted 3GM's deal to running "Company Brain" on Claude directly rather than through AskCruz as the front end, and a separate internal call has unresolved confusion about whether AskCruz can answer questions "about EOXS." I'm not treating AskCruz and IRIS as confirmed-identical or confirmed-distinct — the vault itself hasn't reconciled that, and I'd rather flag it than guess.
+
+User: Is AskCruz a different product than the EOXS?
+
+Assistant: Yes. Same answer as above: AskCruz is a separate AI reasoning/agent layer, not part of EOXS ERP itself. EOXS ERP is the core steel-industry ERP platform (sales/CRM, inventory, processing). AskCruz sits on top of ERP, email, and call data and is sold separately — as an add-on to existing EOXS clients (3GM Steel) and also standalone to entities with no EOXS ERP relationship at all (the legal-services prospect, virtualilegal.com).
+
+The one open question, still unresolved in the data: whether AskCruz is functionally the same thing as IRIS (a separately-named natural-language BI product) or genuinely distinct — the vault itself hasn't reconciled that naming overlap.
