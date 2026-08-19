@@ -20,3 +20,18 @@ We went through the Claude accounts that are connected and ran a set of differen
 
 **3. EOXS Report – Parameters (for Raj)**
 Started working on deciding what parameters/fields should go into the EOXS report Raj asked for. This is still being finalized, but the core parameters have been discussed and roughed out as a starting point.
+
+User: no no, for the first point take the refrence to the chat thread as we are building a claude prompt catcher. "claude prompt audit logging"
+
+Assistant: [Rendered updated writing draft card with the following content]
+
+**Work Update – Aug 19, 2026**
+
+**1. Claude Prompt Catcher (Research)**
+We did research on building a Claude prompt catcher — a way to catch and log the prompts going to Claude so we can review and audit them properly. This work is done. Chat reference: "Claude Prompt Audit Logging".
+
+**2. Testing Connected Claude Accounts**
+We went through the Claude accounts that are connected and ran a set of different test questions on each one. The goal was to check if any of the questions or activity got flagged by Claude's system. Tested multiple types of questions to see what triggers a flag and what doesn't, so we have a clearer picture of the limits.
+
+**3. EOXS Report – Parameters (for Raj)**
+Started working on deciding what parameters/fields should go into the EOXS report Raj asked for. This is still being finalized, but the core parameters have been discussed and roughed out as a starting point.
