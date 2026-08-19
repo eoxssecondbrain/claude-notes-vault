@@ -6,32 +6,40 @@ created: 2026-08-19
 updated: 2026-08-19
 ---
 
-User: you have to write a work snipet for me. mention that we did the reasearch on catchng that claude promptts things and we are done with something, take the chat refrence claude prompt audit logging, also mention that did research on the connected clade accounts and asked different questions and tested if anything were flagged or not, also we worked on deciding parameters for the eoxs report that raj wants us to make. keep the language simple but it should be detailed.
+User: i will write it for you. you have to refine it. 
+work update:
+-worked on the task of saving every prompt being sent to claude and even the edited claude prompt can be saved, built something locally and currently testing that. 
+-the study time with claude was done where we tested the new setup (claude accountsconnected to the brain) and every one gave theier findings and outcomes.
+after that I added the gmail connector in my claude and tried to set up a scheduler, we are half way on this. 
+after that the team sat and discussed about the performance report that raj wants every month, we discussed the parameters taht should go into it and how the assessment for each employee should be made. we can on same level and then started making a report, just a small test run was made for just one employee and we can see what the changes are needed. this will be continued tom.
+did the QA of Eoxsplore- Performed the QA of EOXSplore.
+Logged into EOXSplore, login working correctly
+Played module videos, playback running with no issues
+Overall status: No issues found today
 
-Assistant: [Rendered a writing draft card with the following content]
+also about the cattr automation that i made - checked the triggers are working fine and everything is working fine. the daily triggers are working perfectly and logging the data correctly.
 
-**Work Update – Aug 19, 2026**
-
-**1. Claude Prompt Audit Logging (Research)**
-We looked into how Claude logs and tracks the prompts being sent to it, so we can catch and review what's actually going in and out. This was to figure out if there's a way to audit/monitor prompt activity properly. This work is done — reference: "Claude Prompt Audit Logging" chat.
-
-**2. Testing Connected Claude Accounts**
-We went through the Claude accounts that are connected and ran a set of different test questions on each one. The goal was to check if any of the questions or activity got flagged by Claude's system. Tested multiple types of questions to see what triggers a flag and what doesn't, so we have a clearer picture of the limits.
-
-**3. EOXS Report – Parameters (for Raj)**
-Started working on deciding what parameters/fields should go into the EOXS report Raj asked for. This is still being finalized, but the core parameters have been discussed and roughed out as a starting point.
-
-User: no no, for the first point take the refrence to the chat thread as we are building a claude prompt catcher. "claude prompt audit logging"
-
-Assistant: [Rendered updated writing draft card with the following content]
+Assistant: [Rendered refined writing draft card with the following content]
 
 **Work Update – Aug 19, 2026**
 
-**1. Claude Prompt Catcher (Research)**
-We did research on building a Claude prompt catcher — a way to catch and log the prompts going to Claude so we can review and audit them properly. This work is done. Chat reference: "Claude Prompt Audit Logging".
+**1. Claude Prompt Catcher**
+Worked on saving every prompt sent to Claude, including edited prompts. Built a local version of this and it's currently being tested. Chat reference: "Claude Prompt Audit Logging".
 
-**2. Testing Connected Claude Accounts**
-We went through the Claude accounts that are connected and ran a set of different test questions on each one. The goal was to check if any of the questions or activity got flagged by Claude's system. Tested multiple types of questions to see what triggers a flag and what doesn't, so we have a clearer picture of the limits.
+**2. Claude Accounts Study Session**
+Did a study session with the team to test the new setup — the Claude accounts connected to the brain. Everyone tested it and shared their findings and outcomes.
 
-**3. EOXS Report – Parameters (for Raj)**
-Started working on deciding what parameters/fields should go into the EOXS report Raj asked for. This is still being finalized, but the core parameters have been discussed and roughed out as a starting point.
+**3. Gmail Connector + Scheduler**
+Added the Gmail connector to my Claude and started setting up a scheduler. This is about halfway done, will continue.
+
+**4. Monthly Performance Report (for Raj)**
+The team discussed the performance report Raj wants every month — decided on the parameters to include and how each employee's assessment should be made. Everyone aligned on the approach, then started building the report. Ran a small test with one employee to see what changes are needed. Work continues tomorrow.
+
+**5. EOXSplore QA**
+Performed QA on EOXSplore.
+- Logged into EOXSplore — login working correctly
+- Played module videos — playback running with no issues
+- Overall status: no issues found today
+
+**6. Cattr Automation Check**
+Checked the Cattr automation — triggers are working fine, daily triggers are running and logging data correctly.
