@@ -27,3 +27,9 @@ User: yes deactivate
 Assistant: [called deactivate_employee(employee_id=1, date_of_leaving="2026-08-13")]
 
 Result: Aaryan Mehra's record is now status "inactive", date_of_leaving "2026-08-13". Record and history preserved.
+
+Assistant: Done. Aaryan Mehra's record is now inactive with last working day 13 Aug 2026. As noted, this only affects the employee directory — I have no write access to the actual CRM (eoxs-teams/Odoo), so if his data needs to come out of that system too, that has to be done by whoever administers it there.
+
+User: sonali is working with eoxs now?
+
+Assistant: Yes — Sonali Yadav is active. Lead Development Representative, Sales, reports to Yashvir Thakur. Joined 2024-05-09.
