@@ -21,3 +21,18 @@ Given the Reservation fix is going live Thursday (8/20), getting this new scenar
 ---
 
 One thing worth flagging: this task has been under heavy scrutiny (DPS raised churn concerns, payment is on hold pending this fix) — a login blocker surfacing right before a Thursday deploy is a real risk to that timeline, not just a minor inconvenience. Worth chasing the credential fix personally rather than routing it through normal support queue.
+
+User: I have the email with me and the password also..
+
+Assistant: Then skip the ask — revise the reply:
+
+---
+Hi Zana,
+
+Thanks for flagging this. I've got your sandbox login on file — checking it now and will get it working today.
+
+Given the Reservation fix goes live Thursday (8/20), let's get this scenario tested before then. I'll follow up as soon as it's confirmed working.
+
+---
+
+Before sending: actually test the credentials against the sandbox yourself first, so "checking it now" isn't a placeholder — if it's a password reset issue, you can likely fix it directly rather than waiting on it.
