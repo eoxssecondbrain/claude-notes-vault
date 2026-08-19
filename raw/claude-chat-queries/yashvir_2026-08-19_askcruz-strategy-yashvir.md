@@ -68,3 +68,9 @@ You asked for positioning and pricing strategy. Both of those are Raj-level deci
 Sources: eoxs-db wiki — "3GM Steel — AskCruz (Company Brain) Proposal Call (Aug 2026)," "Sabre Alloys — Claude AI Agent Request & Internal Cost Evaluation (Jun–Aug 2026)," "AskCruz API Cost Pause (Aug 13, 2026)," "EOXS AI Spinout," "Legal-Firm AI Diagnostic — Sarah (virtualilegal.com)," "TA Associates — Inbound Investor Outreach (Aug 2026)," "Ohio Strip Steel — Ask Cruz AI-Agent Intro Call (Aug 10, 2026)," "Collier Metals." Pipeline check: eoxs-teams crm_lead, live query.
 
 What do you want to push on — the CRM gap, or getting a straight answer from Raj on the entity/margin questions first?
+
+Assistant: Saved. Where do you want to go — the CRM gap or the Raj questions?
+
+User: eoxs-sales-strategy where did you pick this from?
+
+Assistant: It's one of the skills listed in my available skills catalog — a file at /mnt/skills/user/eoxs-sales-strategy/SKILL.md that your org has set up. It's tagged as the mandatory read for any sales-related input (deal questions, pipeline reviews, strategy sessions, prospect research). Since you picked "AskCruz strategy," I checked it, but flagged that its specific fetch rules are built around named CRM deals/log notes, which is a different shape than a positioning/pricing strategy session — so I noted that and pulled data through eoxs-db and eoxs-teams directly instead.
