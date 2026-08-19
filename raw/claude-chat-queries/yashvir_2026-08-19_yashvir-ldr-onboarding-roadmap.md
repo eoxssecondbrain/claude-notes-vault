@@ -27,3 +27,15 @@ Either way, here's both roadmaps at a high level. We'll only dig into the first 
 5. Where you fit as LDR — Once the above is solid, the last step is understanding what a qualified AskCruz lead looks like — that's worth a direct conversation with whoever owns AskCruz sales, not something to guess at from documents.]
 
 Both are outlines, not homework — we go one item at a time. Once you tell me which "first day" scenario is accurate, I'd start with step 1 of the AskCruz roadmap (the actual definition) or step 1 of the day roadmap (getting set up), whichever you're at.
+
+User: I've been withEOXS but i'm transitioning to AskCruz
+
+Assistant: That makes more sense — explains the onboarding/hiring history in my notes. So this isn't day-one-at-EOXS, it's a role transition into AskCruz LDR specifically. Drops the laptop/access/company-basics stuff from the earlier roadmap — you don't need that.
+
+Revised version:
+
+1. Get clarity from Rajat on scope — does this transition mean AskCruz is now your full focus, or split with existing EOXS sales/ops work? Also: what happens to what you're currently carrying (the 3GM/Ohio Strip/Collier/Sabre pipeline work, the onboarding you were running for Wayne and Divyansh).
+2. Work through the AskCruz roadmap — same 5 steps as before, still the right sequence.
+3. Once steps 1-2 are solid, figure out how AskCruz lead gen actually differs from what you were doing before — different ICP, different pitch, likely a different outreach motion than EOXS ERP prospecting.
+
+Want to start with the AskCruz roadmap step 1 — what AskCruz actually is, pulled from the real internal docs rather than a generic gloss?
