@@ -112,3 +112,20 @@ Assistant: 1. Abhirup Bose
 75. Yashvir Thakur
 
 Source: eoxs-db employee directory, active status.
+
+User: ok now tell me about isha bisht the work profile for her ?
+
+Assistant: This is already answered above — same record, unchanged since then.
+
+Isha Bisht, employee id 46, active.
+
+Department: Human Resource
+Role: HR Executive
+Employment type: Full Time
+Email: isha@eoxsteam.com
+Manager: Rajat Jain
+Date of joining: 2024-06-24
+
+Change history: role updated from HR Lead to HR Executive on 2026-08-18; manager updated from Remya to Rajat Jain the same day.
+
+Source: eoxs-db employee directory.
