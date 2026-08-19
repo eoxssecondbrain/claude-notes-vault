@@ -6,53 +6,48 @@ created: 2026-08-19
 updated: 2026-08-19
 ---
 
-ction, and any credential the user pasted has been redacted deliberately.
+## Session: Daily Employee Performance Email Automation (continued)
 
-**User:** Requested an automation that emails Raj daily about every employee's performance — time worked, productivity, performance, tasks performed — so Raj can evaluate them. Explicitly asked that performance be measured by **quality of work, not quantity**. Data to be retrieved from the project management tools of Ask Cruz and EOXS.
+**User:** Asked whether the AskCruz teams Odoo instance is now connected.
 
-**User (mid-turn):** Supplied the sending mailbox `harsimran@askcruz.com` together with an account password. *(Credential redacted — not recorded, not used.)*
+**Assistant:** Verified three ways — no. The SQL connector still points at `Eoxteams_12Feb24` (EOXS Team Live); searching `project_project` for AskCruz / MBA / Idea Board / Hiring Funnels returned 0 of 61 projects; the connector registry showed no new installs. Offered two routes to connect it: (A) a read-only Postgres connector for `teams-askcruz`, matching how eoxs-teams is already wired, or (B) Odoo external API via XML-RPC needing instance URL, database name, and an Odoo API key (not an account password). Noted that since the existing scrum-report automation demonstrably reads `teams-askcruz` live, access already exists somewhere and tracing that wiring may be faster than building a new path.
 
-**Assistant:** Investigated both reachable data sources before building anything, then reported findings and asked four blocking questions.
+**User:** "ok create a report from what ever data you have"
 
-### Credential handling
-Declined to use the supplied account password. Recommended immediate rotation, since it was pasted in plaintext into a chat log. Noted that an account password is the wrong mechanism for automated sending in any case — `askcruz.com` runs on mailcow, which supports **app passwords scoped to SMTP only**. Nothing was stored.
+**User (mid-turn):** "also add a parameter of catter weekly timing of employees"
 
-### Findings
+**Assistant:** Built the report from EOXS Team Live and investigated Cattr before answering.
 
-**1. The automation already exists, and Raj shut it down two days prior.**
-A "Weekly AskCruz Board Scrum Report" already produced per-person scorecards, gap lists and anomalies from live Odoo data (10-point rubric: Ack / Movement / Completions / Depth / Scope). On **2026-08-17 15:17 UTC, Rajat Jain replied "Shut this automation down, please."** A new report nevertheless self-generated on 2026-08-18 with expanded scope (6 boards instead of 1); the wiki records this as an unexplained contradiction.
+### Cattr finding
+Cattr is confirmed as the time-tracking tool behind EOXS working-hours figures, but it is separate SaaS — an `information_schema` sweep for `%cattr%`/`%track%`/`%attendance%`/`%timesheet%`/`%screenshot%` tables found no Cattr table in Odoo. Per-employee hours are not readable on this connection. Odoo cannot substitute: `hr_attendance` has 3 rows total (latest Aug 2024) and every task's `effective_hours` is 0.0.
 
-Raj's own report had flagged the design flaw: every board update that day was authored by Raj himself chasing non-responsive assignees, so the report stated the scores were *"measuring your nagging activity, not team engagement."*
+Two structural facts surfaced that change the request:
+- **A weekly Cattr report already reaches Raj.** Isha Bisht (`isha@eoxsteam.com`) sends an automated "EOXS HR Automation — Weekly Team Report" most Mondays covering Sun–Sat, per-employee worked hours for ~29 employees; most recent covers 2026-08-10 to 2026-08-16. Adding hours would duplicate an existing automation.
+- **Cattr reliability is documented as poor.** Tracking has malfunctioned for at least five employees — Humaira Zainab six times across six weeks through 2026-08-13, plus Chandvi Gupta, Harsimran Singh and Vithal.
 
-**2. The Ask Cruz board is not reachable.**
-It lives in a separate Odoo instance (`teams-askcruz`, project_id 6, ~39 active tasks). The available SQL connector reaches only **EOXS Team Live** (`Eoxteams_12Feb24`). Confirmed by querying `project_project` — no AskCruz project exists in the reachable DB.
+Both were written into the report so the omission is not read as an oversight.
 
-**3. Hours worked does not exist in any reachable system.**
-- `hr_attendance` — 3 rows total, latest 2024-08-27
-- `project_task.effective_hours` — 0.0 for every assignee
-- `account_analytic_line` — 878 rows, uniform 8.0-hour monthly accrual entries, not tracked work
-- `hr_timesheet_sheet_sheet` — 1 row
-- `eoxs_monitor_config` — a URL uptime monitor, unrelated to employees
+### Report produced
+`employee-quality-report-2026-08-20.html` — window 13–20 Aug 2026, 33 active employees with linked user accounts, 805 open tasks across 12 boards. Delivered as a local HTML file (not published externally, given confidentiality).
 
-**4. Quality signals that do exist in EOXS Team Live** (`project_task`):
-`fail_state='failed1'` (dev failure), the "QA Failed" stage, `kanban_state='blocked'`, `priority_level` P1–P5 (weight of work taken on), `date_deadline` vs actual, stage regression (rework), and chatter note depth via `mail_message` on model `project.task`.
+Deliberate design choice: no ranking by task count, and no single collapsed per-person score. Volume on these boards is an assignment artifact (EOXS Support auto-assigns in bulk), so a throughput ranking would reward proximity to the intake queue.
 
-### Verification against real data
-A 7-day quality query was run and produced a ranking that inverts a pure volume ranking:
+### Headline finding
+**Of 278 human log notes written this week on these employees' tasks, only 112 (40%) were written by the task's own owner.** The other 166 came from someone else chasing status. This directly addresses Raj's own 2026-08-17 objection that the prior report was "measuring your nagging activity, not team engagement" — and it is exactly what a task-count report hides.
 
-| Person | Stage moves | Dev/QA fails | Avg note length | Reading |
-|---|---|---|---|---|
-| Aryan Bakshi | 11 | 0 | 33 chars | High volume, near-zero documented substance |
-| G. Nijamuddin | 4 | 1 + 1 | 392 chars | Low volume, deep notes, but quality failures |
-| Humaira Zainab | 7 | 0 | 39 chars | 175 notes across 84 tasks — breadth, thin depth |
-| Hashir Saleem | 13 | 0 | 251 chars | Volume and substance together |
+### Where quantity and quality diverge
+- **Kartikey Tripathi** — closed 9 tasks, most on the team, but owns 4 of 7 open dev failures and 6 of 11 overdue items (four P1). Only 3 of 20 notes on his tasks are his. First on throughput, last on durability.
+- **Aryan Bakshi** — 13 stage moves looks busy, but 28 of 32 notes on his tasks were authored by others (worst ratio on team), own average 71 chars, 29 tasks never once commented on, 17 open P1/P2.
+- **G. Nijamuddin** — weak on volume (20 open, 3 done) but deepest notes on the team by a wide margin (468 chars avg). Different, more coachable problem: work comes back — 2 dev fails, 1 QA fail, 2 overdue.
+- **Dhrup Kumar Singh** (senior developer) — zero self-authored notes against 7 by others, no stage moves, QA failure sitting 72 days. Most significant gap in the report.
+- **Isha Bisht** — 100% ownership (11 self notes, zero chased), 6 completions, nothing stale or silent.
+- **Vithal / Rohit Chand / Vaibhav Jain** — strong ownership (59–70%) and note depth (257–297 chars) at small load.
 
-This confirms the quality-over-quantity approach the user asked for is achievable on the reachable data.
+### Flagged as data problems, not people problems
+- Sheenam Rawat (173 open) and Ron (72 open) carry stale backlog — 236-day and 322-day average staleness, oldest untouched item 904 days, Ron with 48 silent tasks. Reading these counts as workload would be wrong; recommended backlog purge before any performance judgement.
+- **Seven active employees hold zero tasks** on this instance (Adefolabi, Aditya Kumar Yadav, Arpita, Danish Lari, Jaskeerat Singh, Priyanshu Sinha, Ryan) — likely working on `teams-askcruz`. An assignment-process gap, not a performance finding.
 
-### Four questions put to the user
-1. **Raj's shutdown request** — proceed anyway, route to Harsimran for review first, switch to weekly, or build as originally asked?
-2. **Ask Cruz data** — EOXS only for now, arrange a read-only connector for `teams-askcruz`, or use Odoo's external API with an API key?
-3. **Time worked** — drop hours in favour of cycle-time signals, connect the real tracking tool, or use the sparse timesheet data labelled as incomplete?
-4. **Email delivery** — mailcow SMTP app password, generate a file for manual forwarding, or send via Odoo's existing outgoing mail server?
+### Report contents
+Team signal tiles (21 completions, 40% self-authored, 136 silent open tasks = 17% of board, 22 open quality exceptions); per-person quality read grouped into Strong / Mixed / Concern / Light load / No tasks; a 22-row open quality-exceptions register naming each failed, blocked or overdue task with stage, priority and days since last move; a "what this report cannot see" section covering Cattr and the AskCruz board; and a method section documenting the ownership ratio, the depth proxy's weakness, and what was deliberately excluded.
 
-**Outcome:** The user dismissed all four questions without answering. No automation was created, no scheduled task registered, no email sent, no credential stored. Work is paused pending further instruction.
+**Open question to user:** whether to now turn this into the scheduled daily job, or adjust the rubric first. Still unresolved from earlier: Raj's 2026-08-17 shutdown request, and the email delivery mechanism.
