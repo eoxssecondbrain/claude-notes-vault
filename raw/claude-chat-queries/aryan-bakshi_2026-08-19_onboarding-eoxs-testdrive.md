@@ -155,3 +155,27 @@ What I don't have and need from you to actually be useful on your role:
 - Which accounts are actually yours right now — still Sabre Alloys / Eastern States / PPC Metals / Discount Pipe & Steel, or has that shifted?
 - Who do you report to day to day — is Kasif Nawaz still in that loop, or someone else?
 - What do you actually want this account doing for you day to day: drafting support-ticket responses, tracking implementation Kanban status, prepping for client calls, something else?
+
+## Turn 9
+
+**User:**
+i am still junior implementation manager
+
+none of the accounts are technically "mine"
+what i do is bascially - resolve tickets , do qa on tasks  that are going to go live / do qa on live servers sometimes to ensure functionalities are working
+i do client calls sometimes to resolve their issues/ know what direction they are headed or what is the next thing they want from us
+
+i do not/have never reported to kasif. i used to report to ron but since ron is leaving the company i think the reporting is going to go to RAJ
+
+**Assistant:**
+Good, that's a clearer picture than the wiki gave me — cross-account support/QA/client-facing, not account-owner. That changes what's actually worth doing here. Concrete steps, in order of what'll move the needle:
+
+1. Before any client call or ticket response, pull get_client_profile(client) on eoxs-db first. One call gets you contacts, tickets, implementation history, emails, calls, wiki notes — cross-linked. Since you don't own accounts and rotate across them, this replaces the "let me remember what's going on with this client" step you'd otherwise be doing from memory or digging manually.
+
+2. For QA on pre-launch tasks, check list_implementation_tasks / get_implementation_task before you start — it tells you the stated stage and owner, so you're not QA'ing against an assumption. For QA on live servers, this tool can verify the data layer (order states, stock movements, invoice records matching what should be true) via eoxs-teams SQL — it can't touch the actual server or UI, so it's a cross-check, not a replacement for hands-on testing.
+
+3. Use the rigor levels for what they're actually for: 5ft for ticket triage where you just need the fact fast, 10ft when the QA result is going into a live/go-decision or a client is going to see the number. Don't default to 10ft for everything — that's wasted overhead on routine tickets.
+
+4. Every conversation here gets saved and is searchable (search_claude_chat_queries). If you're back on an account you QA'd two weeks ago, pull that up instead of rebuilding context from scratch — cross-account rotation is exactly the situation where that search actually pays off.
+
+5. Worth a note, not an action: Ron leaving and reporting moving to Raj means Raj's own tier1 personal data stays walled off from this connection regardless — doesn't affect anything you do day to day, just flagging it's a real access boundary, not a bug if you ever hit it.
