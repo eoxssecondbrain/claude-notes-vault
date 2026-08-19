@@ -134,4 +134,33 @@ I want to make one change. Uh, DPS already approved the changes. Uh, we gave the
 - Sign-Off table: DPS/Client Approver changed to "Zana Williams (all four tasks approved)"; DPS Production Approval changed to "DPS has reviewed this change document and validated all four tasks in sandbox; all four tasks approved to move to live. Production deployment scheduling to follow."
 - Also fixed a cosmetic docx-js rendering bug: added `cantSplit: true` to all TableRow constructors (header rows, data rows, and field-table rows) to stop LibreOffice from rendering a stray blank row when a table split across a page boundary — confirmed fixed by re-rendering to PDF and inspecting the page images.
 
-Regenerated the .docx, converted to PDF, reviewed page images (pages 1, 9, 11, 12) to confirm the changes and the page-break fix, then delivered the updated file via SendUserFile as DPS_Production_Change_Document_v2026.08.01.docx with caption "Updated — all four tasks now show DPS sandbox approval and are marked ready to move to live."]
+Regenerated the .docx, converted to PDF, reviewed page images (pages 1, 9, 11, 12) to confirm the changes and the page-break fix, then delivered the updated file via SendUserFile as DPS_Production_Change_Document_v2026.08.01.docx with caption "Updated — all four tasks now show DPS sandbox approval and are marked ready to move to live."
+
+I closed the turn with a text summary of what changed and reiterated that Section 6.3 (Reservation code changes) is still left as a placeholder per the user's earlier instruction.]
+
+## User (turn 5)
+for reservation Zana confirmed today on 19/08/2026 for reservation tasks
+And for -
+Bug - Scan Control Tag Field in create Transfer Screen Not Working   - July 1 2026
+Scanned Tags Create Incorrect SO Line on Packing Slip - July 1 2026
+
+## Assistant (turn 5)
+All the dates you mentioned are already correctly reflected in the document — no changes needed:
+
+- Bug - Scan Control Tag Field: DPS validated by Zana Williams on **2026-07-01**
+- Scanned Tags Create Incorrect SO Line: DPS validated by Zana Williams on **2026-07-01**
+- Reservation Function (#357) and Reservation Not Auto Reserving Correctly (#383): DPS validated by Zana Williams on **2026-08-19**
+
+These appear in the Client Status section, each task's DPS Validation table, and the Sign-Off summary. The document you already have is current — nothing further to send.
+
+## User (turn 6)
+include these in document please
+
+## Assistant (turn 6)
+[Interpreted this as wanting the validator/date info made more explicit and easy to find in one place, not just scattered in bullets/tables. Added a new "DPS Validation Summary" table in Section 2, right after the Client Status bullets, with columns Task | DPS Validator | Date | Status, listing all four tasks:
+- #384 - Bug - Scan Control Tag Field in Create Transfer Screen Not Working | Zana Williams | 2026-07-01 | Approved
+- #364 - Scanned Tags Create Incorrect SO Line on Packing Slip | Zana Williams | 2026-07-01 | Approved
+- #357 - Reservation Function | Zana Williams | 2026-08-19 | Approved
+- #383 - Reservation Not Auto Reserving Correctly | Zana Williams | 2026-08-19 | Approved
+
+Regenerated the .docx, converted to PDF, and reviewed the page image. First pass had the "Status" column too narrow, causing "Approved" to wrap awkwardly ("Approve"/"d") — widened the column widths (from [4600,2500,2000,980] to [4200,2400,2000,1480] DXA) and re-rendered to confirm it displays cleanly on one line. Delivered the updated file via SendUserFile as DPS_Production_Change_Document_v2026.08.01.docx with caption "Added a DPS Validation Summary table (Section 2) listing validator and date for all four tasks at a glance."]
