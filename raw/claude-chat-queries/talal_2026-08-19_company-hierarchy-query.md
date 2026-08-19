@@ -45,3 +45,13 @@ Isha Bisht — HR/admin, handles mailbox provisioning and onboarding logistics.
 Below that sits a rotating MBA intern cohort (their own board), plus Muskan Sharma and others feeding into hiring.
 
 Net shape: flat, founder-managed, with Ayan Dutta functioning as the operational second-in-command on product/tech and Ron covering the legal/ops side. No management layer is documented between Rajat and individual contributors.
+
+Assistant: This is inferred structure, not a documented org chart — worth confirming with Rajat if you need it as an official reference.
+
+User: Is Talal in this?
+
+Assistant: No — Talal (you) don't show up in the AskCruz internal team roster or task boards as an org member. What the data shows is that you're external to AskCruz's internal structure, engaged through Aetos Technology / lancerdevops.me as a DevOps/infrastructure vendor for EOXS: server migration, uptime monitoring, backup verification, security audits.
+
+One relevant note: task #124 "Security" on the AskCruz board (08-17) has Rajat asking Sheenam/Ayan why an ID hasn't been created for you yet. So there was an open item to provision you access into AskCruz's systems, but as of that scrum report it was still unresolved, not done.
+
+So the honest answer: you're a vendor providing infra/security services to EOXS, with a pending, unfinished step to get you formal access on the AskCruz side. You're not part of the reporting-line structure I laid out above.
