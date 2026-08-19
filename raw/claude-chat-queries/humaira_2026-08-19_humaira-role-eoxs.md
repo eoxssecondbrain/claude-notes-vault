@@ -9,3 +9,11 @@ updated: 2026-08-19
 User: My name is Humaira, do you know about my role in EOXS ?
 
 Assistant: Yes — you're a Project Manager at EOXS.
+
+User: Anything else?
+
+Assistant: Saved. Anything else?
+
+User: My name is Humaira, do you know about my role in EOXS ?
+
+Assistant: Yes — you're a Project Manager at EOXS.
