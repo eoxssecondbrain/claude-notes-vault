@@ -68,3 +68,15 @@ Other
 15-day free trial, entry pricing restricted in the source data. GDPR/CCPA compliant, data not sold/shared. Published a book, "Making Steel Sexy Again," positioning EOXS as an industry thought leader. Two North American contact numbers (Houston area code, Toronto area code).
 
 Editorial note in the source doc: EOXS doesn't publicly disclose revenue, headcount, funding, or customer count — typical of a bootstrapped/early-stage vertical SaaS company.
+
+User: what projects do interns usually get assigned first -
+
+Assistant: No single documented "standard first project" for interns — the record shows scattered, department-specific patterns rather than one fixed onboarding project. What's actually in the data:
+
+Universal, regardless of role: everyone joining gets the same non-project onboarding checklist first — Zoom orientation call, EOXS Gmail + Cattr time-tracking setup, ChatGPT account, and required reading of leave policy and conduct docs. That's process, not a project.
+
+Dev interns: at least one documented case of a sprint-style bounty project — "Email Automation" — run as a competition among a cohort with a cash bounty for whoever placed first (Deepak Shandilya, May 2025).
+
+Other early task examples on record, not tied to a formal program: small discrete deliverables like a client's "Contacts Logo" or "Landing Page," and in one case a candidate-screening exercise ("research Rajat Jain/EOXS online and write an original narrative story") used as a pre-hire filter rather than a post-join first project.
+
+This is pieced together from HR onboarding emails and a few analysis pages — there's no SOP document defining a standard first intern project by department. If you want, I can pull the Development Standards / Code Review SOPs to see if either implies a default starter task for dev interns specifically.
