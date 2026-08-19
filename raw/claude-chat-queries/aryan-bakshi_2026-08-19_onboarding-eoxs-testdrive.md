@@ -49,3 +49,11 @@ Options:
 - Pipeline / deal stage / CRM
 - A support ticket or invoice
 - Something else — I'll type it
+
+## Turn 3
+
+**User (selected):**
+A support ticket or invoice
+
+**Assistant:**
+Which client, or do you have a specific ticket/invoice number in mind? I need an actual name or reference to pull against — not a hypothetical.
