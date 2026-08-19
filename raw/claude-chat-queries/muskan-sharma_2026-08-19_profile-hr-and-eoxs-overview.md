@@ -69,14 +69,35 @@ Other
 
 Editorial note in the source doc: EOXS doesn't publicly disclose revenue, headcount, funding, or customer count — typical of a bootstrapped/early-stage vertical SaaS company.
 
-User: what projects do interns usually get assigned first -
+User: what projects do interns usually get assigned
 
-Assistant: No single documented "standard first project" for interns — the record shows scattered, department-specific patterns rather than one fixed onboarding project. What's actually in the data:
+Assistant: This requires pulling from EOXS data (implementation tasks, wiki, possibly emails) rather than a single lookup — it's a "typical pattern" question, not a one-line fact. Pick a rigor level:
 
-Universal, regardless of role: everyone joining gets the same non-project onboarding checklist first — Zoom orientation call, EOXS Gmail + Cattr time-tracking setup, ChatGPT account, and required reading of leave policy and conduct docs. That's process, not a project.
+5ft — quick: search wiki/implementation tasks for intern-related entries, summarize what turns up directly.
 
-Dev interns: at least one documented case of a sprint-style bounty project — "Email Automation" — run as a competition among a cohort with a cash bounty for whoever placed first (Deepak Shandilya, May 2025).
+10ft — verified: same, but cross-check any pattern found against actual task records (not just a synthesized wiki summary) before reporting.
 
-Other early task examples on record, not tied to a formal program: small discrete deliverables like a client's "Contacts Logo" or "Landing Page," and in one case a candidate-screening exercise ("research Rajat Jain/EOXS online and write an original narrative story") used as a pre-hire filter rather than a post-join first project.
+50ft — deep: full investigation — also check emails/calls for intern-related discussion, flag any gaps or inconsistencies in what's documented.
 
-This is pieced together from HR onboarding emails and a few analysis pages — there's no SOP document defining a standard first intern project by department. If you want, I can pull the Development Standards / Code Review SOPs to see if either implies a default starter task for dev interns specifically.
+Which one?
+
+User: 10ft
+
+Assistant: Cross-checked against implementation task records (Team EOXS Live) — no dedicated intern task type exists there; internal dev/intern work isn't tracked in the client-implementation Kanban, so this is drawn from email/wiki records only, verified against the underlying entity pages rather than summary snippets.
+
+Pattern of what interns get assigned, by role track:
+
+Software/Dev interns
+Web Development Intern, Software Developer Intern, AI Intern — build features on internal or client-facing tools. Example: Kriti Jain, hired as an intern March 2026, built the "Buildix" marketing site for an internal vertical-marketing initiative before converting to full-time AI Engineer.
+
+Project/Product interns
+Assigned to a "Build Team Project – Project Team Module" — internal task-completion-gated work used as a condition for full-time conversion. Four interns (Tapish Sharma, Kartikey, Nijamuddin, Siddhant) were offered full-time Jr. Software Developer roles in May 2026 contingent on finishing pending tasks under this module.
+
+Competitive/sprint-based
+At least one documented "Dev Intern Sprint Project" (Email Automation) run as a cash-bounty competition among interns, won by Deepak Shandilya (May 2025).
+
+Marketing/content interns
+Some start as Marketing Intern before being reclassified into technical tracks (Kriti Jain's role was corrected from Marketing Intern to AI Intern, then later to Software Developer Intern on payslip records — three different designations for one person).
+
+Caveats from verification
+Role designations are inconsistently recorded — several intern records show conflicting job titles across offer letters, payslips, and HR correspondence (flagged directly on entity pages, not just wiki narrative). Actual task completion/conversion outcomes for the May 2026 Build Team Project cohort aren't confirmed in the ingested email record — offer letters exist, but no reply confirming task completion or full-time activation does. Treat "typical project" as a description of documented patterns, not a formal, current onboarding policy — no SOP asset defines a standard intern project track.
