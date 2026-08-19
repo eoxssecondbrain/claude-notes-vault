@@ -57,3 +57,52 @@ A support ticket or invoice
 
 **Assistant:**
 Which client, or do you have a specific ticket/invoice number in mind? I need an actual name or reference to pull against — not a hypothetical.
+
+## Turn 4
+
+**User:**
+lets start with discount
+
+**Assistant:**
+[Question card shown]
+Question: "Discount on what — scope it for me"
+Options:
+- A specific client's discount (I'll give the name)
+- All discounts across recent deals/invoices
+- Discount policy/rules, not a specific number
+- Something else
+
+## Turn 5
+
+**User (selected):**
+All discounts across recent deals/invoices
+
+**Assistant:**
+[Question card shown]
+Question: "Rigor level for this pull"
+Options:
+- 5ft — quick, direct pull
+- 10ft — verified against underlying records
+- 50ft — deep, with risks/blind spots flagged
+- 100ft — staged, sectioned delivery
+
+## Turn 6
+
+**User (selected):**
+10ft — verified against underlying records
+
+**Assistant:**
+Over the last 90 days (Jun 1 – Aug 4, 2026 — window I picked since none was given), 4 of the 8 active clients got a line-item discount on confirmed sales orders. Checked two ways per the 10ft bar: sale_order_line (pre-invoice, order level) and account_move_line (posted invoice level) — they match exactly for every client, so these hold up.
+
+| Client | Avg discount | Discounted / total lines |
+|---|---|---|
+| 3GM Steel | 25% | 3/3 |
+| Sabre Alloys | 20% | 3/8 |
+| PPC Speciality Metals | 20% | 3/3 |
+| Greer Steel Company | 10% | 3/5 |
+
+Zero discount in this window: Discount Pipe & Steel, Brannon Steel, Eastern Steel Sales, Hansen Metallurgical Services.
+
+Source: eoxs-teams (EOXS Team Live, Odoo) — live SQL, current by definition. "Discount" here is a per-line percentage, not a flat dollar figure.
+
+One flag since this is the real test of the tool: 3GM Steel and PPC Speciality Metals show every single line discounted (3/3 each) in this window. Small sample, but worth knowing if that's a deliberate account-level policy or something slipping through unreviewed — the tool can't tell you which, only that it's happening.
