@@ -28,3 +28,7 @@ Date of joining: 2024-06-24
 Change history: role was updated from HR Lead to HR Executive on 2026-08-18, and manager was updated from Remya to Rajat Jain the same day (both changed by "hr").
 
 Source: eoxs-db employee directory.
+
+User: ok how many active Employee in eoxs now?
+
+Assistant: 75 active employees at EOXS currently.
