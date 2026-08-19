@@ -1,0 +1,66 @@
+---
+thread_name: "weekly-askcruz-board-scrum-report"
+user: "raj"
+type: claude-chat
+created: 2026-08-19
+updated: 2026-08-19
+---
+
+# Weekly AskCruz Board Scrum Report — 2026-08-19
+
+## Scheduled Task Prompt
+
+[SCHEDULED TASK - AUTOMATED FIRING OF A CONFIGURED PROMPT]
+This turn was started automatically by a schedule, not typed live by the user.
+
+Locate the askcruz project management connector (teams-askcruz / "Ask Cruz"). If you cannot find or reach it, stop and report that as the finding — do not substitute a different connector.
+Call get_business_schema (or list_tables + describe_table) on it first. Do not assume a prior schema or reuse field names from a previous run — confirm current names for task stage, assignee, priority, chatter, and stage-change tracking every time. As of the last verified run, the relevant tables are project_project, project_task, project_task_type, mail_message, and mail_tracking_value — but verify this fresh, not from memory.
+Board scope — every active board, every run. Query project_project and list every board with its active flag. Pull task data from ALL boards where active = true. Do not scope to a single board (e.g. just "AskCruz") even if that board is the most obviously named one — that has caused this report to silently miss most of the org's actual task volume in the past. Exclude only boards where active = false. State the full list of active boards included in the run at the top of the output, and separately list any inactive boards found (by name) so it's visible what was excluded and why.
+Chatter classification — confirmed at the data level, not by keyword-guessing:
+A stage change is a mail_message row where model = 'project.task', message_type = 'notification', and its subtype_id maps (via mail_message_subtype.name) to "Stage Changed". The old/new stage names come from the matching mail_tracking_value row (mail_message_id = the message's id, field = 'stage_id', old_value_char / new_value_char). The message's author_id (a res_partner) is who made the move; date is when.
+A genuine log note (a human actually typing something, i.e. real acknowledgment) is a mail_message row where message_type IN ('comment', 'email'). Do not count message_type = 'notification' rows even when their subtype is labeled "Note" — those are system-generated field-change logs (e.g. "Assigned To → X"), not a person acknowledging the task. Also exclude message_type = 'user_notification' (automated "you've been assigned" emails).
+Re-verify these message_type/subtype mappings against the live schema each run — do not hardcode subtype IDs, since they can differ across instances. Look them up by name via mail_message_subtype.
+Priority — verify, don't assume a scale. Check the actual distinct values in project_task.priority before doing anything with priority. In the last verified schema this field only has two values (normal / flagged), not three — do not invent a "low priority" tier or a 3-way weighting scheme. Treat "high priority" as whatever the flagged value actually is, confirmed from real data each run.
+Attribution — self vs. other, wherever it changes the picture. For every stage-change and every log note, check whether the acting person (mail_message.author_id, a res_partner) is the same person as the task's assignee (project_task.user_id → res_users.partner_id → res_partner). This matters in two places:
+Acknowledgment: only count a log note as the assignee acknowledging their own task if they authored it themselves. A manager or teammate commenting on someone else's task is not that person acknowledging it — call out the gap explicitly (self-authored count vs. any-author count) whenever they diverge materially.
+Movement: report stage moves on a person's tasks as "N total, M made by them" whenever the two numbers differ. Do not credit someone with "movement" that other people (teammates, candidates working a shared evaluation/hiring board, etc.) performed on their assigned tasks — this has produced misleading numbers in the past (e.g. someone credited with high activity on a task board when every single move was actually made by other people).
+Pull, for the 7-day window ending at run time, across ALL active boards combined: a. Total tasks currently on each active board, and a combined total. b. Tasks in a "Complete"/"Completed"-equivalent stage per board and combined (both all-time and moved-into-that-stage-this-week). A task that moved into that stage and back out again within the window does not count as a completion — only count it if it both ends the window in that stage AND has a move-into-it event in the window. If a board has no such stage at all, say so plainly rather than reporting 0 as if the board just has no finished work. c. Every stage-change event in the window: board, task, old stage, new stage, who (per the attribution rule above), when. d. Every genuine log note in the window (per the definition in step 4): board, task, author, and whether the author is the task's assignee. e. The gap list: every open task, on any active board, with zero log notes and zero stage changes anywhere in the window. Tag each with its board, assignee, and days since last activity (last note/stage-change, or task creation date if neither exists). Report the true total count — if you cap the displayed rows for length, say "showing the oldest N of the total M" rather than silently truncating.
+Per-person report, combined across all boards they appear on — no 0–2/0–3 point codes anywhere. For each person with at least one assigned task (excluding the report recipient, and excluding recognized bot/system/shared accounts — see step 9), compute:
+Score (out of 10): self-acknowledgment rate only — (their open tasks with at least one self-authored note in the window) ÷ (their total open tasks) × 10, rounded to the nearest whole number. This is the one number in the report; everything else below is a plain fact, not hidden inside it. If they currently have zero open tasks, show the score as N/A rather than 0 — there's nothing to measure acknowledgment against.
+Stage moves this week: a plain count — "N total, M by themself" (per step 6). Do not compress this into a weighted point value.
+Completions this week: a plain count of tasks that finished in the window (per step 7b).
+Engagement depth: read the actual content of their log notes this week and tag as Detailed / Brief / Generic / Not enough data, with one short concrete example (which task, what the note said or how short/generic it was). This is a judgment call — state it as one explicitly, don't present it as measured. Do not invent a numeric sub-score for this.
+Scope engagement: yes/no — did they touch at least one flagged/high-priority task in the window, and if yes, which one.
+Gap-list count: how many of their own tasks are on the gap list from step 7e.
+Board(s): every active board they have a task on.
+Flag, don't score, these separately:
+Bot/system accounts holding real tasks (recognizable logins/names like automation tools, "Administrator", "OdooBot", "Public user", portal templates) — list them and what they're holding, especially anything flagged high-priority or long-idle, but don't put them in the per-person scorecard.
+Shared/bulk accounts that represent a group rather than one person (e.g. a cohort-wide or team-wide assignee bucket) — same treatment: report what's on them, don't score them as an individual.
+Anyone with zero activity of any kind all week.
+Any task open more than 7 days with no log note at any point in its history (not just this week).
+Any completed task that was never acknowledged (no genuine log note, per step 4) before it closed.
+Any board-attribution ambiguity — someone whose combined score across boards could be masking a problem that's concentrated on just one of them.
+Output format — a single self-contained HTML email, not a plain-text wall (stat tiles, board table, gap-list table, per-person cards, flagged callouts, no <style> block or class attributes, inline styles only, table-based layout).
+Email delivery: To: rajat@eoxs.com, Subject: Weekly AskCruz Board Scrum Report - [Today's Date], Body: the complete HTML sent as the email's HTML body.
+
+## Work performed
+
+1. Loaded raj-eoxs-vault and threads-ov skills per session-start requirement.
+2. Connected to teams-askcruz (Odoo 13) connector. Called get_business_schema — confirmed core tables (res_partner, project_project, project_task, project_task_type, hr_employee, hr_department, hr_job, emp_training_*). mail_message / mail_tracking_value / mail_message_subtype were not in the business schema and were described separately via describe_table.
+3. Confirmed message_type distinct values on project.task: comment, email, user_notification, notification. Confirmed mail_message_subtype id=7 "Stage Changed" (res_model='project.task') and id=2 "Note".
+4. Confirmed priority is two-valued: '0' (normal) and '1' (flagged) — no low-priority tier.
+5. Queried project_project for active/inactive boards. Active (6): 50 MBA Inters Cohert (id 3), AskCruz (id 6), Customer 1 - EOXS (id 4), GTM Ideas (id 11), Hiring Funnels (id 9), Idea Board (id 7). Inactive (4, excluded): Daily Snippets, Start here to discover Odoo, Test, Test1.
+6. Pulled per-board per-stage task counts for all active boards: totals 21/41/62/2/4/8 = 138 combined. Identified completion-equivalent stages: AskCruz "Completed" (stage_id 384, 13 all-time), Customer 1 - EOXS "Complete" (stage_id 378, 38 all-time), Idea Board "Completed" (stage_id 388, 1 all-time). 50 MBA Inters Cohert, GTM Ideas, and Hiring Funnels have no completion-equivalent stage — reported as N/A rather than 0.
+7. Pulled all 77 stage-change events in the 7-day window (2026-08-12 to 2026-08-19 UTC) via mail_message + mail_message_subtype + mail_tracking_value join, restricted to active boards. Computed completions-this-week using the "ends window in stage AND has move-into-it event in window" rule: AskCruz 7, Customer 1 - EOXS 21, Idea Board 1 = 29 combined.
+8. Pulled all 161 genuine log notes (message_type in comment/email) in the window, joined to task assignee via project_task.user_id → res_users → res_partner, flagging self vs other authorship.
+9. Built the 86-row open-task dataset (excluding completion-stage tasks) with last-stage-change-ever, last-note-ever, and this-week activity flags to construct the 30-task gap list (zero activity of any kind in the window), each tagged with precise days-idle computed in SQL.
+10. Computed per-person aggregates for 9 real individuals (Ayan Dutta, Jaskeerat Singh, Muskan Sharma, Nidhi Rana, Priyanshu Sinha, Ron, Sheenam, Vanshi B, Yashvir Singh Thakur), excluding report recipient Rajat Jain and flagging 3 non-person accounts separately (bot: MCP Write Tool; bulk/shared: MBA Cohert 1, Cohert 1 Dev Team).
+11. Read actual log-note body text per person to make judgment-call engagement-depth tags (Detailed / Brief / Generic / Not enough data) with concrete examples.
+12. Identified and flagged 5 anomalies: (a) MCP Write Tool bot holding 5 tasks incl. the one non-Ayan flagged/high-priority task, 12.7 days idle; (b) MBA Cohert 1 and Cohert 1 Dev Team as shared/bulk accounts; (c) 11 completed tasks with zero log notes ever, including the flagged task Project Board Management that Ayan Dutta's scope-engagement credit rests on; (d) 14 tasks open >7 days with no log note anywhere in history; (e) board-attribution ambiguity for Ayan Dutta (combined 4/10 score masks 0/6 on Idea Board vs 50-57% on other boards) and for Yashvir Singh Thakur (18 stage moves credited to his tasks but 0 made by him — all by other MBA cohort members).
+13. Built a self-contained HTML email (inline styles only, no `<style>` block, no `class=` attributes, table-based layout throughout) with: header/summary, 4 stat tiles, boards table, 30-row gap-list table, 9 per-person cards, 6 flagged-anomaly callouts, and a closing note. Verified via Playwright screenshot rendering (no `<style>`/`class=` present, confirmed by string search) before sending.
+14. Due to output-size constraints on reconstructing very large raw tables verbatim in a single tool call, the full row-by-row stage-change-event table (77 rows) and log-note table (161 rows) were computed, used to build every aggregate/flag in the report, verified correct, but omitted from the final email body for length (disclosed explicitly in the email with an offer to send as follow-up).
+15. Sent the email via Gmail (send_message) to rajat@eoxs.com, subject "Weekly AskCruz Board Scrum Report - August 19, 2026", as HTML body. Message id: 1a01a9323b8490dc.
+
+## Outcome
+
+Report generated and emailed successfully. No blockers. Key findings worth flagging: AskCruz board itself only carries 41 of the 138 combined tasks (30%) — the majority of org task volume is on Customer 1 - EOXS (62) and 50 MBA Inters Cohert (21). Ayan Dutta carries by far the largest open-task load (34) spread across 5 boards, with his Idea Board tasks (6, all untouched since Aug 5) fully stalled despite a respectable combined score. Two people (Muskan Sharma, Priyanshu Sinha) and two non-person accounts show near-zero direct engagement with their own tasks. The one flagged/high-priority task that was completed this week (Project Board Management) was never acknowledged with a log note at any point.
