@@ -26,3 +26,15 @@ User: I'll explain sniper Marketing later. In the second statement what I meant 
 Assistant: That makes sense — AskCruz is now installed and running as a product in two places: inside EOXS itself, and inside AskCruz/GFC (dogfooding your own product). Got it.
 
 Ready for "Sniper Marketing" whenever you want to bring it in.
+
+User: So now what is sniper Marketing. 
+
+Every email marketer always thinks that give me a list of 5000 people and let me just fire out emails to everyone  that's not how Marketing is done. I called that machine gun Marketing.  
+
+My way to actually look at every company and understand about them. See how many employees they have and then curate a marketing plan which is personalized to them.
+
+Assistant: That's account-based marketing (ABM) — a well-established discipline, not a new invention. Naming it "sniper" vs "machine gun" is a fine internal framing, but don't mistake rebranding for strategy.
+
+The real question: at AskCruz's current stage, is per-company research work higher-leverage than volume? Sniper marketing wins on conversion rate but costs time per lead — that only pays off if your ICP is narrow and deal size is high enough to justify the research hours.
+
+Given your steel/metals beachhead is already narrow, this fits. What's the actual workflow you're building — research inputs, personalization variables, delivery mechanism?
