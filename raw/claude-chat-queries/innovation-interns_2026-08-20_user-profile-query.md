@@ -6,6 +6,14 @@ created: 2026-08-20
 updated: 2026-08-20
 ---
 
-User: okay sounds good so now can you tell me that who are the managers in the product intern group and what are their names
+User: what do you know about me/
 
-Claude: Which product intern group are you asking about? Is it your current team, or a specific department?
+Claude: Here's what I know about you:
+
+- Name: Priyanshu
+- Role: Startup generalist
+- Main work: Assisting on the project board
+- Email: productinterns@askcruz.com
+- Organization: Product Interns
+
+That's what you've told me so far. Anything else you want me to remember?
