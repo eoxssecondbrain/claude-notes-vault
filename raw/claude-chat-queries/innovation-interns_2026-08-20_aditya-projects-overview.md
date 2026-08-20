@@ -28,3 +28,24 @@ updated: 2026-08-20
    - **100 ft deep** — staged deep dive, one section at a time
 
 Once you clarify these, I'll pull the data from EOXS and give you a clean picture.
+
+---
+
+**Aditya:** i want all the project assigned to me with a brief detail about the task
+
+**Claude:** I've searched EOXS for projects assigned to you, but no implementation tasks are showing with Aditya Yadav as the owner.
+
+This could mean:
+
+1. Your tasks are assigned under a different name or team in the system
+2. Tasks haven't been formally assigned yet, or are assigned to a team/group rather than individually
+3. You're supporting projects in a different capacity (e.g., through correspondence or client profile work rather than the task board)
+
+To find your work, I need one of:
+
+- **The client name(s) you're working with** (e.g., Discount Pipe Steel, Eastern States Steel)
+- **The project name(s)** you're involved in
+- **An alternative name or team label** tasks might be assigned under
+- **Or any specific task or area you can reference**
+
+What clients or projects are you focused on right now?
