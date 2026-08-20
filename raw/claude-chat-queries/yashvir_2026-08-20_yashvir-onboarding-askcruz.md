@@ -53,3 +53,19 @@ How it's different from EOXS ERP: EOXS ERP is the system of record — where the
 How it's sold, based on live deals: mostly as an add-on/upsell to existing EOXS ERP customers right now — 3GM Steel is a live example, pitched to their CCO as a Company Brain add-on. But it's also being pitched standalone to non-EOXS companies — there's an active conversation with a legal-services firm that has nothing to do with steel or EOXS ERP.
 
 That's the whole first step. Next up would be who buys it (step 2) — want to keep going, or sit with this first?
+
+User: So if any company opts to implement AskCruz whay all information or access would we want from them to implement it end to end?
+
+Assistant: Based on actual EOXS/AskCruz deals in the system, there's no single formal "implementation checklist" document — but the pattern across live deals is consistent. What gets asked for:
+
+ERP data — either their existing EOXS ERP data if they're already a client, or, if not, a direct data pull covering sales, purchase, and invoicing records. That's literally what was asked of 3GM Steel's CCO for a similar AI preload: "send sales, purchase, and invoicing data — whatever you want to ingest."
+
+Email access — company email accounts get connected so email becomes a feed into the system, not just a communication channel. One rollout email to a client put it directly: "Email and Zoom feed directly into this system, hence going forward those will be our primary channels of communication."
+
+Call/meeting data — Zoom or call recordings, run through a transcription layer (Fireflies/Fathom on the EOXS side), so call content becomes reasoning material too.
+
+Scope/seats — how many people will actually use it. This gets negotiated per deal — 3GM Steel's live deal landed at a reduced 2-user scope, not company-wide.
+
+Timeline — the email-integration piece alone has been quoted at 2-3 weeks of implementation work in internal planning; a fuller build (ERP + email + calls) takes longer.
+
+Caveat: I'm not finding one canonical "here's exactly what we collect from a new AskCruz client" SOP — this is reconstructed from how actual deals (3GM Steel, Sabre Alloys) have gone. If you want, I can dig further into whether a formal intake process exists, or move to step 2 (who buys it).
