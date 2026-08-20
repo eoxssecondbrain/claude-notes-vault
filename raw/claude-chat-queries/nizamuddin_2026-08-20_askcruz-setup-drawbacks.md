@@ -6,31 +6,19 @@ created: 2026-08-20
 updated: 2026-08-20
 ---
 
-USER: If I ask any prompt what the architecture it is following, like how much data it is going to record and what the steps are going on like that.
+USER: I am asking to you. not the... based on the data is present in my database or the connectors. I'm asking you to what is following, like, how it analyzing my prompt, which characters are used to which prompt.
 
-CLAUDE: [Researched via mcp__EOXS_data_general tools: search_assets x2, search_wiki x2, get_asset "ai-joe-project-overview", get_wiki_page "IRIS" (returned unrelated "3GM Steel — IRIS AI Historical Data Preload" page), get_client_file on "wiki/concepts/Second Brain Initiative.md" to retrieve the FULL body (not just the 1500-char preview) — this was the key source.]
+CLAUDE: Fair — that's a different question, about me, not EOXS's systems.
 
-Final response delivered to user:
+Architecture: I'm Claude, running through the Claude Agent SDK, configured for this Cowork session with a system prompt plus a set of tools — file read/write, shell/bash, web search, and the MCP connectors you have installed (the EOXS data connectors, Thread_OV, the memory system, etc.). The model configured for this session is labeled claude-sonnet-5, though the model actually serving any given turn can differ, and I have no way to check which one answered a specific message.
 
-Based on the internal record, the clearest source is Rajat's own live architecture walkthrough to a Sabre Alloys client call (2026-07-14), corroborated by two internal team calls and a rollout email. This describes the same underlying system AskCruz/"Company Brain" is built on.
+How I process a prompt: your text gets split into tokens, not literal single characters — a tokenizer groups text into sub-word chunks (roughly 3-4 characters each on average for English), and the model predicts the next token repeatedly to generate a response. I don't have introspective access to the actual weights, attention mechanics, or the exact tokenizer vocabulary Anthropic uses — that's not something I can observe about myself from inside a conversation, so I won't invent specifics I can't verify.
 
-Layers, in Rajat's own words on that call: raw data (all emails and call transcripts, unfiltered) sits on the outside; a "wiki" layer inside it holds summarized/synthesized versions of that raw data; an index file sits on top as a table of contents. At query time the AI reads the index first, follows the most relevant link, reads that one page, and only then answers — it does not scan the entire dataset per prompt.
+How much gets recorded, right now, in this exact conversation — two separate things are happening:
 
-Steps, in order:
-- Ingest — email capture is fully automated/scheduled. Call transcript capture (Fireflies) was still manual as of mid-2026, with a plan to automate it as a daily job. ERP data is meant to feed in too, per the standard pitch to new clients ("inject real-time ERP database").
-- Synthesize — raw data gets turned into the summarized wiki pages. This step is explicitly not automatable via API; it requires a local Claude Code session, roughly 35-40 minutes per run. It's the one deliberately manual step in the whole pipeline.
-- Index — a table-of-contents file gets updated so the AI knows which wiki page answers a given topic.
-- Retrieve/answer — the AI reads the index, follows the most relevant page, reads it, answers from that.
+1. The session itself holds the full transcript for as long as it runs — every message and every tool call I make is in context.
+2. Because of a preference you've saved, I'm running the threads-ov skill, which means at the end of every single turn — including this one — I call a tool that saves the full, verbatim text of the exchange to a git-backed vault outside this conversation (raw/claude-chat-queries/...). That's not optional on my end; it's your own configuration, and it fires every turn regardless of topic.
 
-How much gets recorded: functionally everything, on an ongoing basis, not a snapshot. EOXS's own message to a client (Sabre Alloys, June 2026) states it plainly: "we've successfully implemented an AI Second Brain... that consolidates context from our emails and Zoom calls into a single resource... Email and Zoom feed directly into this system, hence going forward those will be our primary channels of communication." That's total capture of both channels, positioned as the canonical record going forward, not a selective assistant. Separately, the client-facing "Prompt History" feature is described as saving every chat and every question, including prompts that get edited after the fact — the edit itself is retained, not just the final version.
+Separately, there's a different persistent memory system for durable facts about you specifically — I haven't written anything to it in this conversation.
 
-The parts that actually matter for reliability and record-keeping risk:
-- A real ingestion failure already happened: a key email thread got silently dropped because the pipeline was filtering by a hardcoded per-client contact list — anything from a sender not on that list was never captured at all. The documented fix is to fetch everything unfiltered; that rule is now written into the system's governing doc, but no dated record confirms exactly when it went live.
-- A second, unconfirmed concern flagged internally but never verified: whether the AI-generated summaries sometimes drop real content when compressing raw data into the wiki layer.
-- Access control was unsolved as of mid-July: Rajat said he personally couldn't safely share his own account internally because role-based access (full access vs. a role scoped to one module) hadn't been built yet — which is the same root cause behind the intern/functional-team access confusion flagged in the last answer.
-- Scalability is genuinely ambiguous in the record: a team call mentions a SQL server "finished, locally" because the git-based structure "would have broken at a certain point," but it's unclear whether that refers to this internal system or the separate client-facing ERP backend (which is confirmed moving to Postgres on that same call). The transcript itself doesn't resolve which one.
-- A cost-tiering system, meant to let a user choose cheap/shallow vs. expensive/deep per query, was discussed as something still in development — meaning today there's no confirmed way to control what a given prompt costs before sending it.
-
-Net: near-total, continuous capture of both channels, run through one manual synthesis step and an index-driven retrieval step — with a documented instance of data silently going missing, and no finished access-control layer as of the last update on record.
-
-Source: wiki page "Second Brain Initiative" (eoxs-db), citing the 2026-07-14 Sabre Alloys architecture walkthrough, the 2026-07-01/02 and 2026-07-31 internal team calls, and the 2026-06-02 rollout email to Sabre Alloys.
+So directly: this message and my answer to it will themselves be saved verbatim right after I finish — same as everything else in this thread.
