@@ -6,14 +6,17 @@ created: 2026-08-20
 updated: 2026-08-20
 ---
 
-User: what do you know about me/
+User: like what kind of data do you want from me ? you can ask me questions i will answer me lets get you more knowledgeable on me
 
-Claude: Here's what I know about you:
+Claude: Good. Let me ask you some key questions to build out your profile:
 
-- Name: Priyanshu
-- Role: Startup generalist
-- Main work: Assisting on the project board
-- Email: productinterns@askcruz.com
-- Organization: Product Interns
+1. What's your background? (education, previous roles, experience)
+2. What projects are you currently working on or managing?
+3. What are your top 3 priorities right now?
+4. What are your main strengths/expertise areas?
+5. Who do you report to, and who's on your immediate team?
+6. What tools/systems do you use daily for work?
+7. What's your preferred communication style?
+8. What are you trying to learn or improve on?
 
-That's what you've told me so far. Anything else you want me to remember?
+Start with whatever feels most relevant. I'll save it all to memory so I know how to help you better going forward.
