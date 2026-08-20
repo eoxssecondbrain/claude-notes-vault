@@ -6,19 +6,53 @@ created: 2026-08-20
 updated: 2026-08-20
 ---
 
-USER: I am asking to you. not the... based on the data is present in my database or the connectors. I'm asking you to what is following, like, how it analyzing my prompt, which characters are used to which prompt.
+USER: give me total task i worked on
 
-CLAUDE: Fair — that's a different question, about me, not EOXS's systems.
+CLAUDE: [Called AskUserQuestion to clarify which task source] Which tasks do you want listed? Options: My EOXS/AskCruz project board tasks / This conversation's task list / Something else.
 
-Architecture: I'm Claude, running through the Claude Agent SDK, configured for this Cowork session with a system prompt plus a set of tools — file read/write, shell/bash, web search, and the MCP connectors you have installed (the EOXS data connectors, Thread_OV, the memory system, etc.). The model configured for this session is labeled claude-sonnet-5, though the model actually serving any given turn can differ, and I have no way to check which one answered a specific message.
+USER (via AskUserQuestion): you know i am developer? i am asking about related to development
 
-How I process a prompt: your text gets split into tokens, not literal single characters — a tokenizer groups text into sub-word chunks (roughly 3-4 characters each on average for English), and the model predicts the next token repeatedly to generate a response. I don't have introspective access to the actual weights, attention mechanics, or the exact tokenizer vocabulary Anthropic uses — that's not something I can observe about myself from inside a conversation, so I won't invent specifics I can't verify.
+CLAUDE: [Checked memory (empty), searched EOXS_data_general search_implementation_tasks for "Nijam" (no results), queried eoxs-teams via Team_EOXS connector: describe_table project_task, describe_table res_users, then queried res_users/res_partner to find user_id=353 (login nijam.eoxs@gmail.com, partner_name "G. Nijamuddin"), then queried project_task joined to project_task_type and project_project for all tasks where user_id=353, then a count query grouping by active status confirming 29 total, all active.]
 
-How much gets recorded, right now, in this exact conversation — two separate things are happening:
+Final response delivered to user:
 
-1. The session itself holds the full transcript for as long as it runs — every message and every tool call I make is in context.
-2. Because of a preference you've saved, I'm running the threads-ov skill, which means at the end of every single turn — including this one — I call a tool that saves the full, verbatim text of the exchange to a git-backed vault outside this conversation (raw/claude-chat-queries/...). That's not optional on my end; it's your own configuration, and it fires every turn regardless of topic.
+Pulled directly from EOXS Team Live (eoxs-teams, current by definition) — project_task rows assigned to your user account (nijam.eoxs@gmail.com / G. Nijamuddin, user_id 353). 29 total tasks, all active, no archived ones.
 
-Separately, there's a different persistent memory system for durable facts about you specifically — I haven't written anything to it in this conversation.
+By project: Build Team 22, EOXS Support 6, Daily Snippet 1.
 
-So directly: this message and my answer to it will themselves be saved verbatim right after I finish — same as everything else in this thread.
+Completed/paid (5): BOL Showing Incorrect Value in Weight Column, FR0444, INV/2026/0954 (Verbal - Joe), Add Vendor Delivery field, Add Pivot Table Functionality to Invoices and Bills in Accounting Module.
+
+Still in the pipeline (24), grouped by stage:
+
+| Task | Project | Stage |
+|---|---|---|
+| Nijam's Snippet | Daily Snippet | Jr. Dev |
+| Re:Quote -02416 - J & I Manufacturing | EOXS Support | Need Developer |
+| Quantity Changes When Length Is Edited | Build Team | Assigned |
+| Investigate and Fix Unexpected Quantity Change on Delivery | Build Team | Assigned |
+| Improve Inventory Loading Performance | Build Team | Assigned |
+| Inventory Adjustment Cost Fix | Build Team | Assigned |
+| Incorrect Delivered Quantity. | Build Team | Code QA/AI Review |
+| Re: 51555 | EOXS Support | QA |
+| Update Packing List PDF | Build Team | QA Failed |
+| Fix Report Filters Not Persisting | Build Team | On Sandbox/Functional QA |
+| Fix Google Maps Customer Selection Error | Build Team | Ready for Sandbox |
+| IRIS AI Module | Build Team | Ready for Sandbox |
+| Add "Days Past Due" Column to Invoice List View | Build Team | Communicated |
+| Add New Cutting Method: "Toll Processing" | Build Team | Communicated |
+| Fix Profit & Loss Balance Sign | Build Team | Communicated |
+| Add Vendor Delivery Address Field on Purchase Order Header | Build Team | Communicated |
+| Implement OTP-Based Login Verification | Build Team | QA Passed |
+| Add Sales Order Column in Processing Lines | Build Team | QA Passed |
+| Enable Transaction Search by Dollar Amount or Vendor | Build Team | QA Passed |
+| Quantity Changes When Length Is Edited (dup task) | Build Team | Can be released |
+| Fix Processing Line Reset | Build Team | Can be released |
+| Invoice Due Date Not Updating After Changing Payment Terms | Build Team | Can be released |
+| Fix General Ledger Print Failure | Build Team | Revert code/Update Gitlab |
+| Install Google Authenticator Login Security | Build Team | Revert code/Update Gitlab |
+
+Worth flagging: two separate open tasks both titled "Quantity Changes When Length Is Edited" (ids 6564 and 7606) at different stages — same bug reopened, or a duplicate task. Might be worth checking which is stale.
+
+Source: eoxs-teams, project_task joined to res_users/res_partner, live query.
+
+[Also wrote to memory /profile.md: "[stated] Developer at EOXS, working on the Build Team / EOXS Support project boards (Odoo, EOXS Team Live)." — filed because the user stated their occupation/role directly during this exchange.]
