@@ -20,3 +20,9 @@ Unclear pieces:
 Also flagging per your standing instruction: this could fall under sales-strategist (if it's GTM/marketing strategy) or it's a factual/setup statement with no clear skill match. I don't want to load the wrong context or guess at persona.
 
 Can you restate the full statement/context in one go? Then I'll confirm understanding before we proceed.
+
+User: I'll explain sniper Marketing later. In the second statement what I meant was that we have just installed ask Cruz as a product in Eoxs and the company ask Cruz.  Does that make sense?
+
+Assistant: That makes sense — AskCruz is now installed and running as a product in two places: inside EOXS itself, and inside AskCruz/GFC (dogfooding your own product). Got it.
+
+Ready for "Sniper Marketing" whenever you want to bring it in.
