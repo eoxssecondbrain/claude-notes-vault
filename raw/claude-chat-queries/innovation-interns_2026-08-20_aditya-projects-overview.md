@@ -98,3 +98,27 @@ What clients or projects are you focused on right now?
 - Your most recent activity was task verification on #147 and #27 (MCP testing)
 
 Do you want me to pull the full task descriptions, attachment details, or dive into the team-wide progress on these boards?
+
+---
+
+**Aditya:** Re-check about the mcp writs function
+
+**Claude:** You're right to question that. Let me clarify:
+
+**Task #27 — MCP Write Function**
+
+Based on the **Weekly AskCruz Board Scrum Report** (dated August 18, 2026), this task is actually on the **internal Customer 1 - EOXS project board** (not the formal EOXS implementation tasks system).
+
+**Corrected Details:**
+
+- **Task ID:** #27 on the AskCruz/Customer 1 - EOXS internal board
+- **Task Name:** MCP Write Function
+- **Primary Owner:** Nidhi Rana
+- **Your contribution (08-18 13:45):** "Tested and successfully implemented that Claude is able to perform tasks l[ike]..." [note appears truncated in the system]
+- **Context:** This is QA/testing work on MCP (Model Context Protocol) write capabilities for Claude integration into EOXS
+
+**Status:** The task appears to be active/in-progress with your recent note on 08-18, so it's likely still in development or final QA stages.
+
+The issue is that this task lives on the internal project board system (tracked in the scrum reports), not in the formal EOXS client implementation task database, which is why it didn't show up in my initial search.
+
+Do you want me to pull any additional details from the scrum report about this task, or clarify what the full scope of the MCP Write Function work entails?
