@@ -67,3 +67,16 @@ The credential opens the door, it doesn't close the deal. Once an enterprise buy
 Timing math: I checked whether any current AskCruz prospect conversations have already surfaced security/compliance friction — none have. That's consistent with your read that today's accounts skew 20-30 employees, where this doesn't come up much. So the real question isn't "is this valuable" — it clearly will be — it's "how far out is your enterprise push." If you're about to start actively working 100+ employee prospects in the next quarter or two, hiring her now is well-timed: she's building the trust asset and the documentation right as you need both. If enterprise is more like a 12+ month horizon and you're still heads-down on the current SMB motion, you'd be carrying $48K/year of cost against a benefit that doesn't land for a year, on a bootstrapped budget where the stated priority is $1M ARR from the pipeline you have now.
 
 Worth answering directly: is enterprise prospecting starting soon, or is it further out on the roadmap than the current SMB push?
+
+User: And for her, I understand there will be a loading curve if she spends hundred hours on learning about ask Cruz and what we do and what kind of processes she needs to put in place. Don't you think that is doable?
+
+Assistant: Yes, that's a reasonable ramp for a first output — but calibrate what 100 hours actually buys you.
+
+Her control-design instincts transfer well: SOC 2 and banking op-risk frameworks both come down to "define the control, document it, produce evidence it's followed." That part she'll pick up fast given her background. What she won't have out of the gate is AskCruz-specific and steel-industry-specific context — how the Claude/Anthropic infrastructure and ZDR certification actually work, what the ABAC access model does, what data actually flows through client integrations. That's the part 100 hours needs to cover, and it's genuinely new territory for her, not a refresh.
+
+Rough split that would make the 100 hours productive rather than just "learning time":
+- ~20 hours: onboarding on AskCruz's actual architecture, the ABAC model, ZDR certification, working sessions with you and whoever built the technical side
+- ~20-30 hours: getting fluent in SOC 2 / startup-compliance frameworks specifically (different from bank op-risk frameworks she knows) — self-study plus maybe looking at what tools like Vanta/Drata expect
+- ~50 hours: producing the actual first drafts — data security overview, access policy write-up, vendor risk register, gap analysis
+
+Structure it as checkpoints with deliverables at each stage, not open-ended ramp time — otherwise 100 hours can quietly become "still getting oriented" with nothing to show. And the cost math works in your favor either way: 100 hours against her ask is roughly $2,400 of value, which is a cheap way to see real output before deciding whether this becomes an ongoing role.
