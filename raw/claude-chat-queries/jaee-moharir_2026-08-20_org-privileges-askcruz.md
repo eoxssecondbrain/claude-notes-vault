@@ -47,3 +47,29 @@ Actually designing that model is a strategic task, so pick a depth:
 100ft depth — same as 50ft, delivered in sections so you can steer between them.
 
 Which one?
+
+USER: actually I need to 1st understand on high level and then explain me each depth into a phased approach
+
+ASSISTANT: High level first.
+
+A privilege model for AskCruz needs to solve two separate problems that are currently being handled ad hoc and blurring together:
+
+Client-facing roles — since deals are sold on a fixed seat count (3GM at 2 users), the simplest workable structure is two tiers: an admin role that can manage seats, configure data sources, and see everything the instance ingests, and a standard user role that can query but not administer. If you ever want to sell more seats at a lower price point, a third read-only/viewer tier is the natural lever — cheaper seats, less data exposure.
+
+Data scope within each client instance — AskCruz ingests company data (emails, ERP records, internal docs), so it needs the same kind of tiering EOXS already runs internally: general-access data vs confidential data (financials, HR, personnel) vs anything above the client contact's own clearance. This isn't a new invention — it's the same tier1/tier2/tier2_confidential pattern already working in the EOXS data connectors. Reuse it rather than designing from scratch.
+
+Internal EOXS operator access — separate from the client's own roles, someone at EOXS needs defined access to configure and support each client's instance. Right now this is happening informally: the functional-team rollout (Ayan Dutta, connecting individual Claude accounts to AskCruz) is the first case of this extending past core engineering, with no documented model for who gets what level of access to a live client instance.
+
+Seat enforcement tied to roles — right now seats are a commercial term (2-user scope) with no described technical enforcement. If role assignment doesn't map cleanly to the seat count sold, the contract scope isn't actually enforceable, just implied.
+
+That's the shape of the problem. Turning that into a phased approach, using your depth framework as sequential phases rather than alternative choices:
+
+Phase 1, 5ft deep — Lock the role skeleton above into a concrete matrix: role names, what each can see/do, mapped to the two problem areas (client-facing, internal operator). No data pulled, just structuring what's already known about the product.
+
+Phase 2, 10ft deep — Verify that skeleton against reality. Pull the teams-askcruz Odoo project (project_id=6) to see what access structure already exists there, and cross-check seat-scope terms across every AskCruz deal on record, not just 3GM, to confirm 2-user is a pattern rather than a one-off. Adjust the matrix to match actual contract shape.
+
+Phase 3, 50ft deep — Full investigation. Look at why clients are negotiating seat count down (pricing sensitivity vs actual feature need — this determines whether a third tier is worth building), examine the internal rollout in progress for decisions the formal model would need to stay consistent with, and surface governance gaps already flagged on record, including the open question about a Git repository tied to a personal Gmail account that nobody has resolved. This phase is where I'd flag risk, not just describe structure.
+
+Phase 4, 100ft — Same investigation as Phase 3, delivered section by section (role matrix, data tiering, internal governance, seat/pricing tie-in, risks) so each part stands on its own instead of landing as one long document.
+
+Say the word and I'll start Phase 1, or jump straight to Phase 2 if you want it grounded in the actual deal data from the start.
