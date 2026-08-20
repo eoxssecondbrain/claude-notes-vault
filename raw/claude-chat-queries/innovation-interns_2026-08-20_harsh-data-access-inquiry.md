@@ -159,3 +159,30 @@ Before I create a SOP for AskCruz, I need to understand what you're looking for.
 10. Are there specific workflows or processes unique to how your team uses AskCruz that need to be documented?
 
 Once I understand these details, I can draft a SOP structure and get your approval before building it out.
+
+---
+
+its is for clients
+cover the entire askcruz platform
+the audience will be our whole team and clients
+
+Got it. So this is a comprehensive SOP for AskCruz that serves both your internal team and your clients—essentially a guide that helps everyone understand how to use the full platform.
+
+Before I structure this, a few more details to nail down:
+
+**1. What does AskCruz do at the highest level?**
+From the scrum data, I see it's a project management/task board, but help me understand: Is it primarily for managing projects, tracking tasks, collaborating on work, or a combination? What's the core value prop you'd pitch to a new client?
+
+**2. What are the main workflows?**
+Based on the scrum report, I saw people creating tasks, moving them through stages (Task List → Claimed → In Progress → Submitted → Complete), and logging notes. Are these the core workflows, or are there others (e.g., creating projects, managing teams, reporting)?
+
+**3. Current pain points or confusion?**
+Looking at the scrum data, I noticed some things like tasks sitting idle, incomplete notes on finished work, and stage movement sometimes happening without the assignee's direct action. Should the SOP address best practices to avoid these, or keep it purely procedural?
+
+**4. Tone & depth for clients:**
+Should this be super polished and sales-focused (positioning AskCruz as a solution), or more neutral/technical (here's how to use it)? Are clients expected to be power users or just basic users?
+
+**5. Key features to highlight:**
+Should it cover things like dashboards/reporting, integrations, access controls, or just the core task/project creation workflow?
+
+Once I understand these, I can propose an outline (e.g., Getting Started → Core Features → Workflows → Best Practices → Troubleshooting) and get your sign-off before writing it out.
