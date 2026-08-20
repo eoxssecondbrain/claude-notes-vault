@@ -41,3 +41,20 @@ Basically, any invoicing and financial records connected to your organization's 
 Do you want me to pull specific invoice data or financial records?
 
 User: okay understand
+
+Claude: Got it. What would you like to do next?
+
+User: is there somthing you dont have access to?
+
+Claude: Yes, I don't have access to:
+
+- **Private/personal data** — Personal finances, health records, or anything outside your organization
+- **Third-party tools** — Slack, Jira, Linear, Asana, etc. unless they're connected as MCPs to your setup
+- **Real-time data** — Live market prices, stock quotes, or constantly updating systems (I can search, but it's not live)
+- **Systems without credentials** — Any tool or database you haven't explicitly connected or authenticated
+- **Confidential external data** — Competitor data, private client info not in EOXS, or anything you haven't authorized
+- **Your personal devices/apps** — Unless you connect a folder or grant access through the desktop app
+- **Enterprise systems not in EOXS** — SAP, NetSuite, Salesforce, etc. if they're not plugged into your setup
+- **Real-time monitoring** — I can't watch systems continuously; I can only query when you ask
+
+Basically: I can access what's connected and what you've authorized. Everything else is blocked. Need me to connect to something?
