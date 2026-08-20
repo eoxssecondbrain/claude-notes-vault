@@ -57,3 +57,9 @@ User: dont owrry about it.. give me something that i put in designs here in clau
 Assistant: No usable 3GM-branded photo out there — their web presence is thin, and hotlinking a random stock photo into a client-facing email is a bad look anyway (broken-image risk, no rights to it). Built the visual with CSS instead — steel/industrial palette, no external image dependency, which also means it won't get stripped by email clients that block images by default.
 
 [Created file: /mnt/user-data/outputs/3gm-steel-ai-era-email.html — full HTML announcement email "3GM Steel Just Entered the AI Era" with header band, body copy, highlight strip, CTA button linking to Calendly, and footer. Presented file to user.]
+
+User: A lot of writing. Can you structure this in an easily digestible format. I have heard there is some psychology behind how people scan information in emails. We could use some of that psychology.
+
+Assistant: Applying it: F-pattern scanning (people read top-left heavy, then skim down the left edge), inverted pyramid (lead with the punchline, not the setup), and chunking (bullets over paragraphs — the eye processes a list in a fraction of the time). Cut the copy by about 60% and restructured around those.
+
+[Created file: /mnt/user-data/outputs/3gm-steel-ai-era-email-v2.html — restructured HTML email with punchline-first header ("3GM Steel just went AI-first. Confirmed this week. Sabre's next."), numbered 3-line scannable body (01 What happened / 02 Why it matters / 03 Where Sabre stands), isolated single CTA button "Book 15 min with Raj", and slim footer. Presented file to user.]
