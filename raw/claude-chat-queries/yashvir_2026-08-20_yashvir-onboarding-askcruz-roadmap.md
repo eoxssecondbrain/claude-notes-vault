@@ -29,3 +29,22 @@ For understanding AskCruz specifically, I'd break it into three stages rather th
 3. What real sales conversations sound like — actual objections and pitches from 3GM Steel, Ohio Strip Steel, Collier Metals, Sabre Alloys, and the legal-services prospect
 
 We take one at a time. Want to start with stage 1, or start with the day-one checklist above first?
+
+**User:** Quick note before the roadmap: my records here show you've been active at EOXS since 2024 (sales/ops, onboarding other reps, LDR-adjacent work). If today really is a literal first day, ignore that — just flagging it since it might mean some of what I'd normally suggest (system access, intro calls) is already done for you.
+I have been with EOXS since 2024 but i'm transitioning into AskCruz
+
+**Assistant:**
+Makes sense — that changes the shape of "day one." You don't need access/reporting-line steps, you need a transition plan: what carries over from your current work, what's new.
+
+Revised for a role transition, not a fresh hire:
+
+[Step card: "Transition plan into AskCruz-focused LDR work"]
+1. Clarify what's actually changing — Ask Rajat or whoever owns AskCruz sales directly: what does your day-to-day change to? Same prospect universe (steel/metals accounts you already know) with AskCruz added as a second pitch, or a genuinely new territory (any 20+ employee business, standalone)?
+2. Learn AskCruz's two sales motions — You already know EOXS ERP's pitch. AskCruz is sold both as an add-on to that and as a standalone product to non-steel businesses. Get clear on the two different pitches before making calls — they're not the same conversation.
+3. Review the live AskCruz pipeline — 3GM Steel, Ohio Strip Steel, Collier Metals, Sabre Alloys, and a legal-services prospect are already in the AskCruz pipeline. Reviewing where each stands tells you what's working and what objections keep coming up, before you start cold.
+4. Listen to a live AskCruz pitch call — Recorded calls exist where the pitch was delivered live — useful to hear the actual language and objection-handling rather than working from a spec sheet.
+5. Confirm your starting list — Find out if you're inheriting existing steel/metals contacts to re-approach with AskCruz, or starting a new list under the broader ICP, and how that activity should get logged going forward.
+
+The AskCruz-understanding roadmap from before still stands (what it is → who it's for → how it's actually pitched). Same three stages, still one at a time.
+
+Want to start with clarifying what's changing in your role, or jump into the AskCruz product itself?
