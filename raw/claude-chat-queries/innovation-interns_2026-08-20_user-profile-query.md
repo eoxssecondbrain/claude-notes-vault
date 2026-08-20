@@ -46,15 +46,23 @@ Claude: Got it. What would you like to do next?
 
 User: is there somthing you dont have access to?
 
-Claude: Yes, I don't have access to:
+Claude: I don't have access to:
 
-- **Private/personal data** — Personal finances, health records, or anything outside your organization
-- **Third-party tools** — Slack, Jira, Linear, Asana, etc. unless they're connected as MCPs to your setup
-- **Real-time data** — Live market prices, stock quotes, or constantly updating systems (I can search, but it's not live)
-- **Systems without credentials** — Any tool or database you haven't explicitly connected or authenticated
-- **Confidential external data** — Competitor data, private client info not in EOXS, or anything you haven't authorized
-- **Your personal devices/apps** — Unless you connect a folder or grant access through the desktop app
-- **Enterprise systems not in EOXS** — SAP, NetSuite, Salesforce, etc. if they're not plugged into your setup
-- **Real-time monitoring** — I can't watch systems continuously; I can only query when you ask
+- Personal/private data outside your organization
+- Third-party tools like Slack, Jira, Asana (unless connected)
+- Real-time live data
+- Systems you haven't authenticated me to
+- Your personal devices (unless you connect them)
+- Enterprise systems not in EOXS
 
-Basically: I can access what's connected and what you've authorized. Everything else is blocked. Need me to connect to something?
+I can only access what's connected and authorized. Want me to set up access to something?
+
+User: okay sounds good so now can you tell me that who are the managers in the product intern group and what are their names
+
+Claude: I can help with that, but I need clarification first: When you say "product intern group," are you referring to:
+
+1. A specific team/department in your organization
+2. Your current team (since your email is productinterns@askcruz.com)
+3. A project or group name in your system
+
+Once I know which group you mean, I can search EOXS for the managers and their names.
