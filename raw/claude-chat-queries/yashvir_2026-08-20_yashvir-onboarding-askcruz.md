@@ -43,3 +43,13 @@ So, pick one:
 3. AskCruz step 1 — what AskCruz is, one-liner
 
 Which one first?
+
+User: let's start with 3. since i'm already aware about 1. and 2. ?
+
+Assistant: AskCruz, one line: an AI layer that reads across a company's ERP, email, and call data and reasons over all of it — turning scattered business information into one thing you can ask questions to. Internally it's often called "Company Brain."
+
+How it's different from EOXS ERP: EOXS ERP is the system of record — where the actual data lives (orders, inventory, invoices, operations). AskCruz sits on top of that and reasons over it — it doesn't replace the ERP, it makes sense of what's already in it plus emails and calls.
+
+How it's sold, based on live deals: mostly as an add-on/upsell to existing EOXS ERP customers right now — 3GM Steel is a live example, pitched to their CCO as a Company Brain add-on. But it's also being pitched standalone to non-EOXS companies — there's an active conversation with a legal-services firm that has nothing to do with steel or EOXS ERP.
+
+That's the whole first step. Next up would be who buys it (step 2) — want to keep going, or sit with this first?
