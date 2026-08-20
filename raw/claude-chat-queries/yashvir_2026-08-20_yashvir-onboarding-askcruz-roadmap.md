@@ -66,3 +66,16 @@ What's not there: nothing on the board yet under your name that looks like AskCr
 So the honest read: you're already deep in AskCruz's internal build-out and EOXS hiring ops, but the actual LDR/lead-gen function doesn't appear to have handed you anything yet. That's exactly the gap to raise with Rajat directly — worth asking point-blank: does this replace your hiring/MBA-cohort work, or sit on top of it, and where's the account list.
 
 I didn't find a written announcement of the transition itself — this is reconstructed from task activity, not a stated decision. Worth confirming the framing above is actually right before you act on it.
+
+**User:** One more from Aug 17: Ron logged that you're now "taking care of" getting another company configured on Cruz — that one's closer to actual customer-facing work where did you get this information from?
+
+**Assistant:**
+That line came from the "Weekly AskCruz Board Scrum Report – August 18, 2026" email (Rajat's inbox, raj_gmail, sent 2026-08-18). It's a generated report pulled from the live AskCruz Odoo project board, and it includes a full log of every task note from that week.
+
+Specific entry: task #192, titled "Have another company configur[e]..." (title truncated in the report) on the AskCruz board. Log note timestamp 08-17 21:07, authored by Ron, task assignee Ron:
+
+"Talked to Yashvir and he is taking care of this now."
+
+That's the entirety of what's recorded — a one-line note from Ron, no further detail on which company, what "configuring" involves, or whether it's outreach/sales or technical setup. I inferred "closer to customer-facing work" from the phrase "another company" (implying an external account, not internal tooling), not from anything explicit in the note. Worth verifying directly with Ron what that task actually is.
+
+Source: EOXS data general connector, email id 66615.
