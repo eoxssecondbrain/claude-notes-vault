@@ -105,3 +105,55 @@ Internal EOXS operator roles (separate axis — access to a client's live instan
 Open gap worth naming now, before Phase 2: the functional-team rollout in progress has no defined ceiling on what that role can see. Ayan Dutta owns it as his first cross-team implementation, but "full access to AskCruz" is the phrase used internally — that's the opposite of a scoped role. Phase 2 should check whether that rollout is still unscoped or whether it's already been narrowed since the Aug 18-19 emails.
 
 Ready for Phase 2 when you are — that's where this gets checked against the actual teams-askcruz Odoo project and the real seat-count pattern across deals.
+
+USER: explain me how do I implement and provide a short PM PRD which specifies requirement
+
+ASSISTANT: I'll write the PRD now. Two things first, since this shapes the doc:
+
+Phase 1 gave you the role skeleton; Phase 2 (verifying it against the actual teams-askcruz Odoo project and real seat-count pattern across deals) hasn't run yet. A PRD written before Phase 2 is built on the assumed structure, not the verified one — worth knowing going in, since "implement" usually means someone's about to build against it.
+
+Also, "how do I implement" and "PRD" are two different asks — implementation is a sequence of engineering steps, a PRD is a requirements document a PM hands to engineering. I'll give you both: a short implementation approach, then the PRD.
+[ask_user_input_v0 question: "PRD built on Phase 1 skeleton now, or run Phase 2 verification first?" options: "Write PRD now on Phase 1 skeleton", "Run Phase 2 first, then PRD"]
+
+USER: Q: PRD built on Phase 1 skeleton now, or run Phase 2 verification first?
+A: Write PRD now on Phase 1 skeleton
+
+ASSISTANT: Implementation approach, short version:
+
+1. Define the role and tier schema as data — not hardcoded logic. A roles table (client_admin, client_user, client_viewer) and a tiers table (tier2, tier2_confidential, tier1_equivalent), with a mapping table joining role to tier per client instance. This is what makes seat-count and data-tier enforcement live in one place instead of scattered across the app.
+2. Enforce at the data-access layer, not the UI. Every query AskCruz runs against ingested data checks the requesting user's role/tier before returning results — same pattern as the EOXS connector's tier-stripping, applied per client instance instead of globally.
+3. Tie seat count to role assignment. Client Admin can add users up to the contracted seat number; the system blocks the add past that, not a manual/contractual check.
+4. Separate internal operator access from client roles entirely — different table, different enforcement path, so an EOXS engineer's access to a client instance is never accidentally the same mechanism as that client's own admin role.
+5. Ship Client Admin and Client User first (matches actual sold deals today). Client Viewer stays a backlog item until there's a pricing reason to build it.
+
+PRD — AskCruz Access Control (v1, Phase 1 skeleton)
+
+Problem
+AskCruz is sold on fixed seat counts (e.g. 3GM Steel, 2-user scope) with no technical enforcement of seats or data access behind them. Internal operator access to client instances is also currently unscoped. Both are governance and revenue-integrity risks.
+
+Goal
+Ship a role and data-tier model that makes seat limits and data visibility enforceable, for both client users and internal EOXS operators.
+
+In scope
+- Client Admin and Client User roles, per client instance
+- tier2 / tier2_confidential data visibility mapped to role
+- Seat count enforcement tied to contract terms
+- Internal operator roles (Implementation Engineer, Support Operator, Functional Team Member), separate from client roles
+
+Out of scope for v1
+- Client Viewer tier — revisit once there's a pricing case for a third seat tier
+- tier1-equivalent handling beyond a hard default-deny
+- Any UI for self-serve role management by the client — v1 assumes EOXS configures roles during implementation
+
+Requirements
+- A client cannot add users past their contracted seat count
+- Client User cannot access tier2_confidential data unless the contract explicitly grants it
+- Every data query is checked against the requesting user's role and tier before results return
+- Internal operator access to a live client instance is scoped to that operator's assignment, not global
+- Functional Team Member role is capped to drafting/query use — no config or cross-client access
+
+Open question for engineering
+Whether tier enforcement lives in AskCruz's own layer or is inherited from the same mechanism the EOXS connectors already use — this is exactly what Phase 2 would settle by checking the actual teams-askcruz Odoo project.
+
+Success criteria
+No client instance can exceed its contracted seat count. No client user can see tier2_confidential data without an explicit contract flag. No internal operator has access to a client instance they aren't assigned to.
