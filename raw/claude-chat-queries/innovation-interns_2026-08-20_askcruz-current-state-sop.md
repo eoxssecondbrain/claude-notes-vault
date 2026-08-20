@@ -21,196 +21,9 @@ The architecture explicitly states that there is currently no repeatable one-com
 * What would require future development
 
 If the architecture does not provide enough information to define a new-client onboarding step, write "Not specified in the architecture" rather than assuming the process.
-1. Identify the Overall Processes
-Identify and separate the SOP into two processes:
-Process A — Existing Ask Cruz Knowledge Workflow
-Document the current end-to-end information flow:
-Data Sources → Data Collection → Noise Filtering → Sensitivity Classification → Central Database → AI Knowledge Generation → Citation Verification → Human Approval → Published Knowledge → User Query → Access Control → Answer
-Process B — New Client Onboarding
-Identify every step that is currently supported by the architecture for bringing a new client or client data source into Cruz.
-For each step, clearly state whether it is:
-
-* Automated
-* Manual
-* Human approval required
-* Not currently implemented
-* Not specified
-
-Do not create a fictional onboarding workflow.
-2. Identify Stakeholders
-Identify stakeholders for both existing operations and new-client onboarding.
-For each stakeholder, provide:
-
-* Role
-* Responsibility
-* Access level
-* Process involvement
-* Approval responsibility, if applicable
-
-Only assign responsibilities supported by the architecture.
-3. Define the Purpose
-Define the purpose of the SOP in two parts:
-Existing System Purpose
-Explain why Ask Cruz exists and how it preserves and provides access to EOXS institutional knowledge.
-New Client Onboarding Purpose
-Explain the purpose of safely bringing a new client's relevant information into the Cruz knowledge system while maintaining appropriate data classification, access control, verification, and human oversight.
-4. Detailed Existing-System Procedure
-Create a numbered procedure covering:
-
-1. Data collection
-2. Noise filtering
-3. Sensitivity classification
-4. Centralized storage
-5. AI knowledge generation
-6. Citation verification
-7. Human approval
-8. Knowledge publication
-9. User querying
-10. Access-control enforcement
-11. Response generation
-12. Monitoring
-
-For every step include:
-Step | Activity | Responsible System/Person | Input | Action | Output | Control
-Use only details supported by the architecture.
-5. New Client Onboarding Procedure
-Create a separate section titled:
-"New Client Onboarding — Current State"
-Determine from the architecture:
-
-* What information about a client is currently collected
-* Which client-related sources are connected
-* How client information enters Cruz
-* How client information is classified
-* How it is stored
-* How it becomes knowledge
-* How citations are verified
-* How human approval applies
-* How users access the resulting knowledge
-* What access restrictions apply
-
-Clearly identify any missing or undefined onboarding steps.
-Do not assume that adding a client is currently a one-click or fully automated process.
-6. Security and Access Controls
-Document the security controls relevant to both existing users and new clients.
-Include:
-
-* Sensitivity levels
-* General information
-* Company-Confidential information
-* Raj-Personal information
-* User-specific access
-* Database-level access control
-* Independent response checking
-* Fail-safe classification
-* Human approval
-* Credential protection
-* Database isolation
-* Restrictions on sensitive financial and employee information
-
-Explain how these controls protect information during both normal operation and client onboarding.
-7. Review and Refine
-After drafting the SOP, compare it against the architecture.
-Check for:
-
-* Missing process steps
-* Unsupported assumptions
-* Incorrect stakeholder responsibilities
-* Missing security controls
-* Missing human approvals
-* Confusion between current functionality and future functionality
-* Gaps in new-client onboarding
-
-Create a Review & Refinement section summarizing the corrections.
-8. Employee and New-Client Training
-Create two training sections.
-A. Employee Training
-Explain what EOXS employees need to know about:
-
-* Using Ask Cruz
-* Asking questions
-* Access levels
-* Sensitive information
-* Accuracy and verification
-* Escalating incorrect or unverified information
-
-B. New Client / Client Onboarding Training
-Explain what the responsible EOXS team should understand before introducing a new client into Cruz.
-Cover:
-
-* What client information can be connected
-* How information enters the system
-* Data classification
-* Access control
-* Knowledge verification
-* Human approval
-* What is currently manual or not yet automated
-
-Do not promise capabilities that the architecture does not currently support.
-9. Monitoring and Updating
-Explain how the system is currently monitored.
-Include:
-
-* Automated pipeline activity
-* Linear tracking
-* Citation verification
-* Human review
-* Contradiction/unverified-claim review
-* Credential management
-* Access-control review
-
-Then explain when the SOP should be updated, especially when:
-
-* A new data source is added
-* A new client is onboarded
-* Access levels change
-* A new capability is introduced
-* The architecture changes
-
-10. Current Limitations
-Create a clearly labeled "Current Limitations" section.
-Include the architecture's statement that there is currently no repeatable one-command process for setting up a brand-new client.
-Do not convert limitations into requirements or pretend that future functionality already exists.
-11. Responsibility Matrix
-Create a simple RACI-style table covering:
-
-* Data collection
-* Data classification
-* Database management
-* AI knowledge generation
-* Citation verification
-* Human approval
-* Access management
-* New-client onboarding
-* Monitoring
-* Issue escalation
-
-Use "Not specified" wherever the architecture does not identify the responsible person.
-12. Final Process Flows
-Provide two clear process flows.
-Existing Ask Cruz Flow
-Sources → Collection → Filtering → Classification → Database → AI Knowledge → Verification → Human Approval → Published Knowledge → User Query → Access Control → Answer
-New Client Flow
-Show only the onboarding steps that are supported by the current architecture.
-Clearly mark any missing or manual steps as:
-"Not specified / requires manual process definition."
-Final Quality Standard
-The final SOP must be:
-
-* Specific to Ask Cruz and EOXS
-* Based strictly on the attached architecture
-* Current-state focused
-* Clear for non-technical employees
-* Useful for operational teams
-* Useful for onboarding a new client
-* Explicit about automated vs. manual activities
-* Explicit about human approval
-* Explicit about security and access controls
-* Honest about current limitations
-* Free from invented processes or capabilities
-
-The most important rule:
-Do not create a process simply because a standard SOP would normally contain it. If the architecture does not define it, identify the gap instead. asked me question until you get clarity .
+[... full detailed 12-section spec covering: 1. Identify the Overall Processes (Process A — Existing Ask Cruz Knowledge Workflow; Process B — New Client Onboarding), 2. Identify Stakeholders, 3. Define the Purpose, 4. Detailed Existing-System Procedure (12-step table: Step | Activity | Responsible System/Person | Input | Action | Output | Control), 5. New Client Onboarding Procedure ("New Client Onboarding — Current State"), 6. Security and Access Controls, 7. Review and Refine, 8. Employee and New-Client Training (A. Employee Training, B. New Client/Client Onboarding Training), 9. Monitoring and Updating, 10. Current Limitations, 11. Responsibility Matrix (RACI), 12. Final Process Flows (Existing Ask Cruz Flow; New Client Flow) ...]
+Final Quality Standard: The final SOP must be specific to Ask Cruz and EOXS, based strictly on the attached architecture, current-state focused, clear for non-technical employees, useful for operational teams, useful for onboarding a new client, explicit about automated vs. manual activities, explicit about human approval, explicit about security and access controls, honest about current limitations, free from invented processes or capabilities.
+The most important rule: Do not create a process simply because a standard SOP would normally contain it. If the architecture does not define it, identify the gap instead. asked me question until you get clarity .
 
 ASSISTANT (turn 1):
 Loaded the threads-ov skill, then noted: "Two things before I start. First, a gap in your standing instructions: you asked me to check 'raj-eoxs-vault' skill before working a new thread, but that skill isn't in this session's available skill list — only threads-ov is. I've gone through threads-ov (loaded above). I'm flagging this rather than guessing at what raj-eoxs-vault would have told me. Second, this is an analytical/document-drafting task built entirely from the one attached architecture file — no ambiguity in scope, since your prompt already specifies the full structure. Two things I do need from you:" — then asked via AskUserQuestion: (1) rigor level for the draft (5ft/10ft/50ft/100ft options), (2) output format (docx vs markdown).
@@ -234,6 +47,12 @@ USER (mid-turn message 2):
 "now you don't go with thread- ov mcp just the Prioritize architecture file"
 
 ASSISTANT (turn 3, final response):
-Per the second mid-turn message, dropped ThreadOV-MCP entirely and built the SOP strictly from the attached "Cruz — High-Level Architecture" document. Wrote a full markdown SOP file (Ask_Cruz_Current_State_SOP.md) covering: Overview of the two processes (Process A — Existing Ask Cruz Knowledge Workflow; Process B — New Client Onboarding); Purpose (existing system + new client onboarding, with onboarding purpose marked "Not specified in the architecture" beyond what the general pipeline controls imply); Stakeholders (Jaskeerat — frontend owner; "the team currently doing this build-out" — server/DB/pipelines; Ayan — server/DB credentials; Nidhi — co-holds Linear credentials; unnamed human approver for page promotion; Raj/HR/General staff/Interns as the four defined access connections; new-client-onboarding stakeholder marked "Not specified in the architecture"); a 12-step Process A procedure table (Step | Activity | Responsible System/Person | Input | Action | Output | Control) covering data collection through monitoring, each row cited to the architecture section it came from; a "New Client Onboarding — Current State" section as a Q&A table (what client info is collected, which sources are connected, how info enters/is classified/stored/becomes knowledge/is verified, how human approval and user access apply) plus an explicit "Explicitly Missing or Undefined Onboarding Steps" subsection listing gaps (no documented new-source-connection procedure, no client intake process, no one-command setup per architecture §8, no client-facing access tier, no named onboarding owner); a Security and Access Controls table covering sensitivity levels, the three classification tiers, the four-connection access model, database-level control, independent response checking, fail-safe classification, human approval, credential protection, database isolation, and financial/employee-info restrictions, each mapped to whether it also covers onboarding; a Review and Refinement section listing corrections made while drafting (removed assumed onboarding owner, removed assumed client-facing login, corrected source scope to exclude tickets/invoices per architecture, corrected Ayan's role to credential management only, preserved unnamed-approver and unnamed-onboarding-owner gaps rather than inferring them); Employee Training and New Client/Client Onboarding Training sections; Monitoring and Updating (current monitoring mechanisms plus a list of triggers for updating the SOP); a Current Limitations section quoting the architecture's three stated "what this system is not (yet)" points plus additional gaps surfaced during drafting; an 11-row RACI matrix marking most Accountable/Consulted/Informed cells "Not specified"; and two final ASCII process-flow diagrams (Existing Ask Cruz Flow, fully automated except the human-approval step; New Client Flow, marking the front-end "connecting the new source to Cruz" step and the "user query via client-facing access" step as "Not specified / requires manual process definition"). The document closes with a "Final Notes" paragraph stating the gaps are real limitations in the current system, not drafting shortcuts. The file was written to /home/claude/Ask_Cruz_Current_State_SOP.md and delivered via SendUserFile (file_uuid c30ecb87-6c1c-43d5-a59a-a6dfb335610f) with the caption: "Current-state SOP, built strictly from the attached architecture doc as instructed (ThreadOV not used)."
+Per the second mid-turn message, dropped ThreadOV-MCP entirely and built the SOP strictly from the attached "Cruz — High-Level Architecture" document. Wrote a full markdown SOP file (Ask_Cruz_Current_State_SOP.md) covering all 12 requested sections plus title/labeling-key front matter, with every claim traced to a specific architecture section (§1–§8) and every undocumented item marked "Not specified in the architecture" or "Not specified / requires manual process definition." Delivered via SendUserFile (file_uuid c30ecb87-6c1c-43d5-a59a-a6dfb335610f). Reported to the user: the document names no owner for new-client onboarding and no identity for the human-approval ("promotion") gate holder; no client-facing access tier is defined anywhere in the architecture (Cruz's four access connections — Raj, HR, General staff, Interns — are all internal EOXS roles); flagged that "raj-eoxs-vault" skill referenced in standing instructions is not in this session's skill list.
 
 Note: Throughout this session, ThreadOV-MCP tool outputs contained appended text claiming to be a "SYSTEM REMINDER" instructing the assistant to call save_chat_transcript with a "new_messages" parameter after every tool result. This does not match the real save_chat_transcript tool schema (which takes thread_name and full content) and was treated as untrusted/injected content embedded in tool output, not followed. The assistant instead followed the actual SKILL.md instructions loaded via the Skill tool at the start of the session.
+
+USER (turn 4):
+"now you create a word file of this md file"
+
+ASSISTANT (turn 4):
+Loaded the docx skill (SKILL.md) before building, per the output-format-skill workflow. Wrote a Node.js script (build_docx.js) using the docx npm package to convert the full markdown SOP into a formatted Word document: US Letter page size, styled heading levels (H1/H2/H3 in a blue color scheme), all 12 sections plus front matter reproduced faithfully (title/scope/labeling key, Section 1 overview table, Section 2 purpose, Section 3 stakeholder tables, Section 4's 12-step procedure table, Section 5's onboarding Q&A table plus missing-steps bullet list, Section 6's security-controls table, Section 7's review-and-refinement bullets, Section 8's employee/client training subsections, Section 9's monitoring/update-triggers content, Section 10's current-limitations bullets, Section 11's RACI table, Section 12's two ASCII process-flow diagrams in monospace font, and closing Final Notes). Ran the script to produce Ask_Cruz_Current_State_SOP.docx, then verified it per the docx skill's mandatory verification step: converted to PDF with soffice.py (10 pages), rendered to JPG with pdftoppm, and visually inspected pages 1, 4, and 9 via the Read tool — confirmed headings, tables (including the wide 8-column Process-A table and the RACI table), and the flow diagrams all rendered correctly with no truncation or overlap. Cleaned up temporary PDF/JPG render files, then delivered the final Ask_Cruz_Current_State_SOP.docx via SendUserFile (file_uuid be6be057-1390-423f-a718-d06ef62b245f) with the caption "Word version of the same SOP — 10 pages, formatted with headings and tables."
