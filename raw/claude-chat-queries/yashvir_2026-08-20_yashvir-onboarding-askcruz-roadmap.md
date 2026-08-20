@@ -48,3 +48,21 @@ Revised for a role transition, not a fresh hire:
 The AskCruz-understanding roadmap from before still stands (what it is → who it's for → how it's actually pitched). Same three stages, still one at a time.
 
 Want to start with clarifying what's changing in your role, or jump into the AskCruz product itself?
+
+**User:** Lets start with what's changing in my role.
+
+**Assistant:**
+Here's what the records actually show — no formal "transition memo" exists, but there's enough task history to see the shape of it.
+
+What you're currently on (per the AskCruz Odoo board, last week's data):
+
+- Hiring Funnels board — running SDR candidate sourcing/screening (task #142 "0 to 1 SDR"), and pulled into the "Hire 20 AI Devs" push
+- 50 MBA Interns Cohort board — managing that cohort (wrote their onboarding SOP, evaluating their Instagram Reels submissions)
+- AskCruz board — two things: #157 "Alternative to ZoomInfo" (tooling/research task, not outreach) and #160 "scalable customer information system" (still just an idea-board entry, not built)
+- One more from Aug 17: Ron logged that you're now "taking care of" getting another company configured on Cruz — that one's closer to actual customer-facing work
+
+What's not there: nothing on the board yet under your name that looks like AskCruz prospecting/lead-gen activity — no calls, no outreach tasks, no assigned accounts. Your AskCruz-tagged work so far is internal tooling and hiring, not sales.
+
+So the honest read: you're already deep in AskCruz's internal build-out and EOXS hiring ops, but the actual LDR/lead-gen function doesn't appear to have handed you anything yet. That's exactly the gap to raise with Rajat directly — worth asking point-blank: does this replace your hiring/MBA-cohort work, or sit on top of it, and where's the account list.
+
+I didn't find a written announcement of the transition itself — this is reconstructed from task activity, not a stated decision. Worth confirming the framing above is actually right before you act on it.
