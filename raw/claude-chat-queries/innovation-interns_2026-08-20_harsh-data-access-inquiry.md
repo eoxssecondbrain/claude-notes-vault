@@ -64,3 +64,30 @@ To capture this data, you would need to:
 3. Integrate a third-party support platform (Zendesk, Freshdesk, etc.) with Odoo
 
 Would you like me to provide additional customer analysis based on available data (such as order frequency, payment patterns, or product preferences), or would you prefer to focus on a different customer metric?
+
+---
+
+Which products/services have the highest number of support issues relative to the number of customers using them? Rank them by issue rate.
+
+(Investigating support ticket and product usage data...)
+
+Based on my earlier investigation, the EOXS Team Live database does not have support ticket or issue tracking data. Without a helpdesk module or issue tracking system, I cannot identify which products/services have the most support issues.
+
+However, I can provide an alternative analysis using available data. Here are your products/services ranked by customer adoption:
+
+**Products/Services by Customer Adoption**
+
+Rank | Product/Service | Customers Using | Orders | Avg Price/Unit | Total Units Sold
+--- | --- | --- | --- | --- | ---
+1 | Implementation | 11 | 60 | $4,651.12 | 94
+2 | Monthly Licensing | 7 | 51 | $599.51 | 392
+3 | License Charges | 6 | 67 | $355.19 | 1,893
+4 | CRM - Gold Package | 4 | 12 | $71.00 | 263
+5 | Consulting | 3 | 16 | $432.43 | 232
+6 | Customizations | 3 | 27 | $305.71 | 1,438
+
+The most widely adopted services are Implementation (11 customers), Monthly Licensing (7), and License Charges (6). However, without support ticket tracking, I cannot determine which products generate the most support issues relative to their customer base.
+
+To get the ranking you're looking for, you need to implement support ticket tracking. Once enabled, the most problematic products would likely be those with high adoption but hidden issues—potentially Implementation (11 customers) or License Charges (6 customers, but highest volume of units sold at 1,893).
+
+Would you like me to analyze other aspects of product performance, such as revenue per customer by product, refund/credit rates, or order frequency patterns?
