@@ -49,3 +49,52 @@ To find your work, I need one of:
 - **Or any specific task or area you can reference**
 
 What clients or projects are you focused on right now?
+
+---
+
+**Aditya:** Do a deep dive an provide me the details of the tasks that are assigned to me or Aditya Yadav(copy) as provide me the details even if the tasks are completed
+
+**Claude:** Based on my deep dive into EOXS systems, I found your work documented on the **Customer 1 - EOXS** project board. Here's your task summary:
+
+## Your Tasks on Customer 1 - EOXS Board
+
+| Task ID | Task Name | Stage | Status | Last Activity |
+|---------|-----------|-------|--------|---|
+| #129 | Integrate Isha's email | Complete | Completed | 08-12 |
+| #159 | Customizable & personalized Email | Complete | Completed | 08-17 |
+| #27 | MCP Write Function | — | Active | 08-18 |
+| #147 | Update your emails and photo | — | Completed | 08-18 |
+
+---
+
+## Detailed Breakdown
+
+**Task #129 — Integrate Isha's email**
+- **Status:** Completed (moved to Complete on 08-12)
+- **Your note:** "I did not do anything as I was on medical leave on 12/08/2026 so Nidhi did the work on this task."
+- **Context:** Task was completed by Nidhi Rana while you were on medical leave
+
+**Task #159 — Customizable & personalized Email**
+- **Status:** Completed (moved to Complete on 08-17)
+- **Your contribution:** "Made 2 schedule 1- Filter out spam & promotional mail 2- Fetch data from d[ata]..."
+- **Context:** You implemented email filtering and data fetching schedulers
+
+**Task #27 — MCP Write Function**
+- **Status:** Active (latest update 08-18)
+- **Your contribution:** "Tested and successfully implemented that Claude is able to perform tasks l[ike]..."
+- **Context:** QA testing of MCP write functionality — this appears ongoing
+
+**Task #147 — Update your emails and photo**
+- **Status:** Completed (marked done 08-18)
+- **Your note:** "Done"
+
+---
+
+## Key Observations
+
+- You're part of the **Customer 1 - EOXS integration project** focused on backend infrastructure and MCP connectivity
+- Recent work centers on **email automation, data integration, and MCP testing**
+- You had medical leave around 08-12, but still contributed to task #159 afterward
+- Your most recent activity was task verification on #147 and #27 (MCP testing)
+
+Do you want me to pull the full task descriptions, attachment details, or dive into the team-wide progress on these boards?
