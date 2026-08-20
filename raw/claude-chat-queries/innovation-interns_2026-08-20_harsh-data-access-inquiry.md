@@ -46,3 +46,21 @@ Rank | Customer | Total Revenue | % of Total
 Your top two customers—Sabre Alloys and 3GM Steel—account for 61.33% of total revenue combined. The top five customers represent 79.04% of revenue. This concentration indicates significant revenue dependency on a small customer base. The remaining 12 customers make up the bottom 20.96%.
 
 Total company revenue from completed/active orders: $1,138,569.29
+
+---
+
+Identify customers who have raised more than 3 support tickets in the last 90 days. For each customer, show their total tickets, average resolution time, and total revenue.
+
+(Investigating database structure for support ticket data...)
+
+Based on my investigation of the EOXS Team Live database, support ticket tracking is not implemented in your Odoo system. The database contains sales, accounting, inventory, HR, and project management modules, but does not have a helpdesk or support ticket module enabled.
+
+Without support ticket data, I cannot identify customers with more than 3 tickets or calculate their average resolution time. The query I can run would show customer revenue (which we already analyzed), but not ticket volume or resolution metrics.
+
+To capture this data, you would need to:
+
+1. Enable the Helpdesk module in Odoo (if available in your version)
+2. Implement a custom support tracking system
+3. Integrate a third-party support platform (Zendesk, Freshdesk, etc.) with Odoo
+
+Would you like me to provide additional customer analysis based on available data (such as order frequency, payment patterns, or product preferences), or would you prefer to focus on a different customer metric?
