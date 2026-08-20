@@ -29,3 +29,17 @@ AskCruz understanding roadmap — separate track, your pace:
 5. Objections you'll actually hit as an LDR making cold contact
 
 Tell me which single step you want to start on and we'll do just that one.
+
+User: Before we proceed further, i want you to know that i'm a complete fresher to the LedGen role.
+
+Assistant: Good to know — I'll explain things plainly and won't assume prior sales/lead-gen vocabulary.
+
+One adjustment: given you're new to LDR itself, it might make more sense to start even before AskCruz — a quick "what does an LDR do day-to-day" grounding, so the AskCruz roadmap makes sense once we get to it.
+
+So, pick one:
+
+1. What an LDR does — the actual job, day to day
+2. Day 1 step 1 — access/logins
+3. AskCruz step 1 — what AskCruz is, one-liner
+
+Which one first?
