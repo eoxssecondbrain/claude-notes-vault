@@ -91,3 +91,71 @@ The most widely adopted services are Implementation (11 customers), Monthly Lice
 To get the ranking you're looking for, you need to implement support ticket tracking. Once enabled, the most problematic products would likely be those with high adoption but hidden issues—potentially Implementation (11 customers) or License Charges (6 customers, but highest volume of units sold at 1,893).
 
 Would you like me to analyze other aspects of product performance, such as revenue per customer by product, refund/credit rates, or order frequency patterns?
+
+---
+
+Find customers whose spending has decreased for at least three consecutive months. Show their monthly spending and calculate the overall percentage decrease.
+
+(Querying for customers with 3+ consecutive months of declining spending...)
+
+**Customers with 3+ Consecutive Months of Declining Spending**
+
+**1. PPC Speciality Metals**
+
+Month | Spending | MoM Change
+--- | --- | ---
+2026-01 | $5,064.00 | -51.31%
+2026-03 | $2,864.00 | -43.44%
+2026-04 | $2,200.00 | -23.18%
+
+Overall decline: From $5,064 (Jan 2026) to $2,200 (Apr 2026) = 56.57% decrease over the decline period
+
+**2. Sabre Alloys** (multiple decline periods)
+
+Period 1: Dec 2024 - Jan 2025
+Month | Spending | MoM Change
+--- | --- | ---
+2024-12 | $11,360.00 | -24.04%
+2025-01 | $9,360.00 | -17.61%
+
+Period 2: May 2026 - Aug 2026
+Month | Spending | MoM Change
+--- | --- | ---
+2026-05 | $10,720.00 | -51.14%
+2026-06 | $20,440.00 | +90.67% (recovered)
+
+Overall: Sabre Alloys shows some declines but not a sustained three-month pattern.
+
+**Key Findings:**
+
+Only PPC Speciality Metals shows a clear three consecutive months of declining spending (Jan → Apr 2026), with a total percentage decrease of 56.57% from peak to trough. This is a concerning trend and warrants outreach to understand if there's a service issue, competitive pressure, or other business concern.
+
+Other customers show volatility but no sustained three-month consecutive declines. 3GM Steel, for example, has variable spending but generally maintains a baseline.
+
+---
+
+Now I want to create a SOP on the product ask cruz dont make it yet first discuss it with me
+
+Before I create a SOP for AskCruz, I need to understand what you're looking for. Let me ask some clarifying questions:
+
+**Scope & Purpose:**
+1. Is this SOP for internal team members on how to use AskCruz, or for customers/clients?
+2. What's the primary goal—onboarding new users, troubleshooting, daily operations, or something else?
+
+**Coverage:**
+3. Should it cover the entire AskCruz platform, or specific features/modules (e.g., project management, collaboration, reporting)?
+4. Are there particular pain points or frequently asked questions you want addressed?
+
+**Audience:**
+5. Who's the primary audience—developers, business analysts, project managers, executives, or a mix?
+6. What's their technical skill level (beginner, intermediate, advanced)?
+
+**Format & Detail:**
+7. How detailed should it be—high-level overview, step-by-step walkthroughs with screenshots, or both?
+8. Do you want it to include troubleshooting sections, best practices, or just standard workflows?
+
+**Context:**
+9. From the scrum reports I saw, AskCruz appears to be a project/task management board for your team. Is that correct, or does it serve a different purpose?
+10. Are there specific workflows or processes unique to how your team uses AskCruz that need to be documented?
+
+Once I understand these details, I can draft a SOP structure and get your approval before building it out.
