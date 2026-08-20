@@ -26,3 +26,18 @@ Claude: I have access to:
 - Your memory/profile in this session
 
 What would you like me to look at?
+
+User: what do you mean by invoices what kind of invoices you are talking about
+
+Claude: Through EOXS, I can access business invoices—things like:
+
+- Client invoices (what your organization sends to customers)
+- Vendor invoices (what you receive from suppliers/vendors)
+- Payment records and transaction history
+- Financial transaction data
+
+Basically, any invoicing and financial records connected to your organization's operations that are stored in EOXS.
+
+Do you want me to pull specific invoice data or financial records?
+
+User: okay understand
