@@ -73,3 +73,35 @@ Phase 3, 50ft deep — Full investigation. Look at why clients are negotiating s
 Phase 4, 100ft — Same investigation as Phase 3, delivered section by section (role matrix, data tiering, internal governance, seat/pricing tie-in, risks) so each part stands on its own instead of landing as one long document.
 
 Say the word and I'll start Phase 1, or jump straight to Phase 2 if you want it grounded in the actual deal data from the start.
+
+USER: phase 1
+
+ASSISTANT: Phase 1 — role skeleton, structured from what's already on record. No data pulled yet, this gets tested against reality in Phase 2.
+
+Client-facing roles (per client instance)
+
+| Role | Can do | Data visible |
+|---|---|---|
+| Client Admin | Manage seats within contracted count, configure data sources/ingestion, view all users' activity | Full instance scope, up to whatever tier the client's own contract covers |
+| Client User | Query AskCruz, no admin actions | Same tier as Admin, minus configuration and user management |
+| Client Viewer (optional, future tier) | Read query results only, cannot initiate new queries against sensitive sources | Restricted subset — candidate for the cheaper seat tier if you want a lower price point below 2-user deals |
+
+Data scope tiers (reused from the EOXS connector pattern, not invented new)
+
+| Tier | Contents | Who sees it |
+|---|---|---|
+| tier2 | General business data — correspondence, operational records | Client Admin, Client User |
+| tier2_confidential | Financials, vendor contracts, legal/compliance | Client Admin by default; Client User only if the contract explicitly includes it |
+| tier1-equivalent | Anything above the client's own contact's clearance (e.g. a single exec's personal data) | Nobody by default — same principle as Raj's tier1 boundary in EOXS's own system |
+
+Internal EOXS operator roles (separate axis — access to a client's live instance, not the client's own roles)
+
+| Role | Can do | Scope |
+|---|---|---|
+| Implementation Engineer | Configure and stand up a client instance, full technical access during setup | One client at a time, tied to active implementation |
+| Support Operator | Troubleshoot live issues, read access to logs/config | Scoped to clients they're assigned to support |
+| Functional Team Member | Draft emails, limited query use — matches the stated intent of the current rollout ("mostly drafting emails for support") | Should not need config or cross-client access, but this isn't currently enforced anywhere on record |
+
+Open gap worth naming now, before Phase 2: the functional-team rollout in progress has no defined ceiling on what that role can see. Ayan Dutta owns it as his first cross-team implementation, but "full access to AskCruz" is the phrase used internally — that's the opposite of a scoped role. Phase 2 should check whether that rollout is still unscoped or whether it's already been narrowed since the Aug 18-19 emails.
+
+Ready for Phase 2 when you are — that's where this gets checked against the actual teams-askcruz Odoo project and the real seat-count pattern across deals.
