@@ -61,3 +61,7 @@ Provided summary of accessible data:
 - Cannot access: performance metrics, time tracking, compensation, tier1 data
 - Web searches and file analysis available
 - Depends on what tools are integrated
+
+## User: What is the current productivity level of Priyanshu
+
+Reiterated that employee productivity/performance data is restricted and cannot be accessed through any method. Directed user to request data from Isha Bisht or check Odoo/HR system directly.
