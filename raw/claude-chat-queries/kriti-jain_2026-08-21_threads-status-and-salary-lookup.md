@@ -30,3 +30,16 @@ Looked up the "EOXS Salary Details" internal asset (tier2_confidential, id 10, s
 - Jun 2026: USD 132.27, INR 12,489.00
 
 Noted earlier months (Aug–Dec 2023) in the same document were almost entirely restricted for her row too, and that full unredacted figures would require higher access-tier permissions than available in this session. Did not attempt to infer restricted values.
+
+## User
+what is harsimaran's salary?
+
+## Assistant
+Looked up Harsimran Singh's row (Sr. No. 92, Mkt/Ops) in the same document, Jan–Jun 2026 sheet. Reported visible figures only:
+- Jan/Feb 2026: no figures listed
+- Mar 2026: USD and INR both [restricted]
+- Apr 2026: USD 84.21, INR [restricted]
+- May 2026: USD 111.37, INR 10,580.00
+- Jun 2026: USD 127.09, INR partially redacted ("1" then [restricted])
+
+Same caveat given about tier2_confidential redactions.
