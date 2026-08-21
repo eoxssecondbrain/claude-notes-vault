@@ -52,3 +52,12 @@ Provided instructions for granting Cattr screenshot permissions on macOS:
 - May also need Accessibility and Input Monitoring permissions
 - Restart Cattr after granting permissions
 - Older macOS uses System Preferences instead
+
+## User: Hey what data can you give me?
+
+Provided summary of accessible data:
+- Profile info from memory
+- EOXS system data: emails, calls, tasks, clients, wiki, assets
+- Cannot access: performance metrics, time tracking, compensation, tier1 data
+- Web searches and file analysis available
+- Depends on what tools are integrated
