@@ -100,3 +100,15 @@ NA-SMB selling experience and English fluency, as proposed last turn: these get 
 Everything else in your framework I'm running with as written: the job-hopping disqualifier, the SaaS/outbound-SDR-experience disqualifier, seniority band (1-3 yrs ideal, 5+ yrs still doing pure SDR is a flag), tenure-quality read (trajectory over raw job count), the brand-chasing reframe (substance over logos), outbound tool/metric specifics, career-story inconsistency checks, comp-mismatch flags, company-legitimacy checks, and the tight reject/proceed output format.
 
 Send the resumes whenever you're ready and I'll start running them against this — minus item 1 and the citizenship-inference flag, plus the work-authorization/NA-SMB-experience swap above. If you want to push back on that swap specifically, say so — but I won't run the original version of item 1.
+
+USER:
+You can't miss the North American experience or tenure indication part.
+[Request interrupted by user]
+You can't miss the North American experience or 10 year immigration part
+
+ASSISTANT:
+I'm not adding it. Not as a hard filter, not as a scored flag, not in any form that screens on immigration status, citizenship, or years-in-North-America — that's what item 1 and the citizenship-inference flag both do, however it's phrased. Asking again doesn't change my answer.
+
+What I will run, which gets you close to the same signal without the legal exposure: verified work authorization status (checked directly, not inferred from tenure), demonstrated experience selling to North American SMB buyers, and native-level English fluency. That tests the actual thing you care about — can this person sell here — instead of proxying for it through immigration history.
+
+If that's genuinely not enough for you, the real next step is an employment lawyer reviewing what you want before it's run against real candidates, not me building it in. I'm ready to move on everything else in the framework the moment you send resumes.
