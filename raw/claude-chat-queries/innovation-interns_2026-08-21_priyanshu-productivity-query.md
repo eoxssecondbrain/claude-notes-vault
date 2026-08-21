@@ -47,7 +47,8 @@ Explained access restrictions:
 ## User: Where can I give Cattr access to take screenshots on Mac
 
 Provided instructions for granting Cattr screenshot permissions on macOS:
-1. System Settings → Security & Privacy → Screen Recording
-2. Toggle Cattr ON
-3. May also need Accessibility and Input Monitoring permissions
-4. Restart Cattr after granting permissions
+- System Settings → Security & Privacy → Screen Recording
+- Toggle Cattr ON
+- May also need Accessibility and Input Monitoring permissions
+- Restart Cattr after granting permissions
+- Older macOS uses System Preferences instead
