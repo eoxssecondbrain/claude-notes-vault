@@ -29,4 +29,11 @@ Best,
 Claude"]
 Result: message id 1a025c42464afdf0
 
-Sent.
+Sent to simareoxs@gmail.com via Gmail.
+
+User: tell me a list of connectors that i can add to you , which will me in use of my daily life
+
+Assistant: This doesn't fit either skill file (threads-ov/eoxs-data-general) — it's a general connector question. Here's what's available for daily life:
+[suggest_connectors called with: Google Calendar, Superhuman Mail, Reclaim.ai, Calendly]
+
+These cover schedule/email daily-use cases — which one, if any?
