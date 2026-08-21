@@ -143,3 +143,74 @@ Everything else from the earlier framework — the experience band, the work-aut
 
 Sources:
 - SDR vs AE Sales Metrics: What to Measure for Each Role | ORM — https://orm-tech.com/blog/sdr-vs-ae-sales-metrics
+
+## User (turn 4)
+
+[Uploaded resume PDF: Siddhant Yadav]
+check the first candidate and rate out of 10, qualify or disqualify
+
+## Assistant (turn 4)
+
+## Candidate: Siddhant Yadav
+
+Merit score (skills/experience/background, work authorization set aside): 7/10
+Verdict: Disqualify — fails the work-authorization hard filter as currently set
+
+## Why disqualify first
+
+Location is Gurgaon, India, and nothing on the resume indicates Canadian citizenship, PR, an existing work permit, or even a stated relocation plan. Under the default we agreed on last time — must already have Canadian work rights, no sponsorship — this fails before the merit review even starts. I'm flagging this loudly rather than quietly dropping him, because if 300 applicants came in against a Toronto posting, a meaningful chunk are probably India-based like this one, and whether that's an automatic disqualifier depends on something only you can answer.
+
+## Merit breakdown (for if work-auth turns out not to be a blocker)
+
+Software/SaaS experience: Real and relevant. Dancing Numbers is a SaaS product (QuickBooks/Xero data-import tool), and he's selling it B2B into US and UK markets — that's a genuine, lawful signal for "can this person sell to a North American buyer," which is exactly the proxy we agreed to use instead of screening on immigration status.
+
+Experience band: About 2.3 years in the role (Apr 2024-present) plus a 1-month internship. Fits inside the 1-3 year band, though the role reads as full-cycle (demos, objection handling, renewals/closing) rather than pure top-of-funnel SDR — more AE-adjacent than the target profile, which is actually a decent trajectory signal for "AE-ready in 6-12 months" but means the title doesn't map cleanly to what you're hiring for.
+
+Tenure/stability: One job, still current after 2+ years. Zero job-hop red flag.
+
+Brand-chasing: None — smaller, lesser-known companies, no logo-chasing pattern.
+
+SDR-specific evidence: Weak. No quantified meetings-held, pipeline-generated, or connect-rate numbers anywhere — just generic phrasing ("drive lead generation," "consistent pipeline of qualified prospects"). This is exactly the metric gap we said to watch for.
+
+Resume quality: Two sets of near-duplicate bullets under the Marketing Intern role (both "Executed field marketing campaigns..." and "Collaborated with cross-functional teams..." appear twice with near-identical wording). Reads like unedited AI-assisted output — worth weighing since we're treating the application itself as a writing/attention-to-detail sample.
+
+[Asked via AskUserQuestion:] This candidate (and likely a chunk of the 300) is India-based with no visible Canadian work rights. Is the Toronto SDR role open to relocation/sponsorship, or local-hire only?
+Options: Local hire only (Recommended default) / Open to relocation/sponsorship / Case-by-case — flag it, don't auto-disqualify
+
+## User (turn 5, via AskUserQuestion)
+
+Relocation policy: "Local hire only (Recommended default)"
+
+## User (turn 5, mid-turn upload)
+
+[Uploaded resume PDF: Priya Jadon]
+check this
+
+## Assistant (turn 5)
+
+## Update: Siddhant Yadav — final verdict
+
+Confirmed disqualify. Local-hire-only is the policy, and nothing on his resume shows Canadian work rights. Merit score of 7/10 stands as informational only — it doesn't change the outcome.
+
+## Candidate: Priya Jadon
+
+Verdict: Disqualify — same hard filter (India-based, no Canadian work rights visible anywhere on the resume)
+Merit score (informational, work-auth set aside): 6/10
+
+## Why the merit score, if you want it for comparison
+
+Software/SaaS fit: Strong. Three of her four roles are directly inside software companies — Tapp.ai (SaaS platform) at Quokka Labs, OpsMx (a DevOps/CI-CD software delivery platform), and GoHighLevel (CRM/marketing automation SaaS). Better software-specific fit than Siddhant.
+
+SDR-native metrics: Genuinely strong, and this is the resume quality bar the framework asked for — 100+ demos/month, 80-90 calls/day, 65% demo-to-closure rate, 15-20 qualified meetings/month at one role, 10-15 at another, 35-40+ dials/day. Quantified, specific, not vague. This is exactly what I flagged as missing from Siddhant's resume.
+
+NA-market selling signal: Direct and repeated — explicit USA-market focus at both OpsMx and Quokka Labs, plus UK/APAC/UAE elsewhere. Strong evidence on the lawful proxy we agreed to use.
+
+Now the concerns:
+
+Total experience is ~4.5 years (Jan 2022-Jul 2026) — above the 1-3 year band we set, and closer to the "lot of experience" you said you don't want.
+
+Across those 4.5 years she's held four different SDR/BD-level roles (OpsMx, Quokka Labs, AGR, GoHighLevel) without ever stepping up to a closing/AE-equivalent title anywhere. That's the exact "SDR-capped" pattern I flagged last time as a red flag for your specific goal — if three-plus companies haven't promoted her yet, it's a real question why AskCruz would be different in 6-12 months.
+
+Her most recent role, Demo Specialist at GoHighLevel, ran Jun 2026 to Jul 2026 — about one month, already ended. That's shorter than the 3.2-5.7 month SDR ramp time itself, meaning she left or was let go before she could plausibly have become productive. Worth a direct question if she ever reaches an interview elsewhere: what happened there.
+
+Net: better raw sales-metric evidence than Siddhant, but the years-of-experience mismatch, the no-promotion-across-four-companies pattern, and the one-month stint that just ended are real drags against what you're actually trying to hire for. Both are disqualified today on work authorization regardless.
