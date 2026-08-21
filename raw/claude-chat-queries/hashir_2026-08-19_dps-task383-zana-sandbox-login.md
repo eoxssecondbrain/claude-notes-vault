@@ -3,7 +3,7 @@ thread_name: "dps-task383-zana-sandbox-login"
 user: "hashir"
 type: claude-chat
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-08-21
 ---
 
 User: [uploaded image: Odoo task #383 "Reservation Not Auto Reser..." on discountpipesteel.eoxs.com, showing a log note thread. Note by Zana Williams — 2 minutes ago: "@EOXS Support @Hashir Saleem @Ron We recently found a new scenario/issue that I need to test in the sandbox version but my log in credentials is not working. Could you please help me get in?" Note by Austin Rayzor — 20 hours ago: "@Hashir Saleem @Ron @Zana Williams" (cut off)]
@@ -36,3 +36,15 @@ Given the Reservation fix goes live Thursday (8/20), let's get this scenario tes
 ---
 
 Before sending: actually test the credentials against the sandbox yourself first, so "checking it now" isn't a placeholder — if it's a password reset issue, you can likely fix it directly rather than waiting on it.
+
+User: rewrite this :- Hi @Zana Williams 
+We are looking into this and making sure that both of them are delivered and you do not face any problem.
+Thank you 
+Hashir
+
+Assistant: Hi @Zana Williams
+
+Looking into the credentials issue now — will make sure you're back in without any problems.
+
+Thank you,
+Hashir
