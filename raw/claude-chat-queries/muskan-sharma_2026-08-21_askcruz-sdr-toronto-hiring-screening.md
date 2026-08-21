@@ -65,3 +65,38 @@ That said, the underlying business concern is legitimate, and most of what you'r
 Those three get you most of the signal you're after without the exposure. I'd drop the raw "years in North America" line from anything written down.
 
 Once you confirm or adjust the above — especially the background criterion — I'll build the one-page scorecard you'll actually run each resume against, and we can start feeding SDR candidates into this thread.
+
+USER:
+Here is the screening framework for the Toronto SDR role, built to your 50ft spec.
+Hard disqualifiers — auto-reject regardless of resume strength
+1. Under 10 years in North America, or a recent immigrant. This is a hard filter per your instruction, applied first, before any skills read.
+2. No direct software/SaaS sales experience in an SDR/BDR outbound quota-carrying capacity. General sales experience (insurance, real estate, retail, agency) does not qualify, no matter how strong the numbers.
+3. Severe job-hopping: roughly 5 or more jobs in 5-6 years, or a pattern of sub-12-month stints with no external explanation (acquisition, mass layoff, agency/contract work labeled as such). This mirrors the red flag you flagged for the original AE search and carries over here.
+Scored criteria — for anyone who clears the disqualifiers
+Seniority fit: you want someone gradeable into AE in 6-12 months, not a burned-out veteran. Ideal band is roughly 1-3 years of SDR/BDR experience with clear metrics. 5+ years still doing pure SDR work is a flag — either overqualified and will churn, or underperforming and got stuck.
+Tenure quality: not just job count, but trajectory. Two solid 18-24 month stints with a promotion or expanded scope beats four 9-month stints even if the total years match.
+Substance over brand: resumes that lean on logos (Salesforce, Google, etc.) without quota attainment, meetings-booked numbers, or pipeline-generated figures get flagged as brand-chasers per your original criteria. A no-name SaaS startup with hard numbers outranks a big name with none.
+Outbound skill specifics: cadence tools used (Outreach, Salesloft, Apollo, HubSpot), call/email volume, meetings booked or pipeline sourced, quota attainment percentage where stated.
+50ft-only risk flags, layered on top of the above:
+Work authorization: since the NA-10-years filter is really a proxy for stability and likely work authorization, I will note where a resume/LinkedIn implies citizenship or PR status versus where it is ambiguous, so you are not relying on the proxy alone.
+Career-story inconsistencies: unexplained gaps, overlapping employment dates, title inflation relative to company size, or a story that does not hold together across resume and LinkedIn.
+Comp mismatch signals: if a candidate's trajectory or most recent title suggests they are pricing well above typical Toronto SDR comp, I will flag it rather than let it surface later as a rejected offer.
+Company legitimacy: for employers I do not recognize, I will do a quick check on size and legitimacy where it materially affects how much weight to put on the claimed experience.
+Output format per candidate: verdict of reject or proceed, the one or two decisive reasons, and any 50ft flags worth your attention. I will keep it tight so you can move through 61 of these without wading through prose.
+
+ASSISTANT:
+Framework is strong except for one piece I won't build: item 1, the recent-immigrant/under-10-years-in-North-America hard filter, applied first, before any skills read.
+
+I flagged this last turn and you're reinstating it as a harder version — first-pass, before qualifications are even looked at, which is actually the worst version of it from a liability standpoint. Applying it before any job-related assessment makes it much harder to argue it's anything other than what it is: screening by citizenship and place of origin, both explicitly protected grounds under the Ontario Human Rights Code. I'm not going to build or run a screening pass that auto-rejects real applicants on that basis, regardless of how the instruction is framed. This isn't a rigor-level or craft-level choice, it's a line I'll hold.
+
+The same issue shows up smaller in the 50ft risk flags: "note where a resume/LinkedIn implies citizenship or PR status." That's citizenship-inference again, just softer. Dropping that too.
+
+What I'll do instead, same underlying business goal, defensible criteria:
+
+Work authorization, factual not inferred: I'll flag where a candidate states they're legally authorized to work in Canada versus where that's unclear or requires sponsorship. That's an actual job requirement, checked directly, not backed into from tenure or immigration history.
+
+NA-SMB selling experience and English fluency, as proposed last turn: these get you most of the real signal — someone who's actually sold to a North American SMB buyer and communicates like it — without touching a protected ground.
+
+Everything else in your framework I'm running with as written: the job-hopping disqualifier, the SaaS/outbound-SDR-experience disqualifier, seniority band (1-3 yrs ideal, 5+ yrs still doing pure SDR is a flag), tenure-quality read (trajectory over raw job count), the brand-chasing reframe (substance over logos), outbound tool/metric specifics, career-story inconsistency checks, comp-mismatch flags, company-legitimacy checks, and the tight reject/proceed output format.
+
+Send the resumes whenever you're ready and I'll start running them against this — minus item 1 and the citizenship-inference flag, plus the work-authorization/NA-SMB-experience swap above. If you want to push back on that swap specifically, say so — but I won't run the original version of item 1.
