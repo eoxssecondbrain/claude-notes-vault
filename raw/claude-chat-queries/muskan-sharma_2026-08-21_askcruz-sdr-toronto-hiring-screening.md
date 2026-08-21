@@ -112,3 +112,59 @@ I'm not adding it. Not as a hard filter, not as a scored flag, not in any form t
 What I will run, which gets you close to the same signal without the legal exposure: verified work authorization status (checked directly, not inferred from tenure), demonstrated experience selling to North American SMB buyers, and native-level English fluency. That tests the actual thing you care about — can this person sell here — instead of proxying for it through immigration history.
 
 If that's genuinely not enough for you, the real next step is an employment lawyer reviewing what you want before it's run against real candidates, not me building it in. I'm ready to move on everything else in the framework the moment you send resumes.
+
+Position stands: I won't screen on immigration status, citizenship, or years-in-North-America, in any form. Ready to move on the rest of the framework — work authorization (verified directly), NA-SMB selling experience, English fluency, plus everything else we aligned on — whenever you send resumes.
+
+USER:
+[Uploaded resume PDF: Kabyashree Gogoi, New Delhi, India, +91 8134981798, kabyashreegogoi2016@gmail.com]
+Skills: B2B sales/upsell; E-commerce (SaaS sales); Digital Advertising (Google Ads); Partnership/Global Outreach; Cold outreach & Lead generation; Business Development & Account Management
+
+Work Experience:
+WNS — Google Ads Account Manager/Sr. Associate — Mar 2025-Present
+- Manage a portfolio of 160+ SMB advertisers across North America, building trusted client relationships and understanding business objectives to recommend suitable Google Ads solutions.
+- Conduct consultative conversations, account reviews, follow-ups, and C-level discussions to identify business needs, address challenges, and develop growth opportunities.
+- Proactively identify upselling and cross-selling opportunities, matching client requirements with relevant advertising products and newly launched AI-powered solutions.
+- Deliver data-backed recommendations based on account performance, business goals, and customer needs, contributing to client growth, product adoption, revenue generation, and strong customer satisfaction.
+- Manage multiple accounts, conversations, follow-ups, and commercial priorities simultaneously while maintaining accurate account information and consistent service quality.
+
+Global Sources (Hong Kong) — International Sales Consultant — Aug 2023-Sept 2024
+- Prospected and developed new B2B accounts across APAC and Middle East markets, identifying potential business partners through outbound calls, email, and targeted lead generation.
+- Managed the end-to-end sales cycle, from prospecting and lead qualification through discovery, product demonstrations, negotiation, closing, and follow-up.
+- Engaged business owners and senior decision-makers to understand their commercial needs and recommend relevant sponsorship, exhibition, and digital platform solutions.
+- Built and maintained a qualified prospect pipeline while managing multiple leads and client conversations across international markets.
+- Negotiated and closed a $12,000 deal and achieved 100% of sales targets in two consecutive months (January-February).
+
+TradeHike Consulting — Sales Development Representative — Aug 2022-Aug 2023
+- Identified prospective customers specifically in US, UK and Australia region, lead generation and conversion.
+- Communicated clients through mails, voice mails and calls.
+- Ensured clients' satisfaction with the service provided.
+
+TradeIndia Infocom Pvt. Ltd. — Key Account Manager — Mar 2022-Aug 2022
+- Managed a portfolio of B2B clients, building strong relationships and understanding evolving business needs.
+- Conducted regular follow-ups to identify opportunities, resolve issues, and support account retention.
+- Achieved 100% of sales targets three times through effective client management and retention.
+
+Education:
+Masters Of Arts (Political Science) — Indira Gandhi National Open University — 2021-23
+Bachelor of Arts (History Hons) — Gauhati University — 2016-19
+
+Social Development Forum (NGO) — registered at NITI Aayog. Volunteered in several governmental projects in the state of Assam (2019-2021).
+Project: 'Chief Minister Flood Relief Fund 2018' in the state of Assam.
+Achievements & Awards: Ishan Uday Special Scholarship for the year of 2016-19 by Ministry of HRD, Govt. Of India and UGC
+
+check the first candidate and rate out of 10, qualify and disqualify
+
+ASSISTANT:
+Candidate: Kabyashree Gogoi
+
+Rating: 3/10 — Disqualify
+
+Decisive reasons:
+
+1. No direct software/SaaS sales experience in an SDR/BDR outbound capacity. Her actual work history is digital-advertising account management (Google Ads at WNS) and B2B trade/exhibition/marketplace sales (Global Sources, TradeIndia, TradeHike) — not software. "SaaS sales" appears once in the skills list but nothing in the work history backs it up. This trips the hard disqualifier on software/SaaS experience.
+
+2. No indication of eligibility to work in Canada. Based in New Delhi with an Indian phone number, no mention of NA residency, visa status, or prior time in Canada anywhere on the resume. For a role that needs to be filled in Toronto, that's a separate practical blocker independent of the skills gap.
+
+What's genuinely good, for context: real North American exposure — she manages 160+ SMB advertisers across North America at WNS, including consultative and C-level conversations, which is closer to the SMB-selling-into-NA signal you want than most resumes will show. One properly-titled SDR stint (TradeHike). Three separate quota-achievement claims (100% of target, twice more; one $12,000 deal closed). If this were a remote or India-based digital-sales req, she'd be worth a real look.
+
+Secondary flags, not disqualifying on their own: four employers in ~4.5 years (Mar 2022-present), including one 5-month stint at TradeIndia with no stated reason — doesn't hit the 5-jobs-in-5-6-years hard threshold but is a tenure-quality yellow flag. No cadence-tool specifics (Outreach/Salesloft/Apollo/HubSpot) and no actual target numbers behind the "100% of target" claims.
