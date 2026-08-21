@@ -214,3 +214,33 @@ Across those 4.5 years she's held four different SDR/BD-level roles (OpsMx, Quok
 Her most recent role, Demo Specialist at GoHighLevel, ran Jun 2026 to Jul 2026 — about one month, already ended. That's shorter than the 3.2-5.7 month SDR ramp time itself, meaning she left or was let go before she could plausibly have become productive. Worth a direct question if she ever reaches an interview elsewhere: what happened there.
 
 Net: better raw sales-metric evidence than Siddhant, but the years-of-experience mismatch, the no-promotion-across-four-companies pattern, and the one-month stint that just ended are real drags against what you're actually trying to hire for. Both are disqualified today on work authorization regardless.
+
+Given how many of the 300 are likely India-based, you may want a way to fast-filter on location before spending review time on individuals — happy to build that if you send more in bulk rather than one at a time.
+
+## User (turn 6)
+
+[Uploaded resume PDF: Arun Kumar]
+check this
+
+## Assistant (turn 6)
+
+## Candidate: Arun Kumar
+
+Verdict: Disqualify — same hard filter (Coimbatore, India, no Canadian work rights indicated)
+Merit score (informational, work-auth set aside): 5/10
+
+## Breakdown
+
+Tenure/stability: Very strong on this one metric — a single job, Senior Lead Generation Executive at InFynd, July 2022 to July 2026 (4 years, ended last month). Zero job-hop concern, the opposite issue if anything: worth checking whether "Senior" reflects a real internal promotion or just a title bump, since he never moved past lead-gen into anything closer to AE work in four years there.
+
+Software/SaaS fit: Ambiguous, and worth flagging rather than assuming. His profile says he "supports SaaS companies, agencies, and global businesses" — that phrasing reads like InFynd is a third-party lead-gen/appointment-setting agency working across multiple client industries, not an in-house SDR seat at one software product company. That's a meaningfully different background than Siddhant's or Priya's (both worked inside the software product itself). Agency-side lead gen is still relevant experience, but it's not the same as knowing one product deeply enough to run a discovery call on it — worth probing directly if you move forward with agency-background candidates at all.
+
+SDR-native metrics: Weak, same gap as Siddhant. No quantified meetings-booked, pipeline-generated, or connect-rate numbers anywhere — just qualitative language ("generated qualified leads," "built a strong sales pipeline"). The two listed achievements (Super Squad Award, Best Performer) are unquantified recognitions, not numbers.
+
+NA-market signal: Present but thin — one line claiming experience with UK, USA, and Canada markets, no volume or outcome attached to it.
+
+Tools: Genuinely good — Apollo, Clay, Smartlead, Instantly is a current, modern outbound stack, more current than either of the last two candidates. Real positive.
+
+AE-readiness signal: Weakest of the three so far. Four years in and the work is still pure top-of-funnel (prospecting, outreach, appointment setting) — no mention of running discovery calls, demos, or owning any part of a deal cycle. Combined with no promotion in four years at the same company, there's little evidence here of trajectory toward AE, which is the core thing you're screening for.
+
+Net: most stable resume of the three, best tool stack, but the weakest signal that he's actually headed toward AE-readiness, and the agency-vs-in-house question is a real unresolved fit issue if work authorization weren't disqualifying him already.
