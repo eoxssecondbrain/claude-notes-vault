@@ -388,10 +388,58 @@ def _git_commit_and_push(rel_path: Path, commit_message: str) -> str:
         rebase = _git(["rebase", f"origin/{GIT_BRANCH}"])
         if rebase.returncode != 0:
             _git(["rebase", "--abort"])
-            return (
-                f"git commit succeeded locally but rebase onto origin/{GIT_BRANCH} failed "
-                f"(likely a real conflict, not just a race): {rebase.stderr.strip()}"
-            )
+            # Rebase can fail for a reason that never clears on its own: this
+            # process's local branch has drifted onto history unrelated to (or
+            # far behind) origin's, so every future save would hit the exact
+            # same failure forever ("committed locally, never reached GitHub").
+            # Recovery must not just keep THIS file's content and discard any
+            # other commits stranded locally by the same bug on earlier saves
+            # (this process's clone only ever moves forward via its own
+            # commits, so those are the only copy of that work) — so capture
+            # every locally-stranded file as a diff against origin first, then
+            # reset onto origin cleanly and replay that diff on top.
+            pre_reset_head = _git(["rev-parse", "HEAD"]).stdout.strip()
+            diff = _git(["diff", f"origin/{GIT_BRANCH}", pre_reset_head])
+            if diff.returncode != 0 or not pre_reset_head:
+                return (
+                    f"git commit succeeded locally but rebase onto origin/{GIT_BRANCH} failed "
+                    f"and recovery diff also failed: {diff.stderr.strip()}"
+                )
+            stranded_patch = diff.stdout
+            reset = _git(["reset", "--hard", f"origin/{GIT_BRANCH}"])
+            if reset.returncode != 0:
+                return (
+                    f"git commit succeeded locally but rebase onto origin/{GIT_BRANCH} failed "
+                    f"and recovery reset also failed: {reset.stderr.strip()}"
+                )
+            if stranded_patch.strip():
+                patch_path = VAULT_ROOT / ".git" / "_recovery.patch"
+                patch_path.write_text(stranded_patch, encoding="utf-8")
+                apply_ = _git(["apply", "--3way", str(patch_path.relative_to(VAULT_ROOT))])
+                patch_path.unlink(missing_ok=True)
+                if apply_.returncode != 0:
+                    return (
+                        f"git commit succeeded locally but rebase onto origin/{GIT_BRANCH} failed; "
+                        f"reset to origin succeeded but replaying stranded local changes failed "
+                        f"(previously stranded commits at {pre_reset_head} may need manual recovery): "
+                        f"{apply_.stderr.strip()}"
+                    )
+            _git(["add", "-A"])
+            recommit = _git(["commit", "-m", f"chat: recover stranded local changes\n\n{commit_message}"])
+            if recommit.returncode != 0 and "nothing to commit" not in (recommit.stdout + recommit.stderr):
+                return (
+                    f"git commit succeeded locally but rebase onto origin/{GIT_BRANCH} failed; "
+                    f"recovered by resetting to origin and replaying stranded changes, but recommit "
+                    f"failed: {recommit.stderr.strip()}"
+                )
+            push = _git(["push", "origin", f"HEAD:{GIT_BRANCH}"])
+            if push.returncode == 0:
+                return (
+                    f"Committed and pushed to origin/{GIT_BRANCH} (recovered from a diverged/broken "
+                    f"local branch by resetting to origin/{GIT_BRANCH} and replaying all stranded "
+                    f"local changes, including this file, on top)."
+                )
+            return f"git commit succeeded locally but push failed even after divergence recovery: {push.stderr.strip()}"
         push = _git(["push", "origin", f"HEAD:{GIT_BRANCH}"])
         if push.returncode == 0:
             return f"Committed and pushed to origin/{GIT_BRANCH}."
