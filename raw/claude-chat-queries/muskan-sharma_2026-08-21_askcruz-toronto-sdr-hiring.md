@@ -108,3 +108,38 @@ Sources:
 - SDR Statistics 2026: Ramp Time, Quota & Turnover - Dialfyne — https://dialfyne.com/sdr-statistics
 - Relevant Code provisions | Ontario Human Rights Commission — https://www.ohrc.on.ca/en/policy-discrimination-and-language/relevant-code-provisions
 - Hire a temporary foreign worker - Canada.ca — https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/hire-temporary-foreign.html
+
+## User (turn 3)
+
+i will be screening the SDR candidate not AE so be mindfull while screening
+
+## Assistant (turn 3)
+
+Good flag — a couple of things in my last framework leaned AE, not SDR, and worth fixing before you start screening.
+
+## What I got wrong (correcting it)
+
+I listed "quota attainment stated with actual numbers" and "full-cycle exposure, some ownership of a closed deal" as strong-fit signals. Those read like AE metrics. SDR and AE are scored on different things: SDRs are measured on meetings held (excluding no-shows) and pipeline value from opportunities the AE accepted, not closed revenue — dials and emails are diagnostic, not the actual target. AEs are measured on bookings against quota, win rate, deal size, and cycle length. The one shared number is opportunity acceptance rate — what percentage of the SDR's booked meetings the AE actually accepts as qualified, since that's what stops the SDR from just farming volume (ORM, SDR vs AE Sales Metrics).
+
+Practical effect on how you screen: if a resume brags about "closed revenue" or "quota attainment" without saying meetings/pipeline, that's either an AE-flavored resume padding an SDR title, or a red flag for role confusion — not evidence of a strong SDR.
+
+## Corrected screening lens for SDR resumes specifically
+
+Strong-fit signals — look for these framed in SDR terms:
+
+- Meetings held (not just booked) against a stated target, ideally with the target named
+- Pipeline generated / opportunities accepted by AEs, with a number
+- Sequence/cadence tool fluency named explicitly — Outreach, Salesloft, Apollo, ZoomInfo, HubSpot, Salesforce — this is a real skill gap between someone who's done the job and someone who hasn't
+- Message quality — the application itself, cold email samples if provided, LinkedIn outreach style
+
+Downgrade, don't require:
+
+- Full-cycle or closing exposure — nice bonus if present, but most SDRs never get this, so requiring it will wrongly filter out otherwise strong candidates
+- "Quota attainment" phrased vaguely without units — ask what quota, in what unit, before crediting it
+
+For the "AE-ready in 6-12 months" trajectory judgment specifically, look for consistency of meeting-held attainment over multiple quarters plus a rising or high opportunity-acceptance rate, not prior closing experience. High activity with low acceptance rate is a volume-chaser, not someone who's ready to own a full cycle soon — that's the person who'll fail the promotion, per the 55% failure stat from last time.
+
+Everything else from the earlier framework — the experience band, the work-auth default, the job-hop recalibration, and dropping the North America/immigration criterion in favor of a live communication assessment — still stands. Send resumes whenever you're ready.
+
+Sources:
+- SDR vs AE Sales Metrics: What to Measure for Each Role | ORM — https://orm-tech.com/blog/sdr-vs-ae-sales-metrics
