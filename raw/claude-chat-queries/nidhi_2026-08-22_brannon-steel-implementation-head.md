@@ -48,3 +48,19 @@ His actual work in the task thread:
 So he's not the implementation head — Ayan Dutta still holds that role for Brannon Steel — Jaskeerat is the dev doing the hands-on data-quality fixes under him.
 
 Source: eoxs-db wiki (Jaskeerat Singh entity page).
+
+USER: Give me a detailed information about sabre alloys , there background. How we got this deal. What was the recent conversation with them . And how much we are charging them for the monthly subscription?
+
+ASSISTANT: Sabre Alloys — background:
+
+Steel service center (slitting, cut-to-length, blanking operations). Full EOXS ERP + CRM client since 2024, not a recent signup — one of the largest, longest-running accounts in the portfolio (1,461 emails, 114 calls, 200 implementation tasks on record).
+
+Key contacts: Charles White, Christi, Ernie Valdez, Jesus Rios, Jim Zeigler (Senior Sales Director), Michael Mercadante, Tye Webb, Juan Deshon. Rajat Jain is the EOXS account owner/salesperson.
+
+How the deal was won: proposal dated Dec 27, 2023 — full ERP+CRM deployment, 12 licensed users, 9 modules (Sales, Purchase, CRM, Inventory Management, Contact Management, Manufacturing, Logistics Management, Executive Dashboards x2, Accounting I), 3-year contract term, 18-week implementation across 7 phases (Discovery through Go-Live/Support). Onboarding kicked off Jan 5, 2024 with credential provisioning, followed by a run of Sales CRM training sessions (Jan 9/11/12) for their whole sales floor, then deep-dive product demos driven by Rajat and Ron. I don't have the earlier discovery/demo-call history before the Dec 2023 proposal in what I can access this session — the archive picks up at proposal stage.
+
+Most recent conversation: Aug 13, 2026 call, "Sabre Alloys - AI Transformation Proposal" — Rajat, Michael Mercadante, Tye Webb. This is a new, separate pitch layered on top of the existing ERP relationship: a Claude/AI "company brain" setup for ~15 of their users (Claude accounts, an AI agent to summarize their email data into a shared knowledge base, plus an optional prompt-logging layer so management can see what staff are asking AI). Mechanically it'd pull data via a direct MCP database connection rather than an API. Good chunk of the call was Tye and Michael pressure-testing whether their existing ERP (Invera) would allow that kind of third-party DB access at all — inconclusive, action item for Rajat to check with a contact (Lawrence, a CIO with Invera background). Outcome: Rajat to send a formal proposal doc with pricing/scope; Tye to review internally with Jesus and Dave and get back.
+
+Monthly subscription charge: I can't surface that — dollar figures are stripped from everything I have access to in this system, including this one. What I can say: the core ERP deal is a 3-year term with pricing locked for that duration; the new AI/Claude add-on pricing discussed on the Aug 13 call is separately proposed and also came back redacted.
+
+Source: eoxs-db (client profile, wiki, call id 2393).
