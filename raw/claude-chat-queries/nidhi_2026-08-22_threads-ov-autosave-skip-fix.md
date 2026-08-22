@@ -99,7 +99,7 @@ what are these edits?
 
 ## Assistant (turn 8)
 
-[Presented all four edits in full: Edit 1 — the complete §0 Archiving block to insert at the top of eoxs-data-general/SKILL.md, covering the Threads OV reconciliation, the definition of an exchange, the two mandatory triggers T1/T2, the save-before-you-ask ordering rule, the must-save turn-type table, the declined-turn rule, and the `save_chat_transcript(thread_name, content)` mechanics. Edit 2 — the replacement confidentiality paragraph naming Threads OV as the one approved destination, replacing "Never suggest exporting or repeating raw content outside this conversation." Edit 3 — the broadened frontmatter description with the "applies to every turn of every conversation, regardless of topic" clause. Bonus — the same description fix for threads-ov/SKILL.md, whose "use whenever saving a conversation" trigger is why it never loaded.]
+[Presented all four edits in full: Edit 1 — the complete §0 Archiving block to insert at the top of eoxs-data-general/SKILL.md, covering the Threads OV reconciliation, the definition of an exchange, the two mandatory triggers T1/T2, the save-before-you-ask ordering rule, the must-save turn-type table, the declined-turn rule, and the `save_chat_transcript(thread_name, content)` mechanics. Edit 2 — the replacement confidentiality paragraph naming Threads OV as the one approved destination. Edit 3 — the broadened frontmatter description with the "applies to every turn of every conversation, regardless of topic" clause. Bonus — the same description fix for threads-ov/SKILL.md.]
 
 ## User (turn 9)
 
@@ -126,3 +126,39 @@ Items 4, 6, and 7 are the ones I hadn't spotted before. Together with item 3 tha
 Two things unchanged on purpose: all of §1, §2, §4, §5, §7, §8 substance, and the numbering — §1–§8 keep their numbers so any existing cross-references still resolve.
 
 Apply it wherever you author the skills, not to the Claude Desktop cache paths I read from. Then run the verification conversation.
+
+## User (turn 10)
+
+what do you suggest 2 skills or merged one
+
+## Assistant (turn 10)
+
+**Two skills — but move the auto-save rule out of both.** That's the real answer.
+
+The rule isn't a skill. Skills are lazily loaded and matched by description; a must-happen-every-turn invariant can't live behind a load decision. That's the exact bug we found. Merging into one big skill doesn't fix it — it just makes the gate bigger.
+
+### Target shape
+
+| Where | What lives there | Loading |
+|---|---|---|
+| **Threads OV connector `instructions`** | The full auto-save rule — triggers, save-before-you-ask, must-save turn types, mechanics | Always injected while connected |
+| **`eoxs-data-general` skill** | Data guidance (§1–§8) + a **5-line pointer** to the rule | On data questions |
+| **`threads-ov` skill** | SYNTHESIZE, CROSS-LINK, `save_analysis`, read-back tools | On demand — genuinely rare |
+
+Note what this does to `threads-ov`: once the auto-save rule moves out, its narrow description ("use whenever saving an analysis, running a synthesis pass, linking to OV2") becomes **correct**. Those really are on-demand workflows. The description was only wrong because it was gating something that must always run.
+
+### Why not merge into one
+
+- A single ~700-line skill makes the tail-attention problem worse, not better — that's what buried the rule at §10 in the first place.
+- The synthesis workflows are needed maybe once a week; the data guidance is needed constantly. Merging forces both into context every time.
+- If you merge *and* keep `threads-ov`, you now have two copies of the rule that will drift.
+
+### Sequencing
+
+1. **Now:** ship the merged `eoxs-data-general` I just built. Zero dependencies, no server access needed, covers the failing case today.
+2. **When you can touch the server:** move the full rule into the Threads OV connector `instructions`, and shrink §0 in the skill to a pointer — something like *"This conversation is archived every turn per the Threads OV connector instructions. Save before you ask the user anything, including on refusal and scoping turns."*
+3. **Then:** strip the auto-save rule from `threads-ov/SKILL.md` and leave its description as-is.
+
+Step 2 is what makes it robust rather than merely likely. Step 1 is what you can do this afternoon.
+
+One rule to hold onto: **exactly one authoritative copy of the rule, everywhere else is a pointer.** Duplicated full copies drift, and a drifted copy is how you get the `new_messages`/`content` mismatch that's already live in your server strings.
