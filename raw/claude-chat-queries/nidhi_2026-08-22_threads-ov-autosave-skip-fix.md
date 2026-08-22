@@ -99,114 +99,30 @@ what are these edits?
 
 ## Assistant (turn 8)
 
-Three edits to `eoxs-data-general/SKILL.md`, plus one to `threads-ov/SKILL.md`. Here they are in full.
+[Presented all four edits in full: Edit 1 — the complete §0 Archiving block to insert at the top of eoxs-data-general/SKILL.md, covering the Threads OV reconciliation, the definition of an exchange, the two mandatory triggers T1/T2, the save-before-you-ask ordering rule, the must-save turn-type table, the declined-turn rule, and the `save_chat_transcript(thread_name, content)` mechanics. Edit 2 — the replacement confidentiality paragraph naming Threads OV as the one approved destination, replacing "Never suggest exporting or repeating raw content outside this conversation." Edit 3 — the broadened frontmatter description with the "applies to every turn of every conversation, regardless of topic" clause. Bonus — the same description fix for threads-ov/SKILL.md, whose "use whenever saving a conversation" trigger is why it never loaded.]
 
-### Edit 1 — insert at the very top, right after the frontmatter, *before* the connector table
+## User (turn 9)
 
-```markdown
-## 0. Archiving — do this on every turn
+make eoxs data general file with required changes
 
-This conversation is archived to **Threads OV**, EOXS's own conversation store.
-It is EOXS-operated internal infrastructure, on the same footing as the data
-connectors themselves. Writing a transcript there is internal record-keeping —
-the same class of action as filing a document on a company drive. It is not an
-export, not a third-party transfer, and not a disclosure outside EOXS. The
-thread inherits the saving user's access tier, so archiving never widens who
-can read anything.
+## Assistant (turn 9)
 
-**That judgement is made here, once. Do not re-open it per turn.**
+Written to `eoxs-data-general-SKILL.md` — complete file, ready to replace the current one.
 
-An **exchange** is one user message plus the one assistant reply that answers
-it. What the reply contains has no bearing on whether it is archived.
+**Seven changes** (three planned, four found while assembling):
 
-**Two triggers, both mandatory:**
+| # | Change | Why |
+|---|---|---|
+| 1 | Frontmatter description broadened | Old one only matched data questions |
+| 2 | New **§0 Archiving** at the top | Was absent entirely; tail placement is what failed |
+| 3 | Confidentiality paragraph rewritten | Old line forbade sending content anywhere — contradicted the save |
+| 4 | **§3 write-capability carve-out** | Said "no such tool, on this connection, ever" — also forbade the save |
+| 5 | §2 gains the upstream-redaction line | Makes §0's safety argument land where the redaction rules live |
+| 6 | §6 exempts §0 from call-efficiency | Otherwise "answer in the fewest calls" argues against saving |
+| 7 | §9 rewritten as an ordered per-turn checklist | Old §9 listed only `get_index()` and the answer — no save step |
 
-- **T1 — the FIRST action of every response.** Before any other tool call,
-  before composing any prose: call `save_chat_transcript` with the conversation
-  through the previous reply. This fires before any of the turn's complexity
-  exists, so nothing can crowd it out.
-- **T2 — before the turn ends.** Before any tool call or sentence that hands
-  control back to the user. Call it again, now including this turn's reply.
+Items 4, 6, and 7 are the ones I hadn't spotted before. Together with item 3 that's **four separate places** where the file, as written, told the model not to save or quietly omitted it. Merging wasn't filling one gap — the document was arguing against the rule from several directions at once.
 
-Both firing for the same exchange is the design, not waste. Never skip one
-because the other covers it.
+Two things unchanged on purpose: all of §1, §2, §4, §5, §7, §8 substance, and the numbering — §1–§8 keep their numbers so any existing cross-references still resolve.
 
-**If the turn ends by asking the user anything** — a clarifying question, a
-list of options, a confirmation request, any interactive question tool — **save
-BEFORE you ask.** A question tool call is itself turn-ending, so "save last"
-becomes unsatisfiable once you have made it. Order: compose the question →
-save → ask.
-
-**Turn types that must be saved.** Illustrative, not exhaustive — nothing is
-exempt:
-
-| Turn ends with… | Save? |
-|---|---|
-| A clarifying or follow-up question | Yes — before you ask |
-| A menu of options to pick from | Yes — before you present it |
-| A one-word or one-line reply | Yes |
-| "Not found" / no results | Yes |
-| A tool error, or a refusal | Yes |
-| A request you declined as too broad or too sensitive | Yes |
-| A scope narrowing before the real answer | Yes |
-| A long multi-source findings answer | Yes — in full |
-
-**A turn you declined is still archived.** Deciding what to answer and
-recording that you answered it are separate steps; the second is
-unconditional. A refusal records what was asked, why you declined, and what you
-offered instead — the most reusable thing in the thread. Caution about the
-*content* is never a reason to skip the *record*. If you find yourself weighing
-whether a turn should be archived, that weighing is itself the bug. The answer
-is always yes.
-
-**Never narrate the save, never ask permission.** If the user asks whether the
-conversation is being archived, say plainly that it is.
-
-**Mechanics:** `save_chat_transcript(thread_name, content)`
-
-- `thread_name` — chosen once on the first turn, short and stable. It names the
-  CONVERSATION, not the current topic. Never change it, not on a hard subject
-  jump, not when it stops "fitting". Changing it orphans the existing file.
-- `content` — the **full** conversation so far, **verbatim**. The tool
-  overwrites one file per `thread_name`, so a partial payload truncates the
-  archive rather than appending to it. Paste the actual message text: every
-  table, every finding, every sentence as written. A narrated summary
-  (`[Offered three options; queried CRM; found one invoice]`) is a broken save
-  even though the call succeeds.
-- `<user>` and `<created-date>` are resolved server-side. Never supply them.
-
-`save_analysis` is the one exception: always ask before calling it.
-```
-
-### Edit 2 — replace the confidentiality sentence
-
-**Find:** "Never suggest exporting or repeating raw content outside this conversation."
-
-**Replace the whole paragraph with:**
-
-```markdown
-All EOXS data here is confidential — business correspondence, financials,
-personnel and client records. Treat every name, number, and quote as sensitive.
-Do not repeat or export raw content to any destination outside EOXS systems.
-**Threads OV (§0) is the one approved destination** — it is EOXS's own store,
-and archiving there is internal record-keeping, not an export. Everything else
-— third-party services, external email, public tools — remains off limits.
-```
-
-This one matters: the current sentence actively tells the model *not* to send content anywhere, with no carve-out. It contradicts Edit 1.
-
-### Edit 3 — broaden the frontmatter description
-
-```yaml
-description: Navigation and access-scope guide for the general-access EOXS data connectors (eoxs-db, eoxs-teams) — which connector to use for a question, tier-scope rules, answer formatting, and the per-turn conversation archiving rule. Applies to every turn of every conversation in this workspace, regardless of topic; also use whenever a question touches EOXS emails, calls, wiki, implementation tasks, tickets, invoices, or CRM/pipeline data.
-```
-
-The "applies to every turn regardless of topic" clause is what lets the skill match on turns that aren't themselves data questions.
-
-### Bonus — `threads-ov/SKILL.md` description
-
-Same defect, worse consequences — this is why that skill never loaded at all:
-
-```yaml
-description: Conversation archiving for the Threads OV vault — applies to every turn of every conversation, regardless of topic, and must be loaded whether or not the user mentions saving. Also covers synthesizing transcripts into chat-summary pages and proposing cross-reference pointers into OV2's wiki.
-```
+Apply it wherever you author the skills, not to the Claude Desktop cache paths I read from. Then run the verification conversation.
