@@ -34,3 +34,17 @@ The most recent issue actually confirmed fixed: SSAB MTR handling logic, closed 
 Before that, a rotated-MTR extraction bug (bad OCR on rotated scans corrupting batch/heat numbers) was fixed July 16 — records manually corrected, process note added to rotate MTRs before upload.
 
 Source: eoxs-db (client profile, wiki, email thread id 60897 "Re: MTR Samples").
+
+USER: what is the role of Jaskeerat in brannon
+
+ASSISTANT: Jaskeerat Singh's role at Brannon Steel: AI Developer (EOXS full-time staff, converted to FT 2026-06-22). On the account since July 10, 2026, he took over day-to-day inventory/MTR data-validation communication with Ranim Fallaha from Ayan Dutta.
+
+His actual work in the task thread:
+- Requests and validates client inventory data against uploaded MTR records
+- Communicates data-quality findings back to Ranim (e.g. diagnosed the scan-orientation extraction bug in mid-July)
+- Implemented the SSAB batch-matching logic fix (the A69/A70/A72/A73 issue, closed July 28)
+- Is the one who logged/acknowledged the Aug 14 batch of false-negative issues, promising a Monday update
+
+So he's not the implementation head — Ayan Dutta still holds that role for Brannon Steel — Jaskeerat is the dev doing the hands-on data-quality fixes under him.
+
+Source: eoxs-db wiki (Jaskeerat Singh entity page).
