@@ -7,3 +7,5 @@ updated: 2026-08-22
 ---
 
 **User:** Tell me each and everything you know about Brannon. Their relationship with EOXS, cruz proposal, contacts, open items and contract info. Who is working in brannon from eoxs
+
+**Assistant:** [PROVISIONAL — verbatim text pending]
