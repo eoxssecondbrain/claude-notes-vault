@@ -21,3 +21,5 @@ Candidates/recruiting: Aditya Sampath, Kunj Gupta (AE candidates), Will Campbell
 Flagged as uncertain/duplicate in wiki: Siddhanth Verma, Shaurya Aditya/Rohit Jha.
 
 Told user this is partial (~40 names surfaced) out of a much larger total given 691 entity pages and no bulk-list capability; offered to continue with client-by-client and category sweeps for fuller coverage.
+
+**User:** Tell me more about Jaskeerat
