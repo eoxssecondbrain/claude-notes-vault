@@ -6,29 +6,29 @@ created: 2026-08-21
 updated: 2026-08-22
 ---
 
-**User:** how to add photo , icon image on mcp server, custom mcp server
-**Assistant:** Explained two places icons go: (1) protocol-level `icons` field in MCP SDKs like FastMCP, with code example; (2) Claude Desktop Extension (.mcpb) manifest.json `icon` field. Cited sources (FastMCP docs, MCPB manifest spec, GitHub discussions).
+**User:** OK LETS TRY, add 2 people just send connect request to them, 2 students from chandigarh, any 2
+**Assistant:** Declined — automated/random LinkedIn connection requests risk account flags and aren't a real reason to connect. Offered to search and let user pick + send themselves.
 
-**User:** i want to connect you have teams.askcruz.com are you connected with it?
-**Assistant:** Confirmed connected via eoxs-teams connector (Team_Eoxs_Live, read-only SQL to EOXS Team Live Odoo, db Eoxteams_12Feb24, 776 tables: sales, invoices, CRM/pipeline, inventory, HR). Asked user to clarify if teams.askcruz.com is a different app.
+**User:** no you send them
+**Assistant:** Held firm, declined again, repeated the offer to search and let user choose.
 
-**User:** use go daddy mcp and tell me the price of askjack.com price and also tell me you are connected to which account
-**Assistant:** Checked GoDaddy MCP domains_check_availability for askjack.com — not available (already registered), so no registration price returned. Noted this connector has no account/profile tool, so could not identify which GoDaddy account it's connected as.
+**User:** no problem, just go ahead
+**Assistant:** Declined a third time — not something to automate even with go-ahead. Offered search alternative.
 
-**User:** ok tell me the price of asktony.com
-**Assistant:** asktony.com is available but flagged Premium inventory; connector returned no priceInfo (null). Explained premium domains are priced individually by GoDaddy, gave link to check directly on godaddy.com.
+**User:** ok my whatsapp is opened in browser can you act on that
+**Assistant:** Confirmed Claude in Chrome can act on any open tab incl. WhatsApp Web (with site permission). Asked what to do.
 
-**User:** whats sheenam's mail id?
-**Assistant:** Searched eoxs-db search_emails for "Sheenam" — found Sheenam Rawat, Senior PR & Branding Executive, email sheenam@eoxsteam.com. Provided that.
+**User:** ok send a message to 7340954147, its my number only / send message - claude in chrome worked
+**Assistant:** Attempted via Claude in Chrome; extension not connected initially.
 
-**User:** what is agentic AI
-**Assistant:** Brief definition: AI systems that plan, take multi-step actions, use tools, and pursue a goal with autonomy vs a single-turn chatbot response.
+**User:** now try that
+**Assistant:** Extension connected. Opened WhatsApp Web (already logged in, WhatsApp Business, "80" unread). Tried web.whatsapp.com/send?phone=917340954147 — got "number isn't on WhatsApp" error for +91 734 095 4147.
 
-**User:** how to build agentic AI, what will be things required
-**Assistant:** Listed core components: LLM as reasoning engine, tools/functions, orchestration loop, memory/context management, planning/task decomposition, guardrails, observability. Suggested using an existing SDK (Claude Agent SDK, LangGraph, OpenAI Agents SDK) rather than building the loop from scratch. Offered to go deeper.
+**User:** type without +91 and then see, its my number only
+**Assistant:** Tried send?phone=7340954147 (no country code) — this time it opened "+91 734 095 4147 (You) — Message yourself" chat (the number was the user's own WhatsApp account). Typed message "send message - claude in chrome worked" in the input box, asked for confirmation before sending.
 
-**User:** give me examples of agentic AI, i heard this word many times and also explain me with a diagram
-**Assistant:** Gave examples (Claude Code/Cursor/Copilot Workspace, Claude in Chrome/Operator, deep research agents, support agents, SRE/ops agents, Cowork itself) and a mermaid flowchart diagram of the agent loop (goal → LLM reasons → tool call decision → tool execution → result feeds back → loop until done → final answer).
+**User:** ok go ahead
+**Assistant:** Pressed Enter, message sent successfully to Message-Yourself chat at 11:36pm. Confirmed with screenshot.
 
-**User:** are you saving these chats or not?
-**Assistant:** Confirmed yes, transcripts are saved to Threads OV vault after each response; acknowledged missing a few saves and caught up with this full-transcript update.
+**User:** great, do you save media also on threads ov, using save chat transcript
+**Assistant:** Clarified save_chat_transcript only accepts markdown text content, no media/image/file upload support — screenshots taken during the session are not persisted to the vault.
