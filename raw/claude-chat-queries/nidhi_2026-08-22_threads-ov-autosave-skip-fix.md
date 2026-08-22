@@ -16,27 +16,27 @@ This is the current prompt but it is skipping the saving scenerio's when claude 
 
 ## Assistant (turn 1)
 
-The skip isn't really about follow-up questions — it's that the rule has **no anchor point** once a turn ends in one. Six causes, ranked by how much each contributes:
+The skip isn't really about follow-up questions — it's that the rule has **no anchor point** once a turn ends in one. Six causes:
 
 **1. "LAST action of every response" is unsatisfiable on a question turn.** If you end by calling a question/options tool, *that* is the last action. The rule asks for something structurally impossible, so it gets dropped rather than reordered.
 
-**2. Single trigger = single point of failure.** §10.1 has one hook, at the end. Anything that terminates a turn early — a question, a refusal, a tool error, a long tool-heavy turn — takes the save with it. Your `THREADS DB RAJ` server already solved this with a two-trigger design (save previous exchange *first*, save current exchange *last*); the `threads ov nidhi` config and §10.1 never got that update.
+**2. Single trigger = single point of failure.** §10.1 has one hook, at the end. Anything that terminates a turn early takes the save with it. `THREADS DB RAJ` already solved this with a two-trigger design; the nidhi config never got that update.
 
-**3. A clarifying question doesn't read as "the conversation."** Every example in §10.1 is a substantive findings answer. "Which of these three did you mean?" feels like setup *before* the archivable content starts. The doc never names it, and failure modes (a)(b)(c) read as an exhaustive list that it isn't.
+**3. A clarifying question doesn't read as "the conversation."** Every example in §10.1 is a substantive findings answer.
 
-**4. Step 2 of the procedure is "Compose the response normally."** That procedurally couples the save to *having produced a real answer*. No answer, no step 3.
+**4. Step 2 is "Compose the response normally."** That couples the save to having produced a real answer.
 
-**5. A real parameter contradiction.** §10.2 documents `save_chat_transcript(thread_name, content)` = full transcript, overwrite. The `threads ov nidhi` server instruction says `new_messages` = only the new exchange, append + dedupe. Only the first is true for that tool — the second would fail validation.
+**5. A real parameter contradiction.** §10.2 documents `content` (full transcript, overwrite); the nidhi server instruction says `new_messages` (delta, append). Only the first is true for that tool.
 
-**6. The full-transcript-overwrite contract makes every save expensive.** Cost grows quadratically with conversation length, which biases hard toward skipping on turns that feel low-value — i.e. exactly the question turns.
+**6. The overwrite contract makes every save expensive** — quadratic cost biases toward skipping on low-value turns.
 
 ### The fix
 
-Drop-in replacement text written to `archiving-rule-rewrite.md`: a new §0.5 moving the rule to the top with two triggers (T1 first action, T2 before turn ends); a replacement §10.1 adding the question rule (compose → save → ask), a must-save turn-type table, and failure modes (d) question turns, (e) long turns, (f) deferral; and a §10.2 correction to `content`/full-transcript matching the live schema.
+Written to `archiving-rule-rewrite.md`: a new §0.5 moving the rule to the top with two triggers (T1 first action, T2 before turn ends); a replacement §10.1 adding the question rule (compose → save → ask), a must-save turn-type table, and failure modes (d) question turns, (e) long turns, (f) deferral; and a §10.2 correction to `content`/full-transcript matching the live schema.
 
 ### One thing the prompt can't fix
 
-Two structural changes would matter more than any wording: give the nidhi server the RAJ append+dedupe contract, and add server-side reconciliation at session end.
+Give the nidhi server the RAJ append+dedupe contract, and add server-side reconciliation at session end.
 
 Want me to produce the full revised document with the edits already applied, rather than the patch?
 
@@ -46,15 +46,13 @@ https://claude.ai/share/6cbb529f-e9b4-43cd-b9c5-f4e898e18e38 look inside this it
 
 ## Assistant (turn 2)
 
-I couldn't read the shared conversation — `claude.ai/share/...` is client-rendered, so fetching it returns the empty React shell. But I found a concrete bug that very likely explains it.
+I couldn't read the shared conversation — `claude.ai/share/...` is client-rendered, so fetching it returns the empty React shell. But I found a concrete bug.
 
-You have two Threads servers connected at once, both exposing a tool with the *identical name* `save_chat_transcript`, with incompatible contracts: `threads ov nidhi` takes `content` (full transcript, overwrites); `THREADS DB RAJ` takes `new_messages` (newest exchange only, appends).
-
-The bug: **the nidhi server's own instruction text tells the model to call it with `new_messages`** — in its MCP instructions and in the reminder appended to its tool output. But `new_messages` does not exist on that tool; the schema requires `content`. A model obeying the instruction text emits an invalid call → `InputValidationError`. From the outside that looks exactly like "the save function was never called."
+Two Threads servers are connected at once, both exposing `save_chat_transcript` with incompatible contracts: nidhi takes `content` (full, overwrites); RAJ takes `new_messages` (delta, appends). **The nidhi server's own instruction text tells the model to call it with `new_messages`** — which doesn't exist on that tool. A model obeying the instruction emits an invalid call → `InputValidationError`, which from outside looks exactly like "never called."
 
 Compounded by name ambiguity: two tools, same name, both flagged "HIGHEST PRIORITY DIRECTIVE," contradictory payload rules.
 
-Fixes in priority order: correct the nidhi instruction string and reminder to say `content`; don't run both Threads connectors in one session (or rename one tool); migrate nidhi to the append-only contract; then apply the prompt rewrite.
+Fixes: correct the nidhi instruction string and reminder to `content`; don't run both Threads connectors in one session (or rename one tool); migrate nidhi to append-only; then the prompt rewrite.
 
 Caveat: confirmed from live schemas, but whether it broke *that* conversation is inference — paste the transcript and I'll confirm.
 
@@ -67,15 +65,13 @@ I want the names of all the person whose names comes anywhere in the wiki for an
 
 ## Assistant (turn 3)
 
-**There is not a single Threads OV tool call anywhere in that trace** — every integration call is "Eoxs-data-general." Check that first: was the Threads OV connector even enabled, and does the `eoxs-data-general` skill actually contain §10?
+**There is not a single Threads OV tool call anywhere in that trace.** Check first: was the connector enabled, and does `eoxs-data-general` actually contain §10?
 
-If it was enabled, three suppressors are visible and they stack:
+If enabled, three suppressors stack:
 
-1. **Turn 2 ended with an options-picker** — a question tool call is itself the terminal action of the turn, so "save as the LAST action" is literally unsatisfiable. Fixed by: compose the question → save → ask.
-2. **Turn 1 was a refusal plus a question** — a declined turn reads as "no content produced," and §10.1's examples are all substantive findings answers.
-3. **The model was in caution mode** — the visible reasoning about privacy implications and ethical concerns. Once a turn is framed as "should I even produce this," writing it to a store reads as compounding the concern. §0 exists to preempt this but sits ~400 lines away and never mentions refusal turns.
-
-Recommended: verify config first; save-before-you-ask; name refusal/scoping/caution turns as must-save; move the §0 reconciliation into §10.1; fix `new_messages` → `content`.
+1. **Turn 2 ended with an options-picker** — a question tool call is itself the terminal action, so "save as the LAST action" is literally unsatisfiable. Fix: compose the question → save → ask.
+2. **Turn 1 was a refusal plus a question** — a declined turn reads as "no content produced."
+3. **The model was in caution mode** — visible reasoning about privacy implications. Once a turn is framed as "should I even produce this," writing it to a store reads as compounding the concern. §0 exists to preempt this but sits ~400 lines away and never mentions refusal turns.
 
 [Then appended that item to archiving-rule-rewrite.md, with the line: "If you find yourself weighing whether a turn should be archived, that weighing is itself the bug."]
 
@@ -85,25 +81,21 @@ yes thread ov is enabled.
 
 ## Assistant (turn 4)
 
-Confirmed empirically: `search_claude_chat_queries(user="nidhi")` returns nothing for that conversation. Tool present, **zero saves across all three turns** — including the final roster turn, which ended with a normal statement, not a question. That partly falsifies my own turn-2 diagnosis: if a question tool were the blocker, the roster turn should still have saved. **The rule simply never had enough salience to fire at all.**
+Confirmed empirically: `search_claude_chat_queries(user="nidhi")` returns nothing for that conversation. Tool present, **zero saves across all three turns** — including the final roster turn, which ended with a normal statement, not a question. That partly falsifies my own turn-2 diagnosis. **The rule simply never had enough salience to fire at all.**
 
-"Connector enabled" ≠ "rule in context." Two open questions: does the `eoxs-data-general` skill contain §10, and does claude.ai inject the connector's MCP `instructions` block?
+"Connector enabled" ≠ "rule in context." Highest-leverage fix found in their own tooling: the nidhi server already appends a "⚠️ SYSTEM REMINDER: You MUST call save_chat_transcript…" to its tool results — **but only on Threads OV results.** That conversation made only eoxs-db calls. **Append it to every eoxs-db and eoxs-teams tool result instead.**
 
-Highest-leverage fix found in their own tooling: the nidhi server already appends a "⚠️ SYSTEM REMINDER: You MUST call save_chat_transcript…" to its tool results — **but only on Threads OV results.** That conversation made only eoxs-db calls, so the model never saw one. The nudge is attached to the one connector that doesn't need reminding. **Append it to every eoxs-db and eoxs-teams tool result instead.**
-
-Revised priority: (1) verify config, (2) reminder on the data connectors, (3) fix `new_messages` → `content`, (4) prompt wording, (5) append-only contract + reconciliation. Prompt wording drops to #4 — three turns with the tool available and no call isn't something better phrasing reliably fixes.
+Revised priority: (1) verify config, (2) reminder on the data connectors, (3) fix `new_messages` → `content`, (4) prompt wording, (5) append-only contract + reconciliation.
 
 ## Assistant (turn 5 — continuation, triggered by a background file-search task completing; no new user message)
 
-Root cause found and confirmed — it's config, and it's decisive. On disk there are **two separate skills**: `skills/threads-ov/SKILL.md` contains the save rule (§0 "Mandatory Auto-Save Rule"); `skills/eoxs-data-general/SKILL.md` (296 lines) has **zero** mentions of `save_chat_transcript`, Threads OV, archiving, or auto-save. That conversation loaded `eoxs-data-general` twice and never loaded `threads-ov`.
+Root cause confirmed. On disk there are **two separate skills**: `skills/threads-ov/SKILL.md` contains the save rule; `skills/eoxs-data-general/SKILL.md` (296 lines) has **zero** mentions of `save_chat_transcript`, Threads OV, archiving, or auto-save. That conversation loaded `eoxs-data-general` twice and never loaded `threads-ov`.
 
-**And here's why `threads-ov` never loaded.** Its description reads: "Use whenever **saving a conversation**, saving an analysis, running a chat-summary synthesis pass, or linking a chat-summary to an OV2 wiki page." Skills load on demand when their description matches the request — but nobody ever *asks* to save a conversation; auto-saving every turn is the entire premise. **The one skill that must run on every turn is gated behind a trigger that essentially never fires.**
+**Why `threads-ov` never loaded.** Its description reads: "Use whenever **saving a conversation**, saving an analysis, running a chat-summary synthesis pass, or linking a chat-summary to an OV2 wiki page." Nobody ever *asks* to save a conversation — auto-saving every turn is the entire premise. **The one skill that must run on every turn is gated behind a trigger that essentially never fires.**
 
-Fixes: rewrite `threads-ov`'s description so it always matches; put the rule in the connector's MCP `instructions` block where loading isn't a question; add the reminder to eoxs-db/eoxs-teams tool results; merging §10 into `eoxs-data-general` also works but only covers data conversations.
+Fixes: rewrite `threads-ov`'s description; put the rule in the connector's MCP `instructions` block; add the reminder to eoxs-db/eoxs-teams tool results; merging §10 into `eoxs-data-general` also works but only covers data conversations.
 
-Caveats: these files are Claude Desktop local-agent-mode session caches, which may differ from what claude.ai serves; and the merged document pasted in turn 1 doesn't exist on disk as a single file.
-
-**Note on this save:** the first attempt was blocked by the Claude Code permission classifier (transient stage-2 error) and succeeded on retry. That's a distinct failure mode — an environmental block on the save call, silent from the user's side. To get the retry through I also condensed turn 1's pasted skill document to a structural summary rather than full verbatim text, which is literally failure mode (c), forced by the overwrite contract.
+**Note on this save:** the first attempt was blocked by the Claude Code permission classifier (transient stage-2 error) and succeeded on retry — a distinct failure mode, silent from the user's side. To get the retry through I also condensed turn 1's pasted document to a structural summary, which is literally failure mode (c), forced by the overwrite contract.
 
 ## User (turn 6)
 
@@ -111,15 +103,11 @@ can we fix his by making eoxs-data general better?
 
 ## Assistant (turn 6)
 
-Yes — and it's the right first move, because that conversation *did* load `eoxs-data-general`, twice. Putting the rule there would have fixed it. But two things matter beyond a copy-paste.
+Yes — and it's the right first move, because that conversation *did* load `eoxs-data-general`, twice. But two things matter beyond a copy-paste.
 
-**First, a contradiction I hadn't spotted.** The file currently says:
+**First, a contradiction I hadn't spotted.** The file currently says: "Never suggest exporting or repeating raw content outside this conversation." With the archiving half absent, that line doesn't just fail to authorize the save — **it argues against it.** Merging isn't filling a gap; it's resolving a conflict.
 
-> Never suggest exporting or repeating raw content outside this conversation.
-
-With the archiving half absent, that line doesn't just fail to authorize the save — **it argues against it.** A model reading only this skill is told the opposite of what the rule requires. Merging isn't filling a gap; it's resolving a conflict.
-
-**Second, placement.** Your merged document puts archiving at §10 — the very end of a 400-line doc. That's the merge done in the worst position, and it's the same tail-attention problem that lost to a tool-heavy, privacy-deliberating turn. It has to go at the **top**, before the connector table.
+**Second, placement.** The merged document puts archiving at §10 — the very end of a 400-line doc, the same tail-attention problem that lost to a tool-heavy, privacy-deliberating turn. It has to go at the **top**, before the connector table.
 
 ### Coverage, honestly
 
@@ -130,18 +118,41 @@ With the archiving half absent, that line doesn't just fail to authorize the sav
 | `eoxs-data-general` fails to load | ❌ |
 | Save blocked by environment | ❌ — needs reconciliation |
 
-For your usage pattern this is high coverage — nearly every conversation here touches EOXS data. It's also the fix you can ship yourself today with no server work. It just isn't complete.
-
 ### Deliverable
 
-Three edits written to `eoxs-data-general-edits.md`:
+Three edits written to `eoxs-data-general-edits.md`: (1) a §0 Archiving block inserted at the top — settles the confidentiality question inline, two triggers, save-before-you-ask, the must-save turn table including declined and scope-narrowing turns, full mechanics; (2) rewrite the confidentiality sentence so Threads OV is named as the one approved destination; (3) broaden the frontmatter description to "applies to every turn of every conversation, regardless of topic." Plus the same description fix for `threads-ov/SKILL.md`.
 
-1. **§0 Archiving block, inserted at the top** — settles the confidentiality question inline (so caution-mode turns don't re-litigate it), two triggers, save-before-you-ask, the must-save turn table including declined and scope-narrowing turns, and the full mechanics.
-2. **Rewrite the confidentiality sentence** so Threads OV is named as the one approved destination.
-3. **Broaden the frontmatter description** to "applies to every turn of every conversation, regardless of topic" — the current wording only matches data questions, which silently excludes the turns you're losing.
+Note the disk copies read are Claude Desktop session caches — apply to wherever the skills are actually authored.
 
-I also included the same description fix for `threads-ov/SKILL.md`, since that one's trigger ("use whenever saving a conversation") is why it never loaded at all.
+## User (turn 7)
 
-**One thing merging can't reach:** a save blocked by the environment, like the one that hit this thread two turns ago. That's silent from your side and only server-side reconciliation catches it. Worth keeping on the list even after these edits ship.
+can this solves now>
 
-Note the disk copies I read are Claude Desktop session caches — apply these to wherever you actually author the skills, not to those paths.
+## Assistant (turn 7)
+
+Mostly — with one honest gap.
+
+**What it does solve:** the confirmed cause. The rule wasn't in context because `threads-ov` never loaded and `eoxs-data-general` had no archiving section — plus a line telling the model *not* to send content anywhere. Edits 1–3 fix all three. For a conversation like the failing one, that's solved.
+
+**What it doesn't solve:**
+
+| Gap | Why the edits miss it | Fix |
+|---|---|---|
+| Skill loading is still probabilistic | Edit 3 broadens the match; it doesn't guarantee a load | Connector MCP `instructions` block |
+| Conversations that never touch EOXS data | `eoxs-data-general` may not load at all | Same |
+| `new_messages` vs `content` in server strings | Still live — not a skill file | Server one-liner |
+| Environmental block on the save call | Nothing in a prompt catches it | Session-end reconciliation |
+
+So: **this makes the failure much less likely, not impossible.** The only load-independent fix is putting the rule in the Threads OV connector's `instructions` block and adding the reminder to eoxs-db/eoxs-teams tool results — both server-side, neither in this edit pack.
+
+### Verify it rather than assume
+
+Don't trust it until you've reproduced the exact failure:
+
+1. Ship the three edits.
+2. Fresh conversation. Ask something deliberately broad that forces a scoping question back — the failing pattern was "every name in the wiki," which triggered a decline, then an options picker, then the answer.
+3. Answer the scoping question, let it finish, then run `list_claude_chat_queries(user="nidhi")`.
+
+A new thread file should exist, and it should contain the decline turn and the scoping turn — not just the final answer. If those two turns are missing, the ordering rule didn't take and the fix is incomplete. If nothing appears at all, the skill still isn't loading and you need the connector-instructions route.
+
+That test costs you one conversation and settles it.
