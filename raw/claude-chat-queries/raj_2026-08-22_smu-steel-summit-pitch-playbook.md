@@ -3,7 +3,7 @@ thread_name: "smu-steel-summit-pitch-playbook"
 user: "raj"
 type: claude-chat
 created: 2026-08-22
-updated: 2026-08-22
+updated: 2026-08-23
 ---
 
 User: Iron out the pitch.. 
@@ -30,51 +30,36 @@ Rigor level for the playbook/strategy piece (5ft quick / 10ft verified / 50ft de
 
 Craft level for the pitch deliverable itself (Sketch / Draft / Painting / Commissioned)?
 
-User: [selected via option picker] Rigor level for the conference playbook/strategy piece? -> 100ft — staged, delivered section by section. Craft level for the pitch itself (what you'll actually say/use tomorrow)? -> Commissioned — full polish, multiple variants
+[ask_user_input_v0 tool called with two questions: rigor level for playbook, craft level for pitch]
 
-Assistant: Pitch — commissioned, four variants plus the CTA and objection handling.
+User: Rigor level for the conference playbook/strategy piece? → 100ft — staged, delivered section by section
+Craft level for the pitch itself (what you'll actually say/use tomorrow)? → Commissioned — full polish, multiple variants
 
-Core one-liner (badge-glance speed, ~5 seconds)
-"I run the ERP steel companies already use — and I'm building the AI that makes it 10x faster."
+And be mindful that we are only pitching everyone cruz not Eoxs
 
-30-second version, when someone actually stops
-"EOXS is the ERP that steel and metals companies run their operations on — I built it, six years, bootstrapped. AskCruz is the AI layer I've now built on top of it: instead of your team digging through screens for a PO status, a quote, or an inventory check, they just ask, and it answers in seconds off your live data. It's live at three steel companies right now."
+Assistant: [Created commissioned pitch document AskCruz_SMU_Steel_Summit_Pitch.md with 8-second hook, 30-second pitch, 2-minute pitch, CTA lines, objection handling, proof points, audience breakdown — presented to user]
 
-Why this framing and not "we do AI for steel": leading with EOXS buys instant credibility — you're not a stranger pitching a new AI toy, you're the guy who already runs their ERP category. That claim is checkable in the room; several attendees will recognize EOXS clients by name.
+Pitch is done — AskCruz only, EOXS mentioned only as a credibility deflection if someone raises it, never led with.
 
-Persona variant, owner or C-suite (the actual buyer)
-"Your ops team spends a chunk of every day answering the same questions manually — order status, quotes, exposure to a customer. AskCruz turns that into a 10-second answer, pulled from your own ERP data, with zero new system to learn. It's live at 3GM Steel and Sabre Alloys today."
+Now the playbook. 100ft staged, here's the section outline:
 
-Persona variant, plant/ops manager (influencer, not budget holder)
-"How many times a day does someone on your team stop what they're doing to dig through the ERP because a customer or a driver called asking where their order is? That's the exact thing this kills."
+1. Cost model — fully loaded cost per person/week/conference for a 3-person, 6-month deployment
+2. Pipeline economics — breakeven math against the $1M ARR target
+3. Conference selection & cadence — do enough weekly-viable shows even exist, is "every week" realistic
+4. Role design & repeatable system — the actual playbook: pre-show research, on-site script, lead capture, follow-up SLA
+5. Risks & blind spots — visa/work authorization, message consistency without a founder on-site, burnout, alternative models
+6. Recommendation — go/no-go and structure
 
-Persona variant, trader / toll processor / logistics
-"If freight and routing decisions are still living in someone's head or a spreadsheet, this is the fix — same idea I built for Eastern States: ask a question, get the answer straight from live data, no digging."
+Say "next" when ready for section 1.
 
-Persona variant, investor / PE / banker (this conference has an M&A panel — worth having this ready)
-"I'm building AskCruz, an AI operating system layer for mid-market industrial ERPs, starting in steel. Three named accounts live at $300 per seat per month, targeting $1M ARR in the next 12 months."
+User: Let's focus on the page right now and all the conversations. I'm going to be having the folks tomorrow and then on the way back. We can work on all the other things. 
 
-The CTA
-Don't ask for a meeting on the spot — asks for a specific next step:
-"Can I send you a 90-second video of it live at [reference client]? What's the best email?"
-Low friction, gets the contact, gets permission to follow up, and the video does the selling instead of you cold-pitching a stranger for 10 minutes at a conference.
+For the page you can take reference from the last five calls I had with prospects regarding askcruz. You can pull those calls from fireflies. You might have to do some digging. And that would actually give you some good context of how to pitch this Product quickly, and fast to people on the conference to get enough interest so that we can set up a call. What kind of questions I should be asking them.
 
-Objection handling, quick hits
-"We already have an ERP" — Good, this sits on top of it, doesn't replace it.
-"How's this different from a chatbot" — A chatbot answers from the internet. This answers from your ERP, your emails, your calls — your actual operating data.
-"Is our data safe" — Zero data retention agreement with Anthropic, signed and certified.
-"We're not looking to switch systems" — You're not switching anything, that's the point.
+Assistant: [Pulled real AskCruz prospect calls from eoxs-db/Fireflies: Three D Metals call "AI Operating System For 3D Metal" (Aug 19, 2026, Maddie Berry + Aaron Katitus), Sabre Alloys "AI Transformation Proposal" call (Aug 13, 2026), and Greer Steel/Ohio Strip Steel "Ask Cruz: Intro Call" (Aug 10, 2026, Joe Brom). Extracted real language patterns, objections, pricing numbers, and discovery questions actually used in these calls.]
 
-Follow-up email, ready to send day-of or day-after — want me to draft that too, or is the verbal pitch enough for tomorrow?
+Pulled three real AskCruz prospect calls from Fireflies — Three D Metals (Aug 19), Sabre Alloys (Aug 13), and Greer Steel/Ohio Strip Steel intro call (Aug 10). This gives real, tested language instead of generic pitch copy. Rewriting the pitch page around what actually worked in these calls, plus a discovery-question set for conference conversations.
 
-Now the playbook. 100ft, staged. Here's the section outline:
+One thing worth flagging before I rewrite: your call transcripts show two different pricing structures — 3D Metals (new prospect) was quoted $6,500 implementation + $550/user/month, while Sabre (existing EOXS client, 15-user bundle) got $34,000 setup + $4,000/month flat. That's not the same per-user rate. Worth knowing which number you want to be saying out loud at SMU before someone holds you to it.
 
-1. Unit economics — real cost per conference-week (flight, lodging, per diem, booth/registration if applicable, salary) against realistic lead/pipeline output
-2. Conference selection criteria and calendar — which conferences are worth the seat, cadence, overlap with ICP, avoiding redundant coverage
-3. The repeatable field process — pre-conference research SOP, on-site script and CTA (built from what we just did above), same-day follow-up SOP
-4. Hiring and training scalability — sourcing, ramp time, what "good" looks like, how fast someone becomes useful
-5. Tracking and attribution — how a booked call or closed deal gets traced back to a specific conference and rep
-6. Risks and blind spots — burnout, inconsistent quality, opportunity cost against the Sniper Marketing intern motion already running, diminishing returns
-7. Recommendation — go/no-go and, if go, the minimum viable version to pilot before committing to three people for six months
-
-Next section covers unit economics with real numbers, not estimates.
+[Rewrote AskCruz_SMU_Steel_Summit_Pitch.md (v2) built from real call transcripts, containing: pricing note flagging the two different quoted structures; EOXS redirect line; "THE OPEN" (product/capital/decision-making framing that opened every one of the last three prospect calls); 8-second hook; 30-second version drawn from actual call language; four qualifying/discovery questions drawn directly from the calls (orders at risk of shipping late, quote conversion ratio tracking, where data sits, quoting process); THE PROOF POINT (the 3GM VP "100 hours to 8 minutes" story, used twice independently in the real calls); THE CLOSE (the "one-pager tonight, 15 minutes this week" line that got an actual "yes, please do" in the Greer call); five real objection-handling exchanges pulled directly from the transcripts (already have an ERP; how is this different from the ERP's own AI chatbot; conflict of interest since you also run an ERP company; long timeline; tried AI before and it didn't stick); and a "who you're talking to" section on the SMU attendee mix. Presented the file to the user.]
