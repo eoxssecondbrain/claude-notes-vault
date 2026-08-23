@@ -81,3 +81,67 @@ We're hiring an Operations Associate to be the connective tissue that keeps AskC
 **To apply:** [drop application instructions here — email/form link]
 
 [File presented via present_files: /mnt/user-data/outputs/AskCruz-Operations-Associate-JD.md]
+
+Assistant: JD is above and saved to /mnt/user-data/outputs/.
+
+Two things worth flagging before you post it:
+
+1. The "based on all historical JDs" ask — I could only find the recent EOXS-side Naukri postings (Back Office Executive / Operations Executive, Aug 2026, ₹20-30K, freshers OK) as concrete precedent. There's no prior AskCruz-specific ops JD in the vault to pattern-match against, so this is a new template, not a refinement of an old one.
+
+2. Missing apply link — left a placeholder at the bottom. Want that to be an email, a form, or should I draft the intake flow too?
+
+User: Can you find some JD discussion I had with you in other threads
+
+Assistant: Found several JD-related threads. Most directly relevant:
+
+- gfc-inside-sales-jds (Aug 17) — GFC inside sales JDs
+- commodity-distribution-inside-sales-jds (Aug 17) — same, commodity/distribution framing
+- askcru-ae-hiring-rubric / askcru-ae-hiring-india / askcru-ae-india-hiring-rubric / askcruz-ae-india-hiring (all Aug 17) — AE hiring rubric/JD for India
+- ae-resume-screening-rubric (Aug 17) — screening rubric tied to an AE JD
+- toronto-sdr-screening / toronto-sdr-ae-comp-benchmark (Aug 17/01) — Toronto SDR JD + comp
+- mall-sdr-hire-onboarding / mall-sdr-hire-engagement-letter (Aug 23, today) — SDR hire, JD-adjacent
+- implementation-consultant-hire (Aug 18) — implementation consultant JD
+- email-marketing-intern-framework (Aug 03) — intern JD
+- mass-comm-student-hiring (Aug 20) — student hire JD
+- askcruz-hr-onboarding-150-hires (Aug 17) — broader hiring framework, may contain JD templates
+
+Which one(s) do you want pulled up? Or should I scan all of them and pull out anything that reads as a reusable JD template/structure across the set?
+
+User: Through all of them, and inspiration from what we did. Just create a new JD based on this
+
+Assistant: Pulled the pattern. All three AskCruz/GFC JDs you've had me write (inside sales — AskCruz, inside sales — GFC Intelligence, SDR — India) follow the same tight structure: About the role → What you'll do → What we're looking for → Nice to have → Compensation. No padding, no "why us" section, no bullet-list of perks — you were explicit about keeping it short and digestible.
+
+Rebuilding the Operations Associate JD in that exact house style.
+
+[Rewrote file /mnt/user-data/outputs/AskCruz-Operations-Associate-JD.md with the following content:]
+
+**Operations Associate — AskCruz (Remote)**
+*Ganesh Fruit Company (GFC)*
+
+**About the role**
+AskCruz is an AI operating system for industrial and distribution businesses. We're hiring an Operations Associate to keep the day-to-day machinery of a fast-moving, early-stage company running — tracking what's in motion, following up on what's stalled, and making sure nothing sits waiting on a handoff. This is a generalist execution role, not a fixed checklist.
+
+**What you'll do**
+- Track task and pipeline status across active work and flag anything falling behind
+- Follow up with internal team members and external contacts to keep commitments on schedule
+- Maintain and update internal task boards and status trackers
+- Support weekly reporting — pulling together where things stand across ongoing initiatives
+- Coordinate across functions (sales, product, hiring) so nothing gets stuck waiting on a handoff
+- Handle day-to-day admin and execution tasks as they come up
+- Work directly with the founder on time-sensitive priorities
+
+**What we're looking for**
+- Graduate (any stream) — freshers welcome, no prior experience required
+- Comfortable with Excel/Sheets, email, and basic digital tools
+- Organized by nature — you notice when something's about to slip before it does
+- A clear, proactive communicator who follows up without being chased to do it
+- Comfortable working remotely and independently, with real accountability for outcomes
+
+**Nice to have**
+- Prior exposure to a startup, fast-moving small team, or ops/coordination role
+- Curiosity about AI tools — you'll be trained to use Claude and our internal systems as part of daily work
+
+**Compensation**
+₹20,000–₹30,000/month
+
+[File presented via present_files: /mnt/user-data/outputs/AskCruz-Operations-Associate-JD.md]
