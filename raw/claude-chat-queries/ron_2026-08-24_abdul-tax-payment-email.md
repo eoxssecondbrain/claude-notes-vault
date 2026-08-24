@@ -38,3 +38,26 @@ Ron
 ---
 
 Changes: split into three short blocks (payment confirmation, ask to Abdul, instruction to Sheenam) instead of one merged paragraph; moved the info request ahead of the internal instruction so Abdul's ask isn't buried; added a subject line.
+
+User: I need the email address where he wants us to send the payment to. We are already talking on email, so he already has his email with us.
+
+Assistant: You're right — good catch. Fixed:
+
+---
+
+Subject: 2024 Tax Work – Payment
+
+Hi Abdul,
+
+We'll take care of the payment for your 2024 tax work.
+
+Could you send over the bank/account details you'd like the transfer sent to?
+
+Sheenam — please process the payment via a transfer from Prata Canada once we have Abdul's payment details.
+
+Thanks,
+Ron
+
+---
+
+Changed: swapped the "share your email address" ask for a request for bank/account details, since email isn't needed here.
