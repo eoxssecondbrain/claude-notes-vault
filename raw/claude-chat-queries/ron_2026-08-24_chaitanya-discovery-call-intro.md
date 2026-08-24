@@ -25,27 +25,3 @@ Got it — will set up time with Chaitanya this week and loop you in once it's b
 **To Chaitanya:**
 
 Hi Chaitanya, great to connect — Raj mentioned you might have some good ideas for what we're building at Cruz. Would love to set up an hour to walk you through it. What's a good time for you this week or next?
-
-User: I was thinking of something like.
-
-"Noted Raj. 
-
-Hi @chaitanya, it is nice to e-meet you. Let me know when you have time today to meet and discuss what we have built with AskCruz."
-
-I know this is not perfect. Perfect it.
-
-Assistant: Noted, Raj.
-
-Hi Chaitanya, nice to e-meet you. Let me know what time works for you today to connect and go over what we've built with AskCruz.
-
-User: Is this good?
-
-Assistant: Yes — it's clean, short, and does both things: acknowledges Raj and gives Chaitanya a clear, low-friction ask (just needs a time back from him). Nothing to change unless you want to specify duration ("an hour") since Raj's ask was a 1-hour call — right now it just says "meet."
-
-If that matters, one tweak:
-
-Noted, Raj.
-
-Hi Chaitanya, nice to e-meet you. Let me know what time works for you today for an hour to connect and go over what we've built with AskCruz.
-
-Otherwise send as-is.
