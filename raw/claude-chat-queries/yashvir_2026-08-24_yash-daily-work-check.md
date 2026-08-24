@@ -39,3 +39,11 @@ That's the only CRM activity tied to you today — one new lead entered and logg
 One thing worth flagging: this lead came in through Raj's conference conversation, not your outbound motion — worth confirming with him whether you're expected to own follow-up on it or just logging it on his behalf, since AskCruz has no CRM pipeline tracking convention yet and this could quietly become another untracked thread like the others.
 
 I don't have visibility into individual activity/productivity monitoring data (time tracking, keystroke logs, etc.) — that category is access-restricted on this connection regardless of source.
+
+User: How many Log note activities are there in Yashs profile?
+
+Assistant: All 451 of his "comment"-type messages are the "Note" subtype — so all 451 are log notes (no straight emails logged as comments under his name).
+
+451 log note activities on Yashvir Singh Thakur's profile in EOXS Team Live (Odoo CRM), sourced from mail_message where he's the author.
+
+Note: this is a raw count across whatever models those notes are attached to (leads, partners, tasks, etc.) — I didn't break it down by model or date range. Want that split (e.g. by client, by month, CRM leads only)?
