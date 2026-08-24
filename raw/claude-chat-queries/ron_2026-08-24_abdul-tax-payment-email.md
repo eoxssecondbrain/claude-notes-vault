@@ -39,9 +39,9 @@ Ron
 
 Changes: split into three short blocks (payment confirmation, ask to Abdul, instruction to Sheenam) instead of one merged paragraph; moved the info request ahead of the internal instruction so Abdul's ask isn't buried; added a subject line.
 
-User: I need the email address where he wants us to send the payment to. We are already talking on email, so he already has his email with us.
+User: I need the email address where he wants us to send the payment to. We are already talking on email, so he already has his email with us. Or we can ask him to confirm if we can send the payment to the same email that is on the thread, or is there any other email that we should send the payment at
 
-Assistant: You're right — good catch. Fixed:
+Assistant: Right — makes more sense that way. Revised:
 
 ---
 
@@ -51,13 +51,13 @@ Hi Abdul,
 
 We'll take care of the payment for your 2024 tax work.
 
-Could you send over the bank/account details you'd like the transfer sent to?
+Should we send the transfer to this email address, or is there a different one you'd like us to use?
 
-Sheenam — please process the payment via a transfer from Prata Canada once we have Abdul's payment details.
+Sheenam — once Abdul confirms, please process the payment via a transfer from Prata Canada.
 
 Thanks,
 Ron
 
 ---
 
-Changed: swapped the "share your email address" ask for a request for bank/account details, since email isn't needed here.
+Change: replaced the "share your email" ask with a confirm-or-provide-alternate question, since the thread email is presumably already his.
