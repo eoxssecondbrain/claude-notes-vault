@@ -6,74 +6,75 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
-[Prior turns preserved from earlier saves in this thread: JD + hard requirements from user; Candidate 1 Rizwan Dirisina 3/10 DISQUALIFY; Candidate 2 Kuldeep Sharma 2/10 DISQUALIFY (submitted twice, same verdict); Candidate 3 Deepak Kumar 7/10 QUALIFY; Candidate 4 Monisha R 6/10 QUALIFY with reservations; Candidate 5 Abhilasha Kumari Singh 7/10 QUALIFY; Candidate 6 Abhishek Mishra 6/10 QUALIFY with scale-mismatch caveat; Candidate 7 Kapil Singhal 4/10 DISQUALIFY due to JD-mirrored resume language plus recent job-hopping; Candidate 8 Rishikesh Gade 7/10 QUALIFY, strongest technical/EDI profile, weak on training evidence; Candidate 9 Samaloy Hazarika 7/10 QUALIFY, best SMB/adoption-monitoring adjacency; Candidate 10 Ravisankar P V 5/10 QUALIFY borderline, weak technical/API depth; Candidate 11 Vengadatchary Ragounadane (Chari R.V.) 1/10 DISQUALIFY, senior engineering executive with no client-implementation experience, total seniority/scope mismatch.]
+[Prior turns preserved from earlier saves in this thread: JD + hard requirements from user; Candidate 1 Rizwan Dirisina 3/10 DISQUALIFY; Candidate 2 Kuldeep Sharma 2/10 DISQUALIFY (submitted twice, same verdict); Candidate 3 Deepak Kumar 7/10 QUALIFY; Candidate 4 Monisha R 6/10 QUALIFY with reservations; Candidate 5 Abhilasha Kumari Singh 7/10 QUALIFY; Candidate 6 Abhishek Mishra 6/10 QUALIFY with scale-mismatch caveat; Candidate 7 Kapil Singhal 4/10 DISQUALIFY due to JD-mirrored resume language plus recent job-hopping; Candidate 8 Rishikesh Gade 7/10 QUALIFY, strongest technical/EDI profile, weak on training evidence; Candidate 9 Samaloy Hazarika 7/10 QUALIFY, best SMB/adoption-monitoring adjacency; Candidate 10 Ravisankar P V 5/10 QUALIFY borderline, weak technical/API depth; Candidate 11 Vengadatchary Ragounadane (Chari R.V.) 1/10 DISQUALIFY, senior engineering executive with no client-implementation experience; Candidate 12 Nalini Naik 4/10 DISQUALIFY, infrastructure/ops profile with no training/adoption evidence and no API work.]
 
 **User:**
-[Uploaded resume PDF: Nalini Naik — Implementation Specialist, eClinicalWorks]
+[Uploaded resume PDF: Abhilash N A — Lead Integration Support Engineer, Increff]
 
-NALINI NAIK
-Implementation Specialist | SaaS & Cloud Operations
-Immediate Joiner | 8.5+ Years Experience
-Email: nalinimsurvase@gmail.com | Mobile: +91-9403535632 | LinkedIn: Nalini Naik
-Address: Pune, Maharashtra, India
+Abhilash N A
+Bangalore, India | 8073521583 | abhilashna2908@gmail.com | linkedin.com/in/abhilash-n-a-863743323
 
-PROFESSIONAL SUMMARY
-Results-driven Implementation Specialist with 8.5+ years of experience in SaaS-based healthcare product implementations and production support. Strong expertise in Apache Tomcat administration, database deployments (MySQL & MSSQL), patch management, server troubleshooting, and client coordination. Proven ability to manage end-to-end deployments, optimize system performance, and ensure high availability in enterprise environments. Currently pursuing AWS Cloud Practitioner and Solutions Architect certifications with a strong interest in transitioning into cloud-focused roles.
+Summary
+Implementation and onboarding professional with 4+ years of experience in SaaS product delivery, system integrations, and client onboarding. Have worked closely with both technical and business teams to get integrations live on time and keep things running smoothly post go-live. Comfortable owning projects end to end, from requirement gathering and planning to UAT and production support. Also enjoy mentoring junior team members and helping the team get better at what they do.
 
-CORE SKILLS
-Application Deployment & Implementation; Apache Tomcat Installation, Tuning & Troubleshooting; SaaS Environment Support; Patch Deployment (Chef); Database Deployment, Backup & Restoration; MySQL & Microsoft SQL Server; SQL Scripting & Data Validation; Windows & Linux Server Administration; FTP Server Configuration; Client & Vendor Coordination; Production Support & Go-Live Management; Incident & Root Cause Analysis; Cloud Fundamentals (AWS – In Progress)
+Experience
+LEAD INTEGRATION SUPPORT ENGINEER — Increff, Bangalore — 10/2024 - Present
+Own the planning and delivery of integration projects across the team, making sure things move forward without blockers.
+Work directly with stakeholders to understand their requirements and translate them into clear technical tasks for the team.
+Closely involved with the product team to flag issues, suggest improvements, and help shape how features are built.
+Worked on improving how the team handles integrations, cutting down repeated efforts and making the process more reliable.
 
-PROFESSIONAL EXPERIENCE
-Implementation Specialist — eClinicalWorks–Mumbai, India — (May 2017 – Sept 2025)
-Key Responsibilities & Achievements:
-Led end-to-end implementation and deployment of healthcare SaaS applications for multiple clients, ensuring on-time go-lives and system stability.
-Performed manual Apache Tomcat installations, configuration, tuning, and troubleshooting in production and SaaS environments.
-Executed patch deployments using Chef, ensuring minimal downtime and compliance with release standards.
-Handled database deployments using Microsoft SQL Server and MySQL, including schema updates, data migration, and validation.
-Designed and executed database backup and restoration strategies using scripts for MySQL and MSSQL to ensure data integrity and disaster recovery.
-Configured and managed FTP servers on Windows, enabling secure file transfers between applications and client systems.
-Provided production and post-go-live support, performing root cause analysis and resolving application, server, and database issues.
-Installed and supported FAX services using WinSCP, PuTTY, and Linux commands, ensuring reliable document transmission.
-Coordinated closely with clients, vendors, deployment teams, and support teams to ensure correct functionality and client satisfaction.
-Created and maintained technical documentation and SOPs, improving implementation efficiency and reducing recurring issues.
-Mentored junior team members and supported cross-team collaboration for faster issue resolution.
+SENIOR INTEGRATION SUPPORT ENGINEER — Increff, Bangalore — 07/2023 - 09/2024
+Handled onboarding of new marketplaces and ERP systems, coordinating between internal tech teams and client partners.
+Set up documentation practices and built small automation tools that made the integration process faster and less error-prone.
+Mentored junior engineers on integration workflows, API debugging, and how to communicate effectively with clients.
+Took ownership of critical production issues and made sure they were resolved quickly with minimum impact on clients.
 
-Tools & Technologies: Apache Tomcat, Chef, SQL Server Management Studio (SSMS), MySQL, MSSQL, WinSCP, PuTTY, FTP, Windows Server, Linux
+TECHNICAL DELIVERY ENGINEER — Increff, Bangalore — 02/2022 - 06/2023
+Set up and went live with new client accounts, handling the full technical setup from scratch.
+Worked through production issues and integration bugs to keep things stable for clients.
+Improved how client interactions and support processes were handled as the team scaled up.
+Worked alongside product and engineering during UAT and validation to make sure go-lives were smooth.
+
+Core Competencies
+Project Management: Lifecycle Planning, Risk Mitigation, Stakeholder Alignment, Resource Coordination
+Implementation & Onboarding: SaaS Delivery, API Integrations, ERP System Mapping, UAT Testing, Client Training
+Soft Skills: Stakeholder Management, Cross-functional Collaboration, Mentorship, Requirement Gathering, Analytical Problem Solving
+
+Skills
+API Integration & Testing (REST APIs, Postman, Swagger); System Integration & Data Flow Analysis; SQL Queries & Database Analysis; JSON, XML; Jira / Confluence / Freshdesk; Product Implementation & Configuration; Debugging & Root Cause Analysis; Log Analysis & Production Support; API Documentation & Technical Writing; Notion Documentation
+
+Appreciations
+Got appreciated internally for leading a new module go-live, handled the end-to-end testing, shared inputs as the first internal customer, and worked closely with the engineering and product teams to get it right.
+Received appreciation from clients for understanding their business workflows well and delivering implementations that actually worked for them end to end.
+
+Certifications
+Product Management – Great Learning (2025)
+API Fundamental Student Expert – Postman Academy
+Certified AI Generalist | Agentic AI Masterclass – The Economic Times
+Advanced Excel: Complex Functions & Data Analysis – Sapient Training
 
 Education
-Bachelor of Engineering (BE) | P.E.S. Modern College of Engineering, Pune (2013 - 2016)
-
-CERTIFICATIONS & LEARNING
-CDAC-PGDAC (Post Graduation Diploma in Advanced Computing)
-AWS Certified Cloud Practitioner – In Progress
-AWS Solutions Architect (Associate) – In Progress
-
-TECHNICAL SKILLS
-Application & Middleware: Apache Tomcat
-Databases: MySQL, Microsoft SQL Server
-Scripting & Queries: SQL (SELECT, INSERT, UPDATE, DELETE, JOIN)
-Servers & OS: Windows, Linux
-DevOps / Deployment: Chef, Patch Management
-Tools: WinSCP, PuTTY, FTP Tools, RDP, SSMS, MS Office
+Sai Vidya Institute of Technology, Bangalore | Bachelor of Engineering (EEE) — Electrical and Electronics Engineering
 
 "check"
 
 **Assistant:**
-**Nalini Naik — Implementation Specialist, eClinicalWorks**
+**Abhilash N A — Lead Integration Support Engineer, Increff**
 
-Score: 4/10
-Decision: DISQUALIFY
+Score: 7/10
+Decision: QUALIFY
 
-Personally implemented software: Partially demonstrated, but the flavor of "implementation" here is notably different from what the JD needs. "Led end-to-end implementation and deployment of healthcare SaaS applications for multiple clients, ensuring on-time go-lives and system stability" is real first-person ownership language. But nearly every supporting bullet is infrastructure/ops work — Apache Tomcat installation and tuning, Chef patch deployment, database backup/restoration scripting, FTP server configuration, WinSCP/PuTTY/Linux administration. This reads as an IT/systems deployment specialist keeping a healthcare SaaS platform running and installed correctly, not someone mapping a client's business workflows (quoting, inventory, order desk) into the software and configuring it around how the business actually operates. It's implementation in the infrastructure sense, not the business-process sense the JD is asking for.
+Personally implemented software: Strong, concrete, and specifically ERP-relevant. "Set up and went live with new client accounts, handling the full technical setup from scratch" (his earliest role) is unambiguous personal ownership language. "Handled onboarding of new marketplaces and ERP systems, coordinating between internal tech teams and client partners" directly names ERP onboarding, which is core to your JD. His current role has shifted toward leading the team's integration delivery ("Own the planning and delivery of integration projects across the team") rather than pure individual-contributor work — a natural progression, but worth confirming in interview that he's still comfortable doing the hands-on configuration work himself day to day, not just directing others.
 
-Hands-on technical work: Strong on the database/SQL side — "SQL Scripting & Data Validation," explicit SELECT/INSERT/UPDATE/DELETE/JOIN work, data migration and schema updates, backup/restoration design. But there is no mention anywhere of APIs, webhooks, or software/data integrations — a real, direct gap against a hard requirement the JD names explicitly. The technical skill set here is server/database administration, not integration work.
+Hands-on technical work: One of the strongest and most directly relevant matches in this batch. "API Integration & Testing (REST APIs, Postman, Swagger)," "SQL Queries & Database Analysis," "System Integration & Data Flow Analysis," JSON/XML, and — notably — "ERP System Mapping" listed as its own competency. "Mentored junior engineers on integration workflows, API debugging" implies he's proficient enough to teach it, not just aware of it. "Built small automation tools that made the integration process faster and less error-prone" shows real hands-on technical building rather than tool-listing. This maps almost point-for-point onto the JD's "SQL, APIs/webhooks, data mapping, and software/data integrations" requirement, and unlike a couple of other resumes today, the language here doesn't read as reverse-engineered from your posting.
 
-Training skeptical non-technical users / driving adoption: Not demonstrated at all — this is the clearest gap. There is no training bullet anywhere in the resume. The client-facing work described is "Client & Vendor Coordination" and "coordinated closely with clients, vendors, deployment teams, and support teams to ensure correct functionality" — this reads as IT-to-IT coordination with a client's technical staff, not end-user enablement, let alone getting skeptical, non-technical floor-level people to actually use a new tool day to day. Given this is one of your four explicit hard requirements, its complete absence here is disqualifying on its own terms.
+Training skeptical non-technical users / driving adoption: The softest of the four requirements here — present but under-evidenced. "Client Training" is listed as a competency, and "Received appreciation from clients for understanding their business workflows well and delivering implementations that actually worked for them end to end" is a good signal of genuine business-process engagement, not just technical delivery. But there's no specific bullet narrating an actual training session, an adoption challenge, or working through user resistance — it's asserted rather than demonstrated with detail. Worth a direct interview question on this specifically.
 
-Job stability: Excellent on paper — a single employer (eClinicalWorks) for 8.5 years (May 2017–Sept 2025), the longest single tenure of any candidate reviewed today. Worth noting: the resume is tagged "Immediate Joiner" and her employment ended nearly a year ago (Sept 2025, vs. today's date of Aug 2026), with no explanation for the gap — worth a direct question, though not a disqualifier on its own.
+Job stability: Excellent — a single employer (Increff) since Feb 2022 (~4.5 years), with three internal promotions (Technical Delivery Engineer → Senior Integration Support Engineer → Lead Integration Support Engineer). Clear, credible growth trajectory, no hopping.
 
-Nice-to-haves: None. eClinicalWorks is a large, established healthcare EHR vendor — not industrial/distribution, not early-stage, and the work described (server/database admin for an internal SaaS platform) doesn't show a high-ownership, client-adoption-driving environment.
+Nice-to-haves: Partial matches. Increff is a mid-size, India-based retail/inventory-management SaaS company — not industrial/distribution, but the work (ERP and marketplace onboarding for retail/D2C brands) is at least supply-chain-adjacent rather than purely enterprise-software-vendor work. It's meaningfully smaller and likely leaner than HighRadius, IBM, or Avalara, giving a plausible (if not explicit) high-ownership signal — "own the planning and delivery... making sure things move forward without blockers" reads like someone used to fewer layers between them and the outcome.
 
-Net: strong technical database/SQL skills and outstanding tenure at one company, but the profile reads as an infrastructure deployment engineer, not a business-implementation consultant who trains end users and drives adoption — and that gap sits directly on one of your four hard requirements plus the API/integration half of another.
+Net: a strong, credible profile — genuine hands-on ERP/API/SQL integration work, real client onboarding ownership, excellent stability with a clear growth trajectory, and a plausible (though understated) training/adoption angle worth probing directly. One of the better-rounded candidates in this batch.
 
-Send the next one.
+That's the last resume in this batch — want a summary ranking across all fourteen candidates reviewed?
