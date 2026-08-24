@@ -9,7 +9,7 @@ updated: 2026-08-24
 [Turn 1]
 USER: <userPreferences>...same as before...</userPreferences>
 
-Audio Transcriptions & Meeting Summaries [full 9-item document as pasted, unchanged from prior save]
+Audio Transcriptions & Meeting Summaries [full 9-item document as pasted]
 
 Go through these summaries and don't miss out on any information.
 
@@ -101,3 +101,20 @@ Unnamed referral contact
 No name captured. Can't set up a referral agreement with no one to name in it.
 
 Bottom line: your next calls should be Andrew (Sheffield) and Denton (LeeCo), and your next email should be Ryan Thomas — those three are the only ones where waiting costs you something. Everything else is either correctly parked on a date or stuck until you supply a name.
+
+[Turn 4]
+USER: We need to book a meeting with Blake next week remember? won't that be on the immediate attention ?
+
+ASSISTANT: Fair catch — that's on me. Audio 1 is a live, this-week action ("set up some time with him for next week"), not something on a dated wait. I let audio 2's 2-month framing pull it into the passive bucket when the two aren't necessarily sequential.
+
+Moving Blake up. Updated immediate-attention list:
+
+Sheffield Steel — Andrew Silbermann: call him directly.
+
+LeeCo Steel — Denton and Lisa: build the 1-pager, call Denton.
+
+North American Steel Alliance — Ryan Thomas: email to set up a call before the October conference.
+
+Blake — PS Data (AskCruz): book the demo for next week.
+
+One thing still unresolved that matters here: audio 1 says demo next week, audio 2 says Ryan wants a 2-month observation window before going further. If the demo hasn't happened yet, booking it next week is exactly right. But if audio 2 came after the demo already happened, then "book a meeting" may not be the live action — the 2-month clock might already be running instead. Worth a quick check on which one is current before you send the invite, so you're not booking a demo Ryan already told you to hold off on.
