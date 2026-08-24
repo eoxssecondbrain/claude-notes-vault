@@ -8,10 +8,18 @@ updated: 2026-08-24
 
 [Full thread continues from prior saves. Latest exchange:]
 
-User: Hi could you please share active employee list with me
+User: Ananya Natraj, Iqra, Jyoti Jha. Karun Verma,Kashish Chauhan, Kriti Mathur, Nidhi Shandil,Prapti,Rishabh Sharma,Vanshi Bhimani,Syed Gufran hussain deactivated them
 
-Assistant: Confirmed unchanged — still 65 active employees. Full list with department and role:
+Assistant: Before I make this change — confirming plainly, since directory writes need an explicit go-ahead every time:
 
-[full table — Aditya Kumar Yadav through Yashvir Thakur, 65 rows with Department/Role columns]
+You want these 11 marked inactive: Ananya Natraj, Iqra, Jyoti Jha, Karun Verma, Kashish Chauhan, Kriti Mathur, Nidhi Shandil, Prapti, Rishabh Sharma, Vanshi Bhimani, Syed Gufran hussain.
 
-Source: EOXS employee directory (eoxs-db, HR clearance), pulled fresh just now.
+Confirm yes, and let me know the date_of_leaving — today (2026-08-20) or a different date. I'll use today by default if you just say "yes" without specifying.
+
+User: go
+
+Assistant: All 11 deactivated successfully, no errors this time. Date_of_leaving defaulted to today, 2026-08-24 (note: the system date has moved forward since our last session, from 2026-08-20 to 2026-08-24):
+
+Ananya Natraj, Iqra, Jyoti Jha, Karun Verma, Kashish Chauhan, Kriti Mathur, Nidhi Shandil, Prapti, Rishabh Sharma, Vanshi Bhimani, Syed Gufran hussain.
+
+Active headcount is now 54.
