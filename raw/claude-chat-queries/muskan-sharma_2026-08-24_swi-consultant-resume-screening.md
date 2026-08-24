@@ -41,57 +41,55 @@ Assistant: Ready. Share the first resume and I'll score it against the hard requ
 
 [Candidate 2: PAVAN KUMAR YADAV K — QUALIFY with reservations, 7/10, LeadSquared Implementation Consultant, ~3 years, hands-on CRM implementation/SQL/API-webhook integration/floor-staff training claims all present but single employer, JD-mirroring language, and an odd "May 2026" end date flagged for interview verification.]
 
-[Candidate 3: JEEVAANANTHAM R — QUALIFY, 8/10, Implementation Engineer with 5+ years delivering Focus X ERP implementations (Finance, Production, MRP, Inventory, Sales, Purchase, Fixed Assets modules) across India/US/UK clients, SQL Server & MySQL, custom reports, UAT, end-user training, three employers in 5 years with reasonable tenure and progression, strongest candidate so far, no industrial vertical match but functional module overlap is strong, API/webhook gap and depth of "skeptical user" training to be probed in interview.]
+[Candidate 3: JEEVAANANTHAM R — QUALIFY, 8/10, Implementation Engineer with 5+ years delivering Focus X ERP implementations (Finance, Production, MRP, Inventory, Sales, Purchase, Fixed Assets modules) across India/US/UK clients, SQL Server & MySQL, custom reports, UAT, end-user training, three employers in 5 years with reasonable tenure and progression, no industrial vertical match but functional module overlap is strong, API/webhook gap and depth of "skeptical user" training to be probed in interview.]
 
-User: [Uploaded resume PDF: KISLAY KUMAR]
-KISLAY KUMAR
-7050104877 | kishlaykumar6666@gmail.com | Gurugram | LinkedIn
+[Candidate 4: KISLAY KUMAR — QUALIFY, 8/10, Senior Implementation Specialist at Apex Analytix (supplier/tax-compliance SaaS) with full implementation lifecycle ownership, strong SQL/REST API/data mapping evidence including a specific Markit/S&P Global integration, prior Infosys DevOps engineering background, only two employers in 6 years (strongest stability so far), but training evidence skews to admin-level users rather than floor/counter staff, no industrial vertical match.]
 
-CAREER SUMMARY
-Senior Implementation Specialist with 6+ years of experience delivering enterprise SaaS implementations, application support, production support, technical consulting, SQL optimization, API integrations, workflow configuration, customer onboarding, incident management and production go-live support. Google AI Professional Certificate holder with hands-on knowledge of Generative AI, prompt engineering and AI-assisted productivity. Experienced in translating business requirements into scalable technical solutions while collaborating with Product, Engineering, QA and Customer Success teams while driving operational excellence, root cause analysis and continuous process improvement.
+User: [Uploaded resume PDF: NANDITA JAISWAL]
+NANDITA JAISWAL
+Implementation Analyst | SaaS | Payroll & ERP Implementation
+Bangalore, India | 6304436149 | nanditajaiswal22@gmail.com | LinkedIn
+
+PROFESSIONAL SUMMARY
+Implementation Analyst with 4+ years of experience in SaaS payroll implementation, ERP deployments, and enterprise data migration. Experience in onboarding 150+ SMB, mid-market, and enterprise clients across US payroll platforms. Adept at cross-functional collaboration, stakeholder communication, and translating complex technical requirements into seamless go-live outcomes.
 
 PROFESSIONAL EXPERIENCE
-Senior Implementation Specialist | Apex Analytix | Feb 2023 – Present
-- Lead end-to-end implementation lifecycle including discovery, requirement gathering, solution configuration, UAT, production deployment and post go-live support.
-- Translate customer business requirements into scalable platform configurations and workflow automation.
-- Perform SQL validation, optimization, backend troubleshooting and data analysis.
-- Configure supplier onboarding, workflow rules and enterprise implementations.
-- Integrate Markit (S&P Global) for automated tax form processing.
-- Support REST/API integrations, data mapping and implementation validation.
-- Partner with Product, Engineering, QA, Customer Success and PM teams.
-- Conduct customer enablement, administrator training and knowledge transfer.
-- Perform release validation, production readiness and root cause analysis.
-- Provide production support and continuous implementation improvements.
+Rippling | Implementation Analyst | 2024 – Present
+- Led end-to-end payroll data migration for 150+ SMB, Mid-Market, and Enterprise clients, migrating from Gusto, ADP, and Paychex — achieving 95%+ go-live success rate.
+- Reduced payroll discrepancy resolution time by ~30% by building structured tax-reconciliation workflows, ensuring compliance with US federal and state payroll regulations.
+- Configured earnings, deductions, and employer/employee tax structures across 150+ accounts, supporting compliance across multiple US jurisdictions.
+- Resolved 100+ post-go-live escalations on the Re-Import/Escalations team, improving client retention and reducing churn risk on complex payroll issues.
+- Mentored 5+ new analysts, cutting average onboarding time by 20% through structured training documentation and shadowing sessions.
+- Partnered with Engineering and Support teams to debug escalated issues, contributing to a 15% reduction in repeat escalations.
 
-Senior Software Engineer | Infosys | Jul 2020 – Jan 2023
-- Managed CI/CD using Jenkins and Maven.
-- Deployed applications on Red Hat OpenShift.
-- Configured CA API Gateway, Redis and JBoss Data Grid.
-- Monitored production using Grafana and collaborated on deployments.
+HighRadius Technologies | Associate Consultant I | 2022 – 2024
+- Managed 10+ ERP implementation projects across APAC, EMEA, and North America from requirements through go-live.
+- Reduced implementation cycle time by 25% by standardizing requirement-gathering templates and testing frameworks.
+- Delivered process improvement recommendations that reduced post-go-live support tickets by 20% across managed projects.
+- Developed and executed end-to-end UAT and regression testing strategies, achieving zero critical defects at go-live.
 
-CORE SKILLS
-Implementation & Project Delivery: SaaS Implementation, Enterprise Implementation, Requirement Gathering, Technical Solution Design, Workflow Configuration, Go-Live Management, UAT, Release Validation, Customer Onboarding, Production Support.
-Technical & Integration: SQL, REST APIs, API Integration, Jenkins, Maven, Kubernetes, OpenShift, Headlamp, Linux, Grafana, Redis, JBoss Data Grid, CA API Gateway, Git, Jira.
-Customer & Stakeholder Management: Technical Consulting, Customer Success, Customer Enablement, Stakeholder Communication, Cross-functional Collaboration, Escalation Management, User Training, Knowledge Transfer.
+HighRadius Technologies | Associate Techno-Functional Consultant | 2021 – 2022
+- Delivered 8+ treasury and cash forecasting implementations, automating financial data processes and reducing manual effort by ~40%.
+- Used SQL for data analysis, integration troubleshooting, and data validation across ERP connections, managing the full project lifecycle end-to-end.
 
-CERTIFICATIONS
-Google AI Professional Certificate
+TECHNICAL SKILLS
+Payroll Platforms: Rippling, Gusto, ADP, Paychex | ERP: SAP | Data & Analytics: MySQL, Power BI, MS Excel | CRM & PM: Salesforce, Jira | Domain: US Payroll Compliance, Payroll Migration, Treasury Implementation, Data Migration, Stakeholder Management, Client Onboarding
 
 EDUCATION
-Bachelor of Technology (B.Tech), Galgotias University (2016–2020)
+B.Tech in Information Technology | KIIT University | CGPA: 9.3
 
 User: check
 
-Assistant: Kislay Kumar — QUALIFY. Score: 8/10.
+Assistant: Nandita Jaiswal — QUALIFY. Score: 8/10.
 
-Hard requirement 1 (personally implemented software) — met. Current role at Apex Analytix (supplier information management/tax-compliance SaaS) explicitly covers the full implementation lifecycle: discovery, requirement gathering, solution configuration, UAT, production deployment, post-go-live support. Reads as individual hands-on work despite the "Senior" title, not delegated management.
+Hard requirement 1 (personally implemented software) — met, strongly. Explicit hands-on configuration work: "configured earnings, deductions, and employer/employee tax structures across 150+ accounts," managed 10+ ERP implementation projects "from requirements through go-live," delivered 8+ treasury/cash forecasting implementations. This is concrete individual-contributor implementation work at real, identifiable companies (Rippling, HighRadius), not sales or support.
 
-Hard requirement 2 (hands-on technical) — met, well-evidenced. SQL validation and optimization, backend troubleshooting, REST/API integration, data mapping — and one concrete, specific, verifiable-sounding detail: integrating Markit (S&P Global) for automated tax form processing. That specificity is a better signal than generic "API integration" language. Prior role at Infosys (Senior Software Engineer, 2.5 years) adds real engineering depth — CI/CD, OpenShift, API Gateway config — though that role itself was internal DevOps/infra, not client-facing implementation, so it's supporting evidence rather than direct.
+Hard requirement 2 (hands-on technical) — met. SQL for data analysis, integration troubleshooting, and data validation across ERP connections; end-to-end payroll data migration off Gusto/ADP/Paychex onto Rippling for 150+ clients. Migrating live payroll/tax data between systems is genuinely technical, high-stakes work — a stronger data-migration signal than most résumés in this batch.
 
-Hard requirement 3 (training non-technical users) — partially met. "Customer enablement, administrator training and knowledge transfer" is real but skews toward admin-level users at enterprise supplier/procurement organizations, not explicitly floor/counter-staff-level non-technical users. Less direct evidence here than on the technical side — worth probing in interview whether he's trained genuinely low-tech-literacy end users or mostly system administrators.
+Hard requirement 3 (training skeptical non-technical users) — the weak point. The only training evidence is mentoring 5+ new internal analysts — that's peer/employee training, not external client-facing training of non-technical end users. Nothing in the résumé explicitly claims she trained client-side HR/finance staff at the SMBs she onboarded, even though that's plausible given the role. This needs to be probed directly in interview since it can't be credited on inference alone.
 
-Hard requirement 4 (job stability) — strong. Only two employers in 6 years: Infosys 2.5 years, Apex Analytix 3.5 years and counting. This is the most stable tenure pattern of the four candidates so far.
+Hard requirement 4 (job stability) — strong. Effectively two employers: HighRadius 2021–2024 (with an internal promotion from Techno-Functional Consultant to Associate Consultant I — a positive stability and growth signal), then Rippling 2024–present. No hopping.
 
-Nice-to-haves: no industrial/distribution vertical experience — Apex Analytix serves general enterprise procurement/supplier/tax compliance, not steel/metals/building materials. Not early-stage (Apex Analytix and Infosys are both established). No explicit high-ownership/startup signal, though owning full implementation lifecycle as an individual contributor is directionally close.
+Nice-to-haves: no industrial/distribution vertical experience — payroll/HR SaaS (Rippling) and treasury/AR automation (HighRadius) are a different domain from steel/fastener/lumber distributors. Not early-stage — both are established, well-funded companies. However, the sheer volume of her onboarding experience (150+ SMB/mid-market clients) is a strong proxy for the repeatable, high-throughput onboarding motion this role needs, and her post-go-live escalation work explicitly ties to reducing churn risk — a direct parallel to the JD's "monitor/report adoption to identify churn risk" line.
 
-This candidate has the strongest concrete technical/integration evidence of the four and the best job stability. The open question is whether his training experience translates down to true floor/counter-staff, skeptical, low-tech users rather than corporate admins — that's the one gap to close in interview.</content>
+This is one of the stronger candidates on paper: real data migration and configuration work, good technical depth, excellent stability, and directly relevant churn-risk/escalation experience. The one thing to verify in interview, not assume, is whether she has actually trained non-technical, resistant end users herself, or whether that work sat with a separate customer-success function at her employers.</content>
