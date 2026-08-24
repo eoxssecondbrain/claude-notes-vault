@@ -6,86 +6,89 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
-[Prior turns preserved from earlier saves in this thread: JD + hard requirements from user; Candidate 1 Rizwan Dirisina 3/10 DISQUALIFY; Candidate 2 Kuldeep Sharma 2/10 DISQUALIFY (submitted twice, same verdict); Candidate 3 Deepak Kumar 7/10 QUALIFY; Candidate 4 Monisha R 6/10 QUALIFY with reservations; Candidate 5 Abhilasha Kumari Singh 7/10 QUALIFY; Candidate 6 Abhishek Mishra 6/10 QUALIFY with scale-mismatch caveat; Candidate 7 Kapil Singhal 4/10 DISQUALIFY due to JD-mirrored resume language plus recent job-hopping across unrelated fields.]
+[Prior turns preserved from earlier saves in this thread: JD + hard requirements from user; Candidate 1 Rizwan Dirisina 3/10 DISQUALIFY; Candidate 2 Kuldeep Sharma 2/10 DISQUALIFY (submitted twice, same verdict); Candidate 3 Deepak Kumar 7/10 QUALIFY; Candidate 4 Monisha R 6/10 QUALIFY with reservations; Candidate 5 Abhilasha Kumari Singh 7/10 QUALIFY; Candidate 6 Abhishek Mishra 6/10 QUALIFY with scale-mismatch caveat; Candidate 7 Kapil Singhal 4/10 DISQUALIFY due to JD-mirrored resume language plus recent job-hopping; Candidate 8 Rishikesh Gade 7/10 QUALIFY, strongest technical/EDI profile, weak on training evidence.]
 
 **User:**
-[Uploaded resume PDF: Rishikesh Gade — EDI & NetSuite Consultant]
+[Uploaded resume PDF: Samaloy Hazarika — Implementation Engineer, Abaqus India (allGeo)]
 
-Rishikesh Gade
-EDI & NetSuite Consultant
-4 Years | (+91) 8208107249 | rishikesh.gade18@gmail.com
+Samaloy Hazarika
++91 9678162003 | samaloyhazarika@gmail.com | Hyderabad, India
 
-Profile Summary
-I specialize in onboarding customers leveraging NetSuite ERP and integrating their environments with major retailers and 3PL partners. I handle connectivity setup (AS2, VAN, FTP, SFTP, TAPI), configuration, validation, and end-to-end EDI testing for X12 including 850, 855, 856, 810, 852, 940, 943, 945, 875, 880, and EDIFACT formats such as ORDERS, DESADV, INVOIC, as well as XML, JSON, and flat files, ensuring accurate and compliant data exchange. Experienced with EDI platform SPS Commerce, WMS/TMS systems (NetSuite WMS, ShipCentral, ShipHawk, RF-Smart), and business cycles including OTC, O2P, and P2P. I have successfully handled implementation and post-go-live support for multiple brands and top retailers.
-Skilled in NetSuite SuiteBuilder, SuiteFlow, SuiteAnalytics, SuiteTalk SOAP/REST, SuiteApps, inventory management, CSV import/export, and user & role management. I am a NetSuite Certified BI & Saved Searches Professional.
+EDUCATION
+Kalinga Institute of Industrial Technology: B.Tech in Electronics and Telecommunication Engineering, CGPA: 8.95/10, 2018-2022
+NPS International School: Class XII: 80.4%, 2018
+The Assam Valley School: Class X: 95%, 2016
 
-Key skills: EDI, X12, EDIFACT, NetSuite, SQL, SuiteTalk, SuiteFlow, SuiteScript, SuiteBuilder, SuitePromitions, SuiteAnalytics, Salesforce UI, JIRA, MS Office, Postman, Filezilla, XQL/Xath 2.0, AS2, SFTP, FTP, VAN, HTTP, HTML, Authentication, AI Prompting, XML, JSON, Flat Files, SOAP Web Services, REST API
+WORK EXPERIENCE
 
-Personal Information: City Pune, Maharashtra. Languages: English, Marathi, Hindi.
+1. Implementation Engineer, Abaqus India Private Limited (allGeo) — Sept 2025-Present
+Projects Handled: Lessons of Life LLC, LFG (Helitech, Crawlspace Ninja, Intech), Atlantic Pipe, Amerihealth Caritas
+Managed end-to-end implementation and deployment of allGeo solution, ensuring alignment with customer engineering requirements, business objectives, and industry best practices.
+Collaborated cross-functionally with Customer Success, Sales, Product Management, and Engineering teams to support onboarding, configuration, and adoption of allGeo.
+Diagnosed and resolved complex customer issues related to simulation accuracy, convergence, performance, and scalability, improving customer satisfaction and retention.
+Delivered technical training sessions, implementation documentation, and workflow guidelines to enable customers to effectively utilize allGeo.
+Served as a technical point of contact for customers, collecting feedback, identifying enhancement opportunities, and supporting continuous improvement of allGeo product and implementation processes.
 
-Education
-B.Tech/B.E., 2022 — ExTC, Pune University
+2. Consultant - II, Highradius Corporation — Jan 2025-Aug 2025
+Projects Handled: Costco Wholesale, Mattel, Martin Marietta, AirGas Inc., ResMed, Brightree & MatricCare
+Tailored 2 design solutions for the Collections module to transform the existing client process digitally.
+Led and mentored 3 teams simultaneously – 10+ consultants, delivering successful projects for clients across diverse industries.
+Conducted in-depth analysis of client data and requirements, with a specific focus on enhancing Accounts Receivable (AR) functionality and refining product offerings, resulting in a 50% increase in client satisfaction and a 15% improvement in product performance.
+Drove strategic product roadmap planning, prioritization, and execution, aligning business goals, client needs, and technical feasibility, resulting in a 25% increase in product revenue and a 30% reduction in time-to-market.
+Monitored critical KPIs to optimize product adoption, usage, and customer satisfaction, identifying and capitalizing on growth opportunities.
 
-Work Experience
-Aug 2022 - Feb 2026
-EDI & NetSuite Consultant — Bristlecone India Limited (Mahindra Group Of Company)
-Project: SPS Commerce
-Responsibilities:
-Manage complete customer onboarding for retailer connections and partner integrations leveraging NetSuite ERP.
-Handle connectivity setup (AS2, VAN, FTP, SFTP, TAPI), configuration, and validation between NetSuite, SPS Commerce, and retailer or 3PL systems.
-Conduct end-to-end EDI testing to ensure accurate data exchange and compliance with retailer requirements.
-Provide post-go-live support, troubleshoot production issues, and maintain system stability.
-Collaborate with internal teams, external 3PL partners, retailer EDI and integration teams to deliver accurate, timely integration solutions.
-Handled implementation projects for leading brands such as Shokz Singapore, Volvo, Beyond Meat, MaryRuth Organics, Ajanta Pharma for top retailers including Amazon, Walmart, Target, Kohl's, Macy's, Sephora, Kroger, Bloomingdale's, among others.
-Experienced and worked with EDI partners / B2B networks: OpenText, TrueCommerce, Rythym (formerly known as CommerceHub), Cleo Integration Cloud (CIC).
-Experienced and worked with WMS / TMS: NetSuite WMS (including ShipCentral), ShipHawk & RF-Smart (TMS - package and routing configuration for ASNs).
-Proficient in managing, manipulating, and mapping various ANSI X12 formats (850, 860, 855, 856, 810, 852, 940, 943, 945, 875, 880, and more), EDIFACT formats (ORDERS, DESADV, INVOIC, and more), as well as XML, JSON, and flat file formats.
-Conducted portal testing and onboarding for EDI and integration platforms including Rythym though DSCO, Logicbroker, AWG, OpenText, The Home Depot, Mattoon Rural King (York), JCPenney Retail, Nordstrom, Amazon Vendor, and others.
-Experienced across major business cycles including OTC (Order to Cash), O2P (Order to Payment), and P2P (Procure to Pay), ensuring seamless order import, shipment, invoice, and payment flows in EDI integrations.
-Worked on NetSuite transactional records, including Sales Orders, Item Fulfillment, Vendor Bills, Invoices, Transfer Orders, and custom transactions based on customer requirements.
-Skilled in SuiteBuilder (Custom Forms, Lists, Records, Fields), SuiteFlow (Workflow Automation), SuiteAnalytics (Saved Searches, Reports, BI, HTML), SuiteTalk (SOAP/REST, HTTP), SuiteApps, Inventory Management, Bulk CSV Import/Export, User & Role Management, Integration & Authentication, and UI Walkthrough.
-Key Achievement: Awarded the Xtra Miler Award (2024) for exceptional performance and delivering high-quality work that enhanced client satisfaction.
+3. Associate Consultant - II, Highradius Corporation — July 2023-Dec 2024
+Projects Handled: The Boeing Company, Integra LifeSciences, Cisco
+Stakeholder management involving key internal and external project resources (mostly North American and European) to uphold mutually agreed customer success criterias for win-win situations, especially in system onboarding, system migrations and team collaborations
+Organization endorsed in the form of FY23, FY24 awards; Client endorsed in the form of gratitude emails upon project closure
+Debugging complex issues and reconciling data using data retrieval and reformation software tools like SQL and MS Excel / Google Spreadsheets
+Business Report preparations and presentations (internal and external) using G-Suite/MS tools to impact consulting and product roadmaps
+Translating customer needs to technical requirements for product development teams, impacting product and consulting roadmaps
 
-Feb 2026 - Present
-EDI & ERP Implementation Specialist — Avalara Technologies
-Project: AvaTax - ERP Implementation
-Managed end-to-end customer onboarding and implementation of Avalara AvaTax across ERP and eCommerce platforms including NetSuite (Basic/One World/SuiteTax), Shopify, Microsoft Dynamics 365 Finance and Operations, Sage, QuickBooks (Online/Desktop), and Salesforce.
-Configured and validated tax engine integrations by setting up company profiles, nexus, tax codes, and mapping transactions between source systems and Avalara.
-Worked with REST APIs for AvaTax integrations, including request and response validation, authentication, and troubleshooting API and data flow issues across systems.
-Provided post go live support by troubleshooting production issues, resolving calculation discrepancies, and ensuring system stability.
-Collaborated with internal Product, Engineering, and Sales teams along with customer technical teams to deliver accurate and scalable integration solutions.
-Led customer calls for implementation and delivered training sessions on Avalara platform usage, integrations, and portal functionalities.
-Managed project timelines, milestones, and deliverables to ensure timely implementation aligned with business and revenue objectives.
-Built strong expertise in US sales tax and global indirect taxation, including exemptions and certificate management, ensuring accurate configuration and compliance.
-Project: EDI Consultant
-Designed and managed EDI mappings (ERP to Partner) to seamlessly convert files between customer ERPs and business partner formats via INPOSIA Instruct XML.
-Executed test workflows using ET Connector, debugging data flows to ensure accurate and secure message processing.
-Led end-to-end deployments from TEST to PRODUCTION environments, validating templates, updating lookups, and migrating workflow files.
-Configured and secured communication protocols (AS2), and generated OAuth tokens for API integrations.
-Monitored transaction reports and proactively resolved processing issues to maintain uninterrupted document transmission.
+4. Associate Consultant - I, HighRadius Corporation — July 2022-July 2023
+Projects Handled: GoDaddy LLC, Schlumberger (SLB), Sanofi
+Successfully delivered Collections Cloud Product based on the design and project standards
+Closely collaborated with functional leads, technical teams, product management & QA to rapidly deploy an enterprise-grade solution in 3-5 months per client
+Communicating client's business requirements by constructing easy to understand data and process models and acting as a contact between business and technical personnel to ensure a mutual understanding of processes and applications
+Conducting 5+ levels of testing including functional tests, regression, user acceptance test, integration, and performance to verify that the client's requirements are met
+Run and execute the project through the various phases of project lifecycle including Design, Build, Testing, Cutover, Go-live, Hypercare and Transition to Support
 
-Certification
-Oracle NetSuite Certified BI and Saved Searches Professional
-Oracle NetSuite Certified AI Foundations Associate (Valid upto 2027)
+5. Associate Consultant - I (Internship), HighRadius Corporation — Aug 2021-Jul 2022
+Projects Handled: Klockner, Walmart
+Order to Cash (O2C), Business to Business (B2B) and Software as a Service (SaaS) trainings
+Hands-on work with UI and backend (SQL and running logs monitoring, along with G-Suite tools like Spreadsheets) to debug and smoothen product behavior
+Training sessions on product functionality, configuration level implementation and analysis
+Performance based pre-placement offer (PPO) within first batch of acceptance rollout
+Client facing projects - customer advocacy to strengthen mid-market (midsized) and enterprise relationships
+UI and backend data analysis and validation to smoothen UAT, Post Go-Live and Hypercare processes, often escalating to internal tech teams for faster resolution
+Reported to relevant teams based on tickets, namely JIRA and Salesforce/Zendesk cases
 
-"check"
+PROJECTS
+1. Oil and Gas – Schlumberger: AI-based dynamic prioritization to segregate and prioritize customers for the collectors. 100% Visibility on Disputes, 20% Reduction in DSO, 60% Reduction in Time Spent on Correspondence, 40% Delinquent Accounts Reviewed Per Day
+2. Maintenance and Operations – LFG (Helitech, Crawlspace Ninja, Intech): Ensured Weekly Payroll is completed smoothly without any issues. Kept Customer Satisfaction as priority and ensured key tasks are delivered with quality and on time.
+
+ADDITIONAL INFORMATION
+Skills: Microsoft Excel | Microsoft PowerPoint | Microsoft Word | SQL | Business Analysis | Risk Management | Team Lead | Stakeholder Management | Team Building | Project Implementation | Google Sheets | Google Slides | Team Management | Client Relationship Management | Communication | End User Training | Project Management | Scrum | Consulting | Requirement Analysis | Process Improvement | Order To Cash | Payroll Systems
+Interests: Music, Travelling
+
+"check this"
 
 **Assistant:**
-**Rishikesh Gade — EDI & ERP Implementation Specialist, Avalara Technologies (previously Bristlecone/Mahindra)**
+**Samaloy Hazarika — Implementation Engineer, Abaqus India (allGeo), previously HighRadius**
 
 Score: 7/10
 Decision: QUALIFY
 
-Personally implemented ERP/software: Very strong and highly specific. "Manage complete customer onboarding for retailer connections and partner integrations leveraging NetSuite ERP" (Bristlecone); "Managed end-to-end customer onboarding and implementation of Avalara AvaTax across ERP and eCommerce platforms including NetSuite, Shopify, Microsoft Dynamics 365, Sage, QuickBooks, Salesforce" (Avalara). Named clients (Shokz, Volvo, Beyond Meat, MaryRuth Organics, Ajanta Pharma) and named retail partners (Amazon, Walmart, Target, Kohl's, Macy's, Sephora, Kroger, Bloomingdale's). Unlike the previous candidate, this resume uses precise, correct, unusual industry jargon (X12 codes 850/855/856/810/852/940/943/945, EDIFACT ORDERS/DESADV/INVOIC, AS2/VAN/SFTP/TAPI protocols) that has nothing to do with your JD's own phrasing — this is not JD-mirrored language, it reads as genuine domain depth.
+Personally implemented software: Well demonstrated across both employers. Currently at allGeo: "Managed end-to-end implementation and deployment of allGeo solution, ensuring alignment with customer engineering requirements, business objectives, and industry best practices." At HighRadius: "Successfully delivered Collections Cloud Product based on the design and project standards," "Run and execute the project through the various phases of project lifecycle including Design, Build, Testing, Cutover, Go-live, Hypercare and Transition to Support." Consistent first-person ownership language across a 4-year internal promotion track (intern → Associate Consultant I → Associate Consultant II → Consultant II), which is itself a positive signal — that kind of progression at one company doesn't happen without real delivered work.
 
-Hands-on technical work: The strongest and most concrete technical profile of any candidate reviewed today. REST API work with specifics ("request and response validation, authentication, and troubleshooting API and data flow issues"), OAuth token generation, AS2 protocol configuration, SuiteTalk SOAP/REST, SQL, EDI data mapping between ERP and partner formats via a named tool (INPOSIA Instruct XML), CSV bulk import/export, SuiteFlow workflow automation. This directly and specifically matches the JD's "SQL, APIs/webhooks, data mapping, and software/data integrations" requirement — not adjacent skills, the actual skills named.
+Hands-on technical work: Present and credible, though less specific than the strongest technical candidates reviewed today. "Debugging complex issues and reconciling data using data retrieval and reformation software tools like SQL and MS Excel," "Hands-on work with UI and backend (SQL and running logs monitoring)." SQL shows up repeatedly and concretely tied to debugging/data reconciliation work. No explicit API/webhook or integration-specific language anywhere, though — this is more "backend data debugging" than the API/data-mapping/integration work the JD specifically calls out. A real but moderate match.
 
-Training skeptical non-technical users / driving adoption: The weakest link here, and worth probing directly. "Led customer calls for implementation and delivered training sessions on Avalara platform usage" is the only real training-specific bullet in two dense, technically-focused job descriptions. Everything else centers on system integration, protocol configuration, and post-go-live technical troubleshooting rather than end-user enablement. His client-side counterparts also appear to be technical/IT teams at retail brands (not floor or counter staff at a small distributor), so there's little evidence here of the specific skill of getting a skeptical, non-technical shop-floor employee to actually adopt daily use of a new tool.
+Training skeptical non-technical users / driving adoption: One of the better matches in this batch. "Delivered technical training sessions, implementation documentation, and workflow guidelines to enable customers to effectively utilize allGeo" and, notably, "Monitored critical KPIs to optimize product adoption, usage, and customer satisfaction, identifying and capitalizing on growth opportunities" — this maps almost directly onto the JD's "monitor/report adoption to identify churn risk" requirement, and it's not generic phrasing lifted from your posting (it appears in a HighRadius-specific bullet about AR/Collections KPIs, a genuinely different context). Worth noting: her current allGeo client roster — Helitech, Crawlspace Ninja, Intech (home/field services companies), Atlantic Pipe — looks meaningfully more SMB and field-operations-oriented than the Fortune 500 rosters seen in the other HighRadius-affiliated resumes today. Field technicians and dispatchers at small home-services companies are a closer proxy to "skeptical, non-technical floor/counter staff" than corporate GPOs and VPs.
 
-Job stability: Solid — Bristlecone (Aug 2022–Feb 2026, ~3.5 years, one long tenure) then a clean, immediate transition to Avalara (Feb 2026–present, ~6 months). Dates are internally consistent (no overlap contradictions like the previous resume). No job-hopping concern.
+Job stability: Good — one employer (HighRadius) for ~4 years with real internal progression, then a single external move to Abaqus/allGeo (Sept 2025–present, ~11 months). Not job-hopping; the recent move is too new to fully vet but isn't a red flag on its own.
 
-Nice-to-haves: None cleanly matched. His domain is retail/CPG EDI compliance and large-scale ERP tax integrations — a different, more specialized niche than raw-material distributor onboarding, and his employers (Bristlecone/Mahindra Group, Avalara — a large public SaaS company) are established enterprises, not early-stage or small high-ownership environments.
+Nice-to-haves: The best partial match on industrial/distribution-adjacent, SMB-scale client exposure seen in this batch — Atlantic Pipe and the home-services client base at allGeo are closer in spirit (smaller companies, field/operational non-technical staff) to your target distributor profile than any Fortune-500-only resume reviewed today. Not clearly early-stage SaaS, but allGeo is a smaller, more focused vertical SaaS company than HighRadius, which is a step in the right direction.
 
-Net: technically the deepest and most credibly-demonstrated candidate on the "personally implemented" and "hands-on technical" requirements, but he's a systems/integration specialist first — the training-and-adoption side of the role (which is a large part of this JD, especially for skeptical shop-floor and counter staff) is the thing to test carefully in interview, since his resume gives almost no evidence of it. Worth a strong technical screen paired with a direct question about hands-on end-user training experience with non-technical staff.
+One flag to apply evenly: like the other HighRadius-affiliated resumes in this batch (Deepak's and Abhishek's), this one is dense with precise, favorable metrics (50% increase in client satisfaction, 25% increase in product revenue, 30% reduction in time-to-market, 20% reduction in DSO) that read as HighRadius's own internal resume-writing style rather than individually fabricated — but they're still unverified and worth treating with the same skepticism you'd apply to any resume-reported business outcome, particularly the product-revenue and roadmap-strategy claims, which are a lot of ownership to claim at a consultant level.
 
-Send the next one.
+Net: strong all-around candidate — real implementation ownership, decent technical depth, the best adoption-monitoring and SMB/field-staff-adjacent evidence in the batch, and solid stability. Send the next one.
