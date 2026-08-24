@@ -6,75 +6,95 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
-[Prior turns preserved from earlier saves in this thread: JD + hard requirements from user; Candidate 1 Rizwan Dirisina 3/10 DISQUALIFY; Candidate 2 Kuldeep Sharma 2/10 DISQUALIFY (submitted twice, same verdict); Candidate 3 Deepak Kumar 7/10 QUALIFY; Candidate 4 Monisha R 6/10 QUALIFY with reservations; Candidate 5 Abhilasha Kumari Singh 7/10 QUALIFY; Candidate 6 Abhishek Mishra 6/10 QUALIFY with scale-mismatch caveat; Candidate 7 Kapil Singhal 4/10 DISQUALIFY due to JD-mirrored resume language plus recent job-hopping; Candidate 8 Rishikesh Gade 7/10 QUALIFY, strongest technical/EDI profile, weak on training evidence; Candidate 9 Samaloy Hazarika 7/10 QUALIFY, best SMB/adoption-monitoring adjacency; Candidate 10 Ravisankar P V 5/10 QUALIFY borderline, weak technical/API depth; Candidate 11 Vengadatchary Ragounadane (Chari R.V.) 1/10 DISQUALIFY, senior engineering executive with no client-implementation experience; Candidate 12 Nalini Naik 4/10 DISQUALIFY, infrastructure/ops profile with no training/adoption evidence and no API work.]
+[Prior turns preserved from earlier saves in this thread: JD + hard requirements from user; Candidate 1 Rizwan Dirisina 3/10 DISQUALIFY; Candidate 2 Kuldeep Sharma 2/10 DISQUALIFY (submitted twice, same verdict); Candidate 3 Deepak Kumar 7/10 QUALIFY; Candidate 4 Monisha R 6/10 QUALIFY with reservations; Candidate 5 Abhilasha Kumari Singh 7/10 QUALIFY; Candidate 6 Abhishek Mishra 6/10 QUALIFY with scale-mismatch caveat; Candidate 7 Kapil Singhal 4/10 DISQUALIFY due to JD-mirrored resume language plus recent job-hopping; Candidate 8 Rishikesh Gade 7/10 QUALIFY, strongest technical/EDI profile, weak on training evidence; Candidate 9 Samaloy Hazarika 7/10 QUALIFY, best SMB/adoption-monitoring adjacency; Candidate 10 Ravisankar P V 5/10 QUALIFY borderline, weak technical/API depth; Candidate 11 Vengadatchary Ragounadane (Chari R.V.) 1/10 DISQUALIFY, senior engineering executive with no client-implementation experience; Candidate 12 Nalini Naik 4/10 DISQUALIFY, infrastructure/ops profile with no training/adoption evidence and no API work; Candidate 13 Abhilash N A 7/10 QUALIFY, strong ERP/API integration ownership at Increff.]
 
 **User:**
-[Uploaded resume PDF: Abhilash N A — Lead Integration Support Engineer, Increff]
+[Uploaded resume PDF: Kapil Davey — Technical Support Engineer, Zoho Corporation]
 
-Abhilash N A
-Bangalore, India | 8073521583 | abhilashna2908@gmail.com | linkedin.com/in/abhilash-n-a-863743323
+Kapil Davey
+LinkedIn: linkedin.com/in/kapil-davey-538802180 | Email: kapildavey.a@gmail.com | Contact: +91 8939480964 | Location: Chennai
 
-Summary
-Implementation and onboarding professional with 4+ years of experience in SaaS product delivery, system integrations, and client onboarding. Have worked closely with both technical and business teams to get integrations live on time and keep things running smoothly post go-live. Comfortable owning projects end to end, from requirement gathering and planning to UAT and production support. Also enjoy mentoring junior team members and helping the team get better at what they do.
+Profile Summary
+Results-driven IT Professional with 6+ years of experience in Technical & Product Support, Product Management, Customer Success, Software & Engineering, Data Migration, Implementation, Pre-Sales, and Operations. Proven expertise in delivering customer-centric solutions, managing enterprise implementations, optimizing business processes, and collaborating with cross-functional teams to drive product adoption and operational excellence.
 
-Experience
-LEAD INTEGRATION SUPPORT ENGINEER — Increff, Bangalore — 10/2024 - Present
-Own the planning and delivery of integration projects across the team, making sure things move forward without blockers.
-Work directly with stakeholders to understand their requirements and translate them into clear technical tasks for the team.
-Closely involved with the product team to flag issues, suggest improvements, and help shape how features are built.
-Worked on improving how the team handles integrations, cutting down repeated efforts and making the process more reliable.
+ZOHO Corporation Private Limited — Technical Support Engineer — Chennai: September 2024 - June 2026
+Independently managed customer support operations for the North and East regions of India for Zoho Payroll (India Edition), serving as the primary point of contact for payroll implementation, product support, and customer success.
+Delivered end-to-end technical support through inbound and outbound voice calls, live chat, and email.
+Successfully resolved 9,000+ customer support tickets while maintaining a 78% Customer Happiness (CH) rating.
+Specialized in configuring and customizing payroll solutions based on customer-specific business requirements, including salary structure customization, earnings and deduction configuration, and compliance with India's New Wage Code.
+Assisted customers with statutory payroll compliance, including PF, ESI, PT, TDS, LWF, Gratuity, and other India-specific payroll regulations.
+Conducted product demonstrations for prospective customers, showcasing Zoho Payroll features, workflow automation, integrations, and business value.
+Played a key role in paid implementation projects, guiding customers through onboarding, payroll configuration, employee migration, compliance setup, and go-live activities.
+Collaborated closely with Product Management, Development, QA, Sales, and Onboarding teams.
+Identified customer business needs and performed cross-selling, upselling, and feature adoption initiatives, driving increased product utilization and customer retention.
+Contributed to product improvement initiatives by providing customer feedback, assisting in AI chatbot training, validating new features, and enhancing internal knowledge base documentation.
+Created and maintained user guides, FAQs, troubleshooting documentation, and knowledge articles, enabling customer self-service.
+Conducted Knowledge Transfer (KT) sessions, onboarding workshops, and product training for new team members, enabling faster ramp-up and improved team productivity.
+Managed customer subscription lifecycle activities by following up on renewals, engaging with dormant customers to encourage product reactivation, and assisting with subscription plan upgrades and add-on purchases.
+Achieved the #1 position in FY2025 for the highest customer interaction volume on the Zoho Voice platform, handling 3,847 customer calls with a cumulative talk time of 26,838 minutes.
 
-SENIOR INTEGRATION SUPPORT ENGINEER — Increff, Bangalore — 07/2023 - 09/2024
-Handled onboarding of new marketplaces and ERP systems, coordinating between internal tech teams and client partners.
-Set up documentation practices and built small automation tools that made the integration process faster and less error-prone.
-Mentored junior engineers on integration workflows, API debugging, and how to communicate effectively with clients.
-Took ownership of critical production issues and made sure they were resolved quickly with minimum impact on clients.
+Mphasis Limited — Software Engineer - Level 3 — Bangalore: February 2023 - September 2024
+Worked on a UK-based client engagement with Kallik, supporting enterprise artwork and label migration projects by transitioning legacy product labeling data into the Veracity labeling platform.
+Collaborated with business stakeholders, project managers, and cross-functional teams to gather business requirements, define migration strategies, and ensure successful execution of end-to-end label migration initiatives.
+Performed data extraction, profiling, mapping, validation, transformation, and reconciliation to ensure accurate migration of product labels, artwork content, and regulatory information while maintaining data integrity.
+Utilized Veracity and Template Editor to configure, validate, and migrate product labels, IFUs, and artwork components in accordance with client specifications and regulatory standards.
+Supported global consumer and healthcare brands, including Castrol, Shell, Neutrogena, and Johnson & Johnson.
+Executed comprehensive QA, UAT, and post-migration validation activities, significantly reducing production defects and improving migration accuracy.
+Developed validation checklists, quality frameworks, and risk mitigation plans.
+Maintained detailed migration documentation, audit logs, mapping specifications, validation reports, and project trackers.
+Leveraged advanced Microsoft Excel, Adobe Acrobat, and data analysis tools to cleanse, analyze, validate, and reconcile large datasets.
+Collaborated with offshore and onshore teams to resolve migration issues, manage project milestones, and ensure timely delivery within agreed SLAs.
+Provided client-facing support by participating in project status meetings, communicating progress updates, resolving technical queries.
 
-TECHNICAL DELIVERY ENGINEER — Increff, Bangalore — 02/2022 - 06/2023
-Set up and went live with new client accounts, handling the full technical setup from scratch.
-Worked through production issues and integration bugs to keep things stable for clients.
-Improved how client interactions and support processes were handled as the team scaled up.
-Worked alongside product and engineering during UAT and validation to make sure go-lives were smooth.
+Mphasis Limited — Technical Support Engineer — Chennai: January 2022 - February 2023
+Provided Level 1,2 Technical Support for the JPMorgan Chase enterprise application environment, diagnosing and resolving complex application, system, and platform-related incidents.
+Managed incident, problem, and service request lifecycles using Jira and ITSM tools.
+Performed in-depth troubleshooting of application, database, and platform issues by analyzing logs, validating system behavior, and collaborating with development and infrastructure teams.
+Conducted root cause analysis (RCA) for recurring production issues.
+Assisted in CI/CD activities, including deployment validation, post-deployment monitoring.
+Performed application configuration, environment maintenance, and system health monitoring.
+Participated in knowledge transfer (KT) sessions, created technical documentation, maintained knowledge base articles.
 
-Core Competencies
-Project Management: Lifecycle Planning, Risk Mitigation, Stakeholder Alignment, Resource Coordination
-Implementation & Onboarding: SaaS Delivery, API Integrations, ERP System Mapping, UAT Testing, Client Training
-Soft Skills: Stakeholder Management, Cross-functional Collaboration, Mentorship, Requirement Gathering, Analytical Problem Solving
+Practo Technologies Pvt Ltd — Head of Phlebotomy Operations — Chennai: January 2021 - November 2021
+Earned a promotion to Head of Phlebotomy Operations in recognition of outstanding performance.
+Independently managed end-to-end phlebotomy operations across Bengaluru and New Delhi, overseeing daily service delivery while ensuring seamless coordination between phlebotomists, diagnostic laboratories, logistics teams, and healthcare providers.
+Directed workforce planning, resource allocation, appointment scheduling, and operational workflows.
+Managed critical operational escalations, including phlebotomist absenteeism, route optimization, technician reallocation, emergency scheduling.
+Implemented process improvements and operational best practices.
 
-Skills
-API Integration & Testing (REST APIs, Postman, Swagger); System Integration & Data Flow Analysis; SQL Queries & Database Analysis; JSON, XML; Jira / Confluence / Freshdesk; Product Implementation & Configuration; Debugging & Root Cause Analysis; Log Analysis & Production Support; API Documentation & Technical Writing; Notion Documentation
+Practo Technologies Pvt Ltd — Customer Service Executive — Chennai: April 2020 - January 2021
+Delivered exceptional customer support through inbound and outbound voice calls, live chat, and email.
+Assisted patients with phlebotomy-related concerns, including appointment scheduling, sample collection coordination, technician allocation.
+Provided multilingual customer support.
+Performed consultative upselling by recommending relevant diagnostic tests and health packages.
+Utilized ServiceNow to log, track, prioritize, and resolve customer incidents.
 
-Appreciations
-Got appreciated internally for leading a new module go-live, handled the end-to-end testing, shared inputs as the first internal customer, and worked closely with the engineering and product teams to get it right.
-Received appreciation from clients for understanding their business workflows well and delivering implementations that actually worked for them end to end.
+Skills: Zoho (Payroll, CRM, People, Expense, Writer, Sheet, Assist, Recruit, Meetings, Projects), Microsoft (Word, Excel, PowerPoint, Teams, Skype, Outlook), MySQL, ServiceNow, JIRA, Zendesk, APIs, SDLC, Agile Methodologies, Analytics & Statistical Skills, Project Management, Technical Troubleshooting, Data Preparation & Visualization, Storytelling, Discovery & Active listening, Value Positioning, Objection Handling, Stakeholder Alignment, Post-Sales Handoff, GitHub, Creativity, Strong Business Communication, CANVA, Problem solving skill
 
-Certifications
-Product Management – Great Learning (2025)
-API Fundamental Student Expert – Postman Academy
-Certified AI Generalist | Agentic AI Masterclass – The Economic Times
-Advanced Excel: Complex Functions & Data Analysis – Sapient Training
+Languages: English, Hindi, Tamil, Gujarati, Sanskrit (all Native), German (A1-Beginner)
 
-Education
-Sai Vidya Institute of Technology, Bangalore | Bachelor of Engineering (EEE) — Electrical and Electronics Engineering
+Education: B.E. Electronics and Communication Engineering, Sri Venkateswara College of Engineering, 2016-2020
+
+Certifications: Full Stack Java Developer (Simplilearn, 2022), Object Oriented Programming using C++ (NIIT, 2016)
 
 "check"
 
 **Assistant:**
-**Abhilash N A — Lead Integration Support Engineer, Increff**
+**Kapil Davey — Technical Support Engineer, Zoho Corporation (previously Mphasis, Practo)**
 
-Score: 7/10
-Decision: QUALIFY
+Score: 4/10
+Decision: DISQUALIFY
 
-Personally implemented software: Strong, concrete, and specifically ERP-relevant. "Set up and went live with new client accounts, handling the full technical setup from scratch" (his earliest role) is unambiguous personal ownership language. "Handled onboarding of new marketplaces and ERP systems, coordinating between internal tech teams and client partners" directly names ERP onboarding, which is core to your JD. His current role has shifted toward leading the team's integration delivery ("Own the planning and delivery of integration projects across the team") rather than pure individual-contributor work — a natural progression, but worth confirming in interview that he's still comfortable doing the hands-on configuration work himself day to day, not just directing others.
+Personally implemented software: Mixed, and on balance weaker than it first appears. At Zoho, the headline, quantified achievements are all support-agent metrics — "resolved 9,000+ customer support tickets," "78% Customer Happiness rating," "#1 position in FY2025 for highest customer interaction volume... 3,847 customer calls." Implementation shows up as a single, secondary line: "Played a key role in paid implementation projects, guiding customers through onboarding, payroll configuration, employee migration, compliance setup, and go-live activities" — note "played a key role in," not "owned" or "led." This is support work with implementation as a side activity, which is close to the exact pattern you asked me to screen out ("supporting or selling software alone is not enough"). At Mphasis (Kallik/Veracity project), the work is real hands-on data migration — "performed data extraction, profiling, mapping, validation, transformation, and reconciliation" for product labeling/artwork content — but this is a specialized data-migration workstream within someone else's larger project for global consumer brands, not him personally owning a client implementation end-to-end. His other two roles (JPMorgan Chase technical support, and Practo phlebotomy operations management) aren't implementation work at all — one is L1/L2 IT support, the other is healthcare field-operations management, unrelated to software rollout.
 
-Hands-on technical work: One of the strongest and most directly relevant matches in this batch. "API Integration & Testing (REST APIs, Postman, Swagger)," "SQL Queries & Database Analysis," "System Integration & Data Flow Analysis," JSON/XML, and — notably — "ERP System Mapping" listed as its own competency. "Mentored junior engineers on integration workflows, API debugging" implies he's proficient enough to teach it, not just aware of it. "Built small automation tools that made the integration process faster and less error-prone" shows real hands-on technical building rather than tool-listing. This maps almost point-for-point onto the JD's "SQL, APIs/webhooks, data mapping, and software/data integrations" requirement, and unlike a couple of other resumes today, the language here doesn't read as reverse-engineered from your posting.
+Hands-on technical work: Reasonably solid — MySQL, APIs, and detailed data mapping/transformation/reconciliation work at Mphasis, plus ITSM/Jira ticket management, log analysis, and root-cause analysis at JPMorgan Chase. This is genuine technical exposure, though it's spread across very different technical contexts (data migration engineering vs. IT support triage) rather than a coherent "I build integrations" narrative.
 
-Training skeptical non-technical users / driving adoption: The softest of the four requirements here — present but under-evidenced. "Client Training" is listed as a competency, and "Received appreciation from clients for understanding their business workflows well and delivering implementations that actually worked for them end to end" is a good signal of genuine business-process engagement, not just technical delivery. But there's no specific bullet narrating an actual training session, an adoption challenge, or working through user resistance — it's asserted rather than demonstrated with detail. Worth a direct interview question on this specifically.
+Training skeptical non-technical users / driving adoption: Also mixed. "Guiding customers through onboarding, payroll configuration... go-live activities" and "identified customer business needs and performed... feature adoption initiatives" both point toward real customer enablement work, and Zoho Payroll's customer base (Indian SMBs handling their own payroll) is plausibly non-technical. But one training bullet — "conducted Knowledge Transfer (KT) sessions, onboarding workshops, and product training for new team members" — is about training internal new hires, not customers, which is worth noting since it could be mistaken for customer training at a glance.
 
-Job stability: Excellent — a single employer (Increff) since Feb 2022 (~4.5 years), with three internal promotions (Technical Delivery Engineer → Senior Integration Support Engineer → Lead Integration Support Engineer). Clear, credible growth trajectory, no hopping.
+Job stability: Reasonable on tenure — three employers over ~6 years (Practo ~1.5 years with an internal promotion, Mphasis ~2.5 years with an internal move, Zoho ~1.75 years) — no extreme hopping. But the career is functionally scattered: healthcare phlebotomy operations management, banking IT support, consumer-goods labeling data migration, then payroll SaaS support. Four fairly disconnected domains in six years suggests someone still finding their specialization rather than someone who has built a focused implementation-consultant track record. Also worth noting: his most recent role ended in June 2026 per the dates given, about two months before today — worth asking what he's been doing since.
 
-Nice-to-haves: Partial matches. Increff is a mid-size, India-based retail/inventory-management SaaS company — not industrial/distribution, but the work (ERP and marketplace onboarding for retail/D2C brands) is at least supply-chain-adjacent rather than purely enterprise-software-vendor work. It's meaningfully smaller and likely leaner than HighRadius, IBM, or Avalara, giving a plausible (if not explicit) high-ownership signal — "own the planning and delivery... making sure things move forward without blockers" reads like someone used to fewer layers between them and the outcome.
+Nice-to-haves: None. No industrial/distribution exposure, Zoho is a large established SaaS company (not early-stage), and while "independently managed" language appears twice (support region ownership, phlebotomy operations), neither ties to software implementation specifically.
 
-Net: a strong, credible profile — genuine hands-on ERP/API/SQL integration work, real client onboarding ownership, excellent stability with a clear growth trajectory, and a plausible (though understated) training/adoption angle worth probing directly. One of the better-rounded candidates in this batch.
+Net: real technical exposure and some genuine customer-facing enablement work, but the primary, quantified achievements across his career are support-ticket and call-volume metrics rather than personally-owned implementation work, and the career path lacks a clear implementation-consultant throughline. Doesn't clear the bar you set for prioritizing actual implementation ownership over support.
 
-That's the last resume in this batch — want a summary ranking across all fourteen candidates reviewed?
+Send the next one.
