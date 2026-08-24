@@ -103,3 +103,9 @@ Assistant: The `aditya@5.223.44.95` connection and the `cp` command are two diff
 [Rendered step_card_display_v0 with 6 steps: Make sure you're in WSL, not the SSH session; Clone the repo (git clone https://github.com/eoxssecondbrain/eoxs-wiki-db.git); Move into the repo folder (cd eoxs-wiki-db, ls); Copy the env file (cp .env.example .env); Edit .env with your staging credentials (PGHOST=127.0.0.1, PGPORT=5433, PGDATABASE=eoxs_wiki_staging, PGUSER=local_dev, PGPASSWORD); Confirm your SSH tunnel is separately running (ssh -L 5433:127.0.0.1:5432 deploy@5.223.44.95 -N)]
 
 One flag: if he hasn't set up a GitHub personal access token yet (step 3 in the doc), `git clone` will prompt for credentials and fail on a plain password — he needs the fine-grained token scoped to `eoxs-wiki-db` first, and per the doc's own warning, that token should never be pasted into a chat with an AI assistant, including this one.
+
+User: ok i am running an automation on render i want to check if it is storing in staging database give commands
+
+Assistant: [Rendered step_card_display_v0 with 6 steps: Make sure the SSH tunnel is up; Connect to staging via psql (psql -h 127.0.0.1 -p 5433 -U local_dev -d eoxs_wiki_staging); List tables (\dt, \dt wiki_staging.*); Check row count on the target table (SELECT count(*) FROM <table_name>;); Check the most recent rows (SELECT * FROM <table_name> ORDER BY <timestamp_col> DESC LIMIT 5;); Cross-check against Render's own logs]
+
+One thing I don't have: what table this automation is actually writing to, or which Render service this is. If you tell me the table name (or what the automation does), I can give you the exact query instead of the generic pattern above.
