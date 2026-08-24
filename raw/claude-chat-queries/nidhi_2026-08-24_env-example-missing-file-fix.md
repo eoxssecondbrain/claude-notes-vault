@@ -115,3 +115,77 @@ User: data is fetched in database named eoxs wiki staging
 Assistant: [Rendered step_card_display_v0 with 6 steps: Confirm the SSH tunnel is running; Connect to eoxs_wiki_staging (psql -h 127.0.0.1 -p 5433 -U local_dev -d eoxs_wiki_staging); List all tables (\dt, \dt wiki_staging.*); Get row counts across tables (SELECT count(*) FROM <table_name>;); Check the newest rows in the likely table(s) (SELECT * FROM <table_name> ORDER BY <timestamp_col> DESC LIMIT 5; \d <table_name>); Cross-check timing against Render logs]
 
 Since you don't have a specific table yet, `\dt` in step 3 is the key one — it'll show you every table so you can spot which one changed.
+
+User: Your local 
+
+```
+cp .env.example .env
+```
+
+Edit it:
+
+```
+PGHOST=127.0.0.1
+PGPORT=5433
+PGDATABASE=eoxs_wiki_staging
+PGUSER=local_dev
+PGPASSWORD= 
+```
+
+why am i not getting this when entering above command
+
+Assistant: Need a bit more detail — what exactly happens when you run it?
+
+- Does `cp .env.example .env` itself fail again (same "No such file" error), or does it succeed but the `.env` file you open afterward is empty / has different content than these lines?
+- What command are you using to open/edit it (`nano .env`, `cat .env`, etc.)?
+
+That tells me whether it's still the missing-file issue from before, or something new happening after the copy.
+
+User: nano.env
+
+Assistant: That's the bug — `nano.env` (no space) is being read as one word, so bash tries to run a program literally called `nano.env`, which doesn't exist. You'd see something like `nano.env: command not found`.
+
+You need a space between the command and the filename:
+
+```
+nano .env
+```
+
+`nano` is the editor, `.env` is the file. Run that and you should see the file open with the `PGHOST=...` lines from the doc, ready to edit.
+
+User: nano .env
+
+Assistant: What does it show — did the file open with the `PGHOST=`, `PGPORT=`, etc. lines already there (meaning the `cp` worked), or did it open a blank "[New File]"?
+
+User: # Template for local development. Copy to .env and fill in only what your
+# task actually needs -- see docs/local-dev-and-team-onboarding.md for which
+# variables each kind of task requires. Never commit a real .env; it's
+# gitignored for a reason.
+# --- Database (staging-only for local dev -- see onboarding doc §1) ---
+PGHOST=127.0.0.1
+PGPORT=5433
+PGDATABASE=eoxs_wiki_staging
+PGUSER=
+PGPASSWORD=
+# --- Anthropic (LLM calls: tier classification, redaction) ---
+# Use your OWN personal API key for local dev, never the production key.
+ANTHROPIC_API_KEY=
+CLASSIFIER_ANTHROPIC_API_KEY=
+# --- Linear (EDB team reporting) ---
+LINEAR_EDB_API_KEY=
+LINEAR_EDB_TEAM_KEY=
+
+Assistant: That confirms it worked — `.env` now exists with the real template. You're past the original blocker.
+
+Now fill in the two blank DB fields:
+
+```
+PGUSER=local_dev
+PGPASSWORD=<the password you generated in step 4 with openssl rand -base64 24, or whatever you set for CREATE ROLE local_dev>
+```
+
+If you haven't run step 4 yet (creating your Postgres role on the server via `sudo -u postgres psql`), you don't have a password yet — that has to be created first before `PGUSER`/`PGPASSWORD` mean anything.
+
+Leave `ANTHROPIC_API_KEY`, `CLASSIFIER_ANTHROPIC_API_KEY`, and the `LINEAR_EDB_*` keys blank unless your actual task needs them — per the access matrix in the doc, most dev/QA work doesn't touch those.
+
+To save in nano: `Ctrl+O`, `Enter`, then `Ctrl+X` to exit.
