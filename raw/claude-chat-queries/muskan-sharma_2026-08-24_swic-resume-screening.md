@@ -48,109 +48,7 @@ Nice-to-have checked: industrial/distribution (steel/metals/building materials),
 Each candidate gets a score out of 10 and QUALIFY/DISQUALIFY, based only on what's clearly demonstrated in the resume — no credit for adjacent or implied experience.
 
 **User:**
-[Uploaded resume PDF: Rizwan Dirisina — NetSuite Functional Consultant]
-
-NetSuite Functional Consultant
-Rizwan Dirisina
-+91 7732055537
-Email: rizwandirisina0888@gmail.com
-
-Professional Experience
-Total 3plus years of IT experience into Oracle NetSuite Functional Consultant
-Good experience on end-to-end testing, planning, execution, and optimization support
-Experience in Supporting day to day post-production issues, gathering new requirements and testing application to meet the requirements. It includes documentation and user training on new processes.
-Work with users to understand business needs to identify best solutions
-Perform day-to-day operations, maintenance, support, and troubleshooting
-Closely working with technical team and Project team in terms of configuring the application
-Providing the post-implementation support, handling the day-to-day issues
-Business Process Mapping as per requirement and Preparing the BRD documents
-Involved in the UAT (User Acceptance testing) session and bug fixing if any while UAT stage
-Develop, test, and deploy customizations, custom objects, and third-party applications
-Implement and manage workflow rules, approval processes, page layouts, validation rules, email, and custom buttons
-Customize and maintain reports, NetSuite dashboards, and save searches
-Experience in Data Migration via CSV and created field mapping templates which map the legacy fields to NetSuite fields.
-Strong knowledge in creating Custom Entity Fields, Custom Item Fields, Custom Transaction Body Fields, and Custom Transaction Column Fields in Net Suite
-Good exposure on integration with third-party applications.
-The ability to maintain NetSuite updates and release process
-Good experience on configurations and customizations of NetSuite to meet the business needs
-Good experience on Order to cash process and procure to pay process
-Responsible for preparing Technical Requirements Document and End User Training Materials.
-Develop, test, and deploy customizations, custom objects, and third-party applications
-
-Professional Experience:
-Designation: Netsuite Functional Consultant
-Company: ITROPE TECHNOLOGIES PRIVATE LIMITED
-Duration: Oct 2023- Till Date
-
-Designation: Netsuite Functional Consultant
-Company: TCS.
-Duration: Feb 2022 - Sep 2023
-
-PROJECT:1
-Customer: NetApp
-Description: NetApp, Inc. is an American hybrid cloud data services and data management company headquartered in San Jose, California. NetApp offers cloud data services for management of applications.
-Responsibility:
-Good experience on preparing the process documents
-Worked on different report customizations and all the standard reports
-Data migration activities & preparing data templates to users
-Closely Working with Integration team and technical team
-Good experience on Financial, Bank reconciliation, General ledger reporting, financial impacting of the transactions
-Worked on different report customizations and all the standard reports
-Monitoring the integration logs and providing the fixes to day-to-day production issues
-Monitoring the admin notifications like schedule maintenance and unplanned maintenance status of applications
-Auditing the roles permissions and differences for Internal audit
-Good experience on creating custom reports and saved searches to users
-Worked on creating custom dashboards, custom forms, custom fields and custom records
-Good experience on creating workflows, multi-level approval process and workflow designing the documents
-Performing the mass updates and deploying bundles from different instances
-Worked on Order to cash process and procure to pay
-Created dashboards, forms, custom fields, and custom records
-Good experience on Sandbox refresh activities
-Worked on the end-to-end unit testing, system integration testing and new release testing
-
-PROJECT:2
-Client: Autodesk
-Description: Autodesk, Inc. is an American multinational software corporation that makes software products and services for the architecture, engineering, construction, manufacturing, media, education, and entertainment industries. Autodesk is headquartered in San Rafael, California, and has offices worldwide.
-Responsibility:
-Work extensively with business on NetSuite modules including new implementations, enhancements, and integrations, go live and support.
-Customized different transaction forms and entity forms
-Day to day administration tasks of NetSuite, user creations, role permissions, monitoring scheduled maintenance emails logs, data fixes in production
-Good experience on Order to cash process and procure to pay process
-Experience in creating and assigning Role Permissions, global permissions, Page layouts
-Good understanding on the business process and integrated with different systems
-Good experience on debugging the issue's using scripts logs
-Good experience on Configuring the Approval process and deployment of suite bundles
-Crated field mapping templates which map the legacy fields to Net Suite fields.
-Good experience in preparing the data templates and field mapping and providing the training to users on CSV import process.
-Good experience in Finance module, process, and financial reports
-Involved in the UAT (User Acceptance testing) session and bug fixing if any while UAT stage.
-Experience in Supporting day to -day post-production issues, gathering new requirements and testing application to meet the requirements. It includes documentation and user training on new processes.
-
-PROJECT:3
-Client: Macy's
-Description: Macy's is an American chain of high-end department stores
-Responsibility:
-Experience on Configuring the Approval process and deployment of suite bundles
-Created field mapping templates which map the legacy fields to NetSuite fields.
-Worked on various reports for Month- end processing
-Experience in preparing the data templates and field mapping
-Providing training to users on CSV import process.
-Monitoring daily NetSuite Alerts and involved in new release testing
-Troubleshooting issues using script logs and monitoring daily integration alerts
-Performed unit/Integration and Regression testing.
-Perform regular data audits, check error logs and resolve issues identified
-Experience on deleting different duplicate records using Merge functionality
-Good experience on preparing the process documents for the users
-Created dashboards, forms, custom fields and custom records
-Good experience on Sandbox refresh activities
-
-Education
-Mallareddy Engineering College — B.Tech (2021)
-
-PERSONAL DETAILS
-Date of Birth: 03 Sep 2000
-Marital Status: UnMarried
-Languages known: English, Telugu
+[Uploaded resume PDF: Rizwan Dirisina — NetSuite Functional Consultant — full text as previously logged]
 
 "check this"
 
@@ -173,75 +71,7 @@ Nice-to-haves: None. Clients are large enterprise (NetApp, Autodesk, Macy's) —
 Bottom line: This is an enterprise NetSuite support/BAU profile, not an implementation-owner profile. The core hard requirement — personally driving a client from contract to live adoption — isn't demonstrated. Send the next resume.
 
 **User:**
-[Uploaded resume PDF: Kuldeep Sharma — VP Delivery & Support Head]
-
-Name: Kuldeep Sharma
-Email: kuldeep.sharma@live.in Contact No: +91-90049-02-553
-
-OBJECTIVE
-To work for an organization that serves a launch pad for my potential and skills to explore new horizons thereby contributing to the organization positively. I am looking forward for a career in Delivery & Sales Head offers an opportunity to learn and grow with it.
-
-EDUCATION
-MBA Finance - Meerut University; Btech Computer Science – Meerut University; Diploma in management – ITS Mohan Nagar; H.S.C - Arwachin Bharti Bhawan School (CBSE Board); S.S.C - National Public School (CBSE Board)
-
-SKILL SET
-PMP & SAP certified; Excellent client handling skills; Improvise the process to avoid leakage and build new processes to maintain SLAs; Well organized to handle client Mgt and C level team; Responsible for hiring talent hunt, review performance, salary hike; Help team to understand change management and suggest to adapt; Educate client on ROI for investment in system / help them in planning delivery; Manage P&L and help to boost quarterly billing; Help and motivate team for self learning / conduct training for knowledge improvement; Responsible for standardize the mail format / PPT and implementation for quick result; Responsible to conduct quarterly resource identification and nominate for various awards in ceremony to boost team's motivation; Expertise in gathering requirement and map business process; Evaluate the risk in project and raise red flag to stake holder (internal / External); Mitigate the risk assesd and inform the team to take action; Handle team's leaves, expense and attendance; Strong management skils; Strong communication writing & verbal skills with well verse presentation skills; Estimation & budgeting, stakeholder management, task allocation & monitoring management; Analysis, Design and testing of add-on; Collect the requirement for Reports and developed using SQL Reporting services; Support Clients on issues in Product; Create Implementation Plan with Scope, Deliverables and timelines; Track and control/manage projects till completion; Demo of industry specific solution to client; Performs Sales and Pre-sales activities; Bid management/ RFQ filing; Strong hold on project road map and cost; Boost client for new customization for new revenue opportunity; Strong hold on client and and team; PMP certified; Product development cycle; SDLC process
-
-PLATFORM WORKED
-SAP S4 HANA (FICO / SD/ OTC/ MM/ Procurement/ Retail/ Inventory Mgt); IBM MAXIMO; P2P, S2C, OTC, eRFX, supplier portal, Vendor empanelment; SAP SUCCESS FACTOR; MICROSOFT NAVISION; MICROSOFT DYNAMICS; Oracle Net Suit; Salesforces; SAP BUSINESS ONE; Home Grown ERP; JIRA / Zoho// Traleo; Figma / MS office
-
-Strengths
-Leadership; Team work; Willingness to Learn; Adaptability and Flexibility; Scrum Master; PM with Agile, Kanban & Waterfall Method; Service delivery excellence; Risk assessment & Mitigation; Project planning & execution; Client stakeholders relationship mgt; Ability to manage different responsibility simultaneously.
-
-EXPERIENCE SUMMARY
-Experience in CRM specialist, ERP designer, solution expert, Solution architect, Business analyst, project manager. More than 50 + Full life cycle implementation of ERP through ASAP & Agile Methodology. Worked in Banking / Insurance systems. Scrum Master & heads team to be on the toe for complete targets. Understand the buisness process and advise the best suit practice to the business. Estimate the cost factor for implementing system. Good people management, recruitment planning & deliverables understanding. Prepare the demo for business of ERP and proposals. Delegate the team on ERP implementation. Alarm the deviation to business process or and hurdle. Manage the team on ERP different phase to make the success. Good understanding of statutory / MIS reports. Work on preventive / corrective technique. Quick and continous learner new technologies launched. Manage development team in developing own ERP system. Proven lower attrition rate in organization by cheering up team.
-
-AITS Softwares, Mumbai
-Company Profile: Confidential offers comprehensive end to end solution in SalesForce CRM, ERPNEXT ERP SAP S4 Hana, SAP Business One, P2P, S2C, O2C, eRFX, supplier portal, Vendor empanelment & SAP ERP solutions like SD, MM, PP, FICO
-Job Title: VP Delivery & Support Head
-Duration: 22/11/22 – till date
-Responsibility: Responsible for analyzing the Business requirement given by business users or project stakeholders. Efficiently discuss with users to follow the best practice to be given in system. Always evaluate process deficiency and suggest for improvement through system. Prudently prepare the project plans and get the client's sign off for freezing the Go live date; communicate project advancements and deviations from the initial plan on a weekly basis. Actively prepare the test scenarios and share with client for sign off; Supervise and assess the quality control progress of testing activities. Dutifully prepare the training user manuals / videos of system. Thoroughly comprehend the requirements and effectively prepare development specifications for the developers to create the system. Proactively explain the template to users for mapping the data with system. Get the client SOP followed in company to understand the business and their customer's requirement. Serve as a liaison between developers and users to ensure the requirements are met satisfactorily.
-
-Nextstep Infotech Pvt Ltd, Mumbai
-Company Profile: Confidential offers comprehensive end to end solution in SalesForce, SAP FICO/ SD/ MM/ P2P, S2C, O2C, eRFX, supplier portal, Vendor empanelment, SalesForce CRM.
-Job Title: AVP Professional Services & Support
-Duration: 11/01/21 – 21/11/22
-Responsibility: [same bullets as AITS Softwares role above, near-verbatim]
-
-Softcore solutions Pvt Ltd, Mumbai
-Company Profile: Confidential offers comprehensive end to end solution in SalesForce, SAP FICO / SD/ MM / OTC/ Business One, Microsoft & SAP S4 HANA, Oracle Suit, SalesForce CRM.
-Job Title: Delivery & Support head
-Duration: 11/05/2018 – 10/01/2021
-Responsibility: Responsibly prepared System Specification Document for development that needed to be done. Assisted the users for implementing the procedure in order to have the SOP. Enabled system for standard procedure to gain maximum ROI for system; Collaborated with the stakeholders of the client to generate innovative ideas on leveraging the system's reports for comprehensive analysis. Carefully organized the resources for project execution. Selected the appropriate project management methodology, whether it was Agile or waterfall, based on the size and requirements of the project. Delivered the test plan to the quality control team for testing purposes, and provided assistance in conducting system testing within the quality control environment. Provided the training material to users for testing the system. Combined the flowcharts / logics/ formulas and specifications in system to give better understanding to developer. Reviewed the templates given by users and provided feedback. Prepared System Specification Document based on requirement provided. Enthusiastically designed the solution document with screen design, process & validation in system.
-
-Value C Consulting Pvt Ltd, Mumbai
-Company Profile: Confidential offers comprehensive end to end solution in SalesForce, SAP FICO / SD/ MM/ OTC Business One, HRMS, P2P, O2C, SAP S4 HANA, SalesForce CRM, Maximo
-Job Title: VP Business Analyst
-Duration: 01/12/2016 – 05/05/2018
-Responsibility: Responsible to share System Specification Document with client for sign off. Identified the problem areas of the client's organization and provided appropriate solutions. Supported the team on giving continuous training to client's users so that they could work on inefficiencies. Evaluated project cost with planned Vs actual cost; made efficient use of projects tool like Microsoft / Jira for tracking the project. Assisted quality control in conducting system testing within the quality control environment. Developed a training plan organized by module and department. Communicated the purpose and objectives of requirements to developers and requested them to prepare a developer understanding document. Set up data in the system and presented it to the client to enhance their understanding. Advised the client to approach requirements from a goal-oriented perspective. Conducted demonstrations for both the client and developers to prevent future misunderstandings.
-
-Octopus Systems Pvt Ltd, Andheri, Mumbai
-Company Profile: Octopus System Pvt Ltd offers comprehensive end to end solution in SAP FICO / SD/ OTC / Business One, Oracle Suit, Maximo, SalesForce CRM, SAP S4 Hana
-Job Title: Principal Consultant
-Duration: 12/10/2015 – 30/11/2016
-Responsibility: Created the System Specification Document to outline the development requirements. Conducted analysis to identify problem areas and proposed suitable solutions. Prepared and provided management with dashboards for informed decision-making in the business. Identified project risks and implemented mitigation strategies. Monitored and evaluated the progress of testing conducted by the quality control team. Developed practice documents to facilitate user training on the system. Addressed and resolved queries from developers during the development phase. Prepared change requests for data requirements during the process modeling. Obtained project sponsor approval for critical requirements. Proposed process improvements to enhance business operations.
-
-NorthStar TradeLinks Pvt Ltd, Plot-303, Sector-19, Navi Mumbai
-Company Profile: Octopus System Pvt Ltd offers comprehensive end to end solution in SAP Business One, Oracle Suit, Maximo, SalesForce CRM, SAP S4 Hana, FICO
-Job Title: Implementation / Project Manager
-Duration: 02/04/2011 – 11/08/2015
-Responsibility: [near-identical bullets to Octopus Systems role above]
-
-O.S & Application Package: MS-DOS, Windows Vista/XP/98/2000, MS-Office 97/2007/2010
-
-Personal Information
-Name: Kuldeep Sharma
-Languages Known: English, Hindi
-
-Declaration
-I hereby declare that all the information provided above is true and genuine to the best of my knowledge.
-Place: Mumbai
-Kuldeep Sharma
+[Uploaded resume PDF: Kuldeep Sharma — VP Delivery & Support Head — full text as previously logged]
 
 "check this"
 
@@ -274,3 +104,61 @@ Send the next one.
 
 **Assistant:**
 This is the same resume as the previous one — Kuldeep Sharma, identical content word for word. Already scored 2/10, DISQUALIFY. No new evaluation needed; send the next candidate's resume when ready.
+
+**User:**
+[Uploaded resume PDF: Deepak Kumar — Implementation Consultant II]
+
+Deepak Kumar
+deepakdhawan256@gmail.com
+Hyderabad, India
+9963936645
+linkedin.com/in/deepak-kumar-a8a7811ba/
+
+SUMMARY
+Results-driven Implementation Consultant with 4+ years of experience delivering end-to-end B2B SaaS implementations, business analysis, and customer experience optimization. Proven record of reducing post-deployment rework and accelerating client time-to-value through data-driven workflow redesign, SQL-powered system optimization, and rigorous requirements engineering. Adept at bridging technical teams and business stakeholders to design scalable solutions and drive self-service adoption.
+
+SKILLS
+Solution Consulting, Requirements Gathering, Customer Workshops, Functional Specifications, Process Flow Documentation, SaaS Implementation, Customer Onboarding, System Configuration, Word, Excel, PowerPoint, Salesforce, Jira, UAT Coordination, Training & Knowledge Transfer, Stakeholder Management, SQL, Data Analysis, REST APIs, Workflow Automation, Change Management, ERP/CRM Integration, Cross-functional Collaboration, Post-Go-Live Support, Agile/Scrum, MySQL, Proof of Concept (POC)
+
+EXPERIENCE
+Implementation Consultant II — Highradius — 08/2025 – Current | India
+• Monitored implementation KPIs, project scopes, and schedules to track platform performance, delivering workflow improvements that reduced post-deployment rework by 30%, measured across 8 enterprise accounts.
+• Own end-to-end implementation lifecycle for assigned accounts — from kickoff and solution design through UAT, go-live, and hypercare.
+• Conduct deep-dive analysis of client workflows to identify automation opportunities, reducing manual intervention in AR/AP processes by 35% across 5 enterprise clients.
+• Collaborate with product teams to surface client-reported edge cases, directly influencing the product roadmap and reducing support escalations.
+• Authored technical solution design documents and self-service training materials that cut average client onboarding time from 12 weeks to 8 weeks.
+• Lead structured client onboarding programs for enterprise accounts, defining success criteria, milestones, and escalation paths from day one — ensuring alignment across client IT, finance, and operations teams.
+• Build and maintain strong relationships with senior stakeholders at client organizations, conducting regular business reviews to track adoption metrics and proactively address risks before escalation.
+• Coordinate cross-functional project teams spanning solutions engineering, product, support, and customer success to deliver implementations on schedule, maintaining 100% on-time go-live rate for assigned accounts.
+
+Implementation Consultant — CRMNEXT — 01/2022 – 03/2025 | India
+• Managed 10+ concurrent enterprise SaaS implementations, maintaining 95%+ client satisfaction scores and an average go-live 2 weeks ahead of contracted schedule.
+• Drove end-to-end change management initiatives — stakeholder communication plans, training programs, and adoption tracking — ensuring on-time, on-budget delivery.
+• Developed and executed complex MySQL queries to optimize CRM data management, reducing average data retrieval time by 40% and improving overall system performance.
+• Led discovery workshops and requirements elicitation sessions with C-suite and department heads, producing BRDs, FRDs, and functional specifications for enterprise CRM implementations.
+• Authored high-impact technical documentation assets — solution design specs, slide decks, and self-service training videos — ensuring voice and style consistency across clients.
+
+EDUCATION
+B.Tech in Computer Software Engineering — Kalinga Institute of Industrial Technology — 2022 | Bhubaneswar, OR — CGPA: 8.3
+
+"check this"
+
+**Assistant:**
+**Deepak Kumar — Implementation Consultant II (Highradius), previously CRMNEXT**
+
+Score: 7/10
+Decision: QUALIFY
+
+Personally implemented ERP/CRM/SaaS: Clearly demonstrated, in first-person ownership language rather than delegation. "Own end-to-end implementation lifecycle for assigned accounts — from kickoff and solution design through UAT, go-live, and hypercare" (Highradius); "Managed 10+ concurrent enterprise SaaS implementations... average go-live 2 weeks ahead of schedule" (CRMNEXT). This is a real step up from the first two candidates — it reads as someone who actually runs implementations, not someone who supports or oversees them.
+
+Hands-on technical work: The strongest of the three so far. Explicit MySQL/SQL work with a concrete outcome — "developed and executed complex MySQL queries to optimize CRM data management, reducing average data retrieval time by 40%" — plus REST APIs, ERP/CRM integration, and workflow automation listed as active skills, not just familiarity. This is the first resume that ties a specific technical action to a specific result rather than a vague "good exposure" line.
+
+Training skeptical non-technical users / driving adoption: Present and reasonably concrete — self-service training materials, onboarding time reduced "from 12 weeks to 8 weeks," adoption-metric tracking, proactive risk/escalation management. The one gap: his training experience is described as reaching C-suite/department heads and enterprise IT/finance/ops stakeholders, not floor or counter-level staff. The JD specifically needs someone comfortable training the least technical end of the user base (floor/counter staff at a 15-50 person distributor) — this resume doesn't show that population directly, only sophisticated enterprise stakeholders.
+
+Job stability: Solid — CRMNEXT (01/2022–03/2025, ~3.2 years) then Highradius (08/2025–present, ~1 year), a ~5 month gap between them but only two employers across a 4.5-year career. No job-hopping concern.
+
+Nice-to-haves: Weak on the specific ones you care about. Both employers are enterprise B2B SaaS/CRM vendors (Highradius does AR/AP automation, CRMNEXT is a CRM platform) — no industrial/distribution vertical exposure, not early-stage (Highradius and CRMNEXT are both established, well-funded companies with large account books, not scrappy startups), and the environment described (structured onboarding programs, cross-functional coordination across solutions engineering/product/support/customer success) reads as a mature, well-resourced org rather than high-ownership/scrappy.
+
+One flag worth probing in interview: the resume is dense with round, favorable metrics (30%, 35%, 40%, 95%+, 100% on-time) with no sourcing — common in resume writing services and worth pressure-testing rather than taking at face value. But unlike the previous two candidates, the underlying job descriptions here are specific and technically grounded enough that I'd move this one forward, while probing in interview whether he's actually trained frontline/skeptical non-technical users (not just enterprise stakeholders) and whether the SQL/API work was truly hands-on versus directed.
+
+Send the next one.
