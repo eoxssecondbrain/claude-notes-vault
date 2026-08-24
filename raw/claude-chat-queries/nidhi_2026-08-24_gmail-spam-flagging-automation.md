@@ -284,6 +284,52 @@ Schedule unchanged: 18:00 IST daily.
 
 Two things still open. This is Jagriti's account, not Raj's — when you're satisfied with the test, connecting rajat@eoxs.com means new allowlist entries (his 8 clients, his pipeline domains). And this only labels; nothing is trashed. Tell me when you want it to escalate.
 
+## User (turn 7)
+
+I have changed the instructions in the instruction prompt. run this and check whether its working or not .
+
+## Assistant (turn 7)
+
+Ran it. It is not working. Three separate failures, and one thing you should know first.
+
+The prompt is unchanged
+The text currently on SPAM-EMAIL-DETECTION is byte-identical to the version that was there before my rewrite. My version was overwritten with the original. Timestamp moved (15:48), content did not.
+
+Failure 1 — the criteria don't cover what you asked for
+Your three categories vs what the prompt actually looks for:
+
+| You asked for | In the prompt? |
+|---|---|
+| Expired OTP | No. The prompt says "requests for passwords, OTPs, banking details" — that's phishing that asks for an OTP, the opposite of a spent code sitting in your inbox. |
+| Advertising emails | No. The words advertising, marketing, newsletter, promotional, unsubscribe appear nowhere. |
+| Fraud emails | Yes. Fake prizes, impersonation, suspicious links are all there. |
+
+Two of your three categories have no rule behind them.
+
+Failure 2 — I ran the criteria against your 56 threads. Here's the result
+
+| Classification | Count |
+|---|---|
+| SPAM | 1 |
+| SUSPICIOUS | 8 |
+| NOT_SPAM | 47 |
+
+The single SPAM hit is the lottery email. The 8 SUSPICIOUS are your Anthropic magic links (sender no-reply-9aldYt3P1SBxpveYeXFzSQ@mail.anthropic.com reads as "unusual sender information"), your Telegram and Zoom codes, and the Google security alerts whose body says "someone else may be trying to access your account" — which trips "urgent requests".
+
+All 29 advertising emails land in NOT_SPAM. Correctly, by these criteria — OpenRouter, Lovable, Zoom and Google marketing have no suspicious links, no credential requests, no impersonation. Nothing in the prompt tells it they're spam.
+
+So: it catches 1 of the 39 threads you wanted flagged, and puts your login codes and security alerts on the suspicious pile.
+
+Failure 3 — steps 7 and 8 cannot execute
+I searched the entire filesystem. spam_detection_results.csv does not exist and cannot — the container is destroyed after every run. Step 8, "do not process the same email more than once," has no state to read. Every run reprocesses all 56 threads from scratch, forever.
+
+There's also a contradiction: step 4 says "flag it", step 6 says "do not modify the original email". A run with no label named could reach for mark_thread_spam, which moves mail into Gmail's Spam folder. That is a modification, and it would bury real mail.
+
+What to do
+Say the word and I'll put my version back. It named Gmail explicitly, used the labels as dedupe state instead of a file, ran the allowlist before classification, and had rules for all three of your categories — expired OTP, advertising, fraud. It fires tomorrow 18:00 IST either way; right now what fires is the broken one.
+
+If you changed it deliberately and want to keep your own structure, tell me which parts you want kept and I'll fix the mechanics around them rather than replacing it.
+
 ---
 
 ## Session notes
@@ -293,5 +339,11 @@ Two things still open. This is Jagriti's account, not Raj's — when you're sati
 - Gmail connector authenticated to jagritieoxs@gmail.com (NOT rajat@eoxs.com). Inbox 57 messages / 56 threads.
 - Labels created this session: AI-SPAM/Advertising (Label_1, orange), AI-SPAM/Expired-OTP (Label_2, gray), AI-SPAM/Fraud (Label_3, red). Pre-existing: AI-SPAM (Label_5810671698447147872).
 - Final label counts verified via list_labels: AI-SPAM 39, Advertising 29, Expired-OTP 9, Fraud 1.
-- Scheduled task trig_016H8goUFDQY8Pa9iiLm5164 "SPAM-EMAIL-DETECTION", cron `30 12 * * *` UTC (18:00 IST). Prompt rewritten this session — original version used an ephemeral CSV for dedupe state, named no mailbox or label, and had no allowlist.
-- Tribal knowledge: the container running a scheduled task is destroyed between runs, so file-based dedupe state is a design error; Gmail labels are the correct dedupe mechanism.
+- Scheduled task trig_016H8goUFDQY8Pa9iiLm5164 "SPAM-EMAIL-DETECTION", cron `30 12 * * *` UTC (18:00 IST). Prompt was rewritten at 15:12, then overwritten back to the original defective text at 15:48. Verified byte-identical to the pre-rewrite version.
+- Filesystem search confirmed `spam_detection_results.csv` does not exist anywhere in the container.
+
+## Tribal knowledge
+
+- The container running a scheduled task is destroyed between runs, so file-based dedupe state (a CSV) is a design error. Gmail labels are the correct dedupe mechanism — query `-label:AI-SPAM -label:AI-Reviewed`.
+- A phishing-indicator classifier does not catch marketing/advertising spam. They are separate detection problems: phishing is signalled by sender/link/credential anomalies, advertising by List-Unsubscribe headers, noreply senders, and promotional subject patterns.
+- "Flag it" without a named Gmail label is ambiguous enough that a run may reach for `mark_thread_spam`, which moves mail to the Spam folder — a destructive action that contradicts a "do not modify" instruction in the same prompt.
