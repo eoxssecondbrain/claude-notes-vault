@@ -37,3 +37,15 @@ I know this is not perfect. Perfect it.
 Assistant: Noted, Raj.
 
 Hi Chaitanya, nice to e-meet you. Let me know what time works for you today to connect and go over what we've built with AskCruz.
+
+User: Is this good?
+
+Assistant: Yes — it's clean, short, and does both things: acknowledges Raj and gives Chaitanya a clear, low-friction ask (just needs a time back from him). Nothing to change unless you want to specify duration ("an hour") since Raj's ask was a 1-hour call — right now it just says "meet."
+
+If that matters, one tweak:
+
+Noted, Raj.
+
+Hi Chaitanya, nice to e-meet you. Let me know what time works for you today for an hour to connect and go over what we've built with AskCruz.
+
+Otherwise send as-is.
