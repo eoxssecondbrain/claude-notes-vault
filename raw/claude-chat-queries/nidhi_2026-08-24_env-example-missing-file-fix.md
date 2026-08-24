@@ -109,3 +109,9 @@ User: ok i am running an automation on render i want to check if it is storing i
 Assistant: [Rendered step_card_display_v0 with 6 steps: Make sure the SSH tunnel is up; Connect to staging via psql (psql -h 127.0.0.1 -p 5433 -U local_dev -d eoxs_wiki_staging); List tables (\dt, \dt wiki_staging.*); Check row count on the target table (SELECT count(*) FROM <table_name>;); Check the most recent rows (SELECT * FROM <table_name> ORDER BY <timestamp_col> DESC LIMIT 5;); Cross-check against Render's own logs]
 
 One thing I don't have: what table this automation is actually writing to, or which Render service this is. If you tell me the table name (or what the automation does), I can give you the exact query instead of the generic pattern above.
+
+User: data is fetched in database named eoxs wiki staging
+
+Assistant: [Rendered step_card_display_v0 with 6 steps: Confirm the SSH tunnel is running; Connect to eoxs_wiki_staging (psql -h 127.0.0.1 -p 5433 -U local_dev -d eoxs_wiki_staging); List all tables (\dt, \dt wiki_staging.*); Get row counts across tables (SELECT count(*) FROM <table_name>;); Check the newest rows in the likely table(s) (SELECT * FROM <table_name> ORDER BY <timestamp_col> DESC LIMIT 5; \d <table_name>); Cross-check timing against Render logs]
+
+Since you don't have a specific table yet, `\dt` in step 3 is the key one — it'll show you every table so you can spot which one changed.
