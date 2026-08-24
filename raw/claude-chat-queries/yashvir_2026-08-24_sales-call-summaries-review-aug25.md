@@ -118,3 +118,12 @@ North American Steel Alliance — Ryan Thomas: email to set up a call before the
 Blake — PS Data (AskCruz): book the demo for next week.
 
 One thing still unresolved that matters here: audio 1 says demo next week, audio 2 says Ryan wants a 2-month observation window before going further. If the demo hasn't happened yet, booking it next week is exactly right. But if audio 2 came after the demo already happened, then "book a meeting" may not be the live action — the 2-month clock might already be running instead. Worth a quick check on which one is current before you send the invite, so you're not booking a demo Ryan already told you to hold off on.
+
+[Turn 5]
+USER: Prepare me an email i can send Blake for the availability at 2pm EST next week?
+
+ASSISTANT: [Composed email via message_compose_v1 tool — kind: email, summary_title: "Demo scheduling email to Blake", one variant labeled "Schedule request":
+Subject: Ask Cruise walkthrough — does 2pm EST next week work?
+Body: "Hi Blake,\n\nGood speaking with you about Ask Cruise. Let's get some time on the calendar to walk through it in more detail.\n\nDoes 2pm EST next week work on your end? Happy to adjust if another day or time suits you better.\n\nLooking forward to showing you what we've built.\n\nBest,\nYash"]
+
+I don't have Blake's email address on file — no email or call record exists for him in eoxs-db, so I couldn't pull it. You'll need to fill in the "To" field yourself. Also worth picking an actual date rather than leaving "next week" open, since that's more likely to get a fast yes/no.
