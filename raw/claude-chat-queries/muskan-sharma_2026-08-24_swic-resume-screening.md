@@ -6,72 +6,86 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
-[Prior turns preserved from earlier saves in this thread: JD + hard requirements from user; Candidate 1 Rizwan Dirisina 3/10 DISQUALIFY; Candidate 2 Kuldeep Sharma 2/10 DISQUALIFY (submitted twice, same verdict); Candidate 3 Deepak Kumar 7/10 QUALIFY; Candidate 4 Monisha R 6/10 QUALIFY with reservations; Candidate 5 Abhilasha Kumari Singh 7/10 QUALIFY; Candidate 6 Abhishek Mishra 6/10 QUALIFY with scale-mismatch caveat.]
+[Prior turns preserved from earlier saves in this thread: JD + hard requirements from user; Candidate 1 Rizwan Dirisina 3/10 DISQUALIFY; Candidate 2 Kuldeep Sharma 2/10 DISQUALIFY (submitted twice, same verdict); Candidate 3 Deepak Kumar 7/10 QUALIFY; Candidate 4 Monisha R 6/10 QUALIFY with reservations; Candidate 5 Abhilasha Kumari Singh 7/10 QUALIFY; Candidate 6 Abhishek Mishra 6/10 QUALIFY with scale-mismatch caveat; Candidate 7 Kapil Singhal 4/10 DISQUALIFY due to JD-mirrored resume language plus recent job-hopping across unrelated fields.]
 
 **User:**
-[Uploaded resume PDF: Kapil Singhal — Implementation Consultant]
+[Uploaded resume PDF: Rishikesh Gade — EDI & NetSuite Consultant]
 
-KAPIL SINGHAL
-Implementation Consultant — Onboarding, Data Ingestion & Client Adoption
-Thane / Mumbai, Maharashtra, India | +91 9924283612 | kapil.singhal74@gmail.com
+Rishikesh Gade
+EDI & NetSuite Consultant
+4 Years | (+91) 8208107249 | rishikesh.gade18@gmail.com
 
-PROFESSIONAL SUMMARY
-Implementation consultant with 10+ years personally configuring and rolling out CRM, ERP-adjacent, and practice-management software inside mid-size organizations — not selling it, not just supporting it, but owning the full path from signed contract to a client running the system day to day. Delivered 300+ implementation and migration projects, including datasets north of 500,000 records, with direct experience inside distribution and manufacturing operations. Hands-on with SQL, API/webhook concepts, and data mapping without being a software engineer. Known for training non-technical, floor-level staff to actual daily usage rather than a one-time demo, and for catching implementation issues before they turn into support tickets or churn.
+Profile Summary
+I specialize in onboarding customers leveraging NetSuite ERP and integrating their environments with major retailers and 3PL partners. I handle connectivity setup (AS2, VAN, FTP, SFTP, TAPI), configuration, validation, and end-to-end EDI testing for X12 including 850, 855, 856, 810, 852, 940, 943, 945, 875, 880, and EDIFACT formats such as ORDERS, DESADV, INVOIC, as well as XML, JSON, and flat files, ensuring accurate and compliant data exchange. Experienced with EDI platform SPS Commerce, WMS/TMS systems (NetSuite WMS, ShipCentral, ShipHawk, RF-Smart), and business cycles including OTC, O2P, and P2P. I have successfully handled implementation and post-go-live support for multiple brands and top retailers.
+Skilled in NetSuite SuiteBuilder, SuiteFlow, SuiteAnalytics, SuiteTalk SOAP/REST, SuiteApps, inventory management, CSV import/export, and user & role management. I am a NetSuite Certified BI & Saved Searches Professional.
 
-CORE COMPETENCIES
-Client Onboarding & Implementation • ERP/CRM Data Ingestion (ERP, Email, Call Transcript Pipelines) • Workflow Mapping (Quoting, Inventory, Order Desk) • Data Mapping, Validation & ETL • SQL & API/Webhook Concepts • Non-Technical End-User Training & Adoption • Escalation Management & Churn Prevention • Go-Live Support • Customer Success Handoff • SLA Management • Zoho CRM • Acumatica • Workflow Automation
+Key skills: EDI, X12, EDIFACT, NetSuite, SQL, SuiteTalk, SuiteFlow, SuiteScript, SuiteBuilder, SuitePromitions, SuiteAnalytics, Salesforce UI, JIRA, MS Office, Postman, Filezilla, XQL/Xath 2.0, AS2, SFTP, FTP, VAN, HTTP, HTML, Authentication, AI Prompting, XML, JSON, Flat Files, SOAP Web Services, REST API
 
-PROFESSIONAL EXPERIENCE
-Implementation & Migration Specialist — ICANotes LLC — Apr 2025 – Present
-Own end-to-end onboarding for 40+ client implementations — mapping each client's existing workflow into system configuration and data-ingestion pipelines, then staying engaged through the first weeks of live use.
-First escalation point when something breaks mid-implementation; most issues are resolved before they become a formal support ticket.
-Built the pre-live validation and requirements-gathering process the team now uses to keep go-lives on schedule.
-Partner with Sales and Customer Success on handoffs so no client configuration detail is lost between sale and go-live.
+Personal Information: City Pune, Maharashtra. Languages: English, Marathi, Hindi.
 
-Director – Operations & Sales — Abhinavv Pharmmaachemm (chemical distribution) — May 2024 – Apr 2025
-Tightened order-to-fulfillment workflow and forecasting for a chemical distribution operation, contributing to a 20% YoY revenue increase.
-Designed and rolled out workflow automations across sales and operations, replacing manual processing.
-Built CRM-integrated trackers still used by the team for pipeline forecasting and cross-functional reporting.
+Education
+B.Tech/B.E., 2022 — ExTC, Pune University
 
-Facility Services Coordinator — Johnson Controls Inc. — Dec 2022 – Apr 2024
-Managed 35–50 daily work orders and reworked the dispatch process, cutting average response time significantly.
-Trained incoming team members on the system and day-to-day operating procedures — usually the first point of contact for questions.
+Work Experience
+Aug 2022 - Feb 2026
+EDI & NetSuite Consultant — Bristlecone India Limited (Mahindra Group Of Company)
+Project: SPS Commerce
+Responsibilities:
+Manage complete customer onboarding for retailer connections and partner integrations leveraging NetSuite ERP.
+Handle connectivity setup (AS2, VAN, FTP, SFTP, TAPI), configuration, and validation between NetSuite, SPS Commerce, and retailer or 3PL systems.
+Conduct end-to-end EDI testing to ensure accurate data exchange and compliance with retailer requirements.
+Provide post-go-live support, troubleshoot production issues, and maintain system stability.
+Collaborate with internal teams, external 3PL partners, retailer EDI and integration teams to deliver accurate, timely integration solutions.
+Handled implementation projects for leading brands such as Shokz Singapore, Volvo, Beyond Meat, MaryRuth Organics, Ajanta Pharma for top retailers including Amazon, Walmart, Target, Kohl's, Macy's, Sephora, Kroger, Bloomingdale's, among others.
+Experienced and worked with EDI partners / B2B networks: OpenText, TrueCommerce, Rythym (formerly known as CommerceHub), Cleo Integration Cloud (CIC).
+Experienced and worked with WMS / TMS: NetSuite WMS (including ShipCentral), ShipHawk & RF-Smart (TMS - package and routing configuration for ASNs).
+Proficient in managing, manipulating, and mapping various ANSI X12 formats (850, 860, 855, 856, 810, 852, 940, 943, 945, 875, 880, and more), EDIFACT formats (ORDERS, DESADV, INVOIC, and more), as well as XML, JSON, and flat file formats.
+Conducted portal testing and onboarding for EDI and integration platforms including Rythym though DSCO, Logicbroker, AWG, OpenText, The Home Depot, Mattoon Rural King (York), JCPenney Retail, Nordstrom, Amazon Vendor, and others.
+Experienced across major business cycles including OTC (Order to Cash), O2P (Order to Payment), and P2P (Procure to Pay), ensuring seamless order import, shipment, invoice, and payment flows in EDI integrations.
+Worked on NetSuite transactional records, including Sales Orders, Item Fulfillment, Vendor Bills, Invoices, Transfer Orders, and custom transactions based on customer requirements.
+Skilled in SuiteBuilder (Custom Forms, Lists, Records, Fields), SuiteFlow (Workflow Automation), SuiteAnalytics (Saved Searches, Reports, BI, HTML), SuiteTalk (SOAP/REST, HTTP), SuiteApps, Inventory Management, Bulk CSV Import/Export, User & Role Management, Integration & Authentication, and UI Walkthrough.
+Key Achievement: Awarded the Xtra Miler Award (2024) for exceptional performance and delivering high-quality work that enhanced client satisfaction.
 
-Sr. Project Consultant – Data Migration — InSync Healthcare Solutions — Jan 2019 – May 2022
-Owned data-ingestion setup and execution for 250+ migration projects, including several with years of inconsistent field mapping to untangle before go-live.
-Designed the company-wide pre-live dry-run strategy still used to catch go-live errors before they happen.
-Conducted system audits and wrote the migration documentation that became the team's de facto implementation playbook.
+Feb 2026 - Present
+EDI & ERP Implementation Specialist — Avalara Technologies
+Project: AvaTax - ERP Implementation
+Managed end-to-end customer onboarding and implementation of Avalara AvaTax across ERP and eCommerce platforms including NetSuite (Basic/One World/SuiteTax), Shopify, Microsoft Dynamics 365 Finance and Operations, Sage, QuickBooks (Online/Desktop), and Salesforce.
+Configured and validated tax engine integrations by setting up company profiles, nexus, tax codes, and mapping transactions between source systems and Avalara.
+Worked with REST APIs for AvaTax integrations, including request and response validation, authentication, and troubleshooting API and data flow issues across systems.
+Provided post go live support by troubleshooting production issues, resolving calculation discrepancies, and ensuring system stability.
+Collaborated with internal Product, Engineering, and Sales teams along with customer technical teams to deliver accurate and scalable integration solutions.
+Led customer calls for implementation and delivered training sessions on Avalara platform usage, integrations, and portal functionalities.
+Managed project timelines, milestones, and deliverables to ensure timely implementation aligned with business and revenue objectives.
+Built strong expertise in US sales tax and global indirect taxation, including exemptions and certificate management, ensuring accurate configuration and compliance.
+Project: EDI Consultant
+Designed and managed EDI mappings (ERP to Partner) to seamlessly convert files between customer ERPs and business partner formats via INPOSIA Instruct XML.
+Executed test workflows using ET Connector, debugging data flows to ensure accurate and secure message processing.
+Led end-to-end deployments from TEST to PRODUCTION environments, validating templates, updating lookups, and migrating workflow files.
+Configured and secured communication protocols (AS2), and generated OAuth tokens for API integrations.
+Monitored transaction reports and proactively resolved processing issues to maintain uninterrupted document transmission.
 
-Implementation Specialist — InSync Healthcare Solutions — Feb 2016 – Jan 2019
-Ran onboarding, configuration, and end-user training for non-technical staff switching systems, targeting daily working proficiency rather than a one-time walkthrough.
-Handled cross-functional troubleshooting during rollout, catching issues before they became post-go-live escalations.
-
-Earlier Experience (2006–2016): Team Leader, Quality Analyst, and Customer Service Associate roles; improved quality scores by 15% while coaching teams of 15–20.
-
-EDUCATION
-Bachelor of Commerce — Meerut University
-Higher Secondary Certificate — Mumbai University
-Secondary School Certificate — Mumbai University
-
-INTERESTS
-Literature • Environmental Conservation • Yoga • Swimming • Travel
+Certification
+Oracle NetSuite Certified BI and Saved Searches Professional
+Oracle NetSuite Certified AI Foundations Associate (Valid upto 2027)
 
 "check"
 
 **Assistant:**
-**Kapil Singhal — Implementation & Migration Specialist, ICANotes LLC**
+**Rishikesh Gade — EDI & ERP Implementation Specialist, Avalara Technologies (previously Bristlecone/Mahindra)**
 
-Score: 4/10
-Decision: DISQUALIFY (recommend verifying directly before reconsidering — see below)
+Score: 7/10
+Decision: QUALIFY
 
-Two things stand out immediately, and both cut against this candidate rather than for him.
+Personally implemented ERP/software: Very strong and highly specific. "Manage complete customer onboarding for retailer connections and partner integrations leveraging NetSuite ERP" (Bristlecone); "Managed end-to-end customer onboarding and implementation of Avalara AvaTax across ERP and eCommerce platforms including NetSuite, Shopify, Microsoft Dynamics 365, Sage, QuickBooks, Salesforce" (Avalara). Named clients (Shokz, Volvo, Beyond Meat, MaryRuth Organics, Ajanta Pharma) and named retail partners (Amazon, Walmart, Target, Kohl's, Macy's, Sephora, Kroger, Bloomingdale's). Unlike the previous candidate, this resume uses precise, correct, unusual industry jargon (X12 codes 850/855/856/810/852/940/943/945, EDIFACT ORDERS/DESADV/INVOIC, AS2/VAN/SFTP/TAPI protocols) that has nothing to do with your JD's own phrasing — this is not JD-mirrored language, it reads as genuine domain depth.
 
-First: this resume's language is an almost word-for-word mirror of your own JD. "ERP/CRM Data Ingestion (ERP, Email, Call Transcript Pipelines)" and "Workflow Mapping (Quoting, Inventory, Order Desk)" aren't generic industry phrases — "call transcript pipelines" and "quoting, inventory, and order desk" are specific, unusual phrasings that appear to be lifted directly from this exact job posting's language, not organic resume-writing. Combined with a professional summary that reads like a checklist response to your hard requirements ("not selling it, not just supporting it, but owning the full path from signed contract to a client running the system day to day... Hands-on with SQL, API/webhook concepts, and data mapping without being a software engineer... training non-technical, floor-level staff") — this is the strongest indicator across all seven resumes reviewed today that the document was custom-written (very possibly AI-assisted) specifically against your JD text rather than being a pre-existing resume. That doesn't prove the underlying experience is fake, but it means the resume's own wording can't be trusted as independent signal — every claim needs to be verified rather than taken at face value.
+Hands-on technical work: The strongest and most concrete technical profile of any candidate reviewed today. REST API work with specifics ("request and response validation, authentication, and troubleshooting API and data flow issues"), OAuth token generation, AS2 protocol configuration, SuiteTalk SOAP/REST, SQL, EDI data mapping between ERP and partner formats via a named tool (INPOSIA Instruct XML), CSV bulk import/export, SuiteFlow workflow automation. This directly and specifically matches the JD's "SQL, APIs/webhooks, data mapping, and software/data integrations" requirement — not adjacent skills, the actual skills named.
 
-Second, and more concrete: the actual job-hopping pattern the hard requirement asks you to screen for. Look at the last ~3.7 years: Facility Services Coordinator at Johnson Controls (Dec 2022–Apr 2024, facilities dispatch — not software), then Director – Operations & Sales at a chemical distributor (May 2024–Apr 2025, ~11 months, sales/ops leadership — not software), then Implementation & Migration Specialist at ICANotes (Apr 2025–present, ~1.3 years). Three employers in under four years, each in a different, largely unrelated function — software implementation, to facilities coordination, to sales/ops directorship, back to software implementation. That's a real, not superficial, instability pattern, and it directly undercuts the "10+ years personally configuring and rolling out CRM/ERP" framing in the summary: roughly 2 of the last 4 years were spent doing facilities coordination and chemical-distribution sales, not implementation work at all.
+Training skeptical non-technical users / driving adoption: The weakest link here, and worth probing directly. "Led customer calls for implementation and delivered training sessions on Avalara platform usage" is the only real training-specific bullet in two dense, technically-focused job descriptions. Everything else centers on system integration, protocol configuration, and post-go-live technical troubleshooting rather than end-user enablement. His client-side counterparts also appear to be technical/IT teams at retail brands (not floor or counter staff at a small distributor), so there's little evidence here of the specific skill of getting a skeptical, non-technical shop-floor employee to actually adopt daily use of a new tool.
 
-Setting those two concerns aside for a moment — if everything here is genuine, the earlier tenure is actually strong: Implementation Specialist then Sr. Project Consultant – Data Migration at InSync Healthcare Solutions, Feb 2016–May 2022 (~6 years, one company, a real promotion), with specific, plausible detail — "owned data-ingestion setup and execution for 250+ migration projects, including several with years of inconsistent field mapping to untangle before go-live," "designed the company-wide pre-live dry-run strategy," wrote migration documentation that became the team's playbook. That is exactly the kind of personally-owned, technically hands-on implementation work the JD wants, and unlike the ICANotes bullets, it doesn't read as JD-mirrored — it has its own specific texture (healthcare EDI/field-mapping mess, a documented playbook). The chemical-distribution stint, if genuine, is also the only real industrial/distribution nice-to-have seen in this batch.
+Job stability: Solid — Bristlecone (Aug 2022–Feb 2026, ~3.5 years, one long tenure) then a clean, immediate transition to Avalara (Feb 2026–present, ~6 months). Dates are internally consistent (no overlap contradictions like the previous resume). No job-hopping concern.
 
-Net: there's a real possibility this is a genuinely strong candidate whose resume was over-polished (possibly by an AI tool) to speak directly to your posting, layered on top of an otherwise choppy recent job history. But taken as submitted — strict and realistic, per your instructions — the combination of (a) suspiciously exact JD-language mirroring and (b) a real three-jobs-in-under-four-years pattern across unrelated fields is enough to disqualify at face value. If you want to pursue this one anyway given the InSync depth, I'd treat it as "verify before proceeding" rather than "move to next round": confirm the InSync and ICANotes work independently (references, LinkedIn history, or direct questioning about the Johnson Controls/Abhinavv detour) before trusting the resume's framing.
+Nice-to-haves: None cleanly matched. His domain is retail/CPG EDI compliance and large-scale ERP tax integrations — a different, more specialized niche than raw-material distributor onboarding, and his employers (Bristlecone/Mahindra Group, Avalara — a large public SaaS company) are established enterprises, not early-stage or small high-ownership environments.
+
+Net: technically the deepest and most credibly-demonstrated candidate on the "personally implemented" and "hands-on technical" requirements, but he's a systems/integration specialist first — the training-and-adoption side of the role (which is a large part of this JD, especially for skeptical shop-floor and counter staff) is the thing to test carefully in interview, since his resume gives almost no evidence of it. Worth a strong technical screen paired with a direct question about hands-on end-user training experience with non-technical staff.
 
 Send the next one.
