@@ -316,3 +316,14 @@ Already in CRM (see above) — no next step defined either in this doc or in CRM
 200-250 employee company. Demoed AskCruz; positive reaction, Lisa especially supportive. Core objection: differentiation from Microsoft Copilot — flagged as a valid, unresolved question, not just a stall tactic. Actions: build a 1-pager on Ask Cruise vs. Copilot for internal exec review, then call Denton to identify other stakeholders and push the process forward. Flagged as potentially the biggest deal in the batch. Check CRM ownership conflict above before proceeding.
 
 Gaps worth closing before you can action items 1 and 4: no company name for the 50-person prospect, no name for the referral-network contact. Both are dead ends as written.
+
+[USER]
+this is the action item for Sheffield
+Raj spoke with Andrew. They have a facility in Stoney Creek and are getting new software there. I asked him for his advice, and he suggested that I call him.
+
+[ASSISTANT]
+That closes the gap on item 8. No prior record of this in eoxs-db (no calls or emails yet) — checks out as new context, nothing to reconcile.
+
+Updated action item for Sheffield Steel: Raj already spoke with Andrew Silbermann. Sheffield has a facility in Stoney Creek getting new software — an active buying window. Raj's advice was for you to call Andrew directly rather than route through him. Action: call Andrew, find out what software decision is in motion for Stoney Creek and where they are in that process.
+
+One thing worth clarifying before you call: Raj already has a relationship with Andrew here — confirm with Raj whether he's introducing you in, or whether he's handing this off entirely, so you don't step on an existing thread the way the Leeco/Northern Steel Alliance ones might overlap with Scott and Rajat.
