@@ -121,3 +121,92 @@ User: Alright that explains the gap from from this point onwards consider me as 
 Assistant: Noted — fresh from here on, for teaching purposes. Doesn't erase the record, but I'll treat you as new to this and build from zero going forward.
 
 Next question in your queue?
+
+User: My next question is what was the script that was followed to make the outbound calls?
+
+Assistant: There's no single canonical written script document in the records — what exists is a coached, evolving practice, not a fixed script sheet. Here's what's actually documented:
+
+Method: EOXS's LDR calling was built around Jeremy Miner's tonality-based questioning method (referenced directly in a 2024-03-07 "Jeremy Miner Videos Workshop" call). The core techniques taught: standing while calling (not sitting), smiling on the call because it changes your tone, using "banter" (a light, funny remark early in the call to break tension before getting into business), and speaking in short, plain sentences rather than a robotic pitch.
+
+Objection handling, not a fixed opener: one captured example, from a 2024-03-14 coaching session, is the reframe used when a prospect says they don't have time — instead of backing off, the line was something like "that's exactly why you need this — you're too busy not to fix the thing costing you time." That's the pattern: reframe the objection as the reason to keep talking, not argue against it.
+
+Practice method: new LDRs (this literally includes you — the transcript shows you reporting having made 60–70 calls in a single day using "the LDR script," then getting live feedback from a teammate on what to fix) learned by making volume calls, recording them, and reviewing mistakes in a group coaching call, not by memorizing a script line-for-line.
+
+Earlier era (2022, under then-CRO Timothy Quinn): a more structured SDR discovery script existed with defined fields to capture on every call — primary contact name/title, upgrade intent, interest level, consent to a CRO intro call, and the prospect's current system. That's closer to a real script/checklist than what came later.
+
+Honest gap: I don't have a single finalized, word-for-word script document you could read end to end. What survives is the coaching philosophy and fragments, not a script sheet. If one exists in writing today, it's likely something Ron or Rajat has directly rather than something in these records — worth asking for the actual current LDR script/talk track before your first calls, rather than reconstructing it from 2024 coaching call fragments.
+
+User: Actually i have the script, how should i share it with you?
+
+Assistant: You can paste the text directly into the chat, or if it's a file (doc, PDF, spreadsheet), attach it here and I'll read it.
+
+User: [uploaded a plain-text cold-call flowchart document for EOXS]
+
+Assistant: Got it — I can read this. It's a branching cold-call flowchart, not a linear script. Here's the structure as I understand it:
+
+1. Identity check — confirm you've reached the right person and they're still with the target company. If "no," you pivot to "where are you now / still in steel industry" — since if they moved to another steel company, that's potentially a new lead, not a dead end.
+
+2. Discovery hook — "are you guys thinking of changing your IT systems" (or the industry-specific version for someone who's moved companies). Branches four ways: Yes / No / Maybe / Objection.
+
+3. Each branch has a scripted next line:
+- Yes → offer to have a consultant call them
+- No → soften it, note it in records, but still probe "are you happy with your existing system?" to keep the door open
+- Objection → route to the Objections/Responses (O/R) reference sheet
+
+4. System capture — once they name their current software, that gets logged into the CRM as "Existing ERP" (the sheet gives Enmark as the example).
+
+5. O/R sheet — a bank of ~15 pre-written responses to standard pushback: "what do you mean by software," "we already have a contract," "we handle it inhouse," "who are you," "how'd you get this number," "we're a 2-man show" (this one's an explicit disqualify-and-exit), "I'm not the right person," etc. Each has a scripted reframe rather than a hard sell — mostly steering back to "are you happy with your current system" as the universal re-entry question.
+
+6. Do Not Call list — Monarch, Majestic Steel, Camden Yards Steel, MacMetal Sales, 3GM, Alliance Trading. (3GM being on here checks out — they're already a customer.)
+
+7. Target list — named as "biggest companies in the steel space": Cleveland Cliffs, Nippon Steel, Olympic Steel, Nucor, US Steel.
+
+8. Phonetic spelling for the company name — "EOXS" spelled out as Eagle-Oscar-X-Ray-Sierra for clarity on calls.
+
+9. Competitor list — a long reference list of ERP/software competitors (Enmark, Epicor, Global Shop, Invera, NetSuite, Oracle, SAP, Stratix, and more) — presumably so you recognize what a prospect names when they answer "what are you using."
+
+One thing worth flagging: this is explicitly the steel-industry EOXS script — the discovery question, the do-not-call list, the target list, and the competitor list are all steel/ERP-specific. It's a solid model for the shape of a script, but the content doesn't transfer to AskCruz as-is.
+
+Do you want to run through this branch by branch, or is this what you wanted on file before we get to your next question?
+
+User: So what would you rate this script on the scale of 10? for EOXS
+
+Assistant: 6 out of 10 for EOXS.
+
+What it does well: the objection-handling reference sheet is genuinely useful — it covers the real pushback categories (already have a contract, handle it inhouse, who are you, how'd you get this number, 2-man show disqualifier) with reframes that don't argue, which matches good practice. The Do Not Call list, target list, competitor list, and phonetic spelling are solid operational hygiene most scripts skip. The universal fallback — steer every branch back to "are you happy with your existing system" — is a disciplined, repeatable habit for a first-timer to lean on.
+
+Where it loses points:
+
+The opener is weak. "Are you guys thinking of changing your IT systems?" is a closed yes/no question that makes "no" the path of least resistance — it doesn't create curiosity or make the prospect want to keep talking. That's a real gap against the Jeremy Miner tonality method this same team was explicitly trained on, which is built around curiosity-driven, permission-based questions, not yes/no gates.
+
+You never identify yourself or the company up front. The caller's identity only comes out reactively, if the prospect asks "who are you?" Leading with an unidentified voice asking about their IT systems is more likely to read as evasive than professional.
+
+No real qualification depth. It captures a binary (thinking about switching: yes/no) but never probes why, what's broken, who decides, or on what timeline. All of that gets punted to "one of my consultants" — meaning this script's actual job is lead-warming and hand-off, not qualification. That might be the intended design, but it should be explicit, not implicit.
+
+No firm next step. "I'll ask one of my consultants to call you" has no day, no time, no commitment — which is the exact anti-pattern I flagged in the fundamentals card earlier (always leave with a specific next step, never "I'll follow up").
+
+It's also clearly a template, not a finished script — placeholder text ("xyz," "abc company," "[Name]") never got filled in, which suggests either it's meant to be customized live or it was never fully finished for distribution.
+
+Net: functional as a defensive objection-parrying tool, weak as an actual conversion-driving script. It'll keep a call from derailing, but it won't do much to make a prospect want to stay on the line.
+
+User: what would you rate this script for AskCruz? obviously not copy pasting the entire script but tweaking it to resonate with AskCruz but keeping the exact same essence of the script
+
+Assistant: 3 out of 10 for AskCruz, as things currently stand — lower than the EOXS version, and not because the skeleton is bad.
+
+The structural essence — branching Y/N/Maybe/Objection flow, reframe-don't-argue objection handling, a universal fallback question, DNC list, phonetic spelling, hand-off to a consultant — transfers fine as a shape. That part earns roughly the same 6/10 the EOXS version got, maybe slightly higher since the reframe philosophy (turn the objection into the reason to keep talking) is genuinely industry-agnostic.
+
+But four of the script's load-bearing components can't be honestly filled in yet, and they're not styling choices — they depend on decisions that don't exist:
+
+The discovery hook needs a confirmed identity line. EOXS's opener works because "are you thinking of changing your IT systems" sits on a settled fact — EOXS is an ERP company, full stop. AskCruz's opener needs to answer "who are you and why are you calling" in one line, and that answer is exactly the thing still unconfirmed with Rajat — industry-agnostic vs. steel-specific, EOXS-affiliated vs. separate. You can't tweak the opener; you have to wait for the input.
+
+The competitor list can't be built. EOXS's list is a closed, known set of ERP vendors because the vertical is closed (steel/metals). If AskCruz is genuinely industry-agnostic, "competitors" isn't a fixed list anymore — it's every company-knowledge/AI tool across every industry a prospect might be in (Glean, Guru, Notion AI, and dozens more, all different depending on the prospect's vertical). That's not a tweak, that's an unbounded research problem that stays unbounded until the ICP is defined.
+
+The target list has no ICP to draw from. EOXS's "biggest companies in steel" list works because there's a hard-gated ICP (RQL) behind it. AskCruz has no formal ICP document — you flagged this yourself on day one. Without it, there's no principled way to build an equivalent target list; you'd just be guessing at company size again.
+
+The DNC list has a live risk specific to AskCruz. EOXS's DNC list is "don't call existing customers/competitors." AskCruz's DNC list needs to also cover "don't cold-call an existing EOXS client as if they're a stranger" — because if a prospect who's already an EOXS customer gets an AskCruz cold call from someone who doesn't know that history, that's the exact positioning contradiction landing on a real phone call. That's a new failure mode this script's structure was never built to prevent.
+
+So the honest rating isn't about script quality — it's that three of the four missing pieces are the same unresolved items you flagged back on day one (positioning/identity, ICP, entity relationship). Tweaking the script is fast once those exist. Right now, tweaking it would mean me inventing the identity line, the ICP, and the competitor set myself — which is exactly the kind of thing I said earlier I won't fabricate for you to say on a real call.
+
+User: i agree with you.
+
+Assistant: Good. Let me know if you've got more questions queued up, or if you're ready to move to my questions next.
