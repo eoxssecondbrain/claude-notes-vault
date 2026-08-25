@@ -144,3 +144,36 @@ Rigor options:
 100 ft — Same as 50 ft, delivered in sections with an outline first.
 
 Pick one, or answer the four questions and I'll pick.
+
+Waiting on your picks above.
+
+## User
+
+it is a road map
+
+## Assistant
+
+Then it's mislabeled, and that's the first thing to fix.
+
+The document says "Standard Operating Procedure," "Classification: Internal Use Only," "Document Owner: HR Department," with an issue date. That reads as binding policy. If an employee disputes a termination or F&F settlement, a document titled SOP is treated as the company's stated procedure regardless of what you intended it as internally. You don't get to say "it was aspirational" after the fact.
+
+So: either retitle it (HR Operating Framework / HR Process Roadmap v0.1, marked Draft — Not Binding), or accept it as binding and fix the gaps. Cheap decision, non-trivial consequence.
+
+One thing I still need before reviewing: roadmap toward what, specifically?
+
+a) Building out the HR function itself — this is the target-state list of processes you intend to stand up over the next N months
+b) Implementing HR in Odoo — this is the module-configuration sequence
+c) A directional guide for whoever runs HR day to day, expected to be followed loosely
+
+Those get judged on completely different criteria. (a) is judged on coverage and sequencing. (b) on Odoo mapping. (c) on clarity and decision rules.
+
+Also still open: India-only headcount, or US people under AskCruz too?
+
+Rigor, same options as before:
+
+5 ft — coverage and sequencing gaps, standalone read.
+10 ft — plus statutory check (India, and US if applicable) and Odoo module reality check.
+50 ft — plus benchmarked against how HR actually runs at EOXS/AskCruz today, with risk flags on the sections most likely to cause a dispute.
+100 ft — 50 ft delivered in sections.
+
+Answer the roadmap type and jurisdiction, pick a depth, and I'll run it.
