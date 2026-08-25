@@ -103,3 +103,39 @@ Edited /tmp/pdfwork/deck.html directly:
 Re-rendered via Playwright/Chromium to output2.pdf, confirmed via pypdf it now has 16 pages (was 17), rasterized all pages with pdftoppm, and visually reviewed the agenda plus every renumbered section page (7 through 13) to confirm: no gaps in numbering, correct titles, correct footer page numbers, navy circle badges rendering correctly, and the closing "Welcome to AskCruz" page now on page 16.
 
 Final PDF: 16 pages total. Sections now run cleanly 1–13 with no gaps: Leadership & Key Contacts, Communication/Work Hours/Availability, Zoom & Video Call Etiquette, Cattr — Time Tracking & Productivity, Leaves & Time-Off, Payroll & Reimbursements, Work Output & Reporting, Tech Setup & Internet Reliability, GPT with Claude, Workplace Conduct & Respect, Professional Conduct With Management, Data Protection & Intellectual Property, Exit & Experience Letter Policy. Cover, agenda, and closing pages preserved and updated. Delivered to the user as AskCruz_Induction_Conduct_Policies_Updated.pdf via SendUserFile with caption: "Section 8 (ChatGPT & AI Tool Usage) removed. Now 13 sections, renumbered 1–13 with no gaps, 16 pages total."
+
+## User
+GOOD
+
+## Assistant
+Glad it worked. Let me know if you need any further edits to the deck.
+
+## User
+@"/root/.claude/uploads/7256ffeb-cc48-55f9-9e12-ca6e5d47bd13/2c4c8d2e-HR_Department_SOP_EOXS_AskCruz_1.pdf"
+
+Update the HR Offboarding/Termination process to make it more professional and complete.
+Termination & Resignation Documentation
+Add a dedicated Termination & Resignation option in the HR process.
+For every employee who is leaving the organization:
+
+1. Resignation: Obtain a formally signed resignation letter/document from the employee and keep it in the employee's HR records.
+2. Termination: If the employee is being terminated, obtain the required signed termination document/acknowledgment from the employee and maintain it in their HR records.
+3. Ensure the signed document clearly mentions the reason for resignation/termination, effective date, and last working day, wherever applicable.
+4. HR must verify that the required document has been signed and received before completing the offboarding process.
+5. Store the signed documents securely in the employee's HR folder for future reference and record-keeping.
+6. Update the employee's status in the HR system only after the required documentation and exit formalities are completed.
+7. Maintain a clear record of all resignation/termination-related documents, approvals, handover details, final settlement, and access removal.
+
+## Assistant
+
+This is a different document — the EOXS & AskCruz HR Department SOP (Standard Operating Procedure), a plain Word/WPS-style 7-page document (US Letter, 612x792pt), not the AskCruz induction slide deck from earlier in this conversation. Read all 7 pages: cover page, Table of Contents (11 sections), and sections 1–11 (Recruitment & Hiring, Employee Onboarding, Employee Documents, Leave Management, Attendance Management, Working Hours & Cattr Monitoring, Payroll Management, Employee Transfer/Promotion, Resignation Process, Termination Process, Offboarding Checklist).
+
+Sampled exact styling from the source PDF: navy heading color #1F3864 with a 2px navy underline rule beneath each heading, light-gray #F2F2F2 shaded "Purpose:" boxes (italic), plain numbered/dash/bullet/checkbox (☐) lists, italic gray header line "EOXS & AskCruz — HR Department SOP" top-right with a thin rule, and centered gray "Page X of Y" footer. Font matched to Carlito (metric-compatible with Calibri, which the original used, per WPS Docs default).
+
+Plan: insert a new dedicated Section 11 "Termination & Resignation Documentation" — using the user's 7 points essentially verbatim — positioned after the existing Section 10 "Termination Process" and before the existing Offboarding Checklist (renumbered from 11 to 12), since the documentation requirements apply to both the resignation and termination processes already described. Also cross-referenced the new section from within Section 9 (Resignation Process, step "Obtain a formally signed resignation letter/document from the employee (see Section 11)") and Section 10 (Termination Process, step "Obtain the required signed termination document/acknowledgment from the employee (see Section 11)"), and tightened the Offboarding Checklist with explicit new items: "Signed resignation/termination document received & verified," "Reason, effective date & last working day confirmed on document," "Odoo employee status updated (only after documentation is complete)," and "Signed exit documents filed securely in employee's HR folder."
+
+Technical approach: first tried manually partitioning content into fixed-height page divs (mirroring the induction-deck approach) — this broke, since content overflowed the fixed 792px page boxes and spilled visually across page boundaries instead of naturally repaginating. Switched to a more correct approach: a continuous flowing HTML body (no manual page breaks) rendered through Playwright at US Letter size with `display_header_footer` true, using `headerTemplate`/`footerTemplate` for the running italic header line and centered "Page X of Y" footer, with `break-inside:avoid` on list items/purpose boxes to prevent awkward mid-item splits — letting Chromium paginate naturally, matching how the original Word-style document would have flowed. The cover page was rendered as a separate single-page PDF with no header/footer (matching the original's clean, unnumbered cover), then merged in front of the flowing body via pypdf. Adopted a numbering convention where the cover is unnumbered front matter and "Page 1 of N" starts at the Table of Contents — a common professional convention — rather than trying to hack arithmetic offsets into Chromium's automatic page-number counters.
+
+Iterated twice to get accurate Table-of-Contents page numbers: rendered the body, used pdftotext to determine which physical page each section heading actually landed on (since natural reflow doesn't match hand-guessed numbers), then updated the TOC's page references to match exactly. Also tightened checklist-item spacing slightly to eliminate an awkward single-item orphan page at the end. Final render: 8 body pages + 1 cover = 9 pages total, verified visually page-by-page (rasterized via pdftoppm) — confirmed no content overflow, correct TOC page numbers (1: Recruitment & Hiring / 2: Employee Onboarding both →2; 3: Employee Documents →3; 4: Leave Management →3; 5: Attendance Management →4; 6: Working Hours & Cattr Monitoring →4; 7: Payroll Management →5; 8: Employee Transfer/Promotion →5; 9: Resignation Process →6; 10: Termination Process →6; 11: Termination & Resignation Documentation →7; 12: Offboarding Checklist →8), correct running header/footer on every content page, and clean formatting throughout matching the original document's style.
+
+Delivered to the user as HR_Department_SOP_EOXS_AskCruz_Updated.pdf via SendUserFile with caption: "Updated HR SOP — added Section 11 'Termination & Resignation Documentation,' renumbered Offboarding Checklist to Section 12, and tightened the checklist with signed-document verification items. TOC and page numbering updated throughout."
