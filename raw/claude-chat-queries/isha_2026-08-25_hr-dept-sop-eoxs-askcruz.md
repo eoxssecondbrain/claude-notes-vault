@@ -6,7 +6,7 @@ created: 2026-08-25
 updated: 2026-08-25
 ---
 
-**User:**
+**User (turn 1):**
 
 Create a professional and well-structured HR Department SOP for EOXS and AskCruz, based ONLY on the processes and information provided below.
 Important Instructions
@@ -210,7 +210,7 @@ Create the final SOP as a professional HR document with:
 7. Consistent professional formatting.
 8. A clean corporate style suitable for sharing internally with the EOXS and AskCruz HR teams.
 
-**Assistant:**
+**Assistant (turn 1):**
 
 Loaded the threads-ov, eoxs-wiki-db, and docx skills, then built the HR Department SOP as a Word document using only the content provided by the user (no invented processes or policies).
 
@@ -234,3 +234,31 @@ Formatting: navy/gold corporate color scheme, shaded "Purpose" callout boxes, nu
 Verified by converting to PDF via LibreOffice and visually reviewing all 7 rendered pages (title page, TOC, and all 11 sections) — numbering, checklists, and headings all render correctly.
 
 Delivered the file to the user via SendUserFile as `HR_Department_SOP_EOXS_AskCruz.docx`, with a note that the TOC may need "Update Field" if it opens blank (Word field, populates correctly once opened/updated in Word).
+
+**User (turn 2):**
+
+could you please make it through your own now
+
+**Assistant (turn 2):**
+
+Interpreted this as: fix the TOC issue myself rather than requiring the user to manually "Update Field" in Word.
+
+First attempted to update the Word TOC field automatically by scripting LibreOffice via the UNO bridge (python3 with PYTHONPATH set to the LibreOffice program dir, connecting to a headless soffice instance over a socket, calling `doc.getDocumentIndexes()[i].update()` and `doc.store()`). This ran without error, but re-converting to PDF still showed a blank TOC — the docx round-trip through LibreOffice did not reliably cache the updated field text in a way that displayed correctly.
+
+Switched to a more reliable approach: replaced the dynamic Word TOC field entirely with a static, manually-built table of contents — one paragraph per section using `PositionalTab` with a right-aligned dot leader (not a Word field), so it always displays correctly in any viewer with no "update field" step required. Determined the correct page number for each of the 11 sections by rendering the document to PDF and visually inspecting all 7 pages:
+
+1. Recruitment & Hiring — page 3
+2. Employee Onboarding — page 3
+3. Employee Documents — page 4
+4. Leave Management — page 4
+5. Attendance Management — page 4
+6. Working Hours & Cattr Monitoring — page 5
+7. Payroll Management — page 5
+8. Employee Transfer / Promotion — page 6
+9. Resignation Process — page 6
+10. Termination Process — page 7
+11. Offboarding Checklist — page 7
+
+Rebuilt the docx with this static TOC (dot-leader Table of Contents entries, each title left-aligned and its page number right-aligned against the margin), removed the now-unnecessary `updateFields` document feature flag, and rebuilt. Re-converted to PDF and visually verified: the TOC page now shows all 11 section titles with dot leaders and correct page numbers, rendering immediately with no manual action needed. Also re-checked the title page and section 1/2 content pages to confirm nothing else was affected by the edit.
+
+Delivered the corrected file to the user via SendUserFile with a note that the table of contents now displays correctly on open.
