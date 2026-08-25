@@ -47,48 +47,52 @@ Assistant: Ready. Share the first resume and I'll score it against the hard requ
 
 [Candidate 5: NANDITA JAISWAL — QUALIFY, 8/10, Implementation Analyst with 4+ years, Rippling (2024-present) and HighRadius (2021-2024, internal promotion), led payroll data migration for 150+ SMB/mid-market/enterprise clients off Gusto/ADP/Paychex, configured tax structures across 150+ accounts, SQL for data validation/integration troubleshooting across ERP connections, resolved 100+ post-go-live escalations directly tied to churn reduction, excellent stability (2 employers), no industrial vertical, training evidence limited to mentoring internal analysts rather than external non-technical client training — flagged to verify in interview.]
 
-User: [Shared a LinkedIn hiring-platform applicant profile with AI-generated screening notes for HEMANT CHANDAK]
+[Candidate 6: HEMANT CHANDAK — borderline, leaning DISQUALIFY, 5/10, LinkedIn hiring-platform applicant profile with AI-generated screening notes. Technical Consultant at Instem (2022-present), Product Support Engineer at Gieom (2019-2022, explicitly support not implementation), Implementation Engineer at Plus91 (2018 only, under a year), Database support and Implementation at Palash Healthcare (2015-2018). Mixed/thin evidence of owning full ERP/CRM implementation, no API/webhook/data-mapping evidence, strong SQL. Best point: training medical staff on EMR/HIS systems is a good analog for skeptical non-technical user training. Job stability otherwise fine aside from the short Plus91 stint. No industrial/distribution domain. Screening question answers of "50" for two different numeric questions (both with ideal answer "1") flagged as a data-quality anomaly needing clarification — either an implausible literal claim or an unmoved default slider value.]
 
-Hemant Chandak — Technical Consultant at Instem, Pune, Maharashtra, India. Applied 2 days ago.
+User: [Shared a LinkedIn hiring-platform applicant profile with AI-generated screening notes for ARPAN KAPUR]
+
+Arpan Kapur — EDI & Integration Engineer | Senior Analyst @ DXC Technology | EX-TCS | EDI Implementation/Management | 8+ Years in SupplyChain Tech and Manufacturing Domains. Gurugram, Haryana, India. Applied 2 days ago.
 
 LinkedIn AI-generated qualification notes:
-Must-have: Has personally implemented business software such as ERP or CRM in a mid-size company, owning the implementation rather than only selling or supporting it — "Their resume shows they have implemented enterprise applications (e.g., HIS/EMR systems) and managed client database operations, but there is no clear evidence of owning full implementation of ERP or CRM systems, so this aligns only partially with the requirement."
-Must-have: Comfortable with hands-on technical work involving SQL, APIs/webhooks, and basic data mapping — "They have extensive hands-on SQL experience and work with SQL queries and database operations, but there is no direct evidence of APIs/webhooks or explicit data-mapping responsibilities, so this requirement is only partially met."
+Must-have: Has personally implemented business software such as ERP or CRM in a mid-size company, owning the implementation rather than only selling or supporting it — "The applicant has led end-to-end implementation of SAP S/4HANA ERP integrations for UMG, which aligns with implementing business software (ERP) in a mid-size company and owning the implementation rather than just selling or supporting it."
+Must-have: Comfortable with hands-on technical work involving SQL, APIs/webhooks, and basic data mapping — "They explicitly list SQL and SQL Server-based EDI reconciliation and have built EDI mappings and data transformations, which strongly indicates comfort with hands-on technical work involving SQL, data mapping, and likely APIs/webhooks."
 Must-have: Must be located in India — met.
-Preferred: Experience implementing or working with software for industrial or distribution domains (steel, metals, building materials, fasteners, plastics, lumber) — not met; healthcare and banking only.
-Preferred: Experience at an early-stage SaaS company with a small team and high individual ownership — only partially met.
-Preferred: Experience leading change-management and training for non-technical operational staff — "aligns well" — trained medical staff on EMR/HIS systems.
-Preferred: Experience mapping client operational workflows (quoting, inventory, order desk) into a new software system — only partially met (adjacent, medical workflows, not quoting/inventory/order desk).
-Preferred: Experience serving as the primary escalation point during software implementation, identifying adoption risks and churn — "aligns well."
+Preferred: Experience implementing or working with software for industrial or distribution domains (steel, metals, building materials, fasteners, plastics, lumber) — "Their work on SAP S/4HANA ERP integrations for UMG's global supply chain and manufacturing environments indicates experience implementing software for industrial/distribution domains, even though the specific industries are not named."
+Preferred: Experience at an early-stage SaaS company with a small team and high individual ownership — not met; UMG is a large enterprise, no early-stage SaaS evidence.
+Preferred: Experience leading change-management and training for non-technical operational staff — "Their experience includes coordinating UAT, producing operational support guides, and leading decommissioning and migration of a legacy EDI platform, which suggests some exposure to change management and training, but there is no explicit evidence of leading change-management and training for non-technical operational staff."
+Preferred: Experience mapping client operational workflows (quoting, inventory, order desk) into a new software system or data model — "They have directly designed and supported order management, inventory management, and pricing processes in enterprise applications, which aligns with mapping client operational workflows (inventory/order desk) into new software systems."
+Preferred: Experience serving as the primary escalation point during software implementation, identifying adoption risks and potential churn early — "They explicitly report owning escalation management and root cause analysis for business-critical EDI transactions and have led decommissioning and migration of a legacy EDI platform, which aligns with serving as the primary escalation point and identifying adoption risks during implementation."
 
 Experience:
-- Technical Consultant | Instem | 2022–Present
-- Product Support Engineer | Gieom | 2019–2022
-- Implementation Engineer | Plus91 Technologies Pvt. Ltd. | 2018–2018
-- Database support and Implementation | Palashhealthcare Solutions Pvt Ltd | 2015–2018
+- Senior Software Analyst | DXC Technology | 2022-Present (verified)
+- Senior analyst 3 Software Engineering | DXC Technology | 2023-Present (verified)
+- Professional 1 Application Delivery | DXC Technology | 2022-2024 (verified)
+- System Engineer | Tata Consultancy Services | 2018-2022
+- Assistant System Engineer | Tata Consultancy Services | 2019-2020
+- Assistant System Engineer-trainee | Tata Consultancy Services | 2018-2019
+- Student Trainee | Network Bulls | 2016
+- Summer Trainee | U.P.P.C.L | 2016
 
-Education: Amravati University, Bachelor of Engineering (B.E.), 2006–2012
+Education: NMIMS CDOE (Postgraduate Degree, alongside work experience), Jaypee Institute of Information Technology (Bachelor of Technology, alongside work experience)
 
 Screening question responses:
-- How many implementations have you had complete ownership of, from end to end, with US clients? Ideal answer: 1. His answer: 50
+- How many implementations have you had complete ownership of, from end to end, with US clients? Ideal answer: 1. His answer: 7
 - Do you have experience in implementing software into businesses? Ideal answer: Yes. His answer: Yes
-- How many references of those clients will you be able to provide? Ideal answer: 1. His answer: 50
+- How many references of those clients will you be able to provide? Ideal answer: 1. His answer: 2
 - Do you have experience in dealing with US clients? Ideal answer: Yes. His answer: Yes
 
-User: check if he qualify for next round
+Assistant: Arpan Kapur — QUALIFY. Score: 9/10.
 
-Assistant: Hemant Chandak — borderline; leaning DISQUALIFY on strict reading. Score: 5/10.
+Hard requirement 1 (personally implemented ERP/CRM, owning the implementation) — met. Explicit claim of leading end-to-end SAP S/4HANA ERP integration implementation for UMG (a large enterprise client). SAP S/4HANA integration work is substantial, credible ERP implementation experience, not sales or support.
 
-Hard requirement 1 (personally implemented ERP/CRM, owning the implementation) — not clearly met. His implementation-titled experience is thin and mixed with support work: "Implementation Engineer" at Plus91 lasted under a year (2018 only), "Database support and Implementation" at Palash Healthcare blends the two functions in the title itself, and "Product Support Engineer" at Gieom (2019–2022, 3 years — a third of his career) is explicitly a support role, which the JD says doesn't count. His current "Technical Consultant" title at Instem (a life-sciences/clinical informatics software vendor, 4 years) is plausibly implementation-heavy but the title itself doesn't confirm ownership of end-to-end implementation the way "Implementation Engineer" or "Implementation Consultant" would. Net: real exposure to implementation work, but not clean evidence he owned it, and a meaningful chunk of his career is titled support, not implementation.
+Hard requirement 2 (hands-on technical: SQL/APIs/webhooks/data mapping) — met, and this is his standout strength. His core discipline is EDI & Integration Engineering — literally building and reconciling data mappings and transformations between systems, SQL Server-based reconciliation, business-critical transaction troubleshooting. EDI work is functionally the same skill the JD needs for "ERP connections, email/call transcript pipelines" — systematic mapping of one system's data into another's structure. This is more directly on-target technical experience than any other candidate reviewed so far.
 
-Hard requirement 2 (hands-on technical: SQL/APIs/webhooks/data mapping) — half-met. Strong, credible SQL and database work throughout. No evidence anywhere of APIs, webhooks, or data mapping — a real, not just unstated, gap given how much other candidates in this batch have shown on that front.
+Hard requirement 3 (training skeptical non-technical users) — the weak point, and worth being honest about it rather than inferring credit. Evidence here is UAT coordination and writing operational support guides — real, but that's documentation and testing, not confirmed hands-on training of resistant, non-technical end users. EDI/integration roles are typically backend and system-to-system facing rather than end-user facing, so this needs direct verification in interview, not assumption from adjacent work.
 
-Hard requirement 3 (training skeptical non-technical users) — this is his strongest point. Training medical staff (doctors, nurses, hospital ops) on EMR/HIS systems is a genuinely good analog for training skeptical, non-technical floor/counter staff — arguably harder, since clinicians are notoriously resistant to workflow changes. Also plausibly the primary escalation point for production issues, which maps to the JD's churn-risk/escalation requirement.
+Hard requirement 4 (job stability) — excellent. Only two employers across 8 years: TCS (2018–2022, with internal promotions from trainee through System Engineer) and DXC Technology (2022–present, again with internal promotions through Senior Analyst). No hopping, clear upward progression within both.
 
-Hard requirement 4 (job stability) — mostly fine. Palash Healthcare 2015–2018 (3 yrs), Gieom 2019–2022 (3 yrs), Instem 2022–present (4 yrs) are all solid tenures. The one-year-or-less Plus91 stint (2018 only) is a minor blip, not a pattern.
+Nice-to-haves: strongest domain match in the batch. His own headline states "8+ Years in SupplyChain Tech and Manufacturing Domains," and his work explicitly covers order management, inventory management, and pricing processes — which map almost directly onto the JD's "quoting, inventory, and order desk" workflow-mapping requirement. Not early-stage SaaS (TCS/DXC are large IT services firms), so that piece of the nice-to-have is unmet.
 
-Nice-to-haves: no industrial/distribution experience (healthcare and banking only). No early-stage SaaS, high-ownership signal — Instem, Gieom are established vendors.
+Screening question answers are also a good sign of genuine engagement rather than defaulted noise: "implementations owned end-to-end with US clients" = 7 (above the ideal of 1, plausible for 8 years) and "references" = 2 — these are differentiated, sensible numbers, unlike a flat repeated default value.
 
-One thing to flag directly rather than interpret: his answers to two of the four screening questions ("How many implementations have you had complete ownership of, end-to-end, with US clients?" and "How many references can you provide?") both came back as "50" against an ideal answer of "1." That's either an implausible literal claim (50 end-to-end US-client implementation ownerships doesn't fit this career history) or a slider left at its default midpoint rather than a real answer — either way it's a data-quality problem worth clarifying with him directly before drawing conclusions from those two questions.
-
-Overall: weaker than Jeevaanantham, Kislay, or Nandita on the two hard technical/implementation-ownership requirements, but stronger than Aakash and with a genuinely good non-technical-user-training story. If you're being strict per your instructions — don't credit partially-demonstrated skills — this doesn't clearly clear both hard requirements as written, so I'd hold it as a "screen call before advancing" rather than a clean pass. Worth a short call to nail down exactly what he owned end-to-end versus supported, and to resolve the "50" screening answers, before deciding.</content>
+This is the best-aligned candidate on paper so far, particularly on hands-on integration/data-mapping work and manufacturing/supply-chain domain relevance. The one thing to nail down in interview, and not assume from the resume, is whether he has genuinely trained non-technical, resistant end users himself — his career reads as more backend/system-integration-heavy than customer-facing-adoption-heavy, which is a real difference from what this role needs day to day.</content>
