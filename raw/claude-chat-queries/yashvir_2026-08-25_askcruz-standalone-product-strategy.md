@@ -105,3 +105,19 @@ Assistant: EOXS's ERP sales process, from what's on record, runs in six stages:
 Two things worth flagging as you learn this: the RQL/ICP gate is hard-coded to steel/metal products — that qualification logic doesn't transfer to AskCruz's cross-industry ambition as-is. And the post-demo cadence template is old enough (2021) that I'd confirm with Rajat or Ron whether it's still what's actually run today before treating it as current practice.
 
 Sources: RQL Qualification / SOP — Data Team RQL Qualification Checklist; Ideal Customer Profile; EOXS Post-Demo Sales Sequencing (2021 Template); Internal Operations (CRM pipeline export); EOXS Client Implementation and Go-Live SOP.
+
+User: what happened between point 2 and 3?
+
+Assistant: Direct answer first, then something you should know.
+
+Between ICP (point 2) and Discovery/Demo (point 3), there's a manual outbound layer that isn't captured as its own numbered stage but is where most of the actual lead-gen work happens: SDRs/LDRs work a live account-targeting spreadsheet called "SOM Allocation" — one row per target company, with call-log comments tracking outbound-call breadcrumbs against each account. That's supplemented by a paid third-party lead-referral subscription ("Weekly Top Lead," from a vendor called Software Connect) feeding in externally-sourced leads alongside the RQL-qualified ones. Only once an account shows real interest from that outbound work does it convert into a discovery call. There's also a separate design (never confirmed built) for automating RQL end-to-end — seed list, scraping, ICP scoring, contact enrichment — but as far as the record shows it stayed at storyboard stage.
+
+Now the thing you should know: pulling that thread led me straight to a record for "Yashvir Singh Thakur" — yash@eoxsteam.com, which is your account. It documents you as hired January 2024, and states you were later titled SDR Manager, credited with building EOXS's LDR (lead development rep) team, with a compensation increase explicitly tied to that hiring/team-building work. The same call-log spreadsheet I just cited above lists you as the one actively doing outbound account-research work on it in July 2026.
+
+That doesn't match "I'm starting fresh, I don't know anything about lead gen through cold calls." If the record's right, you've already built and run the LDR function at EOXS — which is a different skill from being an individual-contributor cold caller yourself, but it's not blank-slate territory either. Worth telling me directly: is "starting fresh" about AskCruz specifically (new product, new pitch, maybe genuinely your first time on the phone yourself rather than managing others who were), or should I be recalibrating what level to teach at?
+
+User: Alright that explains the gap from from this point onwards consider me as fresh only.
+
+Assistant: Noted — fresh from here on, for teaching purposes. Doesn't erase the record, but I'll treat you as new to this and build from zero going forward.
+
+Next question in your queue?
