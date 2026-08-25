@@ -8,54 +8,48 @@ updated: 2026-08-25
 
 User: [Continuation of resume screening for Software Implementation Consultant role — full JD and hard requirements as established at start of thread]
 
-[Candidates 1-6 already evaluated: AAKASH KAUSHIK (DISQUALIFY, 2/10), PAVAN KUMAR YADAV K (QUALIFY, 7/10), JEEVAANANTHAM R (QUALIFY, 8/10), KISLAY KUMAR (QUALIFY, 8/10), NANDITA JAISWAL (QUALIFY, 8/10), HEMANT CHANDAK (borderline/leaning DISQUALIFY, 5/10)]
+[Candidates 1-7 already evaluated: AAKASH KAUSHIK (DISQUALIFY, 2/10), PAVAN KUMAR YADAV K (QUALIFY, 7/10), JEEVAANANTHAM R (QUALIFY, 8/10), KISLAY KUMAR (QUALIFY, 8/10), NANDITA JAISWAL (QUALIFY, 8/10), HEMANT CHANDAK (borderline/leaning DISQUALIFY, 5/10), ARPAN KAPUR (QUALIFY, 9/10), PRASHANT PANDJI (QUALIFY on hard requirements but flagged for seniority/fit risk, 6/10)]
 
-[Candidate 7: ARPAN KAPUR — QUALIFY, 9/10, EDI & Integration Engineer, Senior Analyst at DXC Technology (ex-TCS), 8+ years SupplyChain Tech and Manufacturing. Led end-to-end SAP S/4HANA ERP integration for UMG, deep EDI mapping/SQL Server reconciliation work, order management/inventory/pricing process design directly matching JD's quoting/inventory/order-desk requirement, only two employers in 8 years (TCS, DXC) with internal promotions at both — excellent stability. Weak point: training of non-technical end users not clearly evidenced, backend/integration-heavy career. Screening question answers (7 implementations, 2 references) read as genuine differentiated numbers. Best domain match so far.]
+User: [Shared a LinkedIn hiring-platform applicant profile with AI-generated screening notes for VAISHNAVI UPADHYE]
 
-User: [Shared a LinkedIn hiring-platform applicant profile with AI-generated screening notes for PRASHANT PANDJI]
-
-Prashant Pandji — SAP S/4HANA MM Consultant | 18+ Years ERP Experience | 6+ Years SAP S/4HANA | Implementation • Rollout • Support | MM Integration. Mumbai Metropolitan Region. Applied 5 days ago.
+Vaishnavi Upadhye — HRMS implementation Engineer. Pune District, Maharashtra, India. Applied 5 days ago.
 
 LinkedIn AI-generated qualification notes:
-Must-have: Has personally implemented business software such as ERP or CRM in a mid-size company, owning the implementation rather than only selling or supporting it — "The applicant has repeatedly implemented ERP systems (e.g., SAP R/3, SAP ECC, SAP S/4HANA MM) and owns the end-to-end implementation lifecycle, which aligns with owning implementation rather than just selling or supporting it."
-Must-have: Comfortable with hands-on technical work involving SQL, APIs/webhooks, and basic data mapping — "Their long SAP ERP implementation and customization work (e.g., BAPI and BADI implementations, IDoc troubleshooting, data migration) strongly indicates hands-on SQL, API/webhook, and data-mapping experience."
+Must-have: Has personally implemented business software such as ERP or CRM in a mid-size company, owning the implementation rather than only selling or supporting it — "Their current HRMS implementation role at The Digital Group, where they manage end-to-end implementation from discovery through go-live and HyperCare support, strongly aligns with implementing business software (HRMS) in a mid-size company and owning the implementation rather than just selling or supporting it."
+Must-have: Comfortable with hands-on technical work involving SQL, APIs/webhooks, and basic data mapping — "Their HRMS implementation work includes data migration, data cleansing, and data accuracy checks, which strongly suggests hands-on technical work with data mapping, but there is no explicit evidence of SQL or APIs/webhooks, so this requirement is only partially met."
 Must-have: Must be located in India — met.
-Preferred: Experience implementing or working with software for industrial or distribution domains (steel, metals, building materials, fasteners, plastics, lumber) — "They have extensive experience implementing ERP systems in manufacturing and distribution domains (e.g., automotive, pharmaceutical, supply chain, distribution, MRO), which aligns with the requested industrial/distribution software experience."
-Preferred: Experience at an early-stage SaaS company with a small team and high individual ownership — not met; all documented experience is with established ERP/SAP consultancies and large enterprises.
-Preferred: Experience leading change-management and training for non-technical operational staff — "They have repeatedly delivered end-user training and mentored junior team members, and their SAP implementation work likely involved guiding non-technical staff through new workflows, aligning with this requirement."
-Preferred: Experience mapping client operational workflows (quoting, inventory, order desk) into a new software system or data model — "Their SAP implementation work includes business process mapping and functional specification preparation, which aligns with mapping client operational workflows into new software systems."
-Preferred: Experience serving as the primary escalation point during software implementation, identifying adoption risks and potential churn early — "They have managed production support tickets and SLA-compliant issue resolution, and their SAP implementation work likely involved identifying adoption risks and churn, but there is no explicit evidence of being the primary escalation point."
+Preferred: Experience implementing or working with software for industrial or distribution domains (steel, metals, building materials, fasteners, plastics, lumber) — not met; HR and recruitment technology only.
+Preferred: Experience at an early-stage SaaS company with a small team and high individual ownership — only partially met; The Digital Group is described as mid-sized, no early-stage startup evidence.
+Preferred: Experience leading change-management and training for non-technical operational staff — "They have led client workshops, conducted end-user training, and prepared SOPs and documentation, which aligns with leading change-management and training for non-technical operational staff on new software workflows."
+Preferred: Experience mapping client operational workflows (quoting, inventory, order desk) into a new software system or data model — only partially met; process mapping and translating business processes into HRMS solutions, but no explicit quoting/inventory/order-desk evidence.
+Preferred: Experience serving as the primary escalation point during software implementation, identifying adoption risks and potential churn early — "They have coordinated go-live readiness, managed UAT, and provided HyperCare/post-go-live support as a single point of contact, which aligns with serving as the primary escalation point during implementation and identifying adoption risks and churn early."
 
 Experience:
-- Sap Materials Management Consultant | Infinite Locus | 2026-Present
-- Application Consultant | Arista Consulting LLC | 2023-2025
-- Senior Service Delivery Consultant | QAD | 2012-2023
-- Techno Functional Consultant | Tech Mahindra | 2011-2012
-- Business Analyst | BrainTreasure Technologies Pvt. Ltd. | 2009-2011
-- SAP Business One Functional Consultant | Nastek Solutions Pvt Ltd | 2008-2009
+- Implementation Engineer | The Digital Group Inc | 2024-Present
+- Human Resources Operations Specialist | T-Systems ICT India Pvt. Ltd. | 2023-2024
+- Talent Acquisition Specialist | Xoriant | 2022-2023
+- Talent Acquisition Specialist | Haul Plus: Best Staffing Company | 2021-2022
 
-Education: SVKM's Narsee Monjee Institute of Management Studies (NMIMS), Post Graduate Diploma in Business Management, 2010-2012 / PGDBM, -2012
+Education: PES Modern College of Engineering, Master of Business Administration - MBA, 2018-2020 / MBA, 2020-2020
 
 Screening question responses:
-- How many implementations have you had complete ownership of, from end to end, with US clients? Ideal answer: 1. His answer: 6
-- Do you have experience in implementing software into businesses? Ideal answer: Yes. His answer: Yes
-- How many references of those clients will you be able to provide? Ideal answer: 1. His answer: 6
-- Do you have experience in dealing with US clients? Ideal answer: Yes. His answer: Yes
+- How many implementations have you had complete ownership of, from end to end, with US clients? Ideal answer: 1. Her answer: 8
+- Do you have experience in implementing software into businesses? Ideal answer: Yes. Her answer: Yes
+- How many references of those clients will you be able to provide? Ideal answer: 1. Her answer: 8
+- Do you have experience in dealing with US clients? Ideal answer: Yes. Her answer: Yes
 
-Assistant: Prashant Pandji — QUALIFY on hard requirements, but flagging a real practical-fit risk. Score: 6/10.
+Assistant: Vaishnavi Upadhye — DISQUALIFY (borderline). Score: 4/10.
 
-Hard requirement 1 (personally implemented ERP) — met, strongly and repeatedly, across 18 years and multiple SAP versions (R/3, ECC, S/4HANA MM). This is the deepest, most extensively documented hands-on ERP implementation background of anyone reviewed so far.
+Hard requirement 1 (personally implemented ERP/CRM) — thin. Her actual implementation experience is HRMS (HR software) at The Digital Group, and only since 2024 — about 2 years, one employer, one data point. Everything before that (2021–2024, three years) was Talent Acquisition and HR Operations — recruiting and HR admin work, not software implementation at all. So while the current role genuinely counts as "similar" to ERP/CRM per the JD's own language, the actual depth of implementation experience here is the shallowest of any QUALIFY-leaning candidate reviewed — a fraction of what Jeevaanantham, Kislay, Nandita, Arpan, or Prashant bring.
 
-Hard requirement 2 (hands-on technical) — met, arguably exceeded. BAPI/BADI custom development, IDoc troubleshooting (SAP's system-to-system data interchange mechanism, functionally similar to what EDI/API work does elsewhere), data migration. This is genuine deep technical configuration work, not consultant-speak.
+Hard requirement 2 (hands-on technical: SQL/APIs/webhooks/data mapping) — weak. Data migration and data cleansing are mentioned, but there's no explicit SQL or API/webhook evidence anywhere in the résumé. This is a real gap, not just an unstated one.
 
-Hard requirement 3 (training non-technical users) — plausibly met but generically evidenced ("repeatedly delivered end-user training"), no specifics on how resistant or non-technical those users were.
+Hard requirement 3 (training non-technical users) — reasonably evidenced: client workshops, end-user training, SOP/documentation prep.
 
-Hard requirement 4 (job stability) — excellent on paper: 11 years at QAD as Senior Service Delivery Consultant is exceptional stability, and the rest of the career shows multi-year tenures.
+Hard requirement 4 (job stability) — this is the disqualifying issue. Four employers in five years (2021–2026), with three consecutive ~1-year stints (Haul Plus, Xoriant, T-Systems) before landing in the current Implementation Engineer role. That is exactly the job-hopping pattern your hard requirements say to screen out. It reads as a career pivot from recruiting into implementation rather than random hopping, which is a mitigating context, but the pattern itself is real and recent, and the current role is also the shortest track record of "proof it stuck" among the candidates reviewed so far.
 
-Nice-to-haves: solid distribution/MRO/supply-chain exposure per his background (automotive, pharma, supply chain, distribution, MRO), though not the specific steel/metals/lumber verticals. Not early-stage — his entire 18-year career is at established SAP consultancies and large enterprises (QAD, Tech Mahindra, Arista Consulting), the opposite end of the spectrum from a small early-stage SaaS company.
+Nice-to-haves: no industrial/distribution experience (HR tech only). Not clearly early-stage (Digital Group is a mid-sized IT services/consulting firm, not a startup).
 
-The real concern isn't the hard requirements — it's fit. This is an 18-year senior SAP MM specialist whose entire career has been enterprise-scale, long-cycle ERP rollouts at large organizations. AskCruz needs someone doing fast, hands-on onboarding of 15-50 person distributors, wearing many hats in a small, scrappy team — a very different pace, scope, and working style from senior SAP consulting. That mismatch usually shows up as compensation expectations well above what this role likely pays, and a real risk the work feels like a step down in scope for someone at this level, leading to a short tenure. Worth noting separately: he shows "Infinite Locus, 2026–Present" as his current role, meaning he joined a new employer earlier this year and is already applying elsewhere within months — that's worth asking about directly, since it could mean the new role isn't working out, or it could be a legitimate reason unrelated to fit.
+Screening question answers — 8 implementations owned end-to-end with US clients, 8 references, both against an ideal of 1 — are identical to each other, similar to a pattern seen with two other candidates in this batch. Worth treating with real skepticism here specifically: claiming 8 full end-to-end owned implementations within roughly 2 years of implementation-titled experience is a stretch unless she was running several small parallel projects, and it's inconsistent with the depth her résumé bullets actually show. This is a case where I'd want that number explained, not assumed.
 
-Screening answers (6 implementations, 6 references, both against an ideal of 1) look like genuine, specific numbers rather than defaulted noise, consistent with someone at this experience level.
-
-Net: strong on paper against the stated hard requirements, but I'd treat this less as a clean pass and more as "worth a screening call specifically to test seniority/compensation/pace fit before investing further" — the technical bar is cleared, the practical fit is the open question.</content>
+Net: the combination of a genuine, recent (three-job-in-three-years) stability concern, a still-thin implementation track record, and an unverified/technical gap on SQL and APIs pushes this below the bar as written. If you want to keep her in consideration despite the hopping pattern — for instance if the recruiting-to-implementation pivot story is compelling on a call — that's a judgment call worth making deliberately, not one the résumé earns on its own.</content>
