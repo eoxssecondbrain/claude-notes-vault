@@ -7,39 +7,67 @@ updated: 2026-08-25
 ---
 
 **User:**
-I'd flagged the 7-day subscription renewal as a genuinely new burden Gmail doesn't have. That's wrong — I checked, and Gmail's own watch() call expires on the same 7-day ceiling and also needs a proactive renewal job before then, with no auto-renew either. So that piece isn't new engineering, it's the same problem you've already solved once, just against a different endpoint.
-
-We cant have 7days window for renewal, doesnt make sense. It has to be a one time thing.
-
-Account label convention for Outlook mailboxes — proposing the same shape as Gmail's, e.g. 3gm_owner_outlook.
-
-Expand on this point
-
-Migration file numbering — the Gmail schema stops at 028_oauth_pkce_verifier.sql, so new ones presumably start at 029, but that assumes nothing else has landed since; Claude Code should check the actual migrations folder rather than assume.
-
-Expand on this as well
+I am ok with 60secs delay, as long as system runs smooth. Given this info, make a final prompt on which claude code can build this automation..
 
 **Assistant:**
-Fair pushback, but worth being precise about why: neither Microsoft nor Google actually sell a "set once, never renew" push subscription. It isn't a gap in this design — it's how both platforms work, on purpose. A webhook subscription that never expired would mean an app could keep getting live mail data forever with no periodic proof it's still authorized, still running, still has a live endpoint. Both vendors deliberately force a renewal heartbeat instead of offering a permanent option. There's no setting on either side that buys "one-time."
+[Wrote and saved the final build prompt to /mnt/user-data/outputs/outlook-oauth-automation-build-prompt.md, presented to the user, and summarized it in chat.]
 
-So "no renewal, ever" and "push notifications" can't both be true on these platforms. But there's a real way to get the outcome you actually want — no subscription lifecycle to babysit — without giving up much on speed.
+Final locked decisions baked into the prompt:
+- Microsoft Graph official APIs only, no third-party platform, no MCP servers.
+- No push subscriptions/webhooks/renewal jobs — real-time replaced with Microsoft Graph delta query polling every 60 seconds (confirmed accepted by user), using the same mechanism for both historical backfill (first call, no cursor = full paginated backfill) and ongoing sync (subsequent calls replay the saved @odata.deltaLink cursor).
+- Scope: this targets 3GM's own new, separate AskCruz database/deployment only — explicitly does not touch or extend EOXS's internal eoxs-db/Cruz knowledge base (a different, separate deployment with its own Gmail/Zoho/Fireflies/Fathom sources, confirmed via the AskCruz self-knowledge architecture asset in Raj-Vault).
+- Account label convention: <client_slug>_<person>_outlook, e.g. 3gm_travis_outlook, 3gm_jessica_outlook (not a single shared "owner" label, since 3GM's accepted scope covers two distinct mailbox owners).
+- Dedup: unique constraint on Microsoft Graph's internetMessageId field, with a provenance-tracking join table (outlook_message_sightings) recording every mailbox that received a copy of the same message, rather than silently discarding that information — reasoning tied to the AskCruz architecture's own citation-checking pipeline stage, which needs per-source provenance.
+- Instructed Claude Code to check for and defer to a real docs/raw-ingestion.md schema convention in 3GM's actual deployment if one exists, rather than treating the proposed sightings-table schema as fixed.
+- Open questions flagged in the prompt for Claude Code to raise rather than assume: whether 3GM's own repo already has an existing OAuth connect flow to mirror, whether an EOXS Microsoft Entra tenant already exists, whether 3GM is confirmed to be on Microsoft 365/Exchange Online, and whether a real raw-ingestion doc exists with a different schema convention.
 
-Microsoft Graph has a separate, pull-based mechanism called delta query, built for exactly this. No subscription object, no /subscriptions call, no expiration clock, no webhook route, no validation handshake, no clientState. You call GET /me/mailFolders('inbox')/messages/delta on a schedule you control, and each response hands you a cursor (@odata.deltaLink) to replay next time — Graph returns only what changed since then (save and use the @odata.deltaLink URL to synchronize the same folder in the next round). There's no calendar-based expiry the way a subscription has — the cursor only goes stale if you stop polling for an extended stretch (delta cursors are not permanent; if a folder sits unsynced too long, the server discards the tracking state, and the required recovery is to discard the stored deltaLink and start a fresh delta cycle). If you're the one polling on a fixed interval for your own reasons, that staleness case never comes up.
+Full content of the final build prompt file (as written to /mnt/user-data/outputs/outlook-oauth-automation-build-prompt.md):
 
-What that buys you: poll every 60 seconds and mail shows up within a minute, with nothing to ever renew. Compare that to Microsoft's own published latency for the webhook route — under a minute average, up to 3 minutes worst case. A 60-second poll isn't meaningfully slower than push in practice; it just trades a small amount of polling overhead for zero subscription-lifecycle engineering.
+# Build brief: 3GM Outlook/Microsoft 365 ingestion for AskCruz
 
-And it turns out Gmail has the identical fork already built into its own docs — Google explicitly documents a pure poll-based alternative to watch()/Pub/Sub, using history.list on a timer with no watch() call at all (for notifications to user-owned devices, the poll-based Synchronize clients with Gmail API guide is still the recommended approach to retrieve updates). So this isn't a Microsoft-only fallback — both platforms offer the same trade: push (fast, but needs a renewal heartbeat forever) versus poll-with-a-cursor (slightly less instant, but genuinely one-time to set up and forget).
+## Context — read before writing anything
 
-My recommendation: build the "real-time" half on delta-query polling instead of Graph subscriptions and webhooks. That removes the webhook route, the subscription table, the renewal job, and the lifecycle-notification handling from the build entirely — what's left is a timed GET call with a saved cursor, architecturally close to the existing scheduled sweep, just running every 60 seconds instead of on a longer interval. Want me to rewrite Part 2 of the build prompt around that instead of the subscription/webhook design?
+3GM Steel is getting its own dedicated AskCruz deployment, on its own new, separate database. This build does not touch, extend, or share schema with EOXS's internal eoxs-db / Cruz knowledge base — that is a different deployment entirely, with its own Gmail/Zoho/Fireflies/Fathom sources, and nothing here should modify it.
 
-Account label convention, expanded
+Before writing any code:
+1. Check whether 3GM's own repo/deployment already has an existing OAuth connect flow (Gmail, Zoho, or otherwise) to mirror conventions from. If one exists, match its naming, error handling, file layout, and logging style exactly.
+2. If no existing connect flow exists in this deployment yet, mirror the general pattern described below — it's based on a working Gmail OAuth implementation elsewhere in the company (one-click consent link, PKCE, server-side refresh-token storage, plain confirmation page) — but implement it fresh, against 3GM's own database.
+3. Look for a raw-ingestion / storage-architecture doc in this deployment (something like docs/raw-ingestion.md or docs/postgres-database.md). If one exists, follow its schema conventions for the dedup/provenance table below rather than inventing a new shape — this brief proposes a reasonable default, not a mandate, in case one isn't found.
 
-account_label is the unique key in oauth_accounts — it's what shows up in the CLI invite command, in logs, in the confirmation page copy ("<name>'s Outlook is connected"), and in any audit trail. It isn't part of the URL the client clicks (that's a random opaque token), so it doesn't need to be URL-safe, but it does need to be globally unique across the whole table — not just unique per client — since the column has a single UNIQUE constraint with no client-scoping.
+## Goal
+Give a 3GM mailbox owner a one-click Microsoft consent experience — click a link, log into Microsoft directly, approve read-only mail access — after which their full mail history gets pulled into 3GM's AskCruz raw ingestion layer, and new mail keeps landing automatically going forward, with duplicates across multiple connected 3GM mailboxes collapsed to one record.
 
-The Gmail doc's own example, 3gm_owner_gmail, works for a single shared inbox. But the accepted AskCruz proposal for 3GM is explicitly a reduced 2-user scope, which means two separate mailboxes get connected, not one generic "owner" inbox — so a single 3gm_owner_outlook label would be wrong for this client specifically. Better shape: <client_slug>_<person>_<provider> — so, using the two of Jessica Worley, Leslie Countryman, and Travis Lane who end up in scope, something like 3gm_travis_outlook and 3gm_jessica_outlook. The provider suffix mirrors Gmail's own pattern of naming after the protocol (_gmail, presumably _zoho), not the vendor (_google) — so _outlook, not _microsoft365 or _m365. That also keeps the door open cleanly if the same person ever gets a second mailbox on a different provider later — 3gm_travis_outlook and 3gm_travis_gmail wouldn't collide.
+## Decisions already made — do not re-litigate these
+- Microsoft Graph official APIs only. No third-party unified email platform — client mail data does not flow through any vendor besides Microsoft.
+- No MCP servers, no external connector SDKs. Direct HTTPS calls to Microsoft's identity platform and Graph API.
+- No push subscriptions, no webhooks, no /subscriptions API, no renewal job, no lifecycle-notification handling. Real-time delivery is via polling, not push.
+- 60-second poll interval is accepted and confirmed. Do not tighten or loosen it without checking back.
+- No calendar or contacts sync. Mail only, read-only, one direction.
 
-Migration numbering, expanded
+## Part 1 — OAuth connect flow
+New module: oauth_outlook. CLI invite command generates a random, single-use, expiring token. Account label convention: <client_slug>_<person>_outlook, e.g. 3gm_travis_outlook, 3gm_jessica_outlook. GET /oauth/outlook/connect builds the Microsoft authorization URL (login.microsoftonline.com/common/oauth2/v2.0/authorize, scope openid offline_access https://graph.microsoft.com/Mail.Read, PKCE S256, prompt=consent). GET /oauth/outlook/callback exchanges the code, checks for refresh_token (hard error if missing), upserts into account storage with source_type='outlook', triggers initial backfill. One-time app registration: Entra app, multitenant + personal accounts, Web platform, redirect URI registered exactly, new env values OUTLOOK_OAUTH_CLIENT_ID/SECRET. Note: confirm 3GM's Microsoft 365 tenant consent policy and admin contact before sending the first real invite link.
 
-The concern isn't cosmetic. If a migration runner applies files in strict numeric order and two people each pick "029" for unrelated changes, you get either a silent collision (one file gets skipped or overwritten depending on the tool) or a hard failure at deploy time. The 028 ceiling I can see comes from a snapshot doc, not a live view of the repo — and this is clearly an actively developed codebase (task 309 itself was opened yesterday), so there's a real chance something has landed at 029 or beyond since that doc was written, from a completely unrelated piece of work.
+## Part 2 — Backfill + ongoing sync (single mechanism, no webhooks)
+New module: outlook_fetcher, using Microsoft Graph delta query. sync_mailbox looks up stored delta cursor; if none, full paginated backfill via /me/mailFolders('inbox')/messages/delta; if cursor exists, incremental sync via that cursor. Save new deltaLink after each run. On 410/stale cursor, discard and re-run full backfill, logging it. Scheduler runs sync_mailbox for every connected outlook account every 60 seconds. Standard access-token refresh via stored refresh_token. Alert on repeated sync failures for a mailbox (likely revoked access, discovered reactively since there's no webhook lifecycle signal). Rate limits not a concern at this scale.
 
-There's a second wrinkle beyond "check the folder": some migration tools track applied migrations in a database table (commonly something like schema_migrations) rather than relying purely on filenames on disk. If that's how this repo works, a number could look free in the directory listing while actually being reserved or mid-flight on another branch — checking only the filesystem wouldn't catch that. So the instruction to Claude Code should be: inspect the actual migrations directory and, if the repo uses a migration-tracking table, check that too, and take the next number confirmed free by both — never hardcode a specific number into the prompt itself, since by the time this prompt gets executed the true next-free number may have moved.
+## Part 3 — Deduplication across mailboxes
+Unique constraint on internet_message_id (Microsoft Graph's internetMessageId field). Default recommendation: track provenance via a join table rather than silently discarding it:
+CREATE TABLE outlook_message_sightings (id SERIAL PRIMARY KEY, internet_message_id TEXT NOT NULL, account_label TEXT NOT NULL, seen_at TIMESTAMPTZ NOT NULL DEFAULT now(), UNIQUE (internet_message_id, account_label));
+Table/column names should match a real docs/raw-ingestion.md convention if found. Rationale: the pipeline's citation-checking stage may need to reference which mailbox specifically received a copy.
+
+## Deliverables
+OAuth connect flow module, fetcher/sync module, schema for account storage + delta cursor + message-sightings join table, setup documentation covering Entra app registration and the 3GM tenant-consent caveat.
+
+## Acceptance criteria
+1. Invite link redirects to a real Microsoft consent screen scoped to Mail.Read only.
+2. Completing consent produces a stored refresh_token and triggers a full backfill.
+3. New test email ingested within roughly 60-90 seconds, no manual trigger.
+4. Same email sent to two connected 3GM mailboxes produces one canonical record, two sightings rows.
+5. Forced 410/stale-cursor response recovers via fresh full resync rather than failing permanently.
+6. Revoking app access causes the next poll cycle to fail loudly (alert fires), not silently.
+
+## Open questions to raise back, not guess at
+- Does 3GM's own deployment/repo already have an existing OAuth connect flow to mirror, or is this the first one built for it?
+- Does EOXS already have a Microsoft Entra tenant to register the app in?
+- Is 3GM's mail actually on Microsoft 365 / Exchange Online?
+- Does a real docs/raw-ingestion.md-equivalent exist in 3GM's deployment with a different schema convention than the sightings-table default proposed above?
