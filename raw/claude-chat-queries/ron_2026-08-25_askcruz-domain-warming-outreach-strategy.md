@@ -1,0 +1,41 @@
+---
+thread_name: "askcruz-domain-warming-outreach-strategy"
+user: "ron"
+type: claude-chat
+created: 2026-08-25
+updated: 2026-08-25
+---
+
+User: At AskCruz, we are thinking about running a strategy where we have the AskCruz domain, but we cannot use that to outreach to the clients. We are thinking about buying 100 domains and outreaching by creating two emails in each of the AskCruz domains. We set up two emails on each of those domains.
+
+1. We have them talk to each other so that it builds some SEO or some sort of presence.
+2. After those domains have started talking to each other, if we send an email to someone right now and it's a new domain, it asks if it looks safe or not. We can do all of that and ensure that that email is in good standing.
+3. After doing that, we can outreach to prospects outside the industry.
+
+ We won't actually be doing mass emails from all those 100 emails. We will be sending two to five emails, something like that, from each of the emails that are set up. If we have 100 domains, we set up two emails each on all of them, and that brings us to 200 emails. We say that if we send out two to five emails every single day, we can send upwards of 400 emails or 1,000 emails. We have AskCruz set up on MailKav right now, and it is on a server on Contabo. What we are trying to understand is if this can be set up now. I first understand all of this and then go from there.
+
+Assistant: No user skill here maps cleanly to this — it's not a specific client account, not email drafting for a client, and not a data lookup on eoxs-db/eoxs-teams/askcruz. This is a general infra/strategy question. Flagging that per your instruction rather than guessing a skill to run.
+
+Here's my read of the plan as you've described it, before I go further:
+
+**What you're describing:**
+1. Buy ~100 domains (not askcruz.com), set up 2 mailboxes on each → 200 mailboxes total.
+2. "Warm" each domain/mailbox by having the mailboxes email each other for some period, to build sending reputation (you said "SEO" — worth flagging: this isn't SEO, it's email/domain reputation warming, a different mechanism entirely — inbox providers score a sending domain/IP based on engagement signals, not search ranking).
+3. Once warmed, use each mailbox to send 2–5 emails/day to prospects outside the steel industry, so 200 mailboxes × 2–5/day = 400–1,000 emails/day in aggregate, while each individual mailbox stays under spam-trigger volume.
+4. Infra: currently on Mailcow, self-hosted on Contabo, already running AskCruz's transactional mail.
+
+**Things I'd flag now, before we go deeper:**
+
+- **"Talking to each other" isn't real warmup.** Two mailboxes you control exchanging email doesn't generate the engagement signals (opens across diverse real inboxes, replies from unrelated humans, being pulled out of spam by a real recipient) that Gmail/Outlook/Microsoft actually use to score a new domain. Real warmup services (Instantly, Smartlead, Mailreach-style networks) work because they route through thousands of *other people's* real mailboxes, not a closed loop of two boxes you own. A closed loop can even look more suspicious to spam filters (identical send/receive patterns, same server, same time-of-day) than doing nothing.
+- **Shared infrastructure risk.** If all 100 domains sit on the same Contabo IP(s)/Mailcow instance as AskCruz's real business mail, one blacklisted domain or IP-level reputation hit can drag down deliverability for askcruz.com itself. This is usually why people isolate cold-outreach domains on separate IPs/infra from their primary brand domain.
+- **This is a cold-email compliance area (CAN-SPAM, CASL, GDPR depending on who you're emailing) I can help you think through structurally, but I'm not able to advise on the legal risk itself — that's worth a lawyer's read given you'd be doing volume outreach under domains that aren't your brand.
+- **Scope check against the actual goal:** your stated objective is AskCruz to $1M ARR in 12 months. "Outreach outside the industry" is a pivot from steel-industry prospects — is that intentional (testing a new market) or scope creep from the core motion? Worth being explicit about which.
+
+Given this touches feasibility (does Mailcow/Contabo support it), strategy (is this the right move for AskCruz), and risk (deliverability, legal, brand) — pick a rigor level for how deep you want this:
+
+- **5ft** — quick take: is this technically doable on your current Mailcow/Contabo setup, straight answer.
+- **10ft** — verified: same, but I check actual Mailcow domain/mailbox limits, Contabo IP reputation practices, and cross-check against how real cold-email infra is typically architected.
+- **50ft** — deep: full investigation — technical feasibility, deliverability risk to your existing askcruz.com mail, legal/compliance angle, cost of 100 domains + hosting, and whether "outside industry" outreach fits your $1M ARR path, with sourcing.
+- **100ft** — staged version of the above, delivered section by section.
+
+Which one?
