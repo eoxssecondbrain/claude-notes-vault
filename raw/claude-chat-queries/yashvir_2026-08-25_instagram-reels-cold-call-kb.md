@@ -89,3 +89,26 @@ Gave a final honest breakdown:
 [Created and shared file: /mnt/user-data/outputs/reel_prep.py — the validated frame-extraction + contact-sheet automation script, with dedup left present in code but disabled and documented as unreliable.]
 
 Closed by inviting the user to send the next batch of reels, multiple videos in one message, for Claude to run reel_prep.py on all of them before reading and updating the KB.
+
+---
+
+User: What my role here and what does the agent do?
+
+Assistant: Your role:
+- Scroll Instagram, spot a reel worth keeping (the judgment call — this is the one thing that isn't automatable).
+- Download it.
+- Batch-upload the files to me (ideally several at once, not one at a time).
+
+The agent's role (reel_prep.py):
+- Takes the raw video files.
+- Extracts frames via ffmpeg.
+- Assembles them into contact sheets (grid images) for fast visual scanning.
+- That's it — it does not read the captions, and it does not decide what's a good opener. It's pure mechanical prep.
+
+My role (not automated, still a live chat turn):
+- Read the contact sheets the script produces.
+- Reconstruct each spoken/on-screen line.
+- Write the structured KB entry (opener line, structure tags, "why it works," pattern notes).
+- Append it to your KB file and hand it back.
+
+So the division is: you curate and supply raw material, the script does grunt-work formatting, I do the actual reading and judgment. Nothing in this pipeline runs unattended in the background — every batch still needs a chat turn from you and one from me.
