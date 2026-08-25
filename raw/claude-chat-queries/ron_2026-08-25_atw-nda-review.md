@@ -65,3 +65,19 @@ Best,
 Ron
 
 Calibrated at level 2 (standard) — routine coordination, no reason to push warmer or firmer for a first-touch NDA send. Want it warmer given it's a new relationship, or more direct with a turnaround ask attached?
+
+User: GIve me a short email where it is just like attached is the NDA
+
+Assistant: [Drafted email via message_compose_v1]
+Subject: NDA — EOXS / American Train Works
+
+Hi Monty,
+
+Attached is the NDA between Prata Inc. and American Train Works for your review and signature.
+
+Let me know if you have any questions.
+
+Best,
+Ron
+
+Level 2, stripped down.
