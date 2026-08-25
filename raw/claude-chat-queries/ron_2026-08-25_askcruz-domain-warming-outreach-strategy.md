@@ -73,3 +73,18 @@ Can all 100 domains sit on the one server we already have (the Mailcow/Contabo b
 The teams that actually run this kind of infrastructure at scale typically use 3–5 rotating domains with 4–6 mailboxes each, capped around 40–50 sends/day per mailbox — not 100 domains at 2 mailboxes/2–5 sends. 100 separate domains is a much bigger operational lift (100x DNS/SPF/DKIM/DMARC records to maintain, 100 renewals to track) for a similar total volume you could get from far fewer domains. Worth asking devops whether fewer domains with more mailboxes each gets you the same 400–1,000/day capacity with a fraction of the maintenance overhead.
 
 Let me know if you want me to turn this into an actual message to send to your devops person, or if you want to go deeper on any piece (warmup timelines, DNS setup checklist, provider comparison).
+
+User: Not AskCruz, but the domain can be something similar, like AskCruz Marketing, AskCruz Email, something like that.
+
+Assistant: Good clarification — that changes the picture a bit. A few things worth flagging on this specific choice:
+
+**Why brand-adjacent naming (askcruzmarketing.com, askcruzemail.com, etc.) is actually the more common approach** — it lets a suspicious recipient look the domain up and see it's tied to a real company, which helps legitimacy more than a fully unrelated domain would.
+
+**Two trade-offs to know about, though:**
+
+- **It doesn't protect the AskCruz brand the way a fully separate domain does.** The whole point of domain isolation is that if a domain gets blacklisted or spam-reported, your real domain's reputation stays untouched. That's still true technically here (SPF/DKIM/domain reputation are genuinely separate per domain). But brand-perception isn't isolated — if "askcruzmarketing.com" gets flagged as spam, anyone looking into it sees "AskCruz" in the name. You get technical isolation but not reputational isolation.
+- **Registering many domains that all contain the same brand word, around the same time, is itself a pattern.** It's structurally identical to what brand-impersonation/typosquat detection tools are built to catch (that's normally used against people spoofing *you*, not by you). Worth having devops check whether any brand-protection or DMARC monitoring is already watching askcruz.com for lookalikes, so we're not tripping our own alarms.
+
+Given the naming is brand-tied, you likely don't need 100 separate ones — a handful of well-chosen variants (askcruzmarketing.com, askcruzoutreach.com, getaskcruz.com, etc.) with more mailboxes each gets you the same daily volume with far less DNS/DKIM/maintenance overhead, and ties back to the scale point from before.
+
+Want me to fold this into the devops write-up as an update, or draft a short list of naming options to run by devops/legal first?
