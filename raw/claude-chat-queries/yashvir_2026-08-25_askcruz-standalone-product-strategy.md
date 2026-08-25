@@ -61,3 +61,47 @@ Still need from you before I go further:
 2. Is this prep for a pitch to Rajat, or are you assuming you'd own execution?
 3. Any constraint on touching the spinout topic, given it's already been referenced to Sabre Alloys unresolved?
 4. Rigor level — 5ft / 10ft / 50ft (from earlier).
+
+User: So i have recently been hired as a Lead Generation Rep. at askcruz from EOXS, i'm starting fresh here you can consider me a newbie who does not know anything about Lead Gen through cold calls,
+how we will treat askCruz as a seperate company like we did for EOXS.
+
+Assistant: That role detail resolves clarifying question 2 — this is your actual job now, not pitch-prep. Good, that's one down. Questions 1 and 3 are still open, and they're not academic for you specifically: when a prospect on a cold call asks "so is AskCruz part of EOXS, or a different company?" — you need one consistent answer, and right now the internal record doesn't have one. The wiki explicitly flags a contradiction: one AskCruz doc frames it as industry-agnostic (any business, any industry), another frames it as steel-industry-specific. That's not resolved. I won't invent an answer for you to say on calls — that has to come from Rajat, not from me guessing.
+
+So here's the split:
+
+Cold-calling mechanics — teachable right now, doesn't depend on the positioning question. Company identity/positioning script — needs Rajat's answer before you say it to a prospect with confidence.
+
+Starting with the mechanics, since you're new to this end to end:
+
+[step_card: Cold-calling and lead-gen fundamentals for a first-time LDR — Nail your one-liner; Build a verified list; Open with a reason, not a pitch; Qualify before you pitch; Handle the brush-off, don't argue with it; Always leave with a specific next step; Log the call immediately; Track your numbers weekly]
+
+That's the mechanics — mostly universal, works regardless of what AskCruz ends up being positioned as.
+
+The bigger question you asked — "how we will treat AskCruz as a separate company like we did for EOXS" — is not something I can answer for you. That's a structural/legal decision (new entity, new brand, separate P&L) that sits with Rajat, not something to reverse-engineer from records or invent as a training exercise. What I can tell you accurately: it's been referenced internally and to at least one prospect (Sabre Alloys), but never confirmed or resolved. Treating it as settled in your calls would be saying something to a prospect that isn't actually true yet.
+
+Practical next step: before you're on live calls, get one thing from Rajat — the actual one-liner for what AskCruz is and its relationship to EOXS. Everything else in the framework above you can start practicing today without that.
+
+User: So before we jump onto building stratergy, i want to clerify few things with you first and then once all my queries are resolved we'll come to your queries and once your'e quaries are resolved we'll jump onto building stratergy when i say "Let's build stratergy"
+
+Assistant: Understood — I'll hold my clarifying questions and the rigor-level pick until you've gone through yours. Go ahead.
+
+User: Alright, great.
+Since this is my first day at AskCruz, i want to understand how the sales process work at EOXS?
+
+Assistant: EOXS's ERP sales process, from what's on record, runs in six stages:
+
+1. Pre-sales qualification (RQL) — owned by the Data Team, runs before any outreach even happens. A prospect must pass every hard criterion: verified website + LinkedIn matching the company name; HQ in US/Canada; sells qualifying steel/metal products (bars, coils, plates, sheets, rods, tubes, beams, rebar, strips, roofing materials) in qualifying materials (steel, aluminum, copper, and similar); 15+ LinkedIn members; isn't itself a steel mill. Fail any hard criterion and the company is disqualified immediately — no outreach.
+
+2. ICP — steel/metals distributors and service centers in North America, 10–200 employees (widened from 50–500 in June 2026), running legacy or generic ERP not built for metals workflows. Pain points: coil tracking, cut-to-length processing, heat/cert management, mill test reports, no real-time cross-location inventory visibility.
+
+3. Discovery and demo — outreach to a qualified lead, discovery call, product demo.
+
+4. Post-demo cadence — a structured multi-touch sequence follows the demo. The documented template runs ~13 days across 7 calls interleaved with emails: demo summary → pain-point email → "Evolution of ERP" email → objection-handling call paired with a video → "Why buy from EOXS" email → testimonial/success story → proposal. Caveat: this specific template is dated 2021 — it shows the pattern EOXS uses, but I haven't verified it's still the exact cadence in use today.
+
+5. Proposal, negotiation, close — tracked in CRM (Odoo). Deals get recorded won/lost/in-progress with expected revenue.
+
+6. Commercial handoff to Implementation — once closed, Sales must give Implementation a written handover before any delivery work starts: signed agreement, pricing, modules/locations/user groups included, deliverables promised during sales, exclusions, target dates, decision-makers. This is governed by a formal SOP (v1.0 Draft, June 2026, still pending formal leadership approval per its own document control table) that runs iterative implementation cycles — six example cycles: product/purchasing → inventory → sales orders/quotes → processing → AR/AP/financials → exceptions/stabilization — with progressive go-live and a 6-month stabilization period before formal closure and handoff to support.
+
+Two things worth flagging as you learn this: the RQL/ICP gate is hard-coded to steel/metal products — that qualification logic doesn't transfer to AskCruz's cross-industry ambition as-is. And the post-demo cadence template is old enough (2021) that I'd confirm with Rajat or Ron whether it's still what's actually run today before treating it as current practice.
+
+Sources: RQL Qualification / SOP — Data Team RQL Qualification Checklist; Ideal Customer Profile; EOXS Post-Demo Sales Sequencing (2021 Template); Internal Operations (CRM pipeline export); EOXS Client Implementation and Go-Live SOP.
