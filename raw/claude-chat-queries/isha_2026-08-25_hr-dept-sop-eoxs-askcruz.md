@@ -6,25 +6,25 @@ created: 2026-08-25
 updated: 2026-08-25
 ---
 
-**User (turn 1):**
+**User (turn 3):**
 
 Create a professional and well-structured HR Department SOP for EOXS and AskCruz, based ONLY on the processes and information provided below.
 Important Instructions
 
 * Use EOXS and AskCruz as the company names throughout the SOP.
-* The SOP should be written for the HR Department.
-* The primary system/process should be Odoo.
+* The SOP is for the HR Department.
+* The primary HR management system is Odoo.
 * Do NOT add any HR processes, policies, rules, or steps that are not mentioned below.
 * Do NOT invent information.
-* Keep the language professional, simple, clear, and easy for an HR team member to follow.
-* Organize the SOP with proper headings, numbered steps, bullet points, checklists, and purposes.
-* Keep the process practical and step-by-step.
-* Maintain consistency in formatting throughout the document.
-* Where Cattr is mentioned, keep it as the employee working-hours tracking system.
+* Keep the language professional, simple, clear, and easy for HR team members to follow.
+* Organize the SOP with proper headings, numbered steps, bullet points, and checklists.
+* Keep every process practical and step-by-step.
+* Maintain consistent formatting throughout the document.
+* Cattr should be treated as the employee working-hours tracking system.
 * Use EOXS and AskCruz wherever company-specific references are required.
 * The final document should look like an official internal HR SOP.
 
-HR DEPARTMENT SOP – EOXS & ASKCRUZ
+EOXS & ASKCRUZ – HR DEPARTMENT SOP
 1. Recruitment & Hiring
 Purpose
 To manage candidates and hiring activities through Odoo.
@@ -70,6 +70,7 @@ Onboarding Checklist
 * Set up Cattr
 * Verify Cattr is working
 * Share required tools/access
+* Update the employee's Zoom background with the official EOXS or AskCruz Zoom background, as applicable
 * Introduce employee to the team
 * Complete onboarding confirmation
 
@@ -148,6 +149,25 @@ When an employee changes their role, department, manager, or salary:
 5. Upload the promotion/transfer letter.
 6. Inform the relevant teams.
 
+Intern to Full-Time Employee
+When an intern is promoted to a full-time employee:
+
+1. Obtain confirmation/approval for the promotion.
+2. Update the employee profile in Odoo from intern to full-time employee.
+3. Update the employee's:
+   * Job Position
+   * Department
+   * Manager
+   * Salary, if applicable
+   * Working Hours
+4. Record the effective date.
+5. Upload the promotion/full-time confirmation letter.
+6. Create a Zoho ID for the employee.
+7. For AskCruz, create/provide the employee's official AskCruz email ID.
+8. Set up the required EOXS Teams access.
+9. Ensure the employee has access to the required company tools and communication platforms.
+10. Inform the relevant teams.
+
 9. Resignation Process
 Process
 
@@ -195,7 +215,25 @@ Process
 * Odoo employee status updated
 * Employee documents archived
 
-Final Output Requirements
+12. EOXS & AskCruz Company Policies
+Purpose
+To ensure employees understand and follow the expected standards during company meetings and interactions with management.
+Policies
+1. Camera During Management Meetings
+
+* Employees must not turn off their camera while attending meetings with management.
+* Employees are expected to remain visible and engaged throughout management meetings unless there is a valid reason.
+
+2. Professional Conduct With Management
+
+* Employees must maintain professional and respectful communication when interacting with management.
+* Employees should not engage in gambling or betting with management.
+
+3. Zoom Background
+
+* Employees should use the appropriate official EOXS or AskCruz Zoom background during company meetings, as applicable.
+
+
 Create the final SOP as a professional HR document with:
 
 1. Title Page
@@ -203,62 +241,28 @@ Create the final SOP as a professional HR document with:
    * HR Department SOP
    * Odoo HR Management
 2. Table of Contents
-3. All 11 sections listed above in the same order.
+3. All 12 sections listed above in the same order.
 4. Clear headings and subheadings.
 5. Proper numbering for all processes.
 6. Checkboxes for onboarding and offboarding checklists.
-7. Consistent professional formatting.
-8. A clean corporate style suitable for sharing internally with the EOXS and AskCruz HR teams.
+7. A separate EOXS & AskCruz Company Policies section.
+8. A separate Intern to Full-Time Employee Promotion subsection.
+9. Consistent professional formatting.
+10. A clean corporate style suitable for sharing internally with the EOXS and AskCruz HR teams.
 
-**Assistant (turn 1):**
+Important: Do not add any information, policies, processes, or procedures beyond the content provided in this prompt.
 
-Loaded the threads-ov, eoxs-wiki-db, and docx skills, then built the HR Department SOP as a Word document using only the content provided by the user (no invented processes or policies).
+**Assistant (turn 3):**
 
-Document structure produced:
-- Title page: EOXS & AskCruz, HR Department SOP, Odoo HR Management System, document owner/classification/date block.
-- Auto-generated Table of Contents (Word field, set to auto-update on open via `updateFields`).
-- Section 1: Recruitment & Hiring — Purpose block, numbered steps (Applications → candidate fields → recruitment stages → interview feedback → documentation → employee profile creation).
-- Section 2: Employee Onboarding — Purpose block, full onboarding checklist with checkboxes (15 items, Cattr setup included).
-- Section 3: Employee Documents — Purpose block, bullet list of document types (Resume/CV, ID, Employment Agreement).
-- Section 4: Leave Management — Purpose block, 6-step Time Off request process.
-- Section 5: Attendance Management — Purpose block, 6-step attendance review process.
-- Section 6: Working Hours & Cattr Monitoring — intro line, 7-step HR process for Cattr account setup/monitoring.
-- Section 7: Payroll Management — Purpose block, 8-step salary review/processing steps.
-- Section 8: Employee Transfer / Promotion — 6-step process with sub-bullets for fields to update (Job Position, Department, Manager, Salary, Working Hours).
-- Section 9: Resignation Process — 10-step process with sub-bullets for management confirmation options.
-- Section 10: Termination Process — 10-step process.
-- Section 11: Offboarding Checklist — 13-item checkbox checklist.
+Updated the existing HR Department SOP (built earlier in this thread) to the new 12-section version, working strictly from the content the user provided — no invented processes, policies, or steps added.
 
-Formatting: navy/gold corporate color scheme, shaded "Purpose" callout boxes, numbered lists that restart at 1 per section (fixed a bug where numbering was continuing across sections — gave each section its own numbering reference), bullet sub-lists for grouped items, checkbox-style bullets (☐) for the two checklists, header/footer with page numbers, US Letter page size.
+Changes made to the existing docx build script:
+- Added "Update the employee's Zoom background with the official EOXS or AskCruz Zoom background, as applicable" as a new checkbox item in the Section 2 Onboarding Checklist (between "Share required tools/access" and "Introduce employee to the team", matching the order given).
+- Added a new "Intern to Full-Time Employee" subsection under Section 8 (Employee Transfer / Promotion), as its own h2 heading with an independent numbered list (10 steps: approval, Odoo profile update from intern to full-time, updating Job Position/Department/Manager/Salary/Working Hours, effective date, promotion letter, Zoho ID creation, AskCruz email ID, EOXS Teams access, tool/platform access, informing teams).
+- Added a new Section 12 "EOXS & AskCruz Company Policies" after Section 11 (Offboarding Checklist), with its Purpose statement and three numbered policy subheadings (Camera During Management Meetings, Professional Conduct With Management, Zoom Background), each with its bullet points reproduced exactly as given.
+- Registered a new numbering reference (`num-s8b`) so the Intern-to-Full-Time list restarts its own numbering at 1, independent of the main Section 8 list.
+- Rebuilt the static (non-field) Table of Contents to list all 12 sections plus an indented "Intern to Full-Time Employee" sub-entry under Section 8, with corrected page numbers after re-rendering to PDF and inspecting all 8 pages to determine exactly where each section now starts (title=1, TOC=2, Section 1–2=3, Section 2 cont./3/4=4, Section 5/6/7=5, Section 8 + Intern subsection=6, Section 9/10=7, Section 11/12=8).
 
-Verified by converting to PDF via LibreOffice and visually reviewing all 7 rendered pages (title page, TOC, and all 11 sections) — numbering, checklists, and headings all render correctly.
+Verified the rebuilt document by converting to PDF and visually reviewing all 8 pages — confirmed the new Zoom-background checklist item, the Intern-to-Full-Time subsection with independent numbering, the new Company Policies section, and the updated Table of Contents (with correct page numbers and the indented sub-entry) all render correctly, and that no other section's content or formatting was altered.
 
-Delivered the file to the user via SendUserFile as `HR_Department_SOP_EOXS_AskCruz.docx`, with a note that the TOC may need "Update Field" if it opens blank (Word field, populates correctly once opened/updated in Word).
-
-**User (turn 2):**
-
-could you please make it through your own now
-
-**Assistant (turn 2):**
-
-Interpreted this as: fix the TOC issue myself rather than requiring the user to manually "Update Field" in Word.
-
-First attempted to update the Word TOC field automatically by scripting LibreOffice via the UNO bridge (python3 with PYTHONPATH set to the LibreOffice program dir, connecting to a headless soffice instance over a socket, calling `doc.getDocumentIndexes()[i].update()` and `doc.store()`). This ran without error, but re-converting to PDF still showed a blank TOC — the docx round-trip through LibreOffice did not reliably cache the updated field text in a way that displayed correctly.
-
-Switched to a more reliable approach: replaced the dynamic Word TOC field entirely with a static, manually-built table of contents — one paragraph per section using `PositionalTab` with a right-aligned dot leader (not a Word field), so it always displays correctly in any viewer with no "update field" step required. Determined the correct page number for each of the 11 sections by rendering the document to PDF and visually inspecting all 7 pages:
-
-1. Recruitment & Hiring — page 3
-2. Employee Onboarding — page 3
-3. Employee Documents — page 4
-4. Leave Management — page 4
-5. Attendance Management — page 4
-6. Working Hours & Cattr Monitoring — page 5
-7. Payroll Management — page 5
-8. Employee Transfer / Promotion — page 6
-9. Resignation Process — page 6
-10. Termination Process — page 7
-11. Offboarding Checklist — page 7
-
-Rebuilt the docx with this static TOC (dot-leader Table of Contents entries, each title left-aligned and its page number right-aligned against the margin), removed the now-unnecessary `updateFields` document feature flag, and rebuilt. Re-converted to PDF and visually verified: the TOC page now shows all 11 section titles with dot leaders and correct page numbers, rendering immediately with no manual action needed. Also re-checked the title page and section 1/2 content pages to confirm nothing else was affected by the edit.
-
-Delivered the corrected file to the user via SendUserFile with a note that the table of contents now displays correctly on open.
+Delivered the updated file to the user via SendUserFile as `HR_Department_SOP_EOXS_AskCruz.docx`.
