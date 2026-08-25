@@ -6,30 +6,62 @@ created: 2026-08-25
 updated: 2026-08-25
 ---
 
-User: Now, I need you to create an NDA for this person in the business card. This is the one that we had already, and I just changed the company name, address, date, and other information in it. Can you please check if everything looks correct? It's a standard NDA that EOXS sends.
+User: What should I change in this? Should I just remove for Sabre Alloys in the template?
 
-[User uploaded: business card image for Monty Hill, SVP of BD & Innovation, American Train Works (ATW), 599 County Road 3706A, Splendora, Texas 77372, mhill@atwteam.com, www.atwteam.com, (903) 229-1369]
+Assistant: Swapping just the name doesn't fix it — Section 9 is describing a specific arrangement (audit access to source code for inventory valuation and control tag accounting), and that context has to actually apply to ATW, not just the name in it.
 
-[User uploaded: NDA_-_ATW.pdf — a Mutual Non-Disclosure and Confidentiality Agreement between Prata Inc. and American Train Works (ATW), Effective Date 08/25/2026, signed on behalf of Prata Inc. by Rajat Jain (Founder & CEO), ATW signature block blank. Contains standard NDA clauses 1-8 (definition of confidential information, obligations, disclosure, use, term, notice of breach, remedies, general), plus Section 9 "LIMITED SOURCE CODE ACCESS FOR AUDIT PURPOSE" which references an audit "to review and analyze inventory valuation, control tag accounting, and related accounting logic for Sabre Alloys."]
+So the real question is: does ATW have (or need) any source-code audit access from EOXS?
 
-Assistant: A few things checked against the business card — most of it lines up, but there's one real problem.
+- If no — delete the whole Section 9, not just "for Sabre Alloys." A leftover audit-access clause for a scenario that doesn't exist is confusing at best and could be read as granting rights nobody intended to grant.
+- If yes, but for a different reason (e.g. they're auditing something other than inventory valuation/control tag logic) — rewrite the whole paragraph around what ATW is actually auditing, not just find-and-replace the client name.
 
-Matches the card correctly:
-- Party name: American Train Works (ATW)
-- Address: 599 County Road 3706A, Splendora, Texas 77372
-- Effective date: 08/25/2026 (today)
-- Prata Inc. is EOXS's legal entity name for contracts like this, so that's expected, not an error
+Which is it — is there an actual audit arrangement with ATW, or was this NDA just repurposed from the Sabre one as a base template?
 
-Problem — Section 9 (Limited Source Code Access for Audit Purpose):
-This entire clause is still written for Sabre Alloys, not ATW. Section 9(a) literally says the audit is "to review and analyze inventory valuation, control tag accounting, and related accounting logic for Sabre Alloys." This is leftover from whatever NDA you copied this from — it wasn't updated when you swapped the company name elsewhere. You need to either:
-- Delete Section 9 entirely if there's no source-code-audit arrangement with ATW, or
-- Rewrite it to reference ATW's actual situation, if there is one
+User: I'm Aijani with standard and NDA. How about I just remove for cyber alloys for now? We'll get to the nitty gritty later.
 
-This is the kind of clause a counterparty's lawyer would flag immediately, and sending it as-is would look sloppy and expose an unrelated client's name to a third party — that's a confidentiality problem in its own right.
+Assistant: Just deleting "for Sabre Alloys" and leaving the rest isn't safe — you'd be left with an audit clause that grants source-code access "for inventory valuation, control tag accounting, and related accounting logic" with no defined trigger or scope. That's not a placeholder, it's an active grant of rights that would now apply to nothing in particular, which is worse than having no clause at all.
 
-Minor asymmetry — signature block:
-Prata Inc.'s side has "Name: Rajat Jain / Designation: Founder & CEO" typed in. ATW's side just says "(Signature of Authorized Signatory)" with no Name/Designation lines at all. Worth adding matching lines for ATW — you could prefill "Monty Hill, SVP of BD & Innovation" from the card, or leave them blank for them to fill, but the block should at least have the same structure on both sides.
+If you want to defer the specifics, the clean move is to cut Section 9 entirely for this NDA and add it back later as its own addendum once you know what ATW's audit arrangement actually looks like. That keeps the base agreement a standard mutual NDA (which is what you told me this is supposed to be) and doesn't leave an orphaned clause sitting in a signed document.
 
-Not flagged, but worth a gut check: jurisdiction is still "courts in Iowa and California" — if that's your standard boilerplate across all NDAs, leave it; just confirming it wasn't meant to be client-specific.
+Want me to produce the doc with Section 9 removed?
 
-This document-review task didn't cleanly match any of my listed skills (not a DPS/Sabre strategy call, not an email draft) — I used the EOXS vault only to confirm the Prata Inc./EOXS entity relationship, then reviewed the PDF directly.
+User: Then can this section be entirely deleted? Does this have the standard things that are required in an NDA?
+
+Assistant: Yes, Section 9 can be deleted cleanly — it's self-contained (a full numbered section from 9a through 9g), so removing it doesn't leave any dangling references elsewhere in the document. Nothing else depends on it.
+
+On whether what's left (Sections 1–8) is a standard, complete NDA — yes, it covers all the core pieces:
+
+- Definition of Confidential Information, with the standard carve-outs (already known, publicly available, independently developed, from a third party) — Section 1
+- Receiving party's obligations — Section 2
+- Permitted disclosure under legal compulsion — Section 3
+- Use restriction and no-license clause — Section 4
+- Term, survival of confidentiality post-termination, and return/destruction of materials — Section 5
+- Notice-of-breach duty — Section 6
+- Remedies, including injunctive relief — Section 7
+- General boilerplate: governing law, assignment, severability, independent-contractor relationship, amendment, entire agreement — Section 8
+
+One thing worth a conscious decision rather than an oversight: Section 5 makes the confidentiality obligation survive termination indefinitely — there's no fixed post-termination confidentiality period (e.g., 3-5 years), it just runs forever. That's legally fine and plenty of NDAs do this, but confirm it's actually your standard rather than something that should have a time limit.
+
+Everything else is standard. Want me to produce the cleaned-up docx with Section 9 removed?
+
+User: [Uploaded NDA_-_ATW-2.pdf — revised NDA between Prata Inc. and American Train Works (ATW), Section 9 now removed, document ends at Section 8 (General) and Signature block, ATW signature still blank] Check now and give me a short email that I can send along with this NDA to this person.
+
+Assistant: Section 9 is gone — confirmed, the doc now ends cleanly at Section 8 (General) and the Signature block. Good to send.
+
+For the email: this is a first-touch NDA send to a new prospect contact, no prior friction — that's a level 2 (standard) email, maybe warming the open slightly since it's a new relationship. No account history to pull for Monty Hill since ATW isn't yet a client on file.
+
+[Drafted email via message_compose_v1]
+Subject: NDA for Review — EOXS / American Train Works
+
+Hi Monty,
+
+Great connecting with you. Attached is a mutual NDA between Prata Inc. (EOXS's contracting entity) and American Train Works, ahead of us getting into any further detail on the ERP implementation.
+
+Could you have this reviewed and signed on your end? Happy to answer any questions on the terms in the meantime.
+
+Looking forward to next steps.
+
+Best,
+Ron
+
+Calibrated at level 2 (standard) — routine coordination, no reason to push warmer or firmer for a first-touch NDA send. Want it warmer given it's a new relationship, or more direct with a turnaround ask attached?
