@@ -88,3 +88,19 @@ Assistant: Good clarification — that changes the picture a bit. A few things w
 Given the naming is brand-tied, you likely don't need 100 separate ones — a handful of well-chosen variants (askcruzmarketing.com, askcruzoutreach.com, getaskcruz.com, etc.) with more mailboxes each gets you the same daily volume with far less DNS/DKIM/maintenance overhead, and ties back to the scale point from before.
 
 Want me to fold this into the devops write-up as an update, or draft a short list of naming options to run by devops/legal first?
+
+User: "The question is, "Can all 100 domains sit on the one server?" or "Will we have to get different servers for the domaines." or "Can a combination be set where 10 domains can setup on one server?""
+
+This is the example that I am asking the devops. Are there any other questions that I should ask?
+
+Assistant: A few more worth adding to what you'll ask devops, beyond the server-distribution question:
+
+- **IP allocation**: If we go with a combination (e.g. 10 domains/server), how many distinct IP addresses does that give us, and does Contabo (or whichever provider) support custom PTR/reverse-DNS records per IP? Reverse DNS mismatch is a common deliverability killer.
+- **Provider IP reputation**: Does Contabo's IP range have any existing blacklist history from prior tenants? Worth checking before committing — some budget VPS providers' IP blocks are pre-tainted from abuse by other customers.
+- **DNS automation**: 100 domains each need SPF, DKIM, DMARC, and MX records set up correctly. Can this be scripted/automated (Mailcow has an API), or is someone doing this by hand 100 times? That's the real time cost, not the server itself.
+- **Provisioning/monitoring tooling**: Is there a way to automate mailbox creation and monitor blacklist status across all 100 domains, or will that be manual per-domain checking?
+- **Registrar/bulk management**: Where are we buying and managing these 100 domains — one registrar with bulk/API support (Cloudflare, Namecheap) makes renewal and DNS management far less painful than 100 individual purchases.
+- **Ongoing ownership**: Once set up, who patches/maintains/monitors this infrastructure long-term — is this a one-time devops task or does it become a recurring responsibility?
+- **Self-host vs. tool**: Should we even be building this on Mailcow/Contabo ourselves, or does a purpose-built cold-outreach platform (Instantly, Smartlead — they handle warmup, rotation, and blacklist monitoring natively) get us the same volume with a fraction of the infra burden? Worth asking devops to weigh in on build-vs-buy here specifically.
+
+That last one is probably the highest-leverage question — most of what you're trying to build (domain rotation, warmup, mailbox management at scale) is exactly what those tools exist to do, and self-hosting it means your devops person owns 100 domains' worth of deliverability babysitting indefinitely.
