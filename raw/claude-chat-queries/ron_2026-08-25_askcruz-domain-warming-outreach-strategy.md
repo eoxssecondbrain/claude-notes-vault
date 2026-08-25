@@ -39,3 +39,37 @@ Given this touches feasibility (does Mailcow/Contabo support it), strategy (is t
 - **100ft** — staged version of the above, delivered section by section.
 
 Which one?
+
+User: For now, I wanted to explain whatever the idea is in paragraphs or bullet points, something that is easier to read for the devops person.
+I have a question for him: if all of those can be set up on the same server or not. If they can be set up on the same server, which server should we get to set up all those 100 domains? If they cannot be set up on the same server, then which server can we get to set up all of them on different servers? Let me know if you have any questions.
+
+Assistant: Here's a plain write-up you can hand to your devops person, plus a direct answer to the server question.
+
+**The idea, in short**
+
+We want to run cold outreach (to prospects outside the steel industry) without risking AskCruz's actual business email. Plan is:
+
+- Buy ~100 new domains (not askcruz.com)
+- Set up 2 mailboxes on each → 200 mailboxes total
+- "Warm up" each domain by having its mailboxes exchange email with each other for a while, so inbox providers (Gmail, Outlook, etc.) start trusting the domain instead of flagging it as brand new/suspicious
+- Once warmed, send 2–5 emails/day from each mailbox to outside-industry prospects → 200 mailboxes × 2–5/day = 400–1,000 emails/day total, while each individual mailbox stays low-volume enough to avoid tripping spam filters
+- Currently AskCruz's real mail runs on Mailcow, self-hosted on a Contabo server
+
+**The devops question you're asking, answered directly**
+
+Can all 100 domains sit on the one server we already have (the Mailcow/Contabo box running AskCruz's real mail)?
+
+- Technically: yes. Mailcow has no cap on the number of domains — you can add as many as you want through the admin panel, limited only by disk space and RAM.
+- Recommended: no. Standard practice for cold outreach is to keep it on infrastructure completely separate from your real business domain. Reason: if one of the 100 outreach domains gets flagged, blacklisted, or racks up spam complaints, it can drag down the reputation of everything else sharing that server/IP — including askcruz.com's actual client-facing mail (proposals, invoices, support). One bad domain shouldn't be able to break real business email.
+
+**If we isolate it (recommended), what does devops need to spin up**
+
+- One or more separate server(s) — not the existing Contabo box, a new one dedicated to outreach only
+- Mailcow's own resource guidance: 2 vCPU, 6–8GB RAM, ~20GB+ disk as a baseline for a multi-domain instance — same class of VPS you'd get from Contabo, Hetzner, OVH, etc.
+- Open question for devops specifically: whether to run 100 domains on one such box, or split across a few smaller boxes/IPs. Reputation these days is mostly domain-level rather than IP-level, but running everything off a single IP is still a single point of failure if that IP gets blacklisted — devops should weigh in on how many IPs/boxes they're comfortable managing versus consolidating.
+
+**One scale flag worth raising with devops and with whoever's driving this strategy**
+
+The teams that actually run this kind of infrastructure at scale typically use 3–5 rotating domains with 4–6 mailboxes each, capped around 40–50 sends/day per mailbox — not 100 domains at 2 mailboxes/2–5 sends. 100 separate domains is a much bigger operational lift (100x DNS/SPF/DKIM/DMARC records to maintain, 100 renewals to track) for a similar total volume you could get from far fewer domains. Worth asking devops whether fewer domains with more mailboxes each gets you the same 400–1,000/day capacity with a fraction of the maintenance overhead.
+
+Let me know if you want me to turn this into an actual message to send to your devops person, or if you want to go deeper on any piece (warmup timelines, DNS setup checklist, provider comparison).
