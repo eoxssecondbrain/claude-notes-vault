@@ -22,3 +22,22 @@ Sharing just the link won't work well — I can't browse Instagram directly, and
 For volume: if you're planning to feed me many reels over time, batching uploads (5-10 at once) and telling me what to extract each time — hook style, objection handling, tone, structure — will get you a more consistent KB than one-off single-reel sessions.
 
 Once you send the first one, tell me what you want extracted (just the script, or also delivery notes, pacing, structure tags) and I'll build the KB format from there.
+
+---
+
+User: [uploaded file: Best_Sales_Opening_Lines__Save_this_for_your_next_sales_call__and_follow_for_more_sales_tips__c.mp4]
+ok, let me share the physical video that i downloaded
+
+Assistant: This reel was actually a 5-person compilation, not one opener. I pulled all five by reading the on-screen captions frame by frame:
+
+1. "Give me 30 seconds and I'll show you how I can be an asset to your company."
+2. "Hey, give me 60 seconds. Don't hang up — I'm gonna show you how to generate great revenue."
+3. "If I could [grow] your revenue without touching the price, is that worth a minute?" — one word came through unclear, flagged in the file
+4. "Quick question — are you the one bringing in the revenue?"
+5. "If I could help you generate more revenue every month, is a quick call worth 60 seconds?"
+
+Pattern across all five: time-boxed ask (30s/60s), no product mention up front, objection pre-handled before it's raised. That's in the file too.
+
+This is a live document — next reel you send, I'll add it as a new numbered entry and update the pattern section rather than starting over. Keep them coming.
+
+[Created and shared file: /mnt/user-data/outputs/cold_call_opener_kb.md — Cold Call Opener KB with 5 entries extracted from the video, structure tags, "why it works" notes, a cross-entry patterns section, and a log table.]
