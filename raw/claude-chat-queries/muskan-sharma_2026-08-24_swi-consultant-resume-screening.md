@@ -8,52 +8,47 @@ updated: 2026-08-25
 
 User: [Continuation of resume screening for Software Implementation Consultant role — full JD and hard requirements as established at start of thread]
 
-[Candidates 1-8 already evaluated: AAKASH KAUSHIK (DISQUALIFY, 2/10), PAVAN KUMAR YADAV K (QUALIFY, 7/10), JEEVAANANTHAM R (QUALIFY, 8/10), KISLAY KUMAR (QUALIFY, 8/10), NANDITA JAISWAL (QUALIFY, 8/10), HEMANT CHANDAK (borderline/leaning DISQUALIFY, 5/10), ARPAN KAPUR (QUALIFY, 9/10), PRASHANT PANDJI (QUALIFY on hard requirements but flagged for seniority/fit risk, 6/10), VAISHNAVI UPADHYE (DISQUALIFY borderline, 4/10 — job-hopping pattern + thin implementation track record)]
+[Candidates 1-9 already evaluated: AAKASH KAUSHIK (DISQUALIFY, 2/10), PAVAN KUMAR YADAV K (QUALIFY, 7/10), JEEVAANANTHAM R (QUALIFY, 8/10), KISLAY KUMAR (QUALIFY, 8/10), NANDITA JAISWAL (QUALIFY, 8/10), HEMANT CHANDAK (borderline/leaning DISQUALIFY, 5/10), ARPAN KAPUR (QUALIFY, 9/10), PRASHANT PANDJI (QUALIFY on hard requirements but flagged for seniority/fit risk, 6/10), VAISHNAVI UPADHYE (DISQUALIFY borderline, 4/10 — job-hopping pattern + thin implementation track record), ANRUDH SINGH BHADAURIA (DISQUALIFY, 2/10 — infrastructure/cloud consultant, not business software implementation; Big 4 job-hopping pattern EY/PwC/Deloitte)]
 
-User: [Shared a LinkedIn hiring-platform applicant profile with AI-generated screening notes for ANRUDH SINGH BHADAURIA]
+User: [Shared a LinkedIn hiring-platform applicant profile with AI-generated screening notes for SUBHA S]
 
-Anrudh Singh Bhadauria — Sr. Consultant. New Delhi, Delhi, India. Applied 6 days ago.
+Subha S — Technical Application Specialist Epicor CMS - 2x Salesforce Certified Professional/Trailhead Triple Star Ranger | Agentblazer Legend 26. Tenkasi, Tamil Nadu, India. Applied 6 days ago.
 
-LinkedIn AI-generated qualification notes:
-Must-have: Has personally implemented business software such as ERP or CRM in a mid-size company, owning the implementation rather than only selling or supporting it — "Their resume shows they have led end-to-end implementation of cloud and infrastructure solutions (e.g., 'Spearheading enterprise technology consulting engagements' and 'Architected and governed enterprise infrastructure ecosystems'), which likely includes business software, but there is no explicit evidence of ERP or CRM implementation, so this only partially aligns."
-Must-have: Comfortable with hands-on technical work involving SQL, APIs/webhooks, and basic data mapping — "They explicitly list 'Microsoft SQL Server' and 'SQL' and have led data-center and cloud infrastructure work, which strongly suggests they are comfortable with hands-on SQL, APIs/webhooks, and basic data mapping."
+LinkedIn AI-generated qualification notes (all sourced "Based on the applicant's profile" — no resume text, only LinkedIn profile/title inference):
+Must-have: Has personally implemented business software such as ERP or CRM in a mid-size company, owning the implementation rather than only selling or supporting it — "Their current Epicor Technical Application Specialist role and prior System Analyst roles at Hibiz Solutions strongly suggest they have personally implemented ERP/CRM systems in mid-sized companies, owning the implementation rather than just selling or supporting it."
+Must-have: Comfortable with hands-on technical work involving SQL, APIs/webhooks, and basic data mapping — "They explicitly list SQL Database Administration and have Salesforce and Apex/Visualforce experience, which strongly indicates comfort with hands-on SQL, APIs/webhooks, and basic data mapping."
 Must-have: Must be located in India — met.
-Preferred: Experience implementing or working with software for industrial or distribution domains — "adjacent... no explicit evidence."
+Preferred: Experience implementing or working with software for industrial or distribution domains — "strongly suggest experience... even though the specific industries are not named."
 Preferred: Experience at an early-stage SaaS company with a small team and high individual ownership — not met.
-Preferred: Experience leading change-management and training for non-technical operational staff — "no direct evidence... only partially aligns."
-Preferred: Experience mapping client operational workflows (quoting, inventory, order desk) into a new software system or data model — "requirement is met" per the note (translating business needs into technical solutions).
-Preferred: Experience serving as the primary escalation point during software implementation, identifying adoption risks and potential churn early — "strongly suggests" via NOC/SOC and complex issue resolution experience.
+Preferred: Experience leading change-management and training for non-technical operational staff — "strongly suggest they have led change management and training."
+Preferred: Experience mapping client operational workflows (quoting, inventory, order desk) into a new software system or data model — "strongly indicate experience mapping client operational workflows."
+Preferred: Experience serving as the primary escalation point during software implementation, identifying adoption risks and potential churn early — "strongly suggest they have served as the primary escalation point."
 
 Experience:
-- Sr.Consultant | Deloitte | 2024-Present (verified)
-- Senior Technical Consultant | Deloitte | 2024-Present (verified)
-- Senior Technical Consultant | PwC | 2023-2024 (verified)
-- Infrastructure Architect | PwC | 2023-2024 (verified)
-- Senior Technical Consultant | EY | 2022-2023
-- Infrastructure Architect | Jubilant FoodWorks Ltd. | 2017-2022
-- Information Technology Technician | Videocon d2h Ltd | 2014-2017
-- System Engineer - Data Center Operations | Omnie Solutions (I) Pvt. Ltd., Noida | 2011-2014
+- Technical Application Specialist | Epicor | 2025-Present
+- Senior System Analyst | Hibiz Solutions | 2024-2025
+- System Analyst | Hibiz Solutions | 2022-2024
 
-Education: Sikkim Manipal University, Bachelor of Science / Master of Computer Applications
+Education: Thanthai Periyar Government Institute of Technology, B.E (CSE), 2018-2022
 
 Screening question responses:
-- How many implementations have you had complete ownership of, from end to end, with US clients? Ideal answer: 1. His answer: 34
-- Do you have experience in implementing software into businesses? Ideal answer: Yes. His answer: Yes
-- How many references of those clients will you be able to provide? Ideal answer: 1. His answer: 5
-- Do you have experience in dealing with US clients? Ideal answer: Yes. His answer: Yes
+- How many implementations have you had complete ownership of, from end to end, with US clients? Ideal answer: 1. Her answer: 4
+- Do you have experience in implementing software into businesses? Ideal answer: Yes. Her answer: Yes
+- How many references of those clients will you be able to provide? Ideal answer: 1. Her answer: 4
+- Do you have experience in dealing with US clients? Ideal answer: Yes. Her answer: Yes
 
-Assistant: Anrudh Singh Bhadauria — DISQUALIFY. Score: 2/10.
+Assistant: Subha S — insufficient evidence to confidently qualify; leaning DISQUALIFY pending an actual resume. Score: 4/10.
 
-Hard requirement 1 (personally implemented ERP/CRM) — fails. His entire career is IT infrastructure and cloud architecture: data center operations, NOC/SOC management, infrastructure architecture, cloud engagements. Titles are "Infrastructure Architect," "System Engineer – Data Center Operations," "IT Technician." There is no ERP, CRM, or comparable business-application implementation anywhere in this résumé. This is a different discipline entirely from what the role needs — infrastructure consulting is about servers, networks, and cloud platforms, not configuring business software and mapping client workflows into it. Even the LinkedIn note, which is generally generous, only calls this "partial" alignment, and on a close read it isn't really that — it's a domain mismatch, not a partial match.
+Important caveat up front: every qualification note here is sourced "based on the applicant's profile," not her resume — unlike every other candidate reviewed, there's no resume text with specific project bullets. The notes themselves use hedged language throughout ("strongly suggest," "likely includes") rather than citing anything concrete. I'm not going to credit hard requirements on the strength of job-title inference alone, per your instruction not to give credit for skills that aren't clearly demonstrated.
 
-Hard requirement 2 (hands-on technical) — SQL Server is listed, but in an infrastructure/DBA context, not the kind of business-data-mapping or API-integration work the JD needs. Not credible evidence of the specific skill asked for.
+Hard requirement 1 (personally implemented ERP/CRM) — not clearly demonstrated. "Technical Application Specialist" at Epicor and "System Analyst"/"Senior System Analyst" at Hibiz Solutions are consistent with implementation work, but titles alone don't confirm she owned implementations versus supporting them. Worth noting: Epicor is a real, well-known ERP vendor specifically serving manufacturing and distribution businesses — if her actual work there does involve implementation, that would be a genuinely strong industrial-vertical match. But that's currently an inference, not a fact.
 
-Hard requirement 3 (training non-technical users) — no real evidence. His stakeholders are technical teams and NOC/SOC operations, not business end users. LinkedIn's own note admits "no direct evidence."
+Hard requirement 2 (hands-on technical) — this is the one area with a real, specific, verifiable signal: Salesforce Apex/Visualforce development plus SQL Database Administration. Apex is Salesforce's programming language for custom logic — actual hands-on coding, not just configuration. Combined with her stated Salesforce certifications (2x certified, Trailhead Triple Star Ranger), this is a credible, checkable technical claim, stronger than vague "SQL" line items elsewhere in this batch.
 
-Hard requirement 4 (job stability) — fails, clearly. Three employers in three years: EY (2022–2023), PwC (2023–2024), Deloitte (2024–present) — each roughly a one-year stint, immediately following five stable years at Jubilant FoodWorks. This is the classic Big 4 consultant hopping pattern (EY → PwC → Deloitte for pay bumps/promotions), and it's exactly the recent, repeated pattern your hard requirement is designed to catch.
+Hard requirement 3 (training non-technical users) — no real evidence, purely inferred from role titles.
 
-Nice-to-haves: no genuine industrial/distribution software experience — infrastructure work for large enterprises is not the same as implementing operational software for a distributor. No early-stage SaaS experience.
+Hard requirement 4 (job stability) — fine on the surface: two employers in four years (2022–2026), with an internal promotion at Hibiz Solutions before moving to Epicor. No red flag here, though four years total is a short career to evaluate a stability pattern from.
 
-One more flag: his answer to "how many implementations have you had complete ownership of, end to end, with US clients" was 34, against an ideal of 1. Given his actual career has no documented business-software implementations at all, this number isn't credible — it reads as either a misunderstanding of the question or an inflated answer, and either way it undermines confidence in the rest of his self-reported answers.
+Nice-to-haves: Epicor's core market is industrial/manufacturing/distribution, so if her actual work touches Epicor's ERP customers, this could be a good vertical match — but again, unconfirmed. No early-stage SaaS signal.
 
-This is a clean disqualify — wrong discipline (infrastructure, not business-application implementation), a real recent job-hopping pattern, and no evidence of the end-user training or data-mapping work the role actually requires.</content>
+Net: nothing here disqualifies her outright, but nothing is confirmed either — the profile-only sourcing means this assessment sits on much thinner evidence than the other candidates you've shared. Her Salesforce technical credentials are a genuine positive signal worth not discounting. Recommend requesting her actual resume with real project detail before making a final call — she could score considerably higher (or lower) once there's something concrete to evaluate instead of title-based inference.</content>
