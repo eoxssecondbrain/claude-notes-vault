@@ -110,3 +110,58 @@ Total out of 15.
 Below 8: don't advance.
 
 One thing worth flagging separately from the scoring, since it's binary rather than a spectrum: if Q10 (availability) doesn't actually match what you need, everything else is moot — treat that as a hard filter before you even get to the total score, not just one of five inputs into it.
+
+User: the interview call will be about 10 minutes so make it accordingly. i think we dont need complicated questions
+
+Assistant: Revised for a tight 10-minute call — trimmed to 9 questions (roughly 1 minute each, leaving buffer for intro/wrap-up), and simplified the two that were doing too much at once.
+
+Suggested order and questions
+
+1. Warm-up: "Tell me a bit about yourself — your MBA program, specialization, and which semester you're in."
+Purpose: confirm background basics and get an early read on communication.
+Strong answer: brief, clear, matches their resume.
+Red flags: rambling, can't state their own semester clearly.
+
+2. "Why did you choose Marketing over other specializations?"
+Purpose: check if the interest is genuine or a fallback.
+Strong answer: real reasoning tied to their own interests/strengths.
+Red flags: "it seemed easier," no real reasoning.
+
+3. "What made you apply to AskCruz specifically, and what do you know about what we do?"
+Purpose: checks if they researched the company or are mass-applying.
+Strong answer: can describe AskCruz in their own words and why it appeals to them.
+Red flags: no idea what AskCruz does.
+
+4. "In your own words, what's the difference between marketing and sales?"
+Purpose: one clean check on basic concept understanding.
+Strong answer: marketing = building awareness/demand, sales = converting it into a purchase.
+Red flags: no distinction, or clearly guessing.
+
+5. "Tell me about any internship, project, or college activity where you did something marketing-related."
+Purpose: relevant hands-on exposure and ownership of their own work.
+Strong answer: one specific example, their role, some result.
+Red flags: vague, can't go past a sentence, always "we," never "I."
+
+6. "If you had to promote a new product to college students, how would you go about it?"
+Purpose: practical thinking, kept simple — no budget/constraint layered on top.
+Strong answer: names a target audience and a channel, with a reason why.
+Red flags: can't get past "post it on Instagram" with no reasoning behind it.
+
+7. "Give me one fun or catchy way you'd promote something on social media."
+Purpose: creativity, on the spot.
+Strong answer: an actual idea, said with some enthusiasm.
+Red flags: total blank, or a generic idea with nothing behind it.
+
+8. "Do you use social media much, and have you ever tried creating content or promoting something on it — even informally?"
+Purpose: basic digital/social exposure, simplified — no jargon like SEO or lead-gen.
+Strong answer: some real hands-on exposure, or at least genuine interest.
+Red flags: no exposure and no curiosity either.
+
+9. Closing, combined: "This internship runs [X months] starting [date] — are you available for the full duration and how many hours can you commit? And why should we pick you for this?"
+Purpose: locks logistics and gets a closing motivation read in one go.
+Strong answer: clear availability, specific reason they're a good fit.
+Red flags: vague on availability, hollow or absent reasoning on fit.
+
+Scoring framework (unchanged)
+
+Rate 1-3 on each after the call: communication clarity, motivation (for marketing and for AskCruz), basic marketing understanding, practical/creative thinking, availability fit. Total out of 15. 12-15 advance, 8-11 borderline, below 8 don't advance. Availability is still a hard filter regardless of total score — if it doesn't match, the rest doesn't matter.
