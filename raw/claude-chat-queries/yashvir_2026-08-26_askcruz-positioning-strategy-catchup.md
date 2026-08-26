@@ -57,3 +57,19 @@ If it's steel-first, you're walking straight back into the exact collision I fla
 2. Build a fresh steel-adjacent list (companies AskCruz would target that aren't already in EOXS's steel pipeline) — different data-pull, no direct list reuse.
 
 Also — has this been run past Rajat, or is this you deciding the starting segment on your own judgment for now, separate from the positioning confirmation that's still pending? That matters because "steel-specific to start" is a scoping call you can make; "AskCruz is steel-specific" as a redefinition of the product itself is not yours to decide unilaterally.
+
+## User:
+
+a mix of both 1 and 2 so we'll check every qualified and disqualified account from the EOXS contacts and pipeline for eoxs it was specifically the qualified companies but for ask cruz it will also be disqualified companies like EOXS was specific to Steel service centers but askcruz will also reach out to roofing building material and similar companies.
+
+## Assistant:
+
+That answers the "which list" question but sidesteps the other one — you still haven't said whether this has been run past Rajat. That's not a formality: what you just described isn't really a sequencing choice anymore, it's a scope redefinition. "Steel + roofing + building materials + similar" is a different target market than "industry-agnostic," and it's also different from pure EOXS steel-service-centers. That's you defining AskCruz's working ICP right now, in this chat — which is fine as a starting hypothesis, but it needs Rajat's sign-off before it becomes what you're actually saying to prospects, same as everything else that's been flagged unconfirmed.
+
+Two problems with the plan as stated, before it's workable:
+
+The disqualified pool needs filtering by reason, not blanket reuse. Earlier in this thread you and I established that EOXS's disqualifications split into steel-specific reasons (wrong product/material/service, being a mill) versus generic gates (no web presence, outside US/Canada, under 15 LinkedIn members). Only the steel-specific-reason disqualifications become eligible for AskCruz — a company that failed on "no verifiable web presence" is still a bad lead regardless of vertical. "Check every disqualified account" as stated would pull in companies that fail for reasons that still apply. Need to filter to disqualification reason 3/4/6/9 only.
+
+"Roofing, building materials, and similar" needs an actual boundary, not examples. Interesting wrinkle: EOXS's own RQL already carries a roofing exception in its product criteria — so roofing isn't even purely a disqualified category today. Before I can query this, I need the actual list of verticals you mean by "similar" — otherwise "check the pipeline" isn't a query I can run, it's a vibe.
+
+Do you want me to pull actual counts from the EOXS contacts/pipeline data right now — how many accounts are qualified vs. disqualified, and disqualified for which specific reason — before you lock this scope in? That's a fast, verifiable check, not a rigor-level strategy build.
