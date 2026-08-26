@@ -37,3 +37,7 @@ User: ok let me give you a brief then, so we used GPT to build stratergy and als
 Assistant: Got it — so the "Sales BI" GPT was used two ways: (1) strategy work, and (2) a live database of hot/warm leads, with individual threads per company you were actively talking to.
 
 What do you want to do with this — retry pulling anything on it from EOXS data now that you've given context, or are you drawing a comparison to how AskCruz should track pipeline/leads?
+
+User: Okay. So the GPT was custom trained to build strategies, you know, to draft emails, respond to the emails, and whatever emails we are receiving, we used to add those emails to the individual threads of the companies that have sent the emails. And we used to build a strategy. What should be the next step? What... where should we take it from here and everything, basically? Alright. So it was customized according to what we were doing, like, for the sales only. But this thing... the... this cloud account, I... it has very vague instructions. Next, I'll share the instructions with you, and you can probably just tell me if it, uh, actually helps me build the sales strategy or not or if I need to change the instructions entirely.
+
+Assistant: Understood — that GPT was essentially a per-company sales copilot: ingest inbound emails into that company's thread, draft/respond, and use accumulated context to recommend next steps. Send over the current Claude instructions and I'll tell you plainly whether they're doing that job or falling short.
