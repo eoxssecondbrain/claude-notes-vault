@@ -165,3 +165,23 @@ Red flags: vague on availability, hollow or absent reasoning on fit.
 Scoring framework (unchanged)
 
 Rate 1-3 on each after the call: communication clarity, motivation (for marketing and for AskCruz), basic marketing understanding, practical/creative thinking, availability fit. Total out of 15. 12-15 advance, 8-11 borderline, below 8 don't advance. Availability is still a hard filter regardless of total score — if it doesn't match, the rest doesn't matter.
+
+User: ok. now just share me questions without there purpose
+
+Assistant: 1. Tell me a bit about yourself — your MBA program, specialization, and which semester you're in.
+
+2. Why did you choose Marketing over other specializations?
+
+3. What made you apply to AskCruz specifically, and what do you know about what we do?
+
+4. In your own words, what's the difference between marketing and sales?
+
+5. Tell me about any internship, project, or college activity where you did something marketing-related.
+
+6. If you had to promote a new product to college students, how would you go about it?
+
+7. Give me one fun or catchy way you'd promote something on social media.
+
+8. Do you use social media much, and have you ever tried creating content or promoting something on it — even informally?
+
+9. This internship runs [X months] starting [date] — are you available for the full duration and how many hours can you commit? And why should we pick you for this?
