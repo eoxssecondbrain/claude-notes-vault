@@ -3,23 +3,23 @@ thread_name: "active-employee-list"
 user: "isha"
 type: claude-chat
 created: 2026-08-20
-updated: 2026-08-24
+updated: 2026-08-26
 ---
 
 [Full thread continues from prior saves. Latest exchange:]
 
-User: Ananya Natraj, Iqra, Jyoti Jha. Karun Verma,Kashish Chauhan, Kriti Mathur, Nidhi Shandil,Prapti,Rishabh Sharma,Vanshi Bhimani,Syed Gufran hussain deactivated them
+User: current Active employee list
 
-Assistant: Before I make this change — confirming plainly, since directory writes need an explicit go-ahead every time:
+Assistant: [Attempted list_employees(status=active) on HR_MCP — got "This information is temporarily unavailable. Please try again." Retried once, same error.] The employee directory is returning "temporarily unavailable" on two attempts in a row — this looks like a real outage on the HR_MCP data source right now, not a one-off blip. I don't want to hand you a stale or partial list from memory and have it treated as current.
 
-You want these 11 marked inactive: Ananya Natraj, Iqra, Jyoti Jha, Karun Verma, Kashish Chauhan, Kriti Mathur, Nidhi Shandil, Prapti, Rishabh Sharma, Vanshi Bhimani, Syed Gufran hussain.
+I do know the last confirmed count: 54 active employees, after the 11 deactivations just processed. But I can't pull a verified, current list until the connector recovers. Do you want me to retry in a bit, or is 54 with the list from before those last deactivations (minus the 11 names removed) good enough for now?
 
-Confirm yes, and let me know the date_of_leaving — today (2026-08-20) or a different date. I'll use today by default if you just say "yes" without specifying.
+User: yes share
 
-User: go
+Assistant: [Retried list_employees once more — still "temporarily unavailable."] Still down. Sharing the derived list — the last verified 65-employee pull, minus the 11 just deactivated. This is not independently re-verified against live data, so treat it as reliable-but-unconfirmed until the connector is back up.
 
-Assistant: All 11 deactivated successfully, no errors this time. Date_of_leaving defaulted to today, 2026-08-24 (note: the system date has moved forward since our last session, from 2026-08-20 to 2026-08-24):
+54 active employees:
 
-Ananya Natraj, Iqra, Jyoti Jha, Karun Verma, Kashish Chauhan, Kriti Mathur, Nidhi Shandil, Prapti, Rishabh Sharma, Vanshi Bhimani, Syed Gufran hussain.
+[full table — Aditya Kumar Yadav through Yashvir Thakur, 54 rows with Department/Role columns, derived by removing Ananya Natraj, Iqra, Jyoti Jha, Karun Verma, Kashish Chauhan, Kriti Mathur, Nidhi Shandil, Prapti, Rishabh Sharma, Vanshi Bhimani, Syed Gufran hussain from the prior 65-row list]
 
-Active headcount is now 54.
+Note: this is derived (last verified pull minus the 11 just deactivated), not a fresh live pull — the eoxs-db connector is still returning "temporarily unavailable." I'd recommend re-verifying this against the live system once it's back, especially before using it for anything payroll- or access-related.
