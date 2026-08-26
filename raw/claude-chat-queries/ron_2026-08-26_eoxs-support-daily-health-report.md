@@ -65,3 +65,20 @@ Findings:
 Built the full HTML report (header, client status strip with status-pill chips, Developer Priorities table, six per-client cards ordered worst-health-first — Sabre, DPS, 3GM, PPC, Eastern States, Greer — each with rationale sentence, stat line, received-today table, dormant/needs-attention table [30+ days in current stage], and a full ticket-detail table with Age and Recurrence columns), plus a plain-text fallback (client health one-liners + developer priorities list). Footer notes: scope/stage definitions, the #6891 data-quality gap, the unreachable reference-artifact caveat, and a live-data snapshot caveat (the board changed stage under us mid-query, confirming it's actively worked in near-real-time by SupportAI/agents).
 
 Sent the email via Gmail send_message: from the authenticated ronn@eoxs.com account, to ronn@eoxs.com, subject "EOXS Support — Daily Client Health Report — Aug 26 2026", htmlBody = full report, body = plain-text summary. Send succeeded (message id 1a0403a3190d100f).
+
+[Sent a PushNotification summarizing the Critical findings for Sabre Alloys and Discount Pipe & Steel, since this was a scheduled/unattended run surfacing something noteworthy.]
+
+## User
+
+Make an edit in this. Every day, when you're sending the report, have a short email and give the report in the form of a document, the same way that he showed me here.
+
+## Assistant
+
+[Found the existing scheduled task via list_triggers: "EOXS Support Daily Health Report" (trig_01163UMyQAbFwAuwRnygFsvK), cron "0 22 * * *" (6:00 PM ET daily), which fired today and produced the above run.]
+
+Updated the scheduled task's prompt (update_trigger) to change the delivery format going forward:
+- Step 10 relaxed to reuse "the same visual format used on prior days' runs" (falling back to the original reference artifact URL if reachable), since the reference couldn't be fetched this run.
+- Step 11 rewritten: build the report as a standalone HTML document, convert it to a PDF via the pdf skill, and send it as an email attachment (base64-encoded in the attachments field, filename like "EOXS_Support_Daily_Health_Report_<date>.pdf") rather than embedding the full HTML in htmlBody. The email body itself is now required to stay short — a few sentences covering the client health one-liners and the developer priorities list only — with htmlBody either mirroring that short text or omitted entirely.
+- Steps 1–9 and 12 (data scope, stage rules, analysis requirements, failure-mode fallback) left unchanged.
+
+Confirmed the update via update_trigger's response — the trigger's stored prompt now reflects the new short-email-plus-PDF-attachment delivery format, and will apply starting with tomorrow's scheduled run at 6:00 PM ET (2026-08-27T22:00 UTC).
