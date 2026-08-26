@@ -129,3 +129,25 @@ So i came across some really good sales calls openers pitch reel, entire sales c
 ## Assistant:
 
 Go ahead — paste the text, describe what it covers, or send a link if it's public. If it's a link, I'll try to pull it, but Instagram content is often blocked behind login, so pasting the actual lines/notes is more reliable.
+
+## User:
+
+ok i'll transcribe the reels and add the transcriptions .
+
+## Assistant:
+
+Good — paste them whenever you have them, and I'll work from the actual text.
+
+## User:
+
+what would be the easiest way to share the reels transcripts with you?
+
+## Assistant:
+
+Two options, pick whichever's less friction for you:
+
+Paste directly into the chat — best for a handful of reels, works instantly, no extra steps.
+
+If you've transcribed several and it's getting long, put them all in one doc (Word, txt, or even a Google Doc) and upload the file — I'll read it in one shot instead of you pasting multiple times.
+
+For 1-3 reels, just paste. For more than that, upload a file.
