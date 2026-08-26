@@ -73,3 +73,59 @@ The disqualified pool needs filtering by reason, not blanket reuse. Earlier in t
 "Roofing, building materials, and similar" needs an actual boundary, not examples. Interesting wrinkle: EOXS's own RQL already carries a roofing exception in its product criteria — so roofing isn't even purely a disqualified category today. Before I can query this, I need the actual list of verticals you mean by "similar" — otherwise "check the pipeline" isn't a query I can run, it's a vibe.
 
 Do you want me to pull actual counts from the EOXS contacts/pipeline data right now — how many accounts are qualified vs. disqualified, and disqualified for which specific reason — before you lock this scope in? That's a fast, verifiable check, not a rigor-level strategy build.
+
+## User:
+
+Waiting on: whether Rajat has weighed in on this scope, the exact "similar" verticals boundary, and whether you want that pipeline count pulled now.
+
+## User:
+
+yes Raj approved to this.
+
+## Assistant:
+
+I checked emails and calls for a record of that — nothing turns up under AskCruz scope, roofing/building materials, or Rajat approval. That's not proof it didn't happen — verbal approvals don't leave a trace — but it means the only record of this decision right now is you telling me. Given how much downstream work hinges on it (RQL redefinition, target list, script, cold-call opener), worth getting it into writing somewhere Ron or Rajat can point back to, rather than it living only in this chat.
+
+Taking it as given for now: steel + steel-adjacent (roofing, building materials, similar) is the approved starting scope, approved by Rajat.
+
+Still need before this is buildable:
+
+The exact "similar" boundary — what verticals count. Roofing and building materials are two data points; I need the full list or the underlying logic (e.g. "construction supply chain," "any distributor of physical building/industrial materials") to actually query the pipeline.
+
+Once you give me that boundary, I can pull the qualified/disqualified counts from EOXS's contacts and pipeline, filtered to the right disqualification reasons, so you're working from real numbers instead of a guess.
+
+## User:
+
+here's a clear instruction for you, lets build stratergy for the outbound calls, we'll mainly focus on the cold calling script.
+
+## Assistant:
+
+Before I build this, one gap still blocks it: I never got the "similar" verticals boundary from the last message. The cold-calling script's opener, DNC list, and target framing all depend on knowing exactly who's in scope beyond steel and roofing/building materials — without that, the script is generic, not built for what you're actually calling into.
+
+Give me that boundary, and pick a rigor level:
+
+5ft deep — Quick: build the script from what's already established in this thread (script skeleton rated 3/10 earlier, fundamentals covered, objection-handling structure) plus your stated scope. No fresh data pulls.
+
+10ft deep — Verified: same, but I pull actual EOXS pipeline data first — qualified/disqualified counts filtered by reason, existing contacts in steel-adjacent verticals — so the script's target framing and DNC logic are checked against real records, not assumption.
+
+50ft deep — Deep: verified, plus I check for overlap risk against EOXS's live customer/pipeline accounts specifically (so the script's DNC list is airtight), and flag anything else that affects the opener or objection set that you didn't explicitly ask about.
+
+Which level, and what's the verticals boundary?
+
+## User:
+
+when is say let's build stratergy then we start, until then lets fouch on collecting the pieces.
+
+## Assistant:
+
+Noted — we stay in collecting mode until you actually say it.
+
+Still open, and it's the one blocking the script piece specifically: what verticals count as "similar" to roofing and building materials. Give me that, and I can pull the actual qualified/disqualified pipeline data filtered to it — still just collecting, not building.
+
+## User:
+
+So i came across some really good sales calls openers pitch reel, entire sales call reel on instagram i want to share the information from the reel with you so that we can build a calling script those reels contain some really important information.
+
+## Assistant:
+
+Go ahead — paste the text, describe what it covers, or send a link if it's public. If it's a link, I'll try to pull it, but Instagram content is often blocked behind login, so pasting the actual lines/notes is more reliable.
