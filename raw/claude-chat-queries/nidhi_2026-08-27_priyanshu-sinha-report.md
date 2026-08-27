@@ -74,3 +74,5 @@ Would you like details on a specific call, email thread, or the inventory module
 ---
 
 **Note:** This data is from email and call transcripts. Employee directory details (full employment record, manager, hire date, etc.) were not accessible. Would you like me to pull details from a specific email or call?
+
+**User:** what more you can give me?
