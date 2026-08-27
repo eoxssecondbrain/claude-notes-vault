@@ -109,3 +109,35 @@ Would you like details on a specific call, email thread, or the inventory module
 What data are you looking to pull?
 
 **User:** can these mcp's give me data on any employee
+
+**Assistant:** Yes — the EOXS Data connectors have a dedicated **employee directory** on eoxs-db that covers any employee in the system.
+
+**Search capabilities:**
+
+- **By name** — fuzzy match (e.g. "Priyanshu" or "Sinha")
+- **By role, department, manager, email** — substring or exact match
+- **By status** — `active` (default), `inactive`, or `all` (including departed employees)
+
+**Data returned:**
+- Full name, official email, role title, department
+- Manager, employment type, date of joining
+- Change history — every prior update to that record
+
+**Access & limits:**
+
+- Tiered by connector URL — your clearance determines which records are visible
+- A "not found" result means the record doesn't exist **or** is above your access level (the system returns the same response either way)
+- No way to know which is which without explicit promotion of access tier
+
+**Writing:**
+
+- Create, update, deactivate, reactivate employees
+- Requires explicit confirmation first (no speculative writes)
+- Changes are logged with full audit trail
+
+**Earlier:** When you first asked about Priyanshu Sinha, a tool call to search the employee directory was declined. That could mean:
+1. The tool access was declined by policy
+2. The record is tier-restricted above your current clearance
+3. The person is not in the employee directory
+
+Would you like me to try searching the employee directory again, or search for Priyanshu Sinha across emails/calls instead?
