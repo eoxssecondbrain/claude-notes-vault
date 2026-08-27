@@ -17,10 +17,10 @@ Which one do you mean?
 
 User: i want to know the meaning of wiki
 
-
-
-<answer_now_instruction>Give the final answer directly; do not describe your approach or process before answering. Do not think before answering this turn: produce no thinking block or reasoning preamble of any kind, and begin your reply immediately with the final answer.</answer_now_instruction>
-
 Assistant: A wiki is a website or document collection that multiple people can edit collaboratively, usually with linked pages organized by topic.
 
-In this workspace specifically, "wiki" refers to structured knowledge pages — either the EOXS company wiki (client/SOP pages via eoxs-db) or the OV2 raj-wiki-vault (via Thread OV) — rather than a public site like Wikipedia.
+In this workspace, it refers to structured knowledge pages — the EOXS company wiki or the OV2 raj-wiki-vault — not a public site like Wikipedia.
+
+User: do you have a memory
+
+Assistant: Yes — I have a persistent memory filesystem that carries facts across our conversations (separate from the Threads OV vault, which is a chat-transcript archive, not my memory). Right now it holds notes on your **AskCruz** work and the **company-card tracking** initiative.
