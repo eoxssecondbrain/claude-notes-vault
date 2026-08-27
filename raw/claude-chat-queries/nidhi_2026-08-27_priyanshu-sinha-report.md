@@ -107,3 +107,5 @@ Would you like details on a specific call, email thread, or the inventory module
 **Key limits:** eoxs-db has no CRM/tickets/invoices (moved to eoxs-teams in Aug 2026). Both email/call and wiki data are live or recently ingested. Employee directory writes require explicit confirmation.
 
 What data are you looking to pull?
+
+**User:** can these mcp's give me data on any employee
