@@ -179,3 +179,32 @@ Tier 4 — restricted general, most stripped-down
 10. Intro Access
 
 If you want a single coherent set rather than four independent lists to pick from — Owner Tier / Confidential Tier / Team Tier / Guest Tier reads cleanest as a set: each name alone signals the scope without needing the others for context, which is the actual bar for something you'd say out loud to a client.
+
+USER:
+you are naming them based on tiers, I need to name the MCPs, and update the skill files that are relevant to them, think from this lens. This will be a noman cleature used throughout the company and universally.
+
+ASSISTANT:
+Naming the connectors, not the tiers — got it. And since this is meant to generalize beyond just Raj-Vault to any future tiered MCP, the better move is a single naming pattern that scales, not four unrelated labels. Here are 10 candidate systems, each usable as a base + tier-suffix pattern:
+
+1. Ring system (borrowed from CPU privilege rings — already a known concept): Ring 0 / Ring 1 / Ring 2 / Ring 3
+2. Clearance system: Clearance 1 / Clearance 2 / Clearance 3 / Clearance 4
+3. Vault editions: Vault Prime / Vault Core / Vault Standard / Vault Lite
+4. Key system: Master Key / Gold Key / Silver Key / Bronze Key
+5. Badge system: Black Badge / Gold Badge / Blue Badge / Green Badge
+6. Floor system: Penthouse / Executive Floor / Office Floor / Lobby
+7. Circle system: Inner Circle / Confidential Circle / Team Circle / Outer Circle
+8. Access-level plain naming: Full Access / Confidential Access / Standard Access / Basic Access
+9. Color-coded: Vault Black / Vault Red / Vault Blue / Vault Green
+10. Numbered editions: Vault-01 / Vault-02 / Vault-03 / Vault-04
+
+Recommendation: Ring system. Reasons —
+
+It's already a real, widely understood convention (Ring 0 = kernel/full privilege, Ring 3 = least privileged user mode), so anyone technical instantly parses the hierarchy without explanation, and non-technical people still get "lower number = more access" intuitively once told once.
+
+It's a naming pattern, not a label set — meaning it scales. The next tiered MCP the company builds doesn't need a new naming brainstorm; it inherits Ring 0-3 automatically. That's what "universal nomenclature" actually requires — most of the other 9 options are four bespoke words that don't generalize (what's "tier 5" in the Badge system? You're inventing colors forever).
+
+It's abstracted from EOXS-specific roles (no "Raj," "HR," "Intern" baked into the name), which also sidesteps the internal-only concern from Section 10 — Ring 0 doesn't leak who Raj is.
+
+So: Raj-Vault becomes something like Vault Ring 0 (this session, full data), Vault Ring 1 (Company-Confidential), Vault Ring 2 (General/staff), Vault Ring 3 (General-restricted/intern).
+
+Confirm the system before I touch anything — I'll then update /mnt/skills/user/raj-eoxs-vault/SKILL.md to replace the tier1/tier2/tier2_confidential/connection-name language with whichever naming set you lock in, and flag if any other skill file references the old names and needs the same pass.
