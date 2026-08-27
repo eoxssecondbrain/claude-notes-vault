@@ -39,3 +39,5 @@ Alternatively, if you have specific information you'd like me to look up — suc
 9 live pages including entity record, CRM details, call logs, and technical analyses. No pages pending promotion.
 
 Would you like details on a specific call, email thread, or the inventory module escalation?
+
+**User:** what these mcp's can give data on?
