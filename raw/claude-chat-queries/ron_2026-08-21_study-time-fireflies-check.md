@@ -6,21 +6,13 @@ created: 2026-08-21
 updated: 2026-08-27
 ---
 
-Human: Check the session that happened on the 27th and the 26th and tell me where Ron did something different than what Raj had originally planned.
+Human: Talked to Raj and he was not happy that the structure changed and suspended the team who were on the call but did not mention that the structure has changed for the call that was supposed to happen in the morning.
 
-Assistant: Ron effectively took over running Study Time himself on both the 26th and 27th, and reshaped the format in several specific ways from what Raj had set up.
+Assistant: That's a rough position for the suspended team - they got disciplined for a structural shift they didn't originate, and the person who redirected the sessions (Ron) wasn't the one who took the fallout.
 
-Raj's original plan (from the 20th/21st)
-- Raj personally hosted, kept attendance, ran the round-robin, and was building a "depth" instruction framework (5ft/10ft/50ft/100ft)
-- Next-session plan he stated explicitly: first 15 minutes on individually configuring Claude instructions per role, then a rotating brainstorming/automation-building segment
-- Flags/bugs were meant to funnel into one shared feedback task
+A few things worth flagging directly:
 
-What actually happened on the 26th and 27th
-- Raj is barely present - he's referenced only in passing ("Raj did bring a valid point," "as stated as requirement from Raj"). Ron J is the one hosting, driving the agenda, and closing both sessions - a real change in who owns the meeting, not just a format tweak
-- The planned "15 minutes on configuring individual Claude instructions" never happened. Instead Ron opened the 26th with a report-fairness/productivity debate (how to score team output across different roles) - a topic Raj never introduced
-- Ron introduced a new mechanic Raj hadn't set up: mandatory homework, where every person must bring one attempted automation to the next session and report whether it worked or didn't. This "prove it worked" cadence is Ron's structural addition
-- Ron dug into task-board standardization (intake/requirement/assign/indef/QA/complete stages) as a prerequisite for reliable AI output - this is a new, fairly deep operational thread that displaced Raj's instruction-tuning plan entirely; it dominates most of the 27th
-- By the 27th, the "share how you're using Claude" round-robin survived, but it's now paired with much heavier follow-through - Ron pushes for concrete built automations (ticket-summary emails, log-note reminders, Zoho integration) rather than just people describing use cases
-- The feedback-task-consolidation habit from Raj's design seems to have quietly dropped - issues are now handled live by Ron 1:1 (e.g., Prachi's automation bug, Vicky's dropped connection) rather than funneled into the shared task
+- The suspension notice apparently went out without correcting the record on why the structure changed - meaning the team may still not know it wasn't a discipline failure on their part, it was a redirection from you
+- If that's left uncorrected, it sets up a repeat: the team won't know what "the structure" is supposed to be for the next session, so they're likely to get flagged again
 
-Net effect: Raj designed Study Time as an instruction-tuning and creative-exploration hour; Ron turned it into an accountability-and-process-standardization hour, with himself as the operator driving weekly deliverables rather than open-ended experimentation.
+What do you want to do with this - check what actually happened on today's morning call to see if the team reverted to Raj's original structure or is still running your version, or do you want help thinking through how to raise the structure-change context with Raj so the suspension doesn't compound?
