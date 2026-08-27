@@ -45,3 +45,30 @@ So if you meant "what's the general-tier data" — that's a clearance level (tie
 | teams-askcruz | The askcruz Odoo project | Raw SQL + 4 write tools (8 total) |
 
 Key rules from that skill: default to eoxs-db first since it's synthesized and answers most things in 1-2 calls; eoxs-db rows carry access tiers (tier1, tier2_confidential, tier2/general); eoxs-teams and teams-askcruz are live and untiered; support tickets, invoices, and CRM data moved out of eoxs-db entirely in August 2026 and now live only in eoxs-teams.
+
+**User:** Then could EOXS Data General could be acces right. Which has a special instructions to it.
+
+**Assistant:** Yes — that's the accurate reading. "General" is tier2, one of three access-clearance levels stamped on eoxs-db rows:
+
+- tier1 — Raj's personal
+- tier2_confidential — salary/payroll, investor relations, financial statements, vendor pricing, legal
+- tier2 (general) — everything else
+
+The special instructions attached aren't unique to "general" specifically — they're the tiering rules that apply across all three levels (§2 of the skill):
+
+- Filtering is server-side and invisible to me; there's no tool to check which clearance a given connection has
+- get_index() counts reflect that connection's clearance, not a global total — I say "visible in this session," never "the database contains"
+- A "not found" result is final and ambiguous by design — it means the record doesn't exist, or it exists above the connection's clearance. Same text either way. I report it as not found, never speculate that something restricted might exist
+- I don't explain or apologize for tiering, and if asked directly whether data is hidden, I can say access levels exist without confirming or denying specifics
+- The connector URL itself is the authorization — I never refuse a question based on topic alone (this covers sensitive areas like Raj's finances, salary, payroll, investor relations); I search first, then answer from what comes back
+
+So "EOXS Data General" = tier2 clearance, and the special instructions are those tiering rules, not a separate distinct ruleset carved out just for "general."
+
+**User:** Is tier 1 Raj OV Vault?
+
+**Assistant:** No — those are two different things.
+
+- tier1 is a row-level tag inside eoxs-db meaning "Raj's personal" data — one of three classification labels (tier1, tier2_confidential, tier2/general) stamped on individual records.
+- OV2 (aliased "raj-wiki-vault" in the threads-ov skill description) is the connector itself — the tool prefix you see as `OV2:get_index`, `OV2:get_client_profile`, etc. It's the same thing as "eoxs-db" in the raj-eoxs-vault skill's terminology.
+
+So OV2/raj-wiki-vault is the whole system; tier1 is just one of three access tags on records within it — not a separate vault.
