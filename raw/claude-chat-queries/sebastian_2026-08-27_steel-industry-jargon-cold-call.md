@@ -45,3 +45,27 @@ Operations/supply chain terms
 - Yield — the usable percentage of material after cutting/processing, minus scrap loss.
 
 The two most useful for sounding credible fast: get HRC/CRC/gauge/grade right (product literacy), and know the difference between mill direct and service center plus what lead time and index pricing mean (supply chain literacy) — those come up in almost every steel conversation.
+
+User: how can I use this terminology in cold calls when pitching about askcruz
+
+Assistant: A few things before I draft this:
+
+1. Skill flag: your preferences call for reading a "sales-strategist" skill for exactly this kind of query, but there's no sales-strategist skill file anywhere in this environment — it doesn't exist. I'm proceeding with eoxs-data-general only. You may want to check whether that skill got created somewhere else or never got built.
+
+2. Positioning conflict I found in the wiki, which directly affects how you'd use steel jargon on a call: the two internal AskCruz source docs contradict each other. The "Product Feature File" describes AskCruz as steel-industry-specific ("built for steel service centers, processors, tube mills, distributors"). The "Product-Market Fit & Product Knowledge Guide" explicitly says the opposite — core market is "industry-agnostic," and it warns against positioning AskCruz as a single-vertical product. Actual sales activity (3GM Steel, Sabre Alloys, Three D Metals) has been steel-vertical in practice. This wasn't reconciled as of the last wiki update (Aug 25). Before I write cold-call language, I need to know which positioning you actually want on the phone — because "steel-native tool that speaks your language" and "industry-agnostic AI that happens to work for steel too" are different pitches with different jargon usage.
+
+This is a strategic task (crafting sales language, not a lookup), so per your setup, pick a rigor level:
+
+5ft — quick: I write the cold-call framing directly from what's already in the wiki (capability catalog + 3GM call outcome), fast turnaround.
+
+10ft — verified: same, but I pull the full client-facing capability/boundary docs and the actual 3GM call transcript language before writing, so nothing in the script overclaims what AskCruz can currently do.
+
+50ft — deep: verified, plus I check the Sabre Alloys and Three D Metals threads for what pitch language has actually landed vs. fallen flat across multiple prospects, and flag objection patterns.
+
+Also — quick answer on the positioning question above would help before I start either way.
+
+User: can you give me the product feature file and the product-market fit and prduct knowledge guide for me to read please
+
+Assistant: Here are both source documents, in full. I'll flag one important thing first: the contradiction I mentioned earlier is resolved — the Product Feature File was updated to v1.1 on Aug 25 and now aligns with the PMF doc (industry-agnostic positioning). The wiki page I read earlier hadn't picked up that update, so treat what follows as current, not what I said before.
+
+[Created and presented two files: askcruz-product-feature-file.md and askcruz-product-market-fit-guide.md, containing the full text of the AskCruz Product Feature File (Version 1.1) and the AskCruz Product–Market Fit & Product Knowledge Guide (Consolidated, revised 25 August 2026), reproduced in full in the actual chat response.]
