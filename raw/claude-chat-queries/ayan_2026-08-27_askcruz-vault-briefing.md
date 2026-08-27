@@ -79,3 +79,103 @@ Thread-OV — separate system entirely (the transcript/notes vault), no tier rel
 So "named by tier" only really resolves to one mapping worth discussing: Raj-Vault = tiered (tier1/tier2/tier2_confidential); Team EOXS Mcp and Ask-Cruz = untiered raw SQL; Thread-OV = out of scope.
 
 What's the actual thing you're trying to get at here — auditing who can see what, or something about how AskCruz's own access model should be designed for the 3GM rollout?
+
+USER:
+Lets expand on what each of the MCPs does, in different access tiers
+
+ASSISTANT:
+To be precise about how tiering actually works here — it's not that specific tools live in specific tiers. It's row-level, cutting across nearly every Raj-Vault tool. Breakdown by connector:
+
+Raj-Vault (eoxs-db), 27 tools — tiering applies inside almost all of them
+- Every row in this connector (wiki pages, emails, calls, assets, client records) carries a tier1/tier2/tier2_confidential tag. The same tool call — search_wiki, get_client_profile, search_emails, whatever — returns whatever subset of rows matches the clearance bound to this session's URL. A "not found" from any of these tools means either the record doesn't exist or it's above clearance; the tool can't distinguish the two on purpose.
+- One exception: the employee-directory tools (list_employees, search_employees, get_employee, and the four writes — create/update/deactivate/reactivate_employee) aren't described as tier-filtered in the skill doc. Their gate is a confirmation requirement, not clearance: I have to state the change plainly and get an explicit go-ahead before any write, regardless of tier.
+- get_index() itself is also clearance-scoped — the row counts it returns are "visible in this session," not a global total.
+
+Team EOXS Mcp (eoxs-teams), 4 tools — no tiering at all
+- Raw SQL against live Odoo: support tickets, invoices/sales orders, CRM/pipeline/prospect data. Whoever holds this connector URL sees everything in the schema, full stop. There's no row-level sensitivity concept here — it's a live operational database, not the classified knowledge store.
+
+Ask-Cruz (teams-askcruz), 8 tools — no tiering, but writes are gated differently
+- Same untiered raw SQL against the askcruz Odoo project (tasks, stages, assignees) via the 4 read tools. The 4 write tools (create_task, update_task, move_task_stage, add_task_note) run a two-phase handshake instead: first call returns a preview and a confirm_token, nothing is written; only a second call with that token, after the user explicitly approves, commits. That's a process gate, not a clearance gate — anyone with this connector can preview and, on approval, write.
+
+Thread-OV — outside this system entirely
+- The transcript/notes vault (this conversation's own save mechanism). No tier relationship to eoxs-db's classification scheme at all — it's a separate repo with its own read/write surface (raw transcripts, chat-summaries, staged OV2 cross-references).
+
+Net shape: one connector (Raj-Vault) does content-level access control by data sensitivity; the other two EOXS connectors (Team EOXS Mcp, Ask-Cruz) do no content filtering and instead gate mutation through confirmation steps; Thread-OV isn't part of the access-tier conversation at all.
+
+USER:
+no we have other version of raj-vault MCP, this one is tier 1 that gives access to all data. I want to expand on these, not other MCP of teameoxs, teamaskcruz or thread
+
+ASSISTANT:
+Restated with just Raj-Vault in scope, across its tier versions. Same 27 tools in every version — what changes is which rows come back, not which tools exist.
+
+Tier1 (this session, per you) — full visibility
+Sees all three sensitivity classes: Raj-Personal, Company-Confidential, and General. Every search_*/get_* call — search_wiki, search_emails, search_calls, get_client_profile, get_asset, list_implementation_tasks, everything — returns the complete row set with nothing stripped. A "not found" here means the record genuinely doesn't exist, not that it's above clearance, since there's no clearance ceiling left to hit.
+
+tier2_confidential (HR, per the doc's table) — Company-Confidential, with restrictions
+Sees Company-Confidential rows (salaries, legal, vendor pricing, investor conversations, employee activity/performance) but not Raj-Personal, and the doc specifies "specified financial-detail restrictions" on top of that — so even within this tier some financial fields get stripped rather than the whole row being withheld. Whether this version also sees plain tier2/General rows isn't stated explicitly, but it would be a strange design if it didn't — flagging that as inference, not documented fact.
+
+tier2 (General staff) — General only, financials and performance stripped
+Sees ordinary company information, but financial amounts and employee activity/performance details are removed from what comes back. Same tool calls, thinner rows.
+
+tier2 restricted (Interns) — General only, more stripped
+Same tier as general staff but with financial amounts stripped further per the doc's wording ("General information only, with financial amounts stripped") — read that as the most reduced version of tier2, not a distinct fourth tier number.
+
+One thing worth flagging rather than glossing over: the skill doc says eoxs-db is reached through three separate URLs, each bound to one clearance — but the access table names four connections (Raj, HR, General staff, Interns). Either two of those four share a URL (most likely General staff and Interns both sitting on the tier2 URL, with the intern-level stripping happening as an additional restriction rather than a separate URL), or the "three URLs" line in the skill is just stale. I'm not going to guess which — that's a real discrepancy in the documentation, not something I can resolve from here.
+
+USER:
+So this is the task at hand right now, we need universal terminologies for each of these access tier, that is easy to understand and and be dictated to clients as well. Easy to digest and gives an understanding of what it is by the name itself. Give me top 10 names of each of these MCPS
+
+ASSISTANT:
+One flag before the list: Section 10 of the self-knowledge doc explicitly marks the Raj/HR/General staff/Interns table as internal-only, never to be surfaced or synthesized into client-facing material — client deployments are supposed to get their own, separately documented access config. That doesn't block naming a generic framework, but it does mean don't just relabel Raj/HR/staff/interns and hand it to a client — the names below should stand alone as a tier concept, decoupled from the specific EOXS roles behind them.
+
+Mapping: Tier 1 = Raj-Personal (owner-only) / Tier 2 = Company-Confidential (leadership) / Tier 3 = General (staff) / Tier 4 = General-restricted (interns, financials stripped further)
+
+Tier 1 — owner-only, most restricted
+1. Owner Tier
+2. Founder Access
+3. Private Tier
+4. Executive Vault
+5. Personal Tier
+6. Inner Circle
+7. Root Access
+8. Vault Tier
+9. Principal Access
+10. Owner-Only Tier
+
+Tier 2 — confidential, leadership-level
+1. Confidential Tier
+2. Leadership Tier
+3. Restricted Tier
+4. Executive Tier
+5. Privileged Access
+6. Sensitive Tier
+7. Management Tier
+8. Core Team Tier
+9. Financial Tier
+10. Inner Team Access
+
+Tier 3 — general, broad internal visibility
+1. Team Tier
+2. Staff Access
+3. Standard Tier
+4. General Access
+5. Internal Tier
+6. Company Tier
+7. Core Access
+8. Baseline Tier
+9. Employee Tier
+10. Everyday Access
+
+Tier 4 — restricted general, most stripped-down
+1. Guest Tier
+2. Basic Access
+3. Limited Tier
+4. Entry Tier
+5. View-Only Access
+6. Trainee Tier
+7. Light Access
+8. Starter Tier
+9. Public Tier
+10. Intro Access
+
+If you want a single coherent set rather than four independent lists to pick from — Owner Tier / Confidential Tier / Team Tier / Guest Tier reads cleanest as a set: each name alone signals the scope without needing the others for context, which is the actual bar for something you'd say out loud to a client.
