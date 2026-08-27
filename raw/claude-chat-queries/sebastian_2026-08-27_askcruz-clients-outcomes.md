@@ -35,3 +35,9 @@ Flag on data quality, since you asked for this: internal sales correspondence co
 So "hooked" is sales framing, not a verified outcome — treat it as a red flag on the sales narrative, not as evidence of a second client or of any measured result.
 
 Net: 1 confirmed client (3GM), 0 confirmed outcomes, and pipeline overstatement in at least one outbound pitch. Sources: eoxs-db wiki (AskCruz PMF asset, 3GM proposal-call page, Sabre sales-push page, Lawrence Tabachnick / Three D Metals entity pages); eoxs-teams checked and ruled out (its sale_order records for 3GM/Sabre are unrelated EOXS steel-distribution business, not AskCruz).
+
+User: visualize the 10ft
+
+Assistant: [Rendered an interactive SVG diagram titled "askcruz_client_pipeline_verified" showing a two-row pipeline: 3GM Steel (Pitched Aug 12 → Proposal sent Aug 14 → Deal confirmed Aug 19, 2-user → Outcome: not documented, all stages teal/confirmed except outcome which is gray/not-reached) and Sabre Alloys (Pitched Aug 13 → Proposal sent: receipt unclear (coral/flagged) → Deal confirmed: not reached (gray) → Outcome: not documented (gray)). Legend: teal = confirmed in records, coral = flagged/unverified, gray = not reached. Below, a coral flagged box reads: "Sales claim: both 'running it 2 weeks, hooked' — Made to two prospects — contradicted by the stages above."]
+
+3GM Steel is the only client past deal confirmation, and even it has no documented outcome yet. Sabre Alloys stalled at proposal stage with unconfirmed receipt. The "hooked" claim used in outbound pitches isn't backed by either client's actual record.
