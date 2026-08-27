@@ -23,3 +23,22 @@ Boundaries worth knowing: it explicitly does not replace your ERP, isn't guarant
 Want me to go deeper on any one piece — the four-pillar model, the current 3GM/Sabre Alloys deal terms, or that industry-agnostic-vs-steel positioning tension?
 
 Sources: AskCruz — Product Feature File; AskCruz — Comprehensive Client-Facing Product Understanding; AskCruz — Market Positioning, ICP & Product-Market Fit Status (internal EOXS knowledge base, confidential)
+
+**Assistant (follow-up flag):**
+Done — answer's above. One thing to flag as your advisor hat, not just the summary: internal docs are actively contradicting each other on whether AskCruz is "industry-agnostic" or "steel-specific," and the timestamps show this got edited same-day (Aug 25) without full resolution across all four asset files. If you're about to pitch or position this externally, that's worth nailing down before it leaks into a deck or a prospect call — right now different internal sources would give a prospect different answers to "is this built for steel or just happens to be running there first."
+
+**User:**
+Who are AskCruz's current clients, and what specific outcome did each of them get from using AskCruz?
+
+**Assistant:**
+Short answer: only one steel service center has actually signed on as an AskCruz client, and even that deal is too fresh to have a measured outcome. The other two names in the pipeline are still prospects, not clients. If someone told you AskCruz has client outcomes to show, that's not what the record supports right now.
+
+3GM Steel — the only confirmed AskCruz deal. Travis Lane (CCO) confirmed on 2026-08-19 that 3GM is moving forward, but at a reduced 2-user scope (down from what was originally proposed) and with a shortened initial contract term he pushed for. Pricing details are redacted in what I can see, and there were multiple pricing inconsistencies across drafts that had to be corrected before he'd sign off. Notably, the internal record also shows a strategic decision to run this client's "Company Brain" on Claude directly rather than through AskCruz as the client-facing front end — worth understanding before you describe 3GM as a clean AskCruz deployment. There's no record yet of a kickoff date being set or implementation actually starting, so there is no outcome to report — it's a signed intent, not a live result.
+
+Sabre Alloys — not a client, still a prospect. Rajat pitched a 1-page AI transformation proposal on 2026-08-12, a call happened on 2026-08-13, but the internal record flags a real problem: the email that was supposed to carry the proposal document to Sabre's contacts (Michael Mercadante, Tye Webb) went out with no attachment. Whether they ever actually received written terms is unverified. No deal, no outcome.
+
+Three D Metals — also just a prospect. Referred in by Lawrence Tabachnick, pitched by Rajat on 2026-08-13 using 3GM and Sabre as reference points ("running our AI Company Brain on live operational data" — which overstates 3GM's actual status, since 3GM's deal wasn't even confirmed yet at that point). A demo/evaluation call was scheduled for 2026-08-19; whether the prospect has responded since is unverified in the record. No deal, no outcome.
+
+Bottom line: AskCruz has zero documented client outcomes for steel service centers as of today. One signed-not-yet-implemented deal (3GM), two open prospects (Sabre Alloys, Three D Metals), and internally an EOXS pilot with no reported results either. If you're being asked or asking someone to cite "what AskCruz has done for clients," there's currently nothing in the record to back that up — that's a gap worth closing before it gets said out loud externally.
+
+Sources: 3GM Steel — AskCruz (Company Brain) Proposal Call (internal, tier2_confidential); AskCruz Sales Push Extends to Sabre Alloys (internal, tier2_confidential); Three D Metals prospect page (internal, tier2)
