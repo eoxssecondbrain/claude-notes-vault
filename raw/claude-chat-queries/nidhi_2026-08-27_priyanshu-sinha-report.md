@@ -49,3 +49,28 @@ Would you like details on a specific call, email thread, or the inventory module
 **Assistant:** [PROVISIONAL — verbatim text pending]
 
 **User:** what data you can give me on Priyanshu Sinha
+
+**Assistant:** **Priyanshu Sinha** — Intern in Innovation Cell.
+
+| | |
+|---|---|
+| **Email** | priyanshu1820sinha@gmail.com |
+| **Role** | Intern, Startup Generalist |
+| **Department** | Innovation Cell |
+| **Status** | Active (as of Aug 2026) |
+
+**Work Activity:**
+- **Hours tracking:** Recent weeks show ~28–33.5 hours worked, meeting/exceeding expected weekly quotas
+- **Productivity:** 35–65% productivity variance across weeks (data from team reports)
+- **July 2026 performance:** 16.6 hours worked vs. 16.5 expected (+0.1h)
+
+**Recent Activity:**
+- **Leave requests:** Filed leave for travel (Aug 8, 2026) — approved by Ayan Dutta
+- **Meetings:** Attended "Study Time" call with Ayan Dutta (Aug 24, 2026)
+- **Reports:** Included in weekly and monthly team performance summaries (Jul-Aug 2026)
+
+**Communication:** Email threads span team reports, performance summaries, and leave management. No escalations or issues flagged in correspondence.
+
+---
+
+**Note:** This data is from email and call transcripts. Employee directory details (full employment record, manager, hire date, etc.) were not accessible. Would you like me to pull details from a specific email or call?
