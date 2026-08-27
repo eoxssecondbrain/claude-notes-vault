@@ -55,3 +55,27 @@ Given the breadth here, pick a rigor level:
 100ft depth — same as 50ft but delivered section by section, so I don't cut a long finding off mid-thought.
 
 Which one?
+
+USER:
+I would like to specifically talk about MCP links based on access tiers and what are they named.
+
+ASSISTANT:
+Within this session, the tier system only applies to one of the four EOXS-related connectors. Breakdown:
+
+Raj-Vault (eoxs-db) — the only tiered one. Per the AskCruz self-knowledge doc (asset askcruz-self-knowledge, v1.2), three tiers exist, mapped to sensitivity levels:
+
+tier1 → Raj-Personal (most restricted, personal to Raj)
+tier2_confidential → Company-Confidential (salaries, legal, vendor pricing, investor info, employee performance)
+tier2 → General (broad internal visibility)
+
+The same document's access-control table maps roles to those tiers: Raj gets tier1 + tier2_confidential, HR gets tier2_confidential with financial-detail restrictions, general staff get tier2, interns get tier2 with financial amounts also stripped.
+
+Per the raj-eoxs-vault skill notes, eoxs-db is reached through one of three separate MCP URLs, each hard-bound server-side to one clearance level — filtering happens before I see anything, and there's no tool that tells me which clearance this particular Raj-Vault connection has. I can't and won't guess at that.
+
+Team EOXS Mcp (eoxs-teams) and Ask-Cruz (teams-askcruz) — not tiered at all. Both are raw SQL consoles against live Odoo. The skill is explicit that this tiering system doesn't apply to either.
+
+Thread-OV — separate system entirely (the transcript/notes vault), no tier relationship to the above.
+
+So "named by tier" only really resolves to one mapping worth discussing: Raj-Vault = tiered (tier1/tier2/tier2_confidential); Team EOXS Mcp and Ask-Cruz = untiered raw SQL; Thread-OV = out of scope.
+
+What's the actual thing you're trying to get at here — auditing who can see what, or something about how AskCruz's own access model should be designed for the 3GM rollout?
