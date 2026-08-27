@@ -76,3 +76,32 @@ Would you like details on a specific call, email thread, or the inventory module
 **Note:** This data is from email and call transcripts. Employee directory details (full employment record, manager, hire date, etc.) were not accessible. Would you like me to pull details from a specific email or call?
 
 **User:** what more you can give me?
+
+**Assistant:** Here's what I can pull for deeper detail on Priyanshu Sinha:
+
+**Full Email Content**
+- **Monthly Performance Summary** (July 2026) — detailed metrics
+- **Leave requests & approvals** (Aug 8, 2026) — full conversation threads
+- **Weekly team reports** — productivity breakdown across multiple weeks
+- **Employee directory** — official contact roster
+
+**Call Transcripts**
+- **"Study Time" call** (Aug 24, 2026 with Ayan Dutta) — full transcript and discussion
+
+**Project & Task Data**
+- **Implementation tasks** — search for any dev work, onboarding tasks, or project assignments
+- **Wiki pages** — check for any synthesized pages, analyses, or project documentation mentioning Priyanshu
+
+**Activity Timeline**
+- Full email chain history — chronological view of all correspondence spanning Jul-Aug 2026
+- Call history — all meetings Priyanshu participated in (currently showing just one)
+
+**What would be most useful?** I can:
+1. Pull the full text of the **leave request conversation** to see the context
+2. Get the **complete call transcript** from the Aug 24 "Study Time" meeting
+3. Search for **implementation tasks** assigned to Priyanshu
+4. Pull the **full monthly performance summary** with detailed metrics
+5. Search **wiki pages** for any Priyanshu-related project documentation
+6. Get a chronological **email activity timeline** across all mentions
+
+Which would help most?
