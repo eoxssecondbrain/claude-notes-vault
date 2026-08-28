@@ -111,3 +111,49 @@ It just needs to still be standing when everything else isn't.
 ---
 
 Checklist: opens with a stated-as-fact reframe, one real verified anecdote, one developed callback close, no hashtags/emoji, no other client named, nothing fabricated. Ready to post as-is, or I can tighten further if you want it shorter.
+
+User: Use the skill Rajat's LinkedIn Voice.
+
+Assistant: Re-running the checklist properly — the first draft had one real gap: no developed analogy. It listed places steel shows up, but never actually built the "essential but unnoticed" comparison the skill calls for. Fixed version below.
+
+---
+
+Nobody thinks about steel until they need it.
+
+Turns out that includes the apocalypse.
+
+Terminus — the trainyard from The Walking Dead — is a real place.
+
+It's Collier Metals, in Atlanta.
+
+A working steel plant.
+
+The show needed somewhere that looked like the last thing standing after everything else fell apart.
+
+They didn't pick a bunker.
+
+They didn't pick a military base.
+
+They picked a steel yard.
+
+That's not an accident.
+
+Steel is the bass line of every building, every vehicle, every structure you've ever trusted with your life.
+
+You don't hear it.
+
+You're not supposed to.
+
+But pull it out, and everything on top of it collapses.
+
+That's the whole business, actually — not just the metal. Nobody notices the distributor who never drops a shipment. Nobody notices the ERP system that never goes down. You only notice the ones that fail.
+
+I was on-site last week talking ERP and AI with Tripp Collier, the owner. Didn't expect a zombie-apocalypse history lesson in the middle of a sales conversation. Got one anyway.
+
+Steel doesn't need a highlight reel.
+
+It just needs to still be standing when everything else isn't.
+
+---
+
+Checklist, all eight: reframe opener stated as fact — yes. Line-broken throughout — yes. One real, verified anecdote — yes (Collier Metals/Terminus). One developed analogy (bass line, 4 lines) — yes, this was the fix. Closes with a callback, not a question, not both — yes. No hashtags/emoji/excess caps — yes. Company mention is one quiet, earned line, not a pitch — yes, and it's the anecdote itself, not EOXS. No other client named — yes, only Collier Metals, pre-approved.
