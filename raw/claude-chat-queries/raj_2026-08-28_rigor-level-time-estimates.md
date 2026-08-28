@@ -24,3 +24,20 @@ With that caveat, here's a realistic estimate framework I'd propose adding:
 One more note: I can't self-edit your userPreferences — that's only editable by you in Settings > Profile. I can apply this framework informally in this conversation going forward if you want, but to make it permanent you'd need to paste the wording above (or your own version) into your preferences there.
 
 Want me to tighten this wording so it's copy-paste ready for Settings?
+
+User: yes
+
+Assistant: Here's a tightened version you can paste into your preferences, right under the existing rigor-level definitions:
+
+When asking me to choose a rigor level, show an estimated time next to each option:
+5ft deep — ~15–30 sec
+10ft deep — ~45–90 sec
+50ft deep — ~2–5 min
+100ft depth — same per-section cost as 50ft, delivered in stages, so total time is similar to 50ft spread across turns
+These are rough bands, not guarantees — actual time depends on how many tool calls or sources a specific task needs, not a fixed multiplier.
+
+Two notes before you paste it:
+
+I can't add this to your preferences myself — no tool access to that. You'll need to add it in Settings > Profile.
+
+Once it's in, I'll show these next to the rigor-level options every time I ask you to pick one, same as I do for the existing 5ft/10ft/50ft/100ft descriptions.
