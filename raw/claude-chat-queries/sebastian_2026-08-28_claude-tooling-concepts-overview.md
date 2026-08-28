@@ -6,70 +6,14 @@ created: 2026-08-28
 updated: 2026-08-28
 ---
 
-USER: make a list of different concepts such as automations, Claude skills, Claude Cowork, Company Brain, and others im not considering in this list. This is for us to learn about each and its own diferences for us to implement and use in the correct way
+USER: use askcruz design style, colours and in comany brain get rid of (eouxs-db)
 
-ASSISTANT: This spans multiple things, not a clean match to eoxs-data-general (no EOXS data lookup here) or sales-strategist (not GTM/deal/objection work). It's a product-knowledge research task, so I'll pull from docs rather than guessing.
+ASSISTANT: Quick transparency before I rebuild: I don't have a way to pull AskCruz's exact hex codes here (no site-inspection access, network's off for direct downloads). I pulled their actual copy and tone from askcruz.com instead — dark, technical, "AI operating system for steel," zero-data-retention, no-nonsense industrial feel — and built a palette to match that (graphite/charcoal, steel-blue, and a copper/amber accent nodding to hot steel), rather than generic navy/coral. If you paste exact hex codes from your brand kit I'll swap them in directly.
 
-Two things before I start:
-[ask_user_input_v0 widget: 
-Q1: "Rigor level for this?" options: ["5ft - quick summary from docs","10ft - verified against primary sources","50ft - deep, includes adjacent concepts + tradeoffs","100ft - staged, delivered section by section"]
-Q2: "What do you mean by 'Company Brain' in your list?" options: ["Our own eoxs-db / internal wiki setup specifically","The generic concept (any org's internal AI knowledge base) as one list item","Not sure - you decide how to frame it"]
-]
+Also: good catch on Company Brain — AskCruz's own site literally uses that as a named product section ("Company Brain" / "Company Hands"), so dropping "(eoxs-db)" actually makes it more accurate, not less.
 
-USER (widget response):
-Q: Rigor level for this?
-A: 50ft - deep, includes adjacent concepts + tradeoffs
+[Rebuilt the infographic (/home/claude/infographic/build.js): recolored the palette to a dark/industrial AskCruz-toned scheme — Foundation (MCP) in near-black graphite (15181D), Data & Context (Company Brain, Claude Projects, Memory) in steel blue (3D5A73), Procedure (Claude Skills) in copper/amber accent (D97B3F), Orchestration & Execution (Cowork, Claude Code/Agent SDK, Claude Tag) in dark slate (2C3A47), and Automations kept deliberately separate in a muted gray (6B7280) to signal it sits outside the Claude stack. Switched headers from serif Cambria to bold Arial for a more technical/industrial feel. Removed "(eoxs-db)" from both the "Company Brain" card title and the Data & Context stack-bar sublabel, leaving just "Company Brain" throughout. Fixed automations-box body text color to F4F5F7 for contrast against the new muted-gray fill. Rebuilt the .pptx, revalidated (all checks passed), reconverted to PDF, re-rendered to image, and visually confirmed no overflow and good contrast throughout.]
 
-Q: What do you mean by 'Company Brain' in your list?
-A: Our own eoxs-db / internal wiki setup specifically
+Clean render — no overflow, good contrast throughout, and the palette now reads as dark industrial/technical rather than generic corporate blue, matching AskCruz's tone.
 
-ASSISTANT: Quick framing before the list: several of these aren't peers — some are layers that sit inside others. I'll flag that as I go, because treating them as parallel options is the most common way this gets misapplied.
-
-1. Automations (general term — Zapier / Make / n8n style)
-Deterministic, trigger-based workflows: "when X happens, do Y," no model reasoning involved, no judgment calls. Fast, cheap, predictable, auditable. Right tool when the steps never change — e.g. "new lead in Odoo → assign to SDR queue → Slack the rep." Wrong tool the moment the task needs interpretation (reading a call transcript and deciding what matters). This is infrastructure you'd run alongside Claude, not a Claude product.
-
-2. Model Context Protocol (MCP) / Connectors
-The plumbing, not a feature you "use" directly — an open standard (Anthropic, Nov 2024) that lets Claude call out to external systems (databases, Slack, your own tools) through a common interface instead of a custom integration per source. Claude for Work customers can test MCP servers locally, connecting Claude to internal systems and datasets. This is the layer everything else in this list either sits on top of or gets exposed through — your "AskCruz," "Eoxs-Teams," "Eoxs-data-general," and "Thread OV" connectors are all MCP servers. Company Brain (below) is delivered to me through this exact mechanism.
-
-3. Claude Skills (Agent Skills)
-Not a data source, not an app — a packaged instruction set (a folder with a SKILL.md file, optionally scripts/reference docs) that teaches Claude how to do a specific task consistently. Skills package your expertise and procedures so Claude delivers expert-level output every time, and organizations use them to apply brand guidelines or follow preferred formats in docs, meeting notes, and more. Loads only when relevant, no context cost until read. This is what your sales-strategist and eoxs-data-general skill files already are — the mechanism, formalized. Right fit for: standardizing how every SDR handles an objection, or how every proposal gets formatted.
-
-4. Claude Projects
-A Claude.ai workspace with persistent context (uploaded docs, custom instructions) scoped to one recurring subject — lighter-weight than a Skill (no procedural logic, just standing context) and lighter than Company Brain (static uploads, not live-synced data). Good for "everyone drafting AskCruz outreach should see the same ICP doc and messaging examples" without wiring up a connector.
-
-5. Claude Cowork
-An agentic mode inside Claude Desktop, using the same agentic architecture that powers Claude Code, accessible without opening the terminal. Give it a multi-step outcome, it plans, executes across sub-agents in parallel, and returns finished deliverables — Excel spreadsheets with functional formulas, PowerPoint presentations, and formatted documents. It's the orchestrator that calls Skills and MCP connectors as needed, on its own judgment, rather than a fixed workflow. Cowork is best-fit for one-off or semi-recurring heavy lifts (a market scan, a client research pack) — not for something that needs to run identically every single time, which is where deterministic automation is more reliable and cheaper per run.
-
-6. Claude Code / Claude Agent SDK / Managed Agents
-The developer end. Claude Code is the terminal/IDE agent for building software. The Agent SDK is that same agent loop exposed as a library so your own engineers can embed a Claude-powered agent inside a product or an unattended pipeline — Claude Agent SDK: build agents that run in a process you operate, versus Claude Managed Agents: run agents in Anthropic's managed infrastructure if you don't want to host it yourself. This is the option if AskCruz itself wants to ship agentic behavior to customers, not just use Claude internally.
-
-7. Company Brain (your eoxs-db setup)
-Your own build, not an Anthropic product — a curated "second brain" combining live-ingested emails/calls, a synthesized wiki layer, and tiered access control (tier1/tier2/tier2_confidential, with monetary figures and monitoring data stripped at the response layer). Architecturally it's MCP (item 2) plus a retrieval/synthesis layer you built on top — closer to RAG than to a Skill, since it's injecting live company knowledge rather than teaching a procedure. Its distinguishing risk, correctly handled here, is that anything exposed to a model this way is a confidential-data exposure surface — the tiering and redaction you've already built is the mitigation, and it's the bar any new connector should be held to before it gets added.
-
-8. Memory (Claude's built-in persistent memory)
-Different from Company Brain: this is Claude retaining facts about one user across their own conversations (preferences, project context), not a shared organizational knowledge base. Useful for individual continuity, not for "everyone on the team should know this."
-
-9. Claude Tag
-Slack-native, tag-and-delegate — @Claude in a channel to hand off a task without leaving Slack. Lower ceremony than Cowork, narrower scope, good for quick asks from non-technical staff who live in Slack.
-
-Where this actually bites you if left unclarified: these aren't a menu of alternatives to pick one from — they stack. A realistic AskCruz build looks like: Company Brain and AskCruz data exposed via MCP → an SDR-training Skill standardizing how calls get scripted/critiqued → Cowork or the Agent SDK orchestrating the actual multi-step task → plain automation handling the deterministic parts (lead routing, notifications) that don't need a model's judgment at all. Treating "should we use Skills or Cowork" as an either/or is the most common misapplication. Second flag: roughly half of what's above shipped or changed materially in the last two quarters (Cowork went GA mid-2026, the Agent SDK was renamed from Claude Code SDK), so re-verify specifics against docs before committing engineering time to any one of these.
-
-Sources: claude.com/docs/cowork/overview, anthropic.com/news/model-context-protocol, platform.claude.com/docs/en/agents-and-tools/agent-skills/overview, claude.com/blog/building-agents-with-the-claude-agent-sdk, platform.claude.com/docs/en/cli-sdks-libraries/overview.
-
-USER: visualize each from this list into an infographic I can send to the team for all of to better understand
-
-ASSISTANT: [ask_user_input_v0 widget:
-Q1: "Craft level for the infographic?" options: ["Sketch - bare structure, one pass, no polish","Draft - styled, functional, presentable","Painting - custom, detail-checked, polished","Commissioned - full polish, cross-platform review"]
-Q2: "Format to send to the team?" options: ["Inline visual in chat (image/HTML, easy to screenshot)","Standalone file (PDF or PPTX) they can open/share directly"]
-]
-
-USER (widget response):
-Q: Craft level for the infographic?
-A: Commissioned - full polish, cross-platform review
-
-Q: Format to send to the team?
-A: Standalone file (PDF or PPTX) they can open/share directly
-
-ASSISTANT: [Built a tall poster-format infographic titled "Claude & AI Tooling Landscape" for AskCruz/EOXS, using pptxgenjs. Layout: navy header with title and subtitle; a "HOW IT LAYERS" section showing four stacked, color-coded bars (Orchestration & Execution — Claude Cowork / Claude Code / Agent SDK / Claude Tag, coral; Procedure — Claude Skills, gold; Data & Context — Company Brain (eoxs-db) / Claude Projects / Memory, teal; Foundation — MCP/Connectors, navy) with down-arrows between them, plus a separate charcoal "Automations — a separate, parallel track" bar noting Zapier/Make/n8n run alongside Claude, not through it; a "THE 9 BUILDING BLOCKS" section with a 3x3 grid of cards (MCP/Connectors, Company Brain (eoxs-db), Claude Projects, Memory, Claude Skills, Claude Cowork, Claude Code/Agent SDK, Claude Tag, Automations), each card with a colored badge circle, title, one-line definition, and an italic "Best for:" line color-matched to its category; and a closing navy callout stating the most common mistake is treating this as a menu, with a real AskCruz workflow chaining Company Brain (data) + a Skill (procedure) + Cowork (execution) plus automation for deterministic parts, followed by a small source/verify-freshness footer line. Validated the .pptx (all checks passed), converted to PDF, rendered to image for visual QA, found the content overflowed the initial 18.5in poster height, increased the custom layout to 10in x 20.2in, rebuilt, revalidated, and re-rendered — final render confirmed no overflow, clean spacing, and consistent contrast. Copied claude_tooling_landscape.pptx and claude_tooling_landscape.pdf to /mnt/user-data/outputs and presented both files.]
-
-This renders clean — no overflow, good contrast, consistent color-coding across the stack diagram and cards. Delivering both formats.
+[Copied updated claude_tooling_landscape.pptx and claude_tooling_landscape.pdf to /mnt/user-data/outputs and presented both files.]
