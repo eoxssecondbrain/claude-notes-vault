@@ -115,3 +115,27 @@ Output, not a score
 I'd avoid a single numeric "health score" — it invites false precision and hides the reasoning behind a number Ron then has to unpack anyway. Better: a daily status of Green / Yellow / Red per client, where Yellow or Red always comes with the specific triggering fact attached ("Outlook integration task untouched 4 days in QA stage," not "board activity down 30%"). Green means nothing surfaced; the report can be one line. That internal digest is also the raw material for the client-facing email from our earlier tangent — same data, two audiences.
 
 Next: section 3 — what "unhealthy" has actually looked like at real EOXS clients, so these thresholds are calibrated against real failure patterns rather than guesses.
+
+Human: next
+
+Assistant: Section 3: What "Unhealthy" Has Actually Looked Like
+
+Two real cases worth calibrating against — 3GM's own history with EOXS, and the closest thing on record to a full near-cancellation.
+
+3GM itself, as an existing EOXS client (2022–present)
+
+Three things stand out that are directly relevant to the AskCruz build:
+
+First, the relationship has run for four years through a single relay point — Jessica Worley, Director of Supply Chain, who triages issues and resolves routine ones herself before ever looping in support. That's the pattern the reference-based culture Raj described actually produces in practice: one trusted person who knows the account, not a rotating queue. For AskCruz/3GM, that person is currently Travis — worth keeping the automation and the human touchpoints funneled through him specifically rather than diffusing across "the 3GM team," at least until he delegates otherwise.
+
+Second, there's a documented recurring-bug pattern: a self-service coil-weight edit permission broke, got fixed, then broke again about a week later, and the same underlying friction resurfaced across multiple modules over more than a year. The lesson isn't "bugs happen" — it's that a bug marked Resolved and then recurring is worse for trust than one that was never fixed, because it breaks the specific promise that was made. A daily QA that only checks "is this task in Complete stage" would miss this entirely; it needs to also ask "has anything we called done come back."
+
+Third — and this is the one that ties directly back to why this matters for AskCruz specifically — 3GM's contract renewal in August 2025 was the moment EOXS asked Jessica to serve as a reference for a prospect (Horizon Steel). A healthy relationship didn't just retain revenue, it became the referral engine. That's a direct, already-proven precedent for the goal in your own notes — get 3GM to refer other prospects to AskCruz. The daily QA isn't just churn insurance; done well, it's building toward exactly that ask.
+
+RW Conklin Steel — the actual near-cancellation case on file
+
+This is the more important cautionary pattern, because it wasn't loud. After go-live, actual usage quietly stalled — the client only ever entered sales orders and purchase orders, never touched invoicing, reporting, or reconciliation. No complaint, no escalation, just partial adoption that nobody flagged. It surfaced only when the client's own financial distress forced a cancellation attempt in August 2025, by which point the relationship had effectively been dead for months.
+
+That's the single biggest blind spot for what we've designed in sections 1–2 so far: everything covered has been watching for loud signals — stale tasks, blocked stages, frustrated emails. None of it would catch a client that's technically "fine" — no complaints, no missed calls — but quietly not using the product. Once 3GM is live on AskCruz, the daily QA needs a fourth layer we haven't discussed yet: actual usage telemetry (is Travis/Stefan actually querying the system, or has it gone quiet) — not just implementation-task and communication signals. I'll fold that into section 6 as a post-launch addition, since it doesn't apply during the build phase we're mostly designing for right now.
+
+Next: section 4 — the North American, reference-based communication norms Raj flagged, and specifically how they should shape tone, cadence, and what the AI is and isn't allowed to say directly to Travis.
