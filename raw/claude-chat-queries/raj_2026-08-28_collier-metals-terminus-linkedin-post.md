@@ -157,3 +157,14 @@ It just needs to still be standing when everything else isn't.
 ---
 
 Checklist, all eight: reframe opener stated as fact — yes. Line-broken throughout — yes. One real, verified anecdote — yes (Collier Metals/Terminus). One developed analogy (bass line, 4 lines) — yes, this was the fix. Closes with a callback, not a question, not both — yes. No hashtags/emoji/excess caps — yes. Company mention is one quiet, earned line, not a pitch — yes, and it's the anecdote itself, not EOXS. No other client named — yes, only Collier Metals, pre-approved.
+
+User: This all is good. I think I would like to add three or four words when I mention Tripp. Something like a forward thinker, or you can come up with some ideas based on what all you know about him. Give me four options.
+
+Assistant: Four options, each 3-4 words, plug into "...with Tripp Collier, the owner —":
+
+1. "an engineer, not a suit"
+2. "more curious than most owners"
+3. "always thinking two moves ahead"
+4. "an unapologetic AI nerd"
+
+All draw on the AI-forward, engineer-mindset read on him from your calls — not invented, just compressed. "An engineer, not a suit" is probably the sharpest fit for the post's voice; "an unapologetic AI nerd" is the most fun but slightly more former/informal, worth it only if that matches how you two actually talk.
