@@ -80,3 +80,38 @@ My actual read: don't treat these as either/or. Use the daily/weekly email as th
 On the cadence step-down (daily during build → weekly 15-min post-launch → monthly after ~2 stable months, with a "just text me thumbs up if the call's not needed" option) — that matches the reference-based-industry read well: the ask isn't for more of Ron's time, it's for a standing, low-friction proof that someone's still accountable. I'd fold that into section 4 when we get there, since it's really the same design question as the email cadence.
 
 Want to keep going on this thread, or should I move to section 2?
+
+Human: yes we can go to Section 2.
+
+Assistant: Section 2: Daily Check Logic
+
+Four layers, from currently-available to future-once-email-lands. Each layer needs its own definition of "stale" or "at risk" — a single global threshold doesn't work across all of them.
+
+Board layer (available today — teams-askcruz)
+
+- Staleness: last write_date exceeding a threshold, but the threshold has to depend on stage, not be one number. A task sitting in "Intake" isn't inherently a problem — right now 14 of 3GM's 21 tasks are there, created in a single batch on 2026-08-21, which reads like normal backlog-seeding at kickoff, not 14 things simultaneously neglected. Staleness only means something once a task has actually started moving and then stalls — e.g. something that sat in "QA" or "Assigned" untouched for several days is a real flag; something still in Intake a week after a bulk seed is not, unless it's blocking a committed date.
+- Deadline risk: date_deadline approaching or passed with stage != Complete. Right now none of 3GM's 21 tasks have a date_deadline set at all — worth flagging on its own: an implementation with zero dated commitments makes "are we on track" unanswerable by the board alone. That's a real gap, not just a data-quality nit.
+- Blocked state: kanban_state = blocked, surfaced same-day, no threshold needed.
+- Ownership gaps: tasks past Intake with no user_id.
+- Client-visible vs. internal split: this is a prerequisite, not a nice-to-have. The board currently mixes client-facing milestones (onboarding email, training materials) with pure internal plumbing (MCP whitelisting, server setup, skill files). A daily check that reports "9 of 21 stale" without that split will either alarm Travis over things he was never going to see, or bury the one client-facing item that actually matters. Practically: tag_ids already exists on project_task — use it to mark client-visible vs internal, seeded now by a one-time pass (heuristic keyword match reviewed by Ron once) rather than trusted blindly. This is exactly the kind of classification I'd want a human to eyeball before it drives anything client-facing.
+
+Call/meeting layer (Fireflies/Fathom, once linked to 3GM calls)
+
+- Action items mentioned on a call but never turned into a board task — the single best leading indicator of things falling through cracks.
+- The same question or concern surfacing across more than one call — a sign the last answer didn't land, which matters more in a relationship-based culture than it would elsewhere, since it reads as not being heard rather than just a process hiccup.
+
+Communication layer (blocked until the email connector lands)
+
+- Response latency on anything inbound from Travis/Stefan — this is probably the single highest-leverage signal in a reference-based industry, and it's the one layer we can't build yet.
+- Any client message that went unanswered in-thread.
+- Tone shift — frustration, repeated phrasing, escalation language.
+
+Cross-client pattern layer (OV2, checked weekly not daily — this is background context, not a daily trigger)
+
+- Whether current 3GM signals match known churn patterns already on record: 3GM itself has a documented 2024 churn-risk episode and bugs that recurred rather than stayed resolved; that's the specific failure mode to watch for here, not a generic one. More on this in section 3.
+
+Output, not a score
+
+I'd avoid a single numeric "health score" — it invites false precision and hides the reasoning behind a number Ron then has to unpack anyway. Better: a daily status of Green / Yellow / Red per client, where Yellow or Red always comes with the specific triggering fact attached ("Outlook integration task untouched 4 days in QA stage," not "board activity down 30%"). Green means nothing surfaced; the report can be one line. That internal digest is also the raw material for the client-facing email from our earlier tangent — same data, two audiences.
+
+Next: section 3 — what "unhealthy" has actually looked like at real EOXS clients, so these thresholds are calibrated against real failure patterns rather than guesses.
