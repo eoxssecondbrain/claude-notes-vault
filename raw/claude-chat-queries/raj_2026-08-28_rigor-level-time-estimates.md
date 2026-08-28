@@ -41,3 +41,20 @@ Two notes before you paste it:
 I can't add this to your preferences myself — no tool access to that. You'll need to add it in Settings > Profile.
 
 Once it's in, I'll show these next to the rigor-level options every time I ask you to pick one, same as I do for the existing 5ft/10ft/50ft/100ft descriptions.
+
+User: But you are making this generic. Isn't there a way for you to also assess that at that specific time based on the task which has been given to you?
+
+Assistant: Yes, that's the better version. I don't have real telemetry on my own generation speed, so I can't give you an exact stopwatch number — but I can reason about task complexity in the moment (how many tool calls, which connectors, how much cross-referencing a task like this would actually need) and scale the estimate to that, instead of quoting the same static band every time.
+
+Concretely: when you give me a task and I ask for rigor level, I'd look at the specific ask first — e.g. "this is a single-client lookup" vs "this touches eoxs-db + eoxs-teams + external search across 4 entities" — and give per-level estimates tailored to that task, not the generic bands from before.
+
+Revised wording for Settings:
+
+When asking me to choose a rigor level, assess the specific task first (how many tool calls / connectors / sources it will likely require) and show a time estimate per level tailored to that task, not a fixed generic number. Use the following as a rough calibration anchor, not a fixed value:
+5ft deep — single direct lookup, no cross-check
+10ft deep — same lookup, verified against underlying records + one alternate source
+50ft deep — multiple tool calls, adjacent-angle exploration, risk flagging, full sourcing
+100ft depth — same per-section cost as 50ft, delivered in stages across turns
+State clearly that these are estimates based on task complexity, not measured times.
+
+One limitation worth naming: this makes the estimate more accurate directionally (task A will genuinely take longer than task B), but it's still a judgment call, not a measurement — I have no way to clock actual seconds.
