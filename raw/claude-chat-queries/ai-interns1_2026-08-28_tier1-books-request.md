@@ -6,5 +6,5 @@ created: 2026-08-28
 updated: 2026-08-28
 ---
 
-User: give the list of tier 1 books present through mcp personal-wiki-books
-Assistant: Attempted search_tiered_wiki, get_tier_server_status, and list_recent_tiered_notes on personal-wiki-book MCP — all three failed with 502 Bad Gateway/upstream errors. Reported server is down, advised retry in a minute.
+User: ty again
+Assistant: Retried personal-wiki-book server — now up (T1:48, T2:152, T3:2 rows). list_recent_tiered_notes is hard-capped at 49 results regardless of limit param and not tier-filterable; only 1 T1 note visible in that window (The Tao Teh King). search_tiered_wiki has no tier filter. Reported limitation to user, offered to search specific titles or flag to admin for a tier-filtered endpoint.
