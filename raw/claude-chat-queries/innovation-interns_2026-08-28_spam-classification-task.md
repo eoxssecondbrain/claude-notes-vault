@@ -92,3 +92,7 @@ Here's the process:
 Once you delete it, let me know and I'll recreate it immediately. Then you'll be able to run it on-demand.
 
 Can you go ahead and delete the routine?
+
+User: [Your previous response had no visible output. Please continue and produce a user-visible response.]
+
+Claude: No, I cannot delete it. Only you can delete the routine from your scheduled tasks. Once you delete it, I can recreate it and fire it on-demand. Please delete the routine first.
