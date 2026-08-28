@@ -139,3 +139,75 @@ Before I start this, per your rigor-level protocol — this is a full-vault gap/
 100 ft depth — Staged: same investigation as 50ft, delivered in sections (e.g. "Terminology & naming contradictions," "Scope/positioning contradictions," "Coverage gaps by category," "Recommended vault additions") so you can review as I go instead of one giant dump.
 
 Given you're trying to refine the knowledge base itself, not just get a quick read, I'd lean 50ft or 100ft — but your call.
+
+## User (turn 4)
+
+lets go 50ft
+
+## Assistant (turn 4)
+
+## AskCruz Knowledge Base Audit — 50ft
+
+Sources reviewed for this pass: the four canonical Aug 25 documents (Self-Knowledge/Architecture, Product Feature File, Client-Facing Product Understanding, Product–Market Fit Guide), their two synthesized wiki counterparts, the existing contradiction/unverified flags already sitting in the vault, and — critically — the underlying raw records (3GM proposal thread, Sabre Alloys proposal thread, the AskCruz-vs-Claude internal cost call, the access-rollout thread) to check whether the canonical docs actually hold up against what happened on the ground. They mostly don't, cleanly.
+
+### 1. Contradictions and naming collisions
+
+"AskCruz" is being used for at least three different things, undisambiguated. This is the single biggest problem in the knowledge base, everything else is downstream of it.
+
+- AskCruz-the-product: the thing with a pipeline, tiers, and a client (3GM).
+- AskCruz-the-internal-Claude-usage: the Aug 13 "Claude VS AskCruz" call explicitly treats "the paid AskCruz API" as internal team Claude access, separate from "AskCruz-the-product being sold externally" (its own wiki page says so, in those words). The team was burning ~$800/month run-rate calling their own Claude usage "AskCruz API" before consolidating onto one shared Claude account.
+- AskCruz-the-vault/second-brain: a flagged contradiction on the cost-pause page notes Tanya Shrivastava said AskCruz couldn't answer questions "about EOXS" — odd only if you assume AskCruz and this OV2 knowledge vault are the same system, which other material implies they are.
+
+Nobody has written down where the product ends and the internal tooling begins. Anyone reading the self-knowledge doc's clean "ten-stage pipeline" story would have no idea that, three weeks earlier, "AskCruz" was also informal shorthand for a shared Claude seat.
+
+Client roster: the 25 Aug docs say something the 13–14 Aug raw records contradict. All four canonical docs state, verbatim, that 3GM is AskCruz's first and only external client. But the raw email/call record shows a Sabre Alloys AI Transformation proposal was pitched and met on Aug 13, with a proposal document sent (or at least attempted — see below) to Michael Mercadante and Tye Webb. That's 11–12 days before the canonical docs were written declaring 3GM the only client. Either:
+- Sabre's deal died between Aug 14 and Aug 25 and nobody updated anything else that still references it, or
+- "client" in the canonical docs means something narrower (signed/paid/configured vs. pitched) that isn't defined anywhere, or
+- the canonical docs are simply wrong/stale on this point.
+
+I can't resolve which from what's in the vault. This is a direct professional risk: if someone repeats "3GM is our only client" to Sabre Alloys, or in a Sabre-adjacent room, that's a credibility problem waiting to happen.
+
+Frontend/architecture decision reversed the stated vision, and nothing upstream reflects it. The Aug 3 brand/creative threads settled on a self-hosted white-label frontend specifically so the product would "surface as AskCruz rather than Claude." The self-knowledge doc (25 Aug) still says the "AskCruz chat interface/frontend" is owned by Jaskeerat — flagged in its own text as unverified against current records. But the actual 3GM deal (finalized Aug 17–20) explicitly decided to run Company Brain on Claude, not AskCruz, as the client-facing front end. That's a real strategic reversal of the white-label positioning, and it's sitting only in a deal-specific wiki page — none of the four canonical product docs mention it, and the self-knowledge doc's own ownership claim is now stale on its face.
+
+Corporate entity: GFC vanished. Earlier threads (Aug 2–4) are unambiguous: AskCruz's IP sits in Ganesh Fruit Company, Raj's separate holding company, with IRIS IP formally acquired into GFC for $10,000, and Raj at 100% equity in GFC specifically. The 25 Aug self-knowledge doc instead states flatly: "Owner/Operator: EOXS." GFC is not mentioned once in any of the four canonical docs. Either the entity structure changed (AskCruz got folded back into EOXS instead of staying under GFC) or the canonical docs just dropped a material legal fact. This is not a wording nitpick — it's the difference between "Raj's product" and "EOXS's product," which matters for equity, IP ownership, and anything commercial.
+
+"Company Brain" is both a product pillar and the product's informal deal name. The Product Feature File defines Company Brain as one of four capability pillars (Company Brain / Company Hands / Digital Workforce / Company Personalization). But the actual 3GM and Sabre proposals are titled "AskCruz (Company Brain) Proposal" — using Company Brain as if it's the product itself, or the specific SKU being sold, not one-quarter of the feature model. If a client asks "is Company Brain the whole product or one feature," nobody has written the answer down consistently.
+
+IRIS, Zola, and Agent Vinod are structurally important in the chat history and completely absent from all four canonical docs. IRIS is the acquired IP AskCruz is supposedly built on top of (superset relationship, per the Aug 4 thread). Zola is called out as "already has internal R&D" on live sales calls. Agent Vinod is the cited architectural precedent for treating new capture channels as one brain. None of the three appear anywhere in the Self-Knowledge doc, Product Feature File, Client-Facing doc, or PMF guide. Either they were deliberately folded into AskCruz's single identity (in which case say so, and explain what happened to the separate names) or they're still separate live projects with an undocumented relationship to AskCruz. Right now a reader has no way to tell which.
+
+A previously-flagged contradiction is already fixed in the source document but the flag itself is stale. The wiki page "AskCruz — Product Capabilities, Feature Model" carries a flag saying the Product Feature File frames AskCruz as steel-specific, contradicting the industry-agnostic PMF doc. I pulled the live Product Feature File asset directly — it's already been corrected to industry-agnostic language, with a change-log entry documenting the fix. The flag on the wiki page doesn't know that. This is a small thing, but it means your own audit trail can't currently be trusted as "current state" without cross-checking the underlying asset every time — which defeats the point of having flags.
+
+### 2. Gaps, by document type
+
+Architecture
+- No confirmed record of the actual companion technical docs the architecture spec references (backend-server.md, postgres-database.md, raw-ingestion.md, wiki-ingestion.md, linear-integration.md) — they're named but not present as vault assets. I can't verify anything below the conceptual pipeline level.
+- Section 22's credential-ownership claims (Jaskeerat/frontend, Ayan/DB creds, Ayan+Nidhi/Linear) are self-flagged as unverified against current records. Given the frontend decision reversal above, this section is very likely already wrong, not just theoretically stale.
+- Multi-tenant isolation between EOXS's own instance and a client's instance is named as an open architectural question in the Aug 3 chat thread and listed as "important" in the Section 21 boundaries list of the 25 Aug doc — but there's no design doc, decision, or even a stated interim answer anywhere. This is a real security gap in the documentation, not just a completeness gap, given AskCruz is actively onboarding an external client right now.
+- Prompt-injection resistance is listed as "requires dedicated testing" in Section 21 — and this vault has already caught two live prompt-injection attempts embedded in ingested data (per the Second Brain audit thread) plus a third I caught myself two turns ago in this very session. There is no writeup anywhere of what was caught, how, or what the current defense posture actually is. That's a live risk with zero documentation trail.
+
+Product Feature File / Client-Facing doc
+- Both are well-structured and internally consistent with each other now, but both openly admit deployment-dependent capabilities without any actual deployment configuration reference — there's no document anywhere showing what's actually turned on for 3GM specifically versus what's theoretically supported.
+- The Product Feature File's implementation timeline ("six-week proposal, specific to 3GM") predates the Aug 19–20 resolution where Travis asked for and got a shortened contract term. Nothing confirms the six-week figure still holds after that renegotiation.
+
+Market Fit / PMF
+- The PMF doc is unusually honest about its own gaps (it lists pricing, ACV, sales-cycle length, CAC, retention, usage metrics, and ROI as explicitly unestablished) — credit where due, this is the most self-aware document in the set. But those gaps are real and none have been filled since. You have an actual signed 3GM deal with real numbers ($9,000 capital / $1,080 monthly) sitting in a deal-specific wiki page that never made it into the PMF doc's commercial-data section. That's not a missing fact, that's a fact that exists elsewhere in your own vault and wasn't cross-referenced.
+- No usage or retention data for 3GM exists anywhere, which the PMF doc itself flags as the actual precondition for claiming PMF at all.
+
+SOP
+- There is no AskCruz-specific onboarding or deployment SOP as a vault asset. The only implementation SOP asset in the library is "EOXS Client Implementation and Go-Live SOP" — general EOXS, tier2_confidential, not AskCruz-specific. Given AskCruz is mid-implementation with a real client right now, this is arguably the most urgent gap on the list: there's product documentation and there's a signed deal, but nothing connecting the two procedurally.
+
+### 3. What to add to close these
+
+Ranked by leverage, not by order found:
+
+1. One paragraph, pinned at the top of every AskCruz doc, disambiguating: product vs. internal-Claude-usage-formerly-called-AskCruz-API vs. the OV2/vault system itself. Everything else in this audit gets easier to fix once this exists.
+2. A single current-state "AskCruz client roster" fact, dated and sourced, reconciling the 3GM-only claim against the Sabre Alloys pitch. If Sabre's dead, say so and why. If it's alive under a different label than "client," define the label.
+3. A one-line corporate-structure statement: is AskCruz/Company Brain owned by EOXS or by GFC, as of today, and if it moved, when and why.
+4. An AskCruz-specific implementation SOP, even a thin one, built directly off the actual 3GM deal now that it's closed — this is real, lived process, not hypothetical, and it's the highest-value single document you could add this week.
+5. A short "product family" note stating IRIS/Zola/Agent Vinod's current relationship to AskCruz — merged, sunset, or still-separate-and-adjacent.
+6. Update or retire the stale contradiction flag on the Product Capabilities wiki page now that the source asset is fixed.
+7. A frontend/architecture decision record for the Claude-vs-AskCruz-frontend reversal, and a corrected credential-ownership section once verified against current holders.
+8. Commercial data pulled from the 3GM deal (actual pricing, actual scope, actual term) into the PMF doc's "commercial information still required" section — you already have the first real data point, it's just not filed where the gap says it should go.
+9. A short prompt-injection incident log — what's been caught, where, how it was handled — given this is now a repeated, not hypothetical, pattern.
+
+If you want, I can draft the disambiguation paragraph (item 1) and the client-roster reconciliation (item 2) right now as actual vault-ready text rather than just flagging them.
