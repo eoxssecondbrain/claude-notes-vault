@@ -45,3 +45,33 @@ eoxs-data-general skill governs both EOXS_data_general and Team_EOXS. One skill,
 threads-ov skill governs the Thread_OV connector only — the save-every-turn rule, the raw-transcript to chat-summary to OV2-cross-link pipeline, and when each tool in that chain gets called.
 
 So: connector = the tool pipe, skill = the operating manual for that pipe. A connector works without a skill (you could call its tools directly with no guidance), but a skill without its connector is just unusable instructions with nothing to execute against. That's also why your standing rule loads both threads-ov and eoxs-data-general at the start of every thread — they're the manuals for the two connector groups (Thread_OV, and EOXS_data_general + Team_EOXS) that every EOXS-context conversation is likely to touch.
+
+**User:** [Shared two screenshots of another Claude conversation, titled "Section 2: How AskCruz uses this — two angles, and one uncomfortable overlap". Visible text:
+
+Angle A — Internal ops (use Skills right now, low effort, real payoff)
+You're already doing this with me (threads-ov, raj-eoxs-vault, sales-strategist). Extend the same pattern across the org:
+- Turn recurring playbooks into Skills instead of re-explaining them per chat: the Copilot objection-handling script, the "Sabre never appears externally" rule, pricing floors, the Collier-style deal-stage checklist.
+- This matters most for the 50 MBA intern cohort. Right now output quality depends on each intern re-describing context every session. A shared skill folder (or a few, by function — sales outreach, research, fulfillment) standardizes their output without you reviewing every draft.
+- This is literally the "Company Personalization" layer in your own 8-layer AskCruz vision, except you can start building it today, for EOXS internally, with zero AskCruz product work.
+
+Angle B — Product positioning, and this is the part worth sitting with
+Here's the tension. Skills solve exactly the kind of problem AskCruz says it solves: turning tribal knowledge into a standing, reusable procedure Claude applies automatically. That's not a coincidence — it's the same "why not just use Claude directly" objection you're already fielding from prospects, now sharper, because Anthropic ships a native, free way to encode "how we do things here."
+
+If AskCruz's pitch leans on "we capture your institutional knowledge," a technical prospect can reasonably ask: isn't that just a folder with a SKILL.md? For pure procedural knowledge — SOPs, tone, pricing rules, checklists — the honest answer is yes, mostly.
+
+Where Skills still wins, and where the pitch needs to plant its flag harder:
+- Skills are static. They're instructions and s[teps] sitting in a folder — they don't ingest live, unstructured, cross-system data. They don't know what happened on yesterday's [cut off]
+
+Then typed: "give me this simple words"]
+
+**Assistant:** In plain terms:
+
+Two ways this "Skills" feature matters for AskCruz.
+
+First, internal use — easy, do it now. You're already doing this in your own Claude setup with three skill folders (threads-ov, raj-eoxs-vault, sales-strategist). The idea is to do the same thing company-wide. Instead of re-explaining the same playbook to Claude every single chat, you save it once as a Skill. Examples: the script for handling Copilot objections, the rule that Sabre never gets mentioned externally, your pricing floors, the deal-stage checklist. This matters most for your 50 MBA interns — right now their output quality depends on each one re-explaining context from scratch every session. A shared skill folder per function (sales outreach, research, fulfillment) makes their output consistent without you having to check every draft. This is basically the "Company Personalization" layer from your own 8-layer AskCruz plan — except you could start building it today, for free, inside EOXS, without writing a line of AskCruz product code.
+
+Second, and this is the uncomfortable part — what it means for selling AskCruz. Skills do the exact thing AskCruz's pitch claims to do: turn a company's unwritten know-how into a standing rule Claude just follows automatically. That's not a coincidence. It's the same "why not just use Claude directly" pushback you already get from prospects — except now it's sharper, because Anthropic gives this away free and built-in.
+
+If your pitch is "we capture your company's institutional knowledge," a technical buyer can fairly ask: isn't that just a folder with a SKILL.md file in it? For plain procedural stuff — SOPs, tone, pricing rules, checklists — the honest answer is yes, mostly.
+
+Where AskCruz still has an edge, and needs to argue it harder: Skills are static. They're just written instructions sitting in a folder — they don't pull in live, messy data from across systems, and they don't know what happened on yesterday's call. (The screenshot cuts off right here, so that's as far as the point goes.)
