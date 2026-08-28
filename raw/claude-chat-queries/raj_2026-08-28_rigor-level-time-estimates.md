@@ -1,0 +1,26 @@
+---
+thread_name: "rigor-level-time-estimates"
+user: "raj"
+type: claude-chat
+created: 2026-08-28
+updated: 2026-08-28
+---
+
+User: So you know how we have rigor levels and then the craft level? I wanted to add another element like that. I understand that if we go with 10-foot rigor level, it will take you X seconds to generate a response. However, if I go with 50-foot rigor level, it would probably take you 4x the time to generate a response.
+I wanted to even add an estimated time when you ask me, "Which rigor level do you want me to select?" You know how you would ask me when I give you a task, and then you ask me, "Hey, which rigor level do you want to go with?" and I select 50? Over there, there should be an estimated time for that.
+
+Assistant: Good idea, but flagging one thing before I answer it: response time doesn't scale as a clean multiplier the way you're picturing. It depends on how many tool calls / searches / DB queries a task actually needs, not a fixed formula tied to rigor level. A 50ft on a topic needing 3 extra searches is fast; a 50ft that needs cross-referencing eoxs-db + eoxs-teams + external search is slower. So any number I give you is a rough band, not a guarantee.
+
+With that caveat, here's a realistic estimate framework I'd propose adding:
+
+5ft (Quick) — ~15–30 sec. One direct lookup, no cross-check.
+
+10ft (Verified) — ~45–90 sec. Same lookup, but verified against underlying records + one alternate source.
+
+50ft (Deep) — ~2–5 min. Multiple tool calls, adjacent-angle exploration, risk/blind-spot flagging, full sourcing.
+
+100ft (Staged) — same per-section cost as 50ft, but delivered incrementally across turns, so total elapsed time is similar to 50ft, just spread out with "next" pauses in between.
+
+One more note: I can't self-edit your userPreferences — that's only editable by you in Settings > Profile. I can apply this framework informally in this conversation going forward if you want, but to make it permanent you'd need to paste the wording above (or your own version) into your preferences there.
+
+Want me to tighten this wording so it's copy-paste ready for Settings?
