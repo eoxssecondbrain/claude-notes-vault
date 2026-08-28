@@ -33,3 +33,23 @@ and copy-and-paste templates inside of my community. If you wanna join, just com
 Assistant: This doesn't clearly match any of the configured skills — it's a pasted video transcript on building a "Jarvis" AI agent (VPS, agentic harness, model, memory, skills, tools, comms, dashboard), with no explicit question attached. It's tangentially close to your Atlas/Poder AI framework work, but I don't want to guess.
 
 What do you want done with this — a critique of the approach, a mapping of these 9 steps against what you're already doing with EOXS/AskCruz Claude skills and infra, or something else?
+
+User: I want to build this this weekend: buy a server in India and set up all of this infrastructure. Can you tell me which server I should buy?
+
+The second step he's talking about is a harness. Can you brief me on what that is? I know the third step is having an AI layer on it, but I don't know what the second step is.
+
+I want to have a discussion with you on:
+- Which server to buy
+- What the harness is
+- How to set it up
+- How much time this will take
+- Whether I would be able to make something like this over a weekend and then give it access to everything
+
+Assistant: This is a research/strategic task (server choice, harness explanation, setup plan, feasibility), so per your rigor-level rule, pick one:
+
+- 5ft deep — Quick: direct answer using well-known options (e.g. common VPS providers, what "Hermes" harness likely is), no deep verification.
+- 10ft deep — Verified: same, but I check current pricing/specs, actual harness options, and cross-check at least one source before reporting.
+- 50ft deep — Deep: full investigation — verified, plus explore alternatives the video didn't mention (other harnesses, hosting options in India specifically, security/compliance angles), flag risks and blind spots (e.g. giving an agent broad tool access unattended), realistic time estimate.
+- 100ft depth — Staged: same as 50ft but delivered section by section (server choice → harness → setup steps → time/feasibility), you say "next" between each.
+
+Which level?
