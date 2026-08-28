@@ -110,3 +110,25 @@ Run that combination and Sales Navigator gives you a real list — every profile
 One thing to know early: LinkedIn's Industry field is a fixed list, and "steel service center" often isn't its own industry category — companies get tagged under something broader like Wholesale or Metals & Mining. So the company-name keyword filter usually does more real work than the Industry dropdown for a niche category like steel.
 
 Want to answer the three nursery questions from before, or should we fold that into moving on to kindergarten?
+
+User: So is it just used to find people from the related companies and position or does it also give me an update via notification that Mark Reyes started  working at ohio steel as President, i mean he changed his job or company ?
+
+Assistant: Both. Search finds the list. Alerts keep you updated after that.
+
+Search: finds people matching filters right now.
+
+Alerts: once you save a person as a lead (or a company as an account), Sales Navigator watches them and pings you when something changes. One of the built-in alert types is literally "Lead Changed Jobs — a saved lead has moved to a new company."
+
+So your exact example works: if you save Mark Reyes as a lead while he's at Central Steel, and he later moves to Ohio Steel as President, you get an alert on your Sales Navigator homepage, and by email if you turn that on. Once you save a lead, you get notified when they change jobs, along with things like work anniversaries.
+
+Other alert types worth knowing, same mechanism (save it, then get notified):
+Someone at a saved account gets promoted to director-level or above
+A saved account starts hiring more (growth signal)
+A saved lead views your profile or engages with your company's posts
+A saved account gets mentioned in the news
+
+Two catches:
+It only works for people/companies you've actually saved. Random searches don't get tracked. If you don't have saved leads or accounts, you won't see alerts until you save some first.
+Basic job-change alerts are on every plan, but a few advanced ones — like alerts when someone engages with sponsored content — are Advanced Plus only. Content-engagement alerts on sponsored content are available only on the Advanced Plus plan.
+
+Ready for kindergarten now, or another question on search/alerts first?
