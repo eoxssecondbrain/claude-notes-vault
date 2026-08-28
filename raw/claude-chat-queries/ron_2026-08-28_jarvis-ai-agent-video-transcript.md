@@ -95,3 +95,36 @@ Time and feasibility — my honest read
 A working skeleton (server up, Hermes running, talking to Claude, one tool connected, reachable via Telegram) is a realistic weekend for someone technical. Nine fully-working steps with a dashboard and multiple tool/comms integrations, tested and reliable, is not — that's a 2-3 weekend project once you hit real integration friction, and the video is selling a course/community, so it has an incentive to make it sound like a weekend.
 
 The bigger flag: "give it access to everything" on day one is the wrong move regardless of timeline. An unattended agent with broad tool access (email, calendar, files) run by a fresh harness install is exactly the failure mode the harness articles warn about — errors compound when nobody's watching. Start with one connected tool, watch it operate for a few days, then expand scope. Given you're mid-exit from EOXS and starting AskCruz next week, I'd also flag this is a side project competing for weekend hours right before a real transition — worth being honest with yourself about whether this is exploration you want, or a distraction from ramping into AskCruz.
+
+User: Based on what you mentioned here right now, the one that makes sense to me is the DigitalOcean server, or the DigitalOcean Bangalore server, if that is its true cost. Double-check it and verify it, or AWS might be overkill.
+
+I do not have any technical background, and I want something that can help me whenever I get stuck. Here is my entire setup that I'm trying to set up:
+- Connect to my Gmail
+- Connect to Telegram
+- Have a dashboard
+- Connect with a memory layer
+- Connect it with something that can call other people, so if there is something I need to get done, it can call
+
+For example, if I need to book a blood test, it can call that person and book that blood test. Before doing all of that, I understand that maybe I should get the Telegram thing working first, and then I can attach as many tools as possible.
+
+I do not have any technical background. Learn what you can about Ron. I want to test this first for my personal use case so that it does not break anything. If anything breaks, it's on me, and then maybe test it with the OV account that we have for Claude.
+
+Assistant: Verified — DigitalOcean Bangalore checks out
+
+DigitalOcean does run an active Bangalore (BLR1) data center, priced at parity with their other regions (no India markup). But it's billed in USD, so add 2-5% FX/bank markup to whatever the sticker says. Realistic tiers for your case:
+
+- $6/mo (1GB/1vCPU) — too tight once Hermes + memory + multiple tool connections are running
+- $12/mo (2GB/2vCPU) — workable minimum
+- $24/mo (4GB/2vCPU) — the one I'd actually get. Real cost ~₹2,000-2,100/mo after FX. This is the "most commonly deployed" tier for exactly this kind of workload per multiple sources, and gives you headroom so you're not fighting memory limits while learning.
+
+AWS is overkill for you specifically — its console, IAM permissions, and billing structure assume some cloud background. DigitalOcean's docs are written for beginners and it's the most commonly recommended starting point for non-technical people running a single server. Good call skipping it.
+
+On sequencing — you're right
+
+Telegram-first, one tool at a time, is the correct order, especially with no technical background. Memory doesn't need separate setup — Hermes ships with its own persistent memory (SQLite-backed), so that's included once Hermes is running, not a 6th thing to build.
+
+One thing to flag on your tool list: "calling people to book a blood test" is a different category of build entirely. That needs a telephony layer (something like Twilio) plus a voice-capable conversational agent — Hermes's standard toolset doesn't include this out of the box. It's a real capability but it's a separate project on top of the base setup, not something that comes for free once Telegram + Gmail work. Worth parking it until the core assistant is stable.
+
+On testing with your personal use first, then the OV/Claude account — good instinct, and I'd go further: keep this VPS agent completely disconnected from your EOXS/client systems (Teams MCP, OV2, client Gmail, anything with confidential business data) while you're testing. A fresh, unaudited harness with broad tool access is exactly where a mistake would be costly if it touched client data. Test on a personal Gmail/Telegram only, for now.
+
+One thing worth checking with you directly: you'd earlier mentioned wanting to run this on an existing PC with N8N rather than a paid VPS with Hermes. Is this VPS+Hermes plan replacing that idea, or are these two separate things you're now considering side by side?
