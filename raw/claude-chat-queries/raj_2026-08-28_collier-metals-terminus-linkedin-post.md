@@ -65,3 +65,49 @@ Raj
 Two variants above — "Direct ask" just states the request plainly, "Framed as mutual upside" positions it as good exposure for him too, which gives him more reason to say yes but also reads slightly more like a pitch. Given the customer-count issue already sitting in this relationship, I'd lean toward the direct version — it's cleaner and doesn't ask him to do you a favor dressed as doing him one.
 
 Once he confirms, tell me and I'll draft the actual post — reframe first, Collier Metals named, no zombie photo since I can't generate that regardless of his answer.
+
+User: Yeah, he said he's good. Let's make a picture of me, and let's write a LinkedIn post.
+
+Assistant: [Asked for craft level via interactive question: "Craft level for the LinkedIn post?" with options Sketch/Draft/Painting/Commissioned]
+
+User: Commissioned
+
+Assistant: Post drafted below. Two flags first.
+
+**The photo — still no.** Tripp's buy-in solves the company-naming problem, not the image problem. I can't generate a photorealistic image of you (real identifiable person) or anything drawing on Walking Dead's copyrighted characters/imagery, regardless of who signed off on the story. If you want a visual, take an actual photo at the facility next time you're there — that's the only version of this that isn't a policy problem.
+
+**One assumption in the draft:** Tripp confirmed the company name, not necessarily his own name attached to a public post about a sales visit. I named him below since it reads better and it's factual, not embarrassing — but check with him before posting if you're not sure that's covered by his "I'm good with it."
+
+---
+
+Nobody thinks about steel until they need it.
+
+Turns out that includes the apocalypse.
+
+Terminus — the trainyard from The Walking Dead — is a real place.
+
+It's Collier Metals, in Atlanta.
+
+A working steel plant.
+
+The show needed somewhere that looked like the last thing still standing after everything else fell apart.
+
+They didn't pick a bunker.
+
+They didn't pick a military base.
+
+They picked a steel yard.
+
+That's not an accident.
+
+Steel is in your car, your building, your bridge, the frame of the room you're sitting in right now — everywhere, and nobody clocks it until it's the thing between them and nothing.
+
+I was on-site last week talking ERP and AI with Tripp Collier, the owner. Didn't expect a zombie-apocalypse history lesson in the middle of a sales conversation. Got one anyway.
+
+Steel doesn't need a highlight reel.
+
+It just needs to still be standing when everything else isn't.
+
+---
+
+Checklist: opens with a stated-as-fact reframe, one real verified anecdote, one developed callback close, no hashtags/emoji, no other client named, nothing fabricated. Ready to post as-is, or I can tighten further if you want it shorter.
