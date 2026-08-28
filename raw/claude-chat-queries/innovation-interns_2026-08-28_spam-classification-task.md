@@ -85,3 +85,13 @@ Claude: How did you create the routine—through a web interface or API call?
 User: [Your previous response had no visible output. Please continue and produce a user-visible response.]
 
 Claude: Did you create it through a web interface or API?
+
+User: i used claude from my other account to create it and then ran it
+
+Claude: Perfect! Since you created it from another Claude session, here's what you need to do:
+
+Option 1 (Easier): Go back to that other Claude session/account and I can delete it from there for you. Once deleted, I can recreate it here in this session, and then I can fire it on-demand whenever you want.
+
+Option 2: If you don't have access to that session, you can use an API call to delete it directly using the trigger ID: trig_018zX8JibixysGLB2cpzEqGq
+
+Which option works for you?
