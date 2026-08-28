@@ -168,3 +168,14 @@ Assistant: Four options, each 3-4 words, plug into "...with Tripp Collier, the o
 4. "an unapologetic AI nerd"
 
 All draw on the AI-forward, engineer-mindset read on him from your calls — not invented, just compressed. "An engineer, not a suit" is probably the sharpest fit for the post's voice; "an unapologetic AI nerd" is the most fun but slightly more former/informal, worth it only if that matches how you two actually talk.
+
+User: Take a fresh approach. Think something else. Not fearing any of them.
+
+Assistant: Four bolder options — less hedging, more stated-as-fact:
+
+1. "not afraid of AI"
+2. "an engineer, period"
+3. "already ahead of the industry"
+4. "running steel like it's tech"
+
+"An engineer, period" is the flattest, most confident fit for the voice — no qualifier, no softening. "Not afraid of AI" is the most direct callback to why the AI conversation with him was worth having in the first place.
