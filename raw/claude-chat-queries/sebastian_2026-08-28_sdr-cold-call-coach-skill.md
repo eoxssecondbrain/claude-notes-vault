@@ -162,3 +162,7 @@ Two things worth flagging on substance, not just process:
 The pain-point/value-prop list in Section 3 is generic filler — I don't have verified current AskCruz ICP or messaging in this session. The skill is written to pull real data from eoxs-data-general at session start if that connector's live; if not, it'll tell you it's using the fallback rather than pretending it's current.
 
 The objection table and stage examples are single-pass drafts, not tested against a real call yet. Skill-creator's normal process is draft → run test prompts → you review outputs → iterate. Given you picked Draft craft level I skipped that loop, but if you want it before relying on this live, the fastest check is: paste me 5-10 lines of a real or simulated call and I'll run the skill against them right now so you can see the actual output shape before you trust it on a live prospect.
+
+User: The name for the skill be SDR-Assistant
+
+Assistant: Renamed to SDR-Assistant, everything else unchanged.
