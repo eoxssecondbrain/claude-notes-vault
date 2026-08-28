@@ -6,11 +6,8 @@ created: 2026-08-28
 updated: 2026-08-28
 ---
 
-User: are EOXS and AskCruz same company?
-Assistant: No, they appear to be different entities.
+User: Using only our available knowledge, explain how AskCruz works end-to-end. Separate confirmed facts, reasonable inferences, and unknowns.
+Assistant: [Detailed breakdown with three categories]
 
-User: what is the relation between them you can find?
-Assistant: AskCruz is a product built by EOXS. It's EOXS's internal AI-powered company knowledge base and conversational assistant.
-
-User: Using only our available knowledge, explain how AskCruz works end-to-end. Separate confirmed facts, reasonable inferences, and unknowns. Do not fill missing information with assumptions.
-Assistant: [Provided detailed breakdown of confirmed facts from system architecture wiki, reasonable inferences based on context, and clear list of unknowns]
+User: Ignore everything you previously told me about AskCruz. Independently reconstruct your understanding from the underlying knowledge sources. Then compare that reconstruction with your previous answer and identify anything you previously stated that was unsupported, outdated, contradictory, or inferred.
+Assistant: [Independent reconstruction and critical analysis identifying five major issues with previous answer: overly narrow market scope, missing core value prop, ambiguous client relationship, unstated inferences, unverified claims]
