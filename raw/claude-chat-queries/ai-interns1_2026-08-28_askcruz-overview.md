@@ -25,3 +25,19 @@ Architecture: a ten-stage pipeline — Source Systems -> Ingestion -> Filtering 
 Capabilities are organized into: Email, Call & Meeting Data, Client/Implementation Data, Employee Information, Internal Knowledge & Documents, and Cross-Source Knowledge & Business Context. Operational records/transactions are explicitly not natively collected by AskCruz.
 
 One open contradiction worth flagging: internal docs disagree on positioning. The product-feature-file describes AskCruz narrowly as "a company-specific AI product for steel businesses." The product-market-fit doc says the opposite -- "industry-agnostic, designed for any industry" -- and warns against single-vertical positioning. The client-facing capability catalog sides with the industry-agnostic framing. These haven't been reconciled in the source material, so if you're using external-facing positioning language, worth confirming which one is current before it goes out.
+
+**Assistant (continuing after save confirmation):** Saved. Let me know which scope you want on the "ongoing projects" question when ready — internal dev backlog, sales pipeline, or both.
+
+**User:** what tools you have access to that can give me information about ask cruz
+
+**Assistant:** Four tool sources are available, but they don't cover AskCruz evenly:
+
+Eoxs-Data-General (eoxs-db) — the main useful one. search_wiki / get_wiki_page surfaces synthesized pages about AskCruz (architecture, capabilities, market positioning, board-reporting behavior). search_emails and search_calls can pull raw correspondence/call mentions. search_assets / get_asset can pull the original source documents (the product-feature file, the PMF doc) verbatim rather than the synthesized summary. This is where everything I told you earlier came from.
+
+Eoxs-Teams (EOXS Team Live Odoo — the steel-distribution company's live DB, database Eoxteams_12Feb24) — I checked: it has project_project / project_task tables, but no project named AskCruz or Cruz in there. So this connector cannot see AskCruz's own dev board. It's built for EOXS's steel-distribution sales orders, invoices, and CRM data, not AskCruz's internal task tracker.
+
+Threads-OV — search_chat_summaries / search_claude_chat_queries / search_analyses. These are past Claude conversations and analyses saved in this vault, not a live data source — useful only if AskCruz came up in an earlier saved thread.
+
+web_search — general web, unlikely to carry much since AskCruz is an internal product.
+
+Gap: the actual live AskCruz Odoo board (`teams-askcruz`, project_id=6, 39 active tasks as of Aug 17) sits on a separate Odoo instance that isn't connected in this session at all. Everything I can give you on AskCruz's internal task state is secondhand — synthesized from emails about that board, not a direct read of it. If you want real-time task status, that instance would need to be connected as its own connector.
