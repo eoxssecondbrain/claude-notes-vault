@@ -6,32 +6,19 @@ created: 2026-08-28
 updated: 2026-08-28
 ---
 
-User: Worth flagging since your preferences state this account is always Rajat Jain - where exactly this is mentioned
+User: The eoxs-db connector's dedicated tools (get_index, search_wiki, search_assets) aren't loading via search - why these tools are not available to me?
 
-Assistant: That line is in your own userPreferences, which get attached to every message I receive in this chat interface. Exact text, verbatim:
+Assistant: Good question to dig into rather than let slide. Let me check what's actually happening instead of guessing.
 
-"This account is always used by Rajat Jain, the CEO of EOXS. Keep this in mind always."
+[Called tool_search "get_index eoxs-db wiki assets search" -> returned Team EOXS MCP:list_tables, Team EOXS MCP:query, Thread OV:search_ov2_wiki, EOXS Data General:search_repo_docs, EOXS Data General:list_repo_docs. No eoxs-db, get_index, search_wiki, or search_assets tools found.]
 
-It's the second-to-last line in that preferences block, right before "Never save anything to memory unless I explicitly ask."
+Confirmed, same result as before. Here's the actual answer, not a guess:
 
-That's a Claude.ai account-level setting you configured (Settings > Profile, per how preferences work) — it's not something from EOXS's internal systems. It's separate from the memory file I have, where profile.md identifies you as "Danish Lari (goes by Danish)."
+The eoxs-data-general skill describes an eoxs-db connector with 20 tools — get_index, search_wiki, get_wiki_page, search_emails, search_assets, get_client_profile, etc. That connector is not in your connector list. Your actual connected MCP servers, per the system context, are: AskCruz MCP, EOXS Data General, Gmail, Team EOXS MCP, Thread OV, and Zoho Mail. There is no server named eoxs-db among them.
 
-So the discrepancy I flagged is exactly that: your Claude.ai preferences say this account is Rajat Jain, but the Thread OV save just attributed the transcript to "danish" based on the connector URL. Either the preference is stale/wrong, or the connector's user-resolution is picking up the wrong identity — I can't tell which from here, but they don't match, which is worth you checking.
+What you have instead, under similar-sounding names, are two different things:
 
-User: yes, save the threds to my name eg Danish not Raj, i'll update the instructions
+- EOXS Data General — only 2 tools (search_repo_docs, list_repo_docs). Per its own description, this covers "docs/*.md, ARCHITECTURE.md, and a synthesized codebase overview" — source-code repository documentation, not business data. It's also marked "tier1 only (Raj/`full` identity)" — worth noting given the attribution issue we just discussed: if this connector is scoped to a Raj identity and this session is resolving as Danish, that could independently affect what it returns, though the empty results I got earlier looked like the doc store itself being empty rather than an access denial.
+- Team EOXS MCP — only 4 tools (list_tables, describe_table, get_business_schema, query) — raw SQL against EOXS Team Live Odoo, same shape as the AskCruz MCP connector. No wiki, no email search, no asset search.
 
-Assistant: [Called tool_search for "save_chat_transcript thread name attribution user" -> loaded Thread OV:save_chat_transcript, list_claude_chat_queries, search_claude_chat_queries, get_claude_chat_query, search_chat_summaries]
-
-I can't do this myself. The tool description is explicit:
-
-"<user> is resolved automatically from which connector URL this request came in on — never passed by me as a parameter, and there is no way to override it."
-
-That's a server-side lookup tied to the "Thread OV" MCP connector URL your account is authenticated through — not something the thread_name parameter or any other input I control can change. It already saved as "danish" for that same reason: the connector URL you're on resolves to Danish, regardless of what your Claude.ai userPreferences say.
-
-To actually fix the attribution, someone (Talal, based on the task 352 pattern I found earlier — that's literally the same class of bug: an MCP write account misattributing authorship) needs to update the connector-side user mapping for this URL, not the Claude-side instructions. Updating your Claude.ai preferences won't touch this — that's a separate system.
-
-I'll keep saving transcripts as normal; they'll just keep resolving to "danish" until the connector mapping itself is changed.
-
-User: I'll keep saving transcripts as normal; they'll just keep resolving to "danish" until the connector mapping itself is changed. yes this is how it's supposed to be
-
-Assistant: Understood — no change needed on my end then. I'll keep calling save_chat_transcript as normal every turn per the threads-ov skill, and it'll continue resolving to "danish" until the connector mapping is updated on the backend.
+So the honest answer: the eoxs-data-general skill file is describing a connector (eoxs-db, 20 tools: index, wiki, emails, calls, assets, client profiles) that either was never connected to this account, has been renamed/replaced by "EOXS Data General," or was deprecated and the skill file wasn't updated to match. I can't tell which from here — I can only see that the skill's tool inventory and your actual connected tools don't line up. That's a config/documentation mismatch on the EOXS side, not something fixable from this chat, and not something I should paper over by pretending the tools exist.
