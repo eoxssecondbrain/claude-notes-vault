@@ -47,3 +47,66 @@ Why it exists at all: LinkedIn has roughly a billion members across 200 countrie
 One honest caveat worth knowing on day one, since it changes how you'll use it later: it finds people, it doesn't hand you their email or phone number. Sales Navigator deliberately withholds contact data — you can export lead lists with names, titles, companies, and LinkedIn URLs, but not email addresses or phone numbers. That's a separate tool's job, and we'll get to where that fits in later sections.
 
 Next: kindergarten — leads, accounts, lists, and which of the three paid tiers is actually relevant to you.
+
+User: lets keep the language simple and the answers. to the point with examples.
+
+Assistant: Got it — simpler and to the point from here.
+
+Section 2 — Kindergarten: the basic parts
+
+Lead: one person. Example: the VP of Purchasing at a steel distributor you found on LinkedIn.
+
+Account: one company. Example: that steel distributor itself, not just the person.
+
+List: a saved group of leads or accounts you're tracking, so you don't lose them. Example: a list called "Steel Distributors — Ohio" with 20 companies in it.
+
+Saved search: a search you keep, so it re-runs and shows you new matches automatically. Example: "VP or Director of Purchasing, steel/metals industry, US" — saved once, checked weekly.
+
+Three paid plans, from LinkedIn's current pricing:
+Sales Navigator Core is $99/month — 50 InMail credits, 25+ search filters, lead recommendations, and account insights. No CRM integration.
+Advanced is $149/month, and Advanced Plus runs about $1,600/year — the higher tiers add team features, more filters, and CRM sync.
+
+For a job like yours (outbound, AskCruz), Core covers the basics. Advanced becomes worth it once you're syncing leads into a CRM or working as part of a team.
+
+Next: primary school — how to actually search and filter well, with real examples.
+
+User: lets start from nursery and lets have a Q&A round after every section.
+
+Assistant: Restarting from nursery, plain language, with examples. After this section, a quick Q&A before we move to kindergarten.
+
+Section 1 — Nursery: what is Sales Navigator
+
+It's a paid version of LinkedIn built just for finding people to sell to.
+
+Example: normal LinkedIn lets you search "John Smith." Sales Navigator lets you search "everyone who is a Purchasing Manager at a steel company in Ohio with 50-200 employees" — and get a real list back.
+
+Two words you'll hear constantly:
+Lead = one person. Example: "Priya Shah, VP Purchasing at Ohio Strip Steel."
+Account = one company. Example: "Ohio Strip Steel" itself.
+
+One thing it does not do: give you someone's email or phone number. It only gives you their name, title, company, and LinkedIn profile. You can export lead lists with names, titles, companies, and LinkedIn URLs, but not email addresses or phone numbers. You still need another tool to get contact info — we'll cover that later.
+
+Q&A round — answer in your own words, no wrong answers, this is just to check the basics stuck:
+
+1. In one sentence, what does Sales Navigator do that normal LinkedIn doesn't?
+2. What's the difference between a "lead" and an "account"?
+3. If you search a lead on Sales Navigator, will you get their email address directly? Yes or no.
+
+User: everyone who is a Purchasing Manager at a steel company in Ohio with 50-200 employees" — and get a real list back.
+so does it has filters there like lets say i want to search all the VP sales at the Steel service centres and related companies will it give me the list of all the VPs sales ?
+
+Assistant: Yes. That's exactly what the filters are for.
+
+For your example — "VP Sales at Steel Service Centers" — you'd stack two or three filters together:
+
+Title filter: type "VP Sales" or "Vice President of Sales" (it also matches close variations like "SVP Sales" if you check that box)
+
+Industry or Company filter: either pick an industry like "Metals and Mining" / "Wholesale," or just type a keyword like "steel service center" into the company search box
+
+Geography filter (optional): e.g. "United States" or a specific state
+
+Run that combination and Sales Navigator gives you a real list — every profile matching all three at once. Example result: "Mark Reyes, VP Sales at Central Steel Service, Cleveland OH."
+
+One thing to know early: LinkedIn's Industry field is a fixed list, and "steel service center" often isn't its own industry category — companies get tagged under something broader like Wholesale or Metals & Mining. So the company-name keyword filter usually does more real work than the Industry dropdown for a niche category like steel.
+
+Want to answer the three nursery questions from before, or should we fold that into moving on to kindergarten?
