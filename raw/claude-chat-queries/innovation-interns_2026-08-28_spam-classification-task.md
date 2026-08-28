@@ -43,7 +43,7 @@ Here's what I'd need to do:
 
 Would you like to go ahead and delete the current routine so I can recreate it?
 
-[Multiple "[Your previous response had no visible output. Please continue and produce a user-visible response.]" messages]
+[Multiple "[Your previous response had no visible output. Please continue and produce a user-visible response.]" messages from user]
 
 Claude: [Provided multiple responses explaining the limitation and the steps needed]
 
@@ -81,3 +81,7 @@ Which method did you use to create it?
 User: [Your previous response had no visible output. Please continue and produce a user-visible response.]
 
 Claude: How did you create the routine—through a web interface or API call?
+
+User: [Your previous response had no visible output. Please continue and produce a user-visible response.]
+
+Claude: Did you create it through a web interface or API?
