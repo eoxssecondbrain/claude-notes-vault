@@ -115,3 +115,27 @@ Also worth knowing: data completeness is stated at 94%, but the doc is explicit 
 What it explicitly is not: not an unrestricted database browser, not a replacement for formal authorization, not an ERP replacement, not an autonomous decision-maker, not guaranteed-correct on every answer, not scoped to steel or any single industry (industry-agnostic by design — steel is just where the pilot and first client happen to sit).
 
 Want me to go into the technical layer next — backend/DB/ingestion docs, who owns what (Jaskeerat owns the frontend, Ayan holds server/DB credentials) — or stay on the product/positioning side?
+
+## User (turn 3)
+
+I want you to analyse all the data that is present about Askcruz as a product in the vault, and give me list of items that you see as gaps in your knowledge. Tell me what other information I can add in the vault to iron out those gaps.
+
+I also want you to flag any contradictions, multiple naming patterns for the same function, or simply information that doesnt align with as SOP, Market fit, product feature or architecture.
+
+That is a task i am running to make the knowledge base about askcruz more refined.
+
+Think like a profession product manager who is being paid 500$ per hour and give me honest, no sugarcoated feedback.
+
+## Assistant (turn 3)
+
+Before I start this, per your rigor-level protocol — this is a full-vault gap/contradiction audit, not a lookup, so pick a depth:
+
+5ft deep — Quick: re-read the four core AskCruz product docs I already have in context (Self-Knowledge/Architecture, Product Feature File, Product–Market Fit Guide, Client-Facing Product Understanding) plus the System Architecture wiki page, cross-check them against each other, and list what I find. Fast, but won't catch anything sitting only in raw emails/calls/chat threads.
+
+10 ft deep — Verified: same four docs, plus I pull and check the actual chat-summary clusters and any raw AskCruz threads that fed those docs, to verify claims in the synthesized docs against their original source material rather than trusting the synthesis.
+
+50 ft deep — Deep: full sweep — every AskCruz-tagged wiki page, asset, chat-summary, and raw transcript in both Raj-Vault and Thread-OV, plus a check of the live askcruz Odoo data against what the docs claim (e.g. does "3GM is the only client" hold up against the actual task board). I'll also flag adjacent risks you didn't explicitly ask about (e.g. terminology drift that could burn a client conversation) with sourcing for every claim.
+
+100 ft depth — Staged: same investigation as 50ft, delivered in sections (e.g. "Terminology & naming contradictions," "Scope/positioning contradictions," "Coverage gaps by category," "Recommended vault additions") so you can review as I go instead of one giant dump.
+
+Given you're trying to refine the knowledge base itself, not just get a quick read, I'd lean 50ft or 100ft — but your call.
