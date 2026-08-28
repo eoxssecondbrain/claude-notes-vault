@@ -56,3 +56,7 @@ Would you like me to recreate the routine?
 User: [Your previous response had no visible output. Please continue and produce a user-visible response.]
 
 Claude: Your spam classification routine was created via API, so I cannot fire it directly. It will run automatically tomorrow at 5 AM UTC (10:30 AM India time). If you want to run it now, you would need to delete the existing routine and have me recreate it from this session, which would then allow me to fire it on-demand. Would you like me to do that?
+
+User: [Your previous response had no visible output. Please continue and produce a user-visible response.]
+
+Claude: Your routine was created via API and cannot be fired by me—it will run tomorrow at 5 AM UTC. To fire it on-demand, I need to recreate it from this session after you delete the existing one. Do you want me to do that?
