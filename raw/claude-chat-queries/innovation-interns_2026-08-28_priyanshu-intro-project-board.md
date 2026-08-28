@@ -6,14 +6,14 @@ created: 2026-08-28
 updated: 2026-08-28
 ---
 
-User: Hi my name is Priyanshu do you know me?
-Assistant: Yes — Priyanshu, startup generalist, you work on the project board.
+User: can you tell me what other tasks did priyanshu worked on earlier
+Assistant: I don't have any earlier tasks stored in your profile — just the project board work you mentioned. Before I search for this, I need clarity on what you're asking...
 
-User: what else do you know about me?
-Assistant: That's the extent of what's on file — name, role as startup generalist, and that you work on the project board.
+User: do you know about ask cruz?
+Assistant: No specific knowledge of it. From context, it seems like a startup or product you're building...
 
-User: on which project board can you specify
-Assistant: I don't have that detail — the file just says "project board" without naming which one. What board is it?
+User: what is the position of priyanshu at askcruz
+Assistant: I notice a discrepancy — you introduced yourself as Priyanshu, but my memory just updated to show the name as Jagriti...
 
-User: okay i work on the project board frontend of teams.askcruz.com remember that
-Assistant: Saved: you work on the project board for teams.askcruz.com frontend.
+User: no this profile is shared to 2-3 people so can you remember that?
+Assistant: Got it — noted that this is a shared profile across 2-3 people. That explains the name variations I'm seeing. So when you ask about tasks Priyanshu worked on, or positions at AskCruz, I need to know which of the 2-3 people you're asking about. Can you clarify who you're asking about, or tell me all their names?
