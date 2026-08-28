@@ -55,3 +55,21 @@ Slack-native, tag-and-delegate — @Claude in a channel to hand off a task witho
 Where this actually bites you if left unclarified: these aren't a menu of alternatives to pick one from — they stack. A realistic AskCruz build looks like: Company Brain and AskCruz data exposed via MCP → an SDR-training Skill standardizing how calls get scripted/critiqued → Cowork or the Agent SDK orchestrating the actual multi-step task → plain automation handling the deterministic parts (lead routing, notifications) that don't need a model's judgment at all. Treating "should we use Skills or Cowork" as an either/or is the most common misapplication. Second flag: roughly half of what's above shipped or changed materially in the last two quarters (Cowork went GA mid-2026, the Agent SDK was renamed from Claude Code SDK), so re-verify specifics against docs before committing engineering time to any one of these.
 
 Sources: claude.com/docs/cowork/overview, anthropic.com/news/model-context-protocol, platform.claude.com/docs/en/agents-and-tools/agent-skills/overview, claude.com/blog/building-agents-with-the-claude-agent-sdk, platform.claude.com/docs/en/cli-sdks-libraries/overview.
+
+USER: visualize each from this list into an infographic I can send to the team for all of to better understand
+
+ASSISTANT: [ask_user_input_v0 widget:
+Q1: "Craft level for the infographic?" options: ["Sketch - bare structure, one pass, no polish","Draft - styled, functional, presentable","Painting - custom, detail-checked, polished","Commissioned - full polish, cross-platform review"]
+Q2: "Format to send to the team?" options: ["Inline visual in chat (image/HTML, easy to screenshot)","Standalone file (PDF or PPTX) they can open/share directly"]
+]
+
+USER (widget response):
+Q: Craft level for the infographic?
+A: Commissioned - full polish, cross-platform review
+
+Q: Format to send to the team?
+A: Standalone file (PDF or PPTX) they can open/share directly
+
+ASSISTANT: [Built a tall poster-format infographic titled "Claude & AI Tooling Landscape" for AskCruz/EOXS, using pptxgenjs. Layout: navy header with title and subtitle; a "HOW IT LAYERS" section showing four stacked, color-coded bars (Orchestration & Execution — Claude Cowork / Claude Code / Agent SDK / Claude Tag, coral; Procedure — Claude Skills, gold; Data & Context — Company Brain (eoxs-db) / Claude Projects / Memory, teal; Foundation — MCP/Connectors, navy) with down-arrows between them, plus a separate charcoal "Automations — a separate, parallel track" bar noting Zapier/Make/n8n run alongside Claude, not through it; a "THE 9 BUILDING BLOCKS" section with a 3x3 grid of cards (MCP/Connectors, Company Brain (eoxs-db), Claude Projects, Memory, Claude Skills, Claude Cowork, Claude Code/Agent SDK, Claude Tag, Automations), each card with a colored badge circle, title, one-line definition, and an italic "Best for:" line color-matched to its category; and a closing navy callout stating the most common mistake is treating this as a menu, with a real AskCruz workflow chaining Company Brain (data) + a Skill (procedure) + Cowork (execution) plus automation for deterministic parts, followed by a small source/verify-freshness footer line. Validated the .pptx (all checks passed), converted to PDF, rendered to image for visual QA, found the content overflowed the initial 18.5in poster height, increased the custom layout to 10in x 20.2in, rebuilt, revalidated, and re-rendered — final render confirmed no overflow, clean spacing, and consistent contrast. Copied claude_tooling_landscape.pptx and claude_tooling_landscape.pdf to /mnt/user-data/outputs and presented both files.]
+
+This renders clean — no overflow, good contrast, consistent color-coding across the stack diagram and cards. Delivering both formats.
