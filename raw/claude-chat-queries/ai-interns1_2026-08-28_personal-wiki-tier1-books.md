@@ -6,5 +6,5 @@ created: 2026-08-28
 updated: 2026-08-28
 ---
 
-User: can you try this again
-Assistant: Retried browse_tier(1) and get_tier_server_status. Same error persists: "relation book_categories does not exist" — confirmed server-side schema issue, not transient. get_tier_server_status still shows T1: 48 rows exist but no working list endpoint. Asked user whether to do manual workaround (paging list_recent_tiered_notes) or flag to server maintainer.
+User: ty again
+Assistant: Retried browse_tier(1) a third time (including after a server reconnect notice). Same persistent error: "relation book_categories does not exist". Confirmed this is not transient/connection-related — it's a genuine schema bug on the personal-wiki-book MCP server. Offered user two paths: manual paging workaround via list_recent_tiered_notes, or flag the missing table to the server maintainer.
