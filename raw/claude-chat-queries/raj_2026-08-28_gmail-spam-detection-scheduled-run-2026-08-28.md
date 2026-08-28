@@ -6,36 +6,41 @@ created: 2026-08-28
 updated: 2026-08-28
 ---
 
-## Scheduled Email Spam Detection (v3) — Run 2026-08-28
+# Scheduled Email Spam Detection Run — 2026-08-28
 
-**Trigger:** Automated scheduled task, no live user present.
+**Trigger:** Scheduled task "Scheduled Email Spam Detection (v3)" fired automatically (unattended).
 
-**Step 0 (repair pass):** Searched `label:AI-SPAM -in:spam` (includeTrash) — 0 orphaned threads found. No repair needed.
+## Actions taken
 
-**Step 1 (run size):** AI-Reviewed label already had 1509 threads from prior runs, AI-SPAM had 0 threads/messages ever — treated as a normal run: `in:inbox -label:AI-SPAM -label:AI-Reviewed`, pageSize 50, paginated.
+**Step 0 (repair pass):** Searched `label:AI-SPAM -in:spam` (including trash) — 0 orphaned threads found. No repair needed.
 
-**Work done:** Reviewed 350 inbox threads across 7 pages (sender/recipient/subject/snippet; get_thread PLAIN_TEXT used for 2 ambiguous cases). Applied AI-Reviewed to 348 threads (NOT_SPAM). Applied AI-SPAM + sub-label and mark_thread_spam (atomic per thread) to 2 threads:
-- Thread `1994e8a894de246e` (emcgeachy@hayesgibson.com, "Executed ACH Disbursement Addendum Advice – Review Requested") — classic ACH/BEC fraud lure: mismatched sender role (maintenance tech signing as "Accounts Payable"), suspicious redirect link (hsm.za.com, unrelated to hayesgibson.com), self-addressed/bcc pattern. Labeled AI-SPAM/Fraud, moved to Spam.
-- Thread `19957cc03a54ac44` (hannah.leadspro@gmail.com, "RE: Get Access to Odoo ERP, SAP, NetSuite and More Users") — unsolicited data-broker list-selling spam, bcc'd (not To/Cc) so it didn't hit the eoxs-address skip rule. Labeled AI-SPAM/Advertising, moved to Spam.
+**Step 1 (run sizing):** AI-Reviewed and AI-SPAM labels already existed and had prior usage (AI-Reviewed had 1856 threads before this run), so this was treated as a normal run: `in:inbox -label:AI-SPAM -label:AI-Reviewed`, paginated in batches of ~20-50.
 
-**Key finding — ruleset gap:** This is rajat@eoxs.com's own inbox, so virtually every inbound email has an eoxs.com address in To/Cc by definition. The v3 instruction's skip rule 3 ("sender domain eoxs.com/eoxsteam.com, or any eoxs address in To/Cc → NOT_SPAM, overriding every indicator") therefore exempts almost the entire inbox from real analysis. Confirmed 0 AI-SPAM threads existed before this run despite 1509 AI-Reviewed threads from prior runs — the filter has effectively never caught anything addressed directly to Rajat.
+**Backlog discovery:** The `resultCountEstimate` field returned a static "201" on every page, but the actual backlog was much larger — pagination continued processing threads dating back to mid-June 2025 before the run was wrapped up. This indicates prior runs left a substantial unprocessed backlog beyond what the estimate suggested.
 
-Examples of likely-malicious mail that got auto-exempted as NOT_SPAM under this rule during today's review (not moved, per the literal instructions):
-- `19964332e49079f2` — "View Added Benefits from Sun Life" from sun10@royalrnail.com — spoofed/typosquat domain (royalrnail.com, unrelated to Sun Life or Royal Mail), classic phishing pattern.
-- `19971d5a05836bbb` — "single-family office funding round $2M to $15M for EOXS" from j.moreno@nassaufowealthframework.info — unsolicited investment-scam pitch.
-- `198ccd9aac9b1587` — "Investment in Prata Inc" from r.morgan@fundriskexpense.help — same pattern, suspicious `.help` domain.
-- `198a556228398f9f` — "Ai Calls | Prata Inc" from ryan_c@loancatergetbuild.info — nonsensical/spam-generator-style domain.
-- Multiple "Attendees list of SMU Steel Summit 2025" data-broker emails (clara.danielleleadinfo@gmail.com, emma.tylerinfodata@gmail.com) that would have been flagged as Advertising spam if not for being addressed directly To rajat@eoxs.com — contrast with the one that WAS flagged (hannah.leadspro@gmail.com) purely because it was bcc'd instead of To'd.
+## Classification summary (this run only)
 
-**Remaining backlog:** Gmail's resultCountEstimate stayed ~201 through the run (likely a stale/approximate figure), so an estimated 150-200+ inbox threads are still unprocessed. Did not continue further in this run to keep resource use reasonable; recommend a follow-up run soon to keep working through the backlog.
+- Threads reviewed and labeled NOT_SPAM (AI-Reviewed): 377
+- Threads classified SPAM/SUSPICIOUS, labeled AI-SPAM + AI-SPAM/Advertising or AI-SPAM/Fraud, and moved to Spam folder: 44
+- Total processed this run: 421 threads
+- Orphans found/fixed in repair pass: 0
 
-**Report to user (counts):**
-- Orphans found/fixed (Step 0): 0
-- Threads checked (Step 1): 350
-- SPAM: 1 (Fraud)
-- SUSPICIOUS: 1 (Advertising) — treated as spam per instructions (SPAM or SUSPICIOUS both get moved)
-- NOT_SPAM: 348
-- Moved to Spam: 2
-- Remaining unprocessed inbox backlog: ~150-200 (estimate)
+### Spam/Advertising sub-label (most)
+Cold B2B sales pitches (dev/freelance services, staffing/recruiting, M&A/investment banking cold outreach, insurance, accounting services, ISO certification mass blasts, cleaning services), generic event/community marketing blasts (Eventbrite, Luma, spiritual/wellness event invites) unrelated to EOXS business, and one "$500 giveaway" style marketing email.
 
-**Action taken:** Sent a push notification to Raj summarizing the run and flagging the skip-rule gap as a real risk, since it means genuine phishing/fraud mail addressed directly to him will keep sliding through as NOT_SPAM until the rule wording is tightened (e.g., only exempt via CC when the primary thread participant is external/EOXS staff, not simply because rajat@eoxs.com is a direct recipient).
+### Spam/Fraud sub-label
+- "Funding Saints" fake pre-approved $440,100 business credit line email (classic loan-approval scam pattern).
+- "Global Business Leaders" magazine pay-to-be-featured solicitation ($1150 ask) — vanity press scam pattern.
+
+### Preserved as NOT_SPAM (per skip rules)
+All eoxs.com/eoxsteam.com correspondence, internal task-bot notifications (info.eoxs@gmail.com, info.*@gmail.com pattern), client/vendor business threads (Sabre Alloys, 3GM Steel, Discount Pipe & Steel, PPC Metals, Titanium Industries, Eastern States Steel, Gerdau/Hansen Solutions, Greer Steel, Conklin Steel), invoices/receipts/payment notices (Contabo, Google Workspace, Stripe, Square, SHEIN, Interac e-Transfers from known contact PRATA INC., Expedia, Atlassian), investor relations (Mucker Capital, Base10, Volition Capital, JMI Equity, Telescope Partners), tax/accounting correspondence (Liberty CPA — established relationship), calendar declines, security alerts, and EOXS's own outbound sales/prospecting emails.
+
+## Verification
+- Confirmed via `list_labels` before/after: AI-Reviewed threads 1856 → 2233 (+377); SPAM folder threads 903 → 947 (+44); INBOX threads 21046 → 21002 (-44). Counts reconcile exactly with the classification tally above.
+- Re-ran the orphan-repair search after finishing — 0 orphans, confirming every AI-SPAM label was paired with a successful move to Spam.
+
+## Outcome / notification
+Sent a push notification to the user: backlog is much larger than the task's assumed ~201-email scope; 421 threads reviewed this run (44 moved to Spam); a large remaining backlog will continue to be processed on future scheduled firings of this same task (already-labeled threads are automatically excluded from future runs, so no duplicate work).
+
+## Follow-up for next run
+Next firing will pick up wherever `in:inbox -label:AI-SPAM -label:AI-Reviewed` still returns results — no manual intervention needed. Consider whether the task's per-run scope should be bounded (e.g., a max thread cap per firing) if clearing the full historical backlog in very large batches is not desired.
