@@ -43,3 +43,17 @@ Implementation tasks
 
 Meetings
 - Attended Study Time (56 min) — team AI/automation session
+
+User: in this snippet , i had call with ryan regarding his problem related to zebra printer connection issue and also  i had a meeting with zana where i told her about things which are happening on the system as of now and things which can be avoided in the system to make sure we doing it in a correct way and not have any error.
+
+Assistant: Yesterday (Aug 27) — work summary
+
+Implementation tasks
+- Moved "Purchase order: Return and Cancel" to On Sandbox/Functional QA
+- Moved "Fix Sales Return Functionality" to On Sandbox/Functional QA
+- Left a note on "Fix Freight on Processing" for Rajat and Kartikey to weigh in
+
+Calls / Meetings
+- Attended Study Time (56 min) — team AI/automation session
+- Call with Ryan regarding his Zebra printer connection issue
+- Meeting with Zana — walked her through current system behavior and flagged things to avoid going forward to prevent errors
