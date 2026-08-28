@@ -132,3 +132,100 @@ It only works for people/companies you've actually saved. Random searches don't 
 Basic job-change alerts are on every plan, but a few advanced ones — like alerts when someone engages with sponsored content — are Advanced Plus only. Content-engagement alerts on sponsored content are available only on the Advanced Plus plan.
 
 Ready for kindergarten now, or another question on search/alerts first?
+
+User: ohh so we can save a person as lead or account for the entire company.
+
+Assistant: Exactly right.
+
+Save a lead = save one person. Example: save Mark Reyes himself. You get alerts about him specifically — job changes, promotions, posts he makes.
+
+Save an account = save the whole company. Example: save "Ohio Strip Steel" as an account. You get alerts about the company — new hires, layoffs, growth, news mentions — even for people at that company you haven't individually saved yet.
+
+Most people do both together: save the target company as an account, then save the 2-3 key people there as leads. That way you're watching the company and the specific humans at the same time.
+
+Ready for kindergarten, or more on this first?
+
+User: ohh now it makes sense. lets go to Kindergarten.
+
+Assistant: Section 2 — Kindergarten: the basic parts
+
+Lead = one person. Example: Priya Shah, VP Purchasing at Ohio Strip Steel.
+
+Account = one company. Example: Ohio Strip Steel itself.
+
+List = a saved group of leads or accounts, so you don't lose track. Example: a list called "Steel Distributors — Ohio" holding 20 companies.
+
+Saved search = a search you keep, so it re-runs and shows new matches automatically. Example: "VP or Director of Purchasing, steel industry, US" saved once, checked weekly for new people who now match.
+
+Three paid plans:
+Core — $99/month. 50 InMail credits, 25+ filters, lead recommendations, account alerts. No CRM sync.
+Advanced — $149/month. Adds team features and CRM sync.
+Advanced Plus — roughly $1,600/year. Adds the most advanced alerts (like sponsored-content engagement) and buyer intent data.
+
+For your role, Core covers everything you actually need day to day. Advanced only starts mattering once EOXS wants leads flowing straight into a CRM or a team sharing lists.
+
+Q&A round:
+
+1. What's the difference between "saving a lead" and "saving an account"?
+2. Give your own example of when you'd want a saved search instead of just running a one-time search.
+3. Which plan would you actually need right now, and why?
+
+User: What benafits do we get in each plan can you explain ?
+
+Assistant: Here's what you actually get, tier by tier — verified against current 2026 pricing pages, which put Core around $119.99/month and Advanced around $159.99/month (older guides floating around still quote 2024-2025 numbers like $99, so ignore those). LinkedIn lists Core at $119.99 per month and Advanced at $159.99 per month as of August 2026, with annual billing bringing Core to $1,079.88 and Advanced to $1,799.88.
+
+Core (~$120/month) — built for one person prospecting
+Full search engine with all the filters (title, industry, company size, geography, etc.)
+50 InMail credits a month — messages to people outside your network
+Lead and account recommendations, lead/account alerts (job changes, growth signals)
+Save up to 10,000 leads/accounts
+No CRM sync, no team features
+The core search and prospecting engine is the same across all three tiers — the higher tiers don't make search better, they add features around it.
+
+Advanced (~$160/month) — Core, plus team and intent features
+Everything in Core
+TeamLink — see warm intro paths through your colleagues' LinkedIn connections, not just yours. Example: you want to reach someone at Ohio Steel, TeamLink shows you that a coworker is already first-degree connected to them.
+Buyer Intent signals — shows which companies are actively showing buying-interest activity, so you know where to prioritize. Buyer Intent shows you which companies are actively showing interest, so you can prioritize messaging where there's already momentum.
+Shared team lists, Smart Links (trackable content links), basic CRM integration panel — not full sync
+Upload account lists from a CSV, up to 1,000 companies at once
+
+Advanced Plus (roughly $1,600/seat/year, enterprise, custom quote)
+Everything in Advanced
+Full two-way CRM sync (Salesforce, Dynamics 365) — data flows automatically both directions, no manual copying
+The most advanced alerts, like when a lead engages with your company's sponsored ads
+ROI reporting, enterprise admin controls
+Sold to teams of roughly 10+ seats, not individuals
+
+For where you sit right now — one person doing outbound for AskCruz — Core covers the actual work. Advanced only earns its extra cost once EOXS needs shared team lists or warm-intro paths through multiple sellers' networks. Advanced Plus is a company-wide CRM decision, not something you'd pick for yourself.
+
+Ready to answer the kindergarten Q&A, or more on plans first?
+
+User: lets jump onto the next step
+
+Assistant: Section 3 — Primary school: searching and filtering well
+
+You already know the basic filters (title, company, industry, location). Here's how to actually use them like someone who does this daily.
+
+Rule 1: stack 2-3 strong filters, not 7-8 weak ones. The key is combination strategy: use 2-3 high-signal filters rather than stacking 7-8 weak ones. Too many filters and you get zero results. Too few and you get 5,000 irrelevant ones.
+
+Example, good combo:
+Title: "VP Sales" OR "Director of Sales"
+Company headcount: 50-500 employees
+Keyword in company name: "steel" OR "metal"
+Result: a tight, relevant list — not everyone in sales worldwide.
+
+Company headcount filter — lets you exclude giants and tiny shops. Example: if AskCruz sells best to mid-size steel distributors, set headcount to 50-500 so you skip both one-person shops and companies like Nucor.
+
+Seniority filter — separate from title. Lets you say "VP or above" without listing every exact title. Useful when companies use different titles for the same role (VP Sales vs Head of Sales vs Chief Revenue Officer).
+
+Posted on LinkedIn recently filter — finds people who are active, not dormant accounts. A lead filter like "Posted on LinkedIn in the past 30 days" targets active prospects who are more likely to engage. Active people reply faster.
+
+Boolean search — using AND / OR / NOT / quotes to combine terms precisely. Example: "VP Sales" OR "Director Sales" NOT "Regional" — finds VP/Director Sales titles but excludes Regional-level ones.
+
+Practical workflow: build the search, save it (see Section 2), and let it re-run weekly instead of rebuilding it from scratch every time.
+
+Q&A round:
+
+1. Why is stacking 7-8 filters usually worse than stacking 2-3?
+2. What's the difference between the Title filter and the Seniority filter?
+3. Write one filter combo you'd use to find prospects for AskCruz.
