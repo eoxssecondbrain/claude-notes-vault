@@ -96,3 +96,16 @@ Can you go ahead and delete the routine?
 User: [Your previous response had no visible output. Please continue and produce a user-visible response.]
 
 Claude: No, I cannot delete it. Only you can delete the routine from your scheduled tasks. Once you delete it, I can recreate it and fire it on-demand. Please delete the routine first.
+
+User: how can i delete ?
+
+Claude: To delete the routine, I need to know how you created it originally. Did you:
+
+1. Create it through a web interface or dashboard?
+2. Create it via an API call?
+
+If it was through a web interface, there should be a delete or remove option in the scheduled tasks section where you see the "spam-email-filtration" routine listed.
+
+If it was via API, you'd need to make another API call to delete it (likely a DELETE request with the trigger ID: trig_018zX8JibixysGLB2cpzEqGq).
+
+Which method did you use to create it?
