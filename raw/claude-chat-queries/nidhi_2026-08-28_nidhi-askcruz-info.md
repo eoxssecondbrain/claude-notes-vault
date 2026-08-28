@@ -22,3 +22,7 @@ AskCruz (also referred to internally as "Company Brain") is EOXS's AI product/la
 Want me to pull the full scrum report, the 3GM pricing details, or the investor-outreach angle in more depth?
 
 **User:** yes
+
+**Assistant:** [PROVISIONAL — verbatim text pending]
+
+**User (via option select):** Which one should I dig into first? → 3GM pricing details
