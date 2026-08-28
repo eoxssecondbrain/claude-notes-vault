@@ -30,3 +30,11 @@ Gap: Collier Metals and IMS Metals/Ram Shenoy — two of the more advanced deals
 Bottom line: 2 paying customers, ~$7K MRR confirmed. Active proposal-stage or later-stage deals outside what's captured in CRM: Collier Metals, IMS Metals, Sabre Alloys expansion (Michael Mercadante), 3GM Steel expansion (Travis Lane). Everything else in the CRM (19 records) is cold/untouched.
 
 Source: Ask Cruz Odoo CRM (teams-askcruz, live query, Aug 28 2026) cross-referenced with known deal context; no eoxs-db wiki hits came back for AskCruz-specific pipeline pages, so this leans on the live CRM plus what's already tracked.
+
+**User:** I received an email from Ram this week. Can you pull it up?
+
+**Assistant:** Found it — Aug 26, from Ram Shenoy, subject "Forecasting — Investment Proposal":
+
+Ram closed the loop: the Purchasing Director decided to go with a licensed platform, StockIQ, instead of your custom forecasting build. He said she didn't have appetite for something personalized. He apologized for not being able to move it forward, but asked to stay connected personally to explore future partnership opportunities, and asked if you're still up for a regular connect.
+
+This is the IMS Metals forecasting deal ($48K implementation + $3.5K/month) — it's dead. Worth deciding now whether you reply just to keep the relationship warm, or also probe why StockIQ won (price, speed, risk-aversion) since that's useful competitive intel for the next prospect who raises a similar off-the-shelf alternative.
