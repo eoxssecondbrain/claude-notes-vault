@@ -52,3 +52,7 @@ Your scheduled spam classification task runs automatically at 5 AM UTC (10:30 AM
 To run it on-demand, you would need to delete the existing routine and have me recreate it from within this session. Then I can fire it whenever you request.
 
 Would you like me to recreate the routine?
+
+User: [Your previous response had no visible output. Please continue and produce a user-visible response.]
+
+Claude: Your spam classification routine was created via API, so I cannot fire it directly. It will run automatically tomorrow at 5 AM UTC (10:30 AM India time). If you want to run it now, you would need to delete the existing routine and have me recreate it from this session, which would then allow me to fire it on-demand. Would you like me to do that?
