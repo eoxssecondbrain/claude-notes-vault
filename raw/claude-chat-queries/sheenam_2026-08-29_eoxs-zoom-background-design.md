@@ -23,3 +23,10 @@ Key differences from Raj's, deliberate:
 - Light: golden hour outdoor light doing more of the work, neon is a secondary accent rather than the dominant light source like in Raj's night-lake version
 
 One thing worth deciding before you generate it: do you want EOXS's tagline as "GO PAPERLESS" (matches Raj's version, keeps brand consistency) or a different line specific to this background's mood?
+
+Human: i would like to go with EOXS - Where steel meets technology
+Also, dont just create the prompt for me, also create the image
+
+Assistant: Generating now — it'll render inline. Once you see it, let me know if you want the neon sign wording, color balance, or window view adjusted.
+
+[Called Higgsfield:generate_image with model nano_banana_pro, aspect_ratio 16:9, prompt: "Photorealistic interior photograph of a warm, minimalist home office in Mumbai, floor-to-ceiling window on one wall showing a sunlit beach and Arabian Sea coastline at dusk, waves catching the last orange light, silhouetted palm trees and a hazy Mumbai skyline in the distance, warm amber sunset fading into deep indigo sky. Interior wall beside the window is warm textured plaster in a sand or terracotta tone, with a single glowing neon sign mounted on it reading "EOXS" in bold amber/orange neon script, smaller amber neon text below reading "WHERE STEEL MEETS TECHNOLOGY". The neon casts a soft amber glow onto the wall and floor, blending with the natural dusk light from outside so the whole room reads warm and golden. Minimalist home office furniture: light wood desk, a comfortable woven or cane chair, a small potted plant, laptop, warm desk lamp. Light wood flooring with a woven rug, subtle warm reflections. Shot on a full-frame camera, 24mm lens, shallow depth of field, cinematic lighting, ultra-detailed, 8k, architectural photography style, golden hour blending into blue hour." Job ID: 6b1cb554-8cab-42bd-bbb0-0a8955f0926c]
