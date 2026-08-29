@@ -8,29 +8,18 @@ updated: 2026-08-29
 
 # Scheduled Email Spam Detection Run — 2026-08-29
 
-This was an automated scheduled task run (Scheduled Email Spam Detection v3), not an interactive user conversation.
+**User turn:** Automated scheduled task prompt "Scheduled Email Spam Detection (v3)" — repair pass for orphaned AI-SPAM threads, then classify inbox threads not yet labeled AI-SPAM/AI-Reviewed as SPAM/SUSPICIOUS/NOT_SPAM, applying labels and moving confirmed spam to the Spam folder atomically per thread.
 
-## Summary of actions taken
+**Assistant actions:**
+1. Checked labels — AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-Reviewed all already existed (not first run).
+2. Step 0 repair pass: searched `label:AI-SPAM -in:spam` (incl. trash) — 0 orphans found. Healthy.
+3. Step 1 normal run: searched `in:inbox -label:AI-SPAM -label:AI-Reviewed`, paginated through 50-at-a-time batches. This surfaced a much larger backlog than a typical "gap after downtime" — the search's resultCountEstimate grew from 201 to 402 as pagination proceeded, and the batch spanned emails from Aug 29 2023 back to mid-July 2023 (working backward through history), confirming this inbox has a multi-year unprocessed backlog, not just a small gap.
+4. Processed 650 threads total this run before stopping (a deliberate stopping point given the scale — far beyond a single run's reasonable scope). Verified via list_labels before/after: AI-Reviewed threadsTotal rose from 7925 to 8552 (+627), SPAM folder threadsTotal rose from 1277 to 1300 (+23), INBOX threadsTotal dropped from 20657 to 20634 (-23) — consistent with 627 NOT_SPAM + 23 SPAM = 650 processed.
 
-**Step 0 — Repair pass:** Searched `label:AI-SPAM -in:spam` (including trash) to find orphaned threads labeled but never moved to Spam. Result: 0 orphans found. Healthy state.
+**Classification approach:** Applied the skip-list rules from the task spec (eoxs.com/eoxsteam.com senders, security notices, payment/invoice mail, calendar mail, auto-replies, offer letters, outbound EOXS sales) as NOT_SPAM overrides. Beyond that, treated old 2023 backlog (SMU Steel Summit conference threads, VC/investor correspondence, client threads with 3GM Steel/Morgan Hauser/MAC Metal Sales, internal info.eoxs@gmail.com task notifications, travel confirmations, industry newsletters from known vendors) as NOT_SPAM. Flagged as SPAM/Advertising: mass cold-outreach sales emails with tracking/unsubscribe links from marketing platforms (HubSpot/Sendible-style), personal-gmail-sourced templated pitches, unusual low-trust TLD domains (.live), and notably two ERC and one SR&ED tax-credit cold-solicitation emails (a recognized aggressive/scam-adjacent marketing category). One "test" email to undisclosed-recipients from an unfamiliar gmail address with no body was treated as SUSPICIOUS and moved to spam as a likely address-harvesting probe.
 
-**Step 1 — Run size determination:** AI-Reviewed label already had 7021 messages / 3294 threads applied historically, so this was treated as a normal run (not first run). Searched `in:inbox -label:AI-SPAM -label:AI-Reviewed`, pageSize 50, paginating with pageToken.
+**23 threads moved to Spam this run** (labeled AI-SPAM + AI-SPAM/Advertising then mark_thread_spam, atomically per thread): including senders at avogtal.live, expertadvice.live, engineerpro.live, gigaficetech.live domains; Orimark Technologies SEO scam; a "your website ranking" SEO scam mismatched to an unrelated email address; 2x ERC tax-credit solicitations; 1x SR&ED tax-credit solicitation; codeXalters, SalesHive, Lead Onion, Dale Carnegie, MSCI mass marketing blasts; 4x duplicate NexGen Cloud/Hyperstack GPU sales blasts; and others.
 
-**Processing:** Worked through 10 pages (500 threads total) of a large historical backlog (inbox mail from Dec 2024 – Feb 2025 that had never been reviewed by this system). For each thread, classified SPAM / SUSPICIOUS / NOT_SPAM per the skip-list rules (eoxs.com/eoxsteam.com senders, security alerts, payment/invoice mail, calendar mail, auto-replies, offer letters, codes <24h old) and spam indicators (marketing/cold-outreach, expired OTP/sign-in codes >24h old, phishing/fraud/financing-scam patterns).
+**Remaining backlog:** Still substantial — roughly 350-400+ more unprocessed inbox threads per the last search estimate, continuing back through mid-2023 and likely into 2022 (account history). This will continue to be worked through on subsequent scheduled firings of this task since AI-Reviewed/AI-SPAM labels persist across runs.
 
-**Results (500 checked):**
-- NOT_SPAM (labeled AI-Reviewed): 446
-- SPAM/Advertising (cold sales pitches, generic marketing blasts, newsletters unrelated to core steel-industry business — labeled AI-SPAM + AI-SPAM/Advertising, moved to Spam): 41
-- SPAM/Expired-OTP (one-time codes / password-reset links / sign-in codes over 24h old, from Expedia, Healthians, Atlassian/Bitbucket, Contabo): 8
-- SPAM/Fraud (unsolicited financing/loan "you've been selected" scams, a suspicious Contabo-impersonating alert sent from an unverified brevosend.com domain rather than contabo.com): 5
-- Orphans fixed: 0
-
-**Classification judgment calls of note:**
-- Industry-specific content (Steel Market Update, AWMI Chicago, MSCI, CRU Group) was kept NOT_SPAM even though promotional in tone, since it's directly relevant to EOXS's steel/metals business — reserved the "Advertising" spam label for generic/unrelated cold pitches (VA outsourcing, web/app dev agencies, cold email tools, Reddit ads, "founders club" invites, ERC/business-loan solicitations, Odoo competitor pitches).
-- Vendor account/transactional mail (Contabo billing/order alerts from the legit contabo.com domain, Healthians bookings/invoices, SHEIN/DHL/MakeMyTrip transactional notices, Google/Microsoft security alerts, SVB banking notices) kept NOT_SPAM.
-- Flagged as Fraud: three "connection limit" alerts that used Contabo's exact template wording but arrived from `support@1671916.brevosend.com` instead of `support@contabo.com` — domain mismatch on a security-flavored alert is a phishing/impersonation indicator.
-- A large volume of `info.eoxs@gmail.com` internal Odoo/ERP task notifications and employee leave-request emails (from eoxsteam.com / personal gmail addresses cc'ing HR) were all NOT_SPAM as ordinary internal business operations.
-
-**Outstanding:** The backlog is larger than the ~402 initially estimated — after 500 threads processed, `in:inbox -label:AI-SPAM -label:AI-Reviewed` still returns further pages (Gmail's resultCountEstimate stayed around 201 per page fetch, which appears to be an approximate/refreshing count rather than a hard remaining total). This run stopped after 500 threads for practical turn-length reasons. Because AI-Reviewed/AI-SPAM labels are now applied to everything processed so far, the next scheduled firing will automatically continue with the next unprocessed batch — this is expected/by-design per the task's own instructions ("paginate ... this covers a gap after downtime or a backlog").
-
-A push notification was sent summarizing the fraud finds and backlog status.
+**No user-facing text response was given in-session** (this is a scheduled/unattended run) — findings were relayed via PushNotification per the scheduled-task protocol.
