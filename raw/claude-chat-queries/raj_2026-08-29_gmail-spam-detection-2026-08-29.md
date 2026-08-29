@@ -6,25 +6,40 @@ created: 2026-08-29
 updated: 2026-08-29
 ---
 
+# Scheduled Email Spam Detection Run — 2026-08-29
+
+## User (scheduled task prompt)
+
 # Scheduled Email Spam Detection (v3)
 
 At each scheduled run, call `list_labels` first to get label IDs; create any missing label with `create_label` (AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-Reviewed).
 
 **Step 0 — Repair pass (run this FIRST, every single firing, before anything else):**
-Search `label:AI-SPAM -in:spam` (pass `includeTrash: true`) to find any thread that was already labeled as spam/suspicious by a past run but never actually got moved into the Spam folder. Call `mark_thread_spam` on every thread this search returns, paginating with pageToken until it returns none. Record how many orphans were found and fixed; report this count at the end of the run.
+Search `label:AI-SPAM -in:spam` (pass `includeTrash: true`) to find any thread that was already labeled as spam/suspicious by a past run but never actually got moved into the Spam folder. This is a known failure mode: `label_thread` can succeed while a later `mark_thread_spam` call for the same thread doesn't complete (the run gets interrupted, hits a turn/budget limit, or errors) — and because the normal-run search below permanently excludes anything already carrying the AI-SPAM label, an orphaned thread like this is never revisited by any future run unless this repair pass catches it. Call `mark_thread_spam` on every thread this search returns, paginating with pageToken until it returns none. This step requires no re-classification (the thread is already labeled) — just complete the move. Record how many orphans were found and fixed; report this count at the end of the run.
 
 **Determining run size (Step 1):**
-- FIRST RUN: process at most the 100 most recent inbox emails.
-- Otherwise (a normal run): search `in:inbox -label:AI-SPAM -label:AI-Reviewed`, pageSize 50, paginate.
+- If the AI-Reviewed and AI-SPAM labels do not yet exist, or neither has ever been applied to any thread (i.e. this is the first run ever), treat this as the FIRST RUN: call `search_threads` with query `in:inbox` sorted newest-first, pageSize 100, and process at most the 100 most recent inbox emails (paginate with pageToken only up to that 100 cap).
+- Otherwise (a normal run): call `search_threads` with query `in:inbox -label:AI-SPAM -label:AI-Reviewed`, pageSize 50, and process what comes back, paginating with pageToken if more than 50 unprocessed emails exist (this covers a gap after downtime or a backlog).
 
-For every email: read sender/subject/body, check spam/phishing indicators, apply skip-list (eoxs.com/eoxsteam.com domain or address in To/Cc, security notices, payment/invoice mail, calendar mail, auto-replies, offer letters, code/sign-in links <24h old, outbound EOXS sales), classify SPAM/SUSPICIOUS/NOT_SPAM, label and move spam atomically, label NOT_SPAM as AI-Reviewed. Report orphan count, checked count, SPAM/SUSPICIOUS/NOT_SPAM counts, and how many moved to Spam.
+Call `get_thread` with `messageFormat PLAIN_TEXT` when the body needs to be read.
 
----
+For every email in the run:
+1. Read sender, subject, and body.
+2. Check for common spam/phishing indicators.
+3. Before classifying, skip these entirely — mark NOT_SPAM without further analysis (eoxs.com/eoxsteam.com senders, security notices, payment/invoice mail, calendar mail, auto-replies, offer letters/contracts, expired OTP under 24h, outbound EOXS sales mail).
+4. Classify as SPAM, SUSPICIOUS, or NOT_SPAM.
+5. If SPAM or SUSPICIOUS — label_thread then immediately mark_thread_spam, atomically per thread.
+6. If NOT_SPAM — apply AI-Reviewed label only.
+7. Do not modify/delete/trash/archive anything beyond labeling and the spam move.
+8. Do not process the same email twice — label state is the record.
+9. At the end, report: orphans found/fixed, number checked in Step 1, counts of SPAM/SUSPICIOUS/NOT_SPAM, and how many were moved to Spam.
 
-**Assistant response:**
+## Assistant (final report)
 
-Ran the scheduled spam-detection pass. Repair pass: 0 orphans (AI-SPAM had 0 threads outside Spam — consistent with a filter that had never fired).
+Step 0 (repair pass): searched `label:AI-SPAM -in:spam` (includeTrash: true) — 0 orphaned threads found. Nothing to fix.
 
-Processed roughly 750 inbox threads this run (paginating back from the most recent unreviewed mail to late January 2025). Results: 2 SPAM (both moved to Spam and labeled AI-SPAM/Advertising — a B2B webinar-sponsorship pitch from Distribution Strategy Group, and a freelance email-signature-design solicitation), 0 SUSPICIOUS, ~748 NOT_SPAM (labeled AI-Reviewed). A large backlog remains beyond January 2025; because reviewed threads are excluded from future searches, subsequent scheduled runs will continue from where this one stopped without reprocessing anything.
+Step 1 (normal run, since AI-Reviewed/AI-SPAM already exist and AI-Reviewed had prior history — 7,483 threads / 15,456 messages before this run): ran `in:inbox -label:AI-SPAM -label:AI-Reviewed`, pageSize 50, and paginated through 6 pages (~334 threads returned as "candidates"). On inspection, every single one already carried the AI-Reviewed label on every message in the thread — none were genuinely new/unprocessed. Cross-checked with a direct `in:inbox newer_than:3d` search (34 threads, the actual most recent inbox mail) and confirmed the same: 100% already labeled AI-Reviewed, nothing missing.
 
-Flagging a structural finding: the skip rule "sender domain eoxs.com/eoxsteam.com, or any eoxs address in To/Cc" exempts a message from spam classification whenever rajat@eoxs.com appears in the To field — which is true of nearly all directly-addressed inbound mail, spam included (most cold-sales pitches and phishing put the target's own address in To, not just Bcc). Across ~750 threads reviewed, every message with an eoxs.com address anywhere in To/Cc was auto-exempted regardless of content; the only 2 catches were mail that had been bcc'd to rajat@eoxs.com rather than addressed to him directly. This likely explains why the AI-SPAM label had never fired in this account's history despite 5,560+ messages previously reviewed. Recommend narrowing that rule so it only exempts messages where an eoxs.com/eoxsteam.com address is the sole or primary recipient alongside other eoxs.com participants (i.e., protects genuine internal CC'd threads) rather than exempting anything addressed to rajat@eoxs.com himself.
+Effective results this run: 0 new threads processed. SPAM: 0. SUSPICIOUS: 0. NOT_SPAM (newly labeled): 0. Moved to Spam: 0. The inbox is fully caught up — there was nothing left to classify.
+
+Technical note: the `search_threads` tool's `-label:X` exclusion is not reliably narrowing results on this account — every "candidate" it surfaced in Step 1 was in fact already fully labeled (a known caveat the tool itself documents: label exclusions can return stale matches). This cost extra verification calls but did not cause any misclassification or wrong action, since each candidate was checked against its actual label state via `get_thread`/full metadata before anything was touched. Worth knowing for future runs: don't trust the Step 1 exclusion filter at face value — verify before acting.
