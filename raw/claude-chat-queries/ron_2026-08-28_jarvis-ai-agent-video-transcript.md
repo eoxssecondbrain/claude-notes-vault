@@ -3,7 +3,7 @@ thread_name: "jarvis-ai-agent-video-transcript"
 user: "ron"
 type: claude-chat
 created: 2026-08-28
-updated: 2026-08-28
+updated: 2026-08-29
 ---
 
 User: 00:00:00
@@ -128,3 +128,54 @@ One thing to flag on your tool list: "calling people to book a blood test" is a 
 On testing with your personal use first, then the OV/Claude account — good instinct, and I'd go further: keep this VPS agent completely disconnected from your EOXS/client systems (Teams MCP, OV2, client Gmail, anything with confidential business data) while you're testing. A fresh, unaudited harness with broad tool access is exactly where a mistake would be costly if it touched client data. Test on a personal Gmail/Telegram only, for now.
 
 One thing worth checking with you directly: you'd earlier mentioned wanting to run this on an existing PC with N8N rather than a paid VPS with Hermes. Is this VPS+Hermes plan replacing that idea, or are these two separate things you're now considering side by side?
+
+User: Can you tell me what the overall cost of this will be? Can I make this on top of a PC? I have two PCs that are just sitting there:
+- A small CPU
+- A full-blown laptop or gaming laptop
+
+I can give you specs for both of them later. Maybe I can use one of them for now to see how they would pan out, and then we can go from there.
+
+Now I want you to tell me: if I build something like this on my local system, how much would it cost in that situation? How much does Hermes cost for the three layers they are mentioning, and what do they do? I am still not clear about that.
+
+Assistant: Clearing up "the three layers"
+
+I think what's confusing you is that there isn't one Hermes bill — there are three separate things that get lumped together when people talk about "Hermes," and each has its own (or no) cost:
+
+1. The harness (Hermes itself) — free. MIT open-source license. No subscription, no per-seat fee, whether you self-host or fork it.
+2. The model (Claude, attached to Hermes) — this is the one that actually costs money, billed per token by Anthropic, separate from Hermes entirely. Current rates: Claude Sonnet 5 at $2 per million input tokens / $10 per million output tokens, or Claude Haiku 4.5 (cheaper, still capable) at $1/$5 per million. A Telegram-style back-and-forth uses roughly 15,000-20,000 tokens per message turn (Hermes carries fuller context in gateway mode).
+3. Hosting (where it runs) — VPS rent if you go that route, or $0 if you run it on hardware you already own.
+
+There's also a separate internal thing also called a "memory layer" inside Hermes (short-term/working/long-term storage) — that's software, included free with the harness, not a bill.
+
+Can you run this on your PC? Yes, and for testing, I'd do this instead of buying a VPS
+
+Local PC cost: $0 hosting, just electricity. Between your two PCs, the small CPU (looks like a mini PC / NUC-type box) is the better fit — low power draw (~10-30W), fine to leave running continuously. The gaming laptop would work but is the wrong tool: it draws far more power sitting idle 24/7, and running a laptop as an always-on server accelerates fan/battery wear for no benefit here — send me its specs later, but my default recommendation is the small CPU.
+
+Total monthly cost estimate, personal use, on your own PC:
+- Hosting: $0
+- Electricity for the small PC running continuously: roughly $2-5/mo equivalent
+- Claude API tokens, at maybe 20-50 messages/day of personal use: roughly $10-40/mo with Sonnet 5, or $5-20/mo with Haiku 4.5
+
+So realistically $15-45/mo all-in to test this on hardware you already own, versus ~₹2,000/mo (~$24) just for VPS rent before any API cost, if you'd bought the DigitalOcean box. Testing locally first is the right call — it's cheaper and it's disposable if something breaks.
+
+The one tradeoff: local means the assistant goes offline whenever that PC is off, sleeps, or your internet drops — no auto-restart, no redundancy. Fine for a test. Once you're happy with it and want it always-on for real, that's when moving to the $24/mo VPS makes sense.
+
+User: For clause model, I was thinking about maybe using Claude code instead, um, or using something which uses my pro subscriptions usage instead of the API. Is that something which is possible? Yeah. I think the small PC would work better. I could just have it plugged in some place, and you can let me know how I can set up a static IP for it. and then go from there. But the part about using the Claude usage when I have the pro plan, it is important that will be instrumental in the success of this. whole architecture.
+
+Assistant: On using your Pro subscription instead of API billing — no, and here's why
+
+Your Pro/Max subscription only covers native Anthropic products: claude.ai (web/desktop/mobile) and the Claude Code CLI itself, for your own direct individual use. It explicitly does not extend to third-party tools or custom-built agent systems — Anthropic's own policy states that anything built as a product or service on top of Claude, including via their own Agent SDK, needs to authenticate with an API key, not your subscription login. As of an April 2026 policy change, this was tightened further: subscription quotas no longer cover third-party harnesses like Hermes at all.
+
+There are unofficial community hacks that route a subscription's OAuth token into non-Anthropic tools, but using it for something like Hermes crosses into exactly the pattern Anthropic's own guidance flags as risking account suspension — losing your Pro/Max access entirely is a much worse outcome than the API cost you'd be trying to avoid. I'd rule this out as an approach.
+
+Practically: you'll still need a separate Anthropic API key for Hermes, billed per token, which is the $10-40/mo I estimated earlier for personal use. Your existing Pro subscription keeps working for your regular claude.ai/Claude Code use in parallel — it's just not the thing powering Jarvis.
+
+Good news on the static IP — you likely don't need one for phase 1
+
+Telegram bots typically run in polling mode: your PC reaches out to Telegram's servers to check for new messages. That's an outbound connection, so no static IP, no port forwarding, no router configuration needed at all for this phase. Just keep the small PC on and connected to the internet.
+
+A static IP (or its cheaper equivalent, a dynamic DNS service like DuckDNS or No-IP, which gives you a fixed hostname even if your ISP-assigned IP changes) only becomes necessary later, if you want:
+- A web dashboard reachable from outside your home network
+- Telegram webhook mode instead of polling (rarely needed for personal use)
+
+So for now: plug the small PC in, keep it running, skip the networking setup entirely, and revisit it only when you actually build the dashboard.
