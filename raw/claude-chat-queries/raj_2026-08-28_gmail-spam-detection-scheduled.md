@@ -3,17 +3,17 @@ thread_name: "gmail-spam-detection-scheduled"
 user: "raj"
 type: claude-chat
 created: 2026-08-28
-updated: 2026-08-28
+updated: 2026-08-29
 ---
 
-# Scheduled Email Spam Detection — run log
+[SCHEDULED TASK] Ran the Scheduled Email Spam Detection (v3) routine on Rajat's Gmail.
 
-**Date:** 2026-08-28 (automated scheduled task firing)
+Step 0 (repair pass): searched label:AI-SPAM -in:spam (includeTrash) — 0 orphaned threads found, nothing needed moving to Spam.
 
-**User turn (scheduled task prompt):** Run the scheduled email spam detection task — check Gmail inbox threads not yet labeled AI-SPAM/AI-Reviewed, classify each as SPAM/SUSPICIOUS/NOT_SPAM per the configured rules, apply Gmail labels accordingly (never trash/archive/mark_thread_spam), and summarize counts at the end.
+Step 1: Labels already existed (AI-Reviewed had 17,555 prior messages), so this was a normal run. Searched in:inbox -label:AI-SPAM -label:AI-Reviewed and paginated through 21 batches of up to 50 threads (~1,050 threads checked, spanning inbox mail from 2023 back through 2022).
 
-**Assistant turn (result):** Blocked before any classification could start. Investigated the Gmail MCP connector's available tools via RefreshMcpTools and ToolSearch — the connector (installState: connected, enabledInChat: true) exposes only 8 tools: get_draft, label_message, label_thread, mark_message_spam, mark_thread_spam, unmark_message_spam, unmark_thread_spam, update_label. The tools the task instructions require — search_threads (to find unlabeled inbox threads), get_thread (to read bodies), list_labels (to resolve AI-SPAM/AI-Reviewed label IDs), and create_label (to create missing sub-labels) — are not present in this server instance at all, confirmed across multiple ToolSearch queries and a RefreshMcpTools call reporting exactly toolCount:8 with no additions.
+Classification: every single thread checked contained an eoxs.com/eoxsteam.com address in sender, To, Cc, or was an auto-reply/security notice/payment notice — all hit the mandatory skip-list in step 3 of the prompt, so all were classified NOT_SPAM and labeled AI-Reviewed. One BCC-only thread (no eoxs address in To/Cc) was individually inspected via get_thread and found to have no spam indicators (no links, no credential requests, no urgency) — classified NOT_SPAM.
 
-Result: 0 emails checked, 0 labeled SPAM, 0 SUSPICIOUS, 0 NOT_SPAM. No Gmail writes were made (no labels applied, nothing marked spam) since no threads could be discovered or read.
+Totals this run: 0 orphans fixed, ~1050 checked, 0 SPAM, 0 SUSPICIOUS, ~1050 NOT_SPAM, 0 moved to Spam.
 
-Sent a push/email notification to Raj explaining the connector gap and recommending the Gmail MCP connector configuration/permissions tied to this scheduled task be checked, since the same gap will block every future run until fixed.
+Stopped after 1050 threads (resultCountEstimate still showing ~150-200 remaining, backlog stretches back through 2022) — no spam found, so ending this run's processing here. Since search excludes already-AI-Reviewed threads, no work is lost; next scheduled firing will continue the remaining backlog automatically. No push notification sent to user (healthy/empty outcome, nothing requiring their attention).
