@@ -8,15 +8,28 @@ updated: 2026-08-30
 
 # Scheduled Email Spam Detection Run — 2026-08-30
 
-**User (scheduled task prompt):** Run the Scheduled Email Spam Detection (v3) routine — repair pass, determine run size, classify inbox threads as SPAM/SUSPICIOUS/NOT_SPAM per the skip-list and indicator rules, label and move confirmed spam to Spam folder, report counts.
+**Trigger:** Automated scheduled task (Scheduled Email Spam Detection v3), no live user present.
 
-**Assistant (summary of actions taken):**
-- Called `list_labels`: AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-Reviewed all already exist (Label_33/34/35/36/37). No labels created. Noted AI-SPAM had 0 messages/threads ever (before this run) despite AI-Reviewed having 29,452 messages / 14,254 threads.
-- Step 0 repair pass: searched `label:AI-SPAM -in:spam` (includeTrash true) → 0 results. No orphaned threads. Healthy.
-- Step 1: AI-Reviewed already applied historically → not a first run → normal run path: `search_threads` query `in:inbox -label:AI-SPAM -label:AI-Reviewed`, pageSize 50, paginated.
-- Initial estimate said ~201 unprocessed threads, but this proved stale/unreliable — after processing ~400 threads (8 pages of 50) spanning Sept–Nov 2020, the same query kept returning fresh unprocessed threads. True backlog appears to be roughly INBOX total (20,233) minus AI-Reviewed applied so far (~14,254 before this run), i.e. on the order of several thousand threads, not 201.
-- Classified all ~400 threads processed this run: every single one hit the skip-list rule "sender domain eoxs.com/eoxsteam.com, or any eoxs address in To/Cc" → NOT_SPAM, labeled AI-Reviewed only. 0 SPAM, 0 SUSPICIOUS, 0 moved to Spam folder.
-- Two threads had no eoxs address in their to/cc/bcc metadata (an SVB welcome-call survey and a mailer-daemon bounce notice) — both classified NOT_SPAM on content merits (legitimate bank correspondence / system bounce, no phishing indicators) rather than via the skip-list.
-- **Key structural finding**: because this mailbox's own address (rajat@eoxs.com) is an eoxs.com address, and virtually every inbound message has it in the To field, the "any eoxs address in To/Cc" skip rule blanket-exempts nearly all inbound mail from spam classification. This is consistent with AI-SPAM never having been applied to a single thread across the routine's entire history. The spam filter, as configured, appears to have never actually flagged anything as spam/suspicious for this mailbox.
-- Did not finish clearing the backlog given its unexpectedly large size (thousands of threads, not ~201) — stopped after ~400 threads processed this run rather than continuing indefinitely. Sent a push notification to the user flagging: (1) the rule design issue, (2) the much-larger-than-expected backlog, and (3) that 0 SPAM/SUSPICIOUS were found (all NOT_SPAM via skip-list).
-- No emails were moved to Spam this run (repair pass found nothing to move; no thread classified SPAM/SUSPICIOUS).
+## Step 0 — Repair pass
+Searched `label:AI-SPAM -in:spam` (includeTrash: true). Result: empty. 0 orphaned threads found (no repair needed).
+
+## Step 1 — Run size determination
+AI-Reviewed label already had 15,850 threads applied historically → treated as a **normal run**, not first run.
+Query: `in:inbox -label:AI-SPAM -label:AI-Reviewed`, pageSize 50 (later 25 due to response-size limits), paginated.
+
+Discovered a large pre-existing backlog of unlabeled inbox threads dating back to April–June 2020 (personal/business correspondence from rajat@prata.ca's prior startup "The Steel Store", VC outreach, calendly notifications, ALDO shopping receipts, etc.) — far larger than a typical "gap after downtime."
+
+## Processing this run
+- Threads checked: 500
+- Classified NOT_SPAM (labeled AI-Reviewed): 451
+- Classified SPAM/SUSPICIOUS (labeled AI-SPAM + sub-label, then moved to Spam via mark_thread_spam, atomically per thread): 49
+  - AI-SPAM/Advertising: cold sales pitches, mass newsletters (Alejandro Cremades/Panthera Advisors, kcwisdom/Pitch Global, jjlaker, ALDO retail promos, TechCrunch/edX/Founder Institute marketing, Eventbrite mass invites/picks, LinkedIn InMail cold pitches, etc.)
+  - AI-SPAM/Expired-OTP: stale (>24h, in fact ~6 years old) email-verification / password-reset links (Fundopolis, Venture360, Moonshot, Gust, OpenCompute, Indeed)
+- Verified via Gmail label counters: AI-Reviewed threadsTotal delta = +451 (15850→16301), INBOX threadsTotal delta = -49 (20180→20131). Both match processing counts — confirms no double-processing, no orphans created.
+- Re-ran orphan check after processing: still 0 orphans.
+
+## Outstanding
+The backlog is not fully cleared — pagination showed more unlabeled inbox threads remaining beyond this run's processing (still dated in the 2020 range as of stopping point, thread just before 1719b16f240b12da). Since already-labeled threads are permanently excluded from future normal-run searches, no work is lost; subsequent scheduled firings will continue naturally from where this run left off.
+
+## Notification sent
+Pushed a proactive summary to the user: 500 backlog emails cleared this run (44 [Gmail-counter-confirmed: 49] real spam moved), thousands more legacy 2020-era threads still queued, will continue on future runs.
