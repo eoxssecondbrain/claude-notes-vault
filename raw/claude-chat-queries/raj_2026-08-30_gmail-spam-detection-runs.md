@@ -1,0 +1,9 @@
+---
+thread_name: "gmail-spam-detection-runs"
+user: "raj"
+type: claude-chat
+created: 2026-08-30
+updated: 2026-08-30
+---
+
+[Scheduled task: Email Spam Detection v3] Ran the automated Gmail spam-detection routine. Step 0 repair pass: searched label:AI-SPAM -in:spam (including trash) — found 0 orphaned threads (healthy, no repair needed). Step 1: since AI-Reviewed already had prior history, ran as a normal run with query "in:inbox -label:AI-SPAM -label:AI-Reviewed", paginating through the backlog. Processed 400 threads this run (all from the 2019-2020 archive backlog, chronologically oldest-first): 316 classified NOT_SPAM (calendar invites, receipts, banking/security notices, business correspondence, calendly/myphoner/tool notifications, personal/family emails) and labeled AI-Reviewed; 84 classified SPAM/Advertising (VC/investor newsletters, conference and event marketing, dating app promos, data-broker list sales, cold LinkedIn/contact-form pitches, retail marketing) — each labeled AI-SPAM + AI-SPAM/Advertising and moved to Spam via mark_thread_spam. No SUSPICIOUS or Fraud/Expired-OTP items found in this batch. One transient "service unavailable" error on a single label_thread call was caught and successfully retried before the corresponding spam-move, so no thread was left in an orphaned state. The backlog is NOT fully cleared — after 400 threads processed, the search still returns more unprocessed threads reaching back into December 2019; Gmail's resultCountEstimate stayed pinned at "201" throughout (a stale/approximate figure, not an accurate remaining count). Next scheduled run will continue seamlessly from where this run left off, since all labeled threads are now excluded from the search query. No fraud, phishing, or urgent security threats were found — did not send a push notification since nothing required the user's immediate attention.
