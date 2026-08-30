@@ -6,20 +6,33 @@ created: 2026-08-29
 updated: 2026-08-30
 ---
 
-# Scheduled Email Spam Detection (v3) — Run 2026-08-30
+# Scheduled Email Spam Detection (v3)
 
-**User turn:** [SCHEDULED TASK - AUTOMATED FIRING] Ran the "Scheduled Email Spam Detection (v3)" routine per its stored instructions.
+At each scheduled run, call `list_labels` first to get label IDs; create any missing label with `create_label` (AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-Reviewed).
 
-**Assistant actions / result:**
+**Step 0 — Repair pass (run this FIRST, every single firing, before anything else):**
+Search `label:AI-SPAM -in:spam` (pass `includeTrash: true`) to find any thread that was already labeled as spam/suspicious by a past run but never actually got moved into the Spam folder. This is a known failure mode: `label_thread` can succeed while a later `mark_thread_spam` call for the same thread doesn't complete (the run gets interrupted, hits a turn/budget limit, or errors) — and because the normal-run search below permanently excludes anything already carrying the AI-SPAM label, an orphaned thread like this is never revisited by any future run unless this repair pass catches it. Call `mark_thread_spam` on every thread this search returns, paginating with pageToken until it returns none. This step requires no re-classification (the thread is already labeled) — just complete the move. Record how many orphans were found and fixed; report this count at the end of the run.
 
-Step 0 (repair pass): searched `label:AI-SPAM -in:spam` (includeTrash) — 0 orphaned threads found. No `mark_thread_spam` calls needed.
+[Full v3 spam-detection scheduled task instructions as configured, executed in full this run — determining run size, per-email classification rules (SPAM/SUSPICIOUS/NOT_SPAM), the skip-list overrides, and the atomic label+move requirement for SPAM/SUSPICIOUS threads.]
 
-Step 1 (normal run — AI-Reviewed/AI-SPAM labels already had prior history, 13604+ threads reviewed previously): searched `in:inbox -label:AI-SPAM -label:AI-Reviewed`, paginated 9 pages of 50 (450 threads total, verified no duplicate thread IDs across pages). For each thread, read sender/subject/recipients; pulled full body via `get_thread` for a handful of ambiguous-looking ones:
-- A multi-message thread with "Andrea@namastefinancial.com" (subjects "Sample Documents..." and "Theres's 2 boxes open on Zoom...") — verified as a legitimate customer-onboarding exchange Raj himself initiated (he'd asked her for sample POs/SKUs).
-- A "Fraudulent Emails" notice from taylor@morganhauser.com — verified as a real, long-running business relationship (extensive back-and-forth about ERP/NetSuite).
+---
 
-Classification result: 0 SPAM, 0 SUSPICIOUS, 450 NOT_SPAM. Every thread either touched an eoxs.com/eoxsteam.com address in sender/To/Cc, or fell under an explicit skip category (receipts, security notices, travel confirmations, job applications, calendar mail). Applied the AI-Reviewed label to all 450. 0 threads moved to Spam.
+Assistant response:
 
-**Operational note:** Gmail's `resultCountEstimate` stayed frozen at "201" across all 9 pages despite labels being successfully applied (confirmed via `get_thread` that Label_37 persisted correctly on earlier-processed threads) — this is Gmail search-index propagation lag, not a task failure. Pagination via `pageToken` kept surfacing genuinely new, previously-unlabeled threads reaching back to inbox mail from May 2026. A substantial backlog remains beyond the 450 threads this run covered; subsequent scheduled runs will continue picking it up via the same exclusion query, consistent with the task's designed gap/backlog handling.
+Ran the scheduled Gmail spam-detection pass (v3) on the connected mailbox (rajat@prata.ca).
 
-No push notification was sent — zero spam or suspicious content was found this run.
+Step 0 repair pass: searched label:AI-SPAM -in:spam (includeTrash: true) — 0 orphaned threads found. No repair needed.
+
+Labels: all five required labels already existed (AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-Reviewed) — none needed to be created.
+
+Run type: normal run (AI-Reviewed already has prior history), query `in:inbox -label:AI-SPAM -label:AI-Reviewed`, paginated 50 at a time.
+
+This mailbox has a very large historical backlog (oldest inbox threads seen date to September 2019). Processed 6 pages (300 threads) this run:
+- NOT_SPAM (labeled AI-Reviewed only): 250 — mostly calendar invites, Google Sheets/Docs collaboration invites, personal and business correspondence (real estate, a 2019 startup "Buddy"/Social Tutors venture, Farjess Steel business mail), building management notices, Authentisign e-signature notifications, transactional event-ticket confirmations/reminders, and legitimate security notices (e.g., a Twitter "new/unusual login" alert, which matches the skip-list explicitly).
+- SPAM/Advertising: 49 — newsletters and marketing/promotional email (Eventbrite "Events picked for you" digests, VC/accelerator newsletters like NFX and Gust, PitchGlobal event marketing, dating-app promos, cart-abandonment emails, cold outbound sales pitches, a Nextdoor digest, etc.). Each was labeled AI-SPAM + AI-SPAM/Advertising and immediately moved to Spam via mark_thread_spam.
+- SPAM/Expired-OTP: 1 — a 2019 Twitter email verification code (293+ days old, a spent credential). Labeled AI-SPAM + AI-SPAM/Expired-OTP and moved to Spam.
+- SUSPICIOUS/Fraud: 0.
+
+Totals this run: 300 threads checked, 50 moved to Spam (49 Advertising, 1 Expired-OTP), 250 marked AI-Reviewed, 0 orphans found/fixed.
+
+Note: because label state persists, none of these 300 threads will be re-evaluated by future runs, and the remaining backlog (this mailbox has ~20,000 total inbox threads accumulated over years) will continue to be worked through automatically on subsequent scheduled firings — no action needed, this is expected given the pagination design.
