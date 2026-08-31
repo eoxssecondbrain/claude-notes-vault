@@ -15,3 +15,9 @@ Two things worth flagging directly rather than guessing further:
 Your saved preference says to check the "Muskan-eoxs-vault" skill file before acting on a new thread. I searched this session's available skills and it doesn't exist here — only threads-ov and eoxs-data-general are loaded. So I couldn't check it as instructed.
 
 Your leave balance isn't tracked in the EOXS Odoo HR module at all (no employee record there under your name). If it's tracked somewhere else — a spreadsheet, a separate HR tool, or that missing vault — point me to it and I'll pull the number. Otherwise this may need to go to whoever manages HR records directly.
+
+User: Check in Ask cruz Odoo
+
+Assistant: No AskCruz Odoo connector exists in this session — I checked the installed connectors list (empty for any Cruz/Odoo match) and the EOXS client registry (8 EOXS clients, no AskCruz). Only two data sources are available here: EOXS Team Live Odoo and the EOXS second-brain (eoxs-db) — neither has an AskCruz instance.
+
+If AskCruz runs its own Odoo, that connector isn't set up in this workspace. You'd need to connect it (or tell me its URL/access details) before I can query it.
