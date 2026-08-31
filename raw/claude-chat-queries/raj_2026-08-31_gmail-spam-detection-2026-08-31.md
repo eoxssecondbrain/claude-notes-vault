@@ -6,34 +6,52 @@ created: 2026-08-31
 updated: 2026-08-31
 ---
 
-# Scheduled Email Spam Detection (v4) — 2026-08-31
+# Scheduled Email Spam Detection (v9) — run 2026-08-31
 
-## User turn (scheduled task prompt, automated firing)
+## Trigger
+Automated scheduled task firing (no live user present). Prompt: "Scheduled Email Spam Detection (v9)" — full mailbox scan, classify each thread into skip-list/NOT_SPAM or SPAM (Advertising/Fraud/Expired-OTP/Investor-Outreach), label and move spam to Gmail Spam, verify moves, report.
 
-At each scheduled run, call list_labels first to get label IDs. Match labels by exact name (case-sensitive) against this list: AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-SPAM/Investor-Outreach, AI-Reviewed. Only call create_label for a name with no exact match in that list — never create a label that differs only in case or nesting from one that already exists, and never create a label a second time.
+## What was done
 
-*Scope:* this scans the whole mailbox, not just Inbox.
+**Fix-up pass**: searched `label:AI-SPAM in:inbox` → 0 results. Nothing to fix.
 
-*Determining run size:*
-- If the AI-Reviewed and AI-SPAM labels do not yet exist, or neither has ever been applied to any thread (i.e. this is the first run ever), treat this as the FIRST RUN: call search_threads with query -in:sent -in:chats sorted newest-first, pageSize 100, and process at most the 100 most recent emails (paginate with pageToken only up to that 100 cap).
-- Otherwise (a normal run): call search_threads with query -in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed, pageSize 50, and process what comes back (paginate with pageToken if more than 50 unprocessed emails exist — this covers a gap after downtime).
+**Run type**: Normal run (AI-Reviewed already has 22,517 threads / 42,924 messages of history, AI-SPAM sub-labels exist but show 0 current threads — consistent with Gmail stripping custom labels when a thread is moved to Spam).
 
-[... full classification rules: spam/phishing indicators, investor-outreach rule 2a, skip list step 3 (eoxs.com domain, security notices, payment/invoice/subscription mail, calendar mail, auto-replies, offer letters), classify SPAM/SUSPICIOUS/NOT_SPAM, label_thread + mark_thread_spam sequencing, no double-processing, end-of-task report requirements ...]
+**Search**: `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`, pageSize 50 → resultCountEstimate 804 total backlog.
 
-## Assistant actions taken
+**Processed**: first page of 50 threads.
+- 1 skipped (thread 19c1f3f82154e77a already carried Label_37/AI-Reviewed on the returned message — rule 9, do not reprocess).
+- 35 classified NOT_SPAM → labeled AI-Reviewed (Label_37). Mostly eoxs.com/eoxsteam.com sender-domain mail, calendar Accepted:/Invitation:/Canceled: threads, and a DocuSign "Verify a New Device" security notice.
+- 14 classified SPAM → labeled AI-SPAM (Label_33) + sub-label, then `mark_thread_spam`:
+  - AI-SPAM/Advertising (13): Calendly "New Event" x7 (Rob Sukhwani, Saloni Goyal, Francois Dechery, Jacek Strzelczyk, Zahid Hussain, Ellen Ma, Emiliano R Berenbaum), YC Co-Founder Matching digest, DocuSign "viewed" notification, Google Voice marketing tip, Zoom "sarthak tewari has joined your Personal Meeting Room", ZoomInfo "Real-Time Intent Data" (vendor pitch), ZoomInfo Weekly Highlights newsletter.
+  - AI-SPAM/Expired-OTP (1): "Code for signing in to Zoom" dated 2022-12-22 (>24h old).
 
-1. Loaded raj-eoxs-vault-adjacent skill context per user preferences (threads-ov skill loaded and followed for this save).
-2. Called list_labels: confirmed AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-SPAM/Investor-Outreach, AI-Reviewed all already exist as labels (Label_33 through Label_38, Label_37 for AI-Reviewed). AI-Reviewed already had 21,131 threads / 40,956 messages applied historically. AI-SPAM and all its sub-labels had 0 threads/messages — this was the first time AI-SPAM would ever be applied. Determined this was a NORMAL RUN (not first run) since AI-Reviewed had prior history.
-3. Ran the normal-run query `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`, pageSize 50, and paginated through approximately 16 pages (~800 threads), covering the entire backlog gap from 2023 through today (2026-08-31), since AI-SPAM had apparently never been run before despite AI-Reviewed being active.
-4. Classified each thread using the full ruleset: calendar/Zoom/Calendly/DocuSign system notifications, eoxs.com/eoxsteam.com internal mail, security alerts, payment/subscription mail, and auto-replies were skipped to NOT_SPAM per the mandatory skip list. Genuine investor/VC calendar bookings via EOXS's own "Invest in the future of Steel" outbound funnel were treated as EOXS-initiated (not unsolicited) and left NOT_SPAM. Existing vendor relationships (ZoomInfo, QuestionPro, AIPRM, Level Equity, Pragtech) were confirmed via in:sent history checks before exempting from Investor-Outreach/Advertising treatment.
-5. Applied AI-Reviewed to ~770 NOT_SPAM threads.
-6. Applied AI-SPAM + sub-label to 32 threads, then called mark_thread_spam on each (only after label_thread succeeded), moving them out of the mailbox into Gmail's system Spam folder:
-   - AI-SPAM/Advertising (28): cold sales/marketing pitches (Googly VA, Journey platform under two domains, BlueSignal recruiter, Apex Boardroom, Internet Soft, Revenue Engineering webinar, Ascend Analytics, Vistage, Hustle Fund retreat, elemmir.net "Last try"/follow-up, getgrolmedia.com "Raj?"), pay-to-play magazine/award solicitations (industrywired.net), and unsolicited newsletters (distributionstrategy.com ×4, beehiiv.com SaaS newsletters ×2, indiafoodbrief.com TradeBriefs ×3, HICOOL startup-competition mass email, dataroomHQ, BairesDev referral program).
-   - AI-SPAM/Investor-Outreach (2): Fells View Capital ("entrepreneur & veteran seeking to acquire"), FasterCapital's "RaiseCapital Program" — both unsolicited PE/accelerator cold intros with no prior relationship.
-   - AI-SPAM/Fraud (2): a mass-BCC "national security"/family-offices chain email from joseph.o.chan@gmail.com, and a fake "your document has been completed" notice from sales@designsketchers.com mimicking a DocuSign completion alert.
-   - AI-SPAM/Expired-OTP (0): none found this run.
-7. Notable judgment calls flagged for Raj: two "erp.docusign.com" payment-failed emails (odd subdomain, could be spoofed) were kept NOT_SPAM per the explicit skip-list rule that payment/subscription mail is exempted regardless of other indicators — worth a manual look though old (Jan 2024).
-8. Sent a push notification to Raj summarizing the run (32 moved to spam, breakdown by category, note on the DocuSign anomaly, note that AI-SPAM had never fired before this run, and that the backlog may not be fully exhausted so future scheduled runs will continue incrementally).
+## Verification problem found
 
-## Outcome
-First-ever successful AI-SPAM pass on this mailbox. ~800 threads reviewed, ~770 marked AI-Reviewed, 32 moved to Spam (28 Advertising / 2 Investor-Outreach / 2 Fraud / 0 Expired-OTP). No threads were trashed or archived — only labeled and, for confirmed spam, moved to Gmail's Spam folder per the task's permitted action.
+`get_thread` and `unmark_thread_spam` both return "The caller does not have permission" for any thread once it carries Gmail's SPAM label — this connector's scope cannot read or act on Spam-folder threads at all. So:
+- Step 6's literal verification method (get_thread) is impossible. Substituted `search_threads` with `in:inbox` + a unique subject fragment as a proxy — absence from inbox confirms the move. All 14 moves confirmed removed from inbox this way. No MOVE_FAILED.
+- More importantly: **if any of these 14 moves is wrong, it cannot be corrected through this tool.** unmark_thread_spam is blocked the same way. Only manual recovery from Gmail's Spam folder (by Raj, before the ~30-day auto-purge) would undo it.
+
+## Precedent conflict — the reason I stopped
+
+Before moving further into the 804-thread backlog, I checked whether categories I was about to classify as bucket-3 "automated notification, no action needed" spam matched how this exact mailbox has actually been labeled historically. It does not match, for at least 4 categories, each with heavy volume:
+
+- "Code for signing in to Zoom" — 201 historical threads, all still AI-Reviewed/NOT_SPAM, none in Spam.
+- "[YC Co-Founder Matching] ... pending invitations/match" — 25 historical threads, all AI-Reviewed/NOT_SPAM.
+- Calendly "New Event: ..." booking notifications — 201 historical threads, all AI-Reviewed/NOT_SPAM (checked back to 2020).
+- Zoom "X has joined your Personal Meeting Room" — 3 historical threads, all AI-Reviewed/NOT_SPAM, despite this exact phrase being given as a literal example in the v9 rule text's Advertising bucket.
+
+Two explanations are both plausible: (1) v9 deliberately tightened the rule vs. whatever version labeled that old mail, and the backlog is genuinely supposed to get the stricter treatment now: (2) the bucket-3 "no action needed" test is being read too aggressively against notifications that are actually operationally relevant (a call got booked, someone joined your meeting room), and the 14 items moved this run include false positives. I can't distinguish between these without Raj's input, and 10 of the 14 spam moves this run fall into the four conflicting categories above.
+
+Given the move is effectively irreversible through this tool, I stopped after this first page rather than applying the same aggressive reading to the remaining ~754 unprocessed threads. Sent a push notification flagging this.
+
+## Report
+
+- Fix-up pass: 0 fixed.
+- Checked this run: 49 (+1 skipped, already labeled).
+- NOT_SPAM: 35 (AI-Reviewed).
+- SPAM/SUSPICIOUS: 14 — Advertising 13, Expired-OTP 1, Fraud 0, Investor-Outreach 0.
+- Moves confirmed: 14/14 (via search proxy, get_thread/unmark_thread_spam blocked by permission error on Spam-folder threads).
+- MOVE_FAILED: none.
+- Backlog remaining: ~754 threads, unprocessed, paused pending clarification.
+- Flagged for Raj: whether Calendly "New Event", Zoom sign-in codes, YC Co-Founder Matching digests, and Zoom "joined your Personal Meeting Room" should actually be spam under v9, given 400+ historical counterexamples in this same mailbox; and that get_thread/unmark_thread_spam being blocked on Spam-folder threads means mistakes here can only be fixed manually from Gmail, not by a future run of this task.
