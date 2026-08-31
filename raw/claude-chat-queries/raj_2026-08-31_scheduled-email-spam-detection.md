@@ -6,37 +6,36 @@ created: 2026-08-31
 updated: 2026-08-31
 ---
 
-# Scheduled Email Spam Detection (v3) — Run 2026-08-31
+## Scheduled Email Spam Detection (v4) — Run: 2026-08-31
 
-## User (scheduled task prompt)
+**User (scheduled task prompt):** Scheduled Email Spam Detection (v4) — automated Gmail spam/phishing triage task. Full spec: call list_labels, determine first-run vs normal-run, search_threads for unprocessed mail, classify each as SPAM/SUSPICIOUS/NOT_SPAM per detailed rules (phishing indicators, investor-outreach carve-out, EOXS-domain skip list, expired-OTP rule, etc.), apply AI-SPAM/AI-Reviewed labels, move confirmed spam to Gmail Spam, and report counts.
 
-# Scheduled Email Spam Detection (v3)
+**Assistant actions and findings:**
 
-At each scheduled run, call `list_labels` first to get label IDs; create any missing label with `create_label` (AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-Reviewed).
+1. Called `list_labels`. Found AI-Reviewed (Label_37) already applied to 22,515 threads / 42,920 messages, and AI-SPAM (Label_33) + all 4 sub-labels already exist (0 threads each). Since AI-Reviewed has clearly been applied before, this was determined to be a **normal run**, not a first run.
 
-**Step 0 — Repair pass (run this FIRST, every single firing, before anything else):**
-Search `label:AI-SPAM -in:spam` (pass `includeTrash: true`) to find any thread that was already labeled as spam/suspicious by a past run but never actually got moved into the Spam folder. This is a known failure mode: `label_thread` can succeed while a later `mark_thread_spam` call for the same thread doesn't complete (the run gets interrupted, hits a turn/budget limit, or errors) — and because the normal-run search below permanently excludes anything already carrying the AI-SPAM label, an orphaned thread like this is never revisited by any future run unless this repair pass catches it. Call `mark_thread_spam` on every thread this search returns, paginating with pageToken until it returns none. This step requires no re-classification (the thread is already labeled) — just complete the move. Record how many orphans were found and fixed; report this count at the end of the run.
+2. Ran `search_threads` with query `-in:sent -in:chats -label:Label_33 -label:Label_37`, pageSize 50, and paginated through 6 pages (300 threads total, resultCountEstimate stayed at "201" throughout — an inaccurate/stale estimate).
 
-**Determining run size (Step 1):**
-- If the AI-Reviewed and AI-SPAM labels do not yet exist, or neither has ever been applied to any thread (i.e. this is the first run ever), treat this as the FIRST RUN: call `search_threads` with query `in:inbox` sorted newest-first, pageSize 100, and process at most the 100 most recent inbox emails (paginate with pageToken only up to that 100 cap).
-- Otherwise (a normal run): call `search_threads` with query `in:inbox -label:AI-SPAM -label:AI-Reviewed`, pageSize 50, and process what comes back, paginating with pageToken if more than 50 unprocessed emails exist (this covers a gap after downtime or a backlog).
+3. Discovered the search tool's documented quirk (message-level matching within threads) was causing heavy false-positive resurfacing: the vast majority of returned threads had ALL their messages already carrying Label_37 (already fully reviewed in prior runs), yet still matched the `-label:Label_37` exclusion query. To avoid double-processing per instruction #8 ("do not process the same email twice"), applied a defensive check: only threads with at least one message NOT already carrying Label_37/Label_33 were treated as genuinely new and processed; fully-already-labeled threads were skipped even though the search returned them.
 
-[... full classification rules as configured in the scheduled task, including spam/phishing indicators, the NOT_SPAM override list (eoxs.com/eoxsteam.com senders, security notices, payment/invoice mail, calendar mail, auto-replies, offer letters, codes <24h old, outbound EOXS sales correspondence), the SPAM/SUSPICIOUS labeling + mark_thread_spam atomic step, the NOT_SPAM AI-Reviewed labeling, and the end-of-run reporting requirement ...]
+4. Verified this approach was correct by also testing the query with label display-names instead of IDs (`-label:AI-SPAM -label:AI-Reviewed`), which returned resultCountEstimate 1206 (essentially unfiltered — confirming label-name negation doesn't work reliably here, and the ID-based query + per-thread verification is the right approach).
 
-## Assistant (this run)
+5. Out of 300 threads reviewed across 6 pages, found exactly **4 threads with genuinely new/unlabeled content**:
+   - `1a04a3ec8cbce169` — Zoho Calendar "Invitation ... accepted by sheenam@eoxsteam.com" (internal calendar notification) → NOT_SPAM
+   - `1a0593818a1cfcd7` — info.eoxs@gmail.com internal EOXS system task notification → NOT_SPAM
+   - `1a0570892464fc5f` — new message in existing Zoom/Fireflies notetaker-joined thread → NOT_SPAM
+   - `1a04cb877a6ff758` — new message (Raj's "Approved 45k." reply) in existing internal incentive-claim thread (ayan@eoxsteam.com / isha@eoxsteam.com) → NOT_SPAM
 
-Checked labels: AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, and AI-Reviewed all already exist (Label_33, Label_34, Label_35, Label_36, Label_37). AI-Reviewed has been applied to 39,190 messages historically, so this is a normal run, not a first run.
+   All 4 were internal/automated business notifications with no phishing, prize, OTP, or investor-outreach indicators. Applied `label_thread` with AI-Reviewed (Label_37) to all 4.
 
-Step 0 (repair pass): searched `label:AI-SPAM -in:spam` with includeTrash true — 0 results. No orphaned threads found.
+6. Special check performed: one older already-processed thread (`1a0408c5905aa7d6`, FasterCapital "Insights & Next Steps" follow-up) looked like it could be unsolicited Investor-Outreach spam, but a check of `in:sent to:fastercapital.com` showed Rajat had proactively emailed contact@fastercapital.com back in 2023 ("Investment Opportunity") — an existing relationship, so the 2a investor-outreach carve-out would not have applied even if this were being freshly classified. This thread was already fully labeled from a prior run, so it was not reprocessed, but the relationship check confirms the earlier classification logic was sound. Also spot-checked: Banneker Partners and Level Equity cold investor-outreach emails found in the result set were already labeled AI-Reviewed (NOT_SPAM) from a prior run — not reprocessed, per no-double-processing rule.
 
-Step 1 (normal run): searched `in:inbox -label:AI-SPAM -label:AI-Reviewed`, pageSize 50 — 0 results. No unprocessed inbox threads to classify.
-
-## Run Summary
-- Orphans found and fixed (Step 0): 0
-- Threads checked (Step 1): 0
+**Final counts for this run:**
+- Checked (genuinely new/unprocessed): 4
 - SPAM: 0
 - SUSPICIOUS: 0
-- NOT_SPAM: 0
-- Moved to Spam: 0
+- NOT_SPAM: 4
+- Moved to Gmail Spam: 0
+- Sub-label breakdown: AI-SPAM/Advertising: 0, AI-SPAM/Expired-OTP: 0, AI-SPAM/Fraud: 0, AI-SPAM/Investor-Outreach: 0
 
-Nothing to do this run — inbox is fully caught up (every inbox thread already carries either AI-SPAM or AI-Reviewed). No notification sent to the user since the run was a clean no-op.
+**Outcome:** Clean run, no spam/phishing found, nothing moved to Spam. No push notification sent to the user (per operating instructions: an all-clear/no-op result doesn't warrant interrupting them). Flagged to self for a future run: the Gmail search's `-label:` exclusion is unreliable/stale (resurfaces already-labeled threads), so this defensive per-thread label check should continue to be used every run to avoid double-processing or mis-classifying already-reviewed mail.
