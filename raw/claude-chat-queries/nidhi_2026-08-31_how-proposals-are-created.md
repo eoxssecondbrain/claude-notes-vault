@@ -53,3 +53,5 @@ Sources: Nidhi Rana entity page, Second Brain Initiative, and related HR/incenti
 **What the actual email thread shows:** Isha Bisht asked you to provide proof of work hours after a gap showed up in your Cattr tracking. Ayan Dutta then vouched for you, confirming you'd been working with him on a project since 5:00 PM IST, and asked you going forward to make sure Cattr tracking was turned on. That's it — you were the subject of an attendance query, not the person who owns or automated the Cattr system. The page itself actually names Kriti Jain as the automation's builder.
 
 My earlier summary compressed "appears in the Cattr thread" into "handling the Cattr automation," which wasn't supported by the source and was wrong. Thanks for flagging it — I'll note the correction in the archive.
+
+**User:** Okay what information do you have on Raj ? can you tell me what he works on ?
