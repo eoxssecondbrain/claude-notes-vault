@@ -59,3 +59,46 @@ How much of your day is spent being your own team's search engine?
 A few notes before you post it: the "human FAQ page / answer key" is the load-bearing analogy per the voice skill — one, developed, not stacked with others. The 95% figure and the 80-person scale are the only hard numbers, both yours. I kept the AskCruz mention to one quiet line and didn't touch the fact that you also own it, per your instruction — it reads purely as "a tool we deployed."
 
 One thing I didn't have and didn't want to invent: a specific verbatim question your team used to ask you, or a specific moment (a call, a Slack thread) that crystallized this for you. If you have one, it'd sharpen the middle section a lot — real dialogue snippets are usually the strongest line in your posts. Want me to fold one in, or is this ready to ship as is?
+
+USER: Saved. Let me know if you have a specific question your team used to ask, or if this is ready to post as is.
+
+USER: I think this post is lacking a hook, the post should have a strong hook for someone who's reading and how that story is relatable to their life.
+
+ASSISTANT: Good call — the original opener explained the situation instead of hooking into something the reader already feels. Here's a revised version with a sharper, more universal hook:
+
+---
+
+Everyone tells you: hire more people, and you'll get more time back.
+
+I hired 80 people. And ran out of time completely.
+
+Not because they weren't capable.
+
+Because I became the answer key for all of them.
+
+- Where's this file
+- Who approved that change
+- What's the process for this client
+- Did we handle it this way last time
+
+Every "quick question" was quick for them and expensive for me — a context switch, a dropped thread, twenty minutes gone chasing something that lived in my head and nowhere else.
+
+That's not leadership. That's a human FAQ page with a job title.
+
+And the bigger the team got, the worse it got — more people, more questions, less of me left for the one job only I could do.
+
+We deployed AskCruz across EOXS.
+
+Same team. Same questions. Same complexity.
+
+The influx into my inbox and DMs dropped 95%.
+
+Not because people stopped needing answers — because the answers stopped needing me.
+
+I got my time back for the one thing only I could actually do: deciding where the company goes next.
+
+If your team is growing and your calendar is getting worse, not better — you don't have a growth problem. You have an answer-key problem.
+
+---
+
+Changes from before: the hook now inverts a belief almost every operator holds ("more headcount = more leverage") instead of just describing your situation, which should land for anyone managing a team, not just CEOs. I also swapped the closing question for a callback-style diagnosis line ("you have an answer-key problem") since it ties directly back to the hook and gives the reader something to actually recognize in themselves, which felt stronger than a generic question here. Want me to go back to a closing question instead, or is the callback the right call?
