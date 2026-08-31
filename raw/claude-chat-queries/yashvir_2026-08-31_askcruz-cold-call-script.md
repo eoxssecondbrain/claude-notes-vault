@@ -117,55 +117,185 @@ Next: the call structure itself — opener through close, mapped against MEDDIC/
 
 User: next
 
-Assistant: Section 3 — Call structure: opener through close, mapped to MEDDIC/BANT
+Assistant: Section 3 — Call structure, mapped to MEDDIC/BANT
 
-The call has one job on a cold first touch: surface a real MEDDIC pain and advance one BANT gap. Not close, not demo, not pitch. That constrains the whole structure.
+One structural point has to be flagged before the phases: your active pipeline isn't actually cold. Ohio Strip Steel, Collier Metals, and Sabre Alloys already have contact history — Sabre Alloys has an active proposal, support tickets, and a resolved credit dispute in the relationship already. Calling Joe Brom or Tripp Collier with a stranger's cold-open would be a downgrade, not an opener. So the structure below has two entry points: a warm-account variant (skips straight past the pattern-interrupt into a reference to existing context) and a true cold variant (net-new companies off the ICP list you haven't touched yet). Everything after the opener is the same MEDDIC/BANT sequence for both.
 
-Stage-by-stage skeleton
+Phase-by-phase structure
 
-Stage 1 — Pattern interrupt (0–10 seconds)
-Purpose: survive the first ten seconds without triggering a hangup reflex. No "how are you today," no company-name-drop pitch. Voss-style labeling used pre-emptively — naming the awkwardness of a cold call defuses it faster than powering through it.
-Gap addressed: none yet — this stage exists to earn Stage 2.
-Success criteria: prospect responds instead of hanging up or auto-deflecting to "not interested."
+Phase 1, Opener, first 10 seconds
+Warm accounts: reference the specific last touchpoint by name (the proposal, the demo, the open ticket) — never a generic "just checking in," which is banned outright by the skill's email rules and shouldn't survive on calls either.
+Cold accounts: pattern interrupt plus immediate self-labeling of the interruption, Voss-style — naming that this is an unannounced call defuses the reflex to say "not interested" before you've said anything.
+Goal: earn 20 more seconds. Not pitch. Nothing here touches MEDDIC/BANT yet — this phase exists only to get past the reflexive brush-off.
 
-Stage 2 — Reason-for-call framing (10–25 seconds)
-Purpose: give a specific, plausible reason for the call tied to an operational reality of steel/metals distribution — not a generic "quick call to introduce ourselves." This is where the Challenger teaching instinct starts: lead with an observation about their world, not your product.
-Gap addressed: sets up Identify pain (MEDDIC) without asking a pain question yet.
-Success criteria: prospect doesn't shut it down in the first sentence; you get permission to ask one question.
+Phase 2, Reason for the call, 10–20 seconds
+State the specific, researched reason you're calling this company, not a category reason. This is where Weinberg's account-specific discipline shows up — a reason that could apply to any steel distributor is a reason that gets hung up on.
+Maps to: nothing directly yet, but it's the precondition for Economic Buyer / Authority — you need to know, or confirm, who you're actually speaking to before the diagnostic phase means anything.
 
-Stage 3 — Diagnostic questioning (25 seconds–3 minutes)
-Purpose: the core of the call. SPIN/Gap Selling ordering — Situation question first (low-friction, easy to answer), then Problem question (surfaces friction), then Implication question (makes the cost of the friction explicit in their own words), then Need-payoff (lets them state why fixing it matters — you don't state it for them). NEPQ discipline throughout: ask, then stay quiet, don't fill silence with your own answer.
-Gap addressed: Identify pain (MEDDIC), Need (BANT) — this is the stage that either produces a real qualified pain or ends the call honestly.
-Success criteria: prospect names a specific, current operational friction in their own words — not a hypothetical, not a shrug.
+Phase 3, Diagnostic questioning, the bulk of the call
+This is SPIN's skeleton run through NEPQ's tone and Gap Selling's destination:
+Situation — light, framed as "based on what I found," not basic fact-finding (fact-finding reads as unprepared).
+Problem — surfaces felt pain. Grounded in the skill file's named industry pain points: quoting delays, inventory blind spots, data silos, MTR compliance burden, scheduling complexity, and so on — the question has to name one of these specifically, not ask "any challenges?"
+Implication — Gap Selling's cost-of-inaction question. This is where Metrics (MEDDIC) gets built: what does this pain cost them, in their own words, not yours.
+Need-payoff — what solving it would be worth, and who else internally would care. This is a soft, indirect probe at Economic Buyer and Champion — you're not asking "who signs checks," you're asking who else feels this.
 
-Stage 4 — Insight moment (only if Stage 3 lands)
-Purpose: one sharp, specific reframe of what they just told you — the Challenger substitute for proof you don't have. This is the one place in the call where you talk more than you ask.
-Gap addressed: Decision criteria (MEDDIC) — starts shaping what "a good solution" looks like in their head, on your terms.
-Success criteria: prospect engages with the reframe rather than going flat or repeating themselves.
+Phase 4, Insight, one sharp sentence
+The Challenger teach moment. Since there's no case study to lean on, this is a specific, credible observation about the operational problem itself — something that makes the prospect think "they've actually looked at this," not "they're reading a script." This is the substitute for social proof, and it only works if it's true and specific, not a repackaged pain point they already said.
 
-Stage 5 — Authority check
-Purpose: find out, without asking "are you the decision maker" directly, whether you're talking to someone who can act — Economic buyer (MEDDIC), Authority (BANT). Phrased as a process question, not a status question, since a direct authority question this early reads as dismissive.
-Gap addressed: Economic buyer, Authority.
-Success criteria: you know whether the next step is "keep going with this person" or "get referred."
+Phase 5, Bridge to AskCruz, brief
+Only now does the product get named — tied directly to the exact pain surfaced in Phase 3, never as a generic feature list. Standalone framing, no parent-company mention, per the skill's positioning rule. This is the shortest phase, deliberately.
 
-Stage 6 — Timeline check (light touch)
-Purpose: is there an actual trigger forcing a decision, or is this evergreen pain with no urgency. One question, no pressure.
-Gap addressed: Decision process, Timeline (BANT).
-Success criteria: you know whether the next step should be scheduled soon or nurtured.
+Phase 6, Close, low-friction ask
+Not a hard close — there's nothing to close yet. The ask moves exactly one MEDDIC/BANT gap forward: confirm the economic buyer if it's unclear, or confirm a timeline/trigger, or get 20 minutes on the calendar with the right person. One ask, not a list.
 
-Stage 7 — Close
-Purpose: one low-friction ask that advances whichever gap is most open — never "let me send you a proposal," since there's nothing to propose yet on a first call with no case studies behind it. The ask is proportional to what actually happened in the call.
-Gap addressed: whichever of the above is still open.
-Success criteria: a concrete next action with a date attached — not "sounds good, send me something."
+What this call is deliberately not trying to do
+Budget and Decision Process/Criteria are explicitly out of scope for a first call. Asking about budget before pain is established is a common failure mode this structure is built to avoid — if a rep jumps there early, that's a sequencing error worth catching in call review, not a personal failing.
 
-Three branches, same skeleton
+Gap-to-phase map
 
-Live decision-maker — runs the full seven stages.
-Gatekeeper — Stages 1–2 only, redirected: the goal isn't to sell past the gatekeeper, it's to get named and get through, using a calibrated question rather than asking permission ("What's the best way to get five minutes with [name] about [specific operational issue]?").
-Voicemail — Stage 1–2 compressed into fifteen seconds, ending in a specific callback reason, never "give me a call back."
+Gap | Framework source | Call phase | First-call goal
+Identify Pain (MEDDIC) / Need (BANT) | NEPQ, Gap Selling | Phase 3, Problem | Primary objective
+Metrics (MEDDIC) | Gap Selling | Phase 3, Implication | Get a real cost in their words
+Economic Buyer (MEDDIC) / Authority (BANT) | — | Phase 2, Phase 6 | Confirm or find out who
+Champion (MEDDIC) | NEPQ | Phase 3, Need-payoff | Identify a candidate, don't name it as such
+Timeline (BANT) | — | Phase 6 | One direct ask, only if pain is real
+Decision Criteria / Process (MEDDIC) | — | Not this call | Explicitly deferred
+Budget (BANT) | — | Not this call | Explicitly deferred
 
-Next: the full script text for all three branches, with the actual language for each stage.
+Next: the script itself, word for word — cold opener, warm opener, the full discovery question set, gatekeeper path, voicemail, and close.
 
-User: next
+User: next.
 
-Assistant: [This response — Section 4 delivery is pending in the same turn as this save.]
+Assistant: Section 4 — The script itself
+
+This is a template with decision branches, not a rigid word-for-word read — Commissioned craft here means every edge case is covered, not that the wording is fixed. The bracketed pain options let you pick the one your pre-call research actually supports; picking the wrong one is worse than picking none, since a wrong guess reads as not having done homework.
+
+COLD OPENER — net-new account, first touch
+
+"Hi [Name], this is Yash — you don't know me, and this is a cold call, so feel free to tell me if now's a bad time. I'll be quick either way."
+[pause — let them respond. Naming the interruption defuses the reflex to say "not interested" before you've said anything.]
+
+If they say "go ahead" or "what's this about":
+"I've been looking at how [Company] runs [specific researched detail], and I had one specific question. Got 30 seconds?"
+
+WARM OPENER — existing pipeline account (Ohio Strip Steel, Collier Metals, Sabre Alloys)
+
+"Hi [Name], it's Yash from [name the actual last touchpoint — the proposal, the demo, the open ticket]. Got a couple minutes?"
+Never "just checking in" or "following up" — both are banned in the skill's email rules, and they're a worse tell on a call than in writing.
+
+GATEKEEPER PATH
+
+"Hi, I'm trying to reach [Name] — is this something you handle, or is [Name] the right person for [specific operational area]?"
+Calibrated question, not permission-seeking. "Can I speak to..." invites an easy no; this doesn't.
+
+If pushed for a reason:
+"Sure — I had a specific question about how [Company] handles [pain area], and wanted [Name]'s take directly, since it's not really a call I can do justice to secondhand."
+
+REASON FOR THE CALL
+
+"The reason I'm calling — most steel service centers I talk to are dealing with [pick one, matched to research]:
+— quotes taking longer than they should because pricing and inventory data live in different systems
+— finding out about an inventory problem after a customer's already been promised something
+— MTR pulling and matching eating more time than it should on certified orders
+— a production change rippling downstream before everyone who needs to know actually knows
+I wanted to ask how that shows up for you, if at all."
+
+DISCOVERY — Situation
+
+"Walk me through how [quoting / inventory checks / MTR handling — match to the pain above] works today. Is that info sitting in one place, or scattered across a few systems?"
+
+DISCOVERY — Problem, branch to the pain named above
+
+Quoting delays: "When a customer needs a fast quote, how long does that usually take end to end?"
+Inventory blind spots: "How often does someone find out about an inventory issue after a customer's already been promised something?"
+Data silos: "If someone needed the full picture on an order — pricing, inventory, MTR, customer history — how many places would they have to check?"
+MTR compliance: "How much time goes into pulling and matching mill test reports for orders that need them?"
+Scheduling complexity: "When something in production shifts, how far does that ripple before everyone downstream knows about it?"
+
+DISCOVERY — Implication, cost in their own words
+
+"When that happens — [restate their answer] — what does it actually cost you? Time, an annoyed customer, an order that slips?"
+"Is that a once-a-month thing, or closer to daily?"
+
+DISCOVERY — Need-payoff
+
+"If that friction just disappeared — if whoever needed that answer could just ask and get it — what would that be worth to you?"
+"Besides you, who else feels this the most? Ops, sales, whoever's fielding the customer calls?"
+
+INSIGHT — Challenger teach moment
+
+"Here's what I've noticed talking to distributors like yours — the real cost usually isn't the time spent searching, it's the decisions made on incomplete information because nobody wanted to wait for the full picture. That's usually the bigger number, and it's the one nobody's tracking."
+This has to be tailored live to what they actually said in Implication — read verbatim, it stops working.
+
+BRIDGE — first and only mention of the product
+
+"That's actually the exact problem AskCruz is built around — it connects the systems you're already using and lets anyone on your team ask a plain question and get the answer, instead of hunting across four logins. Given what you just described, I think it's worth a real look."
+No parent-company mention, standalone framing, per the skill's positioning rule.
+
+CLOSE — pick exactly one ask, whichever MEDDIC/BANT gap is still open
+
+Confirm economic buyer: "Is this something you'd be evaluating yourself, or more of a [owner/GM/ops director]-level call?"
+Confirm timeline: "Is this something you're actively looking to fix, or more of a someday problem right now?"
+Book time: "I'd like to show you how this would work against what you just described — 20 minutes this week or next?"
+
+VOICEMAIL — 15 seconds, no pitch
+
+"Hi [Name], it's Yash — calling about [specific pain area], not a general check-in. I'll try again, but if you want to save us both the back-and-forth, my number's [number]. Talk soon."
+
+Next: the objection-handling playbook — including the one you'll get most often given the diagnostic: "who else is using this."
+
+User: let's prepare a script around the cold openers, gatekeepers path, and in the reason of calls lets keep it around quotes and inventory problem ?
+
+Assistant: Cold-calling script — narrowed to quotes and inventory
+
+Reason for the call, narrowed to two pain options
+
+"The reason I'm calling — most steel service centers I talk to are dealing with one of two things:
+— quotes taking longer than they should because pricing and inventory data live in different systems
+— finding out about an inventory problem after a customer's already been promised something
+I wanted to ask how that shows up for you, if at all."
+
+Cold opener, net-new account, first touch
+
+"Hi [Name], this is Yash — you don't know me, and this is a cold call, so feel free to tell me if now's a bad time. I'll be quick either way."
+[pause]
+
+If they say "go ahead" or "what's this about":
+"I've been looking at how [Company] handles quoting and inventory, and I had one specific question. Got 30 seconds?"
+
+Gatekeeper path
+
+"Hi, I'm trying to reach [Name] — is this something you handle, or is [Name] the right person for quoting and inventory?"
+
+If pushed for a reason:
+"Sure — I had a specific question about how [Company] handles quoting turnaround and inventory visibility, and wanted [Name]'s take directly, since it's not really a call I can do justice to secondhand."
+
+Discovery, narrowed to match the two pain options
+
+Situation: "Walk me through how quoting works today — is pricing and inventory info sitting in one place, or scattered across a few systems?"
+
+Problem, branch on whichever the prospect leans toward:
+Quoting delays: "When a customer needs a fast quote, how long does that usually take end to end?"
+Inventory blind spots: "How often does someone find out about an inventory issue after a customer's already been promised something?"
+
+Implication: "When that happens, what does it actually cost you — time, an annoyed customer, an order that slips? Is that a once-a-month thing, or closer to daily?"
+
+Need-payoff: "If that friction just disappeared, what would that be worth to you? Besides you, who else feels it the most — sales, ops, whoever's fielding the customer calls?"
+
+Insight, tailored live to their actual answer
+
+"Here's what I've noticed talking to distributors like yours — the real cost usually isn't the time spent searching, it's the decisions made on incomplete information because nobody wanted to wait for the full picture on pricing or stock. That's usually the bigger number, and it's the one nobody's tracking."
+
+Bridge
+
+"That's actually the exact problem AskCruz is built around — it connects the systems you're already using so anyone on your team can ask a plain question about pricing or inventory and get the answer, instead of hunting across four logins. Given what you just described, I think it's worth a real look."
+
+Close, pick one
+
+Confirm economic buyer: "Is this something you'd be evaluating yourself, or more of a [owner/GM/ops director]-level call?"
+Confirm timeline: "Is this something you're actively looking to fix, or more of a someday problem right now?"
+Book time: "I'd like to show you how this would work against what you just described — 20 minutes this week or next?"
+
+I dropped MTR compliance and scheduling complexity from the discovery branches too, since a reason-for-call that only names quotes and inventory but then pivots discovery to MTR would contradict itself on the call. Say the word if you want a third branch added back in instead of just narrowing to two.
+
+Still pending: objection handling (Section 5) and cadence/tracking/risks (Section 6). Say "next" when ready.
