@@ -301,3 +301,7 @@ Assistant: 4
 User: What is 10 + 10?
 
 Assistant: 20
+
+User: what is 5+5?
+
+Assistant: 10
