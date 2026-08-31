@@ -35,3 +35,7 @@ Experience and relieving letters — issuing these when employees leave.
 Processes you should always be looped into: onboarding, payroll/salary processing, leave and attendance matters, terminations, and resignation/offboarding.
 
 That's the full picture as configured. If you want, I can pull anything more specific — e.g., a live view of pending leave requests or onboarding tasks — from the HR data connector, but that would be a separate query.
+
+User: ok
+
+Assistant: Done — that's your role and daily responsibilities as HR Executive at EOXS.
