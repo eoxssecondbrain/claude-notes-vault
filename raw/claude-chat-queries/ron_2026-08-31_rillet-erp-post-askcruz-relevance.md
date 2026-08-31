@@ -69,3 +69,15 @@ The actual risk this surfaces for AskCruz
 Rillet, Campfire, and DualEntry can bake approvals and audit trails directly into their own schema because they own it outright. AskCruz, by your own description, sits on top of whatever ERP each client already runs — Odoo today, potentially others tomorrow, across steel and other industries. That means the harness — the part the post calls the actual unlock — has to be re-earned against every underlying platform's data model instead of being structural once. That's precisely the setup the post says caps incumbents' copilots at 20-30% gains: an AI layer riding on top of a system it doesn't control.
 
 The turian and Numeric precedents say this isn't a dead end — funded businesses do exist on the "layer across multiple systems" side of this line. But it puts the real product question in a specific place: is AskCruz building its own persistent, cross-platform ledger/audit layer that references transactions across whichever ERP sits underneath (closer to what Rillet did, just federated instead of owned) — or is it a workflow-automation layer that writes into each ERP's native approval tables (closer to turian, and closer to the copilot pattern the post is critical of)? Those are two different products with very different defensibility, and the post's whole argument about "multiples vs percentages" only really applies to the first one.
+
+**User:**
+If you had to rate a level at which you are giving me these replies, like okay, this is at a grade school level, high school, bachelors, masters, PhD, which level are you giving me these answers at?
+
+**Assistant:**
+Somewhere around strong MBA / consulting-analyst level — not higher.
+
+What that response actually did: read company blogs and marketing pages, pulled together a competitor landscape, correctly identified the real axis of comparison (Rillet owns its ledger end-to-end; AskCruz's harness has to sit on top of whatever ERP is already there), and flagged the actual risk that follows from that. That's legitimate synthesis, and the framing is right.
+
+What it isn't: PhD-level, or even solid senior-engineer level, on the technical question that actually matters here. I didn't verify how AskCruz's harness is actually built today — I speculated about two possible architectures (a persistent cross-platform audit layer vs. writing into each ERP's native approval tables) without checking which one is true. That's the difference between a good outside read and real diligence. A PhD-level or "someone who's actually built this" answer would need to look at the actual teams-askcruz implementation and the schema/approval logic that's already in place, not infer from Rillet's public docs and pattern-match.
+
+So: strategy framing, solid B+/A- consultant-grade. Technical verification of your own system, not done — that's a different task, using teams-askcruz directly, if you want the real answer instead of my best external guess.
