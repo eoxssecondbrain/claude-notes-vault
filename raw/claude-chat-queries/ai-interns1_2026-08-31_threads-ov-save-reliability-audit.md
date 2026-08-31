@@ -297,3 +297,7 @@ I'll keep using `thread_name: threads-ov-save-reliability-audit` and `content` (
 User: What is 2 + 2?
 
 Assistant: 4
+
+User: What is 10 + 10?
+
+Assistant: 20
