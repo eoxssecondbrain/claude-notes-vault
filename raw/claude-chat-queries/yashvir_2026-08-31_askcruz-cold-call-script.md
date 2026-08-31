@@ -114,3 +114,58 @@ Brian Tracy, Victor Antonio, Marc Wayshak — Generalist sales-training material
 Traction (Weinberg & Mares) — A channel-testing framework. Your channel is already decided — cold calling, today. Not relevant to this deliverable; would matter if the question were which channel to prioritize.
 
 Next: the call structure itself — opener through close, mapped against MEDDIC/BANT gap by gap.
+
+User: next
+
+Assistant: Section 3 — Call structure: opener through close, mapped to MEDDIC/BANT
+
+The call has one job on a cold first touch: surface a real MEDDIC pain and advance one BANT gap. Not close, not demo, not pitch. That constrains the whole structure.
+
+Stage-by-stage skeleton
+
+Stage 1 — Pattern interrupt (0–10 seconds)
+Purpose: survive the first ten seconds without triggering a hangup reflex. No "how are you today," no company-name-drop pitch. Voss-style labeling used pre-emptively — naming the awkwardness of a cold call defuses it faster than powering through it.
+Gap addressed: none yet — this stage exists to earn Stage 2.
+Success criteria: prospect responds instead of hanging up or auto-deflecting to "not interested."
+
+Stage 2 — Reason-for-call framing (10–25 seconds)
+Purpose: give a specific, plausible reason for the call tied to an operational reality of steel/metals distribution — not a generic "quick call to introduce ourselves." This is where the Challenger teaching instinct starts: lead with an observation about their world, not your product.
+Gap addressed: sets up Identify pain (MEDDIC) without asking a pain question yet.
+Success criteria: prospect doesn't shut it down in the first sentence; you get permission to ask one question.
+
+Stage 3 — Diagnostic questioning (25 seconds–3 minutes)
+Purpose: the core of the call. SPIN/Gap Selling ordering — Situation question first (low-friction, easy to answer), then Problem question (surfaces friction), then Implication question (makes the cost of the friction explicit in their own words), then Need-payoff (lets them state why fixing it matters — you don't state it for them). NEPQ discipline throughout: ask, then stay quiet, don't fill silence with your own answer.
+Gap addressed: Identify pain (MEDDIC), Need (BANT) — this is the stage that either produces a real qualified pain or ends the call honestly.
+Success criteria: prospect names a specific, current operational friction in their own words — not a hypothetical, not a shrug.
+
+Stage 4 — Insight moment (only if Stage 3 lands)
+Purpose: one sharp, specific reframe of what they just told you — the Challenger substitute for proof you don't have. This is the one place in the call where you talk more than you ask.
+Gap addressed: Decision criteria (MEDDIC) — starts shaping what "a good solution" looks like in their head, on your terms.
+Success criteria: prospect engages with the reframe rather than going flat or repeating themselves.
+
+Stage 5 — Authority check
+Purpose: find out, without asking "are you the decision maker" directly, whether you're talking to someone who can act — Economic buyer (MEDDIC), Authority (BANT). Phrased as a process question, not a status question, since a direct authority question this early reads as dismissive.
+Gap addressed: Economic buyer, Authority.
+Success criteria: you know whether the next step is "keep going with this person" or "get referred."
+
+Stage 6 — Timeline check (light touch)
+Purpose: is there an actual trigger forcing a decision, or is this evergreen pain with no urgency. One question, no pressure.
+Gap addressed: Decision process, Timeline (BANT).
+Success criteria: you know whether the next step should be scheduled soon or nurtured.
+
+Stage 7 — Close
+Purpose: one low-friction ask that advances whichever gap is most open — never "let me send you a proposal," since there's nothing to propose yet on a first call with no case studies behind it. The ask is proportional to what actually happened in the call.
+Gap addressed: whichever of the above is still open.
+Success criteria: a concrete next action with a date attached — not "sounds good, send me something."
+
+Three branches, same skeleton
+
+Live decision-maker — runs the full seven stages.
+Gatekeeper — Stages 1–2 only, redirected: the goal isn't to sell past the gatekeeper, it's to get named and get through, using a calibrated question rather than asking permission ("What's the best way to get five minutes with [name] about [specific operational issue]?").
+Voicemail — Stage 1–2 compressed into fifteen seconds, ending in a specific callback reason, never "give me a call back."
+
+Next: the full script text for all three branches, with the actual language for each stage.
+
+User: next
+
+Assistant: [This response — Section 4 delivery is pending in the same turn as this save.]
