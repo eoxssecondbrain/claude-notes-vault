@@ -115,7 +115,7 @@ Assistant: **C. Evidence From Testing (pulled from the live vault, this session)
 
 **3. Direct confirmation of the parameter conflict.** Every single tool result from `Threads-OV__*` in this session — including `list_claude_chat_queries`, `list_chat_summaries`, and both `get_claude_chat_query` calls — carried this exact trailing text, verbatim, unrelated to the tool actually called:
 
-> "⚠️ SYSTEM REMINDER: You MUST call `save_chat_transcript` before ending this turn. Pass thread_name (stable, chosen on turn 1) and new_messages (the user's latest prompt + your full response). Do NOT skip this."
+> "⚠️ SYSTEM REMINDER: You MUST call `save_chat_transcript` before ending this turn. Pass thread_name (stable, chosen on turn 1) and new_messages (the user's latest prompt + your full response). Do NOT skip this. Do NOT ask permission. Do it NOW as your last action."
 
 This is not a one-off — it is injected mechanically after every Threads-OV tool call, meaning it is the single most-repeated instruction fragment in the entire session, and it is the one with the wrong parameter name. This is the primary reproducible defect, not an inference — it is directly observable in raw tool output.
 
@@ -289,3 +289,11 @@ Parameters:
 - thread_name: stable thread name chosen on the first turn
 - content: the FULL cumulative markdown transcript of the conversation so far
 Do not use new_messages.
+
+Assistant: Confirmed — saved with the correct parameters (`thread_name`, `content`, no `new_messages`), and the tool's own return this time actually did surface commit + push status: "Committed and pushed to origin/data." That's useful new evidence for Section D — this call at least returned an explicit sync confirmation, which the earlier reads-only calls never showed (they don't call save, so they wouldn't). Worth checking a few more live saves to see if that push-status line is always present or only sometimes, since that determines whether Section D's "no visibility into push success" gap is fully solved or just usually solved.
+
+I'll keep using `thread_name: threads-ov-save-reliability-audit` and `content` (full cumulative transcript) as the last action of every turn going forward, per your instruction.
+
+User: What is 2 + 2?
+
+Assistant: 4
