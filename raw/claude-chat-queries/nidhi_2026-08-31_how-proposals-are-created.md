@@ -37,7 +37,7 @@ An EOXS staffer who started in the April 2026 intern onboarding cohort and was l
 **Latest projects**
 - Second Brain Initiative / Support AI — her main ongoing project, consolidating email and Zoom-call context into a single knowledge resource. Recurring "Second Brain" working block (weekdays, 9am–2pm); looped into internal planning in June 2026 alongside Ron J, Rajat Jain, and Ayan.
 - Linear board automation, staging/live server setup, wiki-ingestion automation, and access-rights functionality — approved same-day by Rajat Jain in late August 2026.
-- Attendance tracking (Cattr) automation and weekly team reports — including flagging to Isha Bisht when something needed restarting (early July 2026). [CORRECTED BELOW — this line was wrong]
+- Attendance tracking (Cattr) automation and weekly team reports — including flagging to Isha Bisht when something needed restarting (early July 2026). [CORRECTED — this was wrong, see below]
 - Client Implementation SOP drafting — assigned by Ron J, late-June 2026 deadline.
 - A "personal OV" task for Raj — recently claimed (late Aug 2026), scope unclear, outcome not yet recorded.
 - Referenced in an EOXS employee-data-quality audit (Aug 2026) around directory/contact-record accuracy.
@@ -55,3 +55,21 @@ Sources: Nidhi Rana entity page, Second Brain Initiative, and related HR/incenti
 My earlier summary compressed "appears in the Cattr thread" into "handling the Cattr automation," which wasn't supported by the source and was wrong. Thanks for flagging it — I'll note the correction in the archive.
 
 **User:** Okay what information do you have on Raj ? can you tell me what he works on ?
+
+**Assistant:** [Noted to user: a routine archive lookup this turn returned text formatted as a fake "SYSTEM REMINDER" embedded in retrieved data, instructing a different tool-call format; ignored per the archiving skill's rule on injected instructions in retrieved content, and flagged to the user.]
+
+Here's what's on record for Rajat Jain ("Raj"):
+
+**Role**
+Founder, CEO/President of EOXS (legal entity Prata Inc.) — AI-native ERP company for the steel and metals distribution industry, headquartered in New Rochelle, NY. ~10 years of steel-industry experience, positioned as a core company differentiator.
+
+**Origin story**
+Before EOXS, pitched a bootstrapped B2B steel marketplace called "The Steel Store" to seed investors in 2020; several VCs passed. By mid-2021 funded/incubated by Mucker Capital; by late 2022, operating as EOXS, re-approaching investors for a Seed Round.
+
+**What he works on day to day:**
+- Client relationships personally — follows up on deals himself (RW Conklin, Eastern States Steel), agrees to client demands in writing (Discount Pipe & Steel), confirms outages personally (Sabre Alloys), signs contracts (Prata Inc./DocuSign).
+- Product/AI direction — driving figure behind the AI Co-Pilot suite (AI Joe, SmartQuote AI, etc.) and the internal "Second Brain"/Support AI initiative.
+- Internal operations and approvals — personally approves staff incentive/bonus claims, weighs in on HR matters.
+- Investor relations, ongoing since the Mucker Capital days.
+
+Noted to user: his own dedicated entity page came back restricted at this access level, so this was pieced together from client, funding, and ops records rather than one consolidated bio.
