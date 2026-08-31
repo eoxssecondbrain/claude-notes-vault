@@ -68,3 +68,60 @@ Description:
 - Company name to be added once decided
 
 If you'd rather I try creating it through the actual Odoo UI via the Chrome connector, say so and I'll walk through browser selection — otherwise this is ready to drop in as-is.
+
+**User (turn 3):**
+[Uploaded image: WhatsApp screenshot of a LinkedIn post, 11:59, from "Strategic Tech Leader | Ventures Builder | B..." Full text of the post:
+"A two-year-old startup just became a unicorn by replacing NetSuite and SAP. Most people will take the wrong lesson from it.
+The company is Rillet. Last week they raised $100M at a $1B valuation, with 600+ customers and large enterprises moving off Oracle Fusion, SAP, Workday, and NetSuite.
+The wrong lesson is "AI is disrupting ERP." That is true but empty. The real lesson is about what they rebuilt.
+Every incumbent in that market added AI the reasonable way: a copilot on top of the existing system. It failed to change much, and here is why. Legacy systems were designed around a human doing the work — human data entry, human review, human checkpoints at every step. A copilot makes the human faster inside that workflow. But the workflow itself is still shaped like a human. You get 20-30% improvement, and the structure of the work stays exactly the same.
+Rillet did something different: they rebuilt the ledger itself, so agents and humans operate inside the same data, under the same rules — agents doing the work, humans keeping approvals and full audit records. The unit of work changed. Not "help a person do the task faster" — the system does the task, and a person approves the outcome.
+You can tell the difference by the numbers. Copilots produce percentages. Rebuilds produce multiples: multibillion-dollar businesses running finance teams a tenth the traditional size, closing their books continuously instead of monthly.
+And there is one detail most coverage missed. The unlock was not intelligence — models are available to everyone. The unlock was the harness: approvals, policies, and audit trails built into the core. That is the part you cannot retrofit. You cannot bolt auditability onto a system that never captured its own reasoning. Which is exactly why the incumbents' copilots stay assistants forever.
+So the interesting question is: which function gets rebuilt next? My criteria: the work is structured, rule-governed, and must survive an audit. Accounting was the obvious first. Data management is, in my view, the next — the same 4-to-6-week cycle times, the same human-shaped tooling, the same audit requirements, one layer down the stack..." (post appears cut off at bottom of screenshot)]
+
+Then, after you create this task, I want you to create another task in Teams.askcruz in the AskCruz board where you have to spend 2-4 hours today studying what this company is doing. You can get whatever information you can from this post that Raj shared with me, but please create this task in the system there.
+
+**Assistant (turn 3):**
+On the Sabre/EOXS task — still no tool for that board, so that one's still on you to paste in from the draft above.
+
+For the AskCruz task, this is ready to go pending your confirmation (nothing's been written yet):
+
+Project: AskCruz (project_id 6)
+Title: Study Rillet — AI-native ERP rebuild (2-4 hrs)
+Assigned to: Ron
+Deadline: today, 2026-08-31
+Stage: Tasks
+Description: summarizes the post — Rillet raised $100M at a $1B valuation (2 years old, 600+ customers, displacing NetSuite/SAP/Oracle Fusion/Workday); the author's core claim is that copilots bolted onto legacy workflows cap out around 20-30% improvement, while Rillet rebuilt the ledger itself so agents do the work and humans keep approvals/audit trails, getting multiples instead (1/10th headcount, continuous close); the real unlock is the audit/approval "harness," not the model; and the author's next-target framework is structured, rule-governed, audit-bound work — with data management flagged as the likely next function after accounting. Ends with the task itself: spend 2-4 hrs studying what Rillet's actually doing and how it maps to AskCruz.
+
+Confirm and I'll commit it.
+
+**User (turn 4):**
+Confirmed. Please write the description in bullet points.
+
+**Assistant (turn 4):**
+This is a new preview since the content changed — confirm this bullet version and I'll commit it (title, project, assignee, and deadline are unchanged from before).
+
+**User (turn 5):**
+I do not the description here.
+
+**Assistant (turn 5):**
+Here's the actual bullet-point description, shown in full this time:
+
+- Raj shared a LinkedIn post about Rillet — a two-year-old startup that just raised $100M at a $1B valuation, with 600+ customers, replacing NetSuite, SAP, Oracle Fusion, and Workday at large enterprises
+- Most incumbents bolted an AI copilot onto existing legacy workflows still shaped around a human doing the work, getting roughly 20-30% improvement at best
+- Rillet instead rebuilt the ledger itself so agents do the work and humans keep approvals plus full audit trails — a structural change, not just a speed-up
+- Result cited: finance teams running at a tenth of traditional headcount, closing books continuously instead of monthly
+- The unlock wasn't the AI models themselves (available to everyone) — it was the "harness": approvals, policies, and audit trails built into the core system, which can't be retrofitted onto legacy software after the fact
+- Author's framework for what gets rebuilt next: structured, rule-governed work that must survive an audit. Accounting was first; data management is what the author expects next
+- Task: spend 2-4 hours today studying what Rillet is actually doing (product, positioning, GTM, pricing where available) and how it maps to AskCruz's own AI-native approach
+
+Title: Study Rillet — AI-native ERP rebuild (2-4 hrs), assigned to Ron, deadline today, project AskCruz. Confirm and I'll commit it.
+
+**User (turn 6):**
+Confirmed. Please create the task.
+
+**Assistant (turn 6):**
+Task 390 created in the AskCruz project — Study Rillet — AI-native ERP rebuild (2-4 hrs), assigned to you, due today, bullet-point description as shown above.
+
+The Sabre/EOXS proposal task is still the one item pending on your end since I don't have a write path to that board.
