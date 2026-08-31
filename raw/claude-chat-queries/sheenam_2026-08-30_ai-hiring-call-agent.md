@@ -3,7 +3,7 @@ thread_name: "ai-hiring-call-agent"
 user: "sheenam"
 type: claude-chat
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-08-31
 ---
 
 Human: Raj had a new idea today to automate our entire hiring funnel. Currently, we manually call the people who have applied for a certain job post, do 2-3 rounds of interviews with them, and then hire them. What we have seen is that it takes a lot of time to make calls for even the first interview round, get a vibe check with the candidates, see if they are available for the second round of interviews, and check their soft skills and everything over the call.
@@ -60,3 +60,35 @@ The buffer covers the one thing you don't control: how fast people who already a
 If you start tomorrow, tell Raj he'll have it around September 8-9.
 
 Whenever you want to actually sit down and pick the tool, the India shortlist with real pricing and setup speed is ready to go through.
+
+Human: I am giving you an update on how I will be proceeding with this. I have a deadline for 3 days. Within these 3 days I need to find the tool, test it thoroughly, and deploy it. My first deliverable is now the tool ready and functioning. Here is how Raj has set an incentive on this - 
+If I setup and deploy the tool by 3 Sept, thursday 5PM EST, - Gold Medal - incentive of ₹25000
+4 Sept, Friday, 5 PM EST - Silver medal - incentive of ₹15000
+7 Sept, Monday, 9 AM EST - Bronze medal - incentive of ₹1000 (KPI - data of 50 calls in the CRM)
+This is how we are going to ensure that the task is completed in time.
+Ingest this information and give me a heads up. Then lets proceed with brainstorming how we want to start the search, what are the exact features that we are looking for.
+
+Assistant: Heads up, straight reaction first, then let's brainstorm.
+
+Today's Monday Aug 31. Gold is Thursday Sept 3 5pm EST — effectively 3 working days out. Silver is Friday Sept 4. Bronze is Monday Sept 7 9am EST, tied to an actual KPI (50 completed calls), not just setup.
+
+Good news: redefining the deliverable as "tool ready and functioning" instead of "100 candidates done" makes Gold genuinely plausible — it's basically my original day 1-3 estimate (shortlist + rubric lock + configure + test), and that's entirely inside your control. The one thing that can still blow up Gold is the same thing I flagged before: getting Raj to sign off on the actual question set/rubric fast. If that drags past tomorrow, Gold is dead regardless of how good the tool is. I'd get that locked today if at all possible — it's the highest-leverage single hour you'll spend this week.
+
+One thing I need nailed down before this is a real target rather than a guess: what does "ready and functioning" mean for Gold/Silver — configured and tested with dummy runs, or actually live with real candidates already flowing through it? Those are different bars. The first is fully in your control and hits Thursday easily. The second depends on how fast real applicants click a link, which is not in your control and is really what Bronze's 50-call KPI is testing. I'd assume Gold/Silver = configured, tested, and live (link is out and working) — not "X real completions" — unless you tell me otherwise, since that's the only version of "functioning" that doesn't depend on candidate behavior.
+
+Second thing: you said "50 calls in the CRM" for Bronze. Is there an actual CRM already in play here, or is that just Raj's shorthand for wherever this data ends up (the Sheet)? I'm not going to go digging into your systems for this since you scoped that out earlier — but if there's a real CRM you're expected to land this in, that changes what "export" needs to support, so worth a one-line confirmation from you or Raj before I build the feature list around Sheets.
+
+Now, the feature brainstorm — what actually matters for a tool search, given async link, sent via email/LinkedIn, professional-track Operations Manager candidates (not high-volume multilingual field/BPO screening, which is what most of the India vendor market is actually optimized for):
+
+1. Self-serve signup, published pricing, no "book a demo" wall — this alone probably cuts your realistic shortlist in half and is non-negotiable for a 3-day timeline.
+2. Same-day setup — configure and go live in hours, not a guided multi-day onboarding.
+3. Custom question builder — your own Operations Manager questions and rubric, not locked into a generic template.
+4. Structured scoring output per candidate — a number or tier per answer, not just a raw transcript you'd have to grade by hand.
+5. Bulk candidate upload from a raw CSV/list — has to accept 1,000 names/emails directly, since there's no ATS triggering this.
+6. Shareable link per candidate, sendable via email or LinkedIn — not gated behind requiring the candidate to already be inside some system.
+7. Live or near-real-time export to Sheets — native or one Zapier/Make hop, so you can watch completions land rather than waiting on a batch pull.
+8. A place to insert a DPDP consent/recording-disclosure line at the start of the interview — small thing, but needs to be checkable in the tool, not something you're told isn't supported after you've already sent 1,000 links.
+9. Typical completion-rate/time-to-complete data from the vendor — tells you whether Bronze's 50-in-a-week is realistic with that specific tool's usual candidate behavior, versus you finding out the hard way on day 5.
+10. Per-completed-interview or pay-as-you-go pricing — not an annual contract, since this is a one-role pilot, not a committed rollout yet.
+
+What would you add or cut from that list before we start naming actual tools against it?
