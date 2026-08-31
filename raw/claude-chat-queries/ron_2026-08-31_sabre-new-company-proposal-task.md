@@ -8,7 +8,7 @@ updated: 2026-08-31
 
 # Sabre New Company Proposal Task
 
-**User:**
+**User (turn 1):**
 Create a task in the teams.EOXS board. I want you to call it "Creating the proposal for Sabre's new company." Ty called and mentioned that they're getting a new laser cutting machine, and they want all the users and everything to be the same. We need to create a proposal for them from EOXS's side. There is an EOXS board. Maybe you can create a task for that and, in it, add the description. He mentioned that they would be needing all the users, but it doesn't make sense for them to pay, again, $10,000 a month every single month for that company. Also, since it's a smaller company, Raj was thinking about two options:
 
 * Actually copying and pasting the code on another server
@@ -20,7 +20,7 @@ He is more leaning towards creating a new company in Odoo itself so that they ca
 
 Please create the task and let me know if you have any questions.
 
-**Assistant:**
+**Assistant (turn 1):**
 Two things to flag before I do anything else:
 
 **Skill gap:** Your preferences say to read a "sales-strategist" skill alongside raj-eoxs-vault for deal/account-strategy queries (which this is — a proposal to a client). I don't see that skill file anywhere in my available skills — only dps-account-strategist, sabre-account-strategist, and client-email-tone-scale exist for this kind of work. Let me know if it's named differently or just hasn't been built yet.
@@ -48,3 +48,23 @@ Description:
 Two things I need from you before this is proposal-ready rather than just a task shell:
 1. What should the advertising clause actually cover — case-study/reference rights, a marketing cost split, something else?
 2. Does the new company have a name yet, or is it still "Sabre's new company" for now?
+
+**User (turn 2):**
+The new company does not have a name yet. I am not sure what the clause is, but please get the task for it right now. We will get to the name of the company later.
+
+**Assistant (turn 2):**
+I still don't have a tool that writes to the EOXS Teams board, so I can't put this in a system directly — copy-paste is genuinely the fastest path right now. Here's the finalized version:
+
+Title: Creating the proposal for Sabre's new company
+
+Description:
+- Tye called — Sabre's new company (name TBD, getting a new laser cutting machine) needs all the same EOXS users/setup as Sabre Alloys has now
+- Doesn't make sense for them to pay another $10,000/month for a full duplicate license
+- Raj is weighing two options: (1) copy/paste the codebase onto a separate server, or (2) stand up a new company within the same Odoo instance (multi-company setup). Raj is leaning toward option 2
+- Next step: draft a proposal for Sabre covering this arrangement, then send
+- Clauses to include:
+  - Advertising clause — flagged as important, wording not yet defined
+  - More clauses to follow per Ron
+- Company name to be added once decided
+
+If you'd rather I try creating it through the actual Odoo UI via the Chrome connector, say so and I'll walk through browser selection — otherwise this is ready to drop in as-is.
