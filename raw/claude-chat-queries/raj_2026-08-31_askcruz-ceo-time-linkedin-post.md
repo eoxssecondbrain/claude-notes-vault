@@ -110,3 +110,56 @@ You have a knowledge problem.
 Changes from the last draft: the opener now names the general founder trap ("the bigger your team gets, the less time you spend leading it") before it gets specific to you — that's the hook, and it's something any founder scaling past ~20-30 people will recognize immediately, not just steel/ERP people. The close swapped the generic question for a sharper callback that reframes "leadership problem" as "knowledge problem" — lands harder and ties back to the opener.
 
 Still open: I don't have a real dialogue snippet or a specific recurring question your team used to ask. One actual line — even paraphrased — would replace the generic bullet list with something only you could have written, and that's usually what makes these posts land. Want to give me one, or ship as is?
+
+USER: You are still focused on the idea of scaling a team. My audience is people from the steel industry. There is not crazy scaling in these companies. The post should align with someone who runs a steel service center and what kind of problems they would have in the day-to-day being in an executive role.
+
+ASSISTANT: Rebuilt for a steel service-center executive audience — dropped the "scaling" framing entirely and replaced the generic bullets with real steel-operations questions:
+
+---
+
+Run a steel service center long enough, and your job quietly changes.
+
+You stop being the executive.
+
+You become the lookup table.
+
+At EOXS, I had an 80-person team.
+
+And most of my day wasn't spent on strategy or growth.
+
+It was spent answering the same operational questions, over and over.
+
+- Do we have mill certs for this heat number
+- What's our current price on this gauge
+- Is this order still on credit hold
+- Did we already quote this customer last week
+
+Nobody on the team was doing anything wrong.
+
+The information just lived in one place: my head.
+
+So every "quick question" turned into a context switch for me — a call, a text, a walk over to someone's desk, all to retrieve something that should've taken five seconds.
+
+Multiply that by every sales rep, every ops guy, every day.
+
+That's not running a business. That's being everyone's shared drive with a pulse.
+
+We deployed AskCruz across EOXS.
+
+Same team. Same day-to-day. Same complexity of running a steel operation.
+
+The questions coming to me directly dropped 95%.
+
+Not because the team needed me less.
+
+Because the answers stopped requiring me to be in the room.
+
+If you run a service center and most of your day still goes into being the answer for things your own systems should already know — that's not a people problem.
+
+That's a data problem.
+
+---
+
+The bullets now use actual steel-floor vocabulary — mill certs, heat number, gauge pricing, credit hold, quote status — the stuff an ops person or sales rep actually interrupts an executive for, not abstract "quick questions." The close ("not a people problem, that's a data problem") stays anchored to the industry too — no scaling language, no headcount growth framing, since a 15-40 person service center reader isn't thinking about scale, they're thinking about the same interruptions happening every single day regardless of size.
+
+If you have a real one of these questions verbatim — something you actually got asked last week — swap it in for one of the four bullets. That's the single highest-leverage edit left on this draft.
