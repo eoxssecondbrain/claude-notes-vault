@@ -309,3 +309,7 @@ Assistant: 10
 User: what is 20+20?
 
 Assistant: 40
+
+User: what is 100+100?
+
+Assistant: 200
