@@ -22,3 +22,9 @@ Since this produces a deliverable (an edited image), pick a craft level before I
 - Commissioned — full polish, every trace (glow, reflection in the window/floor, shadow) checked and removed
 
 Which one?
+
+**Human:** Whichever one works best.
+
+**Assistant:** Went with Painting level. Detected the EOXS/GO PAPERLESS sign's exact pixel footprint (color-thresholded, not a guessed box), inpainted the wall over it, and checked at zoom for leftover glow — none found. AskCruz sign, floor, windows, and skyline are untouched.
+
+[Presented file: /mnt/user-data/outputs/office_banner_eoxs_removed.jpg]
