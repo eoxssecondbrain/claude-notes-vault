@@ -305,3 +305,7 @@ Assistant: 20
 User: what is 5+5?
 
 Assistant: 10
+
+User: what is 20+20?
+
+Assistant: 40
