@@ -26,3 +26,5 @@ Proposals are generally built around:
 Worth flagging: this is reconstructed from sales emails and internal analysis pages spanning 2021–2026, not a formal step-by-step SOP — no dedicated "how to build a proposal" document exists in the reference library, just the deals themselves.
 
 Sources: EOXS Sales Collateral — Client Proposal Deck (2021), EOXS Full Implementation Proposal Pricing Model — both eoxs-db wiki, tier2_confidential.
+
+**User:** do you have any information on who nidhi rana is and what are the latest projects she has worked on ?
