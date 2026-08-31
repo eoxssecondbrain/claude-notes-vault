@@ -32,3 +32,18 @@ Sources:
 - Export profiles in Recruiter | Recruiter Help - LinkedIn (https://www.linkedin.com/help/recruiter/answer/a412149/exporting-profiles-in-recruiter?lang=en)
 - Export LinkedIn Job Applicants to Excel — Free Step-by-Step (2026) (https://www.applicantsync.com/articles/how-to-export-linkedin-job-applicants-to-excel)
 - ApplicantSync — Export LinkedIn Job Applicants to CSV & Excel + Resumes (https://www.applicantsync.com/why/export-linkedin-job-applicants)
+
+User: yes they passed initial screen with interviews still to come
+
+Assistant: [Asked three clarifying questions via AskUserQuestion:
+Q1 "Does EOXS have a paid LinkedIn Recruiter seat for this job post, or is it the free job-posting tool?" — options: Free job posting tool, Paid Recruiter seat, Not sure.
+Q2 "Want me to build the starter sheet template now (columns: name, gmail, contact, resume link, screening Q&A)?" — options: Yes build it now, No I'll set it up myself.
+Q3 "If I build the template, what level of polish?" — options: Sketch, Draft, Painting.]
+
+User: [answered Q1: "Not sure"] [answered Q2: "No, I'll set it up myself"] [answered Q3: "No preference"]
+
+Assistant: To check Recruiter access: log into LinkedIn and look at the top-left account switcher — if "Recruiter" shows up as an option alongside the regular account, EOXS has a seat. If all you see is the normal Jobs dashboard (Jobs > Manage job postings > Applicants tab), you're on the free tool. That check takes two minutes and decides the whole method, so worth doing before picking a path.
+
+Given "not sure," and that a single job post is more likely on the free tool: default to ApplicantSync. Install the free Chrome extension, open the applicants tab for the Operations Manager post, run it on a batch of 20-30 first to confirm it's actually pulling gmail, contact, and screening answers correctly before running the rest. If it turns out EOXS does have Recruiter, use its official Export profiles feature instead — no ToS risk — but still test on a small batch since I couldn't confirm from LinkedIn's own docs whether that export includes resume text and screening answers.
+
+Since you're building the sheet yourself, the columns you need from either method: name, gmail, contact, resume (link or file), and one column per screening question.
