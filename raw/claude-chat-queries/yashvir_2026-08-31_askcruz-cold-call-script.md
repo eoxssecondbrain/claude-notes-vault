@@ -6,12 +6,9 @@ created: 2026-08-31
 updated: 2026-08-31
 ---
 
-[Continuing from prior saved turns — full strategy build, all role-specific scripts, universal script, AI-disclosure fixes, and capability-overclaim audits (operational issues, lost commitments, disputes, shadow AI) are in earlier revisions of this file.]
+[Continuing from prior saved turns — full strategy build, all role-specific scripts, universal script, AI-disclosure fixes, and capability-overclaim audits are in earlier revisions of this file.]
 
-User: [Pasted the Shadow AI usage script for audit] this.
+User: Q: What specifically isn't landing about the "What AskCruz Is" explainer? (Select all that apply)
+A: its like not explaining how simple it is to use AskCruz.
 
-Assistant: [Flagged that the pasted version was still missing the AI disclosure specifically flagged as most needed for this script, and noted the "sanctioned alternative" framing in the bridge is constructed positioning rather than a documented product-design intent — worth being ready to own that distinction if asked. Delivered revised script with AI disclosure added to a new "What AskCruz is" section, bridge trimmed to remove the unsupported framing claim, close and voicemail carried over unchanged.]
-
-User: I'm still not satisfied with the AskCruz explainers, i'm just not able to connect with it.
-
-Assistant: [Asked a clarifying multi-select question via interactive tool to pin down what specifically isn't landing about the "What AskCruz Is" explainer — too generic/not tied to what the prospect said, reads like a script rather than natural conversation, redundant with Insight/Bridge, or the core wording/analogy itself doesn't work — before revising, per instruction to reach clarity before responding to vague feedback. Awaiting user's selection.]
+Assistant: [Diagnosed the gap: the explainer describes what AskCruz is, not how little effort it takes to use — the unstated objection on a cold call is usually "one more system to learn." Proposed a new universal template anchored to texting a coworker ("if you can send a text, you already know how to use it"), with pain-specific example plug-ins for each script variant (quoting, inventory, lost commitments, margin/disputes, operational issues), and a separate IT variant framing simplicity as low support/training burden rather than personal ease. Updated Section 5 of the output file /mnt/user-data/outputs/askcruz-cold-call-script.md with this new content via str_replace, and re-presented the file to the user.]
