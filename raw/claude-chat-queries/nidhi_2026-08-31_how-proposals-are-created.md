@@ -37,7 +37,7 @@ An EOXS staffer who started in the April 2026 intern onboarding cohort and was l
 **Latest projects**
 - Second Brain Initiative / Support AI — her main ongoing project, consolidating email and Zoom-call context into a single knowledge resource. Recurring "Second Brain" working block (weekdays, 9am–2pm); looped into internal planning in June 2026 alongside Ron J, Rajat Jain, and Ayan.
 - Linear board automation, staging/live server setup, wiki-ingestion automation, and access-rights functionality — approved same-day by Rajat Jain in late August 2026.
-- Attendance tracking (Cattr) automation and weekly team reports — including flagging to Isha Bisht when something needed restarting (early July 2026).
+- Attendance tracking (Cattr) automation and weekly team reports — including flagging to Isha Bisht when something needed restarting (early July 2026). [CORRECTED BELOW — this line was wrong]
 - Client Implementation SOP drafting — assigned by Ron J, late-June 2026 deadline.
 - A "personal OV" task for Raj — recently claimed (late Aug 2026), scope unclear, outcome not yet recorded.
 - Referenced in an EOXS employee-data-quality audit (Aug 2026) around directory/contact-record accuracy.
@@ -45,3 +45,11 @@ An EOXS staffer who started in the April 2026 intern onboarding cohort and was l
 Sources: Nidhi Rana entity page, Second Brain Initiative, and related HR/incentive analysis pages — eoxs-db wiki, tier2_confidential. Left out specific incentive/compensation figures since those are payroll-sensitive.
 
 **User:** Attendance tracking (Cattr) automation and weekly team reports — she's been handling this, including flagging to Isha Bisht when something needed restarting (early July 2026). - this is wrong info, i never worked on cattr automation. Where did you get this data from ?
+
+**Assistant:** You're right, and I mischaracterized it — I apologize for the error.
+
+**Where it came from:** A wiki analysis page titled "EOXS — Attendance Tracking: Cattr Automation & Weekly Team Reports (Aug 2026)," which synthesizes ~60 internal emails about problems with EOXS's Cattr time-tracking system. Your name appears in that page because you're in an email thread from July 14, 2026, but not as someone building or running the automation.
+
+**What the actual email thread shows:** Isha Bisht asked you to provide proof of work hours after a gap showed up in your Cattr tracking. Ayan Dutta then vouched for you, confirming you'd been working with him on a project since 5:00 PM IST, and asked you going forward to make sure Cattr tracking was turned on. That's it — you were the subject of an attendance query, not the person who owns or automated the Cattr system. The page itself actually names Kriti Jain as the automation's builder.
+
+My earlier summary compressed "appears in the Cattr thread" into "handling the Cattr automation," which wasn't supported by the source and was wrong. Thanks for flagging it — I'll note the correction in the archive.
