@@ -7,77 +7,67 @@ updated: 2026-08-31
 ---
 
 **User:**
-[Uploaded image: WhatsApp_Image_2026-08-31_at_09_30_40.jpeg — a screenshot of a LinkedIn post by a "Strategic Tech Leader | Ventures Builder | B..." account, discussing Rillet, a 2-year-old startup that raised $100M at a $1B valuation with 600+ customers, replacing NetSuite/SAP/Oracle Fusion/Workday. The post argues the real lesson isn't "AI is disrupting ERP" but that Rillet rebuilt the ledger itself so AI agents do the work under the same rules/data as humans, with humans keeping approvals and audit records — unlike incumbents who bolted copilots onto legacy human-shaped workflows (yielding 20-30% gains vs. rebuilds yielding multiples). The post states the unlock was the harness (approvals, policies, audit trails built into the core, not retrofittable) rather than intelligence/models. It closes by asking which function gets rebuilt next, using the criteria: work must be structured, rule-governed, and survive an audit — naming accounting as the first, and data management as the author's pick for next.]
-
-Go through this post here.
+I want to explain what they do and any conversation that we have moving forward in a simpler format. Let's try a bachelor's format, which might be based on my understanding, and think of myself as someone who is a bachelor.
 
 **Assistant:**
-No skill in the current set (sales-strategist, dps/sabre-strategist, client-email-tone-scale) matches this cleanly — this is a general market/strategy read, not account-specific. Proceeding without one.
+Got it — plainer, less jargon, more explaining terms as I use them. Here's the same finding again in that format:
 
-Quick read on the post: the author's core claim is that Rillet's edge wasn't "AI on ERP" generically — it was rebuilding the ledger itself so agents (not humans) execute transactions, with approval/audit as the native structure rather than a bolted-on layer. Copilots on legacy systems only speed up the human-shaped workflow (20-30% gains); a from-scratch rebuild changes the unit of work entirely (multiples, not percentages). His prediction: data management is the next function ripe for this kind of rebuild, using the same test — structured, rule-governed, must survive an audit.
+Rillet replaced the actual accounting software at the core — the master record of every financial transaction, called the general ledger — instead of just adding an AI assistant on top of the old software companies already had. Because they own the whole system, they could build the approval steps and record-keeping directly into how the software works, rather than adding it on afterward. That's why they get big jumps in results instead of small speed-ups: the AI runs inside a system built for it, not on top of an old one it doesn't control.
 
-This maps directly onto what AskCruz is trying to do inside Odoo for steel distributors, and it's obviously not just a coincidental resemblance.
+AskCruz is in a harder spot than Rillet. Rillet owns the core system for its customers. AskCruz doesn't — it has to work with whatever system a client already has (Odoo, or something else). So AskCruz has to build that same "approval and record-keeping" structure without owning the base system underneath.
 
-What do you actually want from this — a quick take on the ideas, or an analysis of what it implies for AskCruz's positioning/roadmap against a Rillet-style approach? If the latter, pick a rigor level (5/10/50/100 ft).
+There's already a company doing something close to this in steel: turian adds AI on top of whatever ERP a company already uses, instead of replacing it, and it's a real, funded business. So this path can work — it's just a harder version of what Rillet did.
 
-[User selected: "Analyze implications for AskCruz vs a Rillet-style rebuild" via elicitation card]
+The big question going forward: does AskCruz build its own consistent way of tracking approvals and records that works no matter which system is underneath — or does it just rely on each client's existing system to handle that part? The first is closer to what actually made Rillet succeed. The second is closer to the basic AI-assistant approach the post says only gets small gains.
+
+I'll keep explanations at this level from here on.
 
 **User:**
-We are not just trying to do this for Odoo. We are trying to do this for all the platforms in the steel and the other industries. I want to understand how they did this and what is something that they are doing differently. I would like to find this post on LinkedIn. Can you please see who posted this?
+[Uploaded image: 1788203544343_image.png — a screenshot of a project/task note. "Note by Nidhi Rana - 6 hours ago", tagging @Ayan Dutta @Priyanshu Sinha: "Please note down the billing details for the following services running for AskCruz:
+1. Linear - 12$ plan per month
+2. Hetzner Ubuntu VPS - 37.19$ usage
+3. Anthropic API keys - 2: a. Uses Haiku: cheap spam filtration + call relevance filtration. b. Uses Haiku for Access-tier classification, kept for raw new data & wiki pages when pushed live; citation_llm_resolver uses sonnet for citation repair and redaction logic uses sonnet for restricting information. Redaction logic runs on every single tool call for every non-full identity.
+4. DigitalOcean's services: a. eoxs-staging-server: 1. staging app droplet: $11.61, 2. staging agent droplet: $11.61, 3. staging cruz database: $7.33. b. eoxs-live-server: 1. live droplet: $6.47, 2. eoxs-db-live-cluster: $1.91. c. askcruz 3gm staging server: 1. staging droplet: $0.18, 2. cruz-3gm-outlook-db database: $0.68
+5. Render: claude-notes-vault service for repo claude threads saving functionality. $25 per month"]
+
+I asked the team to give me a text tag of everything that we have, and this is what they gave me. This is the text tag that is there. Can you go through this and see what you understand? I will have a dedicated, detailed call with them tomorrow to understand exactly what they have built and how we can actually improve the product further so that it brings more automation in the system and in the workflows of the companies. I want to understand what is built right now.
 
 **Assistant:**
-Couldn't pin down the author. General web search doesn't reliably index individual LinkedIn posts, especially a few-days-old post from a smaller consultant-type account — I ran several searches on distinctive lines from the post ("which function gets rebuilt next," "copilots produce percentages," the harness language) and only got general Rillet coverage (Yahoo Finance, Forbes-style pieces on the raise, Wikipedia, Tracxn), not the post itself.
+[Read /areas/askcruz-email-infra.md and /areas/infrastructure-security.md from memory for corroborating context on Mailcow/hosting before answering.]
 
-No Chrome browser is currently connected to this session either, so I can't search LinkedIn directly through your logged-in account — that would actually work better since LinkedIn blocks most search-engine indexing of individual posts. If you connect the extension, I can look it up properly.
+Going through it line by line, in plain terms:
 
-One relevant find along the way: ICONIQ Growth (a Rillet investor) published a piece titled "Doubling Down on Rillet: Building a Harness for Agentic Finance" that uses nearly identical framing to your screenshot — the "harness," agents and humans sharing the same financial truth, every action auditable. Whoever wrote the LinkedIn post may well have been riffing on that piece. Worth a read regardless: https://www.iconiq.com/growth/insights/iconiq-leading-rillets-100m-series-c
+1. Linear – $12/month
+A task-tracking tool for the engineering team, like a to-do board (similar to Jira or Trello). Cheap, standard, nothing to flag here.
 
-On scope — noted, this isn't an Odoo-specific play for you, it's cross-platform across steel and other industries. That actually changes the Rillet comparison in an important way: Rillet owns its ledger end-to-end on one platform it built from scratch. AskCruz's harness has to sit on top of whatever ERP each client already runs. Same philosophy, harder engineering problem.
+2. Hetzner Ubuntu VPS – $37.19
+A VPS is a rented server in the cloud, running Ubuntu (a type of Linux operating system). Hetzner is a hosting company, usually cheaper than AWS or DigitalOcean. The note doesn't say what runs on this one — but AskCruz already has a self-hosted email server called Mailcow (mailcow.askcruz.com), and self-hosted mail servers are commonly run on exactly this kind of box. My guess is this is where Mailcow lives. Worth confirming tomorrow, not assuming.
 
-"How they did this and what they're doing differently" is a research question, not a quick lookup — pick a rigor level.
+3. Two Anthropic API keys
+An API key is basically a password that lets AskCruz's own software talk to Claude (me, the AI) automatically, without a person typing into a chat window. They're using two different versions of Claude for different jobs:
+- Haiku (the cheaper, faster version) handles spam filtering and deciding which incoming calls/messages are actually relevant.
+- Haiku again for "access-tier classification" — when new data comes in, or a wiki page goes live, Haiku sorts it into confidentiality levels (who's allowed to see it).
+- Sonnet (a stronger, more expensive version) handles "citation repair" (making sure quoted sources are actually accurate) and "redaction" — actively hiding information a given user isn't cleared to see. This redaction check runs on every single tool call for anyone without full access.
 
-[User selected: "50ft - Deep" via elicitation card]
+That last point is worth understanding clearly: the "different people see different data" system isn't just a written policy — it's a live AI filter (Sonnet) checking every request, every time. Good for security, but it also means every restricted-user action pays for an extra AI call. Worth asking how much that costs and whether it slows anything down.
 
-**Assistant:**
-[Ran ~10 web searches: Rillet Aura AI agent features, Rillet architecture built-from-scratch vs bolt-on AI, AI-native ERP competitor landscape (Puzzle/Campfire/Digits/Numeric/Truewind/DualEntry/Light/Doss), steel industry ERP AI agents/distributors, turian.ai steel distribution AI agent funding/integration. Delivered the following full analysis:]
+One real gap: unlike everything else in this note, there's no dollar figure for these two API keys. For an AI product, this is very often the single biggest cost of all — so it's the one missing number you'll most want tomorrow.
 
-How Rillet actually built it
+4. DigitalOcean services
+DigitalOcean is the main hosting provider. A "droplet" is just their name for a rented server (same idea as the Hetzner one above). Three separate setups:
+- eoxs-staging-server — a "staging" environment is a practice copy used for testing before anything goes live. This has a server for the main app, a separate server just for "the agent" (the AI logic, kept apart from the main app), and a test database.
+- eoxs-live-server — this is production, what real users actually use: one app server, plus a database "cluster" (spread across more than one machine, usually for reliability).
+- askcruz 3gm staging server — a separate test setup just for 3GM Steel (your first paying AskCruz client), with its own server and its own database for 3GM's Outlook/email data.
 
-Rillet's core move was replacing the general ledger itself rather than adding AI on top of an existing one. A Sequoia partner who backs Rillet described pulling out a company's general ledger as something close to open-heart surgery — which is exactly why, in his view, no VC had been willing to fund a new GL challenger before Rillet. Rillet did it anyway, describing itself as built "agent-first," with AI systems capable of running hundreds of operations in parallel, executing much of the manual accounting work that traditionally consumed finance teams' time.
+Worth asking tomorrow: is giving each client their own dedicated server and database (like 3GM has) the actual long-term plan, or was that just how the first client got set up before a shared system existed? That answer matters a lot for how cost and complexity grow as more clients come on.
 
-The mechanics that make that possible:
+5. Render: claude-notes-vault, $25/month
+This is the actual tool I've been using this whole conversation to save our chat history into your notes system. Confirmed, working as described.
 
-- Real-time architecture, not batch. The meaningful difference is architecture: AI embedded in a real-time GL acts on current data, while AI layered onto a batch system analyzes snapshots. That's what actually lets the propose-approve-post loop run continuously instead of at month-end.
-- Approval and audit are structural, not bolted on. Rillet ties approvals to dollar materiality thresholds and logs every action immutably — Rillet's Aura agents operate inside a controls framework designed for SOX, ICFR, and external audit, with 100% of AI actions logged and zero auto-posts without approval, independently audited under SOC 1 Type II.
-- Domain-scoped agents, not a general chatbot. Each Aura agent handles one accounting workflow (bank rec, accruals, flux analysis) and proposes for a human to approve, with a full audit trail attached to every posting.
-- Deep native integrations (Stripe, Salesforce, HubSpot, and now Zapier's 8,000+ apps) feed the ledger enough context that agents can act without a human re-keying data.
+Rough total from what's listed: about $114/month — not counting whatever the two Anthropic API keys actually cost in usage, which is probably the real number to chase tomorrow.
 
-What's genuinely different from a copilot
-
-The difference isn't the model — it's that Rillet's audit trail and approval logic live in its own data model from day one, so there's nothing to retrofit. A copilot sitting on NetSuite or SAP inherits that system's batch cycles, its human-shaped approval chain, and its historical schema — it can only speed up the existing steps. Rillet skipped that constraint by owning the ledger outright.
-
-It's not the only one doing this — worth knowing the landscape isn't as clean as "rebuild or fail"
-
-Rillet has real company in the AI-native ERP category — Campfire, DualEntry, and Light are also rebuilding the GL from scratch to take on NetSuite. But there's a legitimate counter-case too: Numeric automates close management on top of your existing ERP rather than replacing it, and it still raised a $51M Series B; Truewind layers AI close automation onto Sage Intacct the same way. So "you must own the ledger to win" isn't a universal law — what seems to actually matter is whether the approval/audit harness is genuinely load-bearing, not whether you literally replaced the base system.
-
-The comparable that actually matters for AskCruz
-
-Steel and metal distribution already has a company doing close to what you described — cross-platform, not owning any single ledger. turian runs agents for order entry, RFQ/quoting, and quality-certificate processing, and is explicitly built to integrate with existing ERP systems like SAP or MS Dynamics rather than replace them, connecting to almost any ERP system. It's seed-stage and narrower in scope than Rillet (workflow automation, not general-ledger ownership), but it's the closest real precedent for "agent layer across multiple steel-industry ERPs." There are also steel-specific AI/ERP vendors like FLOW and erp-agent.com working the same angle. And separately — EOXS itself already turns up in public "best ERP for steel" roundups with a line about modern technology and AI-powered optimization that older systems can't match, which means part of the market already associates EOXS with "AI-powered steel ERP" before AskCruz has a distinct story. Worth being deliberate about how AskCruz's pitch differs from "EOXS, now with an AI feature."
-
-The actual risk this surfaces for AskCruz
-
-Rillet, Campfire, and DualEntry can bake approvals and audit trails directly into their own schema because they own it outright. AskCruz, by your own description, sits on top of whatever ERP each client already runs — Odoo today, potentially others tomorrow, across steel and other industries. That means the harness — the part the post calls the actual unlock — has to be re-earned against every underlying platform's data model instead of being structural once. That's precisely the setup the post says caps incumbents' copilots at 20-30% gains: an AI layer riding on top of a system it doesn't control.
-
-The turian and Numeric precedents say this isn't a dead end — funded businesses do exist on the "layer across multiple systems" side of this line. But it puts the real product question in a specific place: is AskCruz building its own persistent, cross-platform ledger/audit layer that references transactions across whichever ERP sits underneath (closer to what Rillet did, just federated instead of owned) — or is it a workflow-automation layer that writes into each ERP's native approval tables (closer to turian, and closer to the copilot pattern the post is critical of)? Those are two different products with very different defensibility, and the post's whole argument about "multiples vs percentages" only really applies to the first one.
-
-**User:**
-If you had to rate a level at which you are giving me these replies, like okay, this is at a grade school level, high school, bachelors, masters, PhD, which level are you giving me these answers at?
-
-**Assistant:**
-Somewhere around strong MBA / consulting-analyst level — not higher.
-
-What that response actually did: read company blogs and marketing pages, pulled together a competitor landscape, correctly identified the real axis of comparison (Rillet owns its ledger end-to-end; AskCruz's harness has to sit on top of whatever ERP is already there), and flagged the actual risk that follows from that. That's legitimate synthesis, and the framing is right.
-
-What it isn't: PhD-level, or even solid senior-engineer level, on the technical question that actually matters here. I didn't verify how AskCruz's harness is actually built today — I speculated about two possible architectures (a persistent cross-platform audit layer vs. writing into each ERP's native approval tables) without checking which one is true. That's the difference between a good outside read and real diligence. A PhD-level or "someone who's actually built this" answer would need to look at the actual teams-askcruz implementation and the schema/approval logic that's already in place, not infer from Rillet's public docs and pattern-match.
-
-So: strategy framing, solid B+/A- consultant-grade. Technical verification of your own system, not done — that's a different task, using teams-askcruz directly, if you want the real answer instead of my best external guess.
+Questions worth bringing to the call:
+- What exactly runs on the Hetzner VPS?
+- What do the two Anthropic API keys actually cost per month?
+- Is per-client dedicated infrastructure (like 3GM's setup) the plan going forward, or a one-off?
+- What's the cost/speed impact of running Sonnet redaction on every tool call for restricted users?
