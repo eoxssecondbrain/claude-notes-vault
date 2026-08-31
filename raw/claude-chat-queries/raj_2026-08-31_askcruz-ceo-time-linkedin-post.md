@@ -60,45 +60,53 @@ A few notes before you post it: the "human FAQ page / answer key" is the load-be
 
 One thing I didn't have and didn't want to invent: a specific verbatim question your team used to ask you, or a specific moment (a call, a Slack thread) that crystallized this for you. If you have one, it'd sharpen the middle section a lot — real dialogue snippets are usually the strongest line in your posts. Want me to fold one in, or is this ready to ship as is?
 
-USER: Saved. Let me know if you have a specific question your team used to ask, or if this is ready to post as is.
+USER: I think this post is lacking a hook, the post should have a strong hook for someone who's reading and how that story is relatable to their life. And use the skill Rajat's LinkedIn voice to draft this.
 
-USER: I think this post is lacking a hook, the post should have a strong hook for someone who's reading and how that story is relatable to their life.
-
-ASSISTANT: Good call — the original opener explained the situation instead of hooking into something the reader already feels. Here's a revised version with a sharper, more universal hook:
+ASSISTANT: Reworked with a sharper, more universally relatable hook — leads with the founder-scaling problem before naming the specific numbers:
 
 ---
 
-Everyone tells you: hire more people, and you'll get more time back.
+Nobody tells you this before you scale a team.
 
-I hired 80 people. And ran out of time completely.
+The bigger it gets, the less time you spend leading it.
 
-Not because they weren't capable.
+I ran an 80-person team at EOXS.
 
-Because I became the answer key for all of them.
+And most of my day didn't go into strategy, hiring, or where the company should go next.
+
+It went into being the answer key.
 
 - Where's this file
 - Who approved that change
 - What's the process for this client
 - Did we handle it this way last time
 
-Every "quick question" was quick for them and expensive for me — a context switch, a dropped thread, twenty minutes gone chasing something that lived in my head and nowhere else.
+Every "quick question" was quick for them.
 
-That's not leadership. That's a human FAQ page with a job title.
+And expensive for me.
 
-And the bigger the team got, the worse it got — more people, more questions, less of me left for the one job only I could do.
+A context switch here. A dropped thread there. Twenty minutes gone chasing something that lived in my head and nowhere else.
+
+Multiply that by 80 people, every day, for years.
+
+That's not leadership. That's running a help desk with a founder title.
 
 We deployed AskCruz across EOXS.
 
 Same team. Same questions. Same complexity.
 
-The influx into my inbox and DMs dropped 95%.
+The influx into my inbox dropped 95%.
 
-Not because people stopped needing answers — because the answers stopped needing me.
+Not because people stopped needing answers.
 
-I got my time back for the one thing only I could actually do: deciding where the company goes next.
+Because the answers stopped needing me.
 
-If your team is growing and your calendar is getting worse, not better — you don't have a growth problem. You have an answer-key problem.
+If you're a founder and most of your day is spent being your own team's search engine — you don't have a leadership problem.
+
+You have a knowledge problem.
 
 ---
 
-Changes from before: the hook now inverts a belief almost every operator holds ("more headcount = more leverage") instead of just describing your situation, which should land for anyone managing a team, not just CEOs. I also swapped the closing question for a callback-style diagnosis line ("you have an answer-key problem") since it ties directly back to the hook and gives the reader something to actually recognize in themselves, which felt stronger than a generic question here. Want me to go back to a closing question instead, or is the callback the right call?
+Changes from the last draft: the opener now names the general founder trap ("the bigger your team gets, the less time you spend leading it") before it gets specific to you — that's the hook, and it's something any founder scaling past ~20-30 people will recognize immediately, not just steel/ERP people. The close swapped the generic question for a sharper callback that reframes "leadership problem" as "knowledge problem" — lands harder and ties back to the opener.
+
+Still open: I don't have a real dialogue snippet or a specific recurring question your team used to ask. One actual line — even paraphrased — would replace the generic bullet list with something only you could have written, and that's usually what makes these posts land. Want to give me one, or ship as is?
