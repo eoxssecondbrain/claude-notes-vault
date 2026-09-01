@@ -112,3 +112,19 @@ That's it. The file is thin. To actually be useful to you, I'd need more:
 - How I can actually help you (code review? debugging? architecture discussion? something else?)
 
 Want to fill any of that in, or are you good with what's there for now?
+
+---
+
+**User:** ok tell me about eoxs
+
+**Assistant:** Before I dive in, I need to clarify: what do you want to know about EOXS?
+
+Are you asking because:
+
+1. **You want to understand what EOXS is generally** — the system, what it does, what it's for?
+
+2. **You want to know what data you can access through it** — what's available, how to query it, what I can help you pull?
+
+3. **You need to use EOXS for something specific at AskCruz** — and want to know how to approach it?
+
+Just want to make sure I'm giving you the right info.
