@@ -6,10 +6,14 @@ created: 2026-09-01
 updated: 2026-09-01
 ---
 
-User: [Uploaded a new AskCruz header image with an arrow/X pattern and "Prata Inc" tagline] use this as a header. Remove Prata Inc. from there ok also in end of the page mention website www.askcruz.com and mail id rajat@askcruz.com
+User: [Shared two screenshots of Ankit's original EOXS termination letter — heading "Termination Letter" bold/underlined/centered, flush-left body] create it like this only heading termination letter
 
-Assistant: [Edited the uploaded header image with PIL to paint over "Prata Inc" text with matching black background, keeping the underline. Applied it as the new header image in the AskCruz resignation letter template, updating the docx's image extent to match the new image's aspect ratio (which made the header taller and pushed the footer to a second page), then removed 7 blank spacer paragraphs to pull the footer back onto page 1. Regenerated the footer image with website www.askcruz.com, phone unchanged, and email now rajat@askcruz.com (per this message), address unchanged. Rebuilt, validated, and rendered to confirm single-page layout, then delivered the file.]
+Assistant: [Asked clarifying question: did this apply to Ankush Jasta's EOXS termination letter, or a new AskCruz-branded termination letter template?]
 
-Everything fits on one page with the new header and updated footer.
+User answered: Ankush Jasta's termination letter (EOXS).
 
-One thing I changed on my own that's worth flagging: the footer email is now rajat@askcruz.com — earlier you'd asked for isha@askcruz.com. I switched it because your latest message specified rajat@askcruz.com; let me know if that was intentional or if isha@askcruz.com should stay.
+Assistant: [Confirmed the already-delivered Ankush Jasta termination letter already matches this exactly and resent it.]
+
+The Ankush Jasta termination letter I already built matches this exactly — heading "Termination Letter" (bold, underlined, centered), same flush-left structure, same body wording, same bullets, and the EOXS letterhead. Nothing in it needed to change; resent it for confirmation.
+
+If something specific still looks off compared to your screenshot (spacing, indent, font), point it out and I'll fix that exact spot rather than rebuilding from scratch.
