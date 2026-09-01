@@ -6,7 +6,7 @@ created: 2026-09-01
 updated: 2026-09-01
 ---
 
-# Thread: askcruz-cold-email-mailbox-infra
+th# Thread: askcruz-cold-email-mailbox-infra
 
 ## User (turn 1)
 i want to buy 50 emails for bulk cold emailing , my budget is 50 dollar and i have 50 different domains
@@ -22,10 +22,11 @@ Here's where the market actually sits for ~50 mailboxes, since you already own t
 
 [Comparison card rendered — "Realistic mailbox-provider pricing for 50 domains against a $50 budget"]
 
-Provider | Price | Mailboxes for that price | Per-mailbox cost | Bring your own domain | Warmup | Infrastructure
-Winnr (Startup plan) | $69/mo | 50 | $1.38 | Free | $0.60/mailbox/mo add-on | Custom SMTP, shared IP
-Mailforge | $100-150/mo (raw) | 50 | $2-3 | Not confirmed free | Add-on (~$200/mo total w/ warmup) | Shared-IP SMTP
-InboxKit (Agency plan) | $164/mo | 30 base + 20 extra | ~$3.25 avg | Not confirmed free | Included | Managed SMTP + monitoring
+| Provider | Price | Mailboxes for that price | Per-mailbox cost | Bring your own domain | Warmup | Infrastructure |
+|---|---|---|---|---|---|---|
+| Winnr (Startup plan) | $69/mo | 50 | $1.38 | Free | $0.60/mailbox/mo add-on | Custom SMTP, shared IP |
+| Mailforge | $100-150/mo (raw) | 50 | $2-3 | Not confirmed free | Add-on (~$200/mo total w/ warmup) | Shared-IP SMTP |
+| InboxKit (Agency plan) | $164/mo | 30 base + 20 extra | ~$3.25 avg | Not confirmed free | Included | Managed SMTP + monitoring |
 
 Before I recommend one and finalize a plan, I need three things clarified:
 
@@ -72,6 +73,6 @@ Winnr (winnr.app), Startup plan.
 
 Reasons: cheapest verified per-mailbox rate ($1.38), it's the only one of the three that lets you bring your own domains for free (you already own the 50, so this matters directly), and it's SMTP with a documented API if you want to automate later.
 
-What to actually buy at $50/month recurring: 25 mailboxes with warmup included, not 50. That's $49.50/month (25 x $1.98, where $1.98 = $1.38 mailbox + $0.60 warmup). Don't buy the mailbox without the warmup add-on — an unwarmed mailbox on a fresh domain gets flagged fast and you'll have wasted the spend.
+What to actually buy at $50/month recurring: 25 mailboxes with warmup included, not 50. That's $49.50/month (25 × $1.98, where $1.98 = $1.38 mailbox + $0.60 warmup). Don't buy the mailbox without the warmup add-on — an unwarmed mailbox on a fresh domain gets flagged fast and you'll have wasted the spend.
 
 If you want all 50 domains live instead of 25, the real number is about $99/month, not $50.
