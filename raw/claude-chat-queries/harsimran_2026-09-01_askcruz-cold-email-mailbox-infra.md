@@ -137,3 +137,15 @@ how to setup space mail with domain and how to login in that mail, and will this
 On cold email fit: technically yes, it sends and receives real mail — nothing stops you from pointing a sequencer at these mailboxes via SMTP. But nothing in this setup handles the part that actually matters for cold outreach: there's no warmup ramp, no daily send-cap enforcement, and no deliverability monitoring. You'd be manually ramping each mailbox's volume over 2-3 weeks yourself and watching bounce/spam rates by hand across however many domains you run. Miss that and you burn the domain fast — SPF/DKIM/DMARC being correct doesn't save you from sending volume before reputation exists.
 
 Net: this gets you real, cheap mailboxes with the DNS setup pain reduced (via the API instead of clicking through 25-50 domains). It does not get you the warmup/monitoring layer that Winnr charges for. If you go this route, budget your own time for manual warmup discipline as the real cost, not just the dollars.
+
+## User (turn 9)
+which mail should i buy spacemail pro or special
+
+## Assistant (turn 9)
+Pro, not Special.
+
+Special is nearly free (~$0.10/mailbox/month) but only exists as an add-on to a Spaceship Shared Hosting subscription — you'd be paying for website hosting you don't need just to unlock cheap mailboxes, and the published hosting tiers cap how many domains attach to one account (the entry tier lists 5 hosted domains). Covering 50 domains could mean stacking multiple hosting subscriptions, which eats the savings and adds infrastructure you don't actually want for a cold email operation.
+
+Pro is standalone — no hosting dependency, straight per-mailbox pricing around $0.59-0.98/month depending on the commitment term. For 50 mailboxes that's roughly $30-45/month, still under your $50 ceiling, and it's a much simpler purchase: buy mailboxes, not a hosting product with mailboxes attached as a side effect.
+
+One thing worth checking before you buy either: Spacemail's automatic MX/SPF/DKIM setup only auto-configures if the domain's nameservers already point to Spaceship. If your 50 domains sit on their current registrar's DNS, you're back to the manual or API record-pushing from earlier regardless of which plan you pick — that part doesn't change based on Pro vs Special.
