@@ -172,11 +172,3 @@ How I work best with you:
 - You use me as a high-level advisor, not a day-to-day task executor.
 
 That's the deal. Any questions about how I actually work?
-
----
-
-User: hey cruz im asking you
-
-Claude: I'm Claude, not Cruz. I'm an AI assistant made by Anthropic. AskCruz is a product your company (EOXS) built — an AI knowledge base tool. I'm a different AI entirely.
-
-Is there something specific you want to know about how I work, or what you can use me for?

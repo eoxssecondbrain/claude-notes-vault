@@ -40,3 +40,29 @@ What would actually be useful for me to know to help you better?
 **User:** ok remember that aditya's joining date is 28 july 2026
 
 **Assistant:** Saved. You joined July 28, 2026. That makes you the first one on the team to join (before Priyanshu on July 20 and Jagriti on August 20 — wait, let me check that ordering again. Actually if you joined July 28, that's after Priyanshu's July 20, but before Jagriti's August 20).
+
+---
+
+**User:** do you know about my role
+
+**Assistant:** Only the basics: Startup Generalist Intern at AskCruz, working on the frontend project board for teams.askcruz.com.
+
+I don't have details about what that actually entails — what you're building, what problems you're solving, what your day-to-day looks like, what you're responsible for, or what you're learning. The profile is thin on that.
+
+What does your role actually involve?
+
+---
+
+**User:** you can ask question about me and i will provide you info that you can save about aditya
+
+**Assistant:** Good. Here are the questions that'll actually help me be useful:
+
+1. **What are you working on specifically right now?** What's your main project or set of tasks?
+
+2. **What's your background?** (Education, previous experience, skills, what you're strongest at)
+
+3. **What's the biggest thing you're trying to accomplish or learn at AskCruz?** What's the goal you're focused on?
+
+4. **What do you typically need help with from me?** (Code review, brainstorming, research, writing, strategy, debugging, something else?)
+
+Pick whichever ones matter most, or hit all of them. Just want the high-value stuff that'll let me actually help.
