@@ -78,3 +78,34 @@ Best,
 Sebastian
 
 Updated — dropped the booking link and the Josh cc placeholder since you're handling the booking directly and don't have his last name. It now just asks Jeremy to confirm a time in the window for himself and Josh, and you book it once he replies.
+
+User: I'll be sending this email. Any feedback?
+
+Hi Jeremy,
+Great talking to you today. As discussed, we've got a window open this Thursday from 9:00 AM to 12:00 PM MT (that's 11:00 AM to 2:00 PM my time). 
+Let me know what time in that window suits you and Josh, and I'll get it booked on our side.
+Looking forward to it.
+Best,
+Sebastian
+
+Assistant: Two real gaps:
+
+1. You dropped who the meeting is with. The last draft said "I've got Raj (our CEO) open" — this version just says "we've got a window open." Jeremy has no idea who he'd actually be meeting, which undercuts the whole point of offering Raj's time specifically.
+
+2. No subject line here — assuming you're just pasting the body and have one separately, but flagging in case not.
+
+Everything else is fine: concise, confirms the call happened, clear ask, correct time conversion (9-12 MT = 11-2 ET).
+
+Add "with Raj, our CEO" back in before sending — that's the one thing that actually needs fixing.
+
+User: Hi Jeremy, 
+
+Great talking to you today. As discussed, we've got a window open this Thursday from 9:00 AM to 12:00 PM MT for you to meet with Raj, our CEO (that's 11:00 AM to 2:00 PM my time).  Let me know what time in that window suits you and Josh, and I'll get it booked on our side. 
+Looking forward to it. 
+Best, Sebastian
+
+Assistant: That fixes it — clear who, what, when, and the ask. Good to send.
+
+User: Give me the subject for the email
+
+Assistant: "Confirming Thursday, Jeremy" — matches the tone, short enough to not get truncated on mobile.
