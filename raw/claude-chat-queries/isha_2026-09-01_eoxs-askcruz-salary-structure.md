@@ -6,14 +6,8 @@ created: 2026-09-01
 updated: 2026-09-01
 ---
 
-User: [Shared two screenshots of Ankit's original EOXS termination letter — heading "Termination Letter" bold/underlined/centered, flush-left body] create it like this only heading termination letter
+User: [Shared 2 screenshots: a new AskCruz header (rocket/torpedo icon logo, black banner with X pattern) and the AskCruz footer bar (website/phone/email/address, rajat@askcruz.com)] header willl be 1 screesnshot end of the page mention screesnshot 2 and use Ask Cruz name where you use eoxs please
 
-Assistant: [Asked clarifying question: did this apply to Ankush Jasta's EOXS termination letter, or a new AskCruz-branded termination letter template?]
+Assistant: [Inferred from context this applies to the just-delivered Ankush Jasta EOXS termination letter (no clarifying question needed given the established pattern from the resignation-letter rebrand). Rebuilt the docx-js script with the new header/footer images sized to their correct aspect ratios (header 870x142, footer 807x139), replaced all three "EOXS" text occurrences in the body with "AskCruz", adjusted spacer paragraph so it stayed on one page, rendered to confirm, and delivered as a new file (kept the original EOXS version intact separately).]
 
-User answered: Ankush Jasta's termination letter (EOXS).
-
-Assistant: [Confirmed the already-delivered Ankush Jasta termination letter already matches this exactly and resent it.]
-
-The Ankush Jasta termination letter I already built matches this exactly — heading "Termination Letter" (bold, underlined, centered), same flush-left structure, same body wording, same bullets, and the EOXS letterhead. Nothing in it needed to change; resent it for confirmation.
-
-If something specific still looks off compared to your screenshot (spacing, indent, font), point it out and I'll fix that exact spot rather than rebuilding from scratch.
+Fits on one page, header and footer as provided, all EOXS references replaced with AskCruz. Delivered as Ankush_Jasta_Termination_Letter_AskCruz.docx.
