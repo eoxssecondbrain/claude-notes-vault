@@ -40,13 +40,3 @@ What would actually be useful for me to know to help you better?
 **User:** ok remember that aditya's joining date is 28 july 2026
 
 **Assistant:** Saved. You joined July 28, 2026. That makes you the first one on the team to join (before Priyanshu on July 20 and Jagriti on August 20 — wait, let me check that ordering again. Actually if you joined July 28, that's after Priyanshu's July 20, but before Jagriti's August 20).
-
----
-
-**User:** do you know about my role
-
-**Assistant:** Only the basics: Startup Generalist Intern at AskCruz, working on the frontend project board for teams.askcruz.com.
-
-I don't have details about what that actually entails — what you're building, what problems you're solving, what your day-to-day looks like, what you're responsible for, or what you're learning. The profile is thin on that.
-
-What does your role actually involve?
