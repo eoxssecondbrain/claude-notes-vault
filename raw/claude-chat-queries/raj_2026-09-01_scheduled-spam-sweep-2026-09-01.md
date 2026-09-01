@@ -8,16 +8,16 @@ updated: 2026-09-01
 
 ## Scheduled Email Spam Detection (v9) — Run 2026-09-01
 
-**Trigger:** Automated scheduled task, no live user present.
+**Trigger:** Automated scheduled task, no live user present initially.
 
-**Fix-up pass:** Searched `label:AI-SPAM in:inbox` — 0 threads found. Nothing needed fixing (the one pre-existing AI-SPAM thread, 17a94e9d6c91e4fb, was already correctly out of Inbox).
+**Fix-up pass:** Searched `label:AI-SPAM in:inbox` — 0 threads found. Nothing needed fixing.
 
-**Run type:** Normal run (AI-Reviewed already applied to 45,811+ messages historically; AI-SPAM already applied to 1 thread previously). Not a first run.
+**Run type:** Normal run (AI-Reviewed already applied historically to 45,811+ messages; AI-SPAM already applied to 1 thread previously).
 
-**Query used:** `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`, pageSize 50 → resultCountEstimate 804 total unprocessed threads (old backlog, mostly from 2021).
+**Query used:** `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`, pageSize 50 → resultCountEstimate 804 total unprocessed threads (old backlog, mostly 2021).
 
 **Page 1 processed (50 threads):**
-- 44 classified NOT_SPAM → labeled AI-Reviewed (Label_37). Mix of: eoxs.com sender exemption, calendar invites/RSVPs (Accepted/Invitation/New Event from Calendly), security "New Device Login" alerts, DocuSign offer-letter completion/view notices, Odoo test sales-order/quotation emails, one VC calendar invite (Mucker Capital — protected by calendar-mail skip-list override).
+- 44 classified NOT_SPAM → labeled AI-Reviewed (Label_37).
 - 6 classified SPAM:
   - 17a3962fb82d970c — "Your DocuSign verification code is: 751623" (expired OTP, 2021) → AI-SPAM/Expired-OTP
   - 17a35431c70f80b4 — "Verify a New Device" code 875518 (expired OTP, 2021) → AI-SPAM/Expired-OTP
@@ -26,10 +26,15 @@ updated: 2026-09-01
   - 17a33cf8c7adf046 — Crunchbase newsletter → AI-SPAM/Advertising
   - 17a3372f3a3d53fd — Google Workspace upsell email → AI-SPAM/Advertising
 
-**CRITICAL ISSUE FOUND:** After calling `label_thread` (succeeded) then `mark_thread_spam` (returned success) on all 6 SPAM threads, verification via `get_thread` failed with "The caller does not have permission" (distinct from the "not found" error a bad/nonexistent thread ID produces). Follow-up `search_threads` with `in:anywhere` (which per tool docs includes Spam and Trash) returned zero results for all 6 threads — they are not in Inbox, Spam, or Trash. This means `mark_thread_spam` hard-deleted these 6 threads instead of moving them to the recoverable Spam folder, contradicting the task's explicit assumption that this is a reversible action.
+**CRITICAL ISSUE:** After `label_thread` + `mark_thread_spam` (both returned success) on all 6 SPAM threads, verification failed: `get_thread` returned "The caller does not have permission" (distinct from "not found" for a genuinely bad ID), and `search_threads` with `in:anywhere` (covers Spam + Trash per tool docs) returned zero results for all 6. The threads are unreachable via this connector — `mark_thread_spam` appears to have hard-deleted them instead of performing the recoverable Spam-folder move the task design assumes.
 
-**Action taken:** Halted immediately. Did NOT process further pages of the 804-thread backlog. Did NOT call mark_thread_spam again. The 44 AI-Reviewed labels already applied are safe (label-only, non-destructive) and were left in place.
+**Action taken:** Halted immediately after discovering this. Did not process further pages of the 804-thread backlog. Did not call mark_thread_spam again. The 44 AI-Reviewed labels already applied are safe/non-destructive and were left in place.
 
-**Notified user via PushNotification** with full details and a recommendation to check Gmail/Workspace admin settings for an auto-purge-on-spam or retention policy, and to verify whether the 6 disappeared threads are recoverable.
+**Notified user via PushNotification** with full details.
 
-**Remaining work:** ~750+ threads in the backlog still need classification once the mark_thread_spam issue is understood/resolved. Do not resume automated spam-moving until this is fixed.
+### Follow-up (live user turn)
+User asked: "can these be recovered?"
+
+Answered: Cannot confirm via this connector — `in:anywhere` search and `get_thread` both indicate the threads are inaccessible (permission error, not "not found"), which could mean true hard-deletion, or could mean an access boundary this connector doesn't cross while the mail still exists in the account's Spam/Trash or under a Workspace retention/Vault policy. Recommended Raj check three things directly: (1) Gmail web UI Spam/Trash for the 5 named senders around 2021-06-22/23, (2) Google Workspace Admin Vault / audit log if Vault retention is enabled for the domain, (3) if neither shows anything, treat as gone — low material loss (2 stale 2021 OTP codes, 4 old newsletters) but the underlying mechanism (mark_thread_spam → hard delete) is the real problem and must be fixed/understood before this scheduled task runs mark_thread_spam again. Task will not resume calling mark_thread_spam until that's confirmed.
+
+**Remaining work:** ~750+ threads in the backlog still need classification once the mark_thread_spam issue is understood/resolved.
