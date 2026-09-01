@@ -47,3 +47,28 @@ Third, "on the right path" needs an anchor. Right relative to what — the EOXS-
 Fourth, should it roleplay these people literally ("here's what Hormozi would say"), or should it extract their actual operating principles and apply them as a consistent voice without the personas — the latter tends to hold up better over repeated real use, since impersonation is a gimmick and gets thin fast, while extracted principles stay useful.
 
 Tell me where you land on those four and whether the thread exists somewhere findable, and we'll get to the skill itself.
+
+User: It is not for what EOXS actually needs. It is for AskCruz.
+You are right. I would stay with extracted prints. I am not fussy about it just being one skill. It can be multiple skills for different things.
+I understand that Gary Vee is someone who is great at content. That can be a persona, like a CMO. Alex Hormozi is someone who is very good at processes. He can be like a COO. Grant Cardone is someone who is very good at scaling and is aggressive with sales. He can be a salesperson, along with Jeremy Miner and other people in that field.
+My point is, let's take the example of an implementation. Right now, I am going through the 3GM implementation, and I am thinking about sending an email to Travis. I want a skill that I can call, which can go through the thread: what has happened and where we are, based on the people and their principles. It can let me know if the move that I am making is the right one or not, and if I need to pivot. If I need to pivot, then why do I need to pivot? These are like expert advisors that I have in the form of skills, which I can call at any given time.
+
+Assistant: That reframes it cleanly. AskCruz's growth is the anchor, not general EOXS health — so the audit question becomes "does this move increase the odds of AskCruz retention, expansion, and referral," not "is this generically good business practice." That matters a lot for a case like 3GM, where 3GM is technically an EOXS-origin account but functions as your first paying AskCruz customer — the frame you're auditing against is the AskCruz relationship, not the EOXS implementation quality in isolation.
+
+The structure you're describing is a small bench of advisor skills, each one a persona built from a real operator's actual principles rather than an impersonation, each mapped to a functional lens:
+
+CMO lens, extracted from Gary Vee's principles — attention, content, brand patience, long-game audience building.
+COO lens, extracted from Hormozi's principles — process discipline, unit economics, focus, cutting distraction.
+Sales/closer lens, extracted from Cardone and Jeremy Miner's principles — aggressive pipeline movement, objection handling, urgency.
+
+Each one, when called, pulls the actual state of whatever account or situation you're pointing it at, evaluates your intended move against that persona's operating principles, and gives you a verdict — right move, or pivot and here's why.
+
+Before I map this into an actual build, a few things still need pinning down, because your own example exposes them:
+
+The Travis/3GM email doesn't sit cleanly under one lens. It's a delivery update (COO territory), but it's also the account that determines whether AskCruz's first paying customer stays and refers (sales/retention territory). If you call the COO skill on it, you'll get a process verdict and miss the retention angle entirely. So — when a decision spans lenses, do you want to call more than one skill yourself and compare, or do you want a single entry point that decides which lens or lenses apply and runs them for you.
+
+Data pull: when you call a skill on "the 3GM thing," should it automatically go find the relevant history itself — emails, implementation tasks, calls, wherever 3GM data actually lives — or will you tell it what to look at each time. Automatic is more useful but means the skill needs real query logic behind it, not just a persona description.
+
+Output shape: a verdict, the reasoning behind it, and — if it says pivot — the specific reason and the alternative move. Anything else you want in that, or is that the full shape.
+
+Once those are settled I'll want a craft-level pick before building — this is a real deliverable, not a quick sketch — but that's the next step, not now.
