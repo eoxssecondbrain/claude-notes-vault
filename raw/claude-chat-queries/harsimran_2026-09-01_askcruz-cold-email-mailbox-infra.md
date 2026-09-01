@@ -93,3 +93,47 @@ Spacemail: cheaper ($25-45/mo), but you own 100% of the SPF/DKIM/DMARC setup and
 Winnr: costs more ($49.50/mo for 25 warmed mailboxes, as laid out in turn 3), but authentication and warmup are handled for you automatically — which is the entire point of paying a cold-email-specific provider instead of a generic email host.
 
 Given you're doing this for AskCruz and deliverability is the actual bottleneck toward $1M ARR, not the $20-25/month difference, I'd still put you on Winnr. Spacemail only makes sense if you or someone on your team is going to properly own manual DNS + warmup discipline across 50 domains — and if that work slips, you've spent the money and burned the domains anyway.
+
+## User (turn 5)
+dows spaceship have a api or mcp ?
+
+## Assistant (turn 5)
+No connector for it in Anthropic's directory, so it's not something you can just plug into Claude here — but the underlying pieces exist:
+
+API: yes, official and public (docs.spaceship.dev). REST, covers domain registration/transfer, DNS records, WHOIS/privacy settings, contacts. No mailbox-provisioning endpoints — Spacemail account creation still looks to be dashboard-only, not exposed via the API.
+
+MCP: no first-party one from Spaceship. There's a solid community-built server (BartWaardenburg/spaceship-mcp, 48 tools) that wraps the same API — full DNS record management across all major types (A, MX, TXT, CNAME, etc.), domain lifecycle, WHOIS/contacts. You'd self-host it (it's not in Anthropic's connector directory), point it at your Spaceship API key, and it would work with Claude Code or any MCP-compatible client.
+
+This actually changes my earlier read a bit: the main risk I flagged with Spacemail was manually configuring SPF/DKIM/DMARC across 50 domains by hand. If you script that through this MCP server's DNS tools instead of doing it in the dashboard one domain at a time, that specific risk drops a lot — you could push identical, correct auth records to all 50 domains in one batch instead of 50 manual clicks. It doesn't solve warmup or deliverability monitoring (still nothing built in for that), but it does remove the most error-prone manual step.
+
+## User (turn 6)
+does
+
+## Assistant (turn 6)
+Looks like that got cut off — what were you asking?
+
+## User (turn 7)
+can we set up spf/DKIM/DMARC using spaceship api
+
+## Assistant (turn 7)
+Yes. SPF, DKIM, and DMARC are all just DNS records (TXT, and sometimes CNAME for DKIM depending on the provider), and Spaceship's API has a DNS records endpoint that supports exactly those types — PUT /v1/dns/records/{domain}, with TXT, CNAME, MX, and others all supported. Rate limit is 300 requests per domain per 5 minutes, so scripting all 50 domains (3 records each = 150 calls) is trivial.
+
+One thing the API can't do: generate the actual DKIM key or the correct SPF/DMARC values for you. Those come from whichever mail platform you're actually sending through — Spacemail's dashboard if you go that route, Winnr's setup if you go that route. The workflow is: get the record values from the mail provider, then push them to each domain via Spaceship's API instead of clicking through the dashboard 50 times.
+
+This is the same DNS endpoint the community MCP server wraps, so if you connect that to Claude, you could hand it "here are the SPF/DKIM/DMARC values, push these to all 50 domains" and have it done in one batch instead of manually.
+
+## User (turn 8)
+how to setup space mail with domain and how to login in that mail, and will this work with cold email outreach
+
+## Assistant (turn 8)
+[step_card_display_v0 rendered — "Setting up and logging into a Spacemail mailbox on a domain"]
+1. Buy/select the Spacemail plan — In your Spaceship account, go to Hosting > Email > SpaceMail, and pick a plan sized to your mailbox count.
+2. Connect a domain (Unbox) — Click Unbox > Add Domain, then either pick an existing Spaceship domain or enter a third-party one. Repeat once per domain.
+3. Create the mailbox — Click Configure Products > Configure, enter the mailbox name (e.g. name@domain.com), then Create Mailbox. Spacemail auto-generates a password — copy and save it immediately, it's shown once.
+4. Add the DNS records — Click View Guides under Configure DNS Settings to get the exact MX, SPF, DKIM, and domain-ownership TXT records for that domain. Add them at whichever DNS provider controls the domain. At 25-50 domains, do this through the Spaceship API instead of the dashboard.
+5. Wait for DNS propagation — Allow up to 48 hours for the records to validate. Sending or warming before this completes will fail or hurt deliverability from the start.
+6. Log in and start using it — Webmail: go to spacemail.com, log in with the full mailbox address (name@domain.com) as username and the password saved in step 3. For a sending tool instead of webmail, use IMAP/SMTP: server mail.spacemail.com, IMAP port 993 (SSL/TLS), same username and password — get the full config from Spacemail Manager > mailbox > IMAP/SMTP/POP3.
+
+On cold email fit: technically yes, it sends and receives real mail — nothing stops you from pointing a sequencer at these mailboxes via SMTP. But nothing in this setup handles the part that actually matters for cold outreach: there's no warmup ramp, no daily send-cap enforcement, and no deliverability monitoring. You'd be manually ramping each mailbox's volume over 2-3 weeks yourself and watching bounce/spam rates by hand across however many domains you run. Miss that and you burn the domain fast — SPF/DKIM/DMARC being correct doesn't save you from sending volume before reputation exists.
+
+Net: this gets you real, cheap mailboxes with the DNS setup pain reduced (via the API instead of clicking through 25-50 domains). It does not get you the warmup/monitoring layer that Winnr charges for. If you go this route, budget your own time for manual warmup discipline as the real cost, not just the dollars.
