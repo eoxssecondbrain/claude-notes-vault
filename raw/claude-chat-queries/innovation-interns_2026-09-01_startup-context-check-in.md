@@ -81,3 +81,9 @@ Do you want me to save that information? Or are you checking if I'm actually rea
 User: its july 20 2026 when priyanshu joined the company remember that
 
 Claude: Done. Priyanshu joined July 20, 2026 — a month before you.
+
+---
+
+User: role is startup generalist intern for priyanshu als remember that
+
+Claude: Got it. Priyanshu is a Startup Generalist Intern, same title as you.
