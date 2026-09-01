@@ -6,21 +6,33 @@ created: 2026-09-01
 updated: 2026-09-01
 ---
 
-User: Now make the changes based on what changes that Raj was looking for based on the thread.
+User: Ask me questions about the proposal and make changes to the proposal that is in the downloads folder and do not create a new one. Let's go by user count as 10, and make edits accordingly. Do you have any other questions?
 
-Claude: [Built a new workbook, Toll_Processing_Entity_EOXS_Proposal_DRAFT.xlsx, applying the commercial structure from the thread: tiered/discounted per-user licensing with a live Confirmed User Count input cell driving totals via formulas, a 3/5/8-user reference table, $22,000 one-time setup fee with Included/Not Included breakdown, $400/month infra fee, rewritten Notes 7 and 9-13 (standard-rate reversion for extra users, 30/70 payment split, net-15, independent billing from Sabre, 12-month term, renewal reversion), and a cleared signature block with placeholders. Ran recalc.py (0 errors, 8 formulas), delivered via SendUserFile, and committed to ~/Downloads/Toll Processing Entity EOXS Proposal DRAFT.xlsx as a new file alongside the earlier Sabre Alloys replica.]
+Claude: [Staged the existing Downloads file, set Confirmed User Count (D18) to 10, recalculated (0 errors), verified TOTAL MONTHLY = $2,652.50 ($2,252.50 licensing + $400 infra), delivered and committed back to the same path in Downloads.]
 
-Response text:
-Saved to Downloads as "Toll Processing Entity EOXS Proposal DRAFT.xlsx" — I kept it as a separate file rather than overwriting the Sabre Alloys replica, since they're two different documents now (one is the historical signed contract, this is the new pitch). Let me know if you'd rather I delete the old replica or leave both.
+Response: Set to 10 — updated and saved back to the same file (monthly total now $2,652.50). Still open before this is send-ready:
 
-What's in it, built off the thread's final structure:
+1. Entity legal name — what's actually going in the title banner (currently [Entity Legal Name])?
+2. Proposal date — what should it say (currently [Proposal Date])?
+3. Signatory — name and title of whoever will sign for the new entity (currently blank placeholders)?
+4. Inter-company billing — is this entity arm's-length from Sabre, or will Sabre itself be a customer of it? The thread flagged this as unresolved and it changes whether the build needs inter-company transaction handling — not something I can guess into the doc.
+5. Toll Processing posting bug — do you have confirmation from the dev side that this is actually fixed? Raj was explicit about not selling a new revenue line on top of an unconfirmed fix. This isn't a line in the proposal, but it's a go/no-go item before the call.
+6. Module list — I carried over Sales, CRM, Inventory, Processing, Logistics, Accounting, Contacts from Sabre's original build (dropped Manufacturing and Executive Dashboards since they weren't part of this thread's scope). Correct, or should any module be added/removed?
 
-- Licensing: $425/user standard rate, 47% relationship discount → $225.25/user. There's a highlighted yellow input cell for "Confirmed User Count" — everything downstream (monthly licensing, total monthly) recalculates off that the moment you fill it in. Below it, a reference table shows 3/5/8-user scenarios so you can see the range while talking to Tye.
-- One-time setup: $22,000 flat, with the Included / Not Included breakdown from your plan — included covers the multi-company build itself (new company record, dedicated chart of accounts, inventory segregation, per-company access control, the Toll Processing SO-line extension for third-party material, laser cutting config, onboarding); not included covers ongoing licensing, infra, travel, out-of-scope migration/integrations, and extra training.
-- Infra: $400/month server/support fee, separate line.
-- Notes 7, 9–13 rewritten: new users beyond the confirmed count bill at full $425 standard rate (no exception); 30% at kickoff / 70% over the term; net-15 payment; billed independently from Sabre's own AR; 12-month initial term; standard-rate reversion at renewal or above the confirmed headcount.
-- Signature block: cleared Jesus Rios/CFO, replaced with placeholders.
+User: 1. Let's put a placeholder for now. 
+2. 2nd september' 26
+3. Leave that blank
+4. It will be a seperate entity and will be billed accordingly 
+5. Raj asked me to make the proposal so we should be good to go on that. 
+6. Keep the module the same.
 
-Two yellow-highlighted fields still need you: entity legal name (title banner) and Confirmed User Count. I left the module list (Sales, CRM, Inventory, Processing, etc.) and the 3-year→12-month swap as I described — flagging that the module list itself wasn't discussed in the thread, I carried it over from the original template as a reasonable default since the platform capabilities don't change, just the entity and pricing.
+Claude: [Staged the file again, set A3 (proposal date) to "2-September-2026", cleared the signature block's signatory name and date placeholders (B66, B67) to blank with no fill, recalculated (0 errors), delivered and committed back to the same Downloads path. No document changes needed for items 4-6 since the doc already reflects arm's-length/separate billing, and items 5-6 were confirmations rather than edits.]
 
-Not baked in, per the thread's own open items: whether Sabre becomes a customer of the new entity (inter-company billing) and firm confirmation the Toll Processing posting bug is actually fixed — still worth chasing before this goes out.</content>
+Response: Updated and saved to the same file:
+
+- Proposal date set to 2-September-2026
+- Signatory/date fields in the signature block cleared and left blank (no placeholder text)
+- Entity name banner still reads [Entity Legal Name] — left as placeholder per your instruction
+- Module list, inter-company billing (arm's-length, separate AR — already how the doc is structured), and the Toll Processing bug confirmation all needed no document changes; they're confirmed as-is
+
+The proposal is otherwise complete: 10 users at $225.25/user ($2,252.50) + $400 infra = $2,652.50/month, $22,000 one-time setup, 12-month term, 30/70 payment split, net-15. The only thing left open in the file is the entity legal name placeholder — fill that whenever you have it, and it's ready to go into the call.</content>
