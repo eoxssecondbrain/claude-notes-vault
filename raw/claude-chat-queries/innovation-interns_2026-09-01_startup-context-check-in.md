@@ -25,3 +25,27 @@ This will help me give you more useful guidance rather than working from stale c
 User: do you remember priyanshu?
 
 Claude: Yes. Priyanshu Sinha — startup generalist at AskCruz working on the teams.askcruz.com frontend. Same team as you and Aditya.
+
+---
+
+User: what else do you remember about me?
+
+Claude: From my memory, that's essentially it:
+
+- Name: Jagriti
+- Started: August 20, 2026
+- Role: Startup Generalist Intern at AskCruz
+- Focus: Frontend project board for teams.askcruz.com
+- Context: Aditya Yadav shares this account with you
+
+That's the extent of what I have stored. The profile is pretty sparse — it's the baseline from when you started.
+
+What should I know about you that would make our conversations more useful? Things like:
+
+- What you're trying to ship right now
+- Major blockers or friction points
+- Your goals for the next 30-60 days
+- What's working vs. what's not
+- How you're measuring progress
+
+If there's context from past conversations you'd like me to carry forward, I can save that to memory. But right now I'm working with minimal context and asking clarifying questions each time.
