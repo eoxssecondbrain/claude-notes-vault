@@ -254,3 +254,21 @@ So I need you to tell me directly: what are the main open issues or problems you
 2. The teams.askcruz.com frontend specifically (blockers, technical debt, missing functionality)
 
 Which one, and what's the current situation?
+
+---
+
+User: The teams.askcruz.com frontend specifically (blockers, technical debt, missing functionality)
+
+Claude: Tell me what you're facing on teams.askcruz.com frontend right now.
+
+What I need to know:
+
+1. Main blockers — what's stopping you from shipping? (API issues, design bottlenecks, unclear requirements, dependency problems, something else?)
+
+2. Technical debt — what code or architecture decisions are slowing you down or causing friction?
+
+3. Missing functionality — what features are incomplete, half-built, or need to be added?
+
+4. Impact — how is each of these affecting your ability to move fast?
+
+Give me the 3-5 biggest issues in order of how much they're slowing you down.
