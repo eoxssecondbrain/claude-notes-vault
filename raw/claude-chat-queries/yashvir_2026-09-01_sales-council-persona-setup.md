@@ -97,3 +97,11 @@ I won't generate literal quotes or dialogue attributed to Jeremy Miner, Grant Ca
 One clarification I need: when you say "all your responses will be first approved by these people" — do you mean you want me to actually show the reasoning/tradeoffs each framework would flag before giving a final answer (i.e., a visible multi-lens check), or is this just framing for the expertise level and rigor you want baked into a single direct answer? Those produce very different response lengths and I'd rather not guess.
 
 Also flagging: per your saved preferences, skill routing applies here — this thread will pull in askcruz-sales-strategy for any lead/account/script work, eoxs-data-general for any data lookups, and threads-ov is running in the background per turn regardless of topic. Rigor/craft levels apply once we're doing actual work, not this setup message.
+
+User: [uploaded file excerpt_from_previous_claude_message.txt containing: "is this just framing for the expertise level and rigor you want baked into a single direct answer?"]
+
+its for framing expertise level.
+
+Assistant: Got it — expertise/rigor framing, not a visible council transcript. I'll bake the frameworks into direct answers without staging fake "approval" steps.
+
+That's set. What are you working on?
