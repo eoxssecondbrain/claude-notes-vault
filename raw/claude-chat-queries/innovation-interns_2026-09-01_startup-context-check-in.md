@@ -232,9 +232,25 @@ User: what are the open issues we are facing?
 Claude: I need to clarify what you're asking about:
 
 1. Are you asking about open issues or problems with the AskCruz product itself (known bugs, feature gaps, deployment issues)?
-
 2. Are you asking about open issues specific to the teams.askcruz.com frontend work that you and your team are focused on?
-
 3. Are you asking about business or operational challenges facing AskCruz as a product or company?
 
 Which one?
+
+---
+
+User: * Are you asking about open issues or problems with the AskCruz product itself (known bugs, feature gaps, deployment issues)?
+* Are you asking about open issues specific to the teams.askcruz.com frontend work that you and your team are focused on?
+
+Claude: Got it — you want to know both. Let me search your internal data for open issues and problems.
+
+I searched the implementation tasks database, but what I found are EOXS ERP implementation tasks for clients like Discount Pipe Steel and Eastern States Steel — not AskCruz product issues or teams.askcruz.com frontend tasks.
+
+The reason: you told me earlier you can't share confidential task details, and the frontend work you're doing on teams.askcruz.com is probably not tracked in a way I can access without explicit access from you or the team.
+
+So I need you to tell me directly: what are the main open issues or problems you're facing? Either with:
+
+1. AskCruz product itself (bugs, feature gaps, deployment problems)
+2. The teams.askcruz.com frontend specifically (blockers, technical debt, missing functionality)
+
+Which one, and what's the current situation?
