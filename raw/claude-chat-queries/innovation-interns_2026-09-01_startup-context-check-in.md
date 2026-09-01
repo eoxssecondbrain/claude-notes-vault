@@ -108,3 +108,11 @@ Specifically:
 4. What metrics or outcomes are you measuring progress against?
 
 Give me the high-level picture first, then we can drill into specifics.
+
+---
+
+User: sorry but i cant give you that info
+
+Claude: No problem. That's fine.
+
+So what can I help you with? Is there something specific you want to work on, ask about, or figure out that doesn't require diving into confidential task details?
