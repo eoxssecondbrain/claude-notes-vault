@@ -172,3 +172,55 @@ How I work best with you:
 - You use me as a high-level advisor, not a day-to-day task executor.
 
 That's the deal. Any questions about how I actually work?
+
+---
+
+User: hey cruz im asking you
+
+Claude: I'm Claude, not Cruz. I'm an AI assistant made by Anthropic. AskCruz is a product your company (EOXS) built — an AI knowledge base tool. I'm a different AI entirely.
+
+Is there something specific you want to know about how I work, or what you can use me for?
+
+---
+
+User: can you tell me about cruze more about its workability and also on what genres are the the main for you to work on?
+
+Claude: Based on AskCruz's product documentation, here's what it does and where it works:
+
+**What AskCruz Is**
+
+AskCruz is an industry-agnostic AI solution that helps businesses make their own knowledge more useful. Users ask ordinary business questions, and it returns answers grounded in available company knowledge. It's not an ERP replacement — it works alongside existing business systems.
+
+**How It Works — Four Core Capabilities**
+
+1. **Company Brain** — the company's shared working knowledge. Answers questions about who does what, how work gets done, customer history, pricing practices, commitments, and operational context.
+
+2. **Company Hands** — practical work it can help with. Examples: draft quotes using company pricing logic, flag orders at risk of missing delivery dates, summarize customer calls, prepare account briefings.
+
+3. **Digital Workforce** — standing responsibilities that watch defined areas and report when conditions need attention. Example: continuously monitor an order queue and alert when something is at risk.
+
+4. **Company Personalization** — reflects how a specific company actually operates: their vocabulary, pricing practices, customer expectations, tolerances, and business practices.
+
+**What Business Domains It Covers**
+
+- Customers and Accounts — history, expectations, open issues, previous commitments
+- Orders and Delivery — identify orders at risk, review exceptions
+- Inventory and Availability — determine what material is genuinely available for sale
+- Quotes and Pricing — draft quotes using company terms and logic
+- Calls and Conversations — summarize customer calls and link them to accounts
+- Commitments — identify what was promised to customers and who made promises
+- Margins — understand customer margin and why it changed
+- Operational Issues — identify risks and what needs attention
+
+**Who Uses It**
+
+Sales, Operations, customer-facing teams, leadership, and new employees all use it for different purposes.
+
+**Important Boundaries**
+
+- It doesn't automatically know information unavailable to the deployment
+- It doesn't replace core business systems
+- Important decisions still require human review
+- Every user doesn't necessarily see the same information (access is role-aware)
+
+Does this help clarify what AskCruz does?
