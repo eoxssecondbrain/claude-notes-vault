@@ -7,15 +7,19 @@ updated: 2026-09-01
 ---
 
 USER:
-Based on the transcript i need to share a sop file with my team so they understand rules and regulations, how we function, and what to do everyday to make sure team SOP's are properly maintained.
+in board structure it is mentioned arcs crews, it is AskCruz, fix it. Also we should have guidance on how to properly communicate with log notes, tagging relevant people, how assigning works,
 
-How project board works and how we keep the structure maintained and clean. What are the things that would be treated as flag.
+How to put daily snippets.
 
-Create a Team SOP file that i can share with my team.
+A guidance for everyone to follow
 
 ASSISTANT:
-Created a formal Word document: AskCruz Project Board — Team Standard Operating Procedure (AskCruz_Team_SOP.docx), verified by rendering to PDF/images before delivery.
+Updated AskCruz_Team_SOP.docx (regenerated from the same build script, re-verified by rendering to PDF/images):
 
-Contents: 1. Purpose. 2. Board Structure (ARCS Crews/AskCruz, Customer 1 - EOXS, Customer 2 - 3GM, AI Interns, Daily Snippets, Idea Board, Hiring Funnel — one line each). 3. Stage Definitions and Flow — table of all 9 stages (Intake, Requirements, Need Discussion, Assigned, In Dev, QA, Complete, Tabled, Recurring Tasks) with meaning and who moves it. 4. Ownership and Stage-Move Rules — owner-only rule, Assigned→In Dev exception, Complete requires owner even if owner did the QA, flagged if violated. 5. QA Policy — no self-QA, both doer and reviewer stay tagged, credit follows the log note, flagged if the same person does both. 6. Log Note Requirements — cadence table (Assigned: every 2 days, In Dev: daily, QA: daily from reviewer, Recurring Tasks: whenever worked or note why, Daily Snippets: every working day), flagged if missed even if genuinely still in progress. 7. Daily Snippets — one task per person, team leads' standing tied to their reports' discipline. 8. What Gets Flagged — summary list of all five flag conditions. 9. Automated Monitoring — note that the board is checked twice daily by an automated digest (read-only, reports only, never changes the board). 10. Daily Routine — start of day / during day / end of day expectations. 11. Questions — raise rule mismatches directly rather than working around them.
+- Fixed "ARCS Crews (AskCruz)" to just "AskCruz" everywhere it appeared (Purpose section and Board Structure list).
+- Added section 5, "How Assigning Works": owner assigns, multi-assignee tasks (builder + QA reviewer both stay tagged), tasks needing external input belong in Requirements/Need Discussion not silent in Assigned, say when your part is done and tag the owner, say why if you can't start yet.
+- Added section 8, "How to Write a Good Log Note": say what you did and what needs to happen next, tag (@mention) whoever needs to act, be specific with a good vs bad example, log actual QA pass/fail results not just "done," name specifically what a blocker is waiting on ("waiting on Talal for SSH access" vs "stuck"), note explicitly if a Recurring Task wasn't touched and why.
+- Expanded section 9, "Daily Snippets": post to your own task every working day, keep it short but specific enough for the team lead and automated digest to tell real work happened, note absences instead of skipping silently, post it yourself (team lead can't post on your behalf), plus the existing team-lead-standing and flag rule.
+- Renumbered all subsequent sections (What Gets Flagged now 10, Automated Monitoring 11, Daily Routine 12, Questions 13) and fixed the internal cross-reference to the log-note cadence section (now correctly points to section 7).
 
-Delivered as a 3-page Word document, presented via present_files. Flagged to Ayan that it deliberately doesn't name specific individuals (e.g. Talal's carve-out, Jaskirath's sub-ownership example) since it's addressed to the whole team as policy rather than call-specific examples — offered to add named examples back in if he wants.
+Delivered as an updated 3-page Word document via present_files.
