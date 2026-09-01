@@ -6,10 +6,10 @@ created: 2026-09-01
 updated: 2026-09-01
 ---
 
-User: [Uploaded Ankit_Termination_letter_1.pdf] create this for ankush jasta day of termination is 31st aug 2026
+User: [Uploaded a new AskCruz header image with an arrow/X pattern and "Prata Inc" tagline] use this as a header. Remove Prata Inc. from there ok also in end of the page mention website www.askcruz.com and mail id rajat@askcruz.com
 
-Assistant: [Read the PDF — an EOXS termination letter for Ankit Pachuri, dated 13th August 2026, standard EOXS letterhead (same header/footer assets as the earlier AskCruz resignation letter task). Built a new docx from scratch using docx-js, reusing the original (unmodified, still-EOXS-branded) header/footer/signature images saved from earlier in the session, replacing the employee name with Ankush Jasta and all three date references with 31st August 2026, keeping the same policy-violation wording, bullets, acknowledgement block, and Rajat Jain/CEO signature block. Rendered to PDF to verify layout matched the original, then delivered the file.]
+Assistant: [Edited the uploaded header image with PIL to paint over "Prata Inc" text with matching black background, keeping the underline. Applied it as the new header image in the AskCruz resignation letter template, updating the docx's image extent to match the new image's aspect ratio (which made the header taller and pushed the footer to a second page), then removed 7 blank spacer paragraphs to pull the footer back onto page 1. Regenerated the footer image with website www.askcruz.com, phone unchanged, and email now rajat@askcruz.com (per this message), address unchanged. Rebuilt, validated, and rendered to confirm single-page layout, then delivered the file.]
 
-This matches the original EOXS letterhead template, correctly personalized. Delivered as Ankush_Jasta_Termination_Letter.docx.
+Everything fits on one page with the new header and updated footer.
 
-Note: employee's Signature/Date fields are still blank for them to sign, as in the original. Offered to customize the violation reason wording or name formatting further if needed.
+One thing I changed on my own that's worth flagging: the footer email is now rajat@askcruz.com — earlier you'd asked for isha@askcruz.com. I switched it because your latest message specified rajat@askcruz.com; let me know if that was intentional or if isha@askcruz.com should stay.
