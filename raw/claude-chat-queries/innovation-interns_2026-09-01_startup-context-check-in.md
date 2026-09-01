@@ -272,3 +272,52 @@ What I need to know:
 4. Impact — how is each of these affecting your ability to move fast?
 
 Give me the 3-5 biggest issues in order of how much they're slowing you down.
+
+---
+
+User: no there is nothing as such im askin that do we have any issues like that ?
+
+Claude: Got it — so teams.askcruz.com frontend is running relatively smooth right now. No major blockers, technical debt, or missing functionality dragging you down.
+
+That's actually good position to be in. Means you've got runway to focus on what matters next without fighting fires.
+
+So if there are no significant issues holding you back, what are you actually working on? What's the mission for the team right now?
+
+---
+
+User: okay leave these things
+
+Claude: Fair enough. What do you want to focus on instead?
+
+---
+
+User: tell me something about sabre alloyes
+
+do you have any info on them?
+
+Claude: Yes, I have extensive info on Sabre Alloys. Here's the high-level picture:
+
+**Who they are:**
+Sabre Alloys is an EOXS ERP client in the specialty steel/alloys business. Key contacts include Charles White, Ernie Valdez, Tye Webb, and Juan Deshon. They operate on a dedicated Odoo instance at sabre.eoxs.com.
+
+**Current status — actively engaged:**
+Very active client with recent major development. Most recent activities (last 30 days):
+- Multiple "Cannot Confirm PL" (packing list) errors on transfers (B/OUT/11833, B/OUT/11733, etc.) — being actively debugged
+- Several processing order errors with weight/pricing issues (PR7560, PR7400, PR7386, PR7320, PR7148)
+- Banking reports fix and Iris testing in progress
+- Blanking processing order errors
+- Unit-of-measure mismatches causing price inflation
+
+**Open/ongoing items:**
+- 200 total implementation tasks across all stages
+- One marked "Urgent" — AR/AP discrepancy (owned by Jesus R.)
+- Several in "Need discussion" stage including "Bills" and "Demanded weight editable in processing order"
+- Multiple "Cannot Confirm PL" issues recurring (not just one-offs)
+
+**AskCruz connection (recent):**
+There's an August 13, 2026 call recorded: "Sabre Alloys - AI Transformation Proposal" — looks like there's a joint 3GM/Sabre proposal being discussed for AskCruz integration.
+
+**Email volume:**
+1,482 emails on file. Recent threads involve PO receiving (PR7560), billing issues, and quote handling.
+
+Why the interest in Sabre Alloys? Are you involved with their implementation or support?
