@@ -141,3 +141,15 @@ Confirmed. Every call — inbound or outbound — lands in your dashboard as a r
 One more real number worth knowing: they say a typical 90-second qualification call costs about ₹4.
 
 That closes all 5 parts. Want this written up as a one-page summary file, or is this enough as-is?
+
+**User:**
+write it up as one file
+
+**Assistant:**
+[AskUserQuestion — craft level: Sketch / Draft / Painting]
+
+User selected: Draft
+
+[Wrote dvaarik-ai-vendor-check.md covering all 5 sections plus a "what could not be verified" section and sources, and delivered it to the user via SendUserFile.]
+
+Delivered dvaarik-ai-vendor-check.md — Dvaarik AI vendor check with all 5 items, plus what couldn't be verified.
