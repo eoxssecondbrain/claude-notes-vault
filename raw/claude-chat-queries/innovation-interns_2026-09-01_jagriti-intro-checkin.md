@@ -55,3 +55,15 @@ Assistant: Here's a fuller picture, pulled from EOXS's internal wiki/assets (eox
 One caveat: some figures in the underlying documents (pricing, specific accuracy stats) come back redacted at this access level — flagged, not omitted silently.
 
 Sources: AskCruz — System Architecture, Ingestion & Access Control (wiki); AskCruz — Market Positioning, ICP & Product-Market Fit Status (wiki); EOXS — Company Overview (internal asset, eoxs-company-overview).
+
+User: how can askcruz help a companies
+
+Assistant: AskCruz helps a company by pulling together its scattered business information — emails, calls/meetings, client implementation data, employee/org info, internal policies and docs, and (where connected) operational records like tickets and invoices — into one place users can query in plain language, instead of hunting across separate systems.
+
+Concretely, it lets someone ask things like "what did we agree with this client over email," "what were the action items from last week's call," "what's the status of this implementation," "who owns this area," or "what's our policy on X" — and get a synthesized, cited answer pulled from whichever sources that company has connected.
+
+A few things worth knowing before pitching it as a fix-all: it's industry-agnostic (built for any company with fragmented data, not just steel — though the parent company's ERP side is steel-specific), it deliberately isn't a live operational system — there's a documented sync lag, so anything needing the current real-time state should still be checked against the original system (ERP, live ticket queue, etc.) — and what a given client actually gets depends entirely on which sources they've connected and what access their users are approved for. It finds and explains information; it doesn't take actions in the underlying systems (can't update a ticket, can't change an invoice).
+
+Right now it's live internally at EOXS as a pilot and being onboarded for its first external client, 3GM Steel.
+
+Sources: AskCruz — Comprehensive Client-Facing Product Understanding (internal asset, tier2); AskCruz — Market Positioning, ICP & Product-Market Fit Status (wiki).
