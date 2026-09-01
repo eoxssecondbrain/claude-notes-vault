@@ -6,12 +6,15 @@ created: 2026-09-01
 updated: 2026-09-01
 ---
 
-User: worked with Kirti on Report Automation, Imported Card in AskCruz CRM for Yashvir
+User: for SOP write like this that researched deeply about AskCruz and how it differes from EOXS in terms of RQL, made and SOP to follow in RQL, also created Rubrics pack for Research agent
 
-Assistant: Tue 01 Sep
-Revised AskCruz RQL SOP — confirmed ICP still steel/metals only, queried live AskCruz CRM data to ground it, kept most EOXS SOP criteria, added business_type classification, flagged company size/ERP-stack as open gap for Raj
-Checked EOXS for a documented salary/promotion structure — none exists, flagged as a gap
 Worked with Kirti on report automation
 Imported card in AskCruz CRM for Yashvir
 
-Confirm as-is, or edit and I'll use your version.
+Assistant: Noted the SOP line rewrite. One check: your reply only lists three lines — should the salary/promotion structure line stay in, or drop it? Confirming before I finalize.
+
+Tue 01 Sep
+Researched deeply how AskCruz differs from EOXS for RQL, made an SOP to follow in RQL, created a rubrics pack for the research agent
+Checked EOXS for a documented salary/promotion structure — none exists, flagged as a gap
+Worked with Kirti on report automation
+Imported card in AskCruz CRM for Yashvir
