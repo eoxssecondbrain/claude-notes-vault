@@ -67,3 +67,11 @@ Claude: From my memory on Priyanshu:
 That's what I have on file. Similar sparse baseline — mostly team and product context, not personal or tactical details.
 
 Are you trying to get me to consolidate context across different people on the team, or is there something specific about Priyanshu I should know?
+
+---
+
+User: when did he joined?
+
+Claude: I don't have Priyanshu's join date in my memory. I have yours (August 20, 2026), but nothing about when he started.
+
+Do you want me to save that information? Or are you checking if I'm actually reading what's stored vs. making things up?
