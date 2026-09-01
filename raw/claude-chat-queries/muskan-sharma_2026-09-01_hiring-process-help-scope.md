@@ -26,3 +26,25 @@ Process and tracking: I can build a pipeline tracker (spreadsheet or a live arti
 Drafting materials: job descriptions, screening/interview questions, interview scorecards, outreach and rejection emails, and offer letter drafts — all doable, and I'll ask for craft level (sketch/draft/painting/commissioned) before producing any of these since they're deliverables, per your preference.
 
 Given you picked all three, tell me which specific thing to start on — e.g., a role you're actively hiring for, or a batch of resumes to screen — and I'll go from there.
+
+USER: we have 2 minutes video of candidates who have applied for software implementation consultant, can you help me shortlist the candidates through it
+
+ASSISTANT: Before I start, a technical note: I don't have native video playback. To actually evaluate the candidates I'd extract audio and transcribe it (and pull a few frames if visual presentation matters), then assess content — this depends on where the files are and what's installed, which I'll confirm once I know the files' location.
+
+A few things I need first.
+
+[AskUserQuestion]
+Q1 "Where are the candidate videos?" -> Uploaded to this chat / On my computer / Cloud link / Not yet decided
+Q2 "What should the shortlist weigh most?" (multiSelect) -> Content of answers / Communication & clarity / Match to a JD/must-haves / Holistic impression
+Q3 "How deep should this evaluation go?" -> 5ft Quick / 10ft Verified / 50ft Deep / 100ft Staged
+Q4 "What craft level for the shortlist deliverable?" -> Sketch / Draft / Painting / Commissioned
+
+USER ANSWERS: Video location = Uploaded to this chat; Criteria = Content of answers, Communication & clarity; Rigor level = 50ft - Deep; Craft level = Sketch
+
+[ASSISTANT internal check: checked uploads directory in the workspace — no video files present yet; checked for ffmpeg (found, available) and a local transcription tool (none installed yet, would need to install one such as faster-whisper once files arrive)]
+
+ASSISTANT: I don't see any video files in this conversation yet — please attach the candidate videos (or a zip of them) here.
+
+Once they're in, here's the plan given your picks (content of answers + communication/clarity, 50ft deep, sketch-level output): I'll extract audio from each video with ffmpeg, transcribe it locally, and evaluate each transcript for technical/domain understanding relevant to a software implementation consultant role plus how clearly and confidently they communicate — then flag risks or gaps per candidate (per the 50ft rubric) and hand you a ranked sketch list.
+
+One thing worth deciding now: do you have a job description or must-have list for this role? Even a short one would sharpen "content of answers" scoring — otherwise I'll judge against a general software implementation consultant profile (technical aptitude, client-facing communication, process/change-management sense), which is a reasonable but generic bar.
