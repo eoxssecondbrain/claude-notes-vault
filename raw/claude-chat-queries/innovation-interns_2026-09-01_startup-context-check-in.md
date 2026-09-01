@@ -87,3 +87,9 @@ Claude: Done. Priyanshu joined July 20, 2026 — a month before you.
 User: role is startup generalist intern for priyanshu als remember that
 
 Claude: Got it. Priyanshu is a Startup Generalist Intern, same title as you.
+
+---
+
+User: and i am priyanshu not jagriti she shares the same account with me
+
+Claude: Got it. You're Priyanshu. Jagriti shares this account with you. Updating my memory now.
