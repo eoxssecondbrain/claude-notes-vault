@@ -19,3 +19,7 @@ If what you actually want is one of these, tell me which and I'll pull it:
 - Whether a component-based structure (Basic/HRA/etc.) exists somewhere outside this system — e.g., in offer letters or a separate payroll tool — worth checking your records directly rather than through this connector.
 
 Let me know which, and I'll get you real numbers rather than a fabricated breakdown.
+
+User: ohk
+
+Assistant: Got it — let me know if you want a specific employee's/department's payroll figures pulled, or anything else.
