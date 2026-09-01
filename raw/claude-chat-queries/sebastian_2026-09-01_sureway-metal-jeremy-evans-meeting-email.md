@@ -60,3 +60,21 @@ Sebastian
 Draft's above. Placeholders to fill: `[RAJ'S BOOKING LINK]` and `[JOSH'S LAST NAME]` / `[JOSH'S EMAIL]` (cc line).
 
 One thing worth double-checking before you send: Sureway's Duff Dr address confirms Calgary/Mountain, so 11:00–2:00 PM Eastern converts to 9:00 AM–12:00 PM MT — that's what's in the draft. Verify that math against whatever's actually on Raj's calendar for Thursday before sending, since I'm going off DST rules, not his live availability.
+
+User: I want to send the email to confirm the timing from Jeremy. I can book the slot for him. and I dont have Josh's last name but include it as to meet with him and Josh
+
+Assistant: [message_compose_v1 tool called with updated email draft]
+Subject: Confirming Thursday, Jeremy
+Body:
+Hi Jeremy,
+
+Great talking to you today. Just confirming Thursday works on your end — I've got Raj (our CEO) open anytime between 9:00 AM and 12:00 PM MT (that's 11:00 AM to 2:00 PM my time).
+
+Let me know what time in that window suits you and Josh, and I'll get it booked on our side.
+
+Looking forward to it.
+
+Best,
+Sebastian
+
+Updated — dropped the booking link and the Josh cc placeholder since you're handling the booking directly and don't have his last name. It now just asks Jeremy to confirm a time in the window for himself and Josh, and you book it once he replies.
