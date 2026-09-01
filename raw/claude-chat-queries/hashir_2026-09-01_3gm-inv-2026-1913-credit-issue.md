@@ -29,3 +29,9 @@ What they want from us to close the ticket:
 4. Reply on the thread with the resolution so 3GM can close it out with their customer.
 
 One limitation: I don't have a connected live Odoo instance for 3GM Steel (only Discount Pipe & Steel, Greer Steel, Sabre Alloys, and the internal EOXS Team DB are connected here), so I can't pull the actual invoice/credit ledger rows myself — everything above comes from the email note and prior wiki history, not the source invoice record. Someone with 3GM Odoo access needs to actually inspect INV/2026/1913 and its credit notes to fix this.
+
+USER: We have already connected the 3gm live mcp with you can you go through that and look into this and provide me more information about this in detail
+
+ASSISTANT: There is no 3GM Live connector available. The only Odoo live connectors present are DPS LIVE (Discount Pipe & Steel), GREER LIVE (Greer Steel), SABRE LIVE (Sabre Alloys), and TEAMEOXS LIVE (internal EOXS team DB). No 3GM instance is connected on my end, so I can't query it directly.
+
+If it's genuinely been connected, it may not be showing up in my available tools — can you confirm the exact connector name as it appears on your end? Otherwise this needs to be added on your side before I can pull the live invoice/credit records for 3GM.
