@@ -6,16 +6,30 @@ created: 2026-09-01
 updated: 2026-09-01
 ---
 
-User: Give me the salary structure of EOXS and AskCruz, including the salary components and their respective percentages/amounts. Present both salary structures separately in a simple and clear format.
+User: ohk
 
-Assistant: No formal "salary structure" document (Basic / HRA / allowances broken into percentages) exists in the system for either EOXS or AskCruz. Two things to flag before I give you what actually exists:
+Assistant: Got it — let me know if you want a specific employee's/department's payroll figures pulled, or anything else.
 
-AskCruz is not a separate company. It's an EOXS product (an internal knowledge-assistant tool), operated by EOXS with its own product/architecture docs — but no separate legal entity, no separate payroll. There is no "AskCruz salary structure" to produce, because AskCruz employees are EOXS employees.
+User: Analyze Isha complete work details and performance. Review her assigned tasks, completed work, deliveries, deadlines, productivity, and overall contribution. Calculate how many deliverables she has completed, identify any pending or delayed tasks, and evaluate her overall performance based on the available data. Provide the findings in a clear, structured summary with key strengths, concerns, and an overall performance assessment.
+Continue from where you left off.
+Continue from where you left off.
 
-What does exist for EOXS is a raw monthly payroll register (asset: "EOXS Salary Details," tier2_confidential), not a structured CTC breakdown. It lists actual amount paid per employee per month (Aug 2023 through mid-2026, in USD and INR), organized by department (Product, Accounts, Clicking, Contract, Mkt/Ops, AI Innovation Cell, Startup Cell, Support, Software Interns, etc.). There's no Basic/HRA/allowance/bonus component split anywhere in it — just one lump figure per person per month. So there's nothing to convert into "components and percentages" without inventing a structure that isn't documented.
+Assistant: [No response given]
 
-If what you actually want is one of these, tell me which and I'll pull it:
-- Current monthly salary for a specific employee or department, from the payroll register (real figures, not percentages, since the register doesn't break pay into components).
-- Whether a component-based structure (Basic/HRA/etc.) exists somewhere outside this system — e.g., in offer letters or a separate payroll tool — worth checking your records directly rather than through this connector.
+User: What askcruz
 
-Let me know which, and I'll get you real numbers rather than a fabricated breakdown.
+Assistant: AskCruz is an EOXS product, not a separate company. It's an AI-powered internal knowledge assistant/platform — it ingests EOXS's business data (email, calls, client implementation records, etc.), synthesizes it into a searchable "second brain," and answers questions through natural-language chat, respecting access-tier permissions (general / confidential / Raj-personal).
+
+Status: currently in internal pilot use at EOXS, plus one external client (3GM) mid-implementation. It's built to be industry-agnostic, not limited to EOXS or steel.
+
+Since it's an EOXS product, not a separate legal entity, it has no employees, payroll, or performance data of its own — that's why there's no "AskCruz salary structure" or "AskCruz staff performance" to pull, separate from EOXS's own.
+
+User: How its work for HR
+
+Assistant: For HR specifically, AskCruz's access is tier2_confidential — Company-Confidential level, with a defined restriction layer:
+
+HR gets visibility into confidential company data (salary/payroll, personnel matters, legal, financials) — that's the tier this connection itself runs on. But there's a content-based filter on top: salary, compensation, incentive, and bonus figures stay fully visible to HR (that's core to the clearance), while every other kind of dollar figure — client billing, invoice totals, deal sizes, vendor payments, investor/fundraising numbers — gets stripped and shown as [restricted], even inside an otherwise-visible document.
+
+What HR does NOT get: tier1 — Raj's personal data (personal finances, personal taxes, family/personal-life matters unrelated to company business). A "not found" from AskCruz means either the record doesn't exist, or it exists but is above HR's clearance — it returns the same response either way, by design, so no one can probe for restricted content by trial and error.
+
+Practically, for HR this means: full access to employee records, salary/payroll data, onboarding/offboarding history, disciplinary or performance-related communications, and general company-confidential material — searched across the same email/calls/wiki/implementation-task sources, with non-salary monetary figures redacted and Raj's personal matters invisible.
