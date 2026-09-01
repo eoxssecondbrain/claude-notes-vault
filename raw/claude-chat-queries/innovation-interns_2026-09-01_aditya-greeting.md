@@ -66,3 +66,49 @@ What does your role actually involve?
 4. **What do you typically need help with from me?** (Code review, brainstorming, research, writing, strategy, debugging, something else?)
 
 Pick whichever ones matter most, or hit all of them. Just want the high-value stuff that'll let me actually help.
+
+---
+
+**User:** i am working on backend developer
+
+**Assistant:** Got it — but let me clarify a few things:
+
+1. **Is the backend work for teams.askcruz.com, or something else?** (The profile said you were on the frontend project board, so this might be new or different.)
+
+2. **What's the tech stack?** (Languages, frameworks, databases — what are you actually building with?)
+
+3. **What specific backend areas?** (APIs, authentication, databases, services, infrastructure, something else?)
+
+4. **Are you doing backend exclusively, or both backend and frontend?**
+
+These details matter for me to actually help when you need it.
+
+---
+
+**User:** just remember as backend work
+
+**Assistant:** Noted. Updating now.
+
+---
+
+**User:** ok now provide detail about aditya
+
+**Assistant:** Here's what I have on file for Aditya:
+
+**Name:** Aditya Yadav
+
+**Joined:** July 28, 2026 (so you've been here about a month)
+
+**Role:** Startup Generalist Intern at AskCruz
+
+**Current Focus:** Backend development
+
+That's it. The file is thin. To actually be useful to you, I'd need more:
+
+- Tech stack/languages you're using
+- Specific problems you're solving
+- Your background (where you're coming from, relevant experience)
+- What you want to get better at
+- How I can actually help you (code review? debugging? architecture discussion? something else?)
+
+Want to fill any of that in, or are you good with what's there for now?
