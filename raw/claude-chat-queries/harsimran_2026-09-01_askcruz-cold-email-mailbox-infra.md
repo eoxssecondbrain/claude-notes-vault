@@ -6,7 +6,7 @@ created: 2026-09-01
 updated: 2026-09-01
 ---
 
-th# Thread: askcruz-cold-email-mailbox-infra
+# Thread: askcruz-cold-email-mailbox-infra
 
 ## User (turn 1)
 i want to buy 50 emails for bulk cold emailing , my budget is 50 dollar and i have 50 different domains
@@ -22,11 +22,10 @@ Here's where the market actually sits for ~50 mailboxes, since you already own t
 
 [Comparison card rendered — "Realistic mailbox-provider pricing for 50 domains against a $50 budget"]
 
-| Provider | Price | Mailboxes for that price | Per-mailbox cost | Bring your own domain | Warmup | Infrastructure |
-|---|---|---|---|---|---|---|
-| Winnr (Startup plan) | $69/mo | 50 | $1.38 | Free | $0.60/mailbox/mo add-on | Custom SMTP, shared IP |
-| Mailforge | $100-150/mo (raw) | 50 | $2-3 | Not confirmed free | Add-on (~$200/mo total w/ warmup) | Shared-IP SMTP |
-| InboxKit (Agency plan) | $164/mo | 30 base + 20 extra | ~$3.25 avg | Not confirmed free | Included | Managed SMTP + monitoring |
+Provider | Price | Mailboxes for that price | Per-mailbox cost | Bring your own domain | Warmup | Infrastructure
+Winnr (Startup plan) | $69/mo | 50 | $1.38 | Free | $0.60/mailbox/mo add-on | Custom SMTP, shared IP
+Mailforge | $100-150/mo (raw) | 50 | $2-3 | Not confirmed free | Add-on (~$200/mo total w/ warmup) | Shared-IP SMTP
+InboxKit (Agency plan) | $164/mo | 30 base + 20 extra | ~$3.25 avg | Not confirmed free | Included | Managed SMTP + monitoring
 
 Before I recommend one and finalize a plan, I need three things clarified:
 
@@ -73,6 +72,24 @@ Winnr (winnr.app), Startup plan.
 
 Reasons: cheapest verified per-mailbox rate ($1.38), it's the only one of the three that lets you bring your own domains for free (you already own the 50, so this matters directly), and it's SMTP with a documented API if you want to automate later.
 
-What to actually buy at $50/month recurring: 25 mailboxes with warmup included, not 50. That's $49.50/month (25 × $1.98, where $1.98 = $1.38 mailbox + $0.60 warmup). Don't buy the mailbox without the warmup add-on — an unwarmed mailbox on a fresh domain gets flagged fast and you'll have wasted the spend.
+What to actually buy at $50/month recurring: 25 mailboxes with warmup included, not 50. That's $49.50/month (25 x $1.98, where $1.98 = $1.38 mailbox + $0.60 warmup). Don't buy the mailbox without the warmup add-on — an unwarmed mailbox on a fresh domain gets flagged fast and you'll have wasted the spend.
 
 If you want all 50 domains live instead of 25, the real number is about $99/month, not $50.
+
+(Note: an earlier save_chat_transcript call in this turn errored; the retry succeeded and this file reflects the full transcript through turn 3.)
+
+## User (turn 4)
+if a buy mails from spaceship , will it be good for cold email outreach and and will be pricing for 50 mail s
+
+## Assistant (turn 4)
+Spaceship (the domain registrar) itself doesn't do email inboxes — it's the wrong tool. But their email product, Spacemail, does real IMAP/SMTP mailboxes on your existing domains, and it's actually cheaper than Winnr on raw dollars: roughly $0.50-0.90 per mailbox depending on tier, which puts 50 mailboxes at about $25-45/month — under your $50 budget with room to spare.
+
+The catch, and it's a real one: Spacemail is built for normal business email, not cold outreach. Independent reviews are explicit that it doesn't provision inboxes for cold sending, doesn't set up SPF/DKIM/DMARC automatically, and has no warmup or deliverability monitoring — you get basic DNS management and have to configure all of that by hand, per domain, yourself. That's real work across 50 domains, and if you skip it or rush it, you'll burn through your domains fast since nothing is enforcing safe daily send caps or watching for spam-flag spikes.
+
+So the actual tradeoff:
+
+Spacemail: cheaper ($25-45/mo), but you own 100% of the SPF/DKIM/DMARC setup and warmup schedule manually, with no deliverability safety net.
+
+Winnr: costs more ($49.50/mo for 25 warmed mailboxes, as laid out in turn 3), but authentication and warmup are handled for you automatically — which is the entire point of paying a cold-email-specific provider instead of a generic email host.
+
+Given you're doing this for AskCruz and deliverability is the actual bottleneck toward $1M ARR, not the $20-25/month difference, I'd still put you on Winnr. Spacemail only makes sense if you or someone on your team is going to properly own manual DNS + warmup discipline across 50 domains — and if that work slips, you've spent the money and burned the domains anyway.
