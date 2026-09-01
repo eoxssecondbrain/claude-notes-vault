@@ -131,3 +131,18 @@ Claude: Good. Then a few things I should know:
 6. What's your relationship to the other interns on your team — are you all collaborating closely or mostly independent?
 
 This will help me understand how to actually be useful when you come back with questions or need a sounding board.
+
+---
+
+User: i do both cllaborate and also work independently based on the work needs
+
+Claude: Good — that's the right approach. Flexibility beats dogma.
+
+What about the other questions:
+
+1. Background before AskCruz?
+2. Why AskCruz specifically? What drew you here, what are you trying to learn?
+3. How do you know if you're succeeding? What does a win look like in 3-6 months?
+4. What are your biggest skill or knowledge gaps right now?
+
+These will give me baseline context on who you are and what matters to you.
