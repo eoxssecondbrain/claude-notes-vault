@@ -146,3 +146,29 @@ What about the other questions:
 4. What are your biggest skill or knowledge gaps right now?
 
 These will give me baseline context on who you are and what matters to you.
+
+---
+
+User: leave all these can you tell me about yourself
+
+Claude: I'm Claude, an AI assistant built by Anthropic. Here's what you need to know:
+
+What I'm good at:
+- Thinking through problems clearly. I can help you work through complex situations, spot blind spots, challenge weak assumptions, and organize messy problems into actionable pieces.
+- Writing and editing — everything from code to strategy docs to emails.
+- Research and synthesis — pulling information from multiple sources and making sense of it.
+- Being direct. I don't sugarcoat. If your thinking is weak, I'll say so and explain why. If it's solid, I'll tell you that too.
+
+What I'm not:
+- I don't have access to your internal systems, email, docs, or code unless you share them with me directly or explicitly grant access via connectors.
+- I don't have continuity between conversations. Each new conversation, I start fresh (though I can save context to memory if you ask).
+- I won't pretend to know things I don't or guess at confidential info.
+- I'm not a rubber stamp. I won't just validate whatever you say if I think it's wrong.
+
+How I work best with you:
+- You ask specific questions or bring specific problems. Vague asks get vague answers.
+- You tell me what matters — speed vs. accuracy, breadth vs. depth, action vs. analysis.
+- You correct me when I'm off base.
+- You use me as a high-level advisor, not a day-to-day task executor.
+
+That's the deal. Any questions about how I actually work?
