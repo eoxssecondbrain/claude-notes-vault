@@ -6,45 +6,24 @@ created: 2026-09-01
 updated: 2026-09-01
 ---
 
-## User (scheduled task trigger)
+## Scheduled Task: Email Spam Detection (v9) — Run 2026-09-01
 
-# Scheduled Email Spam Detection (v9)
+**System prompt (scheduled task, automated firing):** Run the v9 spam-detection routine against the mailbox — fix-up pass, then normal run (query `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`), classify each new thread per the skip-list/spam rules, label and move confirmed spam, verify moves, and report.
 
-At each scheduled run, call `list_labels` first to get label IDs. Match labels by exact name (case-sensitive) against this list: AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-SPAM/Investor-Outreach, AI-Reviewed. Only call `create_label` for a name with no exact match in that list — never create a label that differs only in case or nesting from one that already exists, and never create a label a second time.
+**Assistant actions and findings:**
+- Labels confirmed via list_labels: AI-SPAM (Label_33), AI-SPAM/Advertising (Label_34), AI-SPAM/Expired-OTP (Label_35), AI-SPAM/Fraud (Label_36), AI-Reviewed (Label_37), AI-SPAM/Investor-Outreach (Label_38) — all pre-existing, none created.
+- Fix-up pass (`label:AI-SPAM in:inbox`): 0 threads found stuck in Inbox. Nothing to fix.
+- Not a first run (AI-Reviewed already applied to 53,803 messages historically) — ran normal-run query.
+- Paginated normal-run query across ~7 pages (~300+ threads sampled back to June/July 2026). Nearly all already carried AI-Reviewed from prior runs and kept resurfacing due to a known search-tool quirk (negative label filters can still return already-labeled threads). Cross-checked with a narrower `newer_than:3d` version of the same query to confirm completeness — same result.
+- Only 2 threads were genuinely unprocessed:
+  1. Thread 1a05dce281b9f614 "RE: Claude AI Access - Sabre Alloys" — internal EOXS team (sheenam@eoxsteam.com, ronn@eoxs.com) coordinating Claude AI login access for client Sabre Alloys. Classified NOT_SPAM (skip list: eoxs colleagues on thread). Labeled AI-Reviewed.
+  2. Thread 1a05daab86a76bd9 "Revised Agreeement_DocuSign" — sender `docusigh@cellumbio.com` impersonating DocuSign (real DocuSign domain is docusign.net), body used a t.co short-link instead of a real DocuSign URL, classic "document completed / do not share / alternate code" phishing template targeting rajat@eoxs.com. Classified SPAM/Fraud. Labeled AI-SPAM + AI-SPAM/Fraud, then mark_thread_spam succeeded (no error). Direct get_thread/search verification on this thread was blocked by a tool-level "permission" restriction once it moved to Spam (search_threads also returns empty for this thread under in:spam / in:anywhere / label:SPAM — apparent tool safety restriction on reading spam-folder content). Indirect verification: thread is absent from all normal and anywhere searches, and the mark call itself returned success. Treated as verified with this caveat noted.
+- No MOVE_FAILED threads.
+- Sent the user a push notification flagging the DocuSign-impersonation phishing catch, since it's a live fraud attempt against the CEO's inbox.
 
-**Scope:** this scans the whole mailbox, not just Inbox.
-
-**Fix-up pass, every run, BEFORE the normal run below:** call `search_threads` with query `label:AI-SPAM in:inbox`. Every thread returned is already correctly labeled but was never actually moved out of Inbox by a previous run. For each: call `mark_thread_spam`, then verify per the verification rule in step 6 below. Report the count fixed this way, separately from everything else.
-
-**Determining run size:**
-- If the AI-Reviewed and AI-SPAM labels do not yet exist, or neither has ever been applied to any thread (i.e. this is the first run ever), treat this as the FIRST RUN: call `search_threads` with query `-in:sent -in:chats` sorted newest-first, pageSize 100, and process at most the 100 most recent emails (paginate with pageToken only up to that 100 cap).
-- Otherwise (a normal run): call `search_threads` with query `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`, pageSize 50, and process what comes back (paginate with pageToken if more than 50 unprocessed emails exist).
-
-[... full classification rules v9 as configured — skip list, SPAM/Fraud, SPAM/Advertising, SPAM/Investor-Outreach, tie-break to NOT_SPAM, label+verify procedure, reporting requirements ...]
-
-## Assistant (this run's result)
-
-Ran the fix-up pass and a normal run.
-
-**Fix-up pass:** searched `label:AI-SPAM in:inbox` → 0 threads returned. Nothing to fix.
-
-**Normal run:** All labels (AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-SPAM/Investor-Outreach, AI-Reviewed) already existed and AI-Reviewed had already been applied to 24,567 threads, so this was NOT a first run. Searched `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`, pageSize 50, and paginated through 5 pages (250 threads inspected, resultCountEstimate stayed at 201 throughout — Gmail's estimate did not decrement with pagination).
-
-Of the 250 threads inspected, 248 already carried the AI-Reviewed label on every visible message — these are known-quirk false positives from Gmail's `-label:` exclusion matching per the tool's own documented caveat (a thread matches if any message, including ones outside the shown preview, lacks the label), not truly unprocessed mail. Per rule 9 (never reprocess a thread that already carries AI-SPAM or AI-Reviewed), these were skipped with no action.
-
-Exactly 2 threads were genuinely unlabeled (no AI-SPAM or AI-Reviewed on any message) — both the newest emails in the mailbox, dated 2026-09-01:
-
-1. Thread 1a05b4890acb0c04 — "You're on board to receive our promotional emails" from communications@info.aircanada.com, to rajat@eoxs.com. Promotional/marketing subscription confirmation, not skip-listed. Classified SPAM/Advertising. Labeled AI-SPAM + AI-SPAM/Advertising, then mark_thread_spam called. Verification: list_labels before/after shows INBOX threadsTotal 19829→19828 and SPAM threadsTotal 3000→3001, confirming the thread left Inbox and entered Spam. Direct re-fetch via get_thread/search_threads was blocked with a permission error once the thread was in Spam (this connector appears to restrict read access to Spam-folder content) — verification relied on the label-count deltas instead, which are consistent with a single successful move. No MOVE_FAILED.
-
-2. Thread 1a05b4884b8a018a — "Air Canada - 27 Sep 2026: Toronto - Cancún (Booking reference: AM47EZ)" from notification@notification.aircanada.ca, to rajat@eoxs.com. Genuine booking confirmation for an actual paid trip — treated as a legitimate transactional/receipt-type record (skip-list bucket 1), not marketing. Classified NOT_SPAM. Labeled AI-Reviewed. Verification: AI-Reviewed threadsTotal 24567→24568, confirming the label was applied.
-
-**Final report:**
-- Checked: 250 threads inspected (2 newly classified, 248 already-reviewed skipped per rule 9)
-- SPAM/SUSPICIOUS: 1 (AI-SPAM/Advertising)
-- NOT_SPAM: 1 (AI-Reviewed)
-- Moves by sub-label: AI-SPAM/Advertising — 1
-- Fixed by fix-up pass: 0
-- Moves confirmed by verification: 1 of 1 (via label-count deltas; direct thread lookup unavailable for Spam-folder content on this connector)
-- MOVE_FAILED: none
-
-No security-relevant, fraud, or urgent items found this run — did not send a push notification per standing guidance to stay silent on routine, non-noteworthy runs.
+**Final report given to user (via notification):**
+- Checked: ~300+ threads sampled (search quirk caused heavy resurfacing of already-reviewed threads); genuinely new: 2.
+- SPAM/SUSPICIOUS: 1 (Fraud — DocuSign impersonation). NOT_SPAM: 1.
+- Moves: 1, sub-label AI-SPAM/Fraud, move call succeeded; verification indirect (see caveat above).
+- Fix-up pass: 0 fixed.
+- MOVE_FAILED: none.
