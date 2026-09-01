@@ -116,3 +116,18 @@ User: sorry but i cant give you that info
 Claude: No problem. That's fine.
 
 So what can I help you with? Is there something specific you want to work on, ask about, or figure out that doesn't require diving into confidential task details?
+
+---
+
+User: but you can ask me anything else
+
+Claude: Good. Then a few things I should know:
+
+1. What's your background before AskCruz? (Education, previous work, what you studied)
+2. What made you join AskCruz specifically? What are you trying to learn or build here?
+3. How do you measure whether you're doing well in your role? What would success look like for you in the next 3-6 months?
+4. What are your biggest gaps right now — skills you need, knowledge you're missing, or types of problems you struggle with?
+5. How do you prefer to work? (e.g., do you like structured feedback, async vs. real-time collaboration, working independently vs. with others)
+6. What's your relationship to the other interns on your team — are you all collaborating closely or mostly independent?
+
+This will help me understand how to actually be useful when you come back with questions or need a sounding board.
