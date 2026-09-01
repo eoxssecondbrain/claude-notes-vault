@@ -224,3 +224,17 @@ Sales, Operations, customer-facing teams, leadership, and new employees all use 
 - Every user doesn't necessarily see the same information (access is role-aware)
 
 Does this help clarify what AskCruz does?
+
+---
+
+User: what are the open issues we are facing?
+
+Claude: I need to clarify what you're asking about:
+
+1. Are you asking about open issues or problems with the AskCruz product itself (known bugs, feature gaps, deployment issues)?
+
+2. Are you asking about open issues specific to the teams.askcruz.com frontend work that you and your team are focused on?
+
+3. Are you asking about business or operational challenges facing AskCruz as a product or company?
+
+Which one?
