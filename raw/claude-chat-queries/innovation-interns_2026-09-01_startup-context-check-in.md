@@ -321,3 +321,26 @@ There's an August 13, 2026 call recorded: "Sabre Alloys - AI Transformation Prop
 1,482 emails on file. Recent threads involve PO receiving (PR7560), billing issues, and quote handling.
 
 Why the interest in Sabre Alloys? Are you involved with their implementation or support?
+
+---
+
+User: okay do you have any info on brannon?
+
+Claude: I tried to look up Brannon in the system, but the access wasn't approved. 
+
+Do you want me to search for Brannon? Or is there something specific about them you're asking about?
+
+---
+
+User: do you have performence report on priyanshu?
+
+Claude: No, I don't have access to employee performance data. That's restricted at the system level — performance monitoring and evaluation records aren't accessible through the data I can query, and they're excluded for privacy reasons.
+
+What I do have on file about Priyanshu is just the basics:
+- Name: Priyanshu Sinha
+- Joined: July 20, 2026
+- Role: Startup Generalist Intern at AskCruz
+- Focus: Frontend project board for teams.askcruz.com
+- Work style: Both collaborative and independent based on work needs
+
+If you need performance details on Priyanshu, you'd need to go through your manager or HR directly.
