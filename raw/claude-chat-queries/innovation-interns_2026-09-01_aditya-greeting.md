@@ -143,3 +143,36 @@ Also, are you interested in:
 - Something else?
 
 Just want to avoid the wrong level of detail.
+
+---
+
+**User:** [uploaded file: excerpt_from_previous_claude_message.txt]
+
+ans both
+
+**Assistant:** Good. Here's what I know:
+
+**EOXS for AskCruz:**
+
+We have access to two EOXS systems:
+
+1. **eoxs-db** — our curated second brain. It has:
+   - All emails and calls (deep history + live ingestion on a 2-hour sweep)
+   - Implementation tasks (the Odoo onboarding/dev Kanban)
+   - Wiki pages (synthesized knowledge)
+   - Client profiles and contacts
+   - Internal reference docs (SOPs, company overview, salary register, product specs)
+
+2. **eoxs-teams** — EOXS Team Live Odoo database (live/current). It has:
+   - Support tickets
+   - Invoices and sales orders
+   - CRM, pipeline, and prospect data
+   - All the operational/transactional records
+
+These two systems are how we store and access business data, correspondence, implementation work, and client information.
+
+**EOXS as a broader system/product:**
+
+Honestly, I don't have a clear picture of what EOXS is beyond being the infrastructure we're using. I know it's Odoo-based in parts and has this two-layer approach (curated + raw), but I don't have the strategic context about what EOXS is as a company/product or how it fits into the larger landscape.
+
+Want me to dig into something specific about how EOXS works, or do you have different context about what EOXS actually is?
