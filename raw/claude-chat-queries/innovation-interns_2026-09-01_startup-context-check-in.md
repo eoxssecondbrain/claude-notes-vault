@@ -93,3 +93,18 @@ Claude: Got it. Priyanshu is a Startup Generalist Intern, same title as you.
 User: and i am priyanshu not jagriti she shares the same account with me
 
 Claude: Got it. You're Priyanshu. Jagriti shares this account with you. Updating my memory now.
+
+---
+
+User: im working on several tasks right now
+
+Claude: What are they? I need to understand what you're focused on to give useful guidance.
+
+Specifically:
+
+1. What are the main tasks/projects on your plate right now?
+2. How are they prioritized — what's most urgent vs. most important?
+3. What's the current blocker or friction point, if any?
+4. What metrics or outcomes are you measuring progress against?
+
+Give me the high-level picture first, then we can drill into specifics.
