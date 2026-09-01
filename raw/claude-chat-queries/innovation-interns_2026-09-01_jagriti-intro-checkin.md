@@ -15,3 +15,15 @@ Since this is a new thread, per your standing instructions I should check the th
 User: im Jagriti chowdhury
 
 Assistant: [Confirmed identity as Jagriti Chowdhury; updated memory profile name from "Jagriti" to "Jagriti Chowdhury"; loaded threads-ov skill as required for new thread per user preference.]
+
+User: what do you know about me
+
+Assistant: From your profile: you're Jagriti Chowdhury, joined AskCruz August 20, 2026 as a Startup Generalist Intern, working on the project board for the frontend of teams.askcruz.com. That's everything on file for you specifically — nothing else stated yet.
+
+User: what do you know about aditya?
+
+Assistant: Aditya Yadav — joined July 28, 2026, Startup Generalist Intern, works on backend development.
+
+User: I want to update one thing that Jagriti doesn't work for the frontend. she works for the backend just like Aditya
+
+Assistant: Updated — you're now on file as backend, same as Aditya, not frontend.
