@@ -390,3 +390,98 @@ Concrete implication: GA cannot be block-studied later. It needs a 20-minute dai
 Sources: mahendras (2024 and 2025 Mains GA composition and good attempts), careerpower and bankersadda (2025 Mains, 28 Dec, actual GA questions recalled), oliveboard and practicemock and affairscloud (current-affairs window, banking-awareness weighting, topic-wise expectations across IBPS Mains papers).
 
 Next: Section 5 — Computer Knowledge, 20 marks that most candidates leave half-prepared despite it being the second-most time-efficient block in the paper.
+
+Say "next" for Section 5 — Computer Knowledge.
+
+## User
+
+next
+
+## Assistant
+
+Section 5 — Computer Knowledge (40 Q, 20 marks, 0.5 per question)
+
+1. Weightage & PYQ flag
+
+Confidence caveat first: unlike Reasoning and Quant, no source publishes per-topic question counts for this section. Analyses give topic lists and qualitative weightage only. The counts below are inferred from the 2025 recalled-question list plus adjacent IBPS PO Mains data — treat them as directional, not precise.
+
+| Topic | Est. Q | Marks | Flag |
+|---|---|---|---|
+| Computer fundamentals, hardware, memory | 8–10 | 4–5 | 🔥 HIGH WEIGHTAGE - Must Do |
+| Networking & Internet (protocols, devices, topologies) | 6–8 | 3–4 | 🔥 HIGH WEIGHTAGE - Must Do |
+| Cyber security & malware | 5–7 | 2.5–3.5 | 🔥 HIGH WEIGHTAGE - Must Do |
+| MS Office (Word, Excel, PowerPoint) | 5–7 | 2.5–3.5 | ⚡ MODERATE |
+| Operating systems | 4–5 | 2–2.5 | ⚡ MODERATE |
+| DBMS | 3–4 | 1.5–2 | ⚡ MODERATE |
+| Abbreviations, generations, banking tech | 4–6 | 2–3 | ⚡ MODERATE |
+
+Actual 2025 Mains questions recalled by candidates: phishing, spyware, ransomware, SMTP, which memory has the shortest access time, WORM, which is not non-volatile (magnetic tape), Wireless USB belongs to which network type, which equipment speeds up the computer, which is system software, anti-virus, arithmetic and logical operations, function of the control unit, and a table-combination symbol. That list maps cleanly onto the six areas above.
+
+Difficulty: rated easy to moderate in both 2024 and 2025, with good attempts of 19–23 in 2024 and 19–32 in 2025 depending on source. It is the easiest section in the paper by consensus.
+
+2. Core concepts
+
+Memory and hardware
+- Hierarchy by speed: registers → cache → RAM → secondary storage. Shortest access time is registers, then cache.
+- Volatile: RAM (SRAM in cache, DRAM as main memory). Non-volatile: ROM, HDD, SSD, flash, magnetic tape, optical disc.
+- WORM = write once, read many (CD-R and similar optical media).
+- CPU parts: ALU performs arithmetic and logical operations; the control unit directs and sequences data flow but performs no computation; registers hold operands.
+- Units: bit → nibble (4) → byte (8) → KB → MB → GB → TB → PB → EB → ZB → YB.
+- Generations: vacuum tubes → transistors → integrated circuits → microprocessors → AI.
+
+Software
+- System software: OS, compilers, assemblers, device drivers, utilities (anti-virus is a utility, and therefore system software). Application software is everything user-facing.
+- Compiler translates the whole program at once and executes faster; interpreter goes line by line; assembler converts assembly to machine code.
+
+Networking
+- Scope: PAN → LAN → MAN → WAN. Bluetooth and Wireless USB are wireless PAN.
+- Devices by layer: repeater and hub at layer 1, switch and bridge at layer 2, router at layer 3, gateway across layers, modem for modulation.
+- Topologies: bus, star, ring, mesh, tree.
+- OSI has seven layers; TCP/IP has four.
+- Protocols and ports worth memorising: HTTP 80, HTTPS 443, FTP 20/21, SMTP 25 (sending mail), POP3 110, IMAP 143, DNS 53, Telnet 23, DHCP 67/68.
+- IPv4 is 32-bit, IPv6 is 128-bit.
+
+Security
+- Virus attaches to a host file; worm self-replicates without a host; trojan disguises itself; ransomware encrypts and demands payment; spyware monitors covertly; keylogger records keystrokes; rootkit hides privileged access; botnet is a network of compromised machines.
+- Social engineering variants: phishing (email or fake site), spear phishing (targeted), vishing (voice), smishing (SMS), pharming (DNS redirection).
+- Defences: firewall, anti-virus, encryption (symmetric uses one key, asymmetric uses a key pair), digital signature, SSL/TLS, two-factor authentication.
+
+MS Office
+- Extensions: .docx, .xlsx, .pptx.
+- Universal shortcuts: Ctrl + C/V/X/Z/Y, B/I/U, F/H, N/S/P; F7 for spell check.
+- Excel specifics: F2 edits a cell, Alt + = inserts autosum, Ctrl + ; inserts the date, $ makes a reference absolute, freeze panes locks headers. COUNT counts numbers, COUNTA counts non-empty cells. VLOOKUP, IF, CONCATENATE.
+- PowerPoint: F5 starts the slideshow from the beginning.
+
+DBMS
+- Command families: DDL (CREATE, ALTER, DROP, TRUNCATE), DML (SELECT, INSERT, UPDATE, DELETE), DCL (GRANT, REVOKE), TCL (COMMIT, ROLLBACK, SAVEPOINT).
+- Keys: primary, foreign, candidate, unique, composite.
+- Terminology: table = relation, row = tuple or record, column = attribute or field. Normal forms 1NF, 2NF, 3NF.
+
+Operating systems
+- Functions: process, memory, file, and device management.
+- Types: batch, multiprogramming, time-sharing, real-time, distributed.
+- Concepts: scheduling (FCFS, SJF, round robin), deadlock, virtual memory and paging.
+
+Banking technology (overlaps GA, so it double-counts)
+- NPCI stable: UPI, IMPS, RuPay, BHIM, AePS, NACH, FASTag. Also NEFT, RTGS, CTS, SWIFT, CBS, CBDC.
+- IFSC is 11 characters, MICR is 9 digits.
+
+3. Golden rules of attempting
+
+Rule 1 — Computer goes second, immediately after GA, capped at 10–12 minutes. Both are pure-recall sections; front-loading them banks ~35 marks in about 20 minutes and leaves 100 minutes for the three solving sections.
+
+Rule 2 — 20-second ceiling per question, no exceptions. If the term is unfamiliar, move on. Reasoning your way to a computer answer almost never works and always costs time.
+
+Rule 3 — guess more aggressively here than anywhere else. A wrong answer costs 0.125, the cheapest penalty in the paper, against 0.3125 in Reasoning and Quant. Eliminating even one option makes a guess positive-value here.
+
+Target: 28–34 attempts at ~90% accuracy, giving 13–16 of 20.
+
+Why this section is mispriced
+
+Twenty marks looks small, so candidates skip it. But the syllabus is finite, static, and has no year-to-year variance — roughly 15–20 hours of preparation caps out the section permanently. The same 15 marks in Quant costs an order of magnitude more time and still carries difficulty risk each year.
+
+The correct framing is not that Computer wins you merit — it can't, it's capped at 20. It's that Computer plus GA together are 60 marks obtainable in about 20 minutes of exam time and a fixed, bounded prep investment. Locking those two down is what makes a 110+ total arithmetically possible without needing 40/50 in Quant.
+
+Sources: adda247 and oliveboard (2025 Mains, 28 Dec, Computer topic areas and difficulty), bankersadda (2025 Mains recalled question list), adda247 and pw.live (2024 Mains good attempts), prepgrind (IBPS PO Mains 2022–2024 computer topic weightage, adjacent exam, used only for distribution shape).
+
+Next: Section 6 — English Language, where three Reading Comprehension sets have carried the section in both recent Mains papers.
