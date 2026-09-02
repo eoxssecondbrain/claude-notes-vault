@@ -35,3 +35,13 @@ Two real gaps, not cosmetic ones
 One thing I'd push back on
 
 Danish built a genuinely rigorous qualification system for a company with ~$84K ARR run-rate against a $1M/12-month target. That's not wrong to build — bad qualification wastes intern hours on dead leads — but it's worth asking whether the highest-leverage next step is refining who counts as qualified, or converting the qualified prospects already sitting in the pipeline (Collier Metals, Leeco Steel, Harbor Pipe, Sabre/3GM expansion). This SOP doesn't cost you anything since it's Danish's lane, not yours — but if RQL throughput isn't currently the bottleneck to $1M ARR, this is optimization on the wrong constraint.
+
+USER: I just want to make sure that my sales and marketing team are fed with good fuel.
+
+ASSISTANT: The logic in the SOP is sound — that's not what determines whether fuel is good. Two things actually will:
+
+Enrichment execution, not criteria. Danish's SOP tells someone what to check. It doesn't guarantee it gets checked consistently across whoever's running RQL day to day — interns, Danish, whoever. A well-designed gate applied inconsistently produces the same noisy pipeline as no gate.
+
+CRM reliability is your real bottleneck, not qualification logic. Real deal activity for your advanced prospects already lives in email and calls, not the CRM. If that's true upstream, it'll be true downstream too — sales gets fed whatever made it into the CRM cleanly, which per your own pattern is not where the signal actually lives.
+
+So: good SOP, untested thresholds, and the fuel-quality question is really "is Data Enrichment output making it into a place sales actually trusts and uses" — not "is the qualification bar right." Worth checking with Danish whether qualified leads are landing somewhere sales checks daily, or somewhere that gets bypassed the way CRM already is for deal tracking.
