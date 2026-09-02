@@ -6,7 +6,7 @@ created: 2026-09-02
 updated: 2026-09-02
 ---
 
-USER:
+**User (scheduled task prompt):**
 This is an hourly automated check of the EOXS implementation task board (EOXS_Data_General MCP connector, the "eoxs-db" implementation_tasks tools). This session starts fresh with no memory of prior runs — follow this instruction exactly, without asking any clarifying questions.
 
 1. Call list_implementation_tasks(stage="Functional QA") with no client filter, to get every task currently sitting in the Functional QA stage, across all clients.
@@ -18,7 +18,12 @@ This is an hourly automated check of the EOXS implementation task board (EOXS_Da
 7. If no tasks moved into Functional QA in the last 60 minutes, say so in one short line and stop — do not invent findings or repeat something from a previous run.
 8. If the EOXS_Data_General connector or its tools are unavailable, or a call errors out, state that plainly in the final response instead of retrying repeatedly.
 
-ASSISTANT:
-No tasks moved into Functional QA in the last 60 minutes (checked at 2026-09-02 13:39 UTC; all 3 tasks currently in that stage — Sticker Descriptions - Bug, Customer Statement - Bug, Payment Sent Emails on Bill Payment, all for Discount Pipe & Steel — last entered the stage back on 2026-07-23).
+**Assistant (this run):**
+Checked list_implementation_tasks(stage="Functional QA") — 3 tasks currently in that stage, all for client discount-pipe-steel:
+- 30585 "Sticker Descriptions - Bug" — last entered Functional QA at 2026-07-23 12:07:20 UTC
+- 30583 "Customer Statement - Bug" — last entered Functional QA at 2026-07-23 12:06:15 UTC
+- 30555 "Payment Sent Emails on Bill Payment" — last entered Functional QA at 2026-07-23 12:06:57 UTC (re-entered after a brief detour back to Assigned/Code QA in mid-June)
 
-[Detail on the check performed: list_implementation_tasks(stage="Functional QA") returned 3 tasks, all client "discount-pipe-steel" (Discount Pipe & Steel): id 30585 "Sticker Descriptions - Bug" (owner Nijamuddin, High priority), id 30583 "Customer Statement - Bug" (owner Nijamuddin, Normal priority), id 30555 "Payment Sent Emails on Bill Payment" (owner Nijamuddin, Normal priority). get_implementation_task was called for each; the most recent stage_change event with new value "Functional QA" was: task 30585 at 2026-07-23 12:07:20 UTC; task 30583 at 2026-07-23 12:06:15 UTC; task 30555 at 2026-07-23 12:06:57 UTC (task 30555 had an earlier Functional QA entry on 2026-06-12 that was reverted to Assigned on 2026-06-16, then re-entered Functional QA on 2026-07-23). All three are well outside the 60-minute window as of the current check time (2026-09-02 13:39:49 UTC), so none count as newly moved this run.]
+Current UTC time at check: 2026-09-02 13:49:43 UTC.
+
+None of these stage_change-to-Functional-QA events fall within the last 60 minutes (all are from 2026-07-23, over a month old). No tasks newly moved into Functional QA this run.
