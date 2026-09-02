@@ -650,3 +650,33 @@ State and RRB choice by 21 September. The GA habit starting today. Computer Know
 Sources for this section: edutap (shortlist ratios and the conflicting no-sectional-cutoff claim), careers360 (official phrasing that interview calls do not exceed three times declared vacancies; 2023 sectional qualifying table), practicemock (4,256 vacancies, 2026 dates, 2026 expected cutoff range), careerpower and bankersadda and adda247 (2025 actual state-wise Mains cutoffs), plus the section-level sources already cited in Sections 2 through 6.
 
 That completes all seven sections. If you want the whole thing as a single PDF or document, say so and I'll ask for a craft level.
+
+## User
+
+pdf
+
+## Assistant
+
+Content's done, so this is a formatting build. Craft level?
+
+[Asked via input tool:]
+Q: Craft level for the PDF? Options: Sketch — raw dump to PDF, no styling / Draft — clean typography, tables, TOC / Painting — custom layout, print-checked / Commissioned — full polish, every page reviewed
+
+## User
+
+Q: Craft level for the PDF?
+A: Draft — clean typography, tables, TOC
+
+## Assistant
+
+[Built the PDF at Draft craft level.]
+
+Build notes:
+- Read /mnt/skills/public/pdf/SKILL.md first per skill rules.
+- Content written to markdown, converted to styled HTML, rendered with wkhtmltopdf. Body font Bitstream Charter, headings/tables Carlito.
+- This wkhtmltopdf is built against unpatched Qt: no multi-document input, no header/footer flags, no --xsl-style-sheet. Worked around it by rendering cover and body separately, extracting heading page positions from the rendered body PDF with pypdf, generating a Contents page with real page numbers (iterating until the TOC's own length stabilised), merging with pypdf, and stamping footers via a reportlab overlay.
+- Cover footnote initially collided with the metadata table because absolute bottom positioning is not honoured by this build; fixed with flow-based margin.
+- Emoji tags replaced with coloured HIGH / MODERATE / TRICKY badges — the fire emoji (U+1F525) has no glyph in any installed font and would have rendered as a blank box.
+
+Output: 16 pages — cover, contents with page numbers, seven sections.
+File: /mnt/user-data/outputs/IBPS-RRB-PO-Mains-Masterclass.pdf
