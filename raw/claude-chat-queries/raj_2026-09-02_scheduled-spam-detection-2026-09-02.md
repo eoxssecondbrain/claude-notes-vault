@@ -8,24 +8,29 @@ updated: 2026-09-02
 
 # Scheduled Email Spam Detection (v9) — Run 2026-09-02
 
-**Fix-up pass:** searched `label:AI-SPAM in:inbox` — 0 threads found needing fix. 0 fixed.
+**User prompt (scheduled task, automated firing):** Run the Scheduled Email Spam Detection v9 routine — scan mailbox, classify unprocessed threads (skip-list / SPAM sub-categories / NOT_SPAM), apply AI-SPAM or AI-Reviewed labels, move confirmed spam to Gmail Spam, verify moves, run fix-up pass first, report results.
 
-**Run type:** Normal run (AI-SPAM and AI-Reviewed labels pre-existed with prior history, so not first run).
+**Assistant actions & result:**
 
-**Labels used (from list_labels, no new labels created):**
-- AI-SPAM = Label_33
-- AI-SPAM/Advertising = Label_34
-- AI-SPAM/Expired-OTP = Label_35
-- AI-SPAM/Fraud = Label_36
-- AI-Reviewed = Label_37
-- AI-SPAM/Investor-Outreach = Label_38
+1. Called `list_labels` — all required labels already exist (AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-SPAM/Investor-Outreach, AI-Reviewed). No label creation needed.
+2. Fix-up pass: searched `label:AI-SPAM in:inbox` → 0 results. Nothing to fix.
+3. Determined this was a normal run (AI-Reviewed already applied to 53,732+ messages historically).
+4. Ran `search_threads` with `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`, paginating through 7 pages (350 threads scanned, spanning dates back to late June 2026) due to Gmail's thread-level search quirk (a thread matches the exclusion query if ANY message in it, including ones outside the 5-message preview, lacks the label — even if all visible messages already carry AI-Reviewed).
+5. Found only 3 genuinely unprocessed threads, all in the first page (most recent), all from isha@eoxsteam.com (eoxsteam.com domain → skip-list → NOT_SPAM):
+   - "EOXS & AskCruz Weekly Report Card [08/24/2026 - 08/30/2026]" (1a06294277e33d41)
+   - "EOXS + AskCruz Weekly Scored Performance Report — 2026-08-24 to 2026-08-30" (1a06293f0d82795f)
+   - "Session Productivity Report (9-10AM EST) — 2026-09-02" (1a0628ef36af0efa)
+   Applied AI-Reviewed label to all 3.
+6. All other 347 threads scanned across subsequent pages already carried AI-Reviewed on every visible message — treated as already-processed per rule 9 (do not reprocess), skipped without re-labeling.
+7. Stopped pagination after 7 pages / 350 threads once the zero-new-threads pattern was clearly established across 3 consecutive full pages reaching back ~2 months — continuing would only re-scan already-labeled historical mail due to the search quirk, not surface new unprocessed content.
 
-**Processing:** Queried `-in:sent -in:chats -label:Label_33 -label:Label_37`, paginated across 5 pages (50 threads each) via nextPageToken, classifying and labeling as I went. Processed 250 distinct threads total (thread IDs did not repeat across pages, confirming real forward progress despite Gmail's list/search label-count and resultCountEstimate fields lagging behind actual writes — verified via get_thread on the very first processed thread, which correctly showed Label_37 applied even though a fresh search still surfaced it due to index lag).
+**Final report:**
+- Checked (genuinely unprocessed): 3
+- SPAM/SUSPICIOUS: 0
+- NOT_SPAM: 3 (all skip-list, eoxsteam.com domain)
+- Moves to Spam: 0 (no sub-label breakdown needed)
+- Fixed by fix-up pass: 0
+- Moves confirmed by verification: 0 (none attempted)
+- MOVE_FAILED: none
 
-**Classification outcome:** All 250 threads classified NOT_SPAM and labeled AI-Reviewed (Label_37). Mail was overwhelmingly internal EOXS/EOXSteam business correspondence (task/CRM system notifications from info.eoxs@gmail.com, incentive/HR approvals, weekly team/productivity reports, client correspondence with steel-industry accounts like 3GM Steel, Sabre Alloys, Eastern States Steel, PPC Metals, Collier Metals, Discount Pipe & Steel, Bossard, Brannon Steel), legitimate calendar/meeting notifications, travel (Air Canada) notices, security/sign-in alerts (Google, SVB, Upwork, OpenAI, Docusign), payment/invoice/receipt mail (Google Workspace, Stripe/Calendly, Atlassian), SMU Steel Summit conference mail, and legitimate unsolicited job applications/recruiting replies. No advertising spam, no expired OTPs, no fraud/phishing, and no cold investor-outreach were found in this batch.
-
-**Zero MOVE_FAILED** (no threads required moving to spam this run).
-
-**Note on scope:** Gmail's list/search label counters appear to lag actual writes by some interval, which prevented reliably determining the exact true remaining count via resultCountEstimate after ~250 threads. Stopped after 5 pages / 250 threads given diminishing ability to verify further pages weren't stale re-reads of the same underlying snapshot, and zero spam found throughout. A subsequent run will pick up any remaining older backlog via the same normal-run query once the index catches up.
-
-**Final counts:** 250 checked. SPAM/SUSPICIOUS: 0. NOT_SPAM: 250 (all labeled AI-Reviewed). No sub-label spam moves. Fix-up pass: 0 fixed. Verification: N/A (nothing moved). MOVE_FAILED: none.
+No action needed from the user — no spam detected, no failures. Per standing instructions for scheduled/unattended runs, no push notification was sent since the run found nothing noteworthy.
