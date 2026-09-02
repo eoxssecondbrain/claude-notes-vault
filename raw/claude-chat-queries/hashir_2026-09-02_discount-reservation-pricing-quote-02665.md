@@ -28,3 +28,36 @@ Per your standing rule, flagging this rather than guessing: this isn't a single-
 - 50ft — same as 10ft, plus check if other clients hit the same issue, check implementation/dev tasks for a related fix in progress, flag if this is a known bug
 
 Which level, and should I proceed with draft-response once research is done, or just triage it for now?
+
+USER: 5ft
+
+ASSISTANT: ## Draft Response
+
+**To:** Lacee Hulsey (Discount)
+**Re:** Quote -02665 — auction bundle pricing after reservation update
+**Channel:** Odoo chatter note (reply on Quote -02665)
+**Tone:** Professional, reassuring
+
+---
+
+Hi Lacee,
+
+Thanks for flagging this. I understand the new reservation update is affecting how you're able to price auction sales where you only get the full bundle price rather than a per-unit breakdown — I want to make sure we get this sorted for you.
+
+I'm looking into what changed with the reservation update and how it's affecting your pricing workflow. I don't have a fix or workaround to share yet, so I don't want to guess at one.
+
+I'll come back to you with an update once I've dug into this — I'll aim to have something for you within 1-2 business days. If this is blocking active auction sales in the meantime, let me know and we'll prioritize accordingly.
+
+Best,
+[Your name]
+
+---
+
+### Notes for You (internal — do not send)
+- Why this approach: acknowledges the issue and gives a real timeframe without promising a fix I haven't verified. At 5ft depth I haven't checked DPS LIVE for what the reservation update actually changed, so no root cause or workaround is stated.
+- Things to verify: what "reservation update" refers to (a recent release/feature change), how auction bundle pricing worked before it, whether "fudge the numbers" refers to a manual override that's now blocked, who owns the reservation update (product/eng).
+- Risk factors: none stated to the customer that isn't true, but the 1-2 day timeline is a placeholder — only send if you can commit to it.
+- Follow-up needed: run the 10ft or 50ft research pass against DPS LIVE to find the actual mechanism and give a real answer before the follow-up is due.
+- Escalation note: if the reservation update is a known recent change (not a bug), this may just need someone to explain the new workflow rather than an engineering fix — worth checking with whoever shipped it before promising a "solution."
+
+Want me to run the 10ft research pass now to pull the actual quote/pricing detail from DPS LIVE so the follow-up has something real to say, or adjust this draft (tone, length, add a name)?
