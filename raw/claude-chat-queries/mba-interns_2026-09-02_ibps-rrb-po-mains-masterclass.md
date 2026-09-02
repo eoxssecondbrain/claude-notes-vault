@@ -485,3 +485,88 @@ The correct framing is not that Computer wins you merit — it can't, it's cappe
 Sources: adda247 and oliveboard (2025 Mains, 28 Dec, Computer topic areas and difficulty), bankersadda (2025 Mains recalled question list), adda247 and pw.live (2024 Mains good attempts), prepgrind (IBPS PO Mains 2022–2024 computer topic weightage, adjacent exam, used only for distribution shape).
 
 Next: Section 6 — English Language, where three Reading Comprehension sets have carried the section in both recent Mains papers.
+
+Say "next" for Section 6 — English Language.
+
+## User
+
+next
+
+## Assistant
+
+Section 6 — English Language (40 Q, 40 marks, 1.0 per question)
+
+1. Weightage & PYQ flag
+
+Cross-checked against the 28 Dec 2025 and 29 Sept 2024 Mains papers.
+
+| Topic | Expected Q | Marks | Flag |
+|---|---|---|---|
+| Reading Comprehension (2–3 sets) | 10–16 | 10–16 | 🔥 HIGH WEIGHTAGE - Must Do |
+| Idiom / phrase-based (dialogue or story format) | 3–6 | 3–6 | 🔥 HIGH - pure memorisation |
+| Fillers (double/single) | 4–5 | 4–5 | 🔥 HIGH WEIGHTAGE - Must Do |
+| Jumbled sentences / Sentence rearrangement | 4–5 | 4–5 | ⚡ MODERATE |
+| Word replacement / word swap | 4 | 4 | ⚡ MODERATE |
+| Error detection / correct-incorrect sentence | 3–5 | 3–5 | ⚡ MODERATE |
+| Cloze test | 0–4 | 0–4 | ⚡ MODERATE - variable |
+
+2025 Shift 1 breakdown as reported: two RC sets (personal finance, migration) at 10, idiom fillers in a two-person dialogue at 6, jumbled sentences 5, cloze test 4, double fillers 4, word replacement 4, correct/incorrect sentence 3, sentence rearrangement 4. One source instead reports three RC sets of 5 each. Either way, RC plus fillers plus idioms is over half the section.
+
+2024 was the same shape: two RC sets totalling 10–16, sentence rearrangement 4–5, paragraph-based error spotting 4–5, double fillers 5, idiom phrases in conversation 3.
+
+Difficulty: rated easy to moderate in both years, with good attempts of 19–32 in 2024 and 18–30 in 2025. It is the most consistently scoring of the three non-recall sections.
+
+Do not prepare from IBPS PO Mains English material. That paper uses 2-mark odd-one-out, column-matching, and sentence-based summary formats that have not appeared in RRB PO Mains. Preparing at PO Mains difficulty wastes weeks on question types you will not see.
+
+2. Core concepts and shortcuts
+
+Reading Comprehension
+- RRB Mains passages are descriptive and fact-heavy (migration, personal finance, environment, aviation), not abstract. Typically 3 of 5 questions per set are direct retrieval.
+- Do vocabulary questions (synonym/antonym in context) first — they need the sentence, not the passage.
+- Question-first approach for detail questions: read the question, scan for the keyword, answer. Read fully only for theme and tone questions.
+- Inference questions: eliminate any option containing extreme quantifiers (all, never, only) or outside knowledge.
+- Never re-read a passage a third time. If a second scan fails to locate the answer, move on.
+
+Grammar, restricted to the high-frequency zones
+- Subject-verb agreement: "one of the + plural noun" takes a singular verb; either/or and neither/nor agree with the nearer subject; each and every are singular; collective nouns are singular unless members act individually.
+- Preposition collocations that recur: comply with, prefer to, superior to, differ from (things) / differ with (people), capable of, accused of, insist on, deprived of, consists of.
+- Tense: since/for with present perfect or present perfect continuous; past perfect for the earlier of two past events; conditionals — if + past + would, if + had + past participle + would have.
+- Redundancy traps: return back, repeat again, reason is because, more better.
+- Parallelism across list items and after correlative pairs (not only… but also).
+
+Fillers
+- Read the full sentence for direction markers before the blank: contrast (although, however, despite), continuation (moreover, furthermore), cause-effect (hence, consequently).
+- For double fillers, solve the easier blank first and eliminate on that basis alone.
+
+Word swap and replacement
+- The two misplaced words are almost always the same part of speech. Test noun-with-noun and verb-with-verb pairs; do not try all combinations.
+
+Jumbled sentences
+- Find the opener: it stands alone, introduces the subject by full noun rather than pronoun, and contains no back-referencing connector.
+- Chain via pronoun referents, connectors, and chronology. Fix mandatory pairs first, then eliminate options — do not construct the full sequence from scratch.
+
+Idioms and phrases
+- This is a memorisation block, not a skill block. A list of roughly 150 common idioms covers the recurring set, and it has been worth 3–6 questions in each recent paper. Cheapest marks in the section per hour spent.
+
+Error detection
+- Check in a fixed order every time: subject-verb agreement → tense → preposition → article → pronoun reference → parallelism. A fixed order prevents re-reading.
+
+3. Golden rules of attempting
+
+Rule 1 — standalones before passages. Idioms, fillers, word swap, error detection, and rearrangement together are 15–20 questions requiring no sustained reading. Bank them in 10 minutes, then move to RC.
+
+Rule 2 — triage the RC sets. Read the first two lines of each passage, then rank them. Do the concrete, fact-based passage first; leave any abstract or opinion-heavy passage for last or skip it entirely.
+
+Rule 3 — cap the section at 25 minutes and guess after eliminating two. English options frequently reduce to two credible choices, so the elimination bar for a positive-value guess is easier to clear here than anywhere except Computer.
+
+Target: 26–30 attempts at 85–90% accuracy, giving 24–28 of 40.
+
+Two things worth knowing about this section
+
+First, it is the most reliable non-recall section in the paper. Quant spiked to moderate-difficult in 2023 with good attempts collapsing to 9–14; English has been rated easy to moderate every recent year with no comparable spike. A fixed six-week grammar-and-idiom effort produces a score that holds regardless of what the paper does.
+
+Second, on your English-over-Hindi choice: published sectional qualifying scores from the 2023 Mains cycle show the English Language bar at 9.50 for General against 13.25 for Hindi Language, and 5.75 against 10.25 for reserved categories. The scale in that table is ambiguous (it lists a maximum of 40 for sections worth 50, suggesting normalised rather than raw marks), so read it as a relative signal, not an exact figure. The signal itself is clear: the English sectional bar sits materially lower than the Hindi one, which means the choice you have made is the easier one to clear. Same table also shows the GA sectional minimum at just 2.50 for General — confirming that GA is a merit lever, not a survival risk.
+
+Sources: bankersadda and practicemock and ibpsguide and guidely (2025 Mains, 28 Dec, Shift 1 English breakdown), bankersadda and practicemock and makemyexam (2024 Mains, 29 Sept), adda247 and oliveboard (IBPS PO Mains English, used only to contrast difficulty), careers360 (2023 sectional cut-off table).
+
+Next: Section 7 — the integrated attempt sequence, a week-by-week plan from now to 20 December, and the risks and blind spots that decide whether the plan survives contact with the Prelims.
