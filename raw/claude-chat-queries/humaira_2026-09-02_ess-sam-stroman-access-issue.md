@@ -37,3 +37,27 @@ On 2026-08-17, Support issued two separate EOXS login credential sets for Sam, a
 3. If it still prompts repeatedly even with the right login, that's a session-persistence issue tied to New Outlook's link handling — worth a support ticket so it can be checked on the backend, but there's no indication yet this is an EOXS-side account or access problem.
 
 One unrelated open item on this account: as of 2026-08-28 there's still an unresolved internal question on whether ESS gets billed for a 7th active user now that Sam's been added (Ryan hasn't decided who to remove, Chip was supposed to make the call). Not connected to this access issue, but flagging since it's the same new user and still pending.
+
+Saved. Let me know if you want this escalated as a formal ticket or if you want me to check whether Sam's actually using the right login once you hear back from ESS.
+
+**User:**
+uh, draft a message for him that that will not outlook will not affect it uh, could you please cross the old tabs and try uh, login in again and it will uh, try login again refresh and try login again and let us know if uh, that uh, issue first uh, comes again we will look into it further
+
+**Assistant:**
+[Drafted email via message_compose_v1 tool, kind: email]
+Subject: Re: Sam User Access issues
+
+Hi Ryan,
+
+Thanks for flagging this. Switching Outlook versions shouldn't itself affect Sam's EOXS access - the prompt is more likely a leftover browser session issue.
+
+Can you have Sam try the following:
+
+1. Close any old EOXS tabs that were open before he switched Outlook versions.
+2. Refresh the browser.
+3. Log in again to EOXS.
+
+If that clears it, we're good. If the prompt comes back again after that, let us know and we'll dig in further on our end.
+
+Thanks,
+Humaira
