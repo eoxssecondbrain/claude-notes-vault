@@ -22,3 +22,13 @@ Timeline:
 One flagged gap: no formal trademark clearance was ever run on Cruz or any shortlisted name — raised repeatedly in the threads, never actioned.
 
 One correction on record: a thread claimed Claude was named after Claude Shannon as a naming-pattern precedent — that's noted as an unverified assumption, not confirmed by Anthropic.
+
+User: what is the best use case for this product?" (Krinox)
+
+Assistant: Krinox/AskCruz is built around a stack: Brain (know everything about the business) then Hands (act on it) then a Digital Workforce of specialized agents then Human DNA (personalize to company/professional persona, same lineage as EOXS's AI Joe concept) then Marketplace and continuous learning.
+
+The concrete, named use case on record is Agent Vinod: it ingests all of a client org's daily Claude conversation threads, summarizes them, and builds a searchable knowledge base/wiki so a CEO can ask things like "what has my team been talking about this month" or "what problems is my team hitting." That's literally the system I just used to answer your last question — pulling structured answers out of accumulated team conversation history.
+
+ICP as stated by Raj (2026-08-04): mid-market CEO or P&L owner who can approve a $30K deal without a committee. GTM is outbound sales plus social content, not SEO — leveraging Raj's ~20K LinkedIn connections and six company profiles. Revenue target was ~30 clients at $30K ACV within three months of launch; as of 2026-08-27 the verified client count was one.
+
+So the best-supported use case: a CEO/leadership-level knowledge and visibility layer over what their team is discussing and getting stuck on — not a broad horizontal tool, a narrow "give leadership situational awareness of their org's AI-assisted work" product.
