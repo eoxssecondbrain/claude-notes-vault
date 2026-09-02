@@ -46,3 +46,18 @@ Let me know if you have any other questions.
 
 Thanks,
 Aryan]
+
+User: just write me the reply i can send to todd based on what i sent at the begingging of this thread
+
+Assistant: Hi Todd,
+
+Regarding the piece count and weight difference on this packing slip confirmation:
+
+The control tags for this order shipped on a separate packing list, PPC/OUT/07613 — that's why they weren't showing here.
+
+The weight difference on the control tag was because the weight was changed manually at receiving, by the user who received those control tags.
+
+Let me know if you have any other questions.
+
+Thanks,
+Aryan
