@@ -570,3 +570,83 @@ Second, on your English-over-Hindi choice: published sectional qualifying scores
 Sources: bankersadda and practicemock and ibpsguide and guidely (2025 Mains, 28 Dec, Shift 1 English breakdown), bankersadda and practicemock and makemyexam (2024 Mains, 29 Sept), adda247 and oliveboard (IBPS PO Mains English, used only to contrast difficulty), careers360 (2023 sectional cut-off table).
 
 Next: Section 7 — the integrated attempt sequence, a week-by-week plan from now to 20 December, and the risks and blind spots that decide whether the plan survives contact with the Prelims.
+
+Say "next" for Section 7 — the integrated plan.
+
+## User
+
+next
+
+## Assistant
+
+Section 7 — Integrated plan, risks, blind spots
+
+A. The 120-minute attempt script
+
+| Order | Section | Time | Target |
+|---|---|---|---|
+| 1 | General Awareness | 9 min | 22/40 |
+| 2 | Computer Knowledge | 11 min | 14/20 |
+| 3 | English | 25 min | 26/40 |
+| 4 | Reasoning | 35 min | 31/50 |
+| 5 | Quantitative Aptitude | 36 min | 24/50 |
+| | Buffer | 4 min | — |
+| | Total | 120 min | 117/200 |
+
+Logic: the two pure-recall sections run first, locking 36 marks in 20 minutes with no cognitive load. English next because it is the most reliable of the three solving sections. Quant last, deliberately — it has the worst marginal return, so it should be the section that absorbs any time squeeze rather than the one that causes it.
+
+The one legitimate variation: if your Quant accuracy collapses under fatigue, swap Reasoning and Quant. Test both orders across mocks in November and freeze one by 1 December. Do not decide this in the exam hall.
+
+Note the arithmetic: GA, Computer, English and Reasoning alone total 93. Quant only needs to add 20–25. That is the whole point of the sequencing.
+
+B. Week-by-week, 2 September to 20 December
+
+Phase 0 — now to 21 September
+Submit the application. Choose the state and RRB deliberately: the 2025 UR Mains cutoff spread ran from 59.63 in Gujarat to 84.88 in Haryana, constrained by the local-language proficiency requirement. This locks permanently on 21 September and is worth more than any topic in this document.
+
+Phase 1 — 2 September to 20 November (11 weeks)
+- Daily, non-negotiable: 20 minutes GA. One source, active recall, one-line notes. This runs all 15 weeks without a break.
+- Daily: 30 minutes English grammar and the idiom list. Prelims has no English section, so this is pure Mains investment — and it is the only window in which it fits.
+- Complete the entire Computer Knowledge syllabus by mid-October. It is 15–20 hours, it is finite, and it never needs revisiting. Doing it now costs slack time you will not have in December.
+- Prelims core: Reasoning puzzles and Quant DI plus arithmetic speed, at Prelims difficulty.
+- Mocks: 3 Prelims mocks per week to mid-October, 4–5 per week thereafter.
+
+Phase 2 — 21 November to 20 December (4 weeks)
+- Week 1: Mains-specific Reasoning (critical reasoning, machine input-output) and Caselet DI. Two full Mains mocks.
+- Week 2: GA consolidation across July–November plus banking, RRB structure, and NABARD. Two mocks.
+- Week 3: Three mocks with full analysis. English RC speed drills.
+- Final 6 days: revision only — GA capsules, formula sheet, idiom list, computer notes. Maximum two mocks, none in the last 48 hours.
+
+C. Mock discipline
+
+This is where the actual differentiation happens, not in content.
+- Analysis time must equal or exceed attempt time. A two-hour mock earns two hours of review.
+- Keep an error log with four fields: question type, cause (concept gap, calculation slip, misreading, time overrun), the fix, and the date. Read it before every subsequent mock.
+- Track marks per minute by section, not just total score. A section that returns under 1.0 marks per minute is being over-allocated.
+- Freeze attempt order and time caps by 1 December. Strategy changes in the final fortnight reliably cost marks.
+
+D. Risks and blind spots
+
+1. The Prelims misallocation. Prelims marks are discarded entirely and shortlisting runs at roughly ten times vacancies. It deserves enough work to clear comfortably and not one hour more. It feels urgent because it comes first, which is exactly why people overspend on it.
+
+2. The four-week gap is not a preparation window. Prelims on 21–22 November, Mains on 20 December, with results consuming part of that. GA, Computer, and English cannot be built in four weeks. Whatever exists by 20 November sets your ceiling.
+
+3. Difficulty variance in Quant. In 2023 good attempts fell to 9–14. Build your target so that a bad Quant year still clears — which the 93-from-four-sections structure above does.
+
+4. Conflicting information on sectional cutoffs. One source states there are no sectional cutoffs in Mains. Against that, the published 2023 cycle shows per-section qualifying scores, and another source describes clearing all five sectional minimums as mandatory alongside the state cutoff. Assume sectional minimums exist and never zero out a section. The cost of being wrong that way is nil; the cost of the reverse is disqualification.
+
+5. Don't plan to the predicted cutoff. One source estimates the 2026 General Mains cutoff at 70–82 out of 200. Actual 2025 figures exceeded that in several states, including 84.06 in Himachal Pradesh and 84.88 in Haryana. Plan to the actuals, not the forecast.
+
+6. The interview is not free. Roughly three times the vacancies are called, it carries 20% weight, and the highest 2025 final cutoff was 55.08 out of 100. The difference between a 50 and a 65 interview is worth about five marks of Mains. Budget two weeks for it in January rather than treating it as a formality.
+
+E. What to ignore entirely
+
+Quadratic equations and simplification for Mains. IBPS PO Mains English material. Static GK beyond the short list in Section 4. Coding-decoding at Mains level. Any new book, channel, or test series introduced after 1 December.
+
+The three decisions that actually determine the outcome
+
+State and RRB choice by 21 September. The GA habit starting today. Computer Knowledge finished before Prelims. Everything else in these seven sections is execution detail on top of those three.
+
+Sources for this section: edutap (shortlist ratios and the conflicting no-sectional-cutoff claim), careers360 (official phrasing that interview calls do not exceed three times declared vacancies; 2023 sectional qualifying table), practicemock (4,256 vacancies, 2026 dates, 2026 expected cutoff range), careerpower and bankersadda and adda247 (2025 actual state-wise Mains cutoffs), plus the section-level sources already cited in Sections 2 through 6.
+
+That completes all seven sections. If you want the whole thing as a single PDF or document, say so and I'll ask for a craft level.
