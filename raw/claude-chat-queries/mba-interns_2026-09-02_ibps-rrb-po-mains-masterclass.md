@@ -121,3 +121,111 @@ Section-wise "good attempt" figures for the 28 December 2025 Mains vary widely b
 Sources: practicemock (notification/dates/vacancies), oliveboard and ixambee (Mains pattern), careerpower and bankersadda and adda247 (2025 state-wise Mains cutoffs, identical figures across all three), aspirantmitraa (sectional-cutoff mechanics, normalisation, final cutoff), pw.live and bankersadda and shiksha (2025 Mains shift analyses).
 
 Next: Section 2 — Reasoning, the highest-marks section and the one with the most stable, predictable topic distribution across the last three Mains papers.
+
+Say "next" for Section 2 — Reasoning.
+
+## User
+
+where is study material ?
+
+## Assistant
+
+Fair hit. Section 1 was exam architecture, not content — legitimate under the rigor level you picked, but it delayed the actual payload by a turn.
+
+The study material is Sections 2–6 (Reasoning, Quant, GA, Computer, English), each in your three-part format. They're gated behind "next" because 100ft means staged delivery, one section per turn. That was your pick, but it's costing you turns for a subject where you probably just want the whole thing in one place.
+
+Two ways to read your question, so pick one.
+
+[Asked via input tool:]
+Q: What do you want? Options: Dump all 5 sections now (drop staging) / Continue staged — Section 2 next / I meant books/mocks/PDF sources
+
+## User
+
+Q: What do you want?
+A: Continue staged — Section 2 next
+
+## Assistant
+
+Section 2 — Reasoning (40 Q, 50 marks, 1.25 per question)
+
+1. Weightage & PYQ flag
+
+Cross-checked against the 28 Dec 2025 Mains and the 29 Sept 2024 Mains (both shifts), five sources.
+
+| Topic | Expected Q | Marks | Flag |
+|---|---|---|---|
+| Puzzles & Seating Arrangement | 15–20 | 18.75–25 | 🔥 HIGH WEIGHTAGE - Must Do / ⚠️ TRICKY |
+| Logical & Critical Reasoning | 5–8 | 6.25–10 | 🔥 HIGH WEIGHTAGE - Must Do |
+| Machine Input–Output | 5 | 6.25 | 🔥 HIGH WEIGHTAGE - Must Do |
+| Data Sufficiency | 3–5 | 3.75–6.25 | ⚡ MODERATE / ⚠️ TIME-SINK |
+| Syllogism + Inequality | 3–7 | 3.75–8.75 | ⚡ MODERATE |
+| Blood Relation (paragraph) | 3 | 3.75 | ⚡ MODERATE |
+| Misc (word/number-based) | 1–2 | 1.25–2.5 | ⚡ MODERATE |
+
+Puzzles and seating alone are 40–50% of the section. 2024 Shift 1 reported 20 questions; 2025 Shift 1 reported 15 across four sets (parallel row 10-person, weight-based ranking, designation puzzle 7-person, random 8-person double-entity).
+
+Machine Input–Output has been exactly 5 questions in every recent Mains shift — the most predictable block in the paper.
+
+Structural change worth noting: Logical/Critical Reasoning barely exists in Prelims but is 5–8 questions in Mains. Candidates who prepare only from Prelims material walk in blind to ~8 marks.
+
+Declining or unreliable: Coding–Decoding appeared once (1 question, 2024 Shift 2) and was reported absent in 2025. Inequality was 3–4 in 2024 but largely missing from 2025 Shift 1 tables. Direction–Distance and Order–Ranking are 0–4, shift-dependent.
+
+Reliability caveat: one 2025 source states no Syllogism was asked while its own table lists 3 Syllogism questions. Topic counts from crowd-sourced analyses carry ±2 error. Use them for priority ordering, not as a syllabus contract.
+
+2. Core concepts and shortcuts
+
+Puzzles
+- Classify before solving. Fixed-frame (floors, boxes, months, years — slots predetermined) closes faster than floating-frame (linear, circular, random with double entity). Do fixed-frame first, always.
+- Clue order: definite placements → adjacency/immediate relations → gap-based ("two persons between") → negative clues last. Most people burn time processing negatives early, which fix nothing.
+- Double-entity puzzles: build the skeleton using the variable with more definite clues; the second attribute resolves only after the skeleton locks. Never track both simultaneously.
+- Two-branch abort rule: if three definite clues have been used and you still have more than two live cases, leave it. Beyond two branches at Mains difficulty, expected time exceeds expected marks.
+
+Logical / Critical Reasoning
+- Inference means must-be-true from the passage alone. No outside knowledge, no plausible-sounding extensions.
+- Strengthen = supply a supporting premise or kill the alternative cause. Weaken = introduce an alternative cause or break the causal link.
+- Assumption: use the negation test. Negate the option; if the argument collapses, that is the assumption.
+- Two standard trap options: true but irrelevant, and correct in direction but overstated (all, never, only, must).
+
+Machine Input–Output
+- Identify the operation class first: positional shifting, arithmetic on numbers, or word + operator combined.
+- Compare input to Step 1, and last step to second-last. You almost never need the full chain.
+- Recurring logics: leftmost/rightmost pick-up, alphabetical or reverse-alphabetical arrangement, ascending/descending numeric, digit-sum or digit-product transformation.
+- If the question asks only for Step 3, stop at Step 3.
+
+Syllogism
+- Only a few A are B ⇒ Some A are B (true) and Some A are not B (true); All A are B is false.
+- All A are B ⇒ Some B are A always follows.
+- Two negatives, or two particulars, give no conclusion.
+- Possibility conclusions hold unless definitely contradicted. Skip Venn diagrams unless the question asks about possibility.
+
+Inequality
+- A conclusion follows only if an unbroken same-direction chain connects the two terms. Any reversal or any = break kills it.
+- Either–or applies only when both conclusions involve the same pair and are complementary, and neither is individually true.
+- Coded inequality: convert every symbol to a standard sign before reading the statement.
+
+Data Sufficiency
+- Never solve. Only test whether a unique answer is reachable.
+- Order: statement I alone → statement II alone → combined. Stop at the first point sufficiency is established.
+- The single most common Mains error is fully solving a DS puzzle. That is a 3-minute investment for 1.25 marks.
+
+Blood Relation and Ranking
+- Symbolise immediately: + male, − female, = spouse, vertical line for generation. Read the question before the paragraph and extract only the connecting chain.
+- Total persons = position from left + position from right − 1.
+
+3. Golden rules of attempting
+
+Rule 1 — bank the standalone sets first, in 12 minutes. Machine Input–Output (5), Blood Relation (3), Syllogism/Inequality (3–4), miscellaneous word/number (1–2), plus one fixed-frame puzzle (5). That is roughly 18 questions and 22 marks at high accuracy before you touch a hard puzzle.
+
+Rule 2 — take Critical Reasoning before the second puzzle. It requires no diagram, no case-splitting, and runs ~45 seconds per question. It is the cheapest remaining block, and most candidates leave it because it feels unfamiliar.
+
+Rule 3 — hard-abort puzzles at 4 minutes, maximum two attempted. A failed puzzle costs 6.25 marks of opportunity plus the time. And never guess across an unsolved puzzle's five questions: five wrong answers is −1.56, wiping out a correct set elsewhere.
+
+Time budget: 33–35 minutes. Target 26–30 attempts at 85%+ accuracy, giving 30–34 of 50.
+
+Strategic caveat you should not ignore
+
+Reasoning consistently shows the highest good-attempt figures in the paper — 24–30 in 2024, 23–27 in 2025. High attempt rates mean everyone scores here, so marginal advantage is thin. The differentiator at 110+ is not solving one more puzzle; it is accuracy plus the sections nobody prepares. If you have one spare hour, GA returns more than Reasoning does.
+
+Sources: pw.live and bankersadda and practicemock and adda247 (2024 Mains, 29 Sept, Shifts 1 and 2), adda247 and practicemock and careerpower and ibpsguide (2025 Mains, 28 Dec, Shift 1), mahendras (multi-year trend and 2026 expected attempts).
+
+Next: Section 3 — Quantitative Aptitude, the section with the lowest good-attempt rate in the paper and therefore the largest scoring spread between candidates.
