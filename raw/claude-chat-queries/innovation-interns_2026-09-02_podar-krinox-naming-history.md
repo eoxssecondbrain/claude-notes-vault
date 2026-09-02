@@ -52,3 +52,23 @@ Positioning/competitive risk: Keel, a London startup with $13.1M raised, has nea
 No trademark clearance was ever run on the Cruz name or brand — a background legal exposure, not a sales-floor issue but worth knowing.
 
 Net: the honest sales challenge isn't messaging, it's that you're selling ahead of your evidence — no proven client outcome, an unresolved reliability question on the product's central claim, and at least one instance of the internal sales narrative already outrunning the facts.
+
+User: when should we start selling it?" (Krinox)
+
+Assistant: Short answer: not yet on the current record — you're already selling ahead of the product's own documentation, and there's a specific, dated punch list before it's defensible to push harder.
+
+Evidence against "sell now, full speed":
+
+Definitional confusion internally. The 2026-08-28 audit's single biggest finding: "AskCruz" means at least three different things inside the company itself — the product being sold, internal team Claude usage (burning ~$800/month calling their own Claude access "AskCruz API"), and the internal knowledge vault. If the team can't consistently say what AskCruz is, a sales rep can't pitch it consistently either.
+
+No implementation SOP exists. The only go-live SOP in the library is the general EOXS one, not AskCruz-specific — flagged as the single most urgent gap on 2026-08-28. Selling faster than you can implement just produces more unreconciled deals like 3GM.
+
+Commercial basics are explicitly unestablished. The PMF doc itself lists pricing, ACV, sales-cycle length, CAC, retention, and ROI as unestablished. You don't have a repeatable pitch with numbers behind it yet.
+
+Security/architecture gaps are open, not closed. Multi-tenant isolation between EOXS's own instance and a client's instance is an unresolved open architectural question — flagged as a live security-documentation gap while an external client (3GM) was already mid-onboarding. Prompt-injection resistance is listed as "requires dedicated testing," with no record of what's actually been caught.
+
+No SDR infrastructure. No definition of a "qualified meeting," no verified target account list — the only artifact is a brainstorming calendar entry from 2026-08-13.
+
+What this points to: the honest trigger for "start selling harder" isn't a date, it's closing the nine-item remediation list from the 2026-08-28 audit — starting with a clear disambiguation of what AskCruz is, a reconciled client roster, and an AskCruz-specific implementation SOP built off the 3GM deal. Selling before that isn't premature in the sense of too early on the calendar — it's premature because the thing being sold isn't consistently defined or documented yet, which is what's producing the pipeline-overstatement problem already flagged in your last question.
+
+If you want, I can pull the full nine-item remediation list in order so you have a concrete pre-sell checklist.
