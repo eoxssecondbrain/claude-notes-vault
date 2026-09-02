@@ -104,3 +104,18 @@ Since this is an analysis task (verifying the doc's claims, reconciling with the
 **50ft** — full pass: verify everything, plus check email/call history for anything relevant to the open items (e.g., has Logan Donovan already sent the 147C, has a payment-delay ask gone out to the closing client) that this document doesn't mention.
 
 Which one?
+
+User: I'm not sure which stored address you are talking about here. Are you talking about the stored address that is in the vault?
+
+Assistant: Yes — the memory file I keep on this account (`/areas/gfc-intelligence-inc-formation.md`), not the Threads OV vault or OV2. That file has this line from an earlier conversation:
+
+"Rajat's Toronto address (5 Mariner Terrace, Apt 1902, Ontario M5V3V6) is on file for Prata Inc."
+
+The new document you uploaded gives a different Toronto address — 10 Navy Wharf Court, #2812, M5V 3V2 — for Rajat's actual residence, and separately confirms that same 10 Navy Wharf Court address as the one on file for the existing Prata Inc Canada Wise account.
+
+So either:
+- 5 Mariner Terrace was a past residence and he's since moved, or
+- there was an error in what got recorded earlier, or
+- the two documents are describing different things (e.g. one was a mailing address vs. residential address at the time)
+
+Worth a quick confirmation from you or Rajat on which is actually current before it's used on the Mercury application.
