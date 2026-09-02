@@ -3,17 +3,24 @@ thread_name: "askcruz-daily-task-report"
 user: "ron"
 type: claude-chat
 created: 2026-08-26
-updated: 2026-08-29
+updated: 2026-09-02
 ---
 
-## User (scheduled task, 2026-08-29)
-Daily AskCruz task check for Ron: load raj-eoxs-vault skill, find Ron's res_users id on teams-askcruz (partner name "Ron", login ron@askcruz.com), query project_task for active tasks assigned to Ron excluding "Completed" stage, joined to stage name and project name; for each pull the most recent mail_message (model='project.task', body not null) with author; build a plain report with per-task action items, flag any task where the latest message is an unanswered complaint/question from Rajat Jain, flag process issues (no deadline, no activity 5+ days); email the report via Gmail to ronn@eoxs.com; save transcript per threads-ov rule.
+# AskCruz Daily Task Report — 2026-09-02
 
-## Assistant
-Loaded raj-eoxs-vault skill. Queried teams-askcruz (Odoo 13):
-- Ron's res_users id = 17 (partner "Ron", login ron@askcruz.com).
-- Found 11 active tasks assigned to Ron (user_id=17, active=true, stage != 'Completed'): task 199 (Weekly AskCruz Board report, In Dev, Customer 1 - EOXS), 294 (3GM - EOXS platform review, Assigned, Customer 2 - 3GM), 192 (Have another company configure AskCruz, QA, AskCruz), 125 (Proposal Format, QA, AskCruz), 88 (Anthropic AI Course, Assigned, AskCruz), 111 (Access Rights, Assigned, AskCruz), 84 (Put the implementation data in a structured manner, Assigned, AskCruz), 89 (Fable 5, Assigned, AskCruz), 30 (Register the company as a Delaware C-Corp, Assigned, AskCruz), 87 (Complete training videos, Assigned, AskCruz), 32 (Open an SVB bank account, Assigned, AskCruz).
-- Pulled the latest mail_message per task (model='project.task', body not empty). No task's latest message was authored directly by Rajat Jain, so no item met the strict "unanswered complaint/question from Raj" priority trigger — noted task 199 (Kriti J's note, tags Raj, asks about report KPIs and Monday call scheduling) as the closest thing to priority.
-- Process issues flagged: all 11 open tasks have no date_deadline set; task 88 stale with no activity in 5 days; task 192's latest note is a bare "Test" placeholder; tasks 30 and 32 share the same external blocker (EIN from Logan).
-- Built a per-task report (stage, project, latest note summary, concrete action item) and sent it via Gmail send_message to ronn@eoxs.com, subject "AskCruz Daily Task Report — Ron — August 29, 2026", htmlBody with the full report.
-- No PushNotification sent — routine daily report, no urgent Raj-originated item, and the Gmail send itself is the configured delivery channel for this task.
+**User (scheduled task):** Daily AskCruz task check for Ron. Load raj-eoxs-vault, find Ron's res_users id on teams-askcruz, query project_task for all active open tasks assigned to him (excluding stage "Completed"), join project_task_type and project_project for stage/project names, pull the single most recent mail_message (body not null/empty) per task with author name, build a plain report with action items per task, flag any task whose latest logged message is an unanswered complaint/question from Raj (Rajat Jain) as highest priority, flag process issues (no deadline set, no activity in 5+ days), and email the report via Gmail to ronn@eoxs.com.
+
+**Assistant:** Loaded raj-eoxs-vault skill. Queried teams-askcruz Odoo (Odoo 13):
+- Ron's res_users id = 17 (login ron@askcruz.com, partner name "Ron").
+- Found 12 active, non-Completed tasks assigned to user_id=17: #409 (Ron/daily snippet, Daily Snippets, stage Others), #294 (3GM - EOXS platform review, Customer 2 - 3GM, QA), #30 (Register Delaware C-Corp, AskCruz, Assigned), #84 (Structure implementation data, AskCruz, Assigned), #88 (Anthropic AI Course, AskCruz, Assigned), #87 (Complete training videos, AskCruz, Assigned), #111 (Access Rights, AskCruz, Assigned), #89 (Fable 5, AskCruz, Assigned), #32 (Open SVB bank account, AskCruz, Assigned), #192 (Have another company configure AskCruz, AskCruz, QA), #125 (Proposal Format, AskCruz, QA), #199 (Weekly AskCruz Board report, Customer 1 - EOXS, In Dev).
+- Pulled latest non-empty mail_message per task (model='project.task') with author name via res_partner join.
+
+Key findings:
+- All 12 open tasks have date_deadline = null (no deadlines set anywhere).
+- 9 of 12 tasks have had no logged activity since Aug 26 (~7 days stale): #30, #32, #84, #87, #88, #89, #111, #125, #192.
+- Task #294 shows an ownership/assignment mismatch: still owned by Ron (user_id=17) but latest note says "Assigned To → Ayan Dutta."
+- Tasks #84 and #87 carry identical latest-note text ("@Ayan Dutta — Following up on the conversation below") — possible copy/paste into the wrong task.
+- Task #192's latest log is just a test message ("@Kriti J Test" from Danish Lari) with no real status, despite sitting in QA.
+- No open task's latest message is a complaint or direct question from Raj (Rajat Jain) — no priority flag triggered today.
+
+Built a report (task, project, stage, latest note w/ author+date, action item for Ron) and sent it via Gmail send_message to ronn@eoxs.com, subject "AskCruz Daily Task Report — Ron — 2026-09-02". No push notification sent since nothing rose to urgent/actionable-right-now (no Raj complaint, no outage — this is routine status, appropriate for email only per the daily report cadence).
