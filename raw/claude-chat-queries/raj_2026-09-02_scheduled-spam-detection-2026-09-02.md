@@ -6,31 +6,26 @@ created: 2026-09-02
 updated: 2026-09-02
 ---
 
-# Scheduled Email Spam Detection (v9) — Run 2026-09-02
+## Scheduled Task: Email Spam Detection (v9) — Run on 2026-09-02
 
-**User prompt (scheduled task, automated firing):** Run the Scheduled Email Spam Detection v9 routine — scan mailbox, classify unprocessed threads (skip-list / SPAM sub-categories / NOT_SPAM), apply AI-SPAM or AI-Reviewed labels, move confirmed spam to Gmail Spam, verify moves, run fix-up pass first, report results.
+**User turn:** [Automated scheduled task firing — stored prompt "Scheduled Email Spam Detection (v9)"]
 
-**Assistant actions & result:**
-
-1. Called `list_labels` — all required labels already exist (AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-SPAM/Investor-Outreach, AI-Reviewed). No label creation needed.
-2. Fix-up pass: searched `label:AI-SPAM in:inbox` → 0 results. Nothing to fix.
-3. Determined this was a normal run (AI-Reviewed already applied to 53,732+ messages historically).
-4. Ran `search_threads` with `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`, paginating through 7 pages (350 threads scanned, spanning dates back to late June 2026) due to Gmail's thread-level search quirk (a thread matches the exclusion query if ANY message in it, including ones outside the 5-message preview, lacks the label — even if all visible messages already carry AI-Reviewed).
-5. Found only 3 genuinely unprocessed threads, all in the first page (most recent), all from isha@eoxsteam.com (eoxsteam.com domain → skip-list → NOT_SPAM):
-   - "EOXS & AskCruz Weekly Report Card [08/24/2026 - 08/30/2026]" (1a06294277e33d41)
-   - "EOXS + AskCruz Weekly Scored Performance Report — 2026-08-24 to 2026-08-30" (1a06293f0d82795f)
-   - "Session Productivity Report (9-10AM EST) — 2026-09-02" (1a0628ef36af0efa)
-   Applied AI-Reviewed label to all 3.
-6. All other 347 threads scanned across subsequent pages already carried AI-Reviewed on every visible message — treated as already-processed per rule 9 (do not reprocess), skipped without re-labeling.
-7. Stopped pagination after 7 pages / 350 threads once the zero-new-threads pattern was clearly established across 3 consecutive full pages reaching back ~2 months — continuing would only re-scan already-labeled historical mail due to the search quirk, not surface new unprocessed content.
+**Assistant actions:**
+1. Called `list_labels` — confirmed AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-SPAM/Investor-Outreach, AI-Reviewed all already exist (AI-Reviewed already applied to 53,739 messages → this was a NORMAL run, not first run).
+2. Fix-up pass: `search_threads` `label:AI-SPAM in:inbox` → 0 results. Nothing to fix.
+3. Normal run: `search_threads` `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed` (pageSize 50) → resultCountEstimate was inflated (877/875, known Gmail estimate quirk for negative-label queries); actual returned threads: 3.
+   - Thread `1a06332205da089b` ("Pipeline metrics for EOXS", from ava.lee@storygen-touchpointhub.com) — unsolicited B2B sales/lead-gen outreach, not eoxs domain, no skip-list match → classified AI-SPAM/Advertising. Labeled, marked spam.
+   - Thread `1a06325fba371541` ("Get better value sending to India 🇮🇳", from no-reply@email.worldremit.com) — promotional marketing, not a transactional payment/invoice notice → classified AI-SPAM/Advertising. Labeled, marked spam.
+   - Thread `19c1f3f82154e77a` ("Re: MTR Samples", from info.brannon@gmail.com, 5 messages) — genuine business/CRM task thread; on inspection every message already carried AI-Reviewed (Label_37) despite matching the negative-label query (search quirk). Per rule 9, skipped — no reprocessing.
+4. Verification: `get_thread` and `search_threads` (including `in:anywhere`, `in:spam`) could not read the two now-spam-labeled threads — Gmail MCP integration appears permission-restricted from reading Spam-folder content directly (consistent errors, not specific to these threads). Verified indirectly instead: re-ran `label:AI-SPAM in:inbox` (empty) and re-ran the unprocessed-mail query (both spam threads no longer appear) → confirms both moves succeeded. No MOVE_FAILED.
+5. Re-ran the unprocessed query post-action: only the already-reviewed MTR thread remains (search quirk, not actionable).
 
 **Final report:**
-- Checked (genuinely unprocessed): 3
-- SPAM/SUSPICIOUS: 0
-- NOT_SPAM: 3 (all skip-list, eoxsteam.com domain)
-- Moves to Spam: 0 (no sub-label breakdown needed)
-- Fixed by fix-up pass: 0
-- Moves confirmed by verification: 0 (none attempted)
+- Checked: 3 threads
+- SPAM/SUSPICIOUS: 2 (both AI-SPAM/Advertising — cold sales outreach, promotional remittance marketing)
+- NOT_SPAM: 1 (already AI-Reviewed, skipped per rule 9)
+- Moves confirmed: 2/2 (indirect verification only, due to tool permission limits on reading Spam folder)
+- Fix-up pass: 0 fixed
 - MOVE_FAILED: none
 
-No action needed from the user — no spam detected, no failures. Per standing instructions for scheduled/unattended runs, no push notification was sent since the run found nothing noteworthy.
+No push notification sent — routine, uneventful run (no fraud, no expired-OTP, no investor outreach, no failed moves).
