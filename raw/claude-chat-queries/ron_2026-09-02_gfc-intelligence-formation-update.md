@@ -119,3 +119,40 @@ So either:
 - the two documents are describing different things (e.g. one was a mailing address vs. residential address at the time)
 
 Worth a quick confirmation from you or Rajat on which is actually current before it's used on the Mercury application.
+
+User: [Uploaded two screenshots of a Mercury bank application form — "Expected activity" section]
+
+Image 1: Shows fields "What is your expected monthly account balance?" (dropdown, in USD), "Which countries will you operate in?" (Canada selected, tag field, note: "Operations include locations of offices, investors, employees, suppliers, or vendors"), "What US business operations do you have that require a US bank account?" (dropdown), a Payments section header with text "To meet banking regulations, we need additional details about the transactions you'll be making with your Mercury account. An estimate is all we need for now.", "How much money do you expect to send or receive each month?" (dropdown range, in USD), "Which countries do you expect to send or receive money from?" (Canada selected, tag field, "Select one or more countries"), and Back/Next buttons.
+
+Image 2: Shows the top of the same form — heading "Expected activity", subheading "General account usage", text "To meet banking regulations, we need a few details about how you'll use your Mercury account. An estimate is all we need for now.", question "Where will your first deposits come from?" with three checkbox options (Investors, Revenue, Self), "How do you plan to use your Mercury account?" (dropdown), "What is your expected monthly account balance?" (dropdown, in USD), "Which countries will you operate in?" (Canada selected), "What US business operations do you have that require a US bank account?" (dropdown), and the start of the Payments section.
+
+That is the correct address that we have. I am in the process of actually completing the document for the bank formation, and I am on this page here. Can you please tell me what information I should enter here so that the application gets accepted and we have a bank account open with them soon?
+
+Assistant: Noted on the address — I won't touch the memory file since you didn't ask me to update it; just flagging it's now consistent with your confirmation.
+
+On the form: a few fields I can answer with confidence, a few need real numbers from you or Rajat rather than a guess, because bank KYC forms are exactly the place where a guessed number can cause problems later (mismatch between what you declared and actual activity can trigger a freeze or review).
+
+Where will your first deposits come from
+Check Revenue and Self. Not Investors — the whole point of this entity was to keep EOXS's outside investors out of it, and it's bootstrapped/founder-funded per the record. Self covers whatever Rajat has put in to get things running; Revenue covers the client that's now closed plus the second closing soon.
+
+How do you plan to use your Mercury account
+I can't see the dropdown options from the screenshot. Whatever option most closely matches "day-to-day operating account for a software business" is the right one — receiving client payments, paying vendors/contractors, normal opex. If you open it and the choices aren't obvious, paste them and I'll tell you which fits.
+
+Expected monthly account balance
+Need a real number from you. This should reflect what will actually sit in the account month to month once the two clients are paying, not a hopeful projection. If you tell me the deal size or MRR you're expecting from the two clients, I can help you pick the right range — but I'd rather you supply it than I guess, since this is a figure the bank will hold you to.
+
+Which countries will you operate in
+Currently just Canada. This question is about where the business itself operates — offices, employees, investors, suppliers — not where customers sit. Two things to check before leaving it at Canada only:
+- Are any of the 50 interns hired this week based in the US or anywhere else?
+- Does "operate" here also need to reflect that the legal/mailing address is New Rochelle, NY? If that's purely a registered-agent/mail address with zero actual activity there, Canada-only is probably accurate and honest. If any staff or contractors are US-based, add United States.
+
+What US business operations require a US bank account
+This is the field that explains why a Toronto-resident, no-employees-in-the-US founder needs a US account at all. The honest answer is: incorporated as a Delaware C-Corp, and needs USD banking to receive payments from US-based customers and to handle US tax/compliance (EIN, franchise tax, potential Form 5472/1120 filings). If the dropdown has an option like "collecting payments from US customers" or "US-incorporated company," that's the one to pick. Tell me the actual choices if you want me to match one exactly.
+
+How much money do you expect to send or receive each month
+Same issue as account balance — needs your real expected figure, not mine.
+
+Which countries do you expect to send or receive money from
+Right now it's set to Canada only. If either of the two AskCruz clients (the one closed, the one closing soon) is US-based, United States needs to be added here — this is specifically about where the money moves to/from, and leaving out the US when US customers are paying you would be inaccurate on a compliance form.
+
+What I need from you to finish this cleanly: whether any clients/staff are US-based, and a realistic monthly balance/transaction range.
