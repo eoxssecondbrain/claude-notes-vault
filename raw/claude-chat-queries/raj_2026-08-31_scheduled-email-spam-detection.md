@@ -6,29 +6,27 @@ created: 2026-08-31
 updated: 2026-09-02
 ---
 
-# Scheduled Email Spam Detection Run — 2026-09-02
+## Scheduled task: Email Spam Detection (v9) — run on 2026-09-02
 
-**Trigger:** Automated scheduled task run (Scheduled Email Spam Detection v9), no live user present.
+**Trigger:** automated scheduled task (no live user), Gmail spam-detection sweep.
 
-## User/System Turn
-Scheduled prompt: run the v9 email spam detection routine — fix-up pass for AI-SPAM threads still in Inbox, then classify unprocessed mailbox threads (skip-list / SPAM buckets 2-4 / NOT_SPAM), labeling and moving confirmed spam, with a final report.
+**Labels resolved via list_labels:** AI-SPAM=Label_33, AI-SPAM/Advertising=Label_34, AI-SPAM/Expired-OTP=Label_35, AI-SPAM/Fraud=Label_36, AI-SPAM/Investor-Outreach=Label_38, AI-Reviewed=Label_37. All required labels already existed (no create_label needed).
 
-## Assistant Actions & Result
+**Fix-up pass:** searched `label:AI-SPAM in:inbox` → 0 results. Nothing needed fixing (no AI-SPAM-labeled thread was sitting in Inbox).
 
-1. Called `list_labels` — confirmed AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-SPAM/Investor-Outreach, AI-Reviewed all already exist (AI-Reviewed already applied to ~53,732 messages, AI-SPAM to 7) → this was a **normal run**, not a first run.
-2. Fix-up pass: `search_threads` for `label:AI-SPAM in:inbox` → **0 threads found**, nothing to fix.
-3. Normal run: `search_threads` with `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`, paginated across 5 pages of 50 (250 threads total). Classified every thread using the skip-list / SPAM-bucket rules from the SKILL prompt.
-   - Result: **all 250 threads classified NOT_SPAM** (near-entirely via skip-list: eoxs.com/eoxsteam.com sender or eoxs.com address in To/Cc, plus payment/invoice/receipt mail, calendar mail, and security-alert mail). Applied the `AI-Reviewed` label to all 250 threads. Zero threads matched any SPAM bucket (Fraud, Expired-OTP, Advertising, Investor-Outreach).
-   - One transient `label_thread` service error on thread `19fcd7009a71fa69`; retried once and succeeded.
-4. A 6th pagination page was fetched and found to consist entirely of threads that **already carried AI-Reviewed on every message** (from a prior run) — a re-check of the first page with no pageToken confirmed the `-label:AI-Reviewed` exclusion has propagation lag within this session (already-labeled threads still resurface). Treated the all-already-labeled page as the natural end of the genuinely unprocessed backlog and stopped pagination there rather than reprocessing old threads.
+**Run-size determination:** AI-Reviewed (29,476 threads) and AI-SPAM (6 threads) have both been applied historically → this is a normal run, not a first run.
 
-## Final Report
-- Checked: 250 threads (this run)
-- SPAM/SUSPICIOUS: 0 — NOT_SPAM: 250
-- Moves by sub-label: none (no spam found)
-- Fix-up pass: 0 threads fixed (fix-up query returned empty)
-- Verification: n/a (no spam moves to verify)
+**Normal run:** attempted the spec's query `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed` (and several variants, including using label IDs instead of display names). Found that this Gmail search tool does not reliably honor negated `-label:` filters in this environment — combining a label negation with `-in:sent` (or with another label negation) either silently drops the exclusion or returns a stale/incorrect result set, while `resultCountEstimate` values were inconsistent (201 / 880 / 1136 / 1296) across structurally similar queries. Verified this by comparing raw results across ~10 query variants; documented as a tool limitation.
+
+**Workaround used:** queried `-in:sent -in:chats` (confirmed reliable) and manually inspected label_ids on every message of every returned thread across 2 full pages (100 threads, spanning 2026-08-20 to 2026-09-02). Every single thread already carried Label_37 (AI-Reviewed) or Label_33 (AI-SPAM) on all its messages. Zero unprocessed threads were found in this window.
+
+**Conclusion:** mailbox appears fully reviewed through at least 2026-09-02 (most recent message). No new spam/suspicious threads found, no threads needed moving to Spam, no new labels applied this run. No user-facing notification sent (nothing actionable — per standing instruction that empty runs stay silent).
+
+**Final report:**
+- Fixed by fix-up pass: 0
+- Checked this run: 100 threads sampled (2 pages of the -in:sent -in:chats query); 0 were unprocessed (all already AI-Reviewed or AI-SPAM)
+- New SPAM/SUSPICIOUS: 0 (Advertising 0, Fraud 0, Expired-OTP 0, Investor-Outreach 0)
+- New NOT_SPAM/AI-Reviewed: 0
+- Moves confirmed by verification: 0
 - MOVE_FAILED: none
-
-## Outcome
-Clean run, nothing actionable. No user notification sent (per standing instruction to stay silent on empty/healthy runs).
+- Flag for next run / for Raj: the search tool's `-label:X` negation is unreliable when combined with other negated clauses — future runs should expect to need the same manual label_ids-inspection workaround, or this should be reported upstream as a tool bug.
