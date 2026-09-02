@@ -6,4 +6,4 @@ created: 2026-09-02
 updated: 2026-09-02
 ---
 
-Follow-up: User asked to rename the email subject to "Mission Freedom" instead of "Ownership Pace Report". Updated the scheduled task (trig_01EMxMYQ4iRXV9iiGZB9RV4p) prompt so all future weekly emails use subject "Mission Freedom — Week of <dates>, <year>" and body opening "Weekly Mission Freedom report...". Noted to Ron that the already-sent first email keeps its original subject since Gmail doesn't allow post-send subject edits; offered to send a relabeled follow-up if wanted.
+Follow-up: sent relabeled email (Gmail id 1a05f85f32d37859) to rajat@eoxs.com, sheenam@eoxsteam.com, ronn@eoxs.com with subject "Mission Freedom — Week of Aug 24–30, 2026", same week 1 figures, for Ron to check formatting. Automation (trig_01EMxMYQ4iRXV9iiGZB9RV4p) already updated to use this template going forward.
