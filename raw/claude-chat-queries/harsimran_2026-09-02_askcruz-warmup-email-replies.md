@@ -34,3 +34,20 @@ To Brianna: "Hey Brianna, good to hear from you! Been doing well, just heads dow
 To Brooklyn: "Hey Brooklyn, I usually block mornings for focused work and push meetings to the afternoon — keeps me sharper for the deep stuff. What's been throwing your routine off?"
 
 Confirm and I'll send these three as-is, or tell me what to change.
+
+User: alexander @askcruzalgorithm
+
+Assistant: Found it — you'd already replied to this one too, same as Julian's.
+
+alexander@askcruzalgorithm.com — "quick note" — you replied 18:48: "Yeah I am free next week, what about you? lets meet." No action needed there.
+
+So that's all 5 accounted for: Julian and Alexander are already handled by you, and Hannah, Brianna, and Brooklyn are still waiting on the drafts from above. Want me to send those three now?
+
+User: now send them emails
+
+Assistant: [Sent three replies via Gmail]
+To Hannah (hannah@askcruzvision.com): "Hey Hannah, week's been decent — busy but manageable. Glad you're finally getting some breathing room. Let's catch up soon!"
+To Brianna (brianna@askcruzagentic.com): "Hey Brianna, good to hear from you! Been doing well, just heads down with work lately. How've you been?"
+To Brooklyn (brooklyn@askcruzpatterns.com): "Hey Brooklyn, I usually block mornings for focused work and push meetings to the afternoon — keeps me sharper for the deep stuff. What's been throwing your routine off?"
+
+All three sent. Julian and Alexander's threads were already handled by you earlier, so all 5 warmup mailboxes are now current.
