@@ -25,3 +25,37 @@ Before I dig in, pick a rigor level:
 100ft staged — same as 50ft, delivered in sections.
 
 It's a one-page quote, so even 50ft should move fast. Let me know which.
+
+Human: 50ft
+
+Assistant: Full review, sourced against EOXS's own records where it mattered.
+
+Contract summary
+EOXS proposes onboarding what the document calls "the new entity" — a second company distinct from Sabre Alloys, per the Access Control note ("Sabre staff and the new entity's staff each see only their own company's data by default"). 10 users at $425/user list, 47% discount, $2,253/month subscription, $400/month server fee, $25,000 one-time implementation (5 weeks, 8-person team), 12-month initial term, Net 15, 30% of setup due at kickoff with the remaining 70% invoiced over the term, renewal reverting to standard $425/user rate.
+
+Red flags — fix before this goes out
+
+1. The contracting entity is never actually named. The document's own access-control language confirms this is for a second company, not the existing Sabre Alloys account, but nowhere does it name that company, and there's a single undifferentiated signature block. I checked EOXS's own billing system (Teams.eoxs): no second/child contact exists yet under the Sabre Alloys commercial record, and no sales order has been created for this deal. This isn't a hypothetical concern — Sabre Alloys already has one unresolved contract-entity mismatch on file from the Optimal Alloys acquisition (Dec 2023), documented in your own wiki. Sending a second contract with the same ambiguity risks the same problem twice.
+
+2. The 70% balance ($17,500) is "invoiced over the contract term" with no monthly figure or schedule. The original 2023 Sabre proposal had this same kind of vagueness, and it produced a real discrepancy on record: the proposal said $4,500/month, the actual invoices billed $5,000/month, and it took a wiki flag to even notice the mismatch. This account has a documented history of proposal-language-vs-actual-invoice drift — worth pinning down an exact number now.
+
+Yellow flags — worth tightening
+
+3. 47% is a much steeper discount than this same client got at original signing (20%, per the 2023 proposal on file), and your own Ideal Customer Profile notes specialty-alloy distributors like Sabre typically take premium per-seat pricing, not steep discounts. Not unprecedented for this account specifically — Raj gave Sabre a 75% discount on one line item last year — but worth confirming this is a deliberate call and not just a copied number, since it sets a new floor this relationship can point back to.
+
+4. Implementation team size doubled (4 people in 2023 → 8 now) at the same $5,000/week rate. That halves the effective per-person-week rate ($1,250 → $625). If that's not explained by genuine reuse of Sabre Alloys' existing configuration (same steel-processing setup, less discovery work needed), it's quietly compressing implementation margin.
+
+5. Server fee is $400/month here vs. $1,200/month currently paid by Sabre Alloys for its own infrastructure. That's consistent with the new entity riding on shared infrastructure rather than a standalone server, but worth confirming that's actually the intended architecture (see next point for why that matters).
+
+Adjacent risk, not a clause problem but material
+
+6. Sabre Alloys' EOXS-hosted environment is the subject of an active legal matter, as of September 1-2, 2026, over unauthorized access — an evidence package on a "hack incident" naming a defendant went to counsel this week. The Access Control clause in this quote is effectively promising the new entity that exact kind of thing won't happen to them. Before this goes to signature, worth a quick internal check that whatever allowed that access has actually been closed, especially if the new entity ends up sharing infrastructure with Sabre Alloys (point 5 above suggests it might).
+
+7. Beyond that one incident, the existing Sabre Alloys account has a real reliability history: a separate Feb 2026 outage (settled at $25k credit + $1,000/month for 25 months), a stalled dual-server backup project, and ongoing inventory-valuation/AR-AP reconciliation issues. If the new entity shares that environment, it inherits that track record.
+
+Key terms, for awareness
+12-month initial term, standard Net 15, renewal reverts to full $425/user rate, 30/70 kickoff split, per-company data segregation as the stated access model.
+
+What's simply not in this document (expected, given it's a quote/order form, not an MSA): liability caps, indemnification, IP terms, termination-for-cause, dispute resolution, insurance requirements. Nothing wrong with that for this document type — just don't assume they're covered anywhere else unless a separate MSA exists.
+
+Want me to export a redlined version marking up 1, 2, and the entity-name gap specifically?
