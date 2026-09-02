@@ -59,3 +59,23 @@ Key terms, for awareness
 What's simply not in this document (expected, given it's a quote/order form, not an MSA): liability caps, indemnification, IP terms, termination-for-cause, dispute resolution, insurance requirements. Nothing wrong with that for this document type — just don't assume they're covered anywhere else unless a separate MSA exists.
 
 Want me to export a redlined version marking up 1, 2, and the entity-name gap specifically?
+
+Human: THere are things that raj wanted to include in the proposal which was what is included and what is not included can you give me that list by getting that from OV?
+
+Assistant: I searched eoxs-db thoroughly — wiki, emails, and calls — for an "included / not included" scope list tied to this specific quote, and came up empty. Here's exactly what I checked:
+
+Wiki: searched for "Sabre included not included proposal scope," "What's Included / Not Included," and related terms across the Sabre Alloys pages. Nothing matched an inclusion/exclusion list for this deal.
+
+Emails: searched for "Sabre new entity proposal Raj," "Sabre Steel Farmington laser proposal quote," and "Sabre multi-company setup Raj scope modules" (including scoped to raj_gmail). No hits.
+
+Calls: searched for "new company included not included scope laser." The one Sabre-relevant hit (the Aug 11 Juan/Raj call) turned out to be entirely about inventory-aging reports, unrelated.
+
+One thing worth flagging: the quote itself references "the proposal's Included list" as if it's a defined section, but that phrase may just be pointing back to the LICENSES/products table already at the top of the same document (Sales, Purchase, CRM, Inventory Management, etc.), not a separate included/excluded scope document. If that's all it means, there's nothing more to retrieve.
+
+But if Raj actually laid out a separate included/not-included list somewhere, two likely places I haven't checked:
+
+The Sabre Alloys account brief in Google Drive — your own notes mention contract terms and account notes live there, not in the wiki/email index. I can search Drive if you want.
+
+The IRIS (AI/AskCruz) proposal for Sabre — that one does have documented scope back-and-forth in my notes (what's in vs. out of the flat monthly fee, support hours, etc.). If that's actually the proposal you mean rather than this ERP/new-entity quote, say so and I'll pull that instead.
+
+Which of those is it — or something else?
