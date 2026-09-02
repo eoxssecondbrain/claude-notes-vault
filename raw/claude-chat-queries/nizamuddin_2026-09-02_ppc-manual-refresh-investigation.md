@@ -75,3 +75,27 @@ Not unfixable — but it is core behavior, meaning "it will keep doing this by d
 3. Minimum check worth doing regardless of which path you pick: confirm whether the tag input widget itself does a fresh server-side name_search every time the user types/reopens it, versus using a list it cached once at initial page load. If it's already re-querying live, then simply clicking into the tag field again (without a full page reload) should already surface the new tag — worth verifying before assuming a full refresh is required, since that changes what you tell the client and how much dev work this actually needs.
 
 So: this specific complaint is core client behavior, not a defect, and a full fix means building real-time refresh for that one field/screen rather than debugging existing code. Given P4 priority, I'd verify point 3 first — cheap to check, and it may turn out users just need to reopen the field rather than reload the whole page, which changes the scope of this ticket substantially.
+
+User:
+what is the fix for it??
+
+Assistant:
+Three options, ranked by effort. Pick based on how urgent this is for the client versus how much dev time you want to spend.
+
+1. Cheapest — verify and fix the widget's search behavior (do this first, regardless of what else you build)
+
+Check how the "control tags" field is implemented. If it's a standard many2many tags widget, Odoo already calls name_search on the server every time the user types in the field — so typing into it should surface a brand-new tag without any page reload. If it's still not showing up even when the user types/reopens the field, something in that specific widget or its domain/context is caching the option list client-side instead of re-querying. Fix there is narrow: find and remove whatever's holding a stale list in JS state, and confirm the field always does a live server call. This alone might resolve most of the complaint — worth 30 minutes of code reading before building anything bigger, since it changes the scope of the rest of this ticket.
+
+2. Middle ground — push a "refresh available" notification instead of full auto-refresh
+
+On tag creation, broadcast a message over Odoo's bus.bus (the same longpolling channel Discuss/chatter uses) on a channel the inventory view subscribes to. The other open session shows a small non-intrusive banner: "New tag added — refresh to see it," which the user clicks to re-fetch. This is safer than silently re-rendering the field, because if desktop 1 is mid-edit on that record, silently overwriting its data risks clobbering unsaved changes. This needs:
+- backend: override create() on the tag model to call self.env['bus.bus']._sendone(channel, payload)
+- frontend: extend the relevant view/widget JS to listen on that bus channel and show the banner
+
+3. Full live sync — auto-refresh the field silently
+
+Same bus mechanism as #2, but instead of a banner, the client automatically re-fetches and re-renders just that field the moment the notification arrives. Fully solves the complaint with zero user action, but carries the concurrent-edit risk noted above, and is more work to get right (you have to make sure it never stomps on data the user is actively typing).
+
+One infra check before committing to #2 or #3: bus notifications only work if the deployment is actually running Odoo's longpolling worker (a separate process/port, typically proxied at /longpolling/ in nginx). If that's not configured for PPC's instance, this needs an infra change too, not just application code — worth confirming before scoping the dev estimate.
+
+I'd sequence it as: do #1 first and see how much of the complaint it actually resolves, then decide between #2 and #3 for what's left, factoring in whether the longpolling worker is even running for this client.
