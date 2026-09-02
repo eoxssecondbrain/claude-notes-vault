@@ -99,3 +99,21 @@ Same bus mechanism as #2, but instead of a banner, the client automatically re-f
 One infra check before committing to #2 or #3: bus notifications only work if the deployment is actually running Odoo's longpolling worker (a separate process/port, typically proxied at /longpolling/ in nginx). If that's not configured for PPC's instance, this needs an infra change too, not just application code — worth confirming before scoping the dev estimate.
 
 I'd sequence it as: do #1 first and see how much of the complaint it actually resolves, then decide between #2 and #3 for what's left, factoring in whether the longpolling worker is even running for this client.
+
+User:
+this will slow down the server right i mean it builds more lode on server??
+
+Assistant:
+Depends on which option, and on how the server is already configured.
+
+Option 1 (fixing the widget to do a live search) adds no load. It's not a new mechanism — it's making sure an interaction that already happens (typing into the field triggers a server call) actually works correctly. Nothing new hits the server that wasn't already going to.
+
+Options 2/3 (bus-based push) — this is the important part: it depends entirely on whether the deployment already runs Odoo's longpolling worker correctly.
+
+If it does (a dedicated gevent-based longpolling process, separate from the normal request workers, proxied at something like /longpolling/ in nginx) — which any production Odoo instance using Discuss/chat live notifications should already have — then the added load is small. That worker is built specifically to hold thousands of idle long-lived connections cheaply, and it's event-driven: it only sends data when something actually changes, not on a timer. Adding one more channel just means those already-open connections also listen for one more type of message. You're not opening new connections or adding continuous traffic.
+
+If that worker is not properly configured — meaning long-poll requests are falling through to the normal HTTP request workers — then yes, this would genuinely hurt the server. Each of those requests would tie up a regular worker for up to ~50 seconds waiting for a notification, which starves capacity for everyone else's normal requests. That's exactly the infra check I flagged earlier — it has to be confirmed before building #2 or #3, not after.
+
+One more point worth being explicit about: a naive alternative — client re-polls the server every 10-30 seconds to check for new tags — would add real continuous load regardless of infra, since it hits the server on a timer whether or not anything changed. That's worse than the bus approach, not a safer fallback. Bus/longpolling is the lower-load option of the two, assuming it's set up correctly.
+
+So: confirm the longpolling worker is running for PPC's instance first. If yes, #2/#3 are cheap on server load. If no, that's infra work to do before this ticket, and building it on top of a misconfigured setup would make things worse, not better.
