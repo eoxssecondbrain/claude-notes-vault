@@ -49,3 +49,26 @@ Two things I need to actually build this instead of talking about it in the abst
 2. What is the "snippet task" — a task in one of these same systems, a Slack post, a standup doc?
 
 Once I know that, I can tell you concretely: which of these I can do today with a single prompt from you, and which needs a recurring setup (like a saved prompt or template you run each morning) versus which is out of reach without giving me write access somewhere.
+
+User: i like the ticket replies idea and dailt snippets idea.
+for the ticket replies i want you to look at the eoxs support board for new tickets, everytime a new ticket is made under the ownership of aryan or the ticket was created in someone elses name and then transfered to my name. check the contents of the ticket and write and approprite reply to thats tickets resolution(i dont want the we have seen this ticket typa reply) i want the reply to the resolution for eg. the new invoice has been created please go ahead and review and let us know if anything else is needed etc
+
+Assistant: I need to flag a limitation before we go further: I can't run in the background and trigger myself the moment a new ticket appears — I only act when you open a chat and ask me to check. So the actual workflow would be: you (or a scheduled task on your end, if this app supports one) ask me to check, and I pull anything new or reassigned to you and draft replies. It's "minimum input," not "zero input."
+
+Let me look at what's actually in the support ticket data first, so I know if this is even buildable the way you described it.
+
+[Queried EOXS Team Live Odoo: found project_task table used for the ticket/support board with fields like qa_team_incentive, fail_state, fail_state_qa; found two relevant projects — "Tickets" (id 66) and "EOXS Support" (id 76); found user record Aryan Bakshi (user_id 205, login aryan@eoxsteam.com); pulled stage pipeline for these projects: Tickets(0) -> Assigned(2) -> Need Developer/Waiting for client's reply(3) -> Ready for Live(4) -> Communicated(5/8) -> QA(6) -> Approved(9) -> Paid(10); pulled the 10 most recent tickets assigned to user_id 205, all currently sitting in the "Communicated" stage; checked for any tickets in earlier pre-reply stages (Tickets/Assigned/Need Developer) assigned to user_id 205 — zero found.]
+
+Good news: this is genuinely buildable. Confirmed access to the actual board — "Tickets" and "EOXS Support" projects in EOXS Team Live, your user record (Aryan Bakshi), and the stage pipeline: Tickets → Assigned → Need Developer/Waiting on client → Communicated → Approved → Paid.
+
+Right now you have zero tickets sitting in the pre-reply stages (Tickets/Assigned/Need Developer) — everything currently assigned to you is already at "Communicated." So there's nothing to draft this second, but I pulled your 10 most recent tickets to build the actual template. Example, PO# p03000 — client said a PO was entered at $422/unit instead of $43/unit and asked for a correction. A real resolution reply (not a "we've seen this" placeholder) would read something like:
+
+"The unit price on PO# p03000 has been corrected from $422.00 to $43.00 per your note. Please review the updated order and confirm everything looks right on your end."
+
+One accuracy point I want to flag before you rely on this: for a reply like that to be true, I need to check the actual record (sale_order_line / account_move_line) and confirm the price was actually changed — not just paraphrase the client's complaint as if it were resolved. So the real workflow per ticket is: read the ticket → check the underlying record it references (order, invoice, delivery) → confirm what state it's actually in → draft the reply that matches reality. If it's not actually fixed yet, the draft will say what's needed next, not fabricate a resolution.
+
+Two gaps to be upfront about:
+1. "New ticket" (by create_date + assigned to you) is trivial to detect. "Transferred to you" is harder — Odoo logs field changes in a tracking table, not a clean "reassigned from X to Y" log, so pulling reassignment history is more work and I haven't built that part yet.
+2. No true push notification — the actual usage pattern is you open a chat and say "check my tickets," I pull anything new/assigned/transferred, check each one's underlying record, and hand you drafts to paste and send.
+
+Want me to just build this as a repeatable thing — i.e. next time you say "check my tickets," I run the full pull + verify + draft sequence exactly like above, so you don't have to walk me through it again? And separately, still need to know where your daily snippet actually lives to do the same for that.
