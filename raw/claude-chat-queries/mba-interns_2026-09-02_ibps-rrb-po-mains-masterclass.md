@@ -309,3 +309,84 @@ Quant is the widest scoring spread in the paper and simultaneously the worst ret
 Sources: practicemock and bankersadda and ibpsguide and byjus (2023 Mains, 10 Sept), adda247 and bankersadda and practicemock and makemyexam (2024 Mains, 29 Sept, Shifts 1 and 2), careerpower and ibpsguide (2025 Mains, 28 Dec), time4education (multi-year DI and series distribution), pw.live (2026 expected-topic list, the one contradicted above).
 
 Next: Section 4 — General Awareness, the highest marks-per-minute block in the paper and the one where a defined 6-month current-affairs window does most of the work.
+
+Say "next" for Section 4 — General Awareness.
+
+## User
+
+next
+
+## Assistant
+
+Section 4 — General Awareness (40 Q, 40 marks, 1.0 per question)
+
+1. Weightage & PYQ flag
+
+Composition of the actual RRB PO Mains GA section:
+
+| Block | 2025 Mains | 2024 Mains | Flag |
+|---|---|---|---|
+| Current Affairs (last 5–6 months) | 26 | 25 | 🔥 HIGH WEIGHTAGE - Must Do |
+| Banking Awareness | 6 | 7 | 🔥 HIGH WEIGHTAGE - Must Do |
+| Economy / Budget / RBI policy | 5 | 5 | ⚡ MODERATE |
+| Static GK | 3 | 3 | ⚡ MODERATE - lowest return |
+
+That split is from a single source, so treat the exact counts as ±3. It is corroborated qualitatively by the recorded 2025 question list, which was dominated by current-affairs items — Bright Star defence exercise, Rashtriya Vigyan Puraskar, G20 2025 host country, UDGAM portal, GI tag, ministerial and appointment questions, two government schemes, UPI-accepting countries — with only a handful of static or conceptual banking items such as Central Bank of India's head office and who appoints the Chief Justice.
+
+Practical reading: roughly 65% current affairs, 25–30% banking and economy, 7% static. Static GK is where most candidates over-invest for the worst return in the section.
+
+Window for the 20 December 2026 Mains: July to December 2026, weighted heavily toward September–November. Multiple sources converge on a 5–6 month recall window.
+
+2. Core concepts and content map
+
+RRB-specific banking (routinely asked, routinely skipped)
+- RRB structure: established under the RRB Act 1976; ownership split 50% Central Government, 35% sponsor bank, 15% State Government. Amalgamation waves and the current count of RRBs and their sponsor banks.
+- NABARD's role: refinance, supervision of RRBs and cooperatives, SHG-bank linkage, KCC, RIDF.
+- Priority sector lending target for RRBs: 75% of ANBC, with sub-targets for agriculture, small and marginal farmers, micro enterprises, and weaker sections.
+
+RBI and monetary policy
+- Repo, SDF (replaced reverse repo as the floor), MSF, bank rate, CRR, SLR — current values and the direction of the last three MPC decisions.
+- MPC: six members, three external, Governor holds the casting vote; meets bi-monthly.
+- Basel III in India: CRAR 9%, capital conservation buffer 2.5%, plus LCR and NSFR.
+
+Banking terms that recur
+- NPA classification: SMA-0/1/2 → substandard → doubtful → loss.
+- DICGC deposit insurance cover of ₹5 lakh.
+- CASA, NIM, CD ratio, provisioning coverage ratio.
+- Payment rails: UPI, IMPS, NEFT, RTGS, NACH, Bharat BillPay, CBDC e-rupee, UPI internationalisation.
+
+Schemes (highest current-affairs overlap)
+- PMJDY, PMJJBY, PMSBY, APY — premium and cover amounts.
+- MUDRA categories and limits, Stand-Up India, PM Vishwakarma, PMFBY, PM SVANidhi.
+
+Current-affairs categories that repeat every year
+Appointments, awards, defence exercises, summits and their host countries, government schemes and launches, GI tags, sports winners and venues, indices and rankings, MoUs, obituaries, books and authors.
+
+Static, restricted to the profitable subset
+Bank headquarters and taglines, national parks and wildlife sanctuaries, dams and their rivers, currencies and capitals, important days, RBI governors. Nothing beyond this list is worth time.
+
+Method
+- One current-affairs source only. A monthly PDF plus one consolidated capsule. Multi-sourcing GA creates volume without recall.
+- Active recall, not reading. A daily 20-question quiz beats an hour of passive revision.
+- Convert weekly to one-line facts; revise the one-liners, never the original articles.
+- Final 30 days: capsules and one-liners only, no new intake beyond a weekly top-up.
+
+3. Golden rules of attempting
+
+Rule 1 — GA goes first in the paper, capped hard at 8–10 minutes, single pass, no revisit. It is the only section where marks are already decided; spending 15 minutes cannot manufacture knowledge you did not bring.
+
+Rule 2 — 12-second rule per question. You either know it or you don't. Second-guessing in GA flips correct answers to incorrect far more often than the reverse.
+
+Rule 3 — apply the elimination test before guessing. Attempt only if two options are gone; a blind guess is expected-value zero and only adds variance around your cutoff.
+
+Target: 22–28 attempts at ~90% accuracy, giving 20–25 of 40.
+
+The strategic point about this section
+
+GA is the highest marks-per-minute block in the paper — 40 marks in nine minutes — and the only one whose outcome is fully sealed before you sit down. It is also the section most candidates postpone until after Prelims, which leaves 22 November to 20 December, four weeks, to cover a six-month window. That compression is the single most common reason competent candidates land at 85–95 instead of 110+.
+
+Concrete implication: GA cannot be block-studied later. It needs a 20-minute daily habit starting now, running through both Prelims and Mains. Of everything in this masterclass, that habit has the highest expected return per hour invested — higher than any Quant topic.
+
+Sources: mahendras (2024 and 2025 Mains GA composition and good attempts), careerpower and bankersadda (2025 Mains, 28 Dec, actual GA questions recalled), oliveboard and practicemock and affairscloud (current-affairs window, banking-awareness weighting, topic-wise expectations across IBPS Mains papers).
+
+Next: Section 5 — Computer Knowledge, 20 marks that most candidates leave half-prepared despite it being the second-most time-efficient block in the paper.
