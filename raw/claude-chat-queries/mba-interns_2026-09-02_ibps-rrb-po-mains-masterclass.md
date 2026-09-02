@@ -229,3 +229,83 @@ Reasoning consistently shows the highest good-attempt figures in the paper — 2
 Sources: pw.live and bankersadda and practicemock and adda247 (2024 Mains, 29 Sept, Shifts 1 and 2), adda247 and practicemock and careerpower and ibpsguide (2025 Mains, 28 Dec, Shift 1), mahendras (multi-year trend and 2026 expected attempts).
 
 Next: Section 3 — Quantitative Aptitude, the section with the lowest good-attempt rate in the paper and therefore the largest scoring spread between candidates.
+
+Say "next" for Section 3 — Quantitative Aptitude.
+
+## User
+
+next
+
+## Assistant
+
+Section 3 — Quantitative Aptitude (40 Q, 50 marks, 1.25 per question)
+
+1. Weightage & PYQ flag
+
+Cross-checked across three Mains papers: 10 Sept 2023, 29 Sept 2024, 28 Dec 2025.
+
+| Topic | Expected Q | Marks | Flag |
+|---|---|---|---|
+| Data Interpretation (all types) | 15–20 | 18.75–25 | 🔥 HIGH WEIGHTAGE - Must Do |
+| Arithmetic word problems | 10–12 | 12.5–15 | 🔥 HIGH WEIGHTAGE - Must Do |
+| Number Series (missing/wrong) | 4–6 | 5–7.5 | 🔥 HIGH - easiest marks in section |
+| Data Sufficiency | 3–4 | 3.75–5 | ⚡ MODERATE |
+| Quantity Comparison (Q1 vs Q2) | 2–5 | 2.5–6.25 | ⚡ MODERATE - declining |
+| Quadratic Equations | 0–4 | 0–5 | ⚠️ LIKELY DROPPED - see flag below |
+
+DI is roughly half the section. Composition by year: 2023 had tabular-missing 5, pie 5, caselet 5; 2024 had double pie, bar, and caselet sets totalling 18–20 with caselet alone at 8–10; 2025 had caselet 5, double pie 5, bar 5, caselet 3.
+
+Caselet DI is the rising format. It was 5 questions in 2023 and 8–10 in both 2024 and 2025. Caselets are prose-to-table conversion problems, not calculation problems — a different skill from graph DI, and the one most candidates neglect.
+
+Important contradiction to flag. Coaching "most expected 2026" lists still headline quadratic equations and simplification/approximation for RRB PO Mains. Quadratic appeared in 2023 (3–4 questions) but is absent from every 2024 and 2025 Mains topic table I checked, and simplification/approximation appears in Prelims and Clerk analyses, not PO Mains. Treat both as Prelims-tier. Do not spend Mains prep hours there.
+
+Difficulty and attempt reality: Quant returned the lowest good attempts in every year — 9–14 in 2023 (rated moderate-difficult), 15–17 in 2024, 13–18 in 2025. Variance across years is the highest of any section, so plan for the bad case.
+
+2. Core concepts and shortcuts
+
+Non-negotiable memory base
+- Fraction-percentage equivalents through 1/20 (1/8 = 12.5%, 1/16 = 6.25%, 1/12 = 8.33%). DI is percentage manipulation; long division is what kills the section.
+- Squares to 30, cubes to 20, tables to 25.
+
+Formulas that recur every year
+- Successive percentage change: net = a + b + ab/100.
+- Same SP, +x% and −x%: always a loss of x²/100 percent.
+- CI − SI, 2 years = P(r/100)². For 3 years = P(r/100)²(3 + r/100).
+- Time & Work: set total work = LCM of the given days, then efficiency = total ÷ days. Never work in fractions.
+- Efficiency ratio is the inverse of time ratio. Outlet pipes carry negative efficiency.
+- Equal distances: average speed = 2ab/(a+b). Same distance ⇒ speed ratio is the inverse of time ratio.
+- Boats: downstream = b+s, upstream = b−s; boat = (d+u)/2, stream = (d−u)/2.
+- Partnership profit ratio = capital × time.
+- Replacement/mixture: final quantity = initial × (1 − x/V)ⁿ. Two-component averages: alligation cross method.
+- Averages: use deviation from an assumed mean, not raw summation.
+
+DI method
+- Read the question stem before reading the data. Extract only the cells you need; never build the whole table.
+- Approximate by default. Compute exactly only when two options sit within ~5% of each other.
+- Caselet: spend the first 45 seconds converting prose into a table. Re-reading a caselet mid-solve is the biggest single time leak in this section.
+- Missing-table DI: locate the one cell the question depends on and solve backwards to it.
+
+Number series
+- Test in fixed order: constant difference → second-level difference → multiplicative (×2±1, ×1.5, etc.) → squares/cubes ± constant → prime or alternating pattern.
+- Wrong-number series: validate the pattern on three consecutive terms before checking the rest.
+
+Data Sufficiency and Quantity Comparison
+- Same discipline as reasoning DS: establish solvability, do not solve. Statement I, then II, then combined, stopping at first sufficiency.
+
+3. Golden rules of attempting
+
+Rule 1 — triage the DI sets before solving any of them. Spend 60 seconds scanning all four sets and rank them: table and bar (direct reads) first, pie second, caselet last. Solving sets in printed order is the default mistake and costs 5–8 marks.
+
+Rule 2 — bank the standalone block in the first 12 minutes. Number series (4–6), one easy DI set (5), and 4–5 single-line arithmetic problems. That is 14–16 questions at high accuracy before you meet anything hard.
+
+Rule 3 — hard-abort any DI set where you cannot answer three of five questions within 3.5 minutes, and drop it entirely rather than guessing across it. Also skip standalone mensuration, probability, and permutation questions when they appear as singles; they are 1–2 questions with disproportionate time cost.
+
+Time budget: 33–35 minutes. Target 20–24 attempts at ~85% accuracy, giving 22–27 of 50.
+
+Strategic caveat
+
+Quant is the widest scoring spread in the paper and simultaneously the worst return per hour of preparation. For a 110–120 target you need roughly 22–27 marks here, not 40. The correct goal is DI speed and arithmetic accuracy on a fixed shortlist of topics, not comprehensive Quant mastery. Candidates who invert this — grinding Quant while leaving GA and Computer half-prepared — are the ones who land at 85–95 and miss merit despite clearing the qualifying cutoff.
+
+Sources: practicemock and bankersadda and ibpsguide and byjus (2023 Mains, 10 Sept), adda247 and bankersadda and practicemock and makemyexam (2024 Mains, 29 Sept, Shifts 1 and 2), careerpower and ibpsguide (2025 Mains, 28 Dec), time4education (multi-year DI and series distribution), pw.live (2026 expected-topic list, the one contradicted above).
+
+Next: Section 4 — General Awareness, the highest marks-per-minute block in the paper and the one where a defined 6-month current-affairs window does most of the work.
