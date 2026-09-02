@@ -106,3 +106,9 @@ Function-first, plain
 If you want a name that also works as a product/brand later (not just internal), Forge or Sieve carry outside a slide deck better than Gatekeeper or FirstPass, which read as internal tool labels.
 
 Pick one, or tell me if you want it to sound more human/assistant-like (a "Sam" or "Ava" type) instead of function-based — different naming logic entirely.
+
+Human: I would like to name it Siv based on sieve. The understanding behind it is that it will help us sift out candidates
+
+Assistant: Siv works. Sieve is the exact right metaphor here — thousands go in, only the 10-15 worth a human's time come out the other side. Short, easy to say, ties straight back to the problem you're solving.
+
+Siv is the name going forward for this project.
