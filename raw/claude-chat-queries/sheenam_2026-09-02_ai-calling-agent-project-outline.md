@@ -106,10 +106,6 @@ What's new from this call that matters for the outline:
 
 This changes what section 3 (consistency check) and 4 (risks) need to cover — want me to continue with those now, folded in with this new detail?
 
-Human: Which depth do you want — 5ft, 10ft, or 50ft?
-
-[Note: this was Claude's own prior-turn message, restated here for record continuity]
-
 Human: we have two candidates right now - raven and bolna ai
 Compare the two
 
@@ -145,3 +141,18 @@ Two things worth flagging before you pick one:
 Recommendation: run the same test protocol on both — Utkarsh is already doing this for Agni, worth having him mirror it for Bolna. Load the Operations Manager JD into each, run one real test call, check what actually lands in a Google Sheet, and specifically try to trigger an early-exit by giving a deliberately weak answer. That settles the one thing neither company's marketing will honestly tell you.
 
 Sections 3 and 4 from the earlier outline (consistency check, risks) are still open if you want those next.
+
+Human: Sections 3 and 4 are still open whenever you want them.
+
+[Note: this was Claude's own prior-turn closing line, restated here for record continuity]
+
+Human: You have given me such big paragraphs to read. It it so difficult to Ingest data in such high paragraphs. Can you give me more digestible responses please.
+
+Assistant: Fair. That vendor comparison was way too dense.
+
+Going forward:
+- Short lines, not paragraphs
+- Bullet points over tables with long text in cells
+- One idea per line
+
+I'll keep everything in that format from here on.
