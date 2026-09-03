@@ -8,7 +8,7 @@ updated: 2026-09-03
 
 User: what is my role in askcruz
 
-Assistant: Based on internal EOXS records: your role is listed as **Product · MBA Business Operations** in the August 2026 monthly performance summary — not under the separate "CRUZ" department tag that some other AskCruz-focused staff (Parshant Sharma, Tanya Shrivastava, Nandita Rana, Harsh Yadav) carry.
+Assistant: Based on internal EOXS records: your role is listed as Product · MBA Business Operations in the August 2026 monthly performance summary — not under the separate "CRUZ" department tag that some other AskCruz-focused staff (Parshant Sharma, Tanya Shrivastava, Nandita Rana, Harsh Yadav) carry.
 
 Beyond that title/department pairing, I found no dedicated role description, task assignments, or scope-of-work document for you specifically in the AskCruz project data (no implementation tasks, no org-chart asset). You do show up as a participant in AskCruz-related internal calls — e.g. the Aug 13 "Claude vs AskCruz" cost-decision meeting (where you proposed a "third/final chance" on an intern-accountability matter) and the Aug 18/19 Claude/MCP access onboarding sessions.
 
@@ -16,7 +16,7 @@ If there's a more specific scope (e.g. what you're supposed to be delivering on 
 
 User: what is my salary
 
-Assistant: This connection strips every monetary figure — salary, payroll, compensation, bonus — before I ever see it, regardless of tier. Even if a record exists, it would come back as `[restricted: amount]`. I can't get your salary through this connector. Check the salary register directly with HR/Odoo, or ask Raj/whoever manages payroll access.
+Assistant: This connection strips every monetary figure — salary, payroll, compensation, bonus — before I ever see it, regardless of tier. Even if a record exists, it would come back as [restricted: amount]. I can't get your salary through this connector. Check the salary register directly with HR/Odoo, or ask Raj/whoever manages payroll access.
 
 User: what all trainings and security certifications are needed in an organization to each employee
 
@@ -47,3 +47,37 @@ Cadence
 - Ad hoc: after any incident, or when a new tool/system rolls out (e.g. your Claude/MCP access rollout would be a natural trigger point for a short "what data can this touch, what can't it do" briefing)
 
 If you want to know whether EOXS should be formalizing any of this now — worth flagging: given AskCruz is moving toward selling to enterprise clients (3GM Steel, Sabre Alloys deals), a documented security-training program becomes a real gap once a prospect's procurement team asks for it. That's a leverage point, not just hygiene.
+
+User: tell me in general as compared to other AI organizations what are mandatory trainings for employee
+
+Assistant: Doesn't clearly match either loaded skill (not a save action, not EOXS internal data) — treating as general knowledge, flagging per your rule.
+
+Compared to general orgs, AI companies tend to add a layer specific to model/data risk on top of the standard baseline (security awareness, code of conduct, data privacy, anti-harassment). What's different:
+
+Responsible AI / safety training
+- Most frontier AI labs (Anthropic, OpenAI, Google DeepMind) run mandatory training on responsible scaling policies, model risk categories, and escalation paths for anyone touching model development or deployment
+- Red-teaming and misuse-awareness training for staff with model access, even non-research roles in some orgs
+
+Confidentiality / IP protection
+- Heavier NDA and trade-secret training than typical software companies, because model weights, training data, and safety research are treated as extremely sensitive
+- Stricter device and network security requirements (approved hardware, no personal cloud sync of internal docs) — this is often mandatory training + policy, not just policy
+
+Data handling and privacy
+- Training on handling user conversation data, PII in training sets, and data retention rules — more rigorous than typical SaaS because the product itself ingests user input at scale
+- Some orgs require training specific to regulatory frameworks their models touch (GDPR, HIPAA if in health verticals, export controls if the tech is dual-use)
+
+Export control / national security awareness
+- Increasingly common at frontier AI labs given government scrutiny (comparable to what you'd see at defense contractors) — training on what can't be shared with foreign nationals or certain jurisdictions
+- Less common at smaller AI startups unless they're building anything with dual-use potential
+
+Bias/fairness and ethics training
+- Many AI orgs run mandatory training on bias in datasets/models for anyone doing data labeling, model evaluation, or product decisions — this is less standard outside AI
+
+What's roughly the same as any tech company
+- Standard security awareness (phishing, password hygiene)
+- Code of conduct, anti-harassment
+- Incident response basics
+
+Certifications: individual staff rarely hold formal certs (SOC 2/ISO 27001 stay at company level), but AI orgs increasingly document internal "model access tiers" the way EOXS already does with its own tier1/tier2/tier2_confidential system — that's actually a fairly mature practice you're already running, most smaller orgs don't have it formalized yet.
+
+If you're asking because you're thinking about what AskCruz should adopt as it scales toward enterprise clients: the export-control and IP-protection pieces are the ones companies skip early and regret later once a serious client's procurement team asks about them.
