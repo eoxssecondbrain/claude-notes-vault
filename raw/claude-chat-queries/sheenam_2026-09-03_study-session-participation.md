@@ -24,16 +24,3 @@ Assistant: Quick pick before I build this out - how deep do you want it?
 
 Question: How deep should this go?
 Options: 5ft Quick, 10ft Verified, 50ft Deep, 100ft Staged
-
-User: 50ft Deep
-
-Assistant: Before I build this out at 50ft, three things change the design a lot - quick answers:
-
-Question 1: Roughly how many people are on this daily call?
-Options: 5-8, 9-15, 16-25, 25+
-
-Question 2: Is the call video-on or audio/text only?
-Options: Video on, Audio only, Mixed/varies
-
-Question 3: Is attendance mandatory or optional?
-Options: Mandatory, Optional, Mixed by role
