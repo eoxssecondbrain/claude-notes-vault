@@ -23,3 +23,11 @@ Assistant: What do you want me to do with this addition — merge it into the re
 User: yes
 
 Assistant: Team, going forward, unaddressed directives will be logged as a flag against you. If you're given a task, either complete it or flag to your team lead why you can't. This applies retroactively too — any standing instruction I've set since the start of the year (development process, API management, code snippet conventions, etc.) that isn't being followed also counts as a flag. Follow these setups religiously. Accumulating 3 flags in a month will lead to formal disciplinary action.
+
+User: Any communication gap, assumption, or wrong information will be treated as flag too. Be very mindful of how and what you communcate with your team.
+
+Assistant: Team, going forward, unaddressed directives will be logged as a flag against you. If you're given a task, either complete it or flag to your team lead why you can't. This applies retroactively too — any standing instruction I've set since the start of the year (development process, API management, code snippet conventions, etc.) that isn't being followed also counts as a flag. Follow these setups religiously.
+
+Communication gaps, assumptions, or passing on wrong information will also count as a flag — be deliberate and precise in how and what you communicate with the team.
+
+Accumulating 3 flags in a month will lead to formal disciplinary action.
