@@ -6,7 +6,8 @@ created: 2026-09-02
 updated: 2026-09-03
 ---
 
-User: This is an hourly automated check of the EOXS implementation task board (EOXS_Data_General MCP connector, the "eoxs-db" implementation_tasks tools). This session starts fresh with no memory of prior runs — follow this instruction exactly, without asking any clarifying questions.
+User:
+This is an hourly automated check of the EOXS implementation task board (EOXS_Data_General MCP connector, the "eoxs-db" implementation_tasks tools). This session starts fresh with no memory of prior runs — follow this instruction exactly, without asking any clarifying questions.
 
 1. Call list_implementation_tasks(stage="Functional QA") with no client filter, to get every task currently sitting in the Functional QA stage, across all clients.
 2. For each task returned, call get_implementation_task(task_id) to get its full event history (includes stage-change history and attachment metadata).
@@ -18,6 +19,5 @@ User: This is an hourly automated check of the EOXS implementation task board (E
 8. If the EOXS_Data_General connector or its tools are unavailable, or a call errors out, state that plainly in the final response instead of retrying repeatedly.
 9. the scheduled task should stop automatically at 3 am ist and only work on weekdays
 
-Assistant: No tasks moved into Functional QA in the last 60 minutes. All three tasks currently in that stage (Sticker Descriptions - Bug, Customer Statement - Bug, Payment Sent Emails on Bill Payment — all Discount Pipe & Steel) last entered the stage on 2026-07-23, well outside the 60-minute window.
-
-[Verification detail: list_implementation_tasks(stage="Functional QA") returned 3 tasks (ids 30585, 30583, 30555), all client discount-pipe-steel. get_implementation_task was called on each; most recent stage_change event with new value "Functional QA" was: task 30585 at 2026-07-23 12:07:20 UTC, task 30583 at 2026-07-23 12:06:15 UTC, task 30555 at 2026-07-23 12:06:57 UTC. Current UTC time at check was 2026-09-03 14:39:40Z. None within the last 60 minutes. Note: the scheduled task trigger (trig_0196wy2x5KSQeR1Vf4yYem7K) already has cron "38 0-17,21-23 * * 1-5" configured, which already satisfies the "stop at 3am IST, weekdays only" requirement — no change needed.]
+Assistant:
+Checked all 3 tasks currently in Functional QA (Sticker Descriptions - Bug, Customer Statement - Bug, and Payment Sent Emails on Bill Payment — all client discount-pipe-steel). Their most recent stage-change into Functional QA occurred on 2026-07-23 (12:06–12:07 UTC), over a month before the current run time (2026-09-03 16:38 UTC). No task moved into Functional QA in the last 60 minutes.
