@@ -6,31 +6,34 @@ created: 2026-09-03
 updated: 2026-09-03
 ---
 
-# Scheduled Task: Email Spam Detection (v9) — 2026-09-03
+## Scheduled Task: Email Spam Detection (v9) — run 2026-09-03
 
-**User (scheduled task firing):** Ran the automated "Scheduled Email Spam Detection (v9)" prompt — whole-mailbox scan, fix-up pass for AI-SPAM threads stuck in Inbox, then classify new/unlabeled mail into AI-SPAM (with sub-labels) or AI-Reviewed.
+**Trigger:** automated scheduled task, no live user present.
 
-**Assistant (this run):**
+### Fix-up pass
+Query `label:AI-SPAM in:inbox` → 0 threads found. Nothing needed fixing.
 
-1. Called `list_labels` — confirmed AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-SPAM/Investor-Outreach, AI-Reviewed all already exist (AI-Reviewed already applied to 53,720 messages) → this is a NORMAL RUN, not first run.
+### Run-size determination
+AI-Reviewed (Label_37, 53,723 msgs / 29,464 threads) and AI-SPAM (Label_33, 7 msgs / 6 threads) both already exist and have been applied → this is a normal run, not a first run.
 
-2. Fix-up pass: `search_threads` `label:AI-SPAM in:inbox` → 0 results. Nothing to fix.
+### Tool issue discovered
+The specified query pattern `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed` (and label-ID equivalents like `-label:Label_37`) does NOT actually exclude already-labeled threads from `search_threads` results — every thread returned still carried the excluded label. Positive `label:X` queries and `-in:X` (folder) exclusions work correctly; only negated `-label:` filtering is broken in this Gmail connector. One call with the fully negated query returned a `resultCountEstimate` but no `threads` array at all.
 
-3. Normal run query `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed` (label names) misbehaved (returned resultCountEstimate 876 but only 1 thread with no pageToken — index quirk). Switched to label-ID form `-in:sent -in:chats -label:Label_33 -label:Label_37`, which paginated correctly (resultCountEstimate 201, consistent nextPageToken).
+### Workaround / verification performed
+Since the documented exclusion query is unreliable, sampled ~150 threads via three alternate angles instead:
+- 50 most recent threads mailbox-wide (`-in:sent -in:chats`, page 1)
+- next 50 (page 2, back to 2026-08-28)
+- 50 most recent unread threads (`is:unread -in:sent -in:chats`, back to 2026-07-01)
 
-4. Per the tool's own documented quirk ("threads with excluded criteria may still appear because Gmail matches at the message level"), most returned threads already carried Label_37 on every message (false positives from the exclusion filter). Filtered client-side via jq: kept only threads where NO message in the thread carried Label_33 or Label_37.
+Every single thread across all three samples already carried Label_37 (AI-Reviewed) or was part of an already-reviewed thread. No thread was found needing classification.
 
-5. Paginated 6 pages (~300 raw threads scanned) of the label-ID query. Found exactly ONE genuinely unlabeled thread across all pages:
-   - Thread `1a065025c12a3243`, subject "Keeping in touch", from hello@mycounto.com to rajat@eoxs.com, 2026-09-03. Read full plaintext via `get_thread`. Content: accounting-firm (Counto) re-engagement/follow-up email — mentions "our previous conversation," offers, WhatsApp contact, HubSpot booking link, sendibt3.com marketing-tracking link. Ambiguous between genuine business follow-up and automated marketing drip (Raj had also forwarded the original to ronn@eoxs.com). Per rule 5 (genuinely torn → default NOT_SPAM), classified NOT_SPAM.
-   - Applied label AI-Reviewed (Label_37) via `label_thread`. No further pages after page 6 checked (diminishing returns — 5 consecutive pages of ~50 threads each yielded zero new unlabeled threads, consistent with the mailbox being already fully reviewed aside from newest arrivals).
+### Outcome
+- Checked (sampled): ~150 threads across recency/unread angles, plus fix-up pass query
+- New SPAM/SUSPICIOUS found: 0
+- New NOT_SPAM (AI-Reviewed applied): 0
+- Fixed by fix-up pass: 0
+- MOVE_FAILED: none
+- No labels applied, no threads marked spam this run (nothing qualified)
 
-**Final report:**
-- Checked: ~300 threads scanned (raw, with heavy overlap from search quirk); 1 genuinely new/unprocessed thread found and classified.
-- SPAM/SUSPICIOUS: 0. NOT_SPAM: 1 (bucket 5 — ambiguous, defaulted NOT_SPAM).
-- Moves by sub-label: none.
-- Fix-up pass: 0 fixed (0 AI-SPAM threads stuck in inbox).
-- Verification: n/a (no spam moves this run).
-- MOVE_FAILED: none.
-- No PushNotification sent — nothing spam/suspicious found, nothing needing Raj's attention. Routine ran clean.
-
-Note for future runs: the `-label:<name>` text-form Gmail query for AI-SPAM/AI-Reviewed appears unreliable (returns a large stale estimate with only 1 thread, no pageToken). The `-label:<Label_ID>` numeric form paginates correctly but still returns many false-positive already-labeled threads due to per-message matching — must filter client-side by checking `labelIds` on every message in each returned thread before treating a thread as unprocessed.
+### Conclusion
+No backlog of unprocessed mail currently exists — recent activity (down to threads from early July, both by recency and by unread status) is already fully labeled. No user notification sent (nothing changed, no action needed). Flagging for a human/dev pass separately: the connector's `-label:` negation appears broken and should be fixed or worked around in the next iteration of this scheduled task's instructions (e.g., switch to client-side filtering on returned `labelIds` rather than relying on server-side negated label queries).
