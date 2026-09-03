@@ -187,3 +187,147 @@ The amount redaction is system-level and applies to everything - there's no work
 For your HR MCP QA, this means: you test the field structure, data types, and logic with mock/placeholder amounts (e.g., `incentive_structure: {base: 50000, bonus_pct: 15}`), but you won't get live figures to validate against.
 
 Is there a specific non-monetary numeric data type you need for your QA testing?
+
+---
+
+User: now can you tell me some queries that i can run which will help me to get a good QA result on hr mcp?
+
+Claude: Here are specific queries mapped to your 3-layer testing strategy:
+
+**LAYER 1: HAPPY PATH QUERIES**
+
+Fetch single employee:
+```
+Get full employee record for ID: emp-001
+Expected: name, ID, department, role, hire_date, status, incentive_structure
+```
+
+List department employees:
+```
+List all employees in department: "Engineering"
+Expected: Array of employee records with consistent structure
+```
+
+Filter by status:
+```
+Filter employees where status = "active"
+Expected: Only active employees returned, all fields present
+```
+
+Get employee by name:
+```
+Fetch employee: name="John Smith"
+Expected: Exact match or close match with all details
+```
+
+---
+
+**LAYER 2: EDGE CASES & BOUNDARY QUERIES**
+
+Special character names:
+```
+Fetch employee: name="José María O'Connor-García"
+Expected: Name preserved exactly, no corruption
+```
+
+Null/missing field handling:
+```
+Fetch employee: ID="emp-999" (employee exists but department is null)
+Expected: Returns null for department, not error or blank string
+```
+
+Inactive employee:
+```
+Fetch employee: ID="emp-002", status="inactive"
+Expected: Returns record marked inactive, all fields accessible
+```
+
+Empty department list:
+```
+List employees in department: "Future-Dept-NotCreated"
+Expected: Returns empty array or "no records found", not error
+```
+
+Date boundary:
+```
+Filter employees with hire_date before: "2000-01-01"
+Expected: Handles old dates correctly, no date format error
+```
+
+Single employee department:
+```
+List employees in department: "C-Suite"
+Expected: Returns 1 record with correct structure
+```
+
+---
+
+**LAYER 3: ERROR & PERMISSION QUERIES**
+
+Invalid ID format:
+```
+Fetch employee: ID="INVALID-123-XYZ"
+Expected: Returns "employee not found" (specific error, not generic)
+```
+
+Empty/null ID:
+```
+Fetch employee: ID=""
+Fetch employee: ID=null
+Expected: Clear error like "ID required" or "invalid format"
+```
+
+Non-existent employee:
+```
+Fetch employee: ID="emp-99999"
+Expected: "Employee not found" (not crash, not silent failure)
+```
+
+Invalid status filter:
+```
+Filter employees: status="zombie-status"
+Expected: "Invalid status value" or returns empty (not error crash)
+```
+
+Permission denied (readonly scope):
+```
+Update employee: ID="emp-001", department="Sales" (when connection is readonly)
+Expected: "Permission denied" or "Read-only access"
+```
+
+API timeout:
+```
+List all employees with timeout=100ms (system takes 2 seconds to respond)
+Expected: Timeout error message, graceful degradation
+```
+
+---
+
+**LAYER 1 + 2 + 3 COMPLETE TEST SUITE (Run in order)**
+
+```
+Test Sequence:
+1. Fetch emp-001 → check all fields present
+2. List Engineering → check array structure
+3. Filter status=active → check filtering works
+4. Fetch "José García" → check special characters
+5. Fetch emp-999 (null dept) → check null handling
+6. Fetch emp-99999 → check "not found" error
+7. Update with readonly scope → check permission error
+```
+
+---
+
+**Key: What to document for each query**
+
+For every query, record:
+- Query name: `[Fetch Single Employee]`
+- Input: `ID=emp-001`
+- Expected result: `All 8 fields returned, hire_date as YYYY-MM-DD`
+- Actual result: `[What Claude/MCP returned]`
+- Pass/Fail: `[✓/✗]`
+- Notes: `[Any anomalies]`
+
+This format catches gaps fast. Run Layer 1 (3 queries), then Layer 2 (6 queries), then Layer 3 (6 queries) = 15 total queries covering 80-90% of issues.
+
+Do you want me to show you a documentation template to track these results?
