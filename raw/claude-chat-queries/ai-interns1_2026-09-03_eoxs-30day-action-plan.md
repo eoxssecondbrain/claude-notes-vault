@@ -6,209 +6,92 @@ created: 2026-09-03
 updated: 2026-09-03
 ---
 
-# EOXS Strategic Opportunities: 30-Day Action Plan
+# EOXS Strategic Opportunities: Corrected Process
 
-## Context
-User: Rajat Jain (CEO EOXS, transitioning full-time to AskCruz)
-Date: September 3, 2026
-Request: "Check latest information and tell me what we should do next" (follow-up to 50ft deep analysis)
+## Critical Flaw in Original Plan
 
----
+User pointed out: "Something seems wrong with the process."
 
-## Session Summary
+**The Problem:** Original 30-day plan asked Rajat to simultaneously:
+- Go full-time on AskCruz
+- Execute 30-day transformation for EOXS (hiring, customer calls, specs, pilots)
 
-### Prior 50ft Deep Analysis Delivered
-Five high-impact opportunities identified:
-1. AI Workers as standalone SaaS (Epicor/SAP customers)
-2. Predictive churn monitoring + expansion revenue
-3. Productized integrations (Stripe, Aircall, TaxCloud, etc.)
-4. Anonymized steel industry intelligence platform
-5. Sales acceleration toolkit (CRM + coaching)
-
-**Total TAM: $1.7M-$4.3M incremental ARR**
-
-Recommendation: Tier 1 (start now) = Opportunities 2 & 3. Tier 2 (Q4) = Opportunities 1 & 5. Tier 3 (defer) = Opportunity 4.
+This is impossible. I buried the real prerequisite ("hire interim GM/COO") as an optional note when it should be foundational.
 
 ---
 
-### Current Business Reality (as of Sept 3)
-- 8 clients, 824 active implementation tasks
-- 9 unpaid invoices totaling $27,822 outstanding
-- Discount Pipe & Steel: $7,879 overdue (94 days), 60+ open tasks, 5+ high-priority bugs
-- Sabre Alloys: $9,380 invoice 30 days old
-- Hansen: $1,200 invoice 94 days overdue
-- 84 implementation tasks unowned in Requirement stage
-- Ron J is single point of failure for all escalations/technical decisions
-- Payment status bug making invoice collection worse (customers show "Not Paid" even when paid)
+## Corrected Approach: Week 1 Priority
+
+### Foundational Hire (This Week, Sept 3-12):
+
+**Interim GM/COO for EOXS**
+- Role: Own EOXS operations for next 90 days while Rajat goes full-time on AskCruz
+- Profile: P&L experience, SaaS operations, comfortable with ambiguity
+- Compensation: $100-120k for 90 days (contractor), or $80k annualized + equity (permanent)
+- Timeline: Post today, interview Sept 8-10, offer by Sept 11-12, start Sept 15-18
+- Responsibility: Execute 30-day plan (churn retention, integrations, hiring, pilots)
+
+### Rajat's Actual Workload This Week:
+
+1. **Today (Sept 3-4)**: Post interim GM job
+   - LinkedIn, Angel List, Slack communities (exec-focused)
+   - Personal outreach to 5 people who might fit
+   - Time: 2 hours
+
+2. **Thursday (Sept 5)**: Call Discount Pipe directly
+   - 30-min conversation: "Invoice issue + payment tracking bug are being fixed. Here's commitment."
+   - Goal: CEO visibility + retention signal
+   - Time: 45 min
+
+3. **Next 2 weeks (Sept 6-12)**: Interview interim GM candidates
+   - Aim to close offer by Sept 12
+   - Time: 4-5 hours (2 rounds of interviews)
+
+4. **By Sept 18**: Interim GM onboarded, 30-day plan kicks off
+   - Their job to execute, not Rajat's
 
 ---
 
-## 30-Day Action Plan: This Week & Next
+## Then the Original 30-Day Plan Works
 
-### WEEK 1 (Sept 4-6): Immediate Decisions & Hiring
+Interim GM owns:
+- Hire CS lead + integrations engineer
+- Run churn retention calls (Discount Pipe, Sabre, Hansen)
+- Oversee Stripe integration pilot (Ron provides technical oversight)
+- Validate sales toolkit with 2 pilot customers
+- Weekly standups with Ron on technical unblocks
+- 1x/week report to Rajat on progress
 
-**Action 1: Hire Interim Customer Success Lead (By Friday)**
-- Role: 90-day contract, $50-60k annualized (pro-rated)
-- Profile: SaaS/account management background, data-comfortable, scrappy ops
-- Posting: LinkedIn, Angel List, Slack startup communities
-- Why: Opportunity 2 (churn monitoring + expansion) requires this person. Can't execute without it.
-- Time required: 6 hours (write posting, screen, interview this week)
-- Owner: Rajat
-
-**Action 2: Direct Call to Discount Pipe & Steel (By Thursday EOD)**
-- What to ask: "Are invoices actually paid? Which tasks are blocking you most? What would make you recommend us to peers?"
-- Goal: Distinguish between accounting friction (broken payment tracking) vs. customer unhappiness (task delays).
-- Outcome: Clarify real vs. perceived problem. Commit to specific fix.
-- Time: 45 min total (15 min prep, 30 min call)
-- Owner: Rajat
-
-**Action 3: Audit Integration Task Backlog (By Sunday)**
-- Filter implementation tasks for: Stripe, Aircall, TaxCloud, QuickBooks, Klaviyo, Email, Bank Transaction, Website Forms
-- For each: note client count, status (not started / partial / complete), estimated complexity
-- Create ranking: (Client Count × Margin Potential) / Estimated Effort
-- Outcome: Top 3 tier-1 integrations identified (likely Stripe, Aircall, TaxCloud)
-- Time: 2 hours
-- Owner: Rajat or junior analyst
+**Rajat's role:** Strategic clarity (which opportunities to scale) + full-time AskCruz
 
 ---
 
-### WEEK 2 (Sept 9-13): Validation Sprints & Specs
+## Why This Fixes It
 
-**Action 4: Churn Scoring Pilot Launch (Mon-Fri)**
-- Monday: CS lead onboarded on customer contracts, task status, invoice aging
-- Tue-Wed: CS lead builds churn risk score for 8 customers (framework: open tasks + invoice days overdue + feature adoption + support velocity)
-- Thu-Fri: CS lead calls top 2 at-risk customers (Discount Pipe, Sabre Alloys). Capture feedback (what would retain them?)
-- Measure: Churn score spreadsheet completed. 2 customer calls logged with 1-2 page summaries.
-- Owner: CS lead (primary), Rajat (1 hr/week check-in)
+Original plan treated interim GM hire as "still-deciding" when it should be Week 1 blocker. Without interim GM:
+- Rajat can't go full-time on AskCruz (he's managing EOXS)
+- 30-day plan doesn't execute (no one owns it)
+- Churn crisis (Discount Pipe) doesn't get solved (no dedicated driver)
+- Opportunities 2-5 stay theoretical
 
-**Action 5: Spec Out Stripe Integration & Get Ron's Approval (Mon-Wed)**
-- Monday: Rajat writes 1-page Stripe MVP spec (scope, timeline, success criteria, pricing)
-  - Scope: payment capture, webhooks, basic reconciliation
-  - Timeline: 2 weeks build + 1 week QA
-  - Pricing: $8k Discount Pipe (pilot), $3k per additional customer
-  - Success metric: quote-to-payment cycle time reduction
-- Tuesday: 30-min call with Ron. Get sign-off on: feasibility, timeline, who owns build
-- Wednesday: Assigned engineer does 1-hour technical audit (integration blockers?)
-- Measure: Signed spec + engineer audit completed
-- Owner: Rajat (spec) + Ron (approval) + engineer (audit)
-
-**Action 6: Outreach to Epicor Partners (Thu-Fri)**
-- Thursday: Identify 3-5 mid-tier Epicor partners in steel/distribution (LinkedIn search)
-- Friday: Send short emails (~150 words): "We've built SmartQuote AI (98% quote accuracy, cuts cycle from 30 to 3 days), works with any ERP including Epicor. Interested in white-label or referral partnership?"
-- Measure: 3 emails sent, track responses
-- Owner: Rajat (2 hours)
-- Outcome: Early signal on partner interest (likely 0-1 responses this week; follow up in 2 weeks)
+With interim GM:
+- Rajat has clear mental separation (AskCruz = his focus, EOXS = interim GM's focus)
+- 30-day plan has an owner with authority + accountability
+- Ron can scale back from bottleneck (10 hrs/week mentoring, not 40+ hrs execution)
+- Opportunities move from analysis to validation in 30 days
 
 ---
 
-### WEEKS 3-4 (Sept 16-27): Parallel Validation Streams
+## Revised Action Plan: This Week Only
 
-**Stream A: Churn Mitigation (CS Lead + Rajat + Ron)**
-- CS lead continues customer advisory calls with other clients (not just top 2 at-risk)
-- Discount Pipe intervention: Ron fixes payment status bug (4 hours) + publicly commits to Aircall integration timeline (Q4)
-- Schedule executive business review with Discount Pipe (late Sept): Rajat + Ron present retention plan + roadmap
-- Measure: Retention commitments made. Discount Pipe confidence restored (track via NPS / direct feedback)
+| Action | Timeline | Owner | Time |
+|--------|----------|-------|------|
+| Post interim GM job | Today-Tomorrow | Rajat | 2 hrs |
+| Personal outreach (5 people) | Tomorrow | Rajat | 1 hr |
+| Call Discount Pipe | Thursday | Rajat | 45 min |
+| Review interim GM candidate intros | Sept 6-8 | Rajat | 2 hrs |
+| First-round interviews | Sept 8-10 | Rajat | 3-4 hrs |
+| Close offer | Sept 11-12 | Rajat | 1 hr |
+| **Total Rajat Time This Week** | | | **10 hours** |
 
-**Stream B: Integration Pilot Execution (Ron + Engineer)**
-- If Stripe spec approved: engineer starts 2-week build sprint (target completion: Oct 1)
-  - Weekly standup with Ron (1 hour/week oversight, not execution)
-  - Build, QA, pilot setup with Discount Pipe (early adopter)
-- If Stripe blocked: pivot to TaxCloud or Aircall, restart spec
-- Measure: Stripe integration builds (or clear reason it doesn't)
-
-**Stream C: Sales Toolkit Minimum Spec (Rajat)**
-- Draft 1-pager: "Sales Accelerator for Steel, MVP"
-  - Features: email threading + Aircall sync + 3 sales coaching videos (mined from call transcripts)
-  - Price: $2,500/month
-  - Target segment: sales directors/inside sales teams (not ops)
-- Identify 2 potential pilots (ideally non-current-ERP customers to test land-and-expand)
-- Measure: 1-page spec + 2 candidate customers identified
-
-**Stream D: Hiring & Budget Planning (Rajat)**
-- Decide: do you hire 1) delivery manager for integrations, or 2) delegate to mid-level engineer?
-- Decide: do you hire VP of Product for sales toolkit + AI workers, or use contractor/advisor model?
-- Draft Q4 budget: assume $50-75k for staff/contractors through Dec 31
-- Measure: hiring decisions made, budget approved
-
----
-
-## By October 1: Go/No-Go Decisions
-
-### Decision 1: Churn Mitigation (Opportunity 2)
-- Did Discount Pipe stay + commit to expansion? (payment bug fix + Aircall timeline)
-- If yes: scale retention playbook to other at-risk customers (Sabre, Hansen)
-- If no: customer was churning regardless; focus energy elsewhere
-
-### Decision 2: Stripe Integration (Opportunity 3)
-- Did 2-week build complete on time?
-- If yes: sell Stripe integration to Discount Pipe + Sabre Alloys ($8k + $3k) by Oct 15
-- If no: why? (Ron unavailable? technical blockers? engineer skill gap?) Pivot or hire
-
-### Decision 3: Sales Toolkit MVP (Opportunity 5)
-- Did pilot customers bite on $2.5k/month pricing?
-- If yes: scale toolkit with full coaching content + launch
-- If no: shelve until Q4 or redesign positioning
-
-### Decision 4: Epicor Partnerships (Opportunity 1)
-- Any partner responses to outreach?
-- If yes: schedule depth calls, explore co-selling
-- If no: follow up once in Oct or defer to later
-
----
-
-## Staffing Reality Check
-
-**What you need (not 5 new hires, just 1 new role):**
-- 1 CS lead (hire this week): $50-60k annualized, owns churn + expansion + customer advisory
-- 1 mid-level engineer (hire Q4 if Opportunity 3 successful): owns integrations, reports to delivery manager (not Ron)
-- 0 new hires Q3 beyond CS lead
-- Ron becomes "strategy + escalation + unblocking" resource, not day-to-day execution
-- You (Rajat) focus on decision-making + strategy for EOXS while going full-time on AskCruz
-
-**Budget assumption:** $50-75k for CS lead + contractors/tools through Dec 31
-
----
-
-## Why This Sequence Matters
-
-1. **Churn prevention** (Opportunity 2) is #1 urgency + lowest risk. $7.8k overdue from largest customer is a siren. Fix now.
-2. **Integrations** (Opportunity 3) proves "productized services" model scales. Early revenue validates thesis.
-3. **AI workers** (Opportunity 1) + **Sales toolkit** (Opportunity 5) can wait until Oct when you have proof points from Opportunities 2 & 3.
-4. **Intelligence platform** (Opportunity 4) deferred to 2027 due to legal/privacy complexity.
-
----
-
-## Daily Decision Points (This Week)
-
-| Date | Decision | Owner |
-|---|---|---|
-| Monday Sept 9 | Does CS lead start on time? | Rajat |
-| Tuesday Sept 10 | What does Discount Pipe say about payment + task delays? | Rajat (after call) |
-| Wednesday Sept 11 | Does Ron approve Stripe spec + assign engineer? | Ron |
-| Friday Sept 13 | Does CS lead have preliminary churn score? | CS lead |
-
-**By Friday Sept 13, you'll know if Opportunities 2 & 3 are real or need pivot.**
-
----
-
-## Success Metrics (30 Days)
-
-- **Churn**: Discount Pipe commits to staying + defines expansion buy-in (Aircall integration commitment)
-- **Integrations**: Stripe spec approved, engineer audit complete, 2-week build kicks off Oct 1
-- **Sales Toolkit**: 1-pager drafted, 2 pilots identified, initial pricing tested
-- **Partnerships**: At least 1 Epicor partner responds to outreach (even if "not interested now")
-- **Hiring**: CS lead onboarded and producing insights by Sept 15
-
----
-
-## TL;DR: Do This Week
-
-1. **Monday**: Post CS lead job, start recruiting
-2. **Tuesday-Thursday**: Interview/hire CS lead
-3. **Thursday**: Call Discount Pipe directly (Rajat)
-4. **Sunday**: Audit integration backlog, identify top 3
-5. **Tuesday Sept 10**: CS lead starts
-6. **Wed Sept 11**: Stripe spec presented to Ron
-7. **Fri Sept 13**: CS lead churn score ready
-
-**One month from now (Oct 3), you'll have real signals on which opportunities are worth scaling vs. which to shelve.**
+After Sept 12: Interim GM owns execution. Rajat shifts to AskCruz (with 1x/week 30-min EOXS check-in).
