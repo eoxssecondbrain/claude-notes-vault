@@ -6,7 +6,7 @@ created: 2026-09-02
 updated: 2026-09-03
 ---
 
-User:
+USER:
 This is an hourly automated check of the EOXS implementation task board (EOXS_Data_General MCP connector, the "eoxs-db" implementation_tasks tools). This session starts fresh with no memory of prior runs — follow this instruction exactly, without asking any clarifying questions.
 
 1. Call list_implementation_tasks(stage="Functional QA") with no client filter, to get every task currently sitting in the Functional QA stage, across all clients.
@@ -19,5 +19,7 @@ This is an hourly automated check of the EOXS implementation task board (EOXS_Da
 8. If the EOXS_Data_General connector or its tools are unavailable, or a call errors out, state that plainly in the final response instead of retrying repeatedly.
 9. the scheduled task should stop automatically at 3 am ist and only work on weekdays
 
-Assistant:
-Checked all 3 tasks currently in Functional QA (Sticker Descriptions - Bug, Customer Statement - Bug, and Payment Sent Emails on Bill Payment — all client discount-pipe-steel). Their most recent stage-change into Functional QA occurred on 2026-07-23 (12:06–12:07 UTC), over a month before the current run time (2026-09-03 16:38 UTC). No task moved into Functional QA in the last 60 minutes.
+ASSISTANT:
+No tasks moved into Functional QA in the last 60 minutes.
+
+Checked at 2026-09-03 17:39 UTC. Three tasks currently sit in Functional QA, all for Discount Pipe & Steel (Sticker Descriptions - Bug, Customer Statement - Bug, Payment Sent Emails on Bill Payment) — each entered that stage on 2026-07-23, well outside the 60-minute window. No connector errors.
