@@ -331,3 +331,178 @@ For every query, record:
 This format catches gaps fast. Run Layer 1 (3 queries), then Layer 2 (6 queries), then Layer 3 (6 queries) = 15 total queries covering 80-90% of issues.
 
 Do you want me to show you a documentation template to track these results?
+
+---
+
+User: also what kind of information data i can ask it to give me an answer which will pull some more questioning path to it
+
+Claude: Good question. Here's what information to request that naturally leads to deeper testing paths:
+
+**TYPE 1: RELATIONAL/DEPENDENCY QUERIES**
+These expose hidden connections and cascade into follow-ups:
+
+```
+Request: "Fetch employee emp-001 AND show their manager, AND show all direct reports"
+Follow-up paths this creates:
+- Does manager ID actually exist in system?
+- Are circular reporting structures possible (emp reports to emp-001 who reports to emp)?
+- What if manager is inactive - does that break the chain?
+- Permission: Can readonly users see manager data?
+```
+
+```
+Request: "Show employee + their team + team's department + department budget"
+Follow-up paths:
+- Is budget field populated when no department?
+- Does team list include inactive members?
+- Data consistency: Does each team member list this department?
+```
+
+---
+
+**TYPE 2: COMBINED FILTER QUERIES**
+Stacking filters reveals interaction bugs:
+
+```
+Request: "List employees WHERE department=Engineering AND status=active AND hire_date > 2020-01-01 AND role=Manager"
+Follow-up paths this creates:
+- Does system AND all filters correctly or does one override others?
+- What if no results match - error or empty array?
+- If one filter is invalid (role="Fake"), does it fail the whole query or ignore it?
+- Order dependency: Does filter order matter?
+```
+
+```
+Request: "Filter active employees AND show their incentive_structure AND show their leave_balance"
+Follow-up paths:
+- Is leave_balance only valid for active status or also for inactive?
+- Does incentive_structure exist for all roles?
+- What if employee has 0 leave - null, 0, or missing field?
+```
+
+---
+
+**TYPE 3: BULK/AGGREGATE QUERIES**
+These expose scale and consistency issues:
+
+```
+Request: "List ALL active employees across ALL departments, sort by hire_date"
+Follow-up paths this creates:
+- Does it actually return ALL or is there pagination/limit?
+- Sorting consistency: Are dates formatted same way across 100+ records?
+- Performance: Does response time change with dataset size?
+- Memory: If 1000 records, does structure break?
+```
+
+```
+Request: "Count total employees by department by status (e.g., 5 active in Eng, 2 inactive in Eng, etc.)"
+Follow-up paths:
+- Does count = sum of filtered results?
+- What if department name has special characters?
+- Do counts include archived/deleted employees?
+```
+
+---
+
+**TYPE 4: TEMPORAL/HISTORICAL QUERIES**
+These reveal time-based logic:
+
+```
+Request: "Fetch employee record as of hire_date vs current snapshot - do they differ?"
+Follow-up paths this creates:
+- Does system support historical data at all?
+- Can department/role have changed since hire?
+- What if employee was rehired after leaving?
+```
+
+```
+Request: "Show employees hired in 2024, then update one to status=inactive, then list 2024 hires again"
+Follow-up paths:
+- Does update timestamp change?
+- Does historical filter still include now-inactive employees?
+- Is there an audit log?
+```
+
+---
+
+**TYPE 5: PERMISSION/ACCESS HIERARCHY QUERIES**
+These expose security gaps:
+
+```
+Request: "As readonly user, fetch emp-001. Then request update permission. Show what happens if I try update anyway."
+Follow-up paths this creates:
+- Does MCP check permissions before or after fetching?
+- Can readonly users see restricted fields (salary)?
+- Does denied attempt log anywhere?
+- Can user escalate or just get error?
+```
+
+```
+Request: "Show employees visible to: department_head role vs hr_admin role vs finance_admin role"
+Follow-up paths:
+- Do different roles see different employee lists?
+- Can manager see direct reports but not peers?
+- What data does each role see for same employee?
+```
+
+---
+
+**TYPE 6: DATA CONSISTENCY QUERIES**
+These expose synchronization issues:
+
+```
+Request: "Fetch emp-001, then immediately fetch again. Are both responses identical?"
+Follow-up paths this creates:
+- Is system eventually consistent or strongly consistent?
+- If data changed between calls, is there a timestamp?
+- Does second request pull from cache or live database?
+```
+
+```
+Request: "Update emp-001 department to Sales. Then immediately list Sales department. Is emp-001 included?"
+Follow-up paths:
+- Is write immediately visible or delayed?
+- What if update partially fails (update succeeds but list doesn't reflect)?
+- Rollback: If update fails, is old state restored?
+```
+
+---
+
+**TYPE 7: ERROR RECOVERY QUERIES**
+These expose graceful failure:
+
+```
+Request: "Start fetching employee list, timeout midway through. Then retry same query."
+Follow-up paths this creates:
+- Does retry return partial + new data or restart from beginning?
+- Is state left dirty (half-updated)?
+- Does MCP remember which records were already fetched?
+```
+
+---
+
+**STRATEGY: The Questioning Cascade**
+
+Start broad → expose a gap → ask narrower:
+
+1. "Show me all employees" (reveals: count, pagination, structure)
+2. "Why different structure for emp-001 vs emp-999?" (reveals: inconsistency)
+3. "Does every employee have that field?" (reveals: optional vs required)
+4. "What happens when field is missing?" (reveals: error handling)
+5. "Does error block the whole list or just that record?" (reveals: robustness)
+
+---
+
+**Quick Reference: Questions That Generate Follow-ups**
+
+Ask for data that:
+- Links to other data (manager → does manager exist?)
+- Combines constraints (AND filters → interaction bugs?)
+- Scales large (ALL records → performance cliff?)
+- Changes over time (before/after snapshots?)
+- Requires permissions (who can see what?)
+- Fails partway (timeout, incomplete, rollback?)
+
+Each creates 3-5 natural follow-up questions.
+
+Want me to build a full questioning tree for the HR MCP structured this way?
