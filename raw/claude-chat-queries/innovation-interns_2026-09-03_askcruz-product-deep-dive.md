@@ -224,10 +224,19 @@ Your MCP testing is foundational to whether AskCruz can securely and reliably in
 
 ---
 
-## Source Documents
+## Follow-up: Recent Customers of AskCruz
 
-This information comes from two authoritative EOXS-held product definitions:
-1. **AskCruz — Self-Knowledge, Product Definition & System Architecture** (v1.2, last updated Aug 25, 2026)
-2. **AskCruz — Product Feature File** (v1.1, last updated Aug 25, 2026)
+**User Question:**
+"what is the recent customer of askcruz?"
 
-Both are maintained as controlled product documentation and are source-of-truth for how AskCruz is defined and should behave. They're explicitly marked as "AI-readable product knowledge documents" meant to guide how AI systems (like the one responding here) should answer questions about AskCruz.
+**Answer:**
+
+3GM Steel is AskCruz's first and current external customer, mid-implementation as of August 2026.
+
+**Clarification:**
+EOXS has 8 general ERP clients, but only 3GM has AskCruz configured. The other 7 (Sabre Alloys, Ohio Strip Steel, Brannon Steel, Discount Pipe & Steel, Eastern States Steel, PPC Metals, RW Conklin Steel) are EOXS's general ERP clients, not AskCruz customers.
+
+**3GM Contacts:**
+- Jessica Worley (jessica@3gmsteel.com)
+- Leslie Countryman (leslie@3gmsteel.com)
+- Travis Lane (travis@3gmsteel.com)
