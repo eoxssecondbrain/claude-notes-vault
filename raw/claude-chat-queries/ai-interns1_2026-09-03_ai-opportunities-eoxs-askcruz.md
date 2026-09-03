@@ -67,3 +67,44 @@ Five-month-old bugs still active (payment status reverting to "Not Paid" after i
 9 unpaid customer invoices totaling [restricted] since June. Expected to chase but no system visibility into aging or collection priority. Manual reconciliation required (e.g., Stripe order requiring manual customer payment create + reconciliation). Process friction around payment state tracking (order status incorrectly shows "Not Paid" even when paid).
 
 **Pattern**: These aren't one-off failures—they're recurring operational friction points with workarounds in place. Fix them directly; they're limiting revenue growth and customer satisfaction.
+
+---
+
+## User Request 3
+Can you check what happened with that thing and tell me what I should do?
+
+[Clarified: The 9 unpaid invoices]
+
+## Response 3
+
+**9 unpaid invoices totaling $27,822 outstanding since June.**
+
+Here's the breakdown and what you should do:
+
+**Immediate attention (>60 days overdue):**
+- Discount Pipe & Steel: $4,700 (June 1 — 94 days)
+- Hansen Metallurgical Services: $1,200 (June 1 — 94 days)
+
+These are critical. Discount Pipe & Steel is your largest client with 60+ implementation tasks, yet their oldest invoice is 3+ months unpaid. This needs a direct conversation on payment status and terms.
+
+**Medium priority (30-60 days):**
+- Brannon Steel: $1,356 + $3,051 (July 22 — 43 days)
+- Sabre Alloys: $9,380 (Aug 4 — 30 days) — this is your largest single invoice
+- Discount Pipe & Steel: $3,179 (Aug 4 — 30 days)
+
+**Data quality issue (ignore for now):**
+Two invoices with "/" as invoice number and $0 amounts (July 9 & 22) — these are corrupted records. Clean them up.
+
+**What to do:**
+
+1. Contact Discount Pipe & Steel today about the June invoices. They're a key client but 94 days is unacceptable. Clarify if there's a dispute, payment delay, or just fallen through cracks.
+
+2. Follow up Sabre Alloys on the $9,380 (30 days old). Largest single exposure.
+
+3. Call Brannon Steel. Three separate invoices across two months suggests they're either disputing them or not tracking payment.
+
+4. Set up an AR aging report. No system visibility into collection priority means invoices age silently. You need a weekly dashboard flagging >30-day invoices automatically.
+
+5. Reconcile the corrupted records — fix invoice numbering to actual invoice numbers, not "/".
+
+**Root cause:** No systematic collection process. This ties back to #5 operational problem — payment state tracking is broken (invoices showing "Not Paid" even when paid), so AR team has no clear picture of what's owed.
