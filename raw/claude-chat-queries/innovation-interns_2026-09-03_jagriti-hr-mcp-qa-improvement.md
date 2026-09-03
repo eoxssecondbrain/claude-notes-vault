@@ -17,3 +17,11 @@ User: who am i?
 Claude: You're Jagriti Chowdhury, Startup Generalist Intern at AskCruz since August 20, 2026. Your primary focus is QA testing on MCPs—mainly the HR MCP, but you span multiple integrations.
 
 You share this account workspace with Priyanshu Sinha, Aditya Yadav, Isha Bisht (HR Executive at EOXS), Danish (Danish Lari), and Harsimran.
+
+---
+
+User: what is priyanshu's primary focus on?
+
+Claude: Based on what I have on file, Priyanshu's primary focus is the **frontend of teams.askcruz.com**. He's working on the UI/web side of that product.
+
+That's all I have documented about his specific focus area. If there's more detail to his work beyond that, I don't have it.
