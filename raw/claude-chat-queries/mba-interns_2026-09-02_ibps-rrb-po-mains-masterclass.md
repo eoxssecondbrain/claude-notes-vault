@@ -10,94 +10,63 @@ updated: 2026-09-03
 
 ## User
 
-"Act as an expert IBPS RRB PO (Officer Scale-I) Mains mentor and exam strategist. I need a hyper-crisp, high-yield study and revision masterclass covering all 5 sections. For each section: 1. Weightage & PYQ Flag (🔥 HIGH / ⚡ MODERATE / ⚠️ TRICKY tags with exact question counts). 2. Crisp Core Concepts & Shortcuts. 3. Golden Rules of Attempting."
+"Act as an expert IBPS RRB PO (Officer Scale-I) Mains mentor and exam strategist. I need a hyper-crisp, high-yield study and revision masterclass covering all 5 sections, with weightage and PYQ flags, crisp core concepts and shortcuts, and golden rules of attempting."
 
 ## Assistant
 
-Two flags: the query matches none of my loaded skills, and it has zero bearing on either stated objective — EOXS inbound stability and AskCruz to $1M ARR — which I'm calling out per standing instruction. Also flagged that IBPS has revised the RRB pattern more than once and coaching-blog weightage claims are frequently stale.
+Flagged that the query matches none of my loaded skills and has zero bearing on either stated objective (EOXS inbound stability, AskCruz to $1M ARR), per standing instruction. Also flagged that IBPS has revised the RRB pattern more than once and coaching-blog weightage claims are frequently stale.
 
-[Asked rigor level and language paper.]
+[Asked rigor and language paper. User chose 100ft staged, English only.]
+
+## Assistant
+
+[Seven sections delivered one per turn: scoring architecture (2026 dates, 4,256 vacancies, marking math, marks-per-minute ranking, cutoff thresholds, 80:20 weighting, the 110–120 target, the 25-mark state-choice lever); Reasoning; Quant; General Awareness; Computer Knowledge; English; integrated plan.]
 
 ## User
 
-100ft — staged. English only.
+pdf / can you make mains complete mock papers / automatically run the process on recharging / give me pdf / for quant, english, computer / mock paper 2 / continue
 
 ## Assistant
 
-[Seven sections delivered one per turn: scoring architecture (2026 dates, 4,256 vacancies, marking math, marks-per-minute ranking, two cutoff thresholds, 80:20 weighting, back-calculated 110–120 target, the 25-mark state-choice lever); Reasoning; Quant; General Awareness; Computer Knowledge; English; and the integrated plan.]
+[Built the 16-page masterclass PDF. Then two complete mock papers at Commissioned craft — 160 questions each across Reasoning, Quant, English and Computer, excluding General Awareness, with full solutions and per-block difficulty calibration. All puzzles brute-forced for solution uniqueness; all DI values recomputed programmatically. Multiple defects caught in review across the builds, including two separate occurrences of a machine-arrangement set producing duplicate steps, and a cloze block where five consecutive answers had landed on the same option letter.
+
+Also stated plainly that I cannot self-trigger on quota reset — no scheduler, no background execution — and made the build resumable via a BUILD-STATE file instead.]
 
 ## User
 
-where is study material ? / pdf
+draft a cheat codes sheet for banking exams , like shortcut methods , tricks and best approach to solve the complex questions like comprehensions in english , reasonings and fast calculations in quants
 
 ## Assistant
 
-[Acknowledged that Section 1 was architecture rather than content. Later built the 16-page masterclass PDF at Draft craft, working around an unpatched-Qt wkhtmltopdf.]
+Two things flagged before building.
 
-## User
+Overlap: the masterclass PDF already contains a shortcuts block for each section, so writing this from scratch would duplicate it. What isn't covered there, and is what actually decides speed, is calculation mechanics — so I built it as a drill-and-revise sheet rather than a re-explanation.
 
-can you make mains complete mock papers as an expert exam setter ?
+A caution stated once: a shortcut you haven't drilled is slower in the hall than the long method you already own. Collecting tricks feels productive and isn't. That changed what went in — drillable tables and decision rules rather than a catalogue of methods.
 
-## Assistant
+[Asked scope and craft level; user said "continue", so I took sensible defaults and said so: scope bank PO Mains generally with RRB-specific items flagged, craft print-ready and drill-formatted, and every numeric table machine-generated rather than typed.]
 
-Yes, with three constraints: GA cannot be mocked; the bottleneck is computational verification of puzzles and DI, not writing; and a static PDF is no substitute for a timed CBT series. Recommended sectional sets; user chose a full 160-question paper at Commissioned craft.
+Built: Bank-PO-Mains-Cheat-Sheet.pdf, 10 pages, five parts.
+- Part 1 Quant: unit and non-unit fraction-to-percentage tables, squares to 40, cubes to 25, multiplying factors, the x%-more-to-y%-less conversion, multiplication shortcuts, an approximation decision table, DI attack order, compressed arithmetic formulae, a number-series diagnostic ladder, DS discipline.
+- Part 2 Reasoning: puzzle triage table, clue priority order, direction rules, syllogism card, inequality card, blood relations, machine input-output diagnostics, critical reasoning card.
+- Part 3 English: RC approach decision table, question-type playbook, trap option patterns, connective map for fillers and cloze, fixed error-detection order with the recurring errors, para jumbles, word swap, idioms.
+- Part 4: attempt order with time caps, the computed guessing table, abort triggers, what to skip on sight.
+- Part 5: the daily drill protocol.
 
-## User
-
-automatically run the process on recharging
-
-## Assistant
-
-I can't. No scheduler, no background execution, no self-triggering when a limit resets. Made the build resumable via BUILD-STATE.md instead.
-
-## User
-
-[Mock 1 build across several turns: give me pdf / for quant, english, computer]
-
-## Assistant
-
-[Mock 1 completed: all four sections, 160 Q, 160 marks, 111 min. Constraint solver caught 0, 2 and 0 solutions on the first pass of the three puzzles; all repaired. Six rendering defects caught and fixed across two build turns.]
-
-## User
-
-mock paper 2
-
-## Assistant
-
-Flagged first that a second mock has near-zero value until the first has been sat under timer and analysed. Built it anyway.
-
-[Mock 2 Part A: Reasoning and Quant. First verification run returned 1, 0 and 0 solutions — the circular puzzle was over-constrained by a non-adjacency clue contradicting the forced seat, and the days puzzle forced K onto a day P already occupied. Both repaired. Separately, the printed machine-arrangement illustration both produced duplicate steps and did not follow its own stated rule; regenerated. Noted this was the second occurrence of that exact failure, indicating a systematic weakness in how I draft that question type rather than bad luck.]
-
-## User
-
-continue
-
-## Assistant
-
-[Mock 2 English and Computer built, then the complete Mock 2 assembled.
-
-English, 40 Q: two original passages — weather-index crop insurance and municipal waste segregation — at 8 and 7 questions, cloze 5, double fillers 4, idioms in dialogue 5, word swap 4, error detection 4, rearrangement 3. Caught during checking that five consecutive cloze answers had all landed on option (b); reordered the option sets across eight questions to spread the key.
-
-Computer, 40 Q: fundamentals and hardware 12, networking 8, security 6, MS Office 6, operating systems 4, DBMS and banking technology 4.]
-
-Mock 2 complete: 160 questions, 16-page paper, 10-page solutions. The Part A PDFs are superseded.
-
-Closing advice given: 320 verified questions now exist across two papers, which is more than enough stock, and building a Mock 3 would be the least useful next step. The binding constraint is analysis, not supply — sit Mock 1 under a 111-minute timer, log errors by cause rather than topic, and the next useful task is reading that log together. The one gap neither paper closes is General Awareness, 40 marks and the highest marks-per-minute block in the real exam, which must come from a live monthly capsule.
+Correction issued to my own earlier advice: in the masterclass and on both mock covers I said a blind guess is expected-value neutral and that you should eliminate two options before guessing. The first half is right; the second was a simplification. The computed table shows that eliminating a single option already turns the guess positive at +0.0625 of the mark. "Eliminate two" remains the right practical instruction, but for a reason I had not stated — the first elimination is wrong more often than assumed, and that error does not appear in the arithmetic. The sheet states this properly.
 
 ## Build-state summary for future sessions
 
 Target: IBPS RRB PO Officer Scale-I Mains, 20 December 2026. Prelims 21–22 November 2026. 4,256 vacancies.
 
-Mock 1: COMPLETE — 160 Q, 160 marks, 111 min. Files: RRB-PO-Mains-Mock-1-FULL-PAPER.pdf, RRB-PO-Mains-Mock-1-FULL-SOLUTIONS.pdf.
-Mock 2: COMPLETE — 160 Q, 160 marks, 111 min. Files: RRB-PO-Mains-Mock-2-FULL-PAPER.pdf, RRB-PO-Mains-Mock-2-FULL-SOLUTIONS.pdf.
-Neither includes General Awareness.
+Deliverables complete:
+- IBPS-RRB-PO-Mains-Masterclass.pdf (16 pages, 7 sections)
+- RRB-PO-Mains-Mock-1-FULL-PAPER.pdf and -FULL-SOLUTIONS.pdf (160 Q, 160 marks, 111 min)
+- RRB-PO-Mains-Mock-2-FULL-PAPER.pdf and -FULL-SOLUTIONS.pdf (160 Q, 160 marks, 111 min)
+- Bank-PO-Mains-Cheat-Sheet.pdf (10 pages)
 
-Mock 2 verified Reasoning grids:
-- Box stack, bottom to top: Q, R, T, P, S, V, W, U
-- Circular table, clockwise from A: A centre, D centre, C outward, B centre, H centre, E outward, F centre, G outward
-- Days and cities: Mon M Goa, Tue N Agra, Wed J Erode, Thu L Chennai, Fri K Fatehpur, Sat O Delhi, Sun P Bhopal
-- Machine I/O: input 37 nectar 82 gable 64 pilot 19 crane; numbers descending from the left, words ascending alphabetically from the right; 4 distinct steps. Illustration input: 46 tulip 73 basil 59 orchid 28 daisy.
+None of these covers General Awareness, by design — roughly two-thirds of it is current affairs from the six months before the exam. It is 40 marks, the highest marks-per-minute block in the paper, and must come from a live monthly capsule plus a daily 20-minute habit.
 
-Difficulty relationship between the papers: Mock 2 Reasoning is slightly harder than Mock 1 (circular set with mixed facing); Mock 2 Quant is slightly easier; English and Computer are comparable, with Mock 2 adding a dangling-participle item and a binary conversion. Compare block by block, never section totals.
+Standing advice given: 320 verified questions now exist across two papers, which is more than enough stock. The binding constraint is analysis, not supply — sit Mock 1 under a 111-minute timer, log every error by cause rather than topic, and the next useful task is reading that log together. Building a Mock 3 would be the least useful next step.
 
-Recurring build traps: machine-arrangement inputs must be tested for duplicate consecutive steps and the printed illustration must be generated by the same code rather than written by hand; check that answer letters do not cluster before shipping; underscore blanks parse as markdown emphasis (escape as entities); dialogue needs nl2br inside directions blocks; multi-line options must be collected across lines; question bodies must not terminate at blank lines; lines starting with a digit and full stop become ordered lists.
+Recurring build traps for any future paper: machine-arrangement inputs must be tested for duplicate consecutive steps and the printed illustration generated by the same code rather than written by hand; check that answer letters do not cluster before shipping; underscore blanks parse as markdown emphasis (escape as entities); dialogue needs nl2br inside directions blocks; multi-line options must be collected across lines; question bodies must not terminate at blank lines; lines starting with a digit and a full stop become ordered lists.
