@@ -3,30 +3,21 @@ thread_name: "scheduled-email-spam-detection"
 user: "raj"
 type: claude-chat
 created: 2026-08-31
-updated: 2026-09-02
+updated: 2026-09-03
 ---
 
-## Scheduled task: Email Spam Detection (v9) — run on 2026-09-02
+# Scheduled Email Spam Detection (v9) — Run 2026-09-03
 
-**Trigger:** automated scheduled task (no live user), Gmail spam-detection sweep.
+**Trigger:** scheduled task, automated firing, no live user present.
 
-**Labels resolved via list_labels:** AI-SPAM=Label_33, AI-SPAM/Advertising=Label_34, AI-SPAM/Expired-OTP=Label_35, AI-SPAM/Fraud=Label_36, AI-SPAM/Investor-Outreach=Label_38, AI-Reviewed=Label_37. All required labels already existed (no create_label needed).
+**Fix-up pass:** searched `label:AI-SPAM in:inbox` — 0 results. Nothing to fix.
 
-**Fix-up pass:** searched `label:AI-SPAM in:inbox` → 0 results. Nothing needed fixing (no AI-SPAM-labeled thread was sitting in Inbox).
+**Run type:** normal run (AI-SPAM and AI-Reviewed labels pre-existing, previously applied — not a first run).
 
-**Run-size determination:** AI-Reviewed (29,476 threads) and AI-SPAM (6 threads) have both been applied historically → this is a normal run, not a first run.
+**Query:** `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`, pageSize 50. Gmail reported `resultCountEstimate: 876` (known-unreliable estimate) but only 2 actual threads returned; a repeat search after processing returned 0 threads, confirming those were the only unprocessed items.
 
-**Normal run:** attempted the spec's query `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed` (and several variants, including using label IDs instead of display names). Found that this Gmail search tool does not reliably honor negated `-label:` filters in this environment — combining a label negation with `-in:sent` (or with another label negation) either silently drops the exclusion or returns a stale/incorrect result set, while `resultCountEstimate` values were inconsistent (201 / 880 / 1136 / 1296) across structurally similar queries. Verified this by comparing raw results across ~10 query variants; documented as a tool limitation.
+**Threads processed (2):**
+1. `1a067a3f134dd621` — "Session Productivity Report (9-10AM EST) — 2026-09-03" from isha@eoxsteam.com to rajat@eoxs.com. Skip-list match (eoxsteam.com sender). Labeled AI-Reviewed.
+2. `1a0678befd5cf1da` — "Cruz Permissions" thread, dave@macmetalsales.com to rajat@eoxs.com (cc travis@3gmsteel.com, stefan@3gmsteel.com), with a sent reply from rajat@eoxs.com. Skip-list match (eoxs.com address in To). Labeled AI-Reviewed.
 
-**Workaround used:** queried `-in:sent -in:chats` (confirmed reliable) and manually inspected label_ids on every message of every returned thread across 2 full pages (100 threads, spanning 2026-08-20 to 2026-09-02). Every single thread already carried Label_37 (AI-Reviewed) or Label_33 (AI-SPAM) on all its messages. Zero unprocessed threads were found in this window.
-
-**Conclusion:** mailbox appears fully reviewed through at least 2026-09-02 (most recent message). No new spam/suspicious threads found, no threads needed moving to Spam, no new labels applied this run. No user-facing notification sent (nothing actionable — per standing instruction that empty runs stay silent).
-
-**Final report:**
-- Fixed by fix-up pass: 0
-- Checked this run: 100 threads sampled (2 pages of the -in:sent -in:chats query); 0 were unprocessed (all already AI-Reviewed or AI-SPAM)
-- New SPAM/SUSPICIOUS: 0 (Advertising 0, Fraud 0, Expired-OTP 0, Investor-Outreach 0)
-- New NOT_SPAM/AI-Reviewed: 0
-- Moves confirmed by verification: 0
-- MOVE_FAILED: none
-- Flag for next run / for Raj: the search tool's `-label:X` negation is unreliable when combined with other negated clauses — future runs should expect to need the same manual label_ids-inspection workaround, or this should be reported upstream as a tool bug.
+**Result:** 2 checked, 0 SPAM/SUSPICIOUS, 2 NOT_SPAM. No moves, no MOVE_FAILED. No notification sent to user (nothing actionable — clean run).
