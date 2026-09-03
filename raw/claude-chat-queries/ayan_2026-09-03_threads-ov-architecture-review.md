@@ -51,3 +51,13 @@ Assistant: This gives a clear architecture picture. Key points on top of the SKI
 One thing worth flagging: line 372 says the auto-save reminder is injected into every tool response and the server's `instructions` specifically *because* nothing server-side can force me to call the tool before ending my turn — it's acknowledged as best-effort on their end too, matching what SKILL.md said.
 
 Anything else in the file structure you want me to dig into, or is this the context you wanted before we get into the actual topic?
+
+User: this tool is a hit and miss right now, sometimes claude is doing the tool call as we have instructed in the skill file and instruction and sometimes it just drops them. The behavious is not deterministic. I want to have a function where we are able to make it work 100% of the time and we are not reliant on claude LLM to make the call if it wants to go through that tool or not. How can we do this. Lets do a brainstorming session. This function has to run from claude front end itself.
+
+Assistant: This changes the shape of the problem — before brainstorming, one thing is worth surfacing and one thing I need from you.
+
+**What already exists**: the vault's own architecture already has a deterministic, non-LLM-dependent save path built in. There's a plain HTTP endpoint, `POST /<secret>/api/save`, that calls `save_chat_transcript` directly — bypassing the MCP tool-call round trip entirely. It was built specifically for a **Claude Code Stop hook**: a shell command that Claude Code fires automatically when a turn ends, with no dependence on whether the model decides to call a tool. That's exactly the "not reliant on the LLM" mechanism you're describing — it's just not wired up yet as a hook config.
+
+Stop hooks are a real, documented Claude Code feature (confirmed current): a shell command in `.claude/settings.json` under the `Stop` event, given `session_id`, `transcript_path`, `cwd`, etc. on stdin, run deterministically every time a response ends — not something the model can skip.
+
+**The catch**: Stop hooks only exist in Claude Code. If these Threads OV conversations are actually happening in Claude Code (terminal/IDE), the fix is largely "wire up the hook that was already designed for it." If they're happening in claude.ai web/mobile chat or Claude Desktop chat — which is where I am right now — there is no equivalent client-side hook surface exposed to users today. That's a materially different (harder) problem: no shell command fires deterministically outside the model's own tool-call decision in that surface.
