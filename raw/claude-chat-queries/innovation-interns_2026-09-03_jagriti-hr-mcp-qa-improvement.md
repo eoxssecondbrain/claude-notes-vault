@@ -12,30 +12,14 @@ updated: 2026-09-03
 
 ---
 
-User: can i get some info on priyanshu?
+User: what is priyanshu's primary focus on?
 
-Claude: Priyanshu Sinha is a Startup Generalist Intern at AskCruz, joined July 20, 2026. He works on the frontend of teams.askcruz.com and shares a workspace profile with you and a couple others. AskCruz is EOXS's AI-powered knowledge base product (formerly codenamed Podar, then Krinox).
+Claude: Based on what I have on file, Priyanshu's primary focus is the **frontend of teams.askcruz.com**. He's working on the UI/web side of that product.
 
-He's on the same project board as you for the frontend work.
-
----
-
-User: do you have any data on him that what task is he working on right now??
-
-Claude: No, I don't have specific task-level data on what Priyanshu is currently working on. The memory only shows he works on the frontend of teams.askcruz.com and shares the same project board as you, but not which specific tasks he's assigned to or working on right now.
-
-To get that info, you'd need to check your project management tool (likely a Kanban board or task tracker) directly.
+That's all I have documented about his specific focus area. If there's more detail to his work beyond that, I don't have it.
 
 ---
 
-User: from the recent searches could you tell me what is he working on do you have any kin of idea atleast
+User: no he doesnot work on the development of the frontend he works on different kin of tasks acros the board which are assigned to him remember that
 
-Claude: No specific task data from recent searches. Based on what I know:
-
-- He works on the teams.askcruz.com **frontend** (so UI/web work, not backend)
-- He's a Startup Generalist like you (so likely hands-on across multiple areas)
-- He shares the same project board as you
-
-But I have no idea what specific tasks he's assigned to or working on right now. The only way to know is to check your actual project board/task tracker directly (Jira, Linear, Asana, or whatever tool AskCruz uses).
-
-If you need to coordinate with him or know his current work, asking him directly is faster than guessing.
+Claude: Got it. You're right—Priyanshu works on different kinds of tasks across the board that are assigned to him, not specifically frontend development. He's a generalist like you, taking on varied tasks.
