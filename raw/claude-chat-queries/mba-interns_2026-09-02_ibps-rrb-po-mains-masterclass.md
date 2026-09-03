@@ -10,43 +10,21 @@ updated: 2026-09-03
 
 ## User
 
-"Act as an expert IBPS RRB PO (Officer Scale-I) Mains mentor and exam strategist. I need a hyper-crisp, high-yield study and revision masterclass for the RRB PO Mains exam covering all 5 sections... For each section, structure your output strictly as follows: 1. Weightage & PYQ Flag (with 🔥 HIGH / ⚡ MODERATE / ⚠️ TRICKY tags and exact question counts). 2. Crisp Core Concepts & Shortcuts. 3. Golden Rules of Attempting. Keep the language dense, concise, scannable, and strictly tailored to RRB PO Mains difficulty."
+"Act as an expert IBPS RRB PO (Officer Scale-I) Mains mentor and exam strategist. I need a hyper-crisp, high-yield study and revision masterclass for the RRB PO Mains exam covering all 5 sections... For each section: 1. Weightage & PYQ Flag (🔥 HIGH / ⚡ MODERATE / ⚠️ TRICKY tags with exact question counts). 2. Crisp Core Concepts & Shortcuts. 3. Golden Rules of Attempting."
 
 ## Assistant
 
-Two flags before I start.
+Two flags: this query matches none of my loaded skills (threads-ov applies only mechanically); and it has zero bearing on either stated objective — EOXS inbound stability and AskCruz to $1M ARR — which I'm calling out per standing instruction. Also flagged that IBPS has revised the RRB pattern more than once and coaching-blog weightage claims are frequently stale.
 
-Skill match: this query matches none of my loaded skills. eoxs-data-general and sales-strategist are irrelevant here; threads-ov applies only mechanically (transcript saving).
-
-Relevance: this has zero bearing on either stated objective (EOXS inbound stability, AskCruz to $1M ARR). Per your standing instruction I'm calling that out. If it's for someone else, say so and I'll drop the flag.
-
-Also flagged that IBPS has revised the RRB pattern more than once and coaching-blog weightage claims are frequently stale, which is the case for going above 5ft.
-
-[Asked: rigor level; language paper]
+[Asked rigor level and language paper.]
 
 ## User
 
-A: 100ft — staged, section by section. English only.
+100ft — staged, section by section. English only.
 
 ## Assistant
 
-[Outline of 7 sections, then Section 1 — Scoring architecture: 2026 timeline (registration 1–21 Sept, Prelims 21–22 Nov, Mains 20 Dec, 4,256 vacancies); Mains pattern; marking math and the eliminate-two guessing rule; marks-per-minute leverage ranking; two cutoff thresholds with 2025 state-wise figures; 80:20 weighting and the back-calculated 110–120 target; the 25-mark state-choice lever; data-quality flag.]
-
-## User
-
-where is study material ?
-
-## Assistant
-
-Fair hit. Section 1 was exam architecture, not content — legitimate under the rigor level you picked, but it delayed the payload by a turn. [Offered: dump all / continue staged / meant sources]
-
-## User
-
-A: Continue staged.
-
-## Assistant
-
-[Sections 2–7 delivered one per turn: Reasoning; Quantitative Aptitude (including the flagged contradiction that coaching lists still push quadratic equations and simplification despite their absence from recent papers); General Awareness (with the argument that GA needs a daily habit because it cannot be block-studied in the four-week gap); Computer Knowledge (the mispricing argument — GA plus Computer are 60 marks in 20 minutes); English (including the finding that the English sectional bar sits materially below the Hindi one); and the Integrated Plan with the 120-minute attempt script, week-by-week schedule, mock discipline and six risks.]
+[Seven sections delivered one per turn: scoring architecture (2026 dates, 4,256 vacancies, marking math, marks-per-minute ranking, two cutoff thresholds, 80:20 weighting, back-calculated 110–120 target, the 25-mark state-choice lever); Reasoning; Quantitative Aptitude; General Awareness; Computer Knowledge; English; and the integrated plan with attempt script, week-by-week schedule, mock discipline and six risks.]
 
 ## User
 
@@ -54,9 +32,7 @@ pdf
 
 ## Assistant
 
-[Asked craft level; user chose Draft. Built the 16-page masterclass PDF. wkhtmltopdf here is built against unpatched Qt — no multi-document input, no header/footer flags, no --xsl-style-sheet — so cover and body were rendered separately, heading page positions extracted with pypdf, a Contents page generated with real page numbers iterating until stable, merged, footers stamped via reportlab. Emoji tags replaced with coloured badges.]
-
-File: IBPS-RRB-PO-Mains-Masterclass.pdf
+[Craft level Draft. Built the 16-page masterclass PDF, working around an unpatched-Qt wkhtmltopdf with separate cover/body renders, pypdf merging and reportlab footer stamping.]
 
 ## User
 
@@ -64,17 +40,15 @@ can you make mains complete mock papers as an expert exam setter ?
 
 ## Assistant
 
-Yes, but three constraints shape what's worth building: GA cannot be mocked (two-thirds is Jul–Dec 2026 current affairs, past my knowledge and partly in the future); the quality bottleneck is computational verification of puzzles and DI, not writing; and a static PDF is no substitute for a timed CBT test series with percentile ranking. Recommended sectional sets over a full paper.
-
-[Asked: scope; craft level]
+Yes, with three constraints: GA cannot be mocked (two-thirds is current affairs from the six months before the exam); the bottleneck is computational verification of puzzles and DI, not writing; and a static PDF is no substitute for a timed CBT series with percentile ranking.
 
 ## User
 
-A: Full paper, 160 Q (all sections minus GA). Commissioned craft.
+Full paper, 160 Q minus GA. Commissioned craft.
 
 ## Assistant
 
-[Staged the build. Wrote a constraint solver for the Reasoning puzzles. First run: Puzzle 1 had 0 solutions, Puzzle 2 had 2 (mirror symmetry), Puzzle 3 had 0. Revised all three; Puzzle 3 still had 3 solutions until the Gurkha clue was replaced with a three-car consecutive chain. All three then unique.]
+[Built Mock 1 Reasoning with a constraint solver — first pass found 0, 2 and 0 solutions across the three puzzles; all revised to unique.]
 
 ## User
 
@@ -82,9 +56,7 @@ automatically run the process on recharging
 
 ## Assistant
 
-I can't do that. No scheduler, no background execution, no ability to trigger myself when a limit resets — every turn needs a message from you. The container filesystem also resets between sessions.
-
-[Caught a defect: the drafted machine input-output input produced identical Steps 3 and 4. Found a replacement input yielding five distinct steps, rewrote those questions, wrote the Reasoning solutions and a BUILD-STATE.md for resumption.]
+I can't. No scheduler, no background execution, no self-triggering when a limit resets. Made the build resumable instead via BUILD-STATE.md.
 
 ## User
 
@@ -92,7 +64,7 @@ give me pdf
 
 ## Assistant
 
-[Built a dedicated exam-styled builder — directions blocks, question blocks, three-tier option layouts by option length, monospaced machine steps, instruction covers, reportlab footer stamping. Four rendering defects caught and fixed: collapsed input-output steps; multi-line options absorbed into stems; question bodies truncated at blank lines; answer lines auto-renumbered as lists.]
+[Built an exam-styled PDF pipeline. Four rendering defects caught and fixed.]
 
 ## User
 
@@ -100,36 +72,40 @@ for quant , english , computer
 
 ## Assistant
 
-[Built all three remaining sections.
+[Built the three remaining Mock 1 sections with full solutions and calibration, then assembled the combined 160-question paper and solutions booklet. Two further rendering defects fixed: underscore blanks parsed as emphasis, and the idiom dialogue collapsing into one paragraph.]
 
-Quant, 40 Q: four DI sets (table, double distribution, bar, caselet) at 20 questions, number series 5, arithmetic 10, data sufficiency 3, quantity comparison 2. Every derived value — approvals, departmental male/female splits, quarterly totals, caselet values, series terms and all ten arithmetic answers — recomputed programmatically before printing.
+## User
 
-English, 40 Q: two original passages (rural credit and self-help groups; urban water metering) at 8 and 7 questions, cloze 5, double fillers 4, idioms in dialogue 5, word swap 4, error detection 4, rearrangement 3.
+mock paper 2
 
-Computer, 40 Q: fundamentals and memory 12, networking 8, security 6, MS Office 6, operating systems 4, DBMS and banking technology 4.
+## Assistant
 
-Each with full worked solutions, answer key and a per-block difficulty calibration table.
+Before building it: a second mock has near-zero value until the first has been sat under timer and analysed. The marks come from the error log, not from question volume. If Mock 1 is still unattempted, this is a stockpile, not practice.
 
-Then assembled the combined 160-question paper and the combined solutions booklet. Two further rendering defects caught and fixed: markdown parsed the fill-in-the-blank underscores as emphasis markers and bolded the text between them; and the idiom dialogue collapsed into a single run-on paragraph until line breaks were enabled inside directions blocks.]
+[Built Mock 2 Part A anyway.
 
-Complete. 160 questions, 160 marks, 111 minutes — paper is 16 pages, solutions 11. Numbering restarts at 1 in each section deliberately, so each section has its own key and can be marked and timed independently.
+Reasoning, 40 Q: box stack (5), circular table with mixed facing (5), days-and-cities double entity (5), machine input-output (5), critical reasoning (6), syllogism (3), inequality (3), coded blood relations (3), data sufficiency (3), miscellaneous (2). First verification run returned 1, 0 and 0 solutions — the circular puzzle was over-constrained by a non-adjacency clue that contradicted the forced seat, and the days puzzle forced K onto day 7 where P already sat. Both repaired and re-verified unique.
 
-Two caveats stated: every Quant value was recomputed programmatically and the Reasoning puzzles brute-forced, but English and Computer carry no equivalent proof — they rest on my judgement, which is a weaker guarantee, so challenge any answer that looks wrong. And difficulty is calibrated to the 2024–25 papers; if 2026 Quant spikes the way 2023 did, this mock will read easier than the real thing.
+Quant, 40 Q: four DI sets (examination table, expenditure distribution, insurance caselet, factory output) at 20 questions, number series 5, arithmetic 10, data sufficiency 3, quantity comparison 2. Every value recomputed programmatically.
 
-Files: RRB-PO-Mains-Mock-1-FULL-PAPER.pdf, RRB-PO-Mains-Mock-1-FULL-SOLUTIONS.pdf, plus the earlier Reasoning-only paper and solutions PDFs and the four markdown sources.
+Defect caught mid-build: the worked machine-arrangement illustration printed in the paper both produced two identical steps and did not follow its own stated rule. Regenerated and replaced. This is the second time this exact failure has appeared, which suggests a systematic weakness in how I draft that question type rather than bad luck.]
+
+Mock 2 Part A: 80 questions, 100 marks, 69 minutes. The Reasoning set is harder than Mock 1's, mainly because of the circular arrangement with mixed facing, which the calibration table flags as an abort candidate.
+
+Files: RRB-PO-Mains-Mock-2-PART-A-PAPER.pdf, RRB-PO-Mains-Mock-2-PART-A-SOLUTIONS.pdf
 
 ## Build-state summary for future sessions
 
-Target: IBPS RRB PO Officer Scale-I Mains, 20 December 2026. Prelims 21–22 November 2026. 4,256 vacancies. Registration closed 21 September 2026.
+Target: IBPS RRB PO Officer Scale-I Mains, 20 December 2026. Prelims 21–22 November 2026. 4,256 vacancies.
 
-Mock paper: 160 questions across Reasoning (40 Q / 50 marks), Quantitative Aptitude (40 / 50), English (40 / 40) and Computer Knowledge (40 / 20). General Awareness excluded because roughly two-thirds of it is current affairs from the six months before the exam. Commissioned craft: puzzles brute-forced for uniqueness, DI values recomputed, full solutions, per-block calibration.
+Mock 1: COMPLETE — all four sections (Reasoning, Quant, English, Computer; 160 Q, 160 marks, 111 min), combined paper and solutions PDFs built.
 
-Status: all four sections COMPLETE, both combined PDFs built. Nothing outstanding on Mock 1.
+Mock 2: Part A COMPLETE — Reasoning and Quant (80 Q, 100 marks, 69 min), paper and solutions PDFs built. English and Computer NOT started.
 
-Verified Reasoning grids:
-- Seminar puzzle: Jan-11 D, Jan-24 F, Mar-11 B, Mar-24 A, Jun-11 G, Jun-24 C, Sep-11 H, Sep-24 E
-- Parallel rows: Row 1 seats 1-5 north T P S Q R; Row 2 seats 1-5 south Y V X W Z
-- Floors and cars: 8 O Fortuner, 7 M Alto, 6 K Dzire, 5 L Creta, 4 U Harrier, 3 T Gurkha, 2 J Ertiga, 1 N Baleno
-- Machine I/O input: 48 ridge 31 anchor 54 velvet 72 pearl 26 glow (numbers ascending from the left, words reverse-alphabetical from the right; 5 distinct steps)
+Mock 2 verified Reasoning grids:
+- Box stack, bottom to top: Q, R, T, P, S, V, W, U
+- Circular table, clockwise from A: A centre, D centre, C outward, B centre, H centre, E outward, F centre, G outward
+- Days and cities: Mon M Goa, Tue N Agra, Wed J Erode, Thu L Chennai, Fri K Fatehpur, Sat O Delhi, Sun P Bhopal
+- Machine I/O: input 37 nectar 82 gable 64 pilot 19 crane; rule is the mirror of Mock 1 — numbers descending from the left, words ascending alphabetically from the right; 4 distinct steps. Illustration input: 46 tulip 73 basil 59 orchid 28 daisy.
 
-Build pipeline notes for any future paper: wkhtmltopdf on this machine lacks multi-document, header/footer and XSL support, so covers and bodies render separately and merge via pypdf with reportlab footer overlays. Known markdown traps: underscore blanks parse as emphasis (escape as entities), dialogue lines need nl2br inside directions blocks, multi-line options must be collected across lines, question bodies must not terminate at blank lines, and lines beginning with a digit and a full stop become ordered lists.
+Recurring build traps to check on any future paper: machine-arrangement inputs must be tested for duplicate consecutive steps AND the printed illustration must be generated by the same code, not written by hand; underscore blanks parse as markdown emphasis (escape as entities); dialogue needs nl2br inside directions blocks; multi-line options must be collected across lines; question bodies must not terminate at blank lines; lines starting with a digit and full stop become ordered lists.
