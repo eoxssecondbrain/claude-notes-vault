@@ -12,9 +12,9 @@ Assistant: I've read both. Here's what I understand about the Threads OV setup, 
 
 Threads OV is a separate vault (isolated from your other repo, OV2/raj-wiki-vault) with three layers:
 
-1. **Raw transcripts** (`raw/claude-chat-queries/`) — one file per conversation, full verbatim text. This is what `save_chat_transcript` writes to.
-2. **Chat summaries** (`wiki/chat-summaries/`) — topic-clustered synthesis pages built from those raw transcripts, produced on demand via a SYNTHESIZE workflow (not automatic).
-3. **OV2 cross-references** — short pointer lines added to your other wiki's pages, but only through a verify → propose → approve → apply chain, and only with your explicit sign-off per item.
+1. Raw transcripts (`raw/claude-chat-queries/`) — one file per conversation, full verbatim text. This is what `save_chat_transcript` writes to.
+2. Chat summaries (`wiki/chat-summaries/`) — topic-clustered synthesis pages built from those raw transcripts, produced on demand via a SYNTHESIZE workflow (not automatic).
+3. OV2 cross-references — short pointer lines added to your other wiki's pages, but only through a verify → propose → approve → apply chain, and only with your explicit sign-off per item.
 
 Key mechanics on the save side, since that's what you're asking about:
 
@@ -77,34 +77,63 @@ Mechanism: a Chrome/Firefox extension (or even a Tampermonkey userscript, which 
 What this actually fixes: it moves the trigger from "does the LLM decide to call save_chat_transcript" to "did a response finish rendering" — a DOM/network event, not a model decision. That is genuinely deterministic in the sense you want.
 
 Risks and blind spots, not glossed over:
-- Fragility inverted, not eliminated. Every one of the extensions found documents this: claude.ai's frontend and internal API can change without notice, and when it does, the extension silently breaks until someone patches it. You'd be trading "sometimes the LLM forgets" for "sometimes claude.ai ships an update and the save silently stops until someone notices," which needs its own monitoring (e.g. the extension pinging a heartbeat, or you periodically checking `list_claude_chat_queries()` for staleness).
-- CORS / cross-origin call. The vault's `/api/save` endpoint has no documented CORS policy in ARCHITECTURE.md. A page-context fetch from claude.ai to your Render host will be blocked by the browser unless the server sends the right `Access-Control-Allow-Origin` header, or unless the extension makes the call from its background/service-worker context instead of page context (extensions with host permissions aren't bound by page-level CORS the same way tabs are) — solvable, but it's a real implementation detail, not a given.
-- Secret handling. Right now the secret lives in your personal MCP connector URL, configured once in Claude's settings and never exposed to page JS. An extension approach means that secret (or a scoped variant of it) has to live in the extension's storage, in a browser, on a machine — a larger exposed-credential surface than today. Worth minting a save-only, narrower-scoped credential for this if you go this route, rather than reusing the full connector secret.
-- Web only. This doesn't touch the mobile app at all — no extension model exists on iOS/Android Claude apps. If your team genuinely uses mobile for these conversations, this option leaves that surface exactly as non-deterministic as it is today.
-- thread_name continuity. The extension needs to derive a stable thread_name per conversation client-side — claude.ai's conversation UUID (visible in the URL) is the natural key, but that's a different naming scheme than what SKILL.md's agent-chosen slugs produce today, so existing threads and new ones would use different conventions unless you write a mapping step.
-- Terms-of-service exposure. This relies on an undocumented internal API and automated interaction with claude.ai outside its intended client. That's a real category of risk (Anthropic could restrict it, rate-limit it, or it could sit in a gray zone of acceptable-use terms) that I can't resolve for you — worth a look at claude.ai's terms before building on it, not something to wave through.
+- Fragility inverted, not eliminated. Every one of the extensions found documents this: claude.ai's frontend and internal API can change without notice, and when it does, the extension silently breaks until someone patches it.
+- CORS / cross-origin call. The vault's `/api/save` endpoint has no documented CORS policy in ARCHITECTURE.md — solvable, but a real implementation detail, not a given.
+- Secret handling. An extension approach means the connector secret (or a scoped variant) has to live in the extension's storage — a larger exposed-credential surface than today.
+- Web only. Doesn't touch the mobile app at all.
+- thread_name continuity. Needs a mapping between claude.ai's conversation UUID and SKILL.md's agent-chosen slug convention.
+- Terms-of-service exposure. Relies on an undocumented internal API — worth checking claude.ai's terms before building on it.
 
 Option B — stop trying to hook claude.ai; build your own thin front end on the Claude API instead
 
-Mechanism: instead of claude.ai's consumer chat UI, the team's conversations happen through a small app you control, built on the Claude API (or the Agent SDK) with the same MCP server as a tool source. Because you own the request loop, you can do either of two fully deterministic things with zero LLM discretion involved: (1) have your own backend code call `/api/save` after every turn completes, unconditionally, in your own code — not a tool call at all, just an HTTP call your server makes because a turn ended; or (2) use the API's `tool_choice` parameter to force the model to call `save_chat_transcript` specifically on relevant turns, which the Anthropic API supports at the protocol level (constraining which tool, if any, the model must use) — something claude.ai's consumer chat interface doesn't expose to you.
+Mechanism: replace claude.ai's consumer chat UI with a small app built on the Claude API/Agent SDK. Because you own the request loop, you can have your own backend call `/api/save` after every turn unconditionally in your own code (not a tool call at all), or use the API's `tool_choice` parameter to force the model to call `save_chat_transcript` specifically — something claude.ai's consumer interface doesn't expose.
 
-This is the structurally correct fix — determinism enforced by code you own, not by hoping either the model or a scraped page state cooperates.
+This is the structurally correct fix — determinism enforced by code you own.
 
-Risks and blind spots:
-- This is the largest lift by far: you're replacing claude.ai's polished chat UI (mobile parity, attachments, artifacts, memory, model switching) with something you build and maintain. That's a real product, not a script.
-- API usage is metered/billed differently than claude.ai seats — a cost and procurement question, not just an engineering one.
-- If the appeal of claude.ai chat for your team is exactly its UX, this option trades that away for reliability. Worth being honest that this is the tradeoff, not a free win.
+Risks: largest lift by far (rebuilding UX/mobile parity/artifacts/memory), different billing model, trades away claude.ai's UX for reliability.
 
-Option C — network-level interception, covers web and mobile both
+Option C — network-level interception (mitmproxy watching claude.ai's internal API traffic), covers web and mobile in principle.
 
-Mechanism: a lightweight proxy (e.g. mitmproxy) on a device or router the team's Claude traffic passes through, watching for claude.ai's API responses (same internal API the extensions above use) and firing the save call itself. Unlike A, this isn't tied to a browser, so in principle it could also see mobile app traffic.
+Risk: mobile apps often use certificate pinning specifically to defeat this — likely dead on mobile without rooting devices. Heavier infrastructure than A for narrower gain. Ranked below A and B.
 
-Risks, and this one is significant: modern mobile apps frequently use certificate pinning specifically to defeat exactly this kind of interception — Anthropic's mobile app may or may not pin certs, but if it does, this approach is dead on mobile without rooting/jailbreaking devices, which is a security posture most teams shouldn't take on for this. Even on web, this is a heavier, more invasive piece of infrastructure than a browser extension for a narrower reliability gain, and it means one proxy component becomes a single point of failure for every save, on every device, at once. I'd rank this below A and B, included here mainly so it's not an unexamined option.
+An honest ranking: for "keep claude.ai, make saves deterministic, client-side" — Option A. For "eliminate every category of non-determinism including mobile, permanently" — Option B is the only one that gets there.
 
-An honest ranking
+User: we need this working both on browser, mobile and app. How can we instruct claude to make the tool call everytime? Should we have plugin function setup on claude, that ties skills to relevant MCPs to help with this? Would that be helpful?
 
-For "keep using claude.ai as-is, make saves deterministic, entirely client-side": Option A is the real answer to what you asked, with the CORS/secret-handling/thread_name details actually worked through before building, and an explicit acceptance that it covers web only and will need occasional maintenance when claude.ai's frontend changes.
+Assistant: Two different questions here, and honestly, one has a hard ceiling you should know about before we go further.
 
-For "actually eliminate every category of non-determinism, including mobile, permanently": Option B is the only one that gets there, because it's the only one where determinism lives in code you own rather than in something reverse-engineered from a surface Anthropic controls.
+Can wording make Claude call the tool every time, on browser, mobile, and app
 
-Given you specifically said "front end itself" and didn't flag mobile as a hard requirement, my honest read is Option A is the pragmatic build — but I'd want your take on how much mobile actually matters to this team before treating that as settled.
+No. Not with certainty, and this isn't a gap in how the instruction is worded — it's structural. On every consumer surface (claude.ai web, the mobile apps, the desktop app), a tool call happens because the model decides to make it, based on context, instructions, and the reminder text injected into every response. That's a probabilistic choice, not a protocol-enforced one. There's no equivalent of Claude Code's Stop hooks on any of these three surfaces — confirmed again by Anthropic's own comparison of these primitives: hooks fire at a fixed lifecycle event, deterministically, every time, while skills fire only when Claude decides the task matches. Skills and plugins sit on the "Claude decides" side of that line, same as the current save_chat_transcript setup. No system prompt, no reminder banner, no skill instruction changes which side of that line a tool call is on.
+
+What you can do is raise the compliance rate, not guarantee it:
+- Put the reminder as close as possible to the point of action rather than only at the top of the conversation — this system already does this, which is the right instinct, just not sufficient on its own.
+- Keep the instruction short, singular, and unconditional rather than one instruction among many competing priorities in the skill file.
+- Shorten how long a thread runs before drift sets in — long conversations degrade instruction-following generally.
+- Add a second-order tripwire in the skill: check for a missed save at the start of the next turn and backfill it. That doesn't prevent a miss, but it bounds how long a gap lasts.
+
+None of that changes the fundamental fact: any of these techniques takes you from "sometimes" to "usually," never to "always." If the requirement is genuinely 100%, prompting is the wrong layer to solve it at.
+
+Would a plugin tying skills to the MCP connector help
+
+Partially, but not with the problem you actually have. A plugin is a shareable package that bundles skills, connectors, slash commands, and subagents together, so a team member gets the MCP connector and the SKILL.md instructions in one install instead of configuring each separately. That solves a real but different problem — configuration drift across your team. It's a legitimate thing to do regardless of the determinism question.
+
+What it doesn't do: change how a tool call gets triggered. Bundled skill instructions are still model-decided. A plugin can add a slash command (e.g. an explicit /save), which is deterministic in the sense that typing it reliably fires the action — but that shifts the reliance from "the model remembers" to "the human remembers to type it every turn."
+
+Where this leaves you, given all three surfaces are now in scope
+
+Of the options from the last pass: Option A, the browser extension, only ever covers the browser — nothing for mobile app or desktop app. Option C, network interception, is likely dead on mobile specifically because of certificate pinning, and is heavier infrastructure than it's worth even where it works. Neither prompting improvements nor a plugin gets you past "usually" on any surface, let alone all three.
+
+The only option that achieves the same guarantee on browser, mobile, and desktop simultaneously is Option B — stop depending on claude.ai's client software at all, and build a thin front end on the Claude API where your own code fires the save after every turn, on every platform, because you wrote that platform.
+
+If rebuilding the front end is off the table, the honest fallback is: accept a two-tier reliability model — near-deterministic on browser only, via the extension, and best-effort-with-monitoring everywhere else — rather than one plan that claims 100% and quietly doesn't deliver it on mobile.
+
+User: shorten this message for the CEO on why this wont be possible to make 100% deterministic.
+
+Assistant: Subject: Why 100% reliable auto-save isn't achievable as-is
+
+Right now, Claude decides whether to call the save tool each turn based on instructions — there's no way to force that call, the same way there's no way to force a person to always remember a step. This works most of the time but not every time, and no amount of stronger wording changes that; it's how the underlying system is built, not a wording problem.
+
+The tools that would force this deterministically (like Claude Code's "hooks") only exist in the developer version of Claude, not in the browser, mobile, or desktop apps we actually use — so nothing available today can guarantee 100% across all three.
+
+We can raise the success rate meaningfully with better reminders and a catch-up check next turn. But if we need a hard guarantee, the only real fix is moving off the consumer Claude app to a version we build ourselves, where our own code (not Claude) triggers every save. That's a bigger project, not a settings change — happy to scope it if we want to go that route.
