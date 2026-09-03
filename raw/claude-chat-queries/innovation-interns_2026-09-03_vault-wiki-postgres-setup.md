@@ -133,3 +133,105 @@ $ python wiki_cli.py
 ```
 
 All files are production-ready and fully documented. Start with IMPLEMENTATION_SUMMARY.md for the complete picture.
+
+User: so what to do with these 5 files
+
+Claude: **Here's exactly what to do with each file:**
+
+## File-by-File Action Plan
+
+### 1. **IMPLEMENTATION_SUMMARY.md** (Read First)
+Open this to understand the whole system. Takes 10 minutes. Shows you:
+- What the system does
+- Architecture overview
+- Quick-start 5 steps
+- Example workflows
+
+### 2. **schema.sql** (Run on Your Postgres)
+This creates the database structure.
+
+```bash
+# Copy schema.sql to your machine, then run:
+psql -U postgres -d claude_vault_wiki < schema.sql
+
+# Or if database doesn't exist yet:
+createdb claude_vault_wiki
+psql -U postgres -d claude_vault_wiki < schema.sql
+```
+
+This creates 5 tables + indexes + triggers. Takes <1 second.
+
+### 3. **load_vault_data.py** (Run to Load Your 577 Queries)
+This parses your vault and loads everything into Postgres.
+
+```bash
+# On your machine:
+pip install psycopg2-binary pyyaml
+
+# Copy load_vault_data.py, then run:
+python load_vault_data.py
+
+# Adjust these if needed:
+export DB_HOST=localhost
+export DB_PORT=5432
+export DB_NAME=claude_vault_wiki
+export DB_USER=postgres
+export DB_PASSWORD=""
+```
+
+This loads all 577 queries + auto-tags them. Takes ~30 seconds.
+
+### 4. **wiki_cli.py** (Interactive Search & Wiki Creation)
+Use this to explore and create wiki pages.
+
+```bash
+python wiki_cli.py
+
+# Then type commands:
+> search askcruz implementation      # Find queries
+> topics                             # List all topics
+> user raj                           # Show raj's queries
+> related 42                         # Find related queries
+> create askcruz-project "Title" Projects  # Make wiki page
+> exit
+```
+
+### 5. **SETUP_AND_USAGE.md** (Reference for SQL)
+If you want to write your own SQL queries instead of using the CLI, this has 20+ examples:
+- Search queries
+- Timeline analysis
+- User activity
+- Related queries
+- Wiki page generation
+
+---
+
+## Quickest Path Forward
+
+**5 minutes to a working system:**
+
+```bash
+# 1. Create database
+createdb claude_vault_wiki
+
+# 2. Load schema
+psql -U postgres -d claude_vault_wiki < schema.sql
+
+# 3. Install Python packages
+pip install psycopg2-binary pyyaml
+
+# 4. Load your 577 queries
+python load_vault_data.py
+
+# 5. Start exploring
+python wiki_cli.py
+```
+
+That's it. You'll have:
+- 577 queries indexed and searchable
+- 21 users mapped
+- Auto-extracted topics and tags
+- Full-text search working
+- CLI ready to create wiki pages
+
+**Do you have PostgreSQL installed locally, or do you need help with that first?**
