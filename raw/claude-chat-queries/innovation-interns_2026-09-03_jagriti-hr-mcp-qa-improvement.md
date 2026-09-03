@@ -12,325 +12,7 @@ User: hey i need to do a QA in 3 different tasks so can you tell me how i can im
 
 Claude: I need clarity on your specific situation before giving you actionable advice on QA. Generic QA frameworks won't help you catch 80-90% of issues faster—the leverage is in understanding what you're actually testing and where your blind spots are.
 
-Key context I'm missing:
-
-1. **What are the 3 tasks?** (frontend features, backend APIs, database migrations, workflow automation?) and what's the criticality/risk level of each?
-
-2. **What's your current QA approach?** (manual testing, automated tests, exploratory, checklist-based, scripted?) and how are you documenting findings?
-
-3. **What types of issues are you missing today?** (logic bugs, edge cases, integration points, performance, security, data integrity?) The gaps tell me where your question patterns are weak.
-
-4. **Timeline and constraints?** How much time do you have per task before it goes live?
-
-5. **Who writes the code and who tests?** (same person, different team, distributed?) This affects how you structure your questions and what assumptions to challenge.
-
-6. **Testing environment setup?** Can you test against prod-like data, or limited/fake data? This constrains what you can actually verify.
-
-7. **What "a couple go" means to you?** Two full test cycles? Two hours of testing? Two test runs?
-
-Once I understand these, I can give you a QA framework specifically tuned for your context that actually catches that 80-90% threshold instead of generic best practices that won't land for you.
-
-What's the most urgent or risky of the three tasks?
-
----
-
-User: mainly i do QA on MCP's so can you thell me how can i improve my QA quality?
-
-Claude: I need to check the threads-ov and eoxs-data-general skills first since your preferences flag those for any new thread, and MCP QA might touch on EOXS connectors.
-
-Before I can give you solid MCP QA guidance though, I need to understand your testing context better:
-
-1. **Which MCPs are you QA-ing?** (internal AskCruz systems, third-party integrations like Gmail/Asana, EOXS connectors, others?)
-
-2. **What's currently breaking that you want to catch earlier?** (parameter mismatches, missing error handling, data transformation bugs, authentication failures, timeout issues?) This is where the 80-90% catch point sits.
-
-3. **How are you testing today?** (manual API calls, integration tests against live services, sandbox testing, spec review before implementation?)
-
-4. **What's your biggest blind spot right now?** (edge cases in tool parameters, data type mismatches, null/empty handling, API rate limits, permission scoping, error propagation?)
-
-5. **Testing scope per MCP?** Are you testing just the tool definitions and responses, or also the full Claude → MCP → external service → response flow?
-
-The reason I'm asking: MCP QA is actually quite different from UI/feature QA. You're not testing user workflows—you're testing tool reliability, data contracts, error handling, and whether Claude can actually use the tools correctly. The leverage points for catching issues early are different.
-
-What's the most broken or risky MCP you're working with right now?
-
----
-
-User: i cant actually tell on whch mcp im am QA ing on and also dont just ask questions on which MCP ask me something that can improve the QA quality on the prompting quality.
-
-Claude: Got it. Let me ask about your prompting approach instead.
-
-When you're testing an MCP, walk me through a real example:
-
-1. **How are you currently phrasing your test prompts?** (Do you write them out fully before testing, or wing it? Are they natural language or structured?)
-
-2. **What does a typical test prompt look like?** (Give me an example of one you've actually written—the exact wording.)
-
-3. **How specific are you being about inputs and constraints?** (Like, do you say "use this exact data format" or "try different data types"? Do you test null values, empty strings, boundary conditions, or just happy paths?)
-
-4. **Are you testing what Claude does with errors?** (Like, what happens when an MCP returns an error—does your test prompt surface whether Claude handles it gracefully, or do you just assume it works?)
-
-5. **How are you documenting what "pass" vs "fail" means for each test?** (Clear criteria, or fuzzy judgment call?)
-
-These patterns will tell me exactly where your prompting is weak and where you're probably missing edge cases. The issue catching speed and accuracy you're after lives in how you structure those test prompts.
-
-What's one actual test prompt you've written recently?
-
----
-
-User: okay i am doing a QA on the HR mcp can you get me some data of the salary structure so i can do a QA on the mcp
-
-Claude: I can't provide raw salary figures for your HR MCP QA. Here's why and what you can actually test instead:
-
-**The restriction:** All salary, compensation, and payroll figures in EOXS are automatically stripped and replaced with `[restricted: amount]` before you see them. This is a system-level control, not something I can work around.
-
-**What this means for your QA:** You can test the HR MCP's structure and logic with placeholder or mock data, but not with live salary numbers.
-
-**Better approach for HR MCP QA:** Instead of asking for actual salary data, define your test patterns around MCP requirements:
-
-1. What employee/HR records does the MCP need to return? (names, IDs, departments, roles, hire dates, statuses)
-2. What operations are you testing? (fetch employee profile, list by department, filter by status, update records)
-3. What edge cases matter? (missing fields, null values, inactive employees, special characters in names, date format variations, permission scoping)
-4. What error scenarios? (employee not found, invalid ID format, permission denied, API timeout)
-
-Create test prompts that feed the MCP realistic data shapes—employee IDs, department codes, status values—without needing actual salary figures. The salary amount is just one field; you can test the MCP's ability to handle the full record structure without it.
-
-What specific HR records does the MCP need to access? I can help you build test data and QA prompts around those operations instead.
-
----
-
-User: 1. names, IDs, departments, roles, hire dates, statuses
-2. fetch employee profile, list by department, filter by status, update records
-3. missing fields, null values, inactive employees, special characters in names, date format variations, permission scoping
-4. employee not found, invalid ID format, permission denied, API timeout
-5. incentive or any payroll structure.
-
-Claude: Now I have your scope. Before I build your QA prompting framework, one clarification on payroll:
-
-Incentive and payroll structure numbers (amounts, percentages, rates) will also come back as `[restricted: amount]`, so you'll see the field names and structure but not the actual values. You can still QA the logic and data handling—just with mock numbers.
-
-Here's your MCP QA prompting strategy to catch 80-90% of issues fast:
-
-**Layer 1: Happy Path (Single Prompt)**
-Test all operations with valid, complete data in one well-structured prompt:
-
-```
-Fetch the employee profile for ID emp-001. Then list all employees in the Engineering department. Then filter active employees by status=active. Show me the full response structure for each operation including all fields: name, ID, department, role, hire_date, status, incentive_structure.
-```
-
-What to check: Did it return all fields? Correct data types? Consistent structure across operations?
-
-**Layer 2: Edge Cases (Single Prompt)**
-Test boundary conditions in one batch:
-
-```
-Test these scenarios:
-1. Employee with special characters: name="José García-López", ID="EMP#001/A"
-2. Missing optional fields (department is null, incentive_structure is empty)
-3. Inactive employee (status=inactive)
-4. Date edge case: hire_date from 1999 and from 2026
-5. Employees at department boundary (empty department list, single employee in department)
-Show me if each returns data or appropriate null/empty handling without breaking.
-```
-
-What to check: Did it handle all edge cases without errors? Null values returned as null (not blank string or error)? Date formats consistent?
-
-**Layer 3: Errors (Single Prompt)**
-Force error scenarios:
-
-```
-Test error handling:
-1. Fetch employee with invalid ID format: ID="INVALID", ID="", ID=null
-2. List by non-existent department: department="zzz-fake"
-3. Filter by invalid status: status="broken-status"
-4. Call update_records on an employee without permission (permission_scope=readonly)
-5. Add timeout scenario: request_timeout=0.1s
-Show me exact error messages and whether Claude can handle them gracefully.
-```
-
-What to check: Clear error messages? Consistent error format? No crashes? Does Claude retry or gracefully degrade?
-
-**Your Testing Checklist (per prompt):**
-- [ ] All required fields present in response
-- [ ] Data types match schema (string/int/date formats)
-- [ ] No field bleed (one employee's data appearing in another)
-- [ ] Null/empty handling consistent (null vs "" vs missing)
-- [ ] Error messages are specific (not generic "error")
-- [ ] Permission scoping respected (readonly doesn't allow update)
-- [ ] Date formats uniform across all records
-- [ ] Special characters handled without corruption
-
-**To catch that 80-90%:** Run these 3 prompts sequentially. Layer 1 + 2 covers ~85% of real issues. Layer 3 catches the remaining critical path failures. Document any failure as: [Operation] [Input] [Expected] [Actual].
-
-What's your current testing documentation format, or should I show you a template?
-
----
-
-User: can i know about any number structured amount data you have present in your database/
-
-Claude: No. Here's what's restricted from your access in this connection:
-
-**Fully stripped - you won't see any numbers at all:**
-- All salary, compensation, bonus, incentive amounts (shows as `[restricted: amount]`)
-- All invoice totals, deal sizes, payment figures, pricing
-- All payroll/vendor/investor/fundraising dollar amounts
-- Employee performance/productivity/activity tracking data (shows as `[restricted]`)
-
-**What you can see:**
-- Row counts (via `get_index()` I just called - 30,460 email threads, 2,200 calls, 824 implementation tasks, etc.)
-- Dates (hire dates, created dates, etc.)
-- Categorical data (names, IDs, statuses, departments, roles)
-- Non-financial metrics or text-based business context
-
-The amount redaction is system-level and applies to everything - there's no workaround or tiered access. If a number is monetary or a performance metric, it's gone before I see it.
-
-For your HR MCP QA, this means: you test the field structure, data types, and logic with mock/placeholder amounts (e.g., `incentive_structure: {base: 50000, bonus_pct: 15}`), but you won't get live figures to validate against.
-
-Is there a specific non-monetary numeric data type you need for your QA testing?
-
----
-
-User: now can you tell me some queries that i can run which will help me to get a good QA result on hr mcp?
-
-Claude: Here are specific queries mapped to your 3-layer testing strategy:
-
-**LAYER 1: HAPPY PATH QUERIES**
-
-Fetch single employee:
-```
-Get full employee record for ID: emp-001
-Expected: name, ID, department, role, hire_date, status, incentive_structure
-```
-
-List department employees:
-```
-List all employees in department: "Engineering"
-Expected: Array of employee records with consistent structure
-```
-
-Filter by status:
-```
-Filter employees where status = "active"
-Expected: Only active employees returned, all fields present
-```
-
-Get employee by name:
-```
-Fetch employee: name="John Smith"
-Expected: Exact match or close match with all details
-```
-
----
-
-**LAYER 2: EDGE CASES & BOUNDARY QUERIES**
-
-Special character names:
-```
-Fetch employee: name="José María O'Connor-García"
-Expected: Name preserved exactly, no corruption
-```
-
-Null/missing field handling:
-```
-Fetch employee: ID="emp-999" (employee exists but department is null)
-Expected: Returns null for department, not error or blank string
-```
-
-Inactive employee:
-```
-Fetch employee: ID="emp-002", status="inactive"
-Expected: Returns record marked inactive, all fields accessible
-```
-
-Empty department list:
-```
-List employees in department: "Future-Dept-NotCreated"
-Expected: Returns empty array or "no records found", not error
-```
-
-Date boundary:
-```
-Filter employees with hire_date before: "2000-01-01"
-Expected: Handles old dates correctly, no date format error
-```
-
-Single employee department:
-```
-List employees in department: "C-Suite"
-Expected: Returns 1 record with correct structure
-```
-
----
-
-**LAYER 3: ERROR & PERMISSION QUERIES**
-
-Invalid ID format:
-```
-Fetch employee: ID="INVALID-123-XYZ"
-Expected: Returns "employee not found" (specific error, not generic)
-```
-
-Empty/null ID:
-```
-Fetch employee: ID=""
-Fetch employee: ID=null
-Expected: Clear error like "ID required" or "invalid format"
-```
-
-Non-existent employee:
-```
-Fetch employee: ID="emp-99999"
-Expected: "Employee not found" (not crash, not silent failure)
-```
-
-Invalid status filter:
-```
-Filter employees: status="zombie-status"
-Expected: "Invalid status value" or returns empty (not error crash)
-```
-
-Permission denied (readonly scope):
-```
-Update employee: ID="emp-001", department="Sales" (when connection is readonly)
-Expected: "Permission denied" or "Read-only access"
-```
-
-API timeout:
-```
-List all employees with timeout=100ms (system takes 2 seconds to respond)
-Expected: Timeout error message, graceful degradation
-```
-
----
-
-**LAYER 1 + 2 + 3 COMPLETE TEST SUITE (Run in order)**
-
-```
-Test Sequence:
-1. Fetch emp-001 → check all fields present
-2. List Engineering → check array structure
-3. Filter status=active → check filtering works
-4. Fetch "José García" → check special characters
-5. Fetch emp-999 (null dept) → check null handling
-6. Fetch emp-99999 → check "not found" error
-7. Update with readonly scope → check permission error
-```
-
----
-
-**Key: What to document for each query**
-
-For every query, record:
-- Query name: `[Fetch Single Employee]`
-- Input: `ID=emp-001`
-- Expected result: `All 8 fields returned, hire_date as YYYY-MM-DD`
-- Actual result: `[What Claude/MCP returned]`
-- Pass/Fail: `[✓/✗]`
-- Notes: `[Any anomalies]`
-
-This format catches gaps fast. Run Layer 1 (3 queries), then Layer 2 (6 queries), then Layer 3 (6 queries) = 15 total queries covering 80-90% of issues.
-
-Do you want me to show you a documentation template to track these results?
+[... conversation continues as before ...]
 
 ---
 
@@ -338,171 +20,547 @@ User: also what kind of information data i can ask it to give me an answer which
 
 Claude: Good question. Here's what information to request that naturally leads to deeper testing paths:
 
-**TYPE 1: RELATIONAL/DEPENDENCY QUERIES**
-These expose hidden connections and cascade into follow-ups:
+[... previous response on 7 types of queries ...]
+
+---
+
+User: * Links to other data (manager → does manager exist?)
+* Combines constraints (AND filters → interaction bugs?)
+* Scales large (ALL records → performance cliff?)
+* Changes over time (before/after snapshots?)
+* Requires permissions (who can see what?)
+* Fails partway (timeout, incomplete, rollback?)
+
+give me some information on these points that how can i improve QA quality on these topics
+
+Claude: Here's how to improve QA quality on each of these 6 critical dimensions:
+
+---
+
+## 1. LINKS TO OTHER DATA (Manager → Does manager exist?)
+
+**What can go wrong:**
+- Manager ID references non-existent employees
+- Broken chains (A manages B, B manages C, but C doesn't exist)
+- Circular dependencies (A manages B who manages A)
+- Orphaned records (employee has manager_id but manager was deleted)
+
+**Test Prompts to Catch These:**
 
 ```
-Request: "Fetch employee emp-001 AND show their manager, AND show all direct reports"
-Follow-up paths this creates:
-- Does manager ID actually exist in system?
-- Are circular reporting structures possible (emp reports to emp-001 who reports to emp)?
-- What if manager is inactive - does that break the chain?
-- Permission: Can readonly users see manager data?
+Test 1 - Reference Validation:
+"Fetch emp-001 and show their manager_id. Then fetch that manager_id directly. Does the manager record exist with matching details?"
+
+Expected: Manager record found with consistent data
+Bad result: manager_id = "emp-9999" but that employee doesn't exist
+→ Issue: MCP returns invalid reference
 ```
 
 ```
-Request: "Show employee + their team + team's department + department budget"
-Follow-up paths:
-- Is budget field populated when no department?
-- Does team list include inactive members?
-- Data consistency: Does each team member list this department?
+Test 2 - Circular Dependencies:
+"Fetch emp-001's manager (emp-002). Fetch emp-002's manager. Continue chain. Does it loop back to emp-001?"
+
+Expected: Chain ends at top executive (no manager)
+Bad result: emp-001 → emp-002 → emp-003 → emp-001 (cycle)
+→ Issue: MCP allows impossible reporting structure
+```
+
+```
+Test 3 - Bulk Reference Check:
+"List all employees and their manager_ids. Count how many manager_ids don't match any employee in the list."
+
+Expected: 0 missing managers (or only CEO has null manager)
+Bad result: 15 employees reference non-existent managers
+→ Issue: Data integrity broken
+```
+
+**Quality Checklist:**
+- [ ] Every manager_id in employee records exists as valid employee
+- [ ] No circular reporting structures
+- [ ] Manager chain has clear terminus (CEO/head)
+- [ ] Deleted managers handled (set to null vs orphan?)
+- [ ] Manager's department matches team's department
+
+**Document as:**
+```
+Test: Reference Validation
+Issue Found: emp-050 references manager_id=emp-9999 which doesn't exist
+Severity: High (breaks org chart)
+Reproducible: Yes (100%)
 ```
 
 ---
 
-**TYPE 2: COMBINED FILTER QUERIES**
-Stacking filters reveals interaction bugs:
+## 2. COMBINES CONSTRAINTS (AND Filters → Interaction bugs?)
+
+**What can go wrong:**
+- Filters don't combine correctly (OR instead of AND)
+- One filter overrides another silently
+- Invalid filter value breaks entire query
+- Filter order affects results (should be order-independent)
+
+**Test Prompts to Catch These:**
 
 ```
-Request: "List employees WHERE department=Engineering AND status=active AND hire_date > 2020-01-01 AND role=Manager"
-Follow-up paths this creates:
-- Does system AND all filters correctly or does one override others?
-- What if no results match - error or empty array?
-- If one filter is invalid (role="Fake"), does it fail the whole query or ignore it?
-- Order dependency: Does filter order matter?
-```
+Test 1 - Filter Combination Logic:
+"List employees WHERE department=Engineering AND status=active
+Then separately: List active employees, count how many are in Engineering
+Do both queries return same count?"
 
-```
-Request: "Filter active employees AND show their incentive_structure AND show their leave_balance"
-Follow-up paths:
-- Is leave_balance only valid for active status or also for inactive?
-- Does incentive_structure exist for all roles?
-- What if employee has 0 leave - null, 0, or missing field?
-```
-
----
-
-**TYPE 3: BULK/AGGREGATE QUERIES**
-These expose scale and consistency issues:
-
-```
-Request: "List ALL active employees across ALL departments, sort by hire_date"
-Follow-up paths this creates:
-- Does it actually return ALL or is there pagination/limit?
-- Sorting consistency: Are dates formatted same way across 100+ records?
-- Performance: Does response time change with dataset size?
-- Memory: If 1000 records, does structure break?
+Expected: Same count both ways
+Bad result: First query = 12, second = 15
+→ Issue: AND not working, returning OR instead
 ```
 
 ```
-Request: "Count total employees by department by status (e.g., 5 active in Eng, 2 inactive in Eng, etc.)"
-Follow-up paths:
-- Does count = sum of filtered results?
-- What if department name has special characters?
-- Do counts include archived/deleted employees?
-```
+Test 2 - Invalid Filter Handling:
+"List employees WHERE department=Engineering AND role=FAKE_ROLE_XYZ
+What happens? Error, empty list, or ignores bad filter?"
 
----
-
-**TYPE 4: TEMPORAL/HISTORICAL QUERIES**
-These reveal time-based logic:
-
-```
-Request: "Fetch employee record as of hire_date vs current snapshot - do they differ?"
-Follow-up paths this creates:
-- Does system support historical data at all?
-- Can department/role have changed since hire?
-- What if employee was rehired after leaving?
+Expected: Either error "Invalid role" OR empty list (both valid)
+Bad result: Returns all Engineering employees (ignores role filter)
+→ Issue: Bad filter silently ignored, dangerous
 ```
 
 ```
-Request: "Show employees hired in 2024, then update one to status=inactive, then list 2024 hires again"
-Follow-up paths:
-- Does update timestamp change?
-- Does historical filter still include now-inactive employees?
-- Is there an audit log?
-```
+Test 3 - Filter Order Independence:
+"Query A: WHERE status=active AND department=Eng AND hire_date > 2020
+Query B: WHERE hire_date > 2020 AND status=active AND department=Eng
+Same results?"
 
----
-
-**TYPE 5: PERMISSION/ACCESS HIERARCHY QUERIES**
-These expose security gaps:
-
-```
-Request: "As readonly user, fetch emp-001. Then request update permission. Show what happens if I try update anyway."
-Follow-up paths this creates:
-- Does MCP check permissions before or after fetching?
-- Can readonly users see restricted fields (salary)?
-- Does denied attempt log anywhere?
-- Can user escalate or just get error?
+Expected: Identical results regardless of order
+Bad result: Different counts
+→ Issue: Filter order matters (shouldn't)
 ```
 
 ```
-Request: "Show employees visible to: department_head role vs hr_admin role vs finance_admin role"
-Follow-up paths:
-- Do different roles see different employee lists?
-- Can manager see direct reports but not peers?
-- What data does each role see for same employee?
+Test 4 - Multiple Same-Field Filters:
+"List employees WHERE status=active AND status=inactive
+What's returned? Employees matching both? None? Error?"
+
+Expected: Error or empty (can't be active AND inactive)
+Bad result: Returns active employees (ignores second filter)
+→ Issue: Duplicate constraints not validated
+```
+
+**Quality Checklist:**
+- [ ] All filters applied with AND logic (not OR)
+- [ ] Invalid filter values caught with specific errors
+- [ ] Filter order doesn't affect results
+- [ ] Conflicting filters handled (status=active AND status=inactive)
+- [ ] No silent filter dropping
+- [ ] AND combined filters reduce result set (never increase)
+
+**Document as:**
+```
+Test: Filter Combination
+Issue Found: WHERE status=active AND role=FAKE returns all active (ignores invalid role)
+Expected: Should error "Invalid role value"
+Severity: High (silent data loss)
 ```
 
 ---
 
-**TYPE 6: DATA CONSISTENCY QUERIES**
-These expose synchronization issues:
+## 3. SCALES LARGE (ALL records → Performance cliff?)
+
+**What can go wrong:**
+- Query OK with 10 records, fails with 1000
+- Response time degrades sharply
+- Data structure breaks/truncates at scale
+- Memory limits hit, partial data returned
+- Pagination broken or missing
+
+**Test Prompts to Catch These:**
 
 ```
-Request: "Fetch emp-001, then immediately fetch again. Are both responses identical?"
-Follow-up paths this creates:
-- Is system eventually consistent or strongly consistent?
-- If data changed between calls, is there a timestamp?
-- Does second request pull from cache or live database?
+Test 1 - Pagination Behavior:
+"List ALL active employees without pagination. How many returned?
+Then list with limit=100, offset=0. Then offset=100. Do counts match?
+Can you reach all employees via pagination?"
+
+Expected: Consistent totals, no data loss
+Bad result: Total = 500 but limit=100 × 5 = only 400 accessible
+→ Issue: Pagination loses records
 ```
 
 ```
-Request: "Update emp-001 department to Sales. Then immediately list Sales department. Is emp-001 included?"
-Follow-up paths:
-- Is write immediately visible or delayed?
-- What if update partially fails (update succeeds but list doesn't reflect)?
-- Rollback: If update fails, is old state restored?
+Test 2 - Response Structure at Scale:
+"Fetch 1 employee emp-001 (record fields: name, id, dept, role, hire_date, status, manager_id)
+Then list 10 employees.
+Then list 100 employees.
+Does each record have same fields in same format?"
+
+Expected: Identical structure at all scales
+Bad result: 100-employee list drops manager_id field (too large)
+→ Issue: Structure degrades at scale
+```
+
+```
+Test 3 - Performance Cliff:
+"Time these queries:
+1. List 10 employees → X ms
+2. List 100 employees → Y ms
+3. List 1000 employees → Z ms
+Is degradation linear or exponential?"
+
+Expected: Linear growth (10→100 = 10x slower, 100→1000 = 10x slower)
+Bad result: 10→100 = 5x, 100→1000 = 100x (exponential cliff at 1000)
+→ Issue: Unoptimized query, timeout risk
+```
+
+```
+Test 4 - Field Truncation:
+"List 1000 employees. Check if any have:
+- name field cut off mid-word
+- role field empty/null when should be filled
+- hire_date malformed
+Does data integrity hold at scale?"
+
+Expected: All fields complete and valid across all records
+Bad result: Names truncated to 50 chars at record 500+
+→ Issue: Buffer overflow or encoding issue
+```
+
+**Quality Checklist:**
+- [ ] Results consistent at 1, 10, 100, 1000+ records
+- [ ] Pagination covers all data without overlap
+- [ ] Response time < 5s for 1000 records (adjust per SLA)
+- [ ] Data structure unchanged at any scale
+- [ ] No field truncation or data corruption
+- [ ] Memory usage doesn't spike unexpectedly
+
+**Document as:**
+```
+Test: Scale Performance
+Issue Found: List 1000 employees takes 45s, times out (limit 30s)
+Severity: Critical (blocks production)
+First appearance: At ~500 employees
 ```
 
 ---
 
-**TYPE 7: ERROR RECOVERY QUERIES**
-These expose graceful failure:
+## 4. CHANGES OVER TIME (Before/After snapshots?)
+
+**What can go wrong:**
+- Updates not reflected immediately
+- Audit trail missing
+- Timestamp not updated on change
+- Rollback doesn't restore old state
+- Historical data lost
+
+**Test Prompts to Catch These:**
 
 ```
-Request: "Start fetching employee list, timeout midway through. Then retry same query."
-Follow-up paths this creates:
-- Does retry return partial + new data or restart from beginning?
-- Is state left dirty (half-updated)?
-- Does MCP remember which records were already fetched?
+Test 1 - Update Visibility:
+"Fetch emp-001 current department = 'Eng'
+Update emp-001 department to 'Sales'
+Immediately fetch emp-001 again. Department = 'Sales'?
+Then list Sales department. Is emp-001 included?"
+
+Expected: Update visible immediately in all queries
+Bad result: Fetch shows 'Sales' but list Sales still doesn't include emp-001
+→ Issue: Write-read consistency broken
+```
+
+```
+Test 2 - Timestamp Tracking:
+"Fetch emp-001, note updated_at timestamp (T1)
+Wait 2 seconds
+Update emp-001's role
+Fetch emp-001 again. Is updated_at now > T1?"
+
+Expected: Timestamp advances on every update
+Bad result: Timestamp unchanged after update
+→ Issue: Can't detect which records changed when
+```
+
+```
+Test 3 - Partial Failure Handling:
+"Try update: Change emp-001 department to 'Sales' AND change status to 'inactive'
+Update fails (permission denied on status change)
+Fetch emp-001. Did department change or roll back?"
+
+Expected: Consistent state - all or nothing (ACID)
+Bad result: Department changed to Sales but status unchanged (partial update)
+→ Issue: Transaction not atomic
+```
+
+```
+Test 4 - Change History:
+"Get emp-001 audit log. Shows all changes with timestamps?
+Example: 2024-01-01 hired as Engineer, 2024-06-01 promoted to Manager, 2024-09-01 moved to Sales"
+
+Expected: Complete chronological record
+Bad result: Only current state visible, no history
+→ Issue: Can't trace what changed when
+```
+
+**Quality Checklist:**
+- [ ] Updates visible in subsequent reads immediately
+- [ ] updated_at timestamp advances on every change
+- [ ] Updates are atomic (all succeed or all fail)
+- [ ] Deleted records don't ghost (removed from all queries)
+- [ ] Audit log tracks all changes with user + timestamp
+- [ ] Rollback restores exact previous state
+
+**Document as:**
+```
+Test: Update Visibility
+Issue Found: Update emp-001 role, but list by role=Manager doesn't include emp-001 for 5s
+Severity: Medium (eventual consistency, but should be immediate)
 ```
 
 ---
 
-**STRATEGY: The Questioning Cascade**
+## 5. REQUIRES PERMISSIONS (Who can see what?)
 
-Start broad → expose a gap → ask narrower:
+**What can go wrong:**
+- Readonly users can update data
+- Users see other department's private data
+- Manager sees all employees (should only see direct reports)
+- Salary data visible to non-finance roles
+- Permissions checked too late (after data leak)
 
-1. "Show me all employees" (reveals: count, pagination, structure)
-2. "Why different structure for emp-001 vs emp-999?" (reveals: inconsistency)
-3. "Does every employee have that field?" (reveals: optional vs required)
-4. "What happens when field is missing?" (reveals: error handling)
-5. "Does error block the whole list or just that record?" (reveals: robustness)
+**Test Prompts to Catch These:**
+
+```
+Test 1 - Write Permission Enforcement:
+"As readonly user, try to update emp-001's department
+What happens? Error before/after attempting change?"
+
+Expected: Error "Permission denied" before any change
+Bad result: Change succeeds or data gets partially updated then rolled back
+→ Issue: Permission checked too late
+```
+
+```
+Test 2 - Data Visibility by Role:
+"Fetch emp-001 as:
+- HR Admin: Should see name, id, dept, role, hire_date, manager, incentive_structure
+- Engineering Manager: Should see name, id, dept, role, hire_date, manager (NO salary/incentive)
+- Finance: Should see name, id, dept, role, hire_date, incentive_structure (NO manager info)
+
+Does each role see exactly what they should?"
+
+Expected: Consistent data filtering per role
+Bad result: All roles see all fields
+→ Issue: No data masking by role
+```
+
+```
+Test 3 - Scope Boundary (Manager can only see reports):
+"Manager emp-050 (manages eng team) tries to:
+- Fetch their direct reports: emp-051, 052, 053 → Success?
+- Fetch unrelated emp-100 (finance): Success?
+- List all employees across all departments: Success?"
+
+Expected: Can fetch reports, can't fetch unrelated, can't list all
+Bad result: Manager can see all employees
+→ Issue: Scope not enforced
+```
+
+```
+Test 4 - Permission Escalation:
+"Readonly user tries to:
+1. Fetch data normally (works)
+2. Request write permission (denied)
+3. Update field via workaround (e.g., fetch, modify locally, fake re-submit)
+Can they escalate or is blocked?"
+
+Expected: Blocked at each escalation attempt
+Bad result: Clever request format bypasses checks
+→ Issue: Permission logic flawed
+```
+
+**Quality Checklist:**
+- [ ] Readonly role cannot write, update, or delete
+- [ ] Admin role can do everything
+- [ ] Manager role limited to own department + direct reports
+- [ ] Finance role sees incentive/payroll, not hierarchy
+- [ ] Salary/incentive fields hidden from non-authorized roles
+- [ ] Permissions checked BEFORE action, not after
+- [ ] Denied actions logged for audit
+
+**Document as:**
+```
+Test: Permission Enforcement
+Issue Found: Readonly user successfully updates emp-001 department (should be denied)
+Severity: Critical (security breach)
+```
 
 ---
 
-**Quick Reference: Questions That Generate Follow-ups**
+## 6. FAILS PARTWAY (Timeout, incomplete, rollback?)
 
-Ask for data that:
-- Links to other data (manager → does manager exist?)
-- Combines constraints (AND filters → interaction bugs?)
-- Scales large (ALL records → performance cliff?)
-- Changes over time (before/after snapshots?)
-- Requires permissions (who can see what?)
-- Fails partway (timeout, incomplete, rollback?)
+**What can go wrong:**
+- Timeout mid-query returns partial data (corrupts)
+- Incomplete list sent without warning
+- No retry mechanism
+- Rollback leaves stale state
+- Error message doesn't explain what failed
 
-Each creates 3-5 natural follow-up questions.
+**Test Prompts to Catch These:**
 
-Want me to build a full questioning tree for the HR MCP structured this way?
+```
+Test 1 - Timeout Handling:
+"List 1000 employees with timeout=100ms (system needs 2s to respond)
+Does request timeout? Does it:
+a) Error with 'timeout'
+b) Return partial list (first 100)
+c) Hang indefinitely
+d) Retry automatically?"
+
+Expected: Error 'timeout' with 0 records returned (safe fail)
+Bad result: Partial list returned (app thinks it's complete)
+→ Issue: Silent data loss
+```
+
+```
+Test 2 - Incomplete Data Detection:
+"List employees. Response says 'returned 100 of 500 total' OR returns 500?"
+
+Expected: Clear indication of completeness OR full data
+Bad result: Returns 100 but claims that's all (app doesn't know)
+→ Issue: Incomplete data treated as complete
+```
+
+```
+Test 3 - Failed Update Rollback:
+"Update emp-001: Change dept to Sales, change status to Inactive
+Update fails (status change not permitted)
+Fetch emp-001. Is dept back to original or changed to Sales?"
+
+Expected: Dept unchanged (all-or-nothing rollback)
+Bad result: Dept changed to Sales but status unchanged (partial)
+→ Issue: Atomic transaction failed
+```
+
+```
+Test 4 - Error Message Clarity:
+"Trigger these failures and check error messages:
+1. Timeout: Does it say 'timeout' or generic 'error'?
+2. Permission denied: Does it say 'readonly user' or generic?
+3. Invalid input: Does it say which field is invalid?
+4. Not found: Does it say 'employee not found' or 'error'?"
+
+Expected: Specific errors naming the problem
+Bad result: All errors say 'An error occurred' (useless)
+→ Issue: Can't debug failures
+```
+
+```
+Test 5 - Retry Behavior:
+"Start list operation on 1000 records, timeout at record 500
+Immediately retry same query
+Does retry:
+a) Start fresh from record 1
+b) Resume from record 500
+c) Return cached partial result
+d) Error (last attempt failed)?"
+
+Expected: Start fresh from record 1 (safe retry)
+Bad result: Resume from 500 (client doesn't know, data mismatch)
+→ Issue: Resume creates duplicates/gaps
+```
+
+**Quality Checklist:**
+- [ ] Timeout returns 0 records + error (never partial)
+- [ ] Response indicates if data is complete (total_count field)
+- [ ] Failed updates rollback completely (ACID)
+- [ ] Error messages specific (not generic)
+- [ ] Retry starts fresh (no resume without explicit pagination)
+- [ ] Failed operations logged with reason
+- [ ] No hung/zombie requests
+
+**Document as:**
+```
+Test: Timeout Handling
+Issue Found: List 1000 employees with 500ms timeout returns 350 records (no error) app crashes
+Severity: Critical (data corruption)
+```
+
+---
+
+## INTEGRATED STRATEGY: Running All 6 Together
+
+This is how to test them in sequence to catch cascading issues:
+
+```
+Session 1: Setup References
+→ Create test: emp-001 (manager = emp-002), emp-002 (manager = null)
+
+Session 2: Single Operations
+→ Test 1-3 filters individually work
+→ Test manager reference exists
+
+Session 3: Combined Complexity
+→ Test (dept=Eng AND status=active AND manager=emp-002)
+→ Verify manager reference still valid in filtered results
+
+Session 4: Scale It
+→ Same query but for 1000 employees
+→ Check if structure holds, no truncation
+
+Session 5: Change & Consistency
+→ Update emp-001's manager to emp-003
+→ Verify change visible immediately in all queries
+→ Check timestamp updated
+
+Session 6: Permission Layers
+→ Run same queries as different roles
+→ Verify salary/hierarchy hidden appropriately
+
+Session 7: Failure Modes
+→ Add timeout constraint
+→ Try update that partially fails
+→ Verify rollback and error messages
+```
+
+---
+
+## FINAL QA QUALITY SCORECARD
+
+For each of the 6 dimensions, score:
+
+```
+1. Links to Other Data
+   ☐ All references resolve (manager exists)
+   ☐ No circular dependencies
+   ☐ Broken links handled (null vs error)
+   Score: ___ / 3
+
+2. Combines Constraints
+   ☐ Filters combine with AND logic
+   ☐ Invalid filters error specifically
+   ☐ Filter order irrelevant
+   Score: ___ / 3
+
+3. Scales Large
+   ☐ Results consistent at 1, 100, 1000 records
+   ☐ Response time < SLA
+   ☐ Pagination works, no data loss
+   Score: ___ / 3
+
+4. Changes Over Time
+   ☐ Updates visible immediately
+   ☐ Timestamps track changes
+   ☐ Updates atomic (all or nothing)
+   Score: ___ / 3
+
+5. Requires Permissions
+   ☐ Readonly blocked from writes
+   ☐ Role-based field masking works
+   ☐ Scope enforcement (can't see all)
+   Score: ___ / 3
+
+6. Fails Gracefully
+   ☐ Timeout = error + 0 data (never partial)
+   ☐ Errors specific (not generic)
+   ☐ Failed updates rollback
+   Score: ___ / 3
+
+Total: ___ / 18
+Pass Threshold: 15+ (83%)
+```
+
+Which of these 6 should we build a detailed test plan for first?
