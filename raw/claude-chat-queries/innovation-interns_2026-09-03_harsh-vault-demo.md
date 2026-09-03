@@ -123,11 +123,3 @@ Next two weeks, you could:
 - Learn the tooling: maturin or PyO3 for Rust-Python bindings
 
 Do you have a specific performance bottleneck at AskCruz in mind, or are you learning the pattern first without a live target?
-
-**Harsh:** and now if u ask me question and i dont answer it will that question be stored?
-
-**Claude:** Yes. When I ask a question, it becomes part of the conversation immediately. When I save the transcript, it captures everything that's been said up to that point—including questions you haven't answered yet.
-
-So if I ask you something and you ignore it or move on to something else, that unanswered question is still in the vault, verbatim.
-
-Want me to demonstrate? I'll ask you a question and not save it until you respond (or don't), so you can see what happens.
