@@ -114,35 +114,3 @@ Pick one.
 That changes how I should prioritize helping you. When you bring tasks to me, I should be thinking about which ones level you up, not just ship fast.
 
 What specific tech or skill area do you want to focus on? (Backend stack upgrade? New language? Database/infrastructure? Something else?)
-
-**Harsh:** no the mcq which give clickable functionality to answer
-
-**Claude:** [Presented clickable MCQ option]
-
-**Harsh:** Q: What specific tech or skill area do you want to focus on over the next 2 weeks?
-A: New programming language or paradigm
-
-**Claude:** [Presented follow-up questions with clickable options]
-
-**Harsh:** Q: Which language or paradigm appeals to you most for learning?
-A: Python
-
-Q: What's the main draw—the programming paradigm, the performance, the ecosystem, or something else?
-A: Systems programming
-
-**Claude:** [Presented deeper follow-up questions]
-
-**Harsh:** Q: When you say Python + systems programming, what does that actually mean for your work?
-A: Python + compiled backends (combining Python with Rust/C for performance-critical parts)
-
-Q: Is this for AskCruz work, personal growth, or both?
-A: You want to improve at AskCruz's backend infrastructure
-
-**Claude:** Solid. So you want to get hands-on with Python-Rust integration for backend performance work at AskCruz. That's a real skill gap most interns don't have—worth pursuing.
-
-Next two weeks, you could:
-- Start with a small Rust FFI (Foreign Function Interface) project—Python calling optimized Rust for hot paths
-- Or look at what's slow in teams.askcruz.com right now and identify where Python+Rust could actually help
-- Learn the tooling: maturin or PyO3 for Rust-Python bindings
-
-Do you have a specific performance bottleneck at AskCruz in mind, or are you learning the pattern first without a live target?
