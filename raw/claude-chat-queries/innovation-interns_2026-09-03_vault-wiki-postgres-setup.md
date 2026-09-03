@@ -235,3 +235,156 @@ That's it. You'll have:
 - CLI ready to create wiki pages
 
 **Do you have PostgreSQL installed locally, or do you need help with that first?**
+
+User: need help
+
+Claude: What do you need help with? Let me ask to narrow it down:
+
+1. **Do you have PostgreSQL installed** on your machine? (Check: run `psql --version`)
+
+2. **What's your operating system?** (Mac, Linux, Windows)
+
+3. **Do you have Python 3 installed?** (Check: run `python --version`)
+
+4. **Where is your vault file?** (The `claudenotesvaultdata.zip` you uploaded)
+
+5. **What's giving you trouble?** (Database setup, Python, running the scripts, something else?)
+
+Answer these and I'll walk you through step-by-step.
+
+User:
+1. no
+2. windows
+3. yes
+4. didnt understand
+5. what to do with these files
+
+Claude: Got it. Let me walk you through step-by-step for Windows.
+
+## Step 1: Install PostgreSQL on Windows
+
+1. Go to: https://www.postgresql.org/download/windows/
+2. Download the installer (latest version)
+3. Run the installer and follow prompts:
+   - Choose default installation directory
+   - Set password for `postgres` user (remember this!)
+   - Keep port as 5432
+   - Choose your locale
+   - Click Install
+
+After install, PostgreSQL runs automatically.
+
+**Verify it works:**
+- Open Command Prompt (cmd)
+- Type: `psql --version`
+- Should show: `psql (PostgreSQL) 15.x` (or similar)
+
+---
+
+## Step 2: Get the Vault Files to Your Machine
+
+You uploaded the vault zip file to this chat, but it's not on your Windows machine yet.
+
+**Option A: Download from this chat (Easiest)**
+- Look at the files I sent you in the chat above
+- Download all 5 files to a folder on your machine, like:
+  ```
+  C:\Users\YourName\claude-vault-wiki\
+  ```
+
+**Option B: If you have the original zip**
+- Extract `claudenotesvaultdata.zip` to:
+  ```
+  C:\Users\YourName\claude-vault-wiki\claudenotesvaultdata\
+  ```
+
+Note: The Python script `load_vault_data.py` expects the vault at:
+```
+/root/.claude/uploads/claude-notes-vault-data/
+```
+
+On Windows, modify line 15 of `load_vault_data.py` to your actual path:
+```python
+self.vault_dir = Path("C:/Users/YourName/claude-vault-wiki/claudenotesvaultdata/raw/claude-chat-queries")
+```
+
+---
+
+## Step 3: Create the Database
+
+Open Command Prompt and run:
+
+```bash
+# Create the database
+createdb -U postgres claude_vault_wiki
+
+# When prompted, enter your postgres password from Step 1
+
+# Verify it created:
+psql -U postgres -d claude_vault_wiki -c "\dt"
+```
+
+---
+
+## Step 4: Load the Schema
+
+Assuming you saved `schema.sql` to `C:\Users\YourName\claude-vault-wiki\`:
+
+```bash
+cd C:\Users\YourName\claude-vault-wiki\
+
+psql -U postgres -d claude_vault_wiki -f schema.sql
+```
+
+This creates all the tables. Should complete in <1 second.
+
+---
+
+## Step 5: Load Your 577 Queries
+
+```bash
+# Install Python packages
+pip install psycopg2-binary pyyaml
+
+# Edit load_vault_data.py line 15 to your vault path (see Step 2)
+
+# Run the loader
+python load_vault_data.py
+```
+
+When prompted for database password, enter what you set in Step 1.
+
+Should complete in ~30 seconds. You'll see:
+```
+Inserted 577 queries
+Users: 21
+Topics: X
+Final Statistics: ...
+```
+
+---
+
+## Step 6: Start Searching
+
+```bash
+python wiki_cli.py
+```
+
+Then type commands:
+```
+> topics
+> user raj
+> search askcruz
+> create askcruz-project "AskCruz Overview" Projects
+> exit
+```
+
+---
+
+## Which Step Are You Ready to Start With?
+
+- **Step 1** — Install PostgreSQL?
+- **Step 2** — Get files to your machine?
+- **Something else?**
+
+Just tell me and I'll help you through it.
