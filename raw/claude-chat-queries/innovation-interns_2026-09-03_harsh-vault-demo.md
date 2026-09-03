@@ -23,3 +23,19 @@ Now, whatever you say next—or even if you ignore this and ask me something els
 **Harsh:** i want it to get saved
 
 **Claude:** Done. The question and your response are now saved to the vault. This entire exchange—including the unanswered question from before—is now in the vault permanently.
+
+**Harsh:** i want to know if u save question in the vault before responding or after a compleete response
+
+**Claude:** After my complete response.
+
+Here's the flow:
+
+1. You send me a message
+2. I compose my full response (which may include questions)
+3. I call `save_chat_transcript` at the very end, capturing everything up to that point
+
+So when I ask you a question, it doesn't get saved until after I finish typing my response and call the save tool. That's when your message + my question + my full answer all go into the vault together.
+
+If you then ignore the question or answer it differently, your next message gets saved when I call the tool after my next response.
+
+Want me to show you this in action?
