@@ -6,17 +6,32 @@ created: 2026-09-03
 updated: 2026-09-03
 ---
 
-## Scheduled Email Spam Detection run — 2026-09-03
+# Scheduled Email Spam Detection Run — 2026-09-03
 
-**Context:** Automated scheduled task firing (v9 spam detection prompt). No live user present.
+**Trigger:** Automated scheduled task (v9 spam detection), no live user present.
 
-**Steps taken:**
-1. `list_labels` — confirmed AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-SPAM/Investor-Outreach, and AI-Reviewed all already exist (Label_33 through Label_38, Label_37). No labels created.
-2. Determined this is NOT the first run (AI-Reviewed already applied to 53,722 messages historically).
-3. Fix-up pass: `search_threads` with `label:AI-SPAM in:inbox` → 0 threads. Nothing needed fixing.
-4. Normal run: `search_threads` with `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed` → 0 threads returned (verified across multiple query phrasings/label-name vs label-ID forms; label-ID based negation in this Gmail tool proved unreliable — confirmed real zero via label-name-based `-label:AI-Reviewed -label:AI-SPAM` combined with `in:inbox`, which returned a genuine empty result `{}`).
-5. Cross-checked: emails lacking both labels only exist inside TRASH (found via explicit `in:anywhere`), which is out of scope per the task's default Gmail search behavior (Trash/Spam excluded unless explicitly included) — left untouched.
+## Fix-up pass
+Query `label:AI-SPAM in:inbox` → 0 threads. Nothing needed fixing.
 
-**Result:** Mailbox (excluding Trash/Spam, per default scope) is fully triaged. 0 emails checked, 0 SPAM/SUSPICIOUS, 0 NOT_SPAM (nothing new to classify), 0 fix-up moves needed, 0 MOVE_FAILED.
+## Normal run
+Labels AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-SPAM/Investor-Outreach, AI-Reviewed all already existed — no first-run, no label creation needed.
 
-**Outcome:** Nothing actionable — no notification sent to the user per "silence when nothing found" policy for this routine.
+Query `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed` → 1 unprocessed thread.
+
+**Thread 1a067d9bf322b132** — "Just checking" from bryan.payne@nationalsalesjobs.biz to rajat@eoxs.com.
+Body: unsolicited cold sales-recruitment-agency pitch ("Just Sales Jobs"), repeat follow-up, includes "reply Not Interested to unsubscribe" — classic unsolicited marketing/advertising outreach, not investor outreach (recruitment agency, not VC/PE/growth-equity).
+Classification: SPAM → AI-SPAM + AI-SPAM/Advertising.
+Actions: label_thread(AI-SPAM, AI-SPAM/Advertising) → success → mark_thread_spam → success.
+Verification: re-ran `label:AI-SPAM in:inbox` → 0 results (thread no longer in Inbox). Confirmed moved. (Direct get_thread call on the moved thread returned a permission error post-move — expected once a thread leaves Inbox into Spam; verified via search instead.)
+
+## Final report
+- Checked: 1
+- SPAM/SUSPICIOUS: 1 (Advertising: 1; Fraud: 0; Expired-OTP: 0; Investor-Outreach: 0)
+- NOT_SPAM: 0
+- Fixed by fix-up pass: 0
+- Moves confirmed by verification: 1
+- MOVE_FAILED: none
+
+Re-ran the unprocessed-mail query after processing → 0 remaining. Mailbox is clean for this cycle.
+
+No notification sent to user — routine outcome, nothing anomalous (single ordinary advertising email correctly caught and moved).
