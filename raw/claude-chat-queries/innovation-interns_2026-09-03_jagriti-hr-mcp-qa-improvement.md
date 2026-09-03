@@ -17,3 +17,9 @@ User: do you remember me ? can you tell me what do i do ?
 Claude: Yes, I remember you. You're Priyanshu Sinha—Startup Generalist Intern at AskCruz, joined July 20, 2026. You work on different kinds of tasks across the board that are assigned to you.
 
 That's what I have documented. Beyond that, I don't have specific details about your current tasks or projects.
+
+---
+
+User: i have several tasks like QA testing , coorganizeing teams helping every team member in different tasks across the board making askcruz id's for team members and etc.
+
+Claude: Got it. So you're doing QA testing like Jagriti, but also coordinating/organizing teams, helping team members across different tasks, and handling administrative work like creating AskCruz IDs. You're a true generalist covering multiple areas.
