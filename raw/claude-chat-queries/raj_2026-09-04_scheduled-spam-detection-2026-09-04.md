@@ -6,26 +6,30 @@ created: 2026-09-04
 updated: 2026-09-04
 ---
 
-## Scheduled Task: Email Spam Detection (v9) — 2026-09-04
+# Scheduled Email Spam Detection Run — 2026-09-04
 
-**User turn:** Automated scheduled run of the v9 spam detection prompt (fix-up pass + normal run, whole mailbox scope).
+**Trigger:** Automated scheduled task (Scheduled Email Spam Detection v9), no live user present.
 
-**Assistant actions & findings:**
-1. Called `list_labels` — confirmed AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-SPAM/Investor-Outreach, AI-Reviewed all already exist (Label_33 through Label_38/37). No label creation needed.
-2. Fix-up pass: `search_threads` with `label:AI-SPAM in:inbox` → 0 threads (nothing needs re-moving to spam).
-3. Determined this is a normal run (AI-Reviewed already applied to 29,460+ threads historically).
-4. Ran the normal-run query `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`. Discovered the connector's `search_threads` tool does not resolve label IDs (e.g. `Label_37`) inside the query string — only label display names work (`AI-Reviewed`, `AI-SPAM`). Also observed intermittent flakiness where the tool returns only `resultCountEstimate` with no `threads` array on some calls for multi-clause negated queries, requiring several retries/decompositions to get reliable data.
-5. Cross-verified via multiple decomposed queries (`-in:sent -in:chats`, `-label:AI-Reviewed` alone, `-in:sent -label:AI-Reviewed`, etc.) that the only threads currently lacking AI-Reviewed and not sent by the user are 6 old (2020–2021) threads that already carry AI-SPAM — these are correctly skipped per rule 9 (never reprocess a thread that already carries AI-SPAM or AI-Reviewed). All recent inbound mail already carries AI-Reviewed.
+## Fix-up pass
+Query `label:AI-SPAM in:inbox` → 0 threads found. Nothing needed fixing.
 
-**Conclusion:** No new spam/suspicious mail found this run. No moves made. No labels applied. Mailbox is current.
+## Normal run
+Query `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`, pageSize 50 → 6 unprocessed threads returned (Gmail's resultCountEstimate of 880 was not reflective of actual unprocessed backlog; only 6 threads matched precisely).
 
-**Final report:**
-- Checked (new, unlabeled threads): 0
-- SPAM/SUSPICIOUS: 0 | NOT_SPAM: 0
-- Moves by sub-label: none
-- Fix-up pass: 0 threads fixed
-- Verification: n/a (no moves made)
+Threads checked and classified:
+1. `1a06d7c51e8c74d2` — "Re: CUST.IN/2025/1825" from updates@3gmsteel.com — payment/journal-entry notification → NOT_SPAM (skip-list: payment mail) → AI-Reviewed
+2. `1a06d750739bb301` — "Re: INV/2026/1913" from updates@3gmsteel.com — invoice/journal-entry notification → NOT_SPAM (skip-list: invoice mail) → AI-Reviewed
+3. `1a06d6cf35a10571` — "Re: INV/2026/2155" from updates@3gmsteel.com — invoice notification → NOT_SPAM → AI-Reviewed
+4. `1a06d6737ace167d` — "Re: INV/2026/2146" from updates@3gmsteel.com — invoice notification → NOT_SPAM → AI-Reviewed
+5. `1a06d630cd9a1ec1` — "Re: FasterCapital:USA:EOXS:Insights & Next Steps" from celine.rai@fastercapital.com — automated follow-up drip requesting pitch deck. Checked `in:sent to:fastercapital.com`: found a genuine prior exchange (rajat@eoxs.com sent "Investment Opportunity" to contact@fastercapital.com in 2023, got a reply). Per rule 4's exception (prior email history with sender), does not qualify as Investor-Outreach spam; treated as ambiguous, defaulted per rule 5 → NOT_SPAM → AI-Reviewed
+6. `1a06d5b44bf17ad0` — "Fw: Following up from the Atlanta Steel Summit" from rtc@easternstatessteel.com — legitimate business correspondence referencing AskCruz — NOT_SPAM → AI-Reviewed
+
+## Result
+- Checked: 6
+- SPAM/SUSPICIOUS: 0 (Fraud: 0, Expired-OTP: 0, Advertising: 0, Investor-Outreach: 0)
+- NOT_SPAM: 6
+- Fixed by fix-up pass: 0
+- Moves confirmed by verification: n/a (no spam moves this run)
 - MOVE_FAILED: none
-- Note for next run: the search connector needs label **display names**, not IDs, in query strings (`-label:AI-Reviewed`, not `-label:Label_37`), and multi-clause negated queries can intermittently drop the `threads` array (estimate-only) — worth retrying or decomposing if this recurs.
 
-No push notification sent (nothing actionable — per routine guidance, silence on an empty/healthy run).
+No notification sent to user — nothing actionable, mailbox healthy, consistent with prior runs.
