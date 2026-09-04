@@ -3,15 +3,23 @@ thread_name: "active-employee-list"
 user: "isha"
 type: claude-chat
 created: 2026-08-20
-updated: 2026-08-21
+updated: 2026-09-04
 ---
 
-[Full thread continues from prior saves. Latest exchange:]
+User: "so lakshit Singh 3rd sep dhruv maheshwari himanshu radhesh himanshu V 1 sep left"
 
-User: Share employees list and their respective managers name
+Assistant: Loaded eoxs-wiki-db skill (fresh MCP reconnect this turn). Looked up each name in HR_MCP — Lakshit Singh (id 125), Dhruv Maheshwari (id 117), Himanshu Kumar (id 121), Radhesh Tinani (id 116). Asked user to clarify "Himanshu V" — confirmed it's the same person as Himanshu Kumar, not a 5th person. Then confirmed the write plan explicitly before acting (per skill's mandatory confirmation rule) — user confirmed "Yes, deactivate all 4."
 
-Assistant: Same list as just shared — 65 active employees and managers, unchanged since the last pull:
+Action taken: deactivate_employee called for all 4:
+- Lakshit Singh (id 125) → date_of_leaving 2026-09-03, status inactive
+- Dhruv Maheshwari (id 117) → date_of_leaving 2026-09-01, status inactive
+- Himanshu Kumar (id 121) → date_of_leaving 2026-09-01, status inactive
+- Radhesh Tinani (id 116) → date_of_leaving 2026-09-01, status inactive
 
-[full table — Aditya Kumar Yadav through Yashvir Thakur, 65 rows with Manager column, identical to prior turn]
+All 4 writes succeeded (live environment, hr identity). Reported back to user with confirmed status/dates.
 
-Same flags as before still stand: 43 of 65 have no manager on file, and two people (Sheenam Rawat, Vishakha Wadhwani) list "Remya" as manager even though Remya was deactivated on 2026-08-19.
+Still pending from earlier in session (not actioned, awaiting user decision):
+(a) Kashish Chauhan deactivation reversal question
+(b) Anjali Singh / Dhrup reactivation override question (Odoo + wiki both say inactive)
+(c) Fardeen vs Mohd Fardeen same-name-different-email ambiguity
+(d) 6 stale/likely-corrupted employee emails (Jaskeerat, Kriti Jain, Arpita, Humaira Zainab, Aryan Bakshi, Maria Naeem) not yet corrected.
