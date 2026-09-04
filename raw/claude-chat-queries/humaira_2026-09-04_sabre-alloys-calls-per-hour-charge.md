@@ -25,3 +25,20 @@ Two live, unresolved threads on the Sabre Alloys account do involve the word "ca
 Neither of those documents a "per call per hour" rate either — that's just where the word "calls" shows up.
 
 Can you clarify what you mean by "calls" here — phone/support calls, AskCruz AI agent calls, or something else? That'll tell me which record to dig into further.
+
+USER: check their contract and let me know if there are uh, you know support calls uh, we charge them
+
+ASSISTANT: I pulled the actual signed contract (Sabre Alloys — EOXS Proposal, dated 2023-12-27). No, there's no "support calls" charge in it.
+
+What the contract actually specifies:
+
+- 12 licensed users across 9 modules, 3-year term, renewal cap ≤10% first renewal / ≤5% after
+- Implementation billed at $125/hr actual (vs. a $5,000/week fixed estimate — final billed amount not documented in the source)
+- No line item, clause, or schedule for support calls, phone support, or any per-call/per-hour support charge
+
+Two things worth flagging while I was in there:
+
+- Support tickets for Sabre Alloys (262 of them in the ticket log) are software bug/feature tickets tracked in Odoo — not phone calls, and nothing in that log ties a dollar charge to them either. Support appears to be included, not metered.
+- There's a known contradiction on this account already in the record: the contract's original terms don't match what was actually invoiced (a $4,500/month figure in the proposal vs. different actual invoice line items) — flagged as unresolved in the source itself, unrelated to calls but worth knowing this contract has had drift between what was signed and what was billed.
+
+So: nothing supports "we charge Sabre Alloys for support calls." If you have a specific invoice or conversation where this came up, send it my way and I'll trace it directly — that'd be faster than me guessing where else to look.
