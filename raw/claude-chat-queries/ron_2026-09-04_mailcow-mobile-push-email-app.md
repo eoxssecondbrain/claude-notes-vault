@@ -20,3 +20,19 @@ Two things I need to know to give you a final answer instead of two branches:
 
 1. Is SOGo already running on your mailcow instance, or would this be a new addition?
 2. iOS, Android, or both across the team?
+
+User: Is there any other app that I can use for iOS for this? I want to download a separate app for this.
+
+Assistant: Yes, but every one of them works the same way: since iOS doesn't let third-party apps hold a background IMAP connection open, Canary Mail, Spark, Edison Mail, and Blue Mail all route your mail through their own cloud servers, which poll or IDLE your Mailcow account on their end and fire an Apple push notification when something arrives. Your login credentials and mail content pass through a third-party company's infrastructure to make that work.
+
+That's worth pausing on given you're self-hosting Mailcow specifically to keep this internal. Options, roughly in order of how much you're giving up:
+
+Canary Mail — solid iOS client, push relay is opt-in (you can disable it and fall back to on-device fetch every ~15 min instead), has a paid tier.
+
+Spark (Readdle) — same relay model, no opt-out for push specifically, free.
+
+Edison Mail — same model, also does inbox analytics on synced mail, would avoid this one for a company account.
+
+None of these are "point at your own server" apps — they're all relay-based. The two ways to get real push without a third party in the middle stay what I said last message: SOGo/ActiveSync on your own mailcow, or accept fetch-interval delay instead of push.
+
+If a separate downloadable app matters more than avoiding the relay, Canary Mail is the least bad of the three — worth confirming their opt-out actually works before rolling it out to the team.
