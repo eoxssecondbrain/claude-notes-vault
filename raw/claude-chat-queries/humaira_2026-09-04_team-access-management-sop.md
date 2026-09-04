@@ -37,7 +37,7 @@ Which level?
 **Assistant:**
 SOP drafted and attached, in the same document format used for your existing GitLab SOP. Key findings from the audit:
 
-Grounding — the task exists because of a real incident: on January 19-20, 2026 a junior EOXS engineer, terminated the prior month, used server credentials that had been shared with him informally via text months earlier, and used them to sabotage the Sabre Alloys database. That's the "why" section in the SOP, and it's why the mandatory rules are strict on credential sharing and same-day revocation.
+Grounding — the task exists because of a real incident: on January 19-20, 2026 a junior EOXS engineer, terminated the prior month, used server credentials that had been shared with him informally via text message months earlier, and used them to sabotage the Sabre Alloys database. That's the "why" section in the SOP, and it's why the mandatory rules are strict on credential sharing and same-day revocation.
 
 Current admin access vs. Ron's stated target ("only Humaira, Hashir, and Aryan"):
 
@@ -55,3 +55,35 @@ Coverage gap: I could only verify live access on 3 of EOXS's 8 client instances 
 No existing "team access management" SOP was in the asset library — this doesn't duplicate or conflict with anything.
 
 This is read-only research — I didn't and can't change anyone's actual access. Executing the removals (Ron, Sheenam) is a separate action for whoever administers those instances.
+
+[File attached: Team_Access_Management_SOP.docx]
+
+[Turn 3]
+
+**User:**
+Okay, I want to connect this. Can you write on the top? Let's start from the top. Owner Ron, yes. Prepared by Humera Zenab, yes. Version 1. Why are you saying draft? Don't say draft. Effective date from today. Only related task. Management. Okay, define a single procedure for requesting approval, granting access. Why this SOP exists? This is the see, scope. Apply to all your organizations. Don't use word Odoo. We don't need that. Do not use it anywhere. Then, cover admin level setting, administration access. And general user access. Does not you not client side user created and managed by the client don't need to roles in instance access owner instance access owner Ron final approval for any admin level access grant change or removal or any client instance exit administration correct Humera maintain the master access register execute approved access change run the periodic review and it's the point of visibility for who has the access for what develop any york staff granted access to one or more instance to perform assigned work request access through this purpose does not self grant or share credentials next level definition and who typically holds it Admin setting action, full backend access user group, technical setting, developer mode, database level configuration, access owner, access administration, name, develop, developers. We don't need, we don't give a full backend access of any client server to developers. It only as Ron mentioned, Aryan and me and there are specific. But if you are just writing the idea then good. Functional admin. Full access with within one module area, sales, inventory, accounting without system level settings. Standard user, day-to-day operational access scope to, to assign modules. No, day-to-day operational access scope to assign task. Only project module. They standard user is project. They also they only get the uh, um, project module access purpose requesting access approving access granting access reviewing access modifying access removing access everything is good mandatory rule no credential sharing between individual under any circumstances no admin level access without the instance access owner approval logged in regular no access changes made outside this process including by developer with existing admin rights access is revoked the same day on termination without extension correct everything is correct now current state finding as of the of this review in this instance name should be discount pipe and steel ohio stripe formerly greer saber alloys eastern state steel ppc and then york steam live so we need to mention these clients uh, current admin access is whatever i can have access ron can have access aryan can have access hashir can have access raj can have access uh eox team x please remove eox team access from this we don't need that that's internal matter we are right now uh, for clients Client is discount pipe, Ohio, Saber Lois, ESS, Eastern State Steel, and PPC. We have five clients. In five clients, Hashir, Aryan, and me can have access, and Ron can have access. And we will remove all the other people. As Ron mentioned, uh,
+
+**Assistant:**
+All changes made:
+
+- Version 1.0, no "Draft," Effective Date September 4, 2026, Related Task shortened to "Team Access Management"
+- "Odoo" removed everywhere
+- Scope now names the five client instances explicitly and excludes internal EOXS systems
+- Admin access level now names the four people (Ron, Humaira, Hashir, Aryan) instead of "developers generally"
+- Standard User restricted to Project module only
+- Current-State Findings rebuilt for the five clients, EOXS Team Live row dropped, and the approved list now includes Ron — which resolves the earlier open question, so Greer and Sabre are now shown as aligned; only Discount Pipe & Steel has an actual gap (Sheenam)
+- Eastern States Steel and PPC Metals are listed but flagged unverified — I still don't have live query access to those two instances in this session, so that gap is real, not just carried over text
+
+One thing to flag: PPC Metals and Eastern States Steel access hasn't actually been checked yet, so "we will remove all the other people" isn't something I can confirm is fully executed until someone pulls their admin lists too.
+
+[File attached: updated Team_Access_Management_SOP.docx]
+
+[Turn 4]
+
+**User:**
+[Uploaded file: Team_Access_Management_SOP.docx]
+
+convert it into pdf
+
+**Assistant:**
+[Converted the uploaded docx to PDF and attached: Team_Access_Management_SOP.pdf]
