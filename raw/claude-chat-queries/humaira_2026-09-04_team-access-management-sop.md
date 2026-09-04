@@ -6,10 +6,12 @@ created: 2026-09-04
 updated: 2026-09-04
 ---
 
-[Turn 9]
+[Turn 10]
 
 **User:**
-made a mistake. Functional admin and why typically who typically holds it? Functional team. not module lead senior developer and all
+[Uploaded file: Team_Access_Management_SOP__1_.docx]
+
+convert into pdf
 
 **Assistant:**
-Fixed the Access Levels table: Functional Admin's "Who typically holds it" changed from "Module leads / senior support engineers, scoped per instance." to "Functional Team." Rebuilt, rendered, verified, and re-presented both docx and PDF.
+[Converted the uploaded docx to PDF and attached: Team_Access_Management_SOP__1_.pdf]
