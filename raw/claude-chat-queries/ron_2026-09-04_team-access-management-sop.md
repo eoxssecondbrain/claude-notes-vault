@@ -96,3 +96,21 @@ Painting.
 
 Assistant (turn 5):
 [Created and presented file /mnt/user-data/outputs/team-access-management-sop-framework.md — a "Team Access Management — SOP Framework" write-up for Humaira, containing sections: Purpose; Scope (live client instances + internal tools including Claude/GPT/EOXS Teams); Roles (Access-granting authority: Humaira only; Admin credential holders — flagged as needing a decision between "holds admin credentials" vs "authorized to grant access," with the two resolution paths spelled out for Hashir and Aryan; Backup — flagged as needing a named backup and trigger condition; Approver vs. executor — flagged as needing a decision on whether Humaira also approves or just executes); The Access Register (unified register covering both categories, with columns: Person, System/instance, Access level, Settings and app-level access granted, Date granted, Granted by, Requested by/reason, Date last reviewed, Date revoked and reason; noted it should replace or be rebuilt from the existing "EOXS Credentials and Passkey" sheet); Request Flow (4 steps: request goes to Humaira; conditional approval step flagged as open; Humaira creates the credential; logs it same day); Revocation Flow (trigger points: offboarding, role change, project end, suspected compromise; 4 steps: trigger identified, Humaira revokes across every system listed, register updated same day, confirm revocation actually took effect); Review Cadence (fixed interval, e.g. quarterly, cross-check register against actual need); Open Decisions to resolve before finalizing (the four flagged items: admin holders vs granting authority, backup person and trigger, approver vs executor, confirm unified register is intended). File presented via present_files.]
+
+User (turn 6):
+I want Humaira to have access only through the client instance, and she's the only one who is adding or removing access for it. For anything like internal tools, that will be separate.
+
+Assistant (turn 6):
+Good — that resolves one of the four open items from the framework: register stays scoped to live client instances only, one owner (Humaira), and internal tools get pulled out into their own separate process. That's cleaner, actually — it means Humaira's judgment calls stay in one lane (who needs a login to which client) instead of also covering things like whether someone should see client data through Claude/GPT, which is a different kind of decision.
+
+One thing this opens up that wasn't a question before: if internal tools are handled separately, someone still needs to own that process — right now it's not assigned to anyone. Is that a second SOP for later, or do you already have someone in mind for it?
+
+Updating the document now — what's changing:
+
+- Scope: narrowed to live client instances only. Internal tools (Claude, GPT, EOXS Teams, etc.) explicitly marked out of scope, to be handled by a separate process
+- Roles: Access-granting authority section updated to say client-instance access specifically
+- Access Register: dropped the "internal tool" framing from the System/instance column — it's now a client-instance register only
+- Request Flow / Revocation Flow: scoped to client instances
+- Open Decisions: removed the "confirm unified register" item (resolved — separate, not unified) and added a new one: who owns the internal-tools access process, since that's now undefined rather than folded in
+
+[Rewrote /mnt/user-data/outputs/team-access-management-sop-framework.md in full to reflect the narrowed scope — Purpose, Scope, Roles (Access-granting authority, Admin credential holders open decision, Backup open decision, Approver vs. executor open decision), The Access Register (client-instance only, same column set minus internal-tool framing), Request Flow, Revocation Flow, Review Cadence, and Open Decisions (four items: admin holders vs granting authority, backup person and trigger, approver vs executor, and new — who owns the internal-tools access process). File re-presented via present_files.]
