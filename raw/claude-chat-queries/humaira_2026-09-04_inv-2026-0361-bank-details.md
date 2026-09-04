@@ -50,3 +50,25 @@ This confirms:
 - Every invoice generated under the EOXS company just prints this field verbatim
 
 To fix it: log into teams.askcruz.com → Settings → General Settings (or Accounting → Invoicing settings) → Companies → EOXS → find "Terms & Conditions" / "Default Terms and Conditions" on invoices, and edit that text block. One save there updates it on every future invoice for the EOXS company automatically — no per-invoice changes needed. I can't make that edit myself since my connector to that database is read-only, but that's exactly where you need to go.
+
+User: server I want to uh, set all the setting in the ask rules server on the ask rules server can you do that tell me how can I do
+
+Assistant: I can't make the change myself — my connection to that Odoo instance is read-only, no write tools exist on it. You'll need to do this yourself, or have someone with an EOXS admin account there do it. Steps:
+
+1. Log into https://teams.askcruz.com/
+2. Go to Settings → Users & Companies → Companies
+3. Open the "EOXS" company record (company id 1 — not "Prata Inc. Canada," "Rajat Jain," or "PhysioFix," those are separate company records)
+4. Find the field holding the invoice terms text — in Odoo 13 this is usually labeled "Default Terms and Conditions" or similar, under that company's Accounting/Invoicing tab. It currently holds this exact text:
+
+We accept wire transfer. Please do not send checks.
+Banking Details:
+Account Name - Prata Inc.
+Bank Name - Silicon Valley Bank SJ
+ABA Routing & Transit # - 121140399
+Swift Code - SVBKUS6S
+Account Number - 3303151300
+Branch Address - 3003 Tasman Drive, Santa Clara CA 95054
+
+5. Edit that block with the correct details and save.
+
+If you (or whoever logs in) can't find a field with that exact text under the company record, tell me and I can check whether it's stored somewhere else on that Odoo instance instead.
