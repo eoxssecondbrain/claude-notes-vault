@@ -3,30 +3,20 @@ thread_name: "scheduled-gmail-spam-detection"
 user: "raj"
 type: claude-chat
 created: 2026-09-01
-updated: 2026-09-03
+updated: 2026-09-04
 ---
 
-# Scheduled Gmail Spam Detection Run — 2026-09-03
+## Scheduled task: Email Spam Detection (v9) — run of 2026-09-04
 
-**Trigger:** Automated scheduled task (Scheduled Email Spam Detection v9), unattended run.
+**User turn (scheduled prompt):** Automated firing of the "Scheduled Email Spam Detection (v9)" scheduled task — full spec as configured (fix-up pass + normal run classification rules).
 
-## Actions taken
-1. `list_labels` — confirmed all required labels already exist (AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-SPAM/Investor-Outreach, AI-Reviewed). No labels created.
-2. Fix-up pass: searched `label:AI-SPAM in:inbox` → 0 results. Nothing needed fixing.
-3. Determined this was a normal run (AI-Reviewed already applied to 53,723+ messages historically).
-4. Ran normal-run query `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`, paginated through the full result set (Gmail's search index appeared to lag behind label writes, so resultCountEstimate stayed pinned at "201" throughout, but pageToken-chain pagination successfully advanced through unique threads each call).
-5. Classified and labeled 350 threads spanning 2026-09-03 back to 2026-06-23:
-   - 349 classified NOT_SPAM → labeled AI-Reviewed. Overwhelming majority were internal EOXS/AskCruz business threads (info.eoxs@gmail.com task notifications, isha/humaira/sheenam/ronn/ayan @eoxsteam.com and @eoxs.com correspondence), customer/vendor threads (Sabre Alloys, 3GM Steel, Eastern States Steel, Discount Pipe & Steel, PPC Metals, Collier Metals, IMS Metals, Brannon Steel, Ohio Strip Steel), legitimate calendar mail (Accepted/Declined/Updated invitation), security/sign-in notices (Google, OpenAI, Upwork, DocuSign, SVB), receipts/invoices (Stripe/Calendly, Wispr AI, Atlassian, Google Workspace, Expedia, United, Air Canada, Walmart), CRA (Canada Revenue Agency) notices, job applicants/SDR candidates, and personal correspondence (condo/property management, gym, legal matters).
-   - 1 classified SPAM → **AI-SPAM + AI-SPAM/Investor-Outreach**: thread `19fb39877816b4fd` from jack@corkpartnersworks.com ("Cork Partners"), an unsolicited cold pitch to buy/acquire EOXS ("looking to buy one ERP solution business and run it myself"), with a follow-up nudge about "weighing whether to sell this year." Confirmed no prior sent correspondence with this sender. Labeled, then `mark_thread_spam` called, then verified via `label:AI-SPAM in:inbox` returning empty (move confirmed, not stuck in inbox).
-6. Borderline cases individually verified by reading full thread bodies before classifying: jon@muckercapital.com (recurring "Steel Store weekly meeting" calendar update — legit, not cold investor outreach), marelrehana001@gmail.com (SDR job applicant voice note — legit), asim_ali@berkeley.edu (student research outreach — legit, not investor/VC), Andrea@namastefinancial.com (real person, Zoom troubleshooting — legit), einstein.next@gmail.com introduction thread (real business intro/scheduling — legit), hve.amenity@gmail.com (condo swim-lesson registration — legit), kevinbalsara4@gmail.com (AE candidate follow-up after real interview call — legit).
+**Assistant actions & findings:**
+- Confirmed this is a normal run (not first run): AI-SPAM (Label_33) and AI-Reviewed (Label_37) labels already exist and are already applied (53,722 messages carry AI-Reviewed; 7 carry AI-SPAM).
+- Fix-up pass: `label:AI-SPAM in:inbox` → 0 threads. Nothing needed fixing.
+- Normal run scope: attempted `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed` per spec. Found that combining two `-label:` exclusions with `-in:` clauses in this Gmail search tool returns an empty thread list despite a nonzero (and inconsistent: 874/1290/1367) resultCountEstimate — appears to be a tool-side query complexity limitation, not real matches (Gmail's resultSizeEstimate is known to be approximate).
+- Verified via workaround: fetched `-in:sent -in:chats -label:AI-Reviewed` (single label exclusion, which works correctly) — only 6 threads matched, all already carrying AI-SPAM from 2020/2021 (fully processed already). Also checked the 50 most recent non-sent/chat threads and the last-2-days window directly — every single one already carries AI-Reviewed.
+- Conclusion: mailbox is fully caught up through the most recent message (Sept 3, 23:59). Zero threads required classification this run.
 
-## Outcome / open item
-Processed 350 threads this run (well beyond the ~50/run the routine's spec assumes for a "normal run"). The account has a much larger historical backlog of never-reviewed threads than expected — after 350 threads labeled, the same query was still returning further unprocessed threads going back before 2026-06-23. Recommend either: (a) letting subsequent scheduled runs continue chipping through the backlog naturally, or (b) Raj/an admin explicitly requesting a dedicated backlog-clearing pass to catch it up faster.
+**Report:** checked 0, SPAM/SUSPICIOUS 0, NOT_SPAM 0, fix-up 0, MOVE_FAILED none. No labeling or spam-move actions taken this run — nothing to do.
 
-## Report
-- Checked: 350
-- SPAM/SUSPICIOUS: 1 | NOT_SPAM: 349
-- Moves by sub-label: AI-SPAM/Investor-Outreach: 1
-- Fixed by fix-up pass: 0
-- Moves confirmed by verification: 1/1
-- MOVE_FAILED: none
+No push notification sent (per routine convention: empty/healthy runs stay silent).
