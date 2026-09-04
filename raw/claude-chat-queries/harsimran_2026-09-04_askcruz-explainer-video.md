@@ -6,10 +6,8 @@ created: 2026-09-04
 updated: 2026-09-04
 ---
 
-User: we have a competiev analysis task , send me the link of that task
+User: their is a task on teams.askcruz , competitor analysis, give me the link to that
 
-Assistant: The AskCruz Competitive Landscape artifact is what matches — published August 25, 2026.
+Assistant: I tried teams.askcruz.com directly — it doesn't return anything matching a task tracker (looks like it's either not the right URL or the page needs login I don't have access to). I don't have a browser linked to your device right now, so I can't get in as you to check further.
 
-https://claude.ai/code/artifact/3e145208-3297-4aa8-ae3a-59c5b22fb5d2
-
-If you meant something else (there's no other item in memory, artifacts, or scheduled tasks literally called "competitive analysis"), tell me and I'll dig further.
+Two options: send me the exact task link yourself, or tell me what tool "teams.askcruz" actually is (Microsoft Teams/Planner tab, ClickUp, Asana, Notion, something custom) and I'll check if there's a connector for it or walk you through finding the link.
