@@ -3,24 +3,23 @@ thread_name: "active-employee-list"
 user: "isha"
 type: claude-chat
 created: 2026-08-20
-updated: 2026-08-28
+updated: 2026-09-04
 ---
 
-User: Analyze the leave data and provide for today * Employee Name * Department * Leave Type
+User: "so lakshit Singh 3rd sep dhruv maheshwari himanshu radhesh himanshu V 1 sep left"
 
-Assistant: Searched HR_MCP email data (isha_zoho Zoho Time Off Approval notifications) for leave records dated 2026-08-28 (today). No dedicated leave/attendance tool exists; used search_emails/get_email against subject/body date strings "08/28/2026" and cross-referenced with search_employees for department.
+Assistant: Loaded eoxs-wiki-db skill (fresh MCP reconnect this turn). Looked up each name in HR_MCP — Lakshit Singh (id 125), Dhruv Maheshwari (id 117), Himanshu Kumar (id 121), Radhesh Tinani (id 116). Asked user to clarify "Himanshu V" — confirmed it's the same person as Himanshu Kumar, not a 5th person. Then confirmed the write plan explicitly before acting (per skill's mandatory confirmation rule) — user confirmed "Yes, deactivate all 4."
 
-Found 3 confirmed leave records for today:
-1. Vaibhav Jain — Product (Intern) — Casual Leave, full day 2026-08-28 (06:00-12:00 -04:00), email id 67624
-2. Rohit Chand — Product (Intern) — Sick Leave, 2026-08-28 to 2026-08-29 (covers today), email id 67662
-3. Arshad Malik — Product (Intern) — Casual Leave, full day 2026-08-28 (06:00-12:00 -04:00), email id 67607 (request sent evening of 08-27 for leave on 08-28)
+Action taken: deactivate_employee called for all 4:
+- Lakshit Singh (id 125) → date_of_leaving 2026-09-03, status inactive
+- Dhruv Maheshwari (id 117) → date_of_leaving 2026-09-01, status inactive
+- Himanshu Kumar (id 121) → date_of_leaving 2026-09-01, status inactive
+- Radhesh Tinani (id 116) → date_of_leaving 2026-09-01, status inactive
 
-Also resolved a prior open mystery: earlier list_emails(account="isha_zoho") calls returned empty not because of an outage but because "isha_zoho" is not a valid value in this tool's account enum (all/raj_gmail/ron_gmail/remya_gmail/support_zoho) — search_emails(account="all") still surfaces isha_zoho-sourced records and was used instead.
-
-Delivered table to user with caveat that this is derived from Zoho Time-Off-Approval email notifications (isha_zoho inbox), not a dedicated leave/attendance system-of-record, and that no other leave notifications dated today were found in additional searches (half day, generic "leave", date variants).
+All 4 writes succeeded (live environment, hr identity). Reported back to user with confirmed status/dates.
 
 Still pending from earlier in session (not actioned, awaiting user decision):
 (a) Kashish Chauhan deactivation reversal question
 (b) Anjali Singh / Dhrup reactivation override question (Odoo + wiki both say inactive)
 (c) Fardeen vs Mohd Fardeen same-name-different-email ambiguity
-(d) 6 stale/likely-corrupted employee emails (Jaskeerat, Kriti Jain, Arpita, Humaira Zainab, Aryan Bakshi, Maria Naeem) not yet corrected pending user confirmation.
+(d) 6 stale/likely-corrupted employee emails (Jaskeerat, Kriti Jain, Arpita, Humaira Zainab, Aryan Bakshi, Maria Naeem) not yet corrected.
