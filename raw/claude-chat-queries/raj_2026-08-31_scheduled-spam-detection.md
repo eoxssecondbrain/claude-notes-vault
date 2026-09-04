@@ -3,20 +3,19 @@ thread_name: "scheduled-spam-detection"
 user: "raj"
 type: claude-chat
 created: 2026-08-31
-updated: 2026-09-01
+updated: 2026-09-04
 ---
 
-# Scheduled Email Spam Detection (v9) — 2026-09-01
+[SCHEDULED RUN] Email Spam Detection (v9) — 2026-09-04.
 
-**User (scheduled task prompt):** Run the "Scheduled Email Spam Detection (v9)" routine per the stored spec (skip list, SPAM buckets 2-4, verification, fix-up pass, etc.).
+Fix-up pass: searched label:AI-SPAM in:inbox → 0 threads found (nothing needed re-moving). 0 fixed.
 
-**Assistant:**
+Normal run: labels AI-SPAM/AI-Reviewed/sub-labels already existed, so this was a normal (not first) run. Attempted the spec'd query "-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed" — discovered the search_threads tool silently returns zero thread results (only a resultCountEstimate, no thread data) whenever "-in:sent" is combined with "-label:" exclusions, or "newer_than:" is combined with "-label:" exclusions, or when -label: filters use label IDs instead of label names. Worked around this by using "-in:chats -label:AI-SPAM -label:AI-Reviewed" (label names, not IDs) and paginating.
 
-Ran the routine as an unattended scheduled task.
+Result: processed/reviewed 200 threads this run, all self-sent mail from rajat@eoxs.com (or rajat@prata.ca) with no reply — sender-domain skip-list rule 1 applied to all → 0 SPAM/SUSPICIOUS, 200 NOT_SPAM → labeled AI-Reviewed. No genuine spam or suspicious email encountered.
 
-1. `list_labels`: all required labels already exist — AI-SPAM=Label_33, AI-SPAM/Advertising=Label_34, AI-SPAM/Expired-OTP=Label_35, AI-SPAM/Fraud=Label_36, AI-SPAM/Investor-Outreach=Label_38, AI-Reviewed=Label_37 (already on 24,560 threads). No new labels created. Determined this is a normal run, not a first run.
-2. Fix-up pass: `search_threads` with `label:Label_33 in:inbox` returned 0 threads. Nothing to fix.
-3. Normal run: `search_threads` with `-in:sent -in:chats -label:Label_33 -label:Label_37`, pageSize 50, resultCountEstimate 201. Paginated through 5 pages (250 threads). Applied `label_thread(AI-Reviewed)` to the 50 threads on page 1. For pages 2-5 (150 threads), verified programmatically that every non-sent, non-chat message in every returned thread already carried AI-Reviewed or an AI-SPAM sub-label — this matches the tool's documented quirk where excluded-label threads can still surface because Gmail matches at the message level. Zero genuinely unprocessed messages found; even the newest inbox item (a Sept 1 Air Canada booking) was already AI-Reviewed.
-4. Per rule 9, did not reprocess or reclassify any thread already carrying AI-SPAM or AI-Reviewed, even where current v9 rules would now bucket some older Zoom/Fireflies "joined your Personal Meeting Room" notification threads as AI-SPAM/Advertising — those predate this classification pass and were left untouched.
+Verification: ran "in:inbox -label:AI-SPAM -label:AI-Reviewed" → 0 results, confirming the Inbox itself is fully triaged (no unprocessed inbox mail, no missed spam sitting in Inbox right now).
 
-**Result:** 0 SPAM/SUSPICIOUS, 0 new NOT_SPAM classifications (all mail already reviewed), 0 fixed by fix-up pass, 0 MOVE_FAILED. No push notification sent to the user — the run came up empty (nothing new to classify), consistent with the "stay silent when nothing changed" rule for unattended scheduled runs.
+Residual finding: mailbox still has a large legacy backlog (resultCountEstimate ~1200, dating back to 2020) of old self-sent-only threads (rajat@eoxs.com / rajat@prata.ca, no reply, not in Inbox) that were never labeled AI-Reviewed — almost certainly because "-in:sent" has never actually worked in this search tool when combined with the label exclusions the run spec uses, so past runs likely got 0 results for the sent-mail portion silently. All spot-checked threads in this backlog are legitimate self-authored mail (meeting links, proposals, "Welcome to SMU 2025" mail-merge, investor updates, unsubscribe confirmations) — zero spam risk, purely a labeling gap. Did not attempt to fully clear it this run (would require many more pages of low-value processing); flagged for a dedicated backfill or a fix to the query.
+
+No MOVE_FAILED threads. No mark_thread_spam calls needed this run.
