@@ -6,18 +6,16 @@ created: 2026-09-04
 updated: 2026-09-04
 ---
 
-User: check what other people have uploaded on their website, explainer video of their didgital products and bring that videos or site link to me
+User: suggest me more we want to create explainer video for cruz but we need references
 
-Assistant: Went and checked the actual live pages rather than search snippets. Here's the real pattern:
+Assistant: More references, and one useful new option in here: a founder-led talking-head style, which is cheap to produce and reads as credible rather than "marketing."
 
-Most of these companies don't put a narrated explainer video directly on the homepage anymore. What's actually there is a silent, autoplaying product-UI loop (a few seconds of muted screen footage), and the real explainer videos live on a separate video library page that the homepage links out to. That's worth knowing before you build one for AskCruz — a single classic "explainer video" on the homepage is somewhat dated; the current pattern is homepage loop + dedicated video hub.
+Sierra (AI agent platform, Bret Taylor's company): their main explainer isn't animated at all — it's the two co-founders talking directly to camera about the problem, the product, and customers, cut with product shots. https://sierra.ai/resources/videos/sierra-explained. This is worth considering for Cruz specifically — Rajat explaining "the company already knows the answer, but only one person does" directly to camera would carry more weight with a steel industry buyer than a hired voiceover ever could, and costs a fraction of animation.
 
-Notion: homepage hero is just a silent MP4 loop, no narration, no page — direct file: https://videos.ctfassets.net/spoqsaf9291f/1EL7UZIXfcqngxsNSbL8tR/291f61f56f29dd8e788deaec8561d882/web-homepage-hero-1920x1200_final.mp4
+Harvey (legal AI — closest structural comp to Cruz because it's also a vertical AI copilot built for one specific industry's workflows, not generic knowledge work): "How Harvey Works: The Future of Legal AI, Explained" https://www.youtube.com/watch?v=92_ipeEdpU0, and their platform overview page https://www.harvey.ai/resources/videos/platform-overview. Same pattern as Harvey and Cruz both: "here's the messy manual process your industry has always used, here's the AI doing it inside your existing systems."
 
-Glean (closest to your "Company Brain" positioning): homepage has no embedded video, it links to a full video hub with 40+ videos organized by feature and persona. Hub: https://www.glean.com/resources/product-videos. Best two to actually watch as references: "Home Page and Search Demo" https://www.glean.com/resources/product-videos/home-page-and-search-demo and "How Glean Brings AI to Work" https://www.glean.com/resources/product-videos/working-ai-how-glean-brings-ai-to-work
+MachineMetrics (industrial IoT/machine monitoring for manufacturers — same shop-floor buyer, same skepticism to overcome): they literally have a dedicated page called the platform explainer video, built for exactly your situation — convincing a plant manager that AI can be trusted on their floor. https://www.machinemetrics.com/iot-platform-explainer-video
 
-Samsara (closest to your industrial/operations buyer): same pattern, no homepage video, links to a hub with 90+ videos. Hub: https://www.samsara.com/resources/videos. The one that matches what I recommended for you last time: "Samsara: The Connected Operations Cloud" https://www.youtube.com/watch?v=_2wYfEpe5X0, and the flagship platform overview: "The Samsara Platform Overview" https://www.youtube.com/watch?v=6VE_gp0iC9c. Notice how heavily Samsara leans on real customer-spotlight videos (Sobeys, DHL, Estes Express) instead of one abstract animated explainer — for an industrial buyer, a customer saying "this fixed our problem" on camera outperforms narration.
+Paperless Parts (quoting software for machine shops — this one overlaps with your actual feature set, since quote drafting is one of Cruz's core actions): demo video https://www.youtube.com/watch?v=D-1iVFSctMk, full channel https://www.youtube.com/@paperlessparts3671 — worth scanning a few of these since the audience (small/mid manufacturers) is nearly identical to yours.
 
-Guru and Asana: both mention a video library ("watch our library of explainer videos" / demo page) but don't expose it in a form I could pull direct links from without a live browser session — Guru's is at getguru.com/learn, Asana's demo is at asana.com/demo/main, if you want to check those yourself.
-
-Takeaway for AskCruz: don't try to cram everything into one homepage video. The stronger move, matching what these companies actually do, is a short silent product loop on the homepage plus one real customer-story video (a steel service center manager describing the actual problem you already have in your hero copy) rather than an abstract animated explainer.
+Given four rounds of this now, I'd stop collecting references and move to producing something — script, shot list, or storyboard. Say which direction (founder-led vs. Samsara-style customer story vs. Glean-style feature walkthrough) and I'll draft it.
