@@ -72,3 +72,33 @@ Branch Address - 3003 Tasman Drive, Santa Clara CA 95054
 5. Edit that block with the correct details and save.
 
 If you (or whoever logs in) can't find a field with that exact text under the company record, tell me and I can check whether it's stored somewhere else on that Odoo instance instead.
+
+User: [Uploaded files: /mnt/user-data/uploads/INV_2026_0361.pdf (same invoice as before) and /mnt/user-data/uploads/gfc-intelligence-inc_Wire-Details-Checking-7766.pdf — Mercury wire details document for "GFC Intelligence, Inc." Domestic Transfer Details: Receiving Bank ABA Routing Number 121145433, Bank Name Column N.A. (Mercury uses Column N.A. as a banking partner), Bank Address 1 Letterman Drive, Building A, Suite A4-700, San Francisco, CA 94129 US. Beneficiary Name GFC Intelligence, Inc., Account Number 870501486247766, Account Kind Checking, Beneficiary Address 125 Maywood Road, New Rochelle, NY 10804 US. International Wire Details: SWIFT/BIC Code CLNOUS66MER, ABA Routing Number 121145433 (fallback 121145307 if sending bank doesn't recognize it), Bank Name Column N.A., Bank Address 1 Letterman Drive, Building A, Suite A4-700, San Francisco, CA 94129 USA. Intermediary Bank SWIFT/BIC Code CHASUS33XXX (mandatory). Beneficiary Name GFC Intelligence, Inc., IBAN/Account Number 870501486247766, Beneficiary Address 125 Maywood Road, New Rochelle, NY 10804 USA.]
+
+check bank details, I want to add similar to askcruz settings, check the second document and pick information from there and put in the same format as EOXS bank details
+
+Assistant: Formatted the same way as the current EOXS terms block, using the GFC Intelligence, Inc. Mercury account details:
+
+```
+We accept wire transfer. Please do not send checks.
+
+Banking Details:
+Account Name - GFC Intelligence, Inc.
+Bank Name - Column N.A.
+ABA Routing & Transit # - 121145433
+Swift Code - CLNOUS66MER
+Account Number - 870501486247766
+Branch Address - 1 Letterman Drive, Building A, Suite A4-700, San Francisco, CA 94129
+```
+
+Notes on what I mapped:
+- Account Name → Beneficiary Name (GFC Intelligence, Inc.)
+- Bank Name → Column N.A. (Mercury's banking partner, per the document)
+- ABA Routing & Transit # → 121145433 (the primary one; the doc lists a fallback 121145307 only for senders whose bank doesn't recognize the first)
+- Swift Code → CLNOUS66MER (from the international wire section)
+- Account Number → 870501486247766
+- Branch Address → the bank address from the doc (not the beneficiary address, to match how the original block used the bank's Santa Clara branch address, not EOXS's own address)
+
+This is the text to paste into the invoice_terms field on the EOXS company record at teams.askcruz.com, replacing the current block, once you're in Settings → Users & Companies → Companies → EOXS.
+
+Two things worth flagging before you commit to this: the fallback ABA number (121145307) isn't included above since the original format only has room for one, and you may want to double check whether you want the domestic ABA or something else as primary depending on how most of your customers pay. Also worth confirming Intermediary Bank (CHASUS33XXX) doesn't need to go on the invoice too — some international senders will need it and the current format has no line for it.
