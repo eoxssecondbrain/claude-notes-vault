@@ -632,3 +632,71 @@ Strengths: Real scale — 15,000+ prospects and 100+ campaigns weekly, far above
 Weaknesses/red flags: Only ~5 months in the one role that actually matters for this job — still early to judge depth versus early strong results. Her outbound experience targets journalists and media contacts for PR placement, not commercial buyers, so while the mechanics transfer, she hasn't sold anything via email to a business decision-maker. No ABM terminology or framing. No industrial, steel, plastics, or distribution vertical exposure. Total professional experience is on the shorter side (2 years) compared with some other candidates.
 
 Net: the closest tool-stack match to a genuine cold-outbound-at-scale role (Mailchimp + Instantly + Reachinbox) and the strongest quantified open-rate result, offset mainly by her audience being media/PR contacts rather than B2B buyers and a short current tenure. Strong interview candidate — worth probing whether she can translate PR-outreach copy into sales-outreach copy for industrial CEOs. Send the next one when ready.
+
+**User:**
+[Uploaded resume: 9.pdf — Aruna Luthra]
+check
+
+Resume content (extracted):
+ARUNA LUTHRA
+Customer Success Specialist | AI & CRM
+US Citizen & OCI Card Holder • (+91) 9971114764 • arunaluthrab@gmail.com • linkedin.com/in/aruna-luthra-a865a3222 • Gurugram, India (IST)
+
+PROFESSIONAL SUMMARY
+Mount Holyoke-educated (Seven Sisters) Customer Success Specialist with hands-on SaaS CS experience — onboarding, product adoption, and retention for a multi-location B2B retail platform — combined with an AI/CRM credential (Salesforce Agentblazer Champion). Proven track record managing the full customer lifecycle — from onboarding through retention and renewal, with 100% client goal attainment rate. US citizen with fluency across American and Indian markets.
+
+CORE SKILLS
+Customer Success Management, Client Onboarding & Product Adoption, Churn Reduction & Retention, Account Management, Renewals & Expansion, Stakeholder Management, B2B SaaS, Customer Lifecycle Management, Cross-functional Collaboration, CRM Tools, NPS & CSAT
+
+EXPERIENCE
+Customer Success Specialist | Rytual App | 2026 – Present
+Rytual App is an AI-powered B2B SaaS retail operations platform helping multi-location businesses streamline store operations, workforce management, compliance, inventory, and analytics.
+- Onboard customers to the Rytual App platform, guiding implementation and delivering product demos and training to drive adoption across multi-location retail businesses
+- Serve as primary point of contact for customer inquiries, troubleshooting issues and collaborating with Product and Engineering to drive timely resolution
+- Partner with customers to configure operational workflows, compliance checklists, and reporting aligned with their business requirements
+- Monitor customer engagement and gather product feedback to build trusted relationships and maximize platform value
+
+International Education Consultant | Rostrum Education | 2025–2026
+- Managed end-to-end customer lifecycle for high-stakes advisory clients, achieving 100% client goal attainment rate
+- Drove client onboarding, product adoption, and milestone-based check-ins — ensuring alignment from strategy through final outcomes
+- Reduced churn through proactive communication, early risk identification, and timely resolution of client concerns
+
+Country Strategist | Crimson Education | 2025
+- Supported client onboarding and early-stage engagement, contributing to structured account management frameworks and needs assessment
+- Conducted country-level research to inform client strategy and support customer health during critical advisory stages
+
+Lead International Education Consultant | AddedEducation | 2023–2024
+- Managed multi-stage client relationships through advisory engagement, achieving 100% client goal attainment rate
+- Delivered personalised success plans aligned to each client's goals, driving measurable outcomes and high satisfaction
+
+Content Strategist – Higher Education SaaS | BlackBeltHelp | 2022–2023
+- Developed onboarding and adoption content for a B2B SaaS platform, improving user understanding and feature engagement
+- Collaborated with CS and product teams to translate technical functionality into clear customer-facing documentation
+
+Content Strategist – Fintech | SBNRI | 2021–2022
+- Created user-focused content simplifying NRI financial products to drive app engagement and feature adoption across a US-facing fintech platform
+
+Earlier Career
+Select companies include Liberty International, Liberty Mutual Group — Business Analyst, Boston, and AbsolutData Analytics — Marketing (firm providing marketing analytics for Fortune 500 clients). Full details available on request.
+
+EDUCATION
+Bachelor of Arts — Economics & Mathematics | Mount Holyoke College | South Hadley, MA, USA | 2008
+Seven Sisters Consortium
+Certification: Salesforce Agentblazer Champion, Trailhead (2026) — AI fundamentals, generative AI/LLMs, responsible AI, prompt engineering, and Agentforce for Sales & Service Cloud
+
+**Assistant:**
+Aruna Luthra — Customer Success Specialist | AI & CRM
+
+Verdict: Disqualify — 1/10
+
+Raj's four screening areas:
+- Marketing experience: Not mentioned, in the sense that matters here — her career for the last several years is Customer Success and international education advisory, not marketing. Customer Success Specialist at Rytual App (2026–present) → International Education Consultant at Rostrum Education (2025–2026) → Country Strategist at Crimson Education (2025) → Lead International Education Consultant at AddedEducation (2023–2024) → Content Strategist roles at BlackBeltHelp (2022–2023) and SBNRI (2021–2022), where "content" meant onboarding/adoption documentation and product-education content, not marketing campaigns. A single line in an undated "Earlier Career" catch-all mentions "AbsolutData Analytics — Marketing" with zero detail, dates, or description.
+- Email marketing experience: Not mentioned anywhere on the resume — no tool, no campaign, no list.
+- Types of emails sent: Not mentioned.
+- ABM understanding: Not mentioned. Her "CRM Tools" skill and Salesforce Agentblazer certification are Customer-Success-context (managing client relationships and adoption), not sales pipeline or account-based demand generation.
+
+Strengths: Strong academic pedigree (Mount Holyoke, Economics & Mathematics), well-organized and cleanly written resume — the most polished of the batch. Genuine AI/CRM credential (Salesforce Agentblazer Champion: generative AI/LLMs, Agentforce for Sales & Service Cloud). Real B2B SaaS customer-lifecycle experience with claimed 100% client goal attainment across two roles. US citizen/OCI holder with cross-market fluency.
+
+Weaknesses/red flags: This is fundamentally a Customer Success/account-management/advisory career, not a marketing career — a more basic function mismatch than any other candidate reviewed, since none of the four screening areas have any presence at all. Significant seniority and likely compensation mismatch: a Bachelor's from 2008 (~18 years of career) with senior consultant/strategist titles is very unlikely to be a realistic fit or a stable hire for an entry-to-mid-level Marketing Associate role at ₹20,000/month. Job history since 2021 shows a new employer roughly every year across unrelated industries (fintech, higher-ed consulting, SaaS retail ops), and the ~13 years between her 2008 degree and her first dated 2021 role are entirely unaccounted for ("full details available on request") — a real transparency gap worth asking about directly, though not by itself disqualifying.
+
+Net: an accomplished, credible professional, but in a different field entirely — nothing here supports marketing experience, email marketing, sequence types, or ABM, and the seniority/comp mismatch compounds the fit problem. Send the next one when ready.
