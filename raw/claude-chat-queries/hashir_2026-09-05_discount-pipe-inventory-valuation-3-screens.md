@@ -19,7 +19,7 @@ One thing you should know before this runs unattended: `stock_valuation_layer.re
 
 The md file has the exact SQL for all three sources, the reconciliation logic, and the email format for the 8:30 AM EST send to humaira@eoxsteam.com.
 
-[md file inventory_valuation_daily_check.md created and presented — content saved in prior turn of this thread.]
+[md file inventory_valuation_daily_check.md created and presented]
 
 User: One more thing i need a proper pdf report for this not an html report this should look good everything should be perfect and provide me that also
 
@@ -27,14 +27,18 @@ Assistant: [Built a 2-page PDF report using reportlab: Inventory_Valuation_Recon
 
 2-page PDF, done. Page 1: KPI cards for the three figures, status flag, source-screen breakdown table, and the data-quality warning on `remaining_value`. Page 2: reconciliation logic and the full SQL appendix. Same numbers and caveats as the md file, just formatted as a deliverable you can send around.
 
-PDF content summary (as generated):
+User: No need to add the second page in the report which is showing us the information of the Appendix which is not required we no need to show them how this is calculated
+
+Assistant: [Removed the "Reconciliation Logic" and "Appendix — Source SQL" sections from the PDF, replaced with a short "Scheduled Delivery" line, and tightened spacing so the report fits on a single page.]
+
+Single-page report now. Appendix and reconciliation-logic walkthrough removed — just the three figures, status, source table, and the data-quality flag.
+
+Final PDF content (single page):
 - Header band: "Inventory Valuation Reconciliation" / "Discount Pipe & Steel | DPS LIVE (Odoo 13)" / Report Date: September 5, 2026
-- Intro paragraph explaining the reconciliation purpose and the 8:30 AM EST delivery to humaira@eoxsteam.com
+- Intro paragraph on purpose and 8:30 AM EST delivery to humaira@eoxsteam.com
 - Three KPI cards: Balance Sheet (Stock Valuation, acct 110100) $1,087,475.62; Inventory Valuation Report (stock_valuation_layer) $1,101,787.95; Variance $14,312.33 (1.32% of balance sheet total)
 - Status banner: OK — variance within ~2% tolerance, consistent with normal timing lag from unposted/in-transit stock moves
 - Table "Source Screens & Underlying Data" covering all 3 screens (Lot/Serial Numbers — 2,911,133.37 units on hand, 2,508 lots / 231 products; Balance Sheet — $1,087,475.62; Inventory Valuation Report — $1,101,787.95)
 - "Data Quality Note" warning box: do not use SUM(remaining_value) on stock_valuation_layer — 527 fully-consumed layers still carry non-zero remaining_value, inflating naive sum to ~$79.3 million; SUM(value) is correct
-- "Reconciliation Logic" section, 4 numbered steps
-- Appendix with full SQL for all three screens
-- "Scheduled Delivery" footer: daily at 8:30 AM EST, recipient humaira@eoxsteam.com, source connector DPS LIVE (read-only)
-- Footer on every page: "Confidential — EOXS internal use only" / page number
+- "Scheduled Delivery" line: daily at 8:30 AM EST, recipient humaira@eoxsteam.com, source connector DPS LIVE (read-only)
+- Footer: "Confidential — EOXS internal use only" / page number
