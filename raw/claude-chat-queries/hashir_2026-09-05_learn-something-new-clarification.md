@@ -84,3 +84,29 @@ Why that matters: if you ask Claude to "find every place this bug pattern shows 
 Two common uses: context isolation (keep a noisy investigation out of your main thread) and parallel work (spin up several subagents on different pieces of a task at once — e.g., one checking security, one checking style, one checking performance).
 
 Ready for section 4 whenever you say next.
+
+User: how can we setupp the subagents ??
+
+Assistant: Two ways to create one:
+
+Ask Claude Code directly, in a session:
+"Create a subagent in .claude/agents/ that [does X]. Read-only, use Sonnet."
+Claude writes the file for you — name, description, tools, model, system prompt.
+
+Or write the file yourself. It's a markdown file with YAML frontmatter:
+
+.claude/agents/db-reader.md (project-scoped) or ~/.claude/agents/db-reader.md (user-scoped, works in every project)
+
+---
+name: db-reader
+description: Execute read-only database queries. Use when analyzing data or generating reports.
+tools: Bash
+---
+
+You are a database analyst with read-only access. Execute SELECT queries to answer questions about the data. You cannot modify data — if asked to INSERT, UPDATE, DELETE, or alter schema, explain that you only have read access.
+
+Only name and description are required. Everything else — tools, model, mcpServers, hooks, skills, permissionMode — is optional and narrows what the subagent can touch.
+
+Invoke it three ways: name it in a normal prompt ("use the db-reader subagent to check open orders"), @-mention it to force that specific one, or set it as the whole session's default agent.
+
+Given what you actually work with — Odoo databases where writes should never happen from an AI session — the pattern that matters most for you is the last example in the docs: tools: Bash plus a PreToolUse hook that runs a script blocking any INSERT/UPDATE/DELETE/DROP before it executes. That's not a request Claude might forget, it's an enforced backstop — the same read-only guarantee eoxs-data-general gives you here, but mechanically enforced in your dev environment rather than by instruction.
