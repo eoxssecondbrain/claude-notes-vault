@@ -74,3 +74,13 @@ Hooks — deterministic, not a request Claude might skip. A hook can block an ed
 For your actual situation: you're a developer/support hybrid working against Odoo instances with real financial and confidential data. If you write code against these systems, CLAUDE.md + a project-scoped MCP connector to the relevant instance + a hook that blocks writes to production config would give you guardrails that don't depend on remembering to be careful each session — the same rigor eoxs-data-general enforces here (read-only, redaction) but enforced mechanically in your dev environment instead of by instruction.
 
 Next: risks, blind spots, and where this actually moves the needle for your role — not just what's available, but what's worth setting up first.
+
+User: what is subagents
+
+Assistant: Subagents are isolated workers Claude Code spawns to do a chunk of work outside your main conversation. Each one gets its own fresh context — its own system prompt, whatever skills it's told to preload, and (usually) your CLAUDE.md and git status — separate from what you're seeing in your main session. It goes off, does the work (reads a bunch of files, runs searches, digs through logs), and returns only a summary back to you. The intermediate reading and searching never touches your main context window.
+
+Why that matters: if you ask Claude to "find every place this bug pattern shows up," that could mean reading dozens of files. Done directly, that floods your conversation with file contents you don't need to see. Done via a subagent, your main session gets a clean summary of findings, and the read work happens off to the side.
+
+Two common uses: context isolation (keep a noisy investigation out of your main thread) and parallel work (spin up several subagents on different pieces of a task at once — e.g., one checking security, one checking style, one checking performance).
+
+Ready for section 4 whenever you say next.
