@@ -364,3 +364,90 @@ Strengths: Closest tool match to the JD's own list — HubSpot, Apollo.io, and Z
 Weaknesses/red flags: Job-hopping pattern — four roles in about two years, with tenures of 3, 4, 14, and 10 months; HubCredo is explicitly "project based," which may mean freelance/contract rather than full-time employment and is worth clarifying directly. Resume has visible sloppiness — inconsistent tool names ("Chat GPT" vs "ChatGPT," "Air table" vs "Airtable," "Googe Ads," "SQ" for SQL) — a real yellow flag for a role the JD explicitly frames around precision ("a bad list or a broken merge field costs us the whole send") and strong written English. No B2B industrial, steel, plastics, or distribution vertical exposure — his experience spans apparel/fashion (Athletes Thread, fashion certifications), events tech (Eventdex), and generalist B2B services (Growisto/HubCredo). No named ABM knowledge.
 
 Net: the strongest fit so far specifically on email marketing and cold-outreach experience and the closest tool overlap with the JD, offset by job-hopping and resume polish concerns that don't match the "detail-oriented" requirement. Worth an interview to verify depth versus title-inflation and to probe ABM knowledge directly. Send the next one when ready.
+
+**User:**
+[Uploaded resume: 5.pdf — Sahil Mahalley]
+check this one out
+
+Resume content (extracted):
+Sahil Mahalley
+Content & Marketing
+Email - sahilmahalley@gmail.com
+DOB - 1st December 2000 | Pune, Maharashtra, India
+
+EDUCATIONAL QUALIFICATIONS
+- Bachelor's of Vocational in Mass Communication, MES Absaheb Garware College Pune (University of Pune), 2022, 7.2 CGPA
+- 12th Commerce + Secretarial Practice, MMCC - Marathwada Mitra Mandal College of Commerce, 2019, 72%
+
+WORK EXPERIENCE
+Perennial Systems — Marketing Associate | May 2026 - September 2026 | Pune
+- Own end-to-end GTM strategy and execution for AIOps and Banking & Financial Automation service lines, from positioning through content and campaign delivery, using Clay workflows, Apollo, and Netcore.
+- Manage website content strategy and maintain a daily blog cadence to drive organic traffic and thought leadership.
+- Lead content development for flagship industry events, including participation at iGnite: GCash Innovation Summit 2026, with messaging tailored to the APAC region.
+- Design and produce lead magnets to support demand generation and pipeline growth.
+- Manage LinkedIn presence for the CTO and the company page, building executive thought leadership and brand visibility.
+
+CloudRedux — Creative Content Writer | Aug 2023 - May 2026 | Pune
+- Writing news, columns, editorials, case studies, and articles for web and magazine and creating creatives for web.
+- Worked on B2B SaaS Product (DocXter), creating content and design for social media and web pages. Increased social Media followers by 25%.
+- Making social posts and marketing emails.
+- Crafting Articles and UI/UX writing for WPSteroids (Headless Architecture).
+- Managed backend for WPSteroids through Strapi CMS.
+- Writing converting & SEO friendly articles for US based Client on the process improvement industry where 70% content pieces are being ranked in top 3 of the Google Index Ranking.
+
+Pasway Clothing Pvt. Ltd — Marketing Analyst | March 2023 - July 2023 | Pune
+- Creating marketing campaigns and research for competitors.
+- Developing sales and marketing strategies for social media and Google Ads.
+- Understanding consumer behavior and analyzing marketing strategies for the product marketing.
+- Ideating and supervising t-shirt designs and content.
+
+The Escapade Travel — Founder | December 2022 - Present | Pune
+- The Escapade Travel is a Travel and Clothing brand which offers top notch travel consultation and well researched and quality clothing which are purely made for traveling.
+
+Saprom PR — Public Relation Associate | September 2022 - March 2023 | Pune
+- Cultivating and maintaining relationships with journalists, editors, and media outlets to ensure positive coverage and media exposure.
+- Writing and distributing press releases, media alerts, and other communication materials to announce company news, product launches, and events.
+- Pitch story ideas and coordinate media interviews, briefings, and press conferences.
+- Monitor media coverage and prepare regular reports for internal teams, highlighting key messages and trends.
+
+Travel Buddy — Content Creator | March 2022 - May 2022 | Pune
+- Research and identify trending travel destinations, unique experiences, and local cultures to create captivating content.
+- Produce a variety of travel-related content, including articles, blog posts, travel guides, itineraries, destination spotlights, and more.
+- Craft engaging narratives that inspire and resonate with the audience, while adhering to the brand's style and tone.
+- Collaborate with the marketing and design teams to develop visually appealing and shareable multimedia content, such as photos, videos, and infographics.
+- Create and curate user-generated content to enhance engagement and foster a sense of community.
+
+SKILLS
+Marketing Strategies, GTM, SEO, Content Management, Content Creation, Communication, Public Relations, Social Media
+
+TECH SOFTWARE'S
+Design: Adobe Creative Suite, CorelDraw, Figma, Canva
+Tech: WordPress, Strapi (CMS), Microsoft Office, Basic HTML & CSS
+
+LANGUAGES: English, Hindi, Marathi, German
+
+AWARDS & ACHIEVEMENTS: Best Photo - MIT Awards | Portrait
+
+CERTIFICATIONS
+- Digital Marketing - Ongoing - Google Garage
+- PMP (Project Management) - Ongoing - Udemy
+- Principles of Public Relations - Ongoing - Udemy
+
+OTHER INTERESTS: Professional travel photographer, Guitarist, Writer
+
+**Assistant:**
+Sahil Mahalley — Content & Marketing
+
+Verdict: Borderline — 5/10
+
+Raj's four screening areas:
+- Marketing experience: About 4 years, but scattered across six roles/ventures — Content Creator at Travel Buddy (Mar–May 2022, 3 months), PR Associate at Saprom PR (Sep 2022–Mar 2023, 6 months), self-described "Founder" of a side travel/clothing brand (Dec 2022–present, running concurrently with everything else), Marketing Analyst at Pasway Clothing (Mar–Jul 2023, 4 months), Creative Content Writer at CloudRedux (Aug 2023–May 2026, ~2.75 years — his one real tenure, but pure content writing/PR, not demand gen), and most recently Marketing Associate at Perennial Systems (listed as May 2026–September 2026, i.e., a stint that reads as already ended this month — worth clarifying whether that's a real short tenure or a resume dating error).
+- Email marketing experience: Thin and recent. At CloudRedux: one line, "Making social posts and marketing emails," with no detail on volume, platform, or results. At Perennial Systems (his shortest, most recent role): "Own end-to-end GTM strategy and execution... using Clay workflows, Apollo, and Netcore" — Apollo and Netcore are real outbound/email tools and match the JD's own list, but the bullet describes strategy ownership generically, not specific email-sending work, and this is a 4-5 month stint.
+- Types of emails sent: Not clearly specified. "Marketing emails" is named once with no type breakdown. "Lead magnets to support demand generation" at Perennial Systems implies some nurture/capture activity, but nothing describes cold outreach, sequences, or reactivation specifically.
+- ABM understanding: Not mentioned anywhere.
+
+Strengths: Genuinely strong writer — journalism-style background (news, columns, editorials, case studies), PR experience (press releases, media relations, journalist outreach), and a concrete SEO result (70% of content pieces ranked top 3 in Google for a US client). Worked on a B2B SaaS product (DocXter) with a measurable outcome (+25% social followers). Comfortable across WordPress, Strapi CMS, and basic HTML/CSS — more technical range than most other candidates. Most recent role at least names Apollo and Netcore, both directly relevant tools.
+
+Weaknesses/red flags: Core identity on this resume is content/PR/copywriting, not email marketing or demand generation — the one role that touches the JD's actual tools (Perennial Systems) is his shortest and least detailed, and its listed dates (May–Sep 2026) suggest it just ended, which is worth asking about directly. No list hygiene, CRM/list management, deliverability, or CAN-SPAM/compliance mentioned anywhere, despite these being explicit JD requirements. No open/reply/conversion metrics for any email work, despite that being central to the role. No ABM. Six roles plus a concurrent "Founder" side venture in about 4 years is a genuine tenure and focus concern — only one job (CloudRedux, content writing) lasted more than 6 months before this year.
+
+Net: the strongest writer of the candidates so far, but the actual email-marketing/demand-gen substance is thin and concentrated in his shortest, most recently-ended role. Worth a direct conversation to establish what he actually did at Perennial Systems before deciding — as written, the resume doesn't prove he can own an email engine end to end. Send the next one when ready.
