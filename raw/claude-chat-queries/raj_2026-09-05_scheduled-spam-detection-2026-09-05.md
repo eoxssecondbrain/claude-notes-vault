@@ -6,29 +6,26 @@ created: 2026-09-05
 updated: 2026-09-05
 ---
 
-## Scheduled Email Spam Detection (v9) — Run Log
-Date: 2026-09-05 (automated scheduled task, no live user present)
+# Scheduled Email Spam Detection (v9) — Run 2026-09-05
 
-### Setup
-- Labels checked via list_labels: AI-SPAM, AI-SPAM/Advertising, AI-SPAM/Expired-OTP, AI-SPAM/Fraud, AI-SPAM/Investor-Outreach, AI-Reviewed all already exist (AI-Reviewed has 54,078 messages / 29,781 threads applied historically) — this was NOT a first run.
+**System (scheduled task prompt):** Run scheduled email spam detection per v9 spec — fix-up pass, then normal run classifying unprocessed threads into SPAM sub-labels or AI-Reviewed.
 
-### Fix-up pass
-- Query: label:AI-SPAM in:inbox → 0 threads returned. Nothing needed fixing.
+**Assistant actions:**
+1. Called `list_labels` — confirmed all required labels already exist: AI-SPAM (Label_33), AI-SPAM/Advertising (Label_34), AI-SPAM/Expired-OTP (Label_35), AI-SPAM/Fraud (Label_36), AI-Reviewed (Label_37), AI-SPAM/Investor-Outreach (Label_38). No label creation needed.
+2. Fix-up pass: `search_threads` query `label:AI-SPAM in:inbox` → 0 results. Nothing to fix.
+3. Determined run type: AI-Reviewed has prior history (54,082 messages) → normal run, not first run.
+4. Normal run: `search_threads` query `-in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed`, pageSize 50 → 1 thread returned (resultCountEstimate of 876 confirmed to be an inaccurate/stale Gmail estimate, not an actual backlog — verified by re-running the same query after processing, which returned 0 threads).
+5. Thread `1a0724146973bbd1` — sender hello@cal.com, subject "Location Changed: 30 min meeting with Frank Williams at 11:00am - 11:30am, Wednesday, September 9, 2026". Read full body via `get_thread` (PLAIN_TEXT): a Cal.com calendar-location-change notification for Rajat's meeting with Frank Williams (Ryerson) re: Ask Cruz. Classified NOT_SPAM (legitimate calendar/scheduling mail, bucket 5 default-to-NOT_SPAM since exact subject prefix wasn't in the literal skip-list but content is unambiguously legitimate).
+6. Applied AI-Reviewed (Label_37) to the thread via `label_thread`.
+7. Re-ran the search query — confirmed 0 remaining unprocessed threads.
 
-### Normal run
-- Query: -in:sent -in:chats -label:AI-SPAM -label:AI-Reviewed, pageSize 50.
-- Note: searching by internal label ID (Label_33/Label_37) returned many false positives (threads already fully labeled Label_37 but still matched, likely a per-message/estimate quirk). Re-ran using display names (-label:AI-SPAM -label:AI-Reviewed), which correctly returned only 1 actual new/unprocessed thread despite an inflated resultCountEstimate (~876-1369, evidently unreliable — actual returned thread list was authoritative).
-- Only unprocessed thread: "Session Productivity Report (9-10AM EST) — 2026-09-05" (thread 1a071f1ebbea9d34), from isha@eoxsteam.com to rajat@eoxs.com, with a forward to sheenam@eoxsteam.com/Kriti@eoxsteam.com and a reply from sheenam@eoxsteam.com — all eoxsteam.com/eoxs.com domain participants.
-- Classification: NOT_SPAM (skip-list rule 1: eoxsteam.com/eoxs.com sender domain). Applied label AI-Reviewed (Label_37).
-- Re-queried after labeling: 0 remaining unprocessed threads.
-
-### Final report
-- Checked: 1
-- SPAM/SUSPICIOUS: 0 | NOT_SPAM: 1
-- Moves by sub-label: none
+**Final report:**
+- Checked: 1 thread (fix-up pass: 0 threads checked, none needed fixing)
+- SPAM/SUSPICIOUS: 0
+- NOT_SPAM: 1
+- Moves by sub-label: none (no SPAM found)
 - Fixed by fix-up pass: 0
-- Moves confirmed by verification: n/a (no spam moves this run)
+- Moves confirmed by verification: 0 (no moves made)
 - MOVE_FAILED: none
 
-### Outcome
-Mailbox is clean/current. No spam detected, no action needed from Raj. No push notification sent (nothing actionable — per standing instruction to stay silent on uneventful runs).
+**Outcome:** Clean run, nothing noteworthy. No push notification sent (per standing instructions, silence when a scheduled run comes up empty/healthy).
