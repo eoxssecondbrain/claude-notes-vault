@@ -797,3 +797,14 @@ Net: a genuinely strong writer and senior consumer-marketing generalist, but no 
 
 **Assistant:**
 Ready for the next resume — none has come in yet since Tanya Sadhwani (10.pdf). Send it whenever you have it.
+
+**User:**
+[Re-uploaded resume: named 10.pdf again, different upload, 217.4KB]
+check
+
+Resume content (extracted): Identical to the previously screened Tanya Sadhwani resume — same name, contact details, and full work history (HHDDA Asia Pacific/MSD current role; Windmill Ventures Feb 2024-April 2025; Viacom 18 "November 2023-February 2023" as printed; Pivot Roots Sep 2021-Oct 2023; Concept PR Feb 2020-Aug 2021; Times of India Jul 2017-Aug 2018; MBA NMIMS), same Core Competencies section including the single generic "email marketing" mention.
+
+**Assistant:**
+Same resume as before — Tanya Sadhwani, identical content (just re-uploaded, this time as a fresh file rather than a re-send of the same file object). Not a new candidate.
+
+Already screened: Disqualify, 2/10 — no real email marketing evidence, no ABM, B2C/consumer-brand specialization mismatch against this B2B industrial role, plus the Viacom 18 date inconsistency (full breakdown in my earlier message). Nothing new to add. Send the next resume whenever you have it.
