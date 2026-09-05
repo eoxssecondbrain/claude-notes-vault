@@ -128,3 +128,84 @@ Strengths: Real outreach experience — cold-contacting website owners for link 
 Weaknesses/red flags: This is an SEO/content marketer profile, not an email marketer — that's the core mismatch against a role explicitly about owning the email engine (sequences, list hygiene, deliverability). Nothing shows hands-on send experience, list management, or email-specific metrics (open/reply rate) despite those being central to the JD. Every role lasted under a year. No B2B or industrial-buyer exposure. No ABM exposure at all, which Raj flagged as a specific screening area. Mailchimp being listed but never referenced in any bullet reads as surface familiarity rather than actual usage.
 
 Net: strong generalist marketing/SEO candidate, weak-to-absent fit for an email-specific, ABM-aware role. Send the next one when ready.
+
+**User:**
+[Uploaded resume: 2.pdf — Niranjana Garewal]
+check
+
+Resume content (extracted):
+NIRANJANA GAREWAL
+Place- Bhopal
+Number- +917223883890
+Email ID- niranjana.garewal12@gmail.com
+Link- https://www.linkedin.com/in/niranjana-g-7b25891aa/
+
+SUMMARY
+Results-driven Marketing Executive with 3+ years of experience across B2B Demand Generation, ABM Marketing and Recruitment Marketing. Proven track record in lead generation and demand generation, increasing qualified leads by 60% through data-driven campaign management and multi-channel social media strategy. Skilled in employer branding, content creation, and marketing automation, with hands-on expertise in Salesforce, LinkedIn Sales Navigator, ZoomInfo, and Canva to drive pipeline growth and support business objectives.
+
+EDUCATION AND TRAINING
+- Pune Institute of Business Management, PUNE, 05/2022 — PGDM (Marketing)
+- Jagran Lakecity University- Bhopal, BHOPAL, 04/2020 — BBA
+
+EXPERIENCE
+MARKETING EXECUTIVE, QX GLOBAL GROUP, 19/01/2026-Present
+Client: Ngage Talent Group UK (Supported Proactive Global) – Marketing Executive
+- Led recruitment marketing strategy and execution for Proactive Global and other nGAGE Talent Group brands across global regions, driving employer branding and candidate engagement initiatives
+- Managed end-to-end content strategy across LinkedIn, corporate website, and podcast channels, increasing audience engagement and strengthening brand visibility
+- Produced and published podcast content across Spotify, YouTube, and web platforms, overseeing episode strategy, metadata optimization, and promotional campaigns
+- Designed and maintained microsites, consultant profiles, and landing pages, improving brand consistency and user experience across digital touchpoints
+- Developed marketing collateral - press releases, brochures, candidate decks, newsletters, and email campaigns - using Canva and Force24, supporting integrated marketing communications
+- Created onboarding communication templates (new starter/leaver), streamlining internal marketing workflows and improving stakeholder experience
+- Conducted competitor analysis and market research to identify industry trends, informing data-driven marketing strategy and positioning
+- Administered LinkedIn Recruiter platform, managing InMail credits, Job Slots, user licensing, access controls, and usage audits/reporting for optimized ROI
+- Managed CV-Library, Broadbean, and Totaljobs platforms, including license administration, recruiter accounts, job postings, and issue resolution
+- Maintained candidate and client CRM/mailing lists via Talisman, supporting targeted recruitment marketing campaigns
+
+MARKETING EXECUTIVE, 01/02/2022 – 09/02/2024, Netcore Cloud, Mumbai
+- Conducted market research and lead generation using Salesforce, LinkedIn Sales Navigator, ZoomInfo, and Lusha, increasing qualified leads by 60%.
+- Researched market trends, customer behavior, and competitor strategies to inform and enhance regional marketing initiatives.
+- Collaborated with the ABM team to execute multi-channel marketing campaigns.
+- Executed social media campaigns across LinkedIn, Twitter, and Facebook, resulting in increased engagement and lead generation.
+- Planned and supported trade shows, webinars, and industry events to drive lead generation and brand awareness.
+- Managed 100+ active leads in Salesforce, maintaining 95% data accuracy and streamlining sales activities.
+- Managed contact databases in Salesforce and Recotap, ensuring accurate lead tracking and campaign execution.
+- Created Canva ads, landing pages, and marketing assets to support digital campaigns.
+- Prepared weekly and monthly performance reports, analyzing campaign, account, and lead data to drive data-informed marketing decisions.
+
+SALES INTERN, 04/2021 - 05/2021, Ten hard E-commerce Company, BHOPAL
+- Facilitated lead generation and customer acquisition efforts, resulting in 50+ qualified leads.
+- Promoted products and engaged with customers to enhance sales and marketing initiatives.
+
+DIGITAL MARKETING INTERN, 06/2021 - 07/2021, Momskart- Handcrafted by Indian Moms, BHOPAL
+- Contributed to social media marketing initiatives, received a Letter of Recommendation for exceptional performance.
+- Created engaging social media creatives and managed content across LinkedIn, Facebook, and Instagram to enhance brand visibility.
+
+SKILLS
+Salesforce, Canva, Recotap, Lusha, SimilarWeb, LinkedIn Sales Navigator, LeadIQ, Recruitment Marketing, LinkedIn Marketing, Broadbean, Talisman, AI Tools (ChatGPT, Gemini, Claude), YouTube, Spotify, ZoomInfo, Apptopia, Builtwith, Clearout(Pepipost), MS Office, Pardot, Digital Marketing, Social Media Marketing, Force 24, Total Jobs, Riverside, CV Formatting Tool, SEO (Basic)
+
+ACCOMPLISHMENTS
+- Received Letter of Recommendation and Appreciation for the good work.
+- Received Team appreciation award for smooth activity completion.
+
+LANGUAGES: Hindi (First Language), English (Professional)
+
+ACTIVITIES & HONORS
+- Conducted and managed various cultural events being an active member of PIBM cultural.
+- Served as the Class Representative for a semester, actively facilitating communication between peers and faculty.
+
+**Assistant:**
+Niranjana Garewal — Marketing Executive
+
+Verdict: Qualify — 7/10
+
+Raj's four screening areas:
+- Marketing experience: 3+ years with a clear upward trajectory — Sales Intern (1 mo, 2021) → Digital Marketing Intern (1 mo, 2021) → Marketing Executive at Netcore Cloud (Feb 2022–Feb 2024, B2B demand gen) → Marketing Executive at QX Global Group (Jan 2026–present, recruitment marketing). Strongest and most senior profile of the two seen so far.
+- Email marketing experience: Present, though mixed in scope. At QX Global: "Developed marketing collateral — press releases, brochures, candidate decks, newsletters, and email campaigns — using Canva and Force24" (Force24 is a marketing automation/email platform). Skills list also includes Pardot (marketing automation) and Clearout/Pepipost (email verification and deliverability tooling) — real exposure to the deliverability side the JD calls out. Caveat: email reads as one piece of a very broad role that also covers podcasts, microsites, and recruiter-platform admin, not a dedicated email function.
+- Types of emails sent: Newsletters and "email campaigns" at QX Global; candidate/client mailing lists managed via Talisman for recruitment marketing sends. Not mentioned: cold outreach, nurture, or reactivation sequences to a B2B prospect/buyer audience specifically — her sends are candidate/client-facing recruitment comms, not prospect cold email.
+- ABM understanding: Explicit and direct — summary states "B2B Demand Generation, ABM Marketing," and at Netcore Cloud: "Collaborated with the ABM team to execute multi-channel marketing campaigns." This is the strongest ABM signal of any candidate reviewed so far.
+
+Strengths: Genuine B2B martech background — Netcore Cloud is itself an email/marketing automation company. Hands-on with ZoomInfo, Salesforce, LinkedIn Sales Navigator, and Lusha for lead generation (directly confirms the JD's ZoomInfo nice-to-have). Increased qualified leads 60% at Netcore per her own account. Weekly/monthly performance reporting cadence matches the JD's ask. Steady, increasing-responsibility career progression rather than scattered short stints.
+
+Weaknesses/red flags: No industrial, steel, plastics, or distribution vertical exposure — her B2B experience is SaaS (Netcore) and recruitment/staffing (QX Global), a different buyer entirely from 50–100 employee industrial CEOs. No demonstrated cold-outreach sequence copywriting for a sales pipeline, which is the actual core of this job. Started her current role 19 Jan 2026 — worth asking directly why she's looking again so soon after starting it.
+
+Net: the best fit seen so far on marketing depth and ABM specifically, weaker on proof of hands-on cold-email-to-cold-buyer writing. Send the next one when ready.
