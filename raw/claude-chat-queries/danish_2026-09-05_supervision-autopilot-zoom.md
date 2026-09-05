@@ -6,84 +6,68 @@ created: 2026-09-05
 updated: 2026-09-05
 ---
 
-# Supervision Autopilot — Zoom support
+# Supervision Autopilot — Zoom rebuild & handover
 
 ## Turn 1
 
 **User:** can we do the [same] for Zoom meetings?
 
-**Assistant:** Investigated `/Users/raven/Developer/Supervision Meeting` — a Google Apps Script "Supervision Autopilot" (`SupervisionAutopilot.gs`, 4,254 lines) that runs monthly supervision sessions: creates two recurring Google Calendar events (third Tuesday, morning + evening) with Google Meet links, syncs guest lists from a Participants sheet, sends reminders at 7d/1d/1h, reads attendance automatically from the Google Meet API, nudges morning no-shows to the evening session, escalates to anyone who attended neither, emails a summary, and runs a daily self-health-check.
+**Assistant:** Investigated `/Users/raven/Developer/Supervision Meeting` — a Google Apps Script "Supervision Autopilot" (`SupervisionAutopilot.gs`, 4,254 lines): two recurring Calendar events (third Tuesday, morning + evening), guest sync from a Participants sheet, reminders at 7d/1d/1h, automatic attendance from the Meet API, evening nudge for morning no-shows, escalation for people who attended neither, monthly report, daily self-health-check.
 
-### Verdict: yes, and most of the script doesn't care
+**Verdict: yes.** The platform-specific surface is ~8 functions out of 4,254 lines (`ensureOneEvent_` conference block, `waitForMeet_`/`meetLink_`/`meetCode_`, `readAttendance_`, `meetApi_`/`meetError_`, `resolveParticipant_` field names, `liveCode_`/`probeAttendance`, two health rows). Everything downstream works on `{email, display, userId}`.
 
-**The Meet-specific surface is small** — about eight functions out of 4,254 lines:
+Three things genuinely change: (1) attendance needs Zoom Pro+ with `report:read:admin` and Dashboard/Reports role permissions; (2) auth gets *simpler* — Server-to-Server OAuth replaces the whole Google Cloud project/consent-screen dance; (3) the "script must run as the host" constraint loosens to account-level.
 
-| What | Where |
-|---|---|
-| Attach a conference to the series | `SupervisionAutopilot.gs:698-701`, `:791-794` |
-| `waitForMeet_` / `meetLink_` / `meetCode_` | `:800-826` |
-| `readAttendance_` — the conference-record query | `:1895` |
-| `meetApi_` / `meetError_` | `:1980`, `:2016` |
-| Field names in `resolveParticipant_` | `:2045-2050` |
-| `liveCode_` / `probeAttendance` | `:3098`, `:3109` |
-| Two Dashboard health rows | `:2597-2621` |
-
-Everything downstream — cycle maths, ledger, reminders, evening nudge, escalation, report, test mode, dry run, and the whole name-matching/learning chain — works on `{email, display, userId}` and never touches Meet.
-
-The Calendar side stays: still need a recurring Calendar event for invites, guest-list sync and privacy flags. Only change is the Zoom join URL goes in the event body instead of Google provisioning `conferenceData`.
-
-### The three things that genuinely change
-
-**1. Attendance needs a paid Zoom plan.** `GET /report/meetings/{uuid}/participants` is Pro-and-above only, needs `report:read:admin`, and the role behind the Server-to-Server app needs Dashboard and Reports ticked in Role Settings.
-
-**2. Auth gets simpler.** Server-to-Server OAuth app replaces the entire Google Cloud project dance in README step 5 — no linked Cloud project, no Internal consent screen, no `meetings.space.readonly`.
-
-**3. The host constraint loosens.** An account-level Zoom token reads any meeting in the account, replacing the "script must run as the event organiser" check.
-
-### Gotchas
-- Report lag up to ~30 min vs `GRACE_MINUTES = 10`
-- Zoom UUID double-encoding (`/` and `//` in UUIDs)
-- Use `type: 3` recurring-no-fixed-time meetings (Zoom's own recurrence caps at 60 occurrences)
-- Rejoins produce duplicate rows — `joined[email] = true` already dedupes
-- Zoom returns `user_email`, which Meet never does
-
-### Recommendation
-Dual-provider shim behind a `Meeting platform (Meet/Zoom)` Setup cell rather than replacing Meet. ~400–600 new lines.
-
-Sources: [Zoom report API prerequisites](https://developers.zoom.us/docs/api/meetings/), [report:read:admin scope and role permissions](https://devforum.zoom.us/t/api-scope-reportadmin-not-available-in-business-plan/111204), [reports on Pro and above](https://devforum.zoom.us/t/not-able-to-use-reports-api-on-a-pro-account/88471)
+Gotchas: report lag ~30 min vs `GRACE_MINUTES = 10`; Zoom UUID double-encoding; 50-occurrence cap on recurring meetings; rejoins produce duplicate rows (already deduped); Zoom returns `user_email`, which Meet never does.
 
 ## Turn 2
 
 **User:** we do have paid zoom
 
-**Assistant:** Began a deeper read of the codebase to build the dual-provider shim. Mid-turn the user said **"don't make changes yet"** — stopped before writing anything. Zero edits made. Presented the following plan for approval.
+**Assistant:** Began deeper read to build a dual-provider shim. Mid-turn the user said **"don't make changes yet"** — stopped with zero edits. Key findings from the deeper read:
 
-### What the deeper read changed about the plan
+- **`link_()` (`:1760-1770`) is a hard blocker** — refuses any URL that isn't `https://meet.google.com/...`. Its real job is keeping arbitrary URIs out of an `href` in mail to every participant, so widen to a two-host allowlist rather than making it platform-conditional.
+- **`peopleEmail_()` (`:2172`) must be gated** — it looks up a *Google* person id; fed a Zoom id it fails every time and burns the two-refusal `PEOPLE_FAILS` budget.
+- **Learned-match keys need namespacing** — `meet:<id>` would collide with Zoom ids; `meetname:<name>` stays shared deliberately.
+- **`GRACE_MINUTES = 10` (`:268`) and `past_(s.end, 60)` (`:1863`)** both become platform-dependent.
 
-**`link_()` is a hard blocker, and the important one.** `SupervisionAutopilot.gs:1760-1770` refuses any URL that isn't `https://meet.google.com/...` — a Zoom link would render in every email as *"(link looks wrong — check the calendar event)"*. Its real job is stopping an arbitrary conferencing URI reaching an `href`, so widen it to a two-host allowlist (Meet **or** Zoom) rather than making it platform-conditional, and put the "your platform says Zoom but this link is Meet" question on the Dashboard instead. Keeps the injection guard as strong and keeps the self-test green.
+## Turn 3
 
-**The directory lookup must be gated.** `peopleEmail_()` (`:2172`) looks up a *Google* person id. Fed a Zoom user id it fails every time and burns the two-refusal `PEOPLE_FAILS` budget for nothing.
+**User:** just tell me the schematics first
 
-**Zoom gives `user_email` for signed-in participants** — stronger than anything in the current chain, so it slots in at position 2 of `resolveParticipant_`: after remembered-by-id, before the directory.
+**Assistant:** Gave the mechanism as diagrams — two seams (`ensureConference_` at setup time, `joiners_()` at read time), the `{display, userId, email}` Joiner contract crossing them, the five-step identity chain, the Script Properties / CacheService state map, and the auth comparison. Noted the one shared-code change outside the seams (`link_()`).
 
-**Learned matches need a namespace split.** `meet:<id>` keys would collide with Zoom user ids. Ids get a `zoom:` prefix; `meetname:<name>` keys stay shared deliberately — same person, same name, either platform.
+## Turn 4
 
-**Two timing constants are Meet-shaped.** `GRACE_MINUTES = 10` (`:268`) and the `past_(s.end, 60)` "call it empty" rule in `collect_` (`:1863`) both become platform-dependent functions.
+**User:** Handover to someone else who will continue building it. Two markdown files — one explaining what it is and how it works in simple words, one an architecture another person can pick up from. Zoom only, no mention of Google Meet. Ask about anything unsure.
 
-### The plan (awaiting approval)
+**Assistant:** Asked three questions that genuinely forked the work. Answers:
 
-1. **Setup tab** — `Meeting platform (Meet/Zoom)` (defaults to `Meet`, so the existing install is untouched) and `Zoom host email`.
-2. **Credentials in Script Properties, not on the sheet** — a `Zoom` submenu with *Connect Zoom* / *Forget the Zoom credentials*. Anyone with edit access to the sheet could otherwise read the account secret.
-3. **Provider shim** — `ensureConference_`, `conferenceLink_`, `conferenceCode_`, and `joiners_(s)` returning a normalised `{display, userId, email}` list. Everything downstream untouched.
-4. **Zoom API layer** — Server-to-Server OAuth token cached in `CacheService`, `zoomApi_` retrying on 429/5xx like `meetApi_`, `zoomError_` translating plan/scope/role failures into the same plain-English style, UUID double-encoding as its own tested function.
-5. **Attendance** — `past_meetings/{id}/instances` filtered to the session window, then `report/meetings/{uuid}/participants`.
-6. **Health checks** — Zoom connection, reports API reachable, both meetings resolvable, warning if a converted event still carries a Google Meet conference (two links in one invite is how someone joins the wrong one and gets marked absent).
-7. **Migration to schema v7** so existing sheets get the new Setup rows from the engine without re-running `install`.
-8. **Self-test additions** and a README section.
+1. **Fresh rewrite, Zoom-native** (not a swap into the existing script)
+2. **Both audiences in one document** for the plain-English file
+3. **Let Zoom send the invites** — Zoom registration/scheduling handles invitations and the calendar entry; the script keeps roster, reminders, ledger, nudge, escalation, monthly report
 
-### Two judgment calls flagged for the user
+Verified via web search: 50-occurrence cap on recurring meetings; `registration_type: 1` = register once, attend any occurrence; registrants get unique join URLs; `registrant_id` available in report participants.
 
-- **Would not strip the Meet conference** off an existing event when switching to Zoom — warn loudly on the Dashboard, leave removal to a human. Destroying a bookmarked link is the user's call.
-- **New Zoom meetings would be `type: 3`** (recurring, no fixed time) — one permanent join URL, script keeps owning the date arithmetic.
+### Delivered
 
-**Status: waiting on the user's go-ahead before any code is written.**
+**`HANDOVER.md`** (244 lines) — Part A for anyone: the problem, month-by-month timeline, the one tab a human touches, seven rules the system won't break (with reasons), what failure looks like. Part B for the developer: vocabulary, required access, how to work without emailing real people, five things that will bite them, prior art, where to start.
+
+**`ARCHITECTURE.md`** (592 lines, 13 sections) — scope/non-goals; platform decision with exit criteria; prerequisites table; system diagram; full data model (7 tabs + Script Properties + cache); the cycle as a state machine; module map; Zoom integration surface with exact endpoints and payloads; identity/attendance chain; scheduling/concurrency/idempotency; failure model and observability; risks and open questions; 10-milestone build order.
+
+### The key architectural consequence
+
+Letting Zoom send invitations transformed the identity problem. Because everyone registers, the attendance report carries a `registrant_id` — an identifier the system issued that the joiner cannot choose or mistype. Identity becomes a lookup, not a guess; name-matching drops to a fallback that should almost never fire. Cost: per-person join links, so reminders must be personalised, links can't be published, and a forwarded link credits its owner.
+
+### Decisions made (alternatives documented so they can be re-opened)
+
+- Apps Script + Sheets stays, with explicit exit criteria
+- `type: 8` recurring meetings — only fixed-time series produce a calendar file with real dates
+- Do **not** require registration to join — locking someone out of a mandatory meeting is worse than an occasional Unmatched row
+
+### Left open deliberately (verify during build, not guessed)
+
+1. **50-occurrence cap** (~4 years monthly) — could not establish whether registrants survive series recreation. Doc says assume they don't; the alert must ship even if automatic rollover doesn't.
+2. **Registration rate limits** — reports of a per-registrant daily cap. Sync specified as resumable across ticks.
+
+The existing script is referenced once per file as "prior art" worth reading for email wording and failure modes, without documenting its video integration.
