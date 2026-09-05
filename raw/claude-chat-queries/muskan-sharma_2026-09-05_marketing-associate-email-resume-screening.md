@@ -273,3 +273,14 @@ Strengths: Genuine, measurable results — LinkedIn presence scaled +80% followe
 Weaknesses/red flags: Complete absence of anything the JD is actually hiring for — no email marketing tool, no email campaign, no list/CRM management, no B2B lead gen, no ABM. This is a brand/corporate-communications and social-media generalist, a different job function entirely from "own the email marketing engine." Only two employers in 4+ years with no cross-industry breadth. Resume includes a photo and personal details (gender, hobbies) — not a competency issue, but signals a less targeted application for this specific role.
 
 Net: capable brand/social marketer, but there is nothing in this resume connecting to email, demand gen, or ABM — weakest fit of the three seen so far. Send the next one when ready.
+
+**User:**
+[Re-uploaded resume: 3.pdf — same filename, same file size (315.3KB)]
+check
+
+Resume content (extracted): Identical to the previous Daniyal Khatri resume — same profile, same work experience (National E-Repository Limited / NCDEX Group, Dec 2022–present; SVR Global, Jun–Nov 2022), same skills, tools, education, and certifications.
+
+**Assistant:**
+This is the identical resume to the previous upload — Daniyal Khatri, same content, same file size. Looks like a duplicate send rather than a new candidate.
+
+Already screened: Disqualify, 2/10 — no email marketing, ABM, or B2B demand-gen signal (full breakdown in my previous message). Nothing to add on a re-check of the same file. Send the next resume whenever you have it.
