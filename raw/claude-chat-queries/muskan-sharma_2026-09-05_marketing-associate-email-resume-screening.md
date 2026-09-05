@@ -514,3 +514,58 @@ Strengths: The most quantified resume seen so far — a real 15% CTR lift from A
 Weaknesses/red flags: Her best, most relevant email experience is dated (2021–2022) and brief (7 months); everything since has moved away from hands-on email execution toward freelance generalist marketing and now pure B2B sales. No cold-outreach evidence at all — her strength is retention/reactivation to existing customers, not building cold sequences to new industrial buyers, which is the job's actual center of gravity. No ABM. No industrial, steel, plastics, or distribution vertical exposure — her B2B experience is healthcare/insurance (Onsurity) and enterprise tech client work (Candorworks, likely agency-side). Being currently employed in an unrelated sales role also raises a question about whether this is a genuine pivot back to marketing execution or a broader job search.
 
 Net: strongest quantified proof of actual email performance (CTR, reactivation rate) among all candidates, but the relevant experience is older and her recent trajectory has drifted from marketing into sales — and she has no cold-outreach evidence, which is the job's core. Worth an interview to understand why she's moving back into hands-on email execution now. Send the next one when ready.
+
+**User:**
+[Uploaded resume: 7.pdf — Arpita Mishra]
+check
+
+Resume content (extracted):
+ARPITA MISHRA
+Senior Digital Marketing Manager | SEO | Paid Ads | Performance Marketing
+Email: arpitamishra6979@gmail.com | Phone: 9711817669 | Location: Lucknow, India
+
+SUMMARY
+Senior Digital Marketing professional with 8+ years of experience in SEO, Google Ads, Meta Ads, performance marketing, ORM, and team leadership. Proven record of driving ROI, organic growth, and managing multi-industry clients using data-driven strategies.
+
+KEY SKILLS
+SEO & GEO, Google Ads, Meta Ads, Performance Marketing, Keyword Research, On-Page SEO, Off-Page SEO, Google Analytics, Search Console, Facebook Business Manager, Social Media Marketing, Email Marketing, WordPress, Reporting & KPIs
+
+PROFESSIONAL EXPERIENCE
+Senior Digital Marketing Manager | Togwe Pvt. Limited (Remote) | Nov 2024 – Present
+- Manage Google & Meta ad campaigns to improve ROI
+- Handle client communication and lead generation strategies
+- Monitor SEO, website performance, and reporting
+
+Digital Marketing Manager | TDM (USA) | Aug 2023 – Nov 2024
+- Managed paid media campaigns and SEO audits for international clients
+- Improved organic rankings through keyword and on-page optimization
+
+Senior Executive – Meta (Facebook) | Wipro | Feb 2022 – Aug 2023
+- Optimized Meta ad accounts and ensured policy compliance
+
+Team Leader – Digital Marketing | Crystal Hues Ltd. | Jun 2021 – Dec 2022
+- Led SEO projects, KPIs, and team training
+
+SEO Executive | PCL Technology | Aug 2017 – May 2021
+- Managed SEO for US, UK, Singapore clients using Ahrefs & Screaming Frog
+
+EDUCATION
+B.Tech – MIT, Moradabad (Gautam Budh University)
+Diploma – Govt. Polytechnic, BTE Board Hardoi
+
+**Assistant:**
+Arpita Mishra — Senior Digital Marketing Manager
+
+Verdict: Disqualify — 2/10
+
+Raj's four screening areas:
+- Marketing experience: 8+ years, but the entire career is an SEO/paid-media/performance-marketing track — SEO Executive (PCL Technology, Aug 2017–May 2021) → Team Leader Digital Marketing/SEO (Crystal Hues Ltd., Jun 2021–Dec 2022) → Senior Executive, Meta/Facebook ads (Wipro, Feb 2022–Aug 2023) → Digital Marketing Manager, paid media & SEO (TDM USA, Aug 2023–Nov 2024) → Senior Digital Marketing Manager, Google & Meta ads (Togwe Pvt. Ltd., Nov 2024–present). Genuinely senior and long-tenured, but in a different discipline from the JD.
+- Email marketing experience: Not mentioned anywhere in the actual work history. "Email Marketing" appears once as a bare item in the skills list with zero supporting detail across any of the five roles — no tool named, no campaign described, no result cited.
+- Types of emails sent: Not mentioned.
+- ABM understanding: Not mentioned. No CRM, sales-intelligence, or demand-gen tooling anywhere (no Salesforce, HubSpot, ZoomInfo, Apollo) — her client work reads as agency-style SEO/paid-ads management, not B2B pipeline or account-based marketing.
+
+Strengths: Long, senior track record with international client exposure (US, UK, Singapore, and a US-based employer). Real technical depth in SEO and paid media (Ahrefs, Screaming Frog, Google Ads, Meta Ads, Google Analytics, Search Console). Team leadership and training experience.
+
+Weaknesses/red flags: This is a senior SEO/paid-ads specialist, not an email marketer — a sharper specialization mismatch than most other candidates since 8 years of seniority sits in the wrong discipline rather than being generalist and adjacent. Zero hands-on email evidence anywhere. No ABM, no B2B demand-gen tooling at all. Two listed roles overlap by about 7 months — Crystal Hues Ltd. (Jun 2021–Dec 2022) and Wipro (Feb 2022–Aug 2023) — an unexplained inconsistency worth asking about directly. Practically, a "Senior Digital Marketing Manager" with 8+ years is a significant seniority and likely compensation mismatch against an entry-to-mid-level Marketing Associate role at ₹20,000/month; even if she were interested, retention risk would be high.
+
+Net: strong senior generalist in the wrong specialty, with no email marketing substance and a seniority/comp fit problem on top. Send the next one when ready.
