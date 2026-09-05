@@ -147,9 +147,39 @@ Still blocked on the folder path and the JD.
 
 ---
 
+## Assistant (closing line)
+
+One chat is the right answer. Send me the folder path and the JD when you're ready.
+
+---
+
+## User
+
+i will share pdf manually and will share the jd
+
+---
+
+## Assistant
+
+That works, but manual attachment is the slowest of the three options. Ranked:
+
+**Best — zip the folder, attach one file.** Right-click the resume folder in Windows, "Send to → Compressed (zipped) folder", drag the single .zip in here. I unzip it in my workspace and extract text from all 167 in one pass. One upload, nothing to babysit, and it's far cheaper on processing than 167 individual PDFs.
+
+**Second — connect the folder.** "Add folder" in the desktop app, point at the resume folder. Zero uploading, I read them where they sit, and I can write the results file straight back into that folder.
+
+**Third — attach manually.** Works, but there's a per-message file limit, so you'll be doing roughly 10 separate uploads and each PDF gets processed as pages rather than extracted text. Slower and more token-heavy for the same result.
+
+Either of the first two is a single action instead of ten. Your call.
+
+Send the JD first, whichever you pick. I'll build the rubric from it and have it ready for your approval while the files come across — that way the moment the resumes land, scoring starts.
+
+Two things to include with the JD if they aren't in it: the hard filters (location/work mode, experience range, notice period, budget band if there is one) and whether this is EOXS or AskCruz. Different roles, different bar.
+
+---
+
 ## Status / Next steps
 
-- **Blocked on:** (a) folder access to the resume directory on desktop-5ncsbpq, (b) the JD text.
+- **Blocked on:** (a) the resume files — user intends to attach PDFs manually; zip-upload or folder-connect recommended instead, (b) the JD text.
 - **Agreed parameters:** 50 ft deep rigor · Draft craft · output = per-applicant rating out of 10 with qualify/disqualify decision.
-- **Open question to user:** strict /10 as originally asked, vs bands (strong/possible/no) with /10 as an in-band sort key.
-- **Planned execution model:** extract-to-text pass → freeze rubric to disk → score in batches of 15-20 writing results to disk incrementally → final calibration pass over the borderline band. All in one chat; no need to split conversations.
+- **Open questions to user:** strict /10 vs bands (strong/possible/no) with /10 as in-band sort key; hard filters (location/work mode, experience range, notice period, budget band); whether the role is for EOXS or AskCruz.
+- **Planned execution model:** extract-to-text pass → freeze rubric to disk → score in batches of 15-20 writing results to disk incrementally → final calibration pass over the borderline band. All in one chat.
