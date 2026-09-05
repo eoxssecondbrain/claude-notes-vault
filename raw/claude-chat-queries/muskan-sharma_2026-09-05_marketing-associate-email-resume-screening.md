@@ -209,3 +209,67 @@ Strengths: Genuine B2B martech background — Netcore Cloud is itself an email/m
 Weaknesses/red flags: No industrial, steel, plastics, or distribution vertical exposure — her B2B experience is SaaS (Netcore) and recruitment/staffing (QX Global), a different buyer entirely from 50–100 employee industrial CEOs. No demonstrated cold-outreach sequence copywriting for a sales pipeline, which is the actual core of this job. Started her current role 19 Jan 2026 — worth asking directly why she's looking again so soon after starting it.
 
 Net: the best fit seen so far on marketing depth and ABM specifically, weaker on proof of hands-on cold-email-to-cold-buyer writing. Send the next one when ready.
+
+**User:**
+[Uploaded resume: 3.pdf — Daniyal Khatri]
+check
+
+Resume content (extracted):
+DANIYAL KHATRI
+MARKETING EXECUTIVE
+Contact: +91 9833588503, daniyalkhatri64@gmail.com, linkedin.com/in/daniyalkhatri-9639491a0, Navi Mumbai - 410210, India, Male
+
+PROFILE
+Results-driven Marketing Professional with 4+ years of experience in digital marketing, business reporting and brand management. Skilled in developing data-driven strategies, executing integrated marketing campaigns and enhancing brand visibility across digital and offline channels. Proven ability to drive engagement, growth and improve campaign performance through analytics and targeted content. Experienced in working closely with senior leadership and cross-functional teams to deliver strategic marketing initiatives, corporate communications, and business insights.
+
+WORK EXPERIENCE
+National E-Repository Limited (A NCDEX Group Company) — Marketing Executive, 12/2022 - Present
+- Drove strategic decision-making by delivering high-impact business reports, dashboards, and leadership presentations
+- Collaborated directly with CXOs (MD & CEO, CMO, CTO) to shape and execute key marketing strategies
+- Owned end-to-end social media strategy & execution; scaled LinkedIn presence (+80% followers, +130% impressions, 11.5% engagement)
+- Spearheaded development of marketing collateral, corporate communication and branding/rebranding initiatives
+- Leveraged market research & data analysis to uncover insights, optimize campaigns, and identify growth opportunities
+- Executed end-to-end production of marketing collaterals, ensuring brand consistency
+- Led cross-functional initiatives, vendor partnerships and executed high-level corporate events
+- Managed website content strategy, ensuring alignment with brand positioning and business goals
+
+SVR Global — Junior Digital Marketing Analyst, 06/2022 - 11/2022
+- Optimizing website content, meta tags and headings to improve search engine ranking.
+- Managed backlink efforts to strengthen domain authority and support overall SEO goals.
+- Conducting keyword research and analysis to identify trends and opportunities.
+- Monitoring website performance using different tools.
+
+EDUCATION
+- Master of Management Studies, Marketing, Pillai Institute of Management Studies and Research, 2020-2022, CGPI 8.8/10
+- Bachelor of Management Studies, Marketing, Ramsheth Thakur College of Commerce and Science, 2016-2019, CGPI 7.6/10
+
+SKILLS
+Marketing Strategy & Planning, Business Reporting & Data Analysis, Brand Management, Content Strategy & Campaign, Social Media Strategy, Market Research, Leadership Management, Cross-Functional Collaboration, Business Presentations, Integrated Marketing Campaigns, Event & Program Management, Budget Management
+
+TOOLS
+Google Analytics, LinkedIn Analytics, Meta Business Suite, Canva, Adobe Creative Cloud, CapCut
+
+LANGUAGES: English, Hindi, Marathi
+
+CERTIFICATIONS
+- Digital Marketing, Udemy, Credential ID: UC-2f8cf8f2-17ab-43e6-bd78-19a6258f1e0a
+- Reimagining Marketing with Generative AI, Skillsoft, Credential ID: 104703805
+
+PASSION: Photography, Travelling, Cooking, Listening Music, Numismatics
+
+**Assistant:**
+Daniyal Khatri — Marketing Executive
+
+Verdict: Disqualify — 2/10
+
+Raj's four screening areas:
+- Marketing experience: 4+ years, mostly at one company — Junior Digital Marketing Analyst at SVR Global (Jun–Nov 2022, ~6 months, SEO-focused) then Marketing Executive at National E-Repository Limited/NERL, an NCDEX Group company (Dec 2022–present, ~3.75 years). Real tenure and CXO-level exposure, but the discipline is brand management, social media, and corporate communications — not demand generation or outbound.
+- Email marketing experience: Not mentioned. No email platform appears anywhere — tools list is Google Analytics, LinkedIn Analytics, Meta Business Suite, Canva, Adobe Creative Cloud, CapCut. No Mailchimp, HubSpot, Apollo, or any marketing-automation/ESP tool at all.
+- Types of emails sent: Not mentioned.
+- ABM understanding: Not mentioned. No demand-gen, lead-gen, CRM, or sales-intelligence tooling anywhere (no Salesforce, ZoomInfo, Apollo, LinkedIn Sales Navigator) — this profile has no B2B pipeline/outbound component at all, unlike candidate 2.
+
+Strengths: Genuine, measurable results — LinkedIn presence scaled +80% followers, +130% impressions, 11.5% engagement. Direct collaboration with MD/CEO, CMO, CTO. Solid academic background (MMS Marketing, 8.8 CGPI) and relevant certifications (Digital Marketing; Reimagining Marketing with Generative AI). Comfortable with business reporting, dashboards, and leadership presentations.
+
+Weaknesses/red flags: Complete absence of anything the JD is actually hiring for — no email marketing tool, no email campaign, no list/CRM management, no B2B lead gen, no ABM. This is a brand/corporate-communications and social-media generalist, a different job function entirely from "own the email marketing engine." Only two employers in 4+ years with no cross-industry breadth. Resume includes a photo and personal details (gender, hobbies) — not a competency issue, but signals a less targeted application for this specific role.
+
+Net: capable brand/social marketer, but there is nothing in this resume connecting to email, demand gen, or ABM — weakest fit of the three seen so far. Send the next one when ready.
