@@ -451,3 +451,66 @@ Strengths: Genuinely strong writer — journalism-style background (news, column
 Weaknesses/red flags: Core identity on this resume is content/PR/copywriting, not email marketing or demand generation — the one role that touches the JD's actual tools (Perennial Systems) is his shortest and least detailed, and its listed dates (May–Sep 2026) suggest it just ended, which is worth asking about directly. No list hygiene, CRM/list management, deliverability, or CAN-SPAM/compliance mentioned anywhere, despite these being explicit JD requirements. No open/reply/conversion metrics for any email work, despite that being central to the role. No ABM. Six roles plus a concurrent "Founder" side venture in about 4 years is a genuine tenure and focus concern — only one job (CloudRedux, content writing) lasted more than 6 months before this year.
 
 Net: the strongest writer of the candidates so far, but the actual email-marketing/demand-gen substance is thin and concentrated in his shortest, most recently-ended role. Worth a direct conversation to establish what he actually did at Perennial Systems before deciding — as written, the resume doesn't prove he can own an email engine end to end. Send the next one when ready.
+
+**User:**
+[Uploaded resume: 6.pdf — Ruchika Lahoti]
+check
+
+Resume content (extracted):
+RUCHIKA LAHOTI
++91 8403063375 | ruchika.lahoti01@gmail.com | LinkedIn | Bengaluru
+
+PROFESSIONAL SUMMARY
+Marketing and analytics professional with experience in customer lifecycle management, retention marketing, and campaign optimization across B2B and B2C environments. Skilled in data-driven decision-making, customer segmentation, and performance analysis, with proven success in improving engagement and reactivation campaigns.
+
+SKILLS
+Tools: MS Excel, PowerPoint, Power BI, Adobe Suite, CRM, Email Marketing
+Marketing & Analytics: Retention Marketing, Lifecycle Marketing, Campaign Optimization, Performance Marketing, Customer Segmentation, Cohort Analysis, A/B Testing, Customer Journey Mapping, Market Research, KPI Tracking, Lead Generation, Data Analysis, Campaign Strategy, Digital Marketing, CRM Marketing, Customer Engagement, Marketing Communications, RFM Analysis, Consumer Insights, Conjoint Analysis
+Language Proficiency: English, Hindi, Bengali, Assamese, Marwadi, Spanish (Beginner)
+
+PROFESSIONAL EXPERIENCE
+Onsurity | Business Associate- Revenue | July 2026 – Present
+- Drive B2B revenue by engaging SMEs, startups, and organizations.
+- Manage prospecting, client conversations, presentations, and follow-ups.
+- Advise decision-makers on employee healthcare and insurance solutions.
+
+Bigbasket | Marketing Intern | May 2024 – July 2024
+- Analyzed 12-month customer data (~3.5 lakh users/month) to identify churn and retention gaps.
+- Designed 8 customer cohorts and conducted a 1,000-customer survey to improve retention.
+- Recommended data-driven retention and reactivation strategies based on customer insights.
+- Re-engaged 58% of inactive customers through targeted campaigns.
+
+Edugenie | Sales and Marketing Specialist (Freelancing) | July 2022 – Jun 2024
+- Managed social media, stakeholder communication, partner outreach, and business development.
+- Coordinated 10–20 monthly teacher training sessions with Government, NGOs, and media partners.
+
+Candorworks | Marketing Trainee | December 2021 – June 2022
+- Managed multilingual email campaigns for Dell, Lenovo, Microsoft, and Adobe.
+- Conducted A/B testing, achieving a 15% lift in CTR and improving lead engagement.
+- Coordinated with cross-functional teams for timely campaign execution.
+
+PROJECTS AND ACHIEVEMENTS
+- RFM Analysis: Segmented customers using Recency, Frequency & Monetary metrics to identify high-value and at-risk segments.
+- Conjoint Analysis: Evaluated consumer preferences across price, protein, calories, and flavor attributes for plant-based milk.
+- Built and monetized a YouTube channel with 1M+ views; Silver Medallist in BBA.
+
+EDUCATION
+- PGDM (E-Business) – Welingkar Institute, Bengaluru (2024–2026), CGPA: 7.44
+- BBA (Sales & Marketing) – ADYPU University, Pune (2019–2022), CGPA: 8.64, Silver Medallist
+
+**Assistant:**
+Ruchika Lahoti — Marketing & Analytics Professional
+
+Verdict: Qualify — 7/10
+
+Raj's four screening areas:
+- Marketing experience: About 4+ years, but the trajectory is uneven. Marketing Trainee at Candorworks (Dec 2021–Jun 2022, 7 months) → Sales and Marketing Specialist, freelance, at Edugenie (Jul 2022–Jun 2024, ~2 years) → Marketing Intern at Bigbasket (May–Jul 2024, 3 months) → Business Associate-Revenue at Onsurity (Jul 2026–present, ~2 months, current). Her deepest marketing-specific work sits in 2021–2024; her current role is a B2B sales/revenue position, not marketing — worth noting she isn't presently working in a marketing function at all.
+- Email marketing experience: The most concretely demonstrated and quantified of any candidate reviewed. At Candorworks: "Managed multilingual email campaigns for Dell, Lenovo, Microsoft, and Adobe... Conducted A/B testing, achieving a 15% lift in CTR." Email Marketing is also explicitly listed as a tool skill. This experience is real client-brand work with a measured performance result, though it's from a 7-month stint roughly 4.5 years ago.
+- Types of emails sent: Reactivation is explicit and quantified — at Bigbasket: "Re-engaged 58% of inactive customers through targeted campaigns," directly matching one of the three sequence types the JD names. Nurture/lifecycle marketing is implied by her skill set (Lifecycle Marketing, Customer Journey Mapping, RFM Analysis) though not tied to a specific email bullet. Cold outreach: Not mentioned — her work is CRM/lifecycle marketing to an existing customer base, not cold prospecting to net-new B2B contacts, which is the actual core of this job.
+- ABM understanding: Not mentioned. Her analytical toolkit (RFM, cohort analysis, segmentation) is B2C/CRM-lifecycle in orientation rather than account-based B2B targeting, and her current sales role, while B2B, isn't framed as ABM.
+
+Strengths: The most quantified resume seen so far — a real 15% CTR lift from A/B testing, a real 58% reactivation rate, work on recognizable global brand email campaigns (Dell, Lenovo, Microsoft, Adobe). Strong, precise marketing-analytics vocabulary (A/B testing, cohort analysis, RFM, customer journey mapping) that maps directly to the JD's "track open, reply, and conversion rates" requirement. Strong academic record (Silver Medallist BBA, ongoing PGDM in E-Business).
+
+Weaknesses/red flags: Her best, most relevant email experience is dated (2021–2022) and brief (7 months); everything since has moved away from hands-on email execution toward freelance generalist marketing and now pure B2B sales. No cold-outreach evidence at all — her strength is retention/reactivation to existing customers, not building cold sequences to new industrial buyers, which is the job's actual center of gravity. No ABM. No industrial, steel, plastics, or distribution vertical exposure — her B2B experience is healthcare/insurance (Onsurity) and enterprise tech client work (Candorworks, likely agency-side). Being currently employed in an unrelated sales role also raises a question about whether this is a genuine pivot back to marketing execution or a broader job search.
+
+Net: strongest quantified proof of actual email performance (CTR, reactivation rate) among all candidates, but the relevant experience is older and her recent trajectory has drifted from marketing into sales — and she has no cold-outreach evidence, which is the job's core. Worth an interview to understand why she's moving back into hands-on email execution now. Send the next one when ready.
