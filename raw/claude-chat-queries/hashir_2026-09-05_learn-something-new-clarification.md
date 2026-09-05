@@ -54,3 +54,23 @@ Where this actually matters for you: everything you already have read access to 
 The blind spot: this data is confidential business data — tickets, invoices, personnel, financials — and scheduled/autonomous tasks run when you're not watching in real time. Anthropic's own guidance on this is explicit: start scheduled automation with low-risk tasks (summaries, compiling info) before automating anything consequential, and avoid putting sensitive data into unattended workflows without that ramp-up. Given what your connectors touch, "just automate the ticket brief" isn't a zero-risk first move — it's worth trialing on a narrow, non-sensitive slice first, not going straight to a scheduled task touching CRM and financials.
 
 Next: Claude Code — the dev-specific tooling, since you're in a developer/support role, not just support.
+
+User: next
+
+Assistant: Section 3 — Claude Code, the dev-specific layer
+
+Claude Code runs in the terminal, VS Code, JetBrains, a standalone desktop app, a web surface, and mobile. It's a different tool from Cowork — coding-specific, with its own extension system:
+
+CLAUDE.md — persistent project context loaded every session automatically (conventions, build commands, "never touch this file" rules). Kept under 200 lines; anything bigger moves to skills.
+
+Skills — the same mechanism you're already using in this session (threads-ov, eoxs-data-general), but in Code they can also be invoked with a command like /deploy, or Claude loads them automatically when the task matches.
+
+MCP — same protocol powering your Odoo/Gmail/Threads OV connectors here, usable inside Code for direct database queries, running tests, hitting APIs, during actual development.
+
+Subagents — isolated workers that read a lot (many files, a full log) and return only a summary, so a big investigation doesn't bloat your main context. Useful for something like "audit this module for the bug pattern we keep hitting" without flooding the main session.
+
+Hooks — deterministic, not a request Claude might skip. A hook can block an edit to a protected file, run a linter after every change, or fire a Slack notification — guaranteed on every matching event, unlike an instruction in CLAUDE.md which Claude interprets and can occasionally miss.
+
+For your actual situation: you're a developer/support hybrid working against Odoo instances with real financial and confidential data. If you write code against these systems, CLAUDE.md + a project-scoped MCP connector to the relevant instance + a hook that blocks writes to production config would give you guardrails that don't depend on remembering to be careful each session — the same rigor eoxs-data-general enforces here (read-only, redaction) but enforced mechanically in your dev environment instead of by instruction.
+
+Next: risks, blind spots, and where this actually moves the needle for your role — not just what's available, but what's worth setting up first.
