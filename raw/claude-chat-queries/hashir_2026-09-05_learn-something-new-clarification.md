@@ -40,3 +40,17 @@ File creation. Claude can produce actual downloadable files — Word docs, Excel
 One gap worth naming: none of this replaces what you already have wired up in this session — the EOXS connectors and Threads OV vault are doing real persistent-memory work already, just outside Anthropic's own memory system.
 
 Next: connectors, Cowork, and how to turn multi-step EOXS work into something you hand off rather than babysit.
+
+User: next
+
+Assistant: Section 2 — Connectors, Cowork, and automation
+
+Connectors are how Claude reaches your actual tools instead of just chatting. Once a connector is authorized, Claude pulls it into a conversation on its own when it's relevant — you don't have to name it every time. You're already running this at an advanced level: seven MCP connectors are wired into this session (the four Odoo databases, EOXS data general, Gmail, Threads OV). That's not a beginner setup — most users have zero connectors configured.
+
+Cowork is the layer above that: instead of you driving turn by turn, you describe an outcome and Claude executes a multi-step task and hands back finished work — a formatted doc, a spreadsheet, organized files. It runs in the cloud in beta, so sessions follow your account across desktop, web, and mobile, and it keeps working after you close the laptop. You can schedule it to run daily, weekly, or monthly without you prompting each time. It's built for non-coding knowledge work — research, analysis, document creation — as distinct from Claude Code, which is the coding-specific agent.
+
+Where this actually matters for you: everything you already have read access to (tickets, invoices, CRM data, implementation tasks, email, call transcripts) could feed a scheduled Cowork task — e.g., a Monday-morning pull of open P1/P2 tickets cross-referenced against implementation-task status, written up as a brief waiting in your inbox before you sit down. That's a real time-leverage move, not a hypothetical.
+
+The blind spot: this data is confidential business data — tickets, invoices, personnel, financials — and scheduled/autonomous tasks run when you're not watching in real time. Anthropic's own guidance on this is explicit: start scheduled automation with low-risk tasks (summaries, compiling info) before automating anything consequential, and avoid putting sensitive data into unattended workflows without that ramp-up. Given what your connectors touch, "just automate the ticket brief" isn't a zero-risk first move — it's worth trialing on a narrow, non-sensitive slice first, not going straight to a scheduled task touching CRM and financials.
+
+Next: Claude Code — the dev-specific tooling, since you're in a developer/support role, not just support.
