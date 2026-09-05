@@ -100,3 +100,30 @@ Here's the 100ft staged plan:
 5. Recommendation — what ships as-is, what needs reframing, what should be held back entirely
 
 Say "next" and I'll pull the calls and start section 1.
+
+User: Next
+
+Assistant: [Called OV2:get_index, OV2:list_calls for 2026-06, 2026-07, 2026-08 with source=fireflies]
+
+Section 1 — Methodology & Scope
+
+Pulled list_calls(source=fireflies) for June, July, August 2026 — 2286 total Fireflies calls in the system, filtered down to this window and then to external-facing calls only (dropped: internal team "Study Time," yoga, personal Zoom links, KPI/build-team internals, recruiting interviews).
+
+That leaves ~30 genuine prospect/client calls across the three months, clustered by account:
+
+- Sabre Alloys — 7 calls (Juan & Raj syncs, claims discussion, AI transformation proposal). Standing rule: Sabre Alloys can never appear in external content, even anonymized. Useful for internal pattern-spotting only, not postable.
+- Brannon Steel — 7 implementation huddles (onboarding-stage, less "fear" material, more process detail)
+- Collier Metals — 4 calls (AI brainstorming, MTR AI, proposal finalization) — Rob Drum / Tripp Collier
+- 3GM Steel — 2 calls (Travis Lane) — proposal + kickoff
+- Greer Steel / Ohio Strip Steel — 2 calls (jbrom) — intro call + "AI tools" discussion
+- IMS Metals — 2 calls (Ram Shenoy) — forecasting brainstorm
+- Eastern States Steel — 1 call (Ryan Capinski) — brainstorming
+- Bossard — 1 call (Lucas Meyer + team)
+- Discount Pipe Steel — 1 call (Jamie Vernon, AltDigital consultants)
+- 3D Metals — 2 calls (AI Operating System pitch, document creation)
+- Steel Store / Mucker Capital — 2 calls (investor-facing, not a fear-story candidate)
+- One-off: Jon @ Alascop, Bruce @ Ace Steel Supply
+
+For Section 2 I'll pull full transcripts on the accounts most likely to hold genuine "here's what's actually scary" material — Collier, 3GM, Greer/Ohio Strip, IMS Metals, Eastern States, Bossard, Discount Pipe Steel, 3D Metals — and mine them for specific numbers, quotes, and pain points (headcount, hours burned, CFO anxiety, competitive threat). Sabre and Brannon get read for internal pattern context but flagged out of the postable set from the start.
+
+Say "next" for Section 2.
