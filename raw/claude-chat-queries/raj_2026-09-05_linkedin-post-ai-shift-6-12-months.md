@@ -34,3 +34,51 @@ Before I draft, quick pick — what level of polish do you want on this one?
 (Commissioned doesn't really apply to a LinkedIn post.)
 
 One thing I'll flag either way per the skill's anonymization rule: I'll keep the $250M service center and its CCO unnamed/uncategorized by name — size band only, no company identifier.
+
+User: Painting
+
+Assistant: Here's the draft, Painting level:
+
+---
+
+For 15 years, I've heard the same line about steel: slow to adopt new technology.
+
+It's true.
+
+Steel is slow to adopt technology that doesn't actually work.
+
+But last week I sat with the chief commercial officer of a $250M-revenue service center.
+
+He told me he'd just spent six weeks running an analysis by hand.
+
+The same analysis took AskCruz 8 minutes.
+
+Six weeks.
+Eight minutes.
+100 hours >> 8 minutes.
+
+This is the forklift moment for steel back-office work.
+
+Once you've used a forklift, you don't go back to carrying pallets by hand — no matter how good you are at carrying pallets.
+
+Everyone says AI will eliminate half the jobs at a steel service center in 3-5 years.
+
+I don't think it's 3-5 years.
+
+I think it's 6-12 months.
+
+Not because the tech got smarter overnight.
+
+Because once a CCO has seen 8 minutes sitting next to six weeks, there's no unseeing it.
+
+This isn't coming.
+
+IT IS HERE.
+
+Tell me — if your team saw the 8-minute version of their own six-week process, would you let them keep doing it the old way?
+
+---
+
+Checklist: reframe opener, one real anecdote (unnamed), one developed analogy (forklift), single ALL-CAPS punch line, closing question only, no hashtags/emoji, no company named/identifiable.
+
+Want any changes — tone harder, shorter, different close?
