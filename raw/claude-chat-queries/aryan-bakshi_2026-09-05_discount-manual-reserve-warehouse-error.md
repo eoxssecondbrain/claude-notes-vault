@@ -20,3 +20,18 @@ This is a diagnostic investigation, not a one-line lookup, so pick a rigor level
 - **50ft** — full trace: model field definition, view-level `attrs`/`required` conditions, any server-side `_compute`/`create()` override that sets it for auto but not manual, and whether this is a recent break (compare against a working record if one exists) or a validation rule that's always required manual input.
 
 Which one?
+
+User: 50ft
+
+Assistant: Root cause: the "Manual Tag Reservation Line" model (sale_order_line_tag_reserve) has reservation_warehouse_id defined as related="sale_line_id.reservation_warehouse_id", required=True, stored — meaning its value isn't entered directly on that line, it's inherited from the "Reservation Warehouse" field on the parent sale order line itself.
+
+Why manual fails and auto doesn't:
+- The order-line form view shows reservation_warehouse_id as a plain field on the line (no conditional attrs), and separately shows a tag_reserve_lines one2many grid (the "Manual Tag Reservation" table) that only exposes tag_id and reserved_pcs as columns — reservation_warehouse_id is never entered there.
+- That grid only renders when reserve_mode = manual. For reserve_mode = auto, tag_reserve_lines is invisible entirely, so no sale_order_line_tag_reserve child records get created through the UI at all — the required-related-field check on that model is never triggered for auto lines.
+- So the failure is specific to manual: if you add rows to the Manual Tag Reservation grid before the "Reservation Warehouse" field on the sale order line itself is populated, the related field on the child record has nothing to inherit, comes through as null, and hits the NOT NULL/required constraint — exactly the error text you got.
+
+Confirmed against live data: all 1,476 existing sale_order_line_tag_reserve rows have reservation_warehouse_id populated — no exceptions — consistent with this being a hard required field that simply isn't being satisfied yet on your in-progress quote.
+
+Fix: on the sale order line, set "Reservation Warehouse" (the field above the reserve_mode/tag grid, not inside the grid) before or while filling in the manual reserve tag rows. Once that line-level field has a value, the manual reserve lines should save.
+
+One thing I can't verify from schema/view alone (would need the module's Python, which isn't queryable here): whether there's supposed to be an onchange that auto-populates reservation_warehouse_id when reserve_mode is switched to manual, and it's silently failing to fire for you. If setting the warehouse field manually fixes the save, that's a workaround, not a guarantee the onchange is working as designed — worth a one-line check with dev if this keeps recurring.
