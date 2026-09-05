@@ -167,3 +167,22 @@ Want me to try saving this conversation now, or should you verify the connector 
 ---
 
 User: retry
+
+Claude: Still failing. Different error this time though — "Error occurred during tool execution" instead of tool unavailable. This suggests the tool is loading but failing mid-execution on the backend.
+
+Likely scenarios:
+- Threads-ov service backend crashed or is unreachable
+- Auth token expired after the first successful save
+- Database connection lost
+- Request validation failure
+
+The conversation is not being persisted right now. You need to either:
+1. Check if the threads-ov connector needs re-authentication (might have timed out)
+2. Verify the service is running
+3. Check server logs if you have access
+
+I can't retry further without more info — same error will likely occur.
+
+---
+
+User: try again
