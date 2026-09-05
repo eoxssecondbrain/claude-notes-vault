@@ -808,3 +808,76 @@ Resume content (extracted): Identical to the previously screened Tanya Sadhwani 
 Same resume as before — Tanya Sadhwani, identical content (just re-uploaded, this time as a fresh file rather than a re-send of the same file object). Not a new candidate.
 
 Already screened: Disqualify, 2/10 — no real email marketing evidence, no ABM, B2C/consumer-brand specialization mismatch against this B2B industrial role, plus the Viacom 18 date inconsistency (full breakdown in my earlier message). Nothing new to add. Send the next resume whenever you have it.
+
+**User:**
+[Uploaded resume: 11.pdf — Shakti Srivastava]
+check
+
+Resume content (extracted):
+SHAKTI SRIVASTAVA
+SUMMARY
+Results-driven Marketing Operations & CRM Expert with 7+ years of experience in ABM strategy, campaign management, and automation. Skilled in leveraging Salesforce, HubSpot, and AI-driven tools to streamline workflows, enhance customer engagement, data enrichment, segmentation and drive pipeline efficiency.
+
+EXPERIENCE
+Marketing Lead, Demand Generation — Vorosoft | Noida, India | August 2025 – Until
+- Spearheaded the development and execution of targeted email marketing campaigns, driving a 40% increase in open rates and 30% boost in click-through rates through strategic audience engagement.
+- Managed and optimized the Salesforce ecosystem, ensuring data integrity, actionable insights, and seamless collaboration between sales and marketing teams to enhance outreach and conversion strategies.
+- Designed and implemented multi-step Clay workflow automation for prospect sourcing, enrichment, and segmentation, significantly improving outreach efficiency and lead conversion.
+- Leveraged GPT models and AI-driven enrichment to refine audience segmentation, amplify personalization, and maximize campaign performance.
+- Implemented automated lead scoring protocols, incorporating deduplication, validation, and data hygiene mechanisms, ensuring high-quality prospect lists and optimal data accuracy.
+
+Marketing Associate, Demand Generation (ABM Outbound Methodology) — Leena AI | Gurgaon, India | November 2020 - March 2025
+- Led and managed a team of 6 market research professionals, overseeing daily task assignments, report management, and operational efficiency.
+- Developed and executed demand generation campaigns across email marketing and webinars using 6sense, Demandbase and Clearbit tools.
+- Designed automated lead nurturing workflows, optimizing touchpoints throughout the buyer's journey.
+- Implemented website performance improvements, refining landing pages and CTAs to maximize inbound conversions.
+- Monitored campaign success through key performance metrics, improving pipeline contribution and marketing ROI.
+- Spearheaded ABM initiatives targeting high-value accounts, creating customized engagement tactics based on intent data and insights.
+- Partnered with sales teams to personalize outreach strategies, leveraging behavioural data for improved engagement and conversion.
+- Delivered actionable recommendations on marketing workflow and HubSpot CRM tools, optimizing campaign execution efficiency.
+- Automated the sales process using HubSpot workflows, leveraging Zapier and other Martech platforms to optimize lead conversion and business outcomes.
+- Collaborated closely with SDRs and AEs on pipeline management, lead enrichment, and strategic deal optimization within HubSpot.
+- Created dashboard and report on HubSpot to get summarize report on all information.
+
+Associate, Marketing Operations — AnovIP | New Delhi, India | Oct 2018 - Jan 2020
+- Directed lead operations, ensuring accurate assignment of prospects within the Fresh Sales ecosystem and maintaining compliance with pre-approved rules of engagement (ROE).
+- Developed and managed HubSpot workflows for lead assignment and sequence triggering, optimizing engagement and follow-up efficiency.
+- Maintained and regularly updated lead databases in HubSpot and Fresh Sales, improving lead tracking, segmentation, and targeted email campaign effectiveness.
+- Implemented an advanced Email Inbox Placement strategy, minimizing spam traps and enhancing email deliverability for marketing campaigns.
+- Led HubSpot-ZoomInfo integration, facilitating seamless data synchronization and prospect profile enrichment, resulting in a 40% increase in data quality and reduced manual workflow efforts.
+- Established a process for lead generation and new business pipeline.
+- Report updation across all the team.
+
+Database Associate, Marketing — Mettl | Gurgaon, India | August 2017 - August 2018
+- Conducted B2B prospect research, leveraging Sales Navigator, LinkedIn, Seamless.ai, Crunchbase, Lusha, and Apollo.io Martech stack to identify high-value leads.
+- Maintained data integrity, continuously improving data quality through irrelevant data removal, contact enrichment, and validation processes.
+- Assigned qualified prospects to Sales Development Representatives (SDRs), ensuring optimal outreach strategy and lead conversion efficiency.
+- Executed targeted email campaigns using Elastic Email, optimizing engagement rates and audience segmentation.
+- Identified, qualified, and secured new business opportunities, strengthening market presence and growth potential.
+- Developed and nurtured business relationships with both current and potential clients, fostering long-term partnerships and revenue expansion.
+- Collaborated with sales and marketing leadership to strategically secure, retain, and grow high-value accounts.
+
+SKILLS
+SFMC, Salesforce CRM, HubSpot Certification, ABM Strategy, Marketing automation, Campaign Management, Clay, AI Marketing, Database Skills and management, Market research expertise, CRM Software and management, Direct Mail Campaigns, Market Analysis, Email Marketing, Campaign Implementation, Customer Segmentation, Sales Enablement, Marketing Technology, CRM Management, A/B Testing, Landing Page Design, Campaign tracking, ChatGPT and Other AI, MS Advance Excel and office
+
+EDUCATION AND TRAINING
+Bachelor of Engineering, Mechanical Engineering, M.C. Saxena Engineering College, Lucknow, UP, July 2014
+
+LANGUAGES: English, Hindi
+
+**Assistant:**
+Shakti Srivastava — Marketing Operations & CRM Expert (ABM/Demand Gen)
+
+Verdict: Qualify — 9/10, strongest overall candidate of the batch
+
+Raj's four screening areas:
+- Marketing experience: 7+ years, continuous demand-gen/marketing-ops track — Database Associate, Marketing at Mettl (Aug 2017–Aug 2018) → Associate, Marketing Operations at AnovIP (Oct 2018–Jan 2020) → Marketing Associate, Demand Generation (ABM Outbound Methodology) at Leena AI (Nov 2020–Mar 2025, ~4.5 years) → Marketing Lead, Demand Generation at Vorosoft (Aug 2025–present). One unexplained gap: Jan 2020–Nov 2020 (~10 months), worth asking about. Otherwise the most senior, most coherently-specialized career of any candidate screened.
+- Email marketing experience: The strongest and most technically specific of any resume reviewed. Current role: "40% increase in open rates and 30% boost in click-through rates" from targeted campaigns. At Mettl: "Executed targeted email campaigns using Elastic Email, optimizing engagement rates and audience segmentation." Deliverability specifically: "Implemented an advanced Email Inbox Placement strategy, minimizing spam traps and enhancing email deliverability" — this is a direct, named match to the JD's "manage domain/inbox health and deliverability" line, which no other candidate addressed this explicitly. SFMC (Salesforce Marketing Cloud) and HubSpot Certification also listed.
+- Types of emails sent: The most complete coverage of all three sequence types the JD names. Cold outbound: B2B prospect research via Sales Navigator, Seamless.ai, Crunchbase, Lusha, and Apollo.io, with qualified leads assigned to SDRs. Nurture: "Designed automated lead nurturing workflows, optimizing touchpoints throughout the buyer's journey." ABM-specific sequencing: "customized engagement tactics based on intent data and insights" for high-value accounts. Reactivation specifically: Not mentioned, but the breadth elsewhere is unmatched.
+- ABM understanding: By far the strongest signal of any candidate — not just ABM exposure but a dedicated role titled "Marketing Associate, Demand Generation (ABM Outbound Methodology)" and explicit use of 6sense, Demandbase, and Clearbit — three purpose-built ABM/intent-data platforms. No other candidate named a single ABM-specific tool; this candidate named three.
+
+Strengths: Closest and deepest tool match to the JD of anyone screened — HubSpot (certified), Apollo.io, and ZoomInfo (led a HubSpot-ZoomInfo integration that improved data quality by 40%) are all explicitly named with real usage, plus Salesforce CRM and SFMC. Quantified results across multiple roles (40% open-rate lift, 30% CTR lift, 40% data-quality improvement). Genuine end-to-end demand-gen skill set: prospecting, enrichment, segmentation, lead scoring, automation (Clay, Zapier, GPT-based personalization), and reporting/dashboarding in HubSpot — matches the JD's "track and report weekly" and "AI-first" orientation well. Real SDR/AE collaboration experience, directly relevant to coordinating with AskCruz's MBA intern team.
+
+Weaknesses/red flags: Significant seniority and likely compensation mismatch — a "Marketing Lead, Demand Generation" with 7+ years of specialized ABM/martech experience is well above an entry-level ₹20,000/month Marketing Associate role; if genuinely interested, worth directly asking why, since retention risk is real if he's using this as a stopgap or is unaware of the pay band. No explicit industrial, steel, plastics, or distribution vertical exposure — his B2B experience is HR-tech/AI (Leena AI, an HR chatbot company) and assessment/testing (Mettl), not industrial. Educational background is Mechanical Engineering, not marketing — not disqualifying given the work history, but worth noting. Minor resume polish issues (typo "ABM Statergy," inconsistent date formats "Oct 18" vs "August 2025," "Until" instead of "Present").
+
+Net: on pure capability and tool/ABM fit this is the strongest resume in the batch by a clear margin, but the seniority/comp gap against a ₹20,000/month entry-level role is the real open question — worth a direct conversation on compensation expectations and why he'd take this role before investing further. Send the next one when ready.
