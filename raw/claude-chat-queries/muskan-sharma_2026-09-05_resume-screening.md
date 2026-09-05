@@ -77,3 +77,18 @@ Practical notes for 160+ resumes:
 - For a set this size I'll likely process and report in batches so you can sanity-check the approach on the first 20-30 before I run the rest, rather than surface one giant sheet at the end with a systemic error baked in. Your call whether you want that checkpoint or a single final pass.
 
 Send the JD and files whenever you're ready.
+
+User: i will share it in pdf format and how will you process 167 candidates resume without losing authenticity
+
+Assistant: For born-digital PDFs (text-based, not scanned image), I extract the actual text directly — no OCR guessing, no paraphrasing at the extraction stage. Whatever the resume states is what goes into the sheet.
+
+Fidelity safeguards specific to this job:
+
+- No inference beyond what's written. If a resume says "familiar with Excel," it gets recorded as stated — not upgraded to "advanced" or expanded into related skills the candidate didn't claim.
+- Experience is calculated from the actual employment history listed, not from a claimed summary line. If someone writes "5 years experience" but the listed jobs only total 3, that gap gets flagged as a discrepancy rather than silently accepted or silently corrected.
+- Every fit/no-fit call against your criteria traces back to something written in that specific resume. If the information needed for a criterion just isn't there, the sheet says "not stated" — not a guessed yes or no.
+- Names, titles, companies, and dates are copied verbatim, not reworded or summarized, so nothing drifts across 167 separate extractions.
+
+The real risk case is scanned/image-only PDFs with no extractable text layer — those need OCR, which can misread digits in dates or garble names. If any of your 167 are scans rather than typed/exported PDFs, I'll flag those specific rows so you know which ones need a manual glance instead of trusting OCR output at the same confidence as clean text.
+
+At this volume I'll also work in batches of roughly 20-30 rather than one long uninterrupted run — that way if something in my extraction logic is off, it shows up on batch one instead of silently repeating across all 167.
