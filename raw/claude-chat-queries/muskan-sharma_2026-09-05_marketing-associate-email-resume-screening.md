@@ -284,3 +284,83 @@ Resume content (extracted): Identical to the previous Daniyal Khatri resume — 
 This is the identical resume to the previous upload — Daniyal Khatri, same content, same file size. Looks like a duplicate send rather than a new candidate.
 
 Already screened: Disqualify, 2/10 — no email marketing, ABM, or B2B demand-gen signal (full breakdown in my previous message). Nothing to add on a re-check of the same file. Send the next resume whenever you have it.
+
+**User:**
+[Uploaded resume: 4.pdf — Athul Jacob]
+check
+
+Resume content (extracted):
+Athul Jacob
+Project Management / Marketing Operations
+Trivandrum, Kerala 695003
+9019572352, athuljacobj03@gmail.com
+linkedin.com/in/athul-jacob-08a6791bb, behance.net/athuljacobj
+
+PROFESSIONAL SUMMARY
+Project Management and Marketing/Data Operations Specialist driving social media growth, lead generation, and client outreach across North American audiences. Manages sales and product marketing through Instagram, SMS, email, Salesforce, and HubSpot while handling product enquiries and revenue-focused activation. Turns customer questions into qualified leads and sales insight through daily CRM and support workflows.
+
+SKILLS
+HubSpot, Airtable, Excel, Zendesk, Vista Social, ChatGPT, LinkedIn Sales Navigator, Apollo io, Content Creation, Market Research, Salesforce, Google Ads, Seismic, Meta Ads, Claude, Google Gemini, Adobe Firefly, Zapier AI, Notebook LM, Grammarly AI, Perplexity AI
+
+EXPERIENCE
+GROWTH MARKETER | 11/2025 to Current
+Athletes Thread - Bangalore (Remote)
+- Responsible for Social media accounts management, posted content, maintained client relations, generated leads, and conducted outreach in North America
+- Resolved queries, responded to product design inquiries, provided sales insights, and contributed to revenue generation through activation
+- Performed Sales and product marketing campaigns via Instagram, SMS, email, and in app channels and increased more than 5% sales each month.
+- Daily exposure tools like Salesforce, HubSpot, Airtable, Excel, Zendesk, Vista Social, ChatGPT, Gemini, Notion etc.
+
+LEAD GENERATION AND EMAIL CAMPAIGN SPECIALIST | 08/2024 to 10/2025
+HubCredo (Project based) - Bangalore
+- Responsible for executing lead generation and social media marketing strategies, managing the co-founder's LinkedIn page, and conducting outreach using tools such as LinkedIn Sales Navigator, Apollo.io, and ZoomInfo.
+- Created social media posts for LinkedIn, Facebook, and Instagram, enhancing engagement and managing post schedules. Led client focused project by creating tailored content, conducting meetings, and performing analysis and research based on client needs.
+- Developed targeted marketing campaigns to enhance brand visibility and engagement.
+- Evaluated campaign performance data to identify trends and optimize strategies.
+- Responsible for daily outreach to more than 30 leads and follow ups.
+
+MARKETING INTERN | 04/2024 to 07/2024
+Growisto - Bangalore
+- Responsible for LinkedIn contact extraction, market analysis, tech analysis, and brand mapping. Conducted outbound marketing, email cold calling, lead generation, client relations, and sales management.
+- Experience in Sales Navigator and Apollo.io for contact extraction; trained interns on these processes. Conducted outbound marketing, email marketing, cold calling, lead generation, client relations, and sales management.
+- Implemented social media content strategies to enhance brand engagement.
+- Involvement conducting market research to identify trends and consumer preferences and done tech analysis for 35+ brands daily.
+- Responsible for email marketing campaigns, improved audience reach and engagement rates.
+
+SALES & MARKETING ASSOCIATE | 08/2023 to 10/2023
+Eventdex - Bangalore
+- Focus on comprehensive understanding of company products and services, including features, specifications, and pricing to support sales efforts.
+- Organized regular meetings with European and North American clients, resulting in successful deal closures.
+- Primary responsibility included learning software backend and frontend while executing outbound marketing strategies and product promotions.
+
+EDUCATION
+Jain University Bangalore - Bengaluru, India | BBA, Marketing and Business Management, 08/2022
+
+CERTIFICATIONS
+Agile project for Data Analysts — Learntube AI | 07/2026
+Python for Data — IBM
+Beginner: Introduction to Generative AI — Google
+Data Analysis with Spreadsheets and SQL — Meta
+Workflow Automation using Generative AI — Coursera
+Data Analysis and Visualization with Power BI — Microsoft
+Google Ads for Beginners — Coursera Project Network
+Management of Fashion Luxury — Universita Bocconi
+Defining Markets, Business Models & Trends — INSTITUT FRANCAIS DE LA MODE (IFM)
+Digital Skills: Digital Marketing — Accenture
+Digital Skills: Social Media — Accenture
+
+**Assistant:**
+Athul Jacob — Project Management / Marketing Operations
+
+Verdict: Qualify — 8/10
+
+Raj's four screening areas:
+- Marketing experience: ~2 years, continuous, across four roles with a coherent thread — Sales & Marketing Associate at Eventdex (Aug–Oct 2023, 3 months) → Marketing Intern at Growisto (Apr–Jul 2024, 4 months) → Lead Generation and Email Campaign Specialist at HubCredo (Aug 2024–Oct 2025, ~14 months, project-based) → Growth Marketer at Athletes Thread (Nov 2025–present, ~10 months, remote). One prior job title is literally "Email Campaign Specialist" — the closest direct title match to this JD of anyone screened so far.
+- Email marketing experience: The strongest of any candidate reviewed. Growisto: "Conducted outbound marketing, email cold calling... Responsible for email marketing campaigns, improved audience reach and engagement rates." HubCredo: outreach to 30+ leads/day using Apollo.io (a dedicated cold-email sequencing tool) and ZoomInfo. Athletes Thread (current): "Performed sales and product marketing campaigns via Instagram, SMS, email, and in-app channels," using HubSpot. This is hands-on, tool-based, repeated across three consecutive roles — not a one-line mention.
+- Types of emails sent: Cold outreach/cold email is explicit (Growisto: "email cold calling"; HubCredo: daily outreach via Apollo.io, a cold-sequencing tool). Promotional/lifecycle campaigns are explicit (Athletes Thread: sales and product marketing emails tied to a 5%+ monthly sales lift). Reactivation specifically: Not mentioned. This is the only resume with direct evidence of cold email, not just "email campaigns" as a vague label.
+- ABM understanding: Not mentioned by name — "ABM" never appears. That said, the tactical pattern (LinkedIn Sales Navigator + Apollo.io + ZoomInfo for targeted contact extraction and outreach) is ABM-adjacent execution even without the label; worth asking directly in interview whether he knows the term and framework.
+
+Strengths: Closest tool match to the JD's own list — HubSpot, Apollo.io, and ZoomInfo (the JD names Apollo and ZoomInfo specifically) all appear with actual usage described, not just listed. Real cold-outreach and cold-email experience across two separate employers. North American client-facing outreach experience, relevant to a remote US-facing role. Reports concrete outcomes (30+ daily leads, 5%+ monthly sales increase, improved engagement rates), matching the JD's "track and report weekly" expectation.
+
+Weaknesses/red flags: Job-hopping pattern — four roles in about two years, with tenures of 3, 4, 14, and 10 months; HubCredo is explicitly "project based," which may mean freelance/contract rather than full-time employment and is worth clarifying directly. Resume has visible sloppiness — inconsistent tool names ("Chat GPT" vs "ChatGPT," "Air table" vs "Airtable," "Googe Ads," "SQ" for SQL) — a real yellow flag for a role the JD explicitly frames around precision ("a bad list or a broken merge field costs us the whole send") and strong written English. No B2B industrial, steel, plastics, or distribution vertical exposure — his experience spans apparel/fashion (Athletes Thread, fashion certifications), events tech (Eventdex), and generalist B2B services (Growisto/HubCredo). No named ABM knowledge.
+
+Net: the strongest fit so far specifically on email marketing and cold-outreach experience and the closest tool overlap with the JD, offset by job-hopping and resume polish concerns that don't match the "detail-oriented" requirement. Worth an interview to verify depth versus title-inflation and to probe ABM knowledge directly. Send the next one when ready.
