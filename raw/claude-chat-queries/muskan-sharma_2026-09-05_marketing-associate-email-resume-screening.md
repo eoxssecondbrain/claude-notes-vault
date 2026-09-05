@@ -569,3 +569,66 @@ Strengths: Long, senior track record with international client exposure (US, UK,
 Weaknesses/red flags: This is a senior SEO/paid-ads specialist, not an email marketer — a sharper specialization mismatch than most other candidates since 8 years of seniority sits in the wrong discipline rather than being generalist and adjacent. Zero hands-on email evidence anywhere. No ABM, no B2B demand-gen tooling at all. Two listed roles overlap by about 7 months — Crystal Hues Ltd. (Jun 2021–Dec 2022) and Wipro (Feb 2022–Aug 2023) — an unexplained inconsistency worth asking about directly. Practically, a "Senior Digital Marketing Manager" with 8+ years is a significant seniority and likely compensation mismatch against an entry-to-mid-level Marketing Associate role at ₹20,000/month; even if she were interested, retention risk would be high.
 
 Net: strong senior generalist in the wrong specialty, with no email marketing substance and a seniority/comp fit problem on top. Send the next one when ready.
+
+**User:**
+[Uploaded resume: 8.pdf — Manya Mittal]
+check
+
+Resume content (extracted):
+MANYA MITTAL
+DIGITAL PR EXECUTIVE | EMAIL MARKETING | MARKET RESEARCH
++91 7818075070 | manyamittal136@gmail.com | Aligarh, Uttar Pradesh | LinkedIn
+
+PROFESSIONAL SUMMARY
+Results-driven Digital PR and Marketing professional with 2+ years of experience in email marketing, lead generation, content creation, and market research. Skilled in executing high-impact outreach campaigns, optimizing email performance through A/B testing, and creating engaging marketing content. Proficient in leveraging AI tools and data-driven strategies to improve campaign performance, brand visibility, and audience engagement.
+
+WORK EXPERIENCE
+Digital Web Solutions — Digital PR Executive | April 2025 - Present
+- Managed B2B outreach campaigns targeting 15,000+ prospects.
+- Executed 100+ email marketing campaigns weekly using Mailchimp, Instantly, and others.
+- Improved email open rates by 15% through A/B testing, audience segmentation, and subject line optimization.
+- Created compelling email copies, outreach pitches, and content for digital PR campaigns.
+- Conducted prospect research and built targeted lead databases including journalists, media houses, editors and more.
+- Tracked campaign performance (Open Rate, CTR & Conversions) using Google Sheets and Excel.
+- Collaborated with cross-functional teams to execute successful marketing campaigns.
+- Leveraged AI tools to streamline research, content creation, and outreach personalization.
+
+MDRA — Marketing Research Assistant | Jan 2024 - Dec 2024
+- Conducted qualitative & quantitative market research using surveys and interviews.
+- Performed primary research, back-checking, and data validation to maintain research quality.
+- Analyzed consumer behavior and market trends to generate actionable insights.
+- Prepared research reports, presentations, and Excel-based data summaries.
+- Supported multiple research projects while ensuring timely and accurate deliverables.
+
+EDUCATION
+- Bachelor of Commerce, Aligarh Muslim University, Aligarh, Uttar Pradesh, 2020-2023
+- PGDM I Marketing, GLBajaj Institute of Management and Research, Greater Noida, Uttar Pradesh, 2023-2025
+
+SKILLS
+Core: PR Outreach, Email Marketing, Content Development, Campaign Management, Market Research & Data Analysis, Internal & External Communication
+Tools: Mailchimp, Instantly, Reachinbox, Canva, Google Sheets, MS Office, ChatGPT, Claude, GenSpark
+Strengths: Team Collaboration, Analytical Thinking, Problem Solving
+
+CERTIFICATIONS
+- CMA Intermediate (Qualified) - ICMAI
+- Digital Marketing - Coursera
+- Marketing Management - NPTEL
+- Effective Business Communication - NPTEL
+- Pearson Mepro
+
+**Assistant:**
+Manya Mittal — Digital PR Executive | Email Marketing
+
+Verdict: Qualify — 8/10, strongest email-tool match seen so far
+
+Raj's four screening areas:
+- Marketing experience: About 2 years — Marketing Research Assistant at MDRA (Jan–Dec 2024, part-time alongside her PGDM) → Digital PR Executive at Digital Web Solutions (Apr 2025–present, ~5 months, current). Junior in tenure, but her current role is squarely email marketing/outbound execution, not adjacent work.
+- Email marketing experience: The most precisely tool-matched of any candidate reviewed. Current role: "Executed 100+ email marketing campaigns weekly using Mailchimp, Instantly, and others" and "Improved email open rates by 15% through A/B testing, audience segmentation, and subject line optimization." Her tools list also includes Reachinbox — Instantly and Reachinbox are both purpose-built cold-outbound infrastructure tools (inbox rotation, warmup, deliverability at scale), which is exactly the category of tooling the JD's "manage domain/inbox health and deliverability" line calls for.
+- Types of emails sent: Cold outreach at real scale — "Managed B2B outreach campaigns targeting 15,000+ prospects," with "targeted lead databases" built specifically for outreach, and "compelling email copies, outreach pitches" written for those campaigns. This is the highest-volume, most explicit cold-outreach evidence of any candidate. Caveat: her prospects are journalists, media houses, and editors for digital PR/media placement — not B2B buyers being sold a product — so the audience differs from the JD's CEOs/decision-makers, even though the tactical skill (cold list-building, personalized outreach, tracking) transfers directly. Nurture and reactivation: Not mentioned.
+- ABM understanding: Not mentioned by name. Her work shows targeted-list and segmentation thinking (audience segmentation, targeted lead databases) but never frames it as ABM or account-based strategy.
+
+Strengths: Real scale — 15,000+ prospects and 100+ campaigns weekly, far above any other candidate. A genuine, specific, quantified result (15% open-rate lift via A/B testing, segmentation, and subject-line optimization) that directly matches the JD's "track open, reply, and conversion rates and report weekly." Uses Google Sheets/Excel for performance tracking. AI-tool fluency for research and outreach personalization, which fits AskCruz's AI-first orientation and the JD's "research-first, personalized outreach" with the MBA intern team. Additional market-research rigor (surveys, data validation) from her prior role.
+
+Weaknesses/red flags: Only ~5 months in the one role that actually matters for this job — still early to judge depth versus early strong results. Her outbound experience targets journalists and media contacts for PR placement, not commercial buyers, so while the mechanics transfer, she hasn't sold anything via email to a business decision-maker. No ABM terminology or framing. No industrial, steel, plastics, or distribution vertical exposure. Total professional experience is on the shorter side (2 years) compared with some other candidates.
+
+Net: the closest tool-stack match to a genuine cold-outbound-at-scale role (Mailchimp + Instantly + Reachinbox) and the strongest quantified open-rate result, offset mainly by her audience being media/PR contacts rather than B2B buyers and a short current tenure. Strong interview candidate — worth probing whether she can translate PR-outreach copy into sales-outreach copy for industrial CEOs. Send the next one when ready.
