@@ -81,7 +81,7 @@ i will share pdf manually and will share the jd
 
 ## Assistant
 
-Ranked: (1) zip the folder, attach one file; (2) connect the folder; (3) attach manually — ~10 uploads, each PDF processed as pages rather than extracted text. Send the JD first.
+Ranked: (1) zip the folder, attach one file; (2) connect the folder; (3) attach manually. Send the JD first.
 
 ---
 
@@ -89,9 +89,9 @@ Ranked: (1) zip the folder, attach one file; (2) connect the folder; (3) attach 
 
 i will do it in batches per batch 5 resume. [PASTED FULL JD — Marketing Associate — Email (Remote), AskCruz | GFC Intelligence]
 
-Key JD contents: own the email marketing engine; outbound campaigns to CEOs/decision-makers at 50-100 employee industrial and distribution companies; write cold outreach, nurture, reactivation sequences; list hygiene and ZoomInfo lead data; track open/reply/conversion and report weekly; coordinate with MBA intern team; manage domain/inbox health and deliverability; CAN-SPAM compliance. Looking for: hands-on email/outbound execution (tool-based, not theory); HubSpot/Mailchimp/Apollo or similar; strong written English; detail-oriented with lists and data; comfortable remote. Instruction to candidates: email CEO Raj Jain (rajat@askcruz.com) on why he should hire. Nice to have: B2B/industrial buyers, ZoomInfo, deliverability (domain warming, SPF/DKIM, sender reputation). Compensation ₹20,000/month.
+Key JD contents: own the email marketing engine; outbound campaigns to CEOs/decision-makers at 50-100 employee industrial and distribution companies; cold outreach, nurture, reactivation sequences; list hygiene and ZoomInfo lead data; track open/reply/conversion, report weekly; coordinate with MBA intern team; manage domain/inbox health and deliverability; CAN-SPAM compliance. Looking for: hands-on email/outbound execution (tool-based, not theory); HubSpot/Mailchimp/Apollo or similar; strong written English; detail-oriented with lists and data; comfortable remote. Nice to have: B2B/industrial buyers, ZoomInfo, deliverability (domain warming, SPF/DKIM, sender reputation). Compensation ₹20,000/month.
 
-Raj's notes — close-ended questions to ask: their experience in marketing; experience in email marketing; what kind of emails did they send; what is account based marketing?
+Raj's notes — close-ended questions: their experience in marketing; experience in email marketing; what kind of emails did they send; what is account based marketing?
 
 "you need to qualify or disqualify and rate out of 10 and tell me how can we can make it work for 167 resumes without losing authenticity and compromising the data"
 
@@ -104,11 +104,11 @@ BANDS: ≥8.0 interview · 6.0–7.9 screening call · 4.0–5.9 backup pool (DQ
 AUTO-DQ: zero campaign execution anywhere, or resume prose with prospect-visible errors.
 FLAGS: gap >6mo, 3+ roles <12mo, comp/overqualification risk, metrics without context, template-generic, date contradictions.
 
-Three things in the JD that change the approach: (1) the email to Raj is a live work sample worth more than the resume; (2) ₹20,000/month means over-qualification is a retention risk, realistic target 0–2 yrs; (3) Raj's four questions belong in a screening call, not the resume score.
+Three things in the JD that change the approach: (1) the email to Raj is a live work sample worth more than the resume; (2) ₹20,000/month means over-qualification is a retention risk, realistic target 0–2 yrs; (3) Raj's four questions belong in a screening call.
 
-Authenticity at 167: drift (fixed by rubric-on-disk + calibration pass over the 5.0–7.0 band), halo (fixed by independent gate scoring, arithmetic total, visible sub-scores), unfalsifiable reasons (fixed by citing the resume line behind every score).
+Authenticity at 167: drift (rubric-on-disk + calibration pass over the 5.0–7.0 band), halo (independent gate scoring, arithmetic total, visible sub-scores), unfalsifiable reasons (cite the resume line behind every score).
 
-On data: this conversation auto-saves to a GitHub vault every turn. Chat tables will use name + file number only; contact details stay in the local master file.
+On data: this conversation auto-saves to a GitHub vault every turn. Chat tables use name + file number only; contact details stay in the local master file.
 
 ---
 
@@ -120,21 +120,19 @@ The JD tells candidates to email Raj explaining why he should be hired, and says
 
 ## Assistant
 
-Dropped. Resume-only scoring, no email signal, no penalty for not emailing Raj. Consequence: the score is entirely self-reported claims — treat the output as a triage list for who gets a call, not a ranking of who's good. Rubric stands. Send batch 1.
+Dropped. Resume-only scoring. Consequence: the score is entirely self-reported claims — treat the output as a triage list for who gets a call, not a ranking of who's good. Rubric stands. Send batch 1.
 
 ---
 
 ## User
 
-[Uploaded 11.pdf, 12.pdf, 13.pdf, 14.pdf, 15.pdf] here is the first batch
+[Uploaded 11.pdf–15.pdf] here is the first batch
 
 ---
 
 ## Assistant
 
-**[Extracted all five PDFs to text with pdftotext -layout; all had real text layers, no OCR needed. Wrote RUBRIC.md and results.csv to /home/claude/screening/.]**
-
-Batch 1 scored. All five extracted as real text, no OCR needed.
+**[Extracted all five with pdftotext -layout; real text layers, no OCR. Wrote RUBRIC.md and results.csv to /home/claude/screening/.]**
 
 | File | Name | Exec /3 | Tools /2 | Eng /2 | Data /1 | B2B /1 | Deliv /1 | Total | Decision |
 |---|---|---|---|---|---|---|---|---|---|
@@ -144,42 +142,75 @@ Batch 1 scored. All five extracted as real text, no OCR needed.
 | 13 | Anupama Singh | 2 | 1 | 1 | 0 | 1 | 0 | 5.0 | Disqualify |
 | 12 | Sharan S. Bhadravathi | 0 | 0 | 1 | 0 | 0 | 0 | 1.0 | Disqualify |
 
-14 — Kajal Jakati, Bengaluru, ~5 yrs. Strongest technical match in the batch. Built HONO's B2B SaaS email engine from scratch as sole owner, cold outbound to CHROs/CTOs/CFOs, Apollo + Instantly + HubSpot, and the only candidate who names SPF/DKIM/DMARC, domain warm-up and bounce management explicitly. Ran industry-specific campaigns into manufacturing and BFSI — closest thing in this batch to your industrial ICP.
-Probe: the Globussoft stint (15 months, "Email Marketing Specialist") claims LinkedIn Ads, Meta Ads, Power BI, SMS, ABM, deliverability and an A/B framework. That's a wide scope for one specialist role in 15 months. Ask what she personally executed versus what the team did.
+14 — Kajal Jakati, Bengaluru, ~5 yrs. Built HONO's B2B SaaS email engine from scratch as sole owner, cold outbound to CHROs/CTOs/CFOs, Apollo + Instantly + HubSpot, only candidate naming SPF/DKIM/DMARC, domain warm-up and bounce management. Industry campaigns into manufacturing and BFSI — closest to your industrial ICP. Probe: Globussoft stint (15 months, "Email Marketing Specialist") claims LinkedIn Ads, Meta Ads, Power BI, SMS, ABM, deliverability and an A/B framework — wide scope for one role; ask what she personally executed.
 
-15 — Ragul Radhakrishnan, Chennai, 7+ yrs. Cleanest written English of the five, zero errors. Deep ESP experience: Oracle Eloqua end-to-end, HubSpot, Mailchimp, Omnisend, plus Openprise for dedup and enrichment.
-Fit gap worth knowing: his depth is lifecycle and nurture — welcome series, abandoned cart, reactivation, a lot of it B2C retail. Your role is cold outbound to industrial CEOs. Different muscle. Deliverability is asserted in a skills bar but never demonstrated in a bullet. Also "Senior Process Associate" at HTC is a services-delivery title, so confirm whether he owns campaigns or executes tickets someone else scopes.
+15 — Ragul Radhakrishnan, Chennai, 7+ yrs. Cleanest written English, zero errors. Oracle Eloqua end-to-end, HubSpot, Mailchimp, Omnisend, Openprise dedup/enrichment. Fit gap: depth is lifecycle and nurture — welcome series, abandoned cart, reactivation, much of it B2C retail. Your role is cold outbound to industrial CEOs. Deliverability asserted in a skills bar, never demonstrated. "Senior Process Associate" at HTC is a services-delivery title — confirm he owns campaigns rather than executing tickets.
 
-11 — Shakti Srivastava, Gorakhpur, 7+ yrs. Real ABM and outbound depth, Elastic Email sends, HubSpot–ZoomInfo integration, and inbox-placement/spam-trap work at AnovIP — directly relevant to your deliverability requirement. ZoomInfo experience is a JD nice-to-have he actually has.
-Marked down on written English: "ABM Statergy", "Report updation", "Created dashboard and report on HubSpot to get summarize report". For a role where he writes the copy prospects read, that matters. Two gaps: 10 months in 2020, 5 months in 2025.
+11 — Shakti Srivastava, Gorakhpur, 7+ yrs. Real ABM and outbound depth, Elastic Email sends, HubSpot–ZoomInfo integration, inbox-placement/spam-trap work at AnovIP. ZoomInfo is a JD nice-to-have he actually has. Marked down on written English: "ABM Statergy", "Report updation", "Created dashboard and report on HubSpot to get summarize report". Two gaps: 10 months in 2020, 5 months in 2025.
 
-13 — Anupama Singh, Pune, ~7 months. MBA finishing 2026, doing real campaign execution at Pyxtech including email and lead nurture. Apollo.io is listed but with no evidence of what she did in it. No list hygiene, segmentation or CRM discipline anywhere.
-The reason she's out rather than borderline: the resume has spacing and punctuation errors throughout — "market research ,campaign planning", "identification.Monitored". The JD says a broken merge field costs you the whole send. That's the exact failure mode this signals.
-Counterpoint you should weigh: she is the only one in this batch who would actually accept ₹20,000/month. Keep her in the backup pool rather than rejecting outright.
+13 — Anupama Singh, Pune, ~7 months. MBA finishing 2026, real campaign execution at Pyxtech including email and lead nurture. Apollo.io listed with no evidence of use. No list hygiene, segmentation or CRM discipline. Out rather than borderline because of spacing and punctuation errors throughout — "market research ,campaign planning", "identification.Monitored" — the exact failure mode the JD warns about. Counterpoint: only one in the batch who would accept ₹20,000/month. Keep in backup pool.
 
-12 — Sharan Shivaram Bhadravathi. Submitted a cover letter with no resume. No employer named, no tool, no campaign, no dates. Auto-disqualified on zero evidence of execution.
-One check before you reject: it's possible the resume page failed to attach. If your source folder has a second file for this candidate, send it and I'll rescore.
+12 — Sharan Shivaram Bhadravathi. Cover letter with no resume. No employer, tool, campaign or date. Auto-DQ. Check whether the resume page failed to attach.
 
-The pattern you should be watching
+The pattern: three of five score 9 or 10, all with five to seven years. None will take ₹20,000/month. The one person whose salary fits scored a 5.
 
-Three of five score 9 or 10, and all three have five to seven years of experience. None of them will take ₹20,000/month. Kajal is a current Email Marketing Manager; Ragul and Shakti are seven-year specialists. Market for that profile in India is several times your budget.
+---
 
-So the real output of this batch isn't three qualified candidates. It's one signal: your top scorers are people who will decline, and the one person whose salary expectation fits scored a 5.
+## User
 
-If that pattern holds through the next few batches, the constraint isn't screening quality — it's that the role is priced for a fresher and attracting seniors. Worth raising with Raj early rather than after you've screened 167 and shortlisted twelve people who all say no.
+[Uploaded 16.pdf–20.pdf] 2 / Continue from where you left off.
 
-I'll keep scoring as-is and track it. If it repeats by batch four, I'd suggest a second scoring pass that weights affordability, so you get a shortlist of people who'll actually accept.
+---
 
-Running file is on my side; I'll build the xlsx once all batches are in. Send batch 2.
+## Assistant
+
+Batch 2 scored.
+
+| File | Name | Exec /3 | Tools /2 | Eng /2 | Data /1 | B2B /1 | Deliv /1 | Total | Decision |
+|---|---|---|---|---|---|---|---|---|---|
+| 18 | Amit Singh | 3 | 2 | 2 | 1 | 1 | 1 | 10.0 | Qualify |
+| 20 | Rahul D Jadhav | 3 | 2 | 2 | 1 | 0 | 1 | 9.0 | Qualify |
+| 16 | Suryadev Kumar Sah | 1 | 0 | 2 | 0 | 1 | 0 | 4.0 | Disqualify |
+| 17 | Kanav Kundra | 0 | 1 | 2 | 1 | 1 | 0 | 4.0 | Disqualify |
+| 19 | Nishtha Bhasin | 1 | 0 | 2 | 0 | 0 | 0 | 3.0 | Disqualify |
+
+18 — Amit Singh, Hyderabad, 4 yrs at AgileEngine. Best functional match across both batches. Ran cold outbound on Instantly — the exact tool category your role needs — plus domain setup, ESP configuration, email warming and DKIM/SPF/DMARC done himself, not listed as a buzzword. Zoho CRM workflows and segmentation. Two things to probe: no numbers anywhere on the resume across four years ("increased open rates and CTR" with no figure) — ask for actual open and reply rates on his last campaign; and the resume gives almost no prose to judge writing on, so ask for a cold email sample before interviewing. Left AgileEngine April 2026, out about four months.
+
+20 — Rahul D Jadhav, Mumbai, 5 yrs at Uplers/Mavlers. Cleanest writing of the ten, real deliverability discipline (99% inbox rate, ESP warmup, Email on Acid pre-send testing), genuine depth in Klaviyo and Iterable. Scored 9 but the fit is weaker than the number: every account named is B2C — Business Insider, Line Friends, a supermarket chain. His entire career is lifecycle marketing to opted-in subscriber lists: welcome flows, abandoned cart, win-back. Your role is cold outbound to industrial CEOs who never subscribed to anything. Different jobs that share tools. Strong at sending mechanics, untested at the part that generates your pipeline.
+
+16 — Suryadev Kumar Sah, Bengaluru. "Email Marketing" appears once, in a skills bar. Not one bullet in six roles describes an email campaign. Actual work is school partnerships, lead generation and social media. No ESP, no CRM. Separate concern: five roles since 2021 including a one-month stint at Smart Learn and two five-month stints.
+
+17 — Kanav Kundra, Amritsar. Auto-disqualified. Business analyst and project manager — Oracle ERP implementations, penetration-testing project management. HubSpot appears, but used to post project status updates, not to run campaigns. The Dabur "marketing internship" was two months of retail field work. Also a declared twelve-month career break through 2025, then three months at Breachlock ending April 2026, unemployed since. Wrong function regardless.
+
+19 — Nishtha Bhasin, Noida. BBA fresher, three internships of one to two months each, all support-level. No email marketing anywhere. Tools are Excel, PowerPoint and Canva. Worth flagging: MaxView Now is dated June–July 2025 and PeopleBridge is also dated June–July 2025 — two full-time internships at two companies in the same two months. Might be genuine parallel part-time work, might be padding. For a role where accuracy in a list is the core requirement, an unexplained overlap on your own resume is a bad sign.
+
+Running position: 10 of 167
+
+Five qualified, five disqualified. But the qualifiers' experience is 7, 5, 7, 4, 5 years. Every single one.
+
+Ten resumes in, the number of candidates who both clear the bar and would plausibly accept ₹20,000/month is zero. Not low — zero. The three people whose salary expectations fit scored 5.0, 4.0 and 3.0.
+
+That's no longer a small sample. It's a consistent structural result: the screening is working correctly while the funnel is broken. You will finish 167 resumes with a clean, defensible shortlist of a dozen people who decline the offer.
+
+Second pattern, quieter but real: of the five qualifiers, two (Ragul and Rahul) are B2C lifecycle marketers, not cold-outbound operators. So the effective shortlist for the job as written is three, not five.
+
+What I'd do with this: stop and take it to Raj now, at 10 resumes, rather than at 167. The question isn't "who's good" — it's which of these you're actually buying:
+
+- ₹20,000/month buys a fresher you train. Then the rubric is wrong: drop the execution requirement, weight written English and detail-orientation, hire for trainability. I can rescore on that basis.
+- The role needs someone who can run outbound unsupervised from day one. Then the budget is wrong, and the number is probably ₹45,000–70,000/month for the Amit Singh profile.
+
+Screening 157 more resumes against a bar the budget can't buy is the low-leverage path. Twenty minutes with Raj resolves it.
+
+Tell me which way it goes and I'll adjust the rubric. If you want me to keep going as-is in the meantime, say so and send batch 3 — I'll keep tracking both scores so nothing is wasted either way.
 
 ---
 
 ## Status / Next steps
 
-- **Screened so far: 5 of 167.** Qualified 3 (files 14, 15, 11), disqualified 2 (13 backup pool, 12 auto-DQ).
-- **Working files:** /home/claude/screening/RUBRIC.md (frozen rubric), /home/claude/screening/results.csv (running master), /home/claude/screening/txt/ (extracted resume text).
-- **Rubric locked:** Execution 3 · Tools 2 · Written English 2 · Data discipline 1 · B2B exposure 1 · Deliverability 1. Qualify ≥ 6.0.
+- **Screened: 10 of 167.** Qualified 5 (files 11, 14, 15, 18, 20). Disqualified 5 (12, 13, 16, 17, 19). Average score 6.5.
+- **Working files:** /home/claude/screening/RUBRIC.md (frozen rubric), /home/claude/screening/results.csv (running master, 10 rows), /home/claude/screening/txt/ (extracted text).
+- **Qualifier experience profile: 7, 5, 7, 4, 5 years — zero affordable qualifiers at ₹20,000/month.**
+- **Secondary finding:** two of five qualifiers (15 Ragul, 20 Rahul) are B2C lifecycle marketers with no cold-outbound experience. Effective shortlist is 3, not 5.
+- **Escalation raised to user:** take the budget-vs-bar mismatch to Raj now rather than after 167. Two paths offered — rescore for trainability at ₹20k, or revise budget to ₹45–70k for the proven-operator profile.
 - **Open item:** file 12 may be a missing-resume upload — verify source folder before final reject.
-- **Emerging signal to watch:** top scorers are 5–7 yr seniors who will not accept ₹20,000/month; the only affordable candidate scored 5.0. Re-assess by batch 4; may warrant an affordability-weighted second pass.
-- **Deliverable plan:** xlsx built after all batches, plus calibration pass over the 5.0–7.0 band.
-- **Next:** batch 2 (files 16–20 presumably).
+- **Awaiting:** user decision on rubric direction, and batch 3 (files 21–25).
