@@ -6,6 +6,14 @@ created: 2026-09-05
 updated: 2026-09-05
 ---
 
+---
+thread_name: "marketing-associate-email-resume-screening"
+user: "muskan-sharma"
+type: claude-chat
+created: 2026-09-05
+updated: 2026-09-05
+---
+
 **User:**
 You already know our company, AskCruz/EOXS, what we do, our AI-first product, our target customers, and how our business works. Use that context, along with the JD below, to judge which candidates would genuinely be a good fit for us.
 JOB DESCRIPTION
@@ -786,3 +794,6 @@ Strengths: Genuinely strong copywriting credential — authored 100+ advertorial
 Weaknesses/red flags: Essentially zero real email marketing substance — the one mention is a generic skill-tag with no supporting evidence, similar to Arpita Mishra's case. No ABM, no B2B demand-gen tooling. Her entire specialization is B2C consumer/brand/social marketing (pharma, wellness, media, travel), not B2B industrial outbound — a functional mismatch on top of the missing email skill. The resume contains an internal date error — Viacom 18 is listed as "November 2023-February 2023" (end before start) — and depending on the intended date, that role may overlap with Windmill Ventures (Feb 2024–Apr 2025); worth clarifying directly, and notably undermines confidence given the JD's explicit "detail-oriented with lists and data" requirement. Likely seniority/compensation mismatch — nearly a decade of experience with senior/account-management titles managing large client portfolios is not a natural fit for an entry-level ₹20,000/month Marketing Associate role.
 
 Net: a genuinely strong writer and senior consumer-marketing generalist, but no real email marketing evidence, no ABM, a mismatched specialization (B2C brand vs. B2B industrial outbound), and a resume date inconsistency that cuts against the role's precision requirement. Send the next one when ready.
+
+**Assistant:**
+Ready for the next resume — none has come in yet since Tanya Sadhwani (10.pdf). Send it whenever you have it.
