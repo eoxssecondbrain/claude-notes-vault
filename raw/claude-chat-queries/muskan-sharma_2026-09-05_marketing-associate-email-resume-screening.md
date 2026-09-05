@@ -65,3 +65,66 @@ I've read threads-ov (transcript auto-save is running) and eoxs-data-general. sa
 Set up to screen against Raj's four criteria: marketing experience, email marketing experience, types of emails sent, and ABM understanding, plus qualify/disqualify/borderline, a judgment-based score out of 10, strengths/red flags, and "Not mentioned" for anything absent.
 
 Send the first resume.
+
+**User:**
+[Uploaded resume: 1.pdf — Saumya Singhal]
+check this
+
+Resume content (extracted):
+Saumya Singhal
+Digital Marketer
+Email: somyasgl123@gmail.com
+linkedin.com/in/saumya-singhal
+Mobile: 8384805352
+Noida, India
+
+Dynamic and results-driven Digital Marketer with hands-on experience in content writing, social media marketing, and SEO. Proven ability to create compelling content, enhance online visibility, and drive engagement through data-driven strategies. Experienced in managing freelance and part-time marketing projects while delivering measurable results and strengthening brand presence.
+
+EDUCATION
+- Master of Business Administrative – (Finance), Chandigarh University, 2021 - 2023
+- Bachelor of Commerce (Hons.), Jaypee University, 2017 – 2020
+
+SKILLS & TOOLS
+SEO & Analytics: Google Analytics, Google Search Console, SEMrush, Ahrefs, MozBar, Screaming Frog, Surfer SEO, SimilarWeb, PageSpeed Insights, Google Keyword Planner, Google Trends
+Marketing & Content: Google Ads, WordPress, Canva, Buffer, Mailchimp
+Other Tools: Microsoft Excel, GPT, PPT, Microsoft Word
+
+EXPERIENCE
+- Seo Associate - Cognitute, On-Site, Nov 2025 – Dec 2025
+  - Executed on-page, off-page, and technical SEO strategies to achieve traffic growth and search ranking objectives.
+  - Optimized website content for targeted keywords, schema markup, and emerging AI-driven search trends including SGE and GEO.
+  - Performed technical SEO audits and recommended improvements using tools such as Screaming Frog and Google Analytics 4 (GA4).
+  - Monitored keyword rankings, traffic trends, and conversion metrics, and prepared actionable performance reports.
+- Virtual Assistant – Link Building & Blogger Outreach - RoiHigh, Remote, Sep 2024 – Aug 2025
+  - Conducted in-depth analysis to discover and evaluate relevant websites for outreach and partnership opportunities.
+  - Planned and implemented customized outreach strategies to build and maintain professional relationships with website owners and administrators.
+  - Coordinated closely with the SEO team to ensure outreach efforts aligned with SEO and link-building goals.
+  - Tracked outreach performance metrics and refined strategies using data-driven insights.
+- Intern - IAimers, Remote, Mar 2024 - Sep 2024
+  - Developed and executed social media marketing strategies to increase audience engagement and strengthen brand visibility across key platforms.
+  - Created engaging content for blogs, social media channels, and newsletters to drive traffic and improve audience interaction.
+  - Researched and produced SEO-optimized content, contributing to improved organic reach and higher website search rankings.
+
+CERTIFICATES
+- Digital Marketing Certification – ITTCD, Delhi Training Institute
+- Google Analytics Certification – Google
+- HubSpot Content Marketing Certification – HubSpot Academy
+- Deloitte Australia - Data Analytics Job Simulation – Forage
+- Data Analytics Essential - Cisco Networking Academy
+
+**Assistant:**
+Saumya Singhal — Digital Marketer
+
+Verdict: Disqualify — 3/10
+
+Raj's four screening areas:
+- Marketing experience: Roughly 18 months total, but fragmented across an SEO Associate stint (Nov–Dec 2025, 2 months), a Virtual Assistant/link-building & blogger outreach role (Sep 2024–Aug 2025, remote), and a social media intern role (Mar–Sep 2024). All junior-level, and the discipline is SEO and content, not campaign ownership.
+- Email marketing experience: Not mentioned. Mailchimp appears once in the tools list, but no experience bullet describes building, sending, or managing an actual email campaign.
+- Types of emails sent: Not mentioned. "Newsletters" is named once as a content channel alongside blogs and social media, with zero detail on volume, platform, or her actual role in producing them.
+- ABM understanding: Not mentioned.
+
+Strengths: Real outreach experience — cold-contacting website owners for link building/partnerships is an adjacent skill to cold prospect outreach. Certifications (HubSpot Content Marketing, Google Analytics) show initiative. Comfortable with tracking/reporting tools (GA4, Search Console, SEMrush), which maps loosely to the JD's "track and report weekly" requirement.
+
+Weaknesses/red flags: This is an SEO/content marketer profile, not an email marketer — that's the core mismatch against a role explicitly about owning the email engine (sequences, list hygiene, deliverability). Nothing shows hands-on send experience, list management, or email-specific metrics (open/reply rate) despite those being central to the JD. Every role lasted under a year. No B2B or industrial-buyer exposure. No ABM exposure at all, which Raj flagged as a specific screening area. Mailchimp being listed but never referenced in any bullet reads as surface familiarity rather than actual usage.
+
+Net: strong generalist marketing/SEO candidate, weak-to-absent fit for an email-specific, ABM-aware role. Send the next one when ready.
