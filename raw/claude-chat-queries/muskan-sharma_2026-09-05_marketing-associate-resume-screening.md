@@ -161,30 +161,19 @@ Got the JD. Rubric below — approve or edit it before batch 1, because once we 
 
 THE RUBRIC (score out of 10)
 
-Gate 1 — hands-on email/outbound execution: 3 points
-JD is explicit: "tool-based execution, not just theory." 3 = ran campaigns end-to-end with owned outcomes. 2 = assisted on sends under supervision. 1 = adjacent marketing only (social, content, events). 0 = no campaign work at all.
+Gate 1 — hands-on email/outbound execution: 3 points. JD is explicit: "tool-based execution, not just theory." 3 = ran campaigns end-to-end with owned outcomes. 2 = assisted on sends under supervision. 1 = adjacent marketing only (social, content, events). 0 = no campaign work at all.
 
-Gate 2 — tool fluency: 2 points
-HubSpot, Mailchimp, Apollo, Instantly, Lemlist, Smartlead, Outreach, Salesloft, ZoomInfo, Klaviyo. 2 = named tools with what they did in them. 1 = tools listed in a skills bar with no context. 0 = none.
+Gate 2 — tool fluency: 2 points. HubSpot, Mailchimp, Apollo, Instantly, Lemlist, Smartlead, Outreach, Salesloft, ZoomInfo, Klaviyo. 2 = named tools with what they did in them. 1 = tools listed in a skills bar with no context. 0 = none.
 
-Gate 3 — written English: 2 points
-Judged on the resume's own prose, not on a "communication skills" bullet. They write the copy prospects read. 2 = clean, specific, no errors. 1 = readable with lapses. 0 = errors a prospect would notice.
+Gate 3 — written English: 2 points. Judged on the resume's own prose, not on a "communication skills" bullet. 2 = clean, specific, no errors. 1 = readable with lapses. 0 = errors a prospect would notice.
 
-Gate 4 — data and list discipline: 1 point
-CRM hygiene, segmentation, Excel/Sheets, list building, merge fields, dedup.
+Gate 4 — data and list discipline: 1 point. CRM hygiene, segmentation, Excel/Sheets, list building, merge fields, dedup.
 
-Gate 5 — B2B buyer exposure: 1 point
-B2B, industrial, distribution, manufacturing, or SaaS-selling-to-business. Consumer-only marketing scores 0 here.
+Gate 5 — B2B buyer exposure: 1 point. B2B, industrial, distribution, manufacturing, or SaaS-selling-to-business. Consumer-only marketing scores 0 here.
 
-Gate 6 — deliverability: 1 point
-SPF/DKIM/DMARC, domain warming, sender reputation, bounce management. Rare at this level, so it's a differentiator not a requirement.
+Gate 6 — deliverability: 1 point. SPF/DKIM/DMARC, domain warming, sender reputation, bounce management.
 
-BANDS
-
-8.0–10 — Qualify, interview
-6.0–7.9 — Qualify, screening call first
-4.0–5.9 — Disqualify, keep as backup pool
-Below 4.0 — Disqualify
+BANDS: 8.0–10 Qualify, interview · 6.0–7.9 Qualify, screening call first · 4.0–5.9 Disqualify, backup pool · Below 4.0 Disqualify.
 
 Auto-disqualify regardless of score: zero campaign execution anywhere, or resume prose with errors that would be visible in prospect-facing copy.
 
@@ -192,37 +181,52 @@ Auto-disqualify regardless of score: zero campaign execution anywhere, or resume
 
 THREE THINGS IN THIS JD THAT CHANGE THE APPROACH
 
-One. The resume is not your primary signal. The JD tells candidates to email Raj explaining why he should be hired, and says he's assessing how they approach it. That email is a live work sample for the exact job — cold outbound written to a decision-maker. It is worth more than any resume. If you screen resumes alone you're grading the wrong artifact.
+One. The resume is not your primary signal. The JD tells candidates to email Raj explaining why he should be hired, and says he's assessing how they approach it. That email is a live work sample for the exact job. Ask: do you have access to those emails? Also, whether a candidate emailed at all is itself a filter.
 
-Ask: do you have access to those emails? If they landed in rajat@askcruz.com I may be able to pull them and match applicants to their outreach. That would turn this from resume screening into work-sample screening. Say the word and I'll check what's reachable.
+Two. ₹20,000/month sets the realistic profile — roughly ₹2.4L annual. Anyone with three-plus years of solid email marketing will not take it. Over-qualification is a risk flag, not a bonus. Realistic target is 0–2 years with genuine hands-on tool exposure.
 
-Also: whether a candidate emailed at all is itself a filter. Someone who applied but ignored a written instruction in the JD has failed a detail-orientation test the JD explicitly set.
-
-Two. ₹20,000/month sets the realistic profile. That's roughly ₹2.4L annual. Anyone with three-plus years of solid email marketing will not take it, and if they somehow accept they'll leave inside six months. So over-qualification is a risk flag, not a bonus. Your realistic target is 0–2 years with genuine hands-on tool exposure. I'll score to that reality rather than to an ideal candidate who won't accept the offer.
-
-Three. Raj's four questions can't be answered from a resume. "What is account-based marketing" is a knowledge check, and "what kind of emails did they send" needs a conversation. Those belong in a screening call or a short form after the resume cut, not in the resume score. I'll build them into the screening-call script for whoever clears the bar.
+Three. Raj's four questions can't be answered from a resume. They belong in a screening call after the resume cut, not in the resume score.
 
 MAKING IT WORK FOR 167 WITHOUT LOSING AUTHENTICITY
 
-Authenticity fails in three specific ways here. Each has a fix.
+Drift — the bar tightens or loosens as you get tired. Fix: rubric in a file on disk, re-read every batch, plus a calibration pass re-scoring everyone in the 5.0–7.0 band against the finished distribution.
 
-Drift — the bar tightens or loosens as you get tired. Fix: the rubric goes into a file on disk, I re-read it at the start of every batch, and after all 167 are scored I re-open everyone in the 5.0–7.0 band and re-score them against the finished distribution. That calibration pass is not optional at this volume.
+Halo — one impressive line pulls the whole score up. Fix: six gates scored independently, total is arithmetic, sub-scores visible.
 
-Halo — one impressive line pulls the whole score up. Fix: I score each of the six gates independently and the total is arithmetic, not a gut number I justify afterward. You'll see the six sub-scores, so you can check my work on any candidate.
+Unfalsifiable reasons — "weak fit" is not a reason. Fix: every score cites the specific resume line it came from.
 
-Unfalsifiable reasons — "weak fit" is not a reason. Fix: every score cites the specific resume line it came from. If a candidate ever asks why, you have an answer.
-
-On batch size: 5 per message means 34 rounds. That's your call, and it works, but it's 34 rounds of your time versus 9 at 20 per message, or 1 if you zip the folder. Nothing about a smaller batch makes the screening better — the rubric file is what holds quality, not batch size. If 5 is what's practical, we go with 5.
+On batch size: 5 per message means 34 rounds. Nothing about a smaller batch makes the screening better — the rubric file holds quality, not batch size.
 
 ON THE DATA
 
-You should know this before you upload: this conversation auto-saves to a GitHub vault after every turn. If 167 candidates' full resumes flow through here, their names, phone numbers and email addresses get committed to that repo.
+This conversation auto-saves to a GitHub vault after every turn. If 167 candidates' full resumes flow through here, their names, phone numbers and email addresses get committed to that repo. Unless told otherwise: scoring tables in chat use candidate name and file number only; full contact details stay in the master file on your machine.
 
-How I'll handle it unless you tell me otherwise: the scoring table I show you uses candidate name and file number only — no phone, no email, no address. Full contact details stay in the master file that lives on your machine, not in the chat body. That keeps the working record intact and keeps PII out of the vault.
+---
 
-If you'd rather I not save this thread at all while resumes are flowing, say so and raise it with Raj, since that rule is set at the account level and I follow it by default.
+## User
 
-Confirm the rubric and send batch 1.
+The JD tells candidates to email Raj explaining why he should be hired, and says he'. no need to consider this point
+
+---
+
+## Assistant
+
+Dropped. Resume-only scoring, no email signal, no penalty for not emailing Raj.
+
+One consequence to be aware of, then I'll stop raising it: without that, the score is entirely self-reported claims. I can check internal consistency but I can't verify anything. Treat the output as a triage list for who gets a call, not a ranking of who's good.
+
+Rubric stands as written, six gates:
+
+- Execution 3
+- Tools 2
+- Written English 2
+- Data discipline 1
+- B2B exposure 1
+- Deliverability 1
+
+Qualify at 6.0 and above. Disqualify below 4.0.
+
+Send batch 1 whenever. If you want any weighting changed, say so now rather than after a few batches.
 
 ---
 
@@ -230,9 +234,9 @@ Confirm the rubric and send batch 1.
 
 - **Role:** Marketing Associate — Email (Remote), AskCruz | GFC Intelligence. Comp ₹20,000/month.
 - **Agreed parameters:** 50 ft deep rigor · Draft craft · rating out of 10 with qualify/disqualify · batches of 5 resumes, uploaded manually · single chat throughout.
-- **Rubric proposed (awaiting approval):** 6 gates — execution (3), tools (2), written English (2), data discipline (1), B2B exposure (1), deliverability (1). Bands: 8+ interview, 6–7.9 screening call, 4–5.9 backup, <4 disqualify.
-- **Key insight raised:** the JD instructs candidates to email rajat@askcruz.com; that email is a live work sample worth more than the resume. Offered to check whether those emails are reachable via the EOXS email connector.
-- **Comp reality flagged:** ₹20k/month means over-qualification is a retention risk, not a bonus; realistic target is 0–2 years hands-on.
-- **Raj's four questions** routed to a post-shortlist screening call, not the resume score.
-- **Data handling:** scoring tables in chat to use name + file number only; contact details to stay in the local master file, out of the auto-saved vault transcript.
-- **Blocked on:** rubric approval and batch 1.
+- **Rubric (locked unless user edits):** Execution 3 · Tools 2 · Written English 2 · Data discipline 1 · B2B exposure 1 · Deliverability 1. Qualify ≥ 6.0, disqualify < 4.0.
+- **User decision:** the email-to-Raj signal is explicitly excluded from scoring. Resume-only. Noted consequence: output is a triage list, not a verified ranking.
+- **Comp reality flagged:** over-qualification is a retention risk at ₹20k/month; realistic target 0–2 years hands-on.
+- **Raj's four questions** routed to a post-shortlist screening call.
+- **Data handling:** chat tables to use name + file number only; contact details stay in the local master file.
+- **Blocked on:** batch 1 upload.
